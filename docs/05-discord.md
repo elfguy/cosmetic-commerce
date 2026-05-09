@@ -10,13 +10,14 @@
 - `#beauty-commerce`
 - `#화장품쇼핑몰`
 
-## 생성 후 할 일
-
-Leo가 Discord 채널을 만든 뒤 **채널 ID**를 알려주면 여기에 기록하고 MEMORY.md에도 반영한다.
+## 채널 상태
 
 ```text
-Discord: #cosmetic-commerce (<channel-id-pending>)
+Discord: #cosmetic-commerce (생성됨, 채널 ID 대기 중)
+Created: 2026-05-09 09:06 KST
 ```
+
+Leo가 채널 ID를 알려주거나, 해당 채널에서 OpenClaw/Rina를 한 번 멘션해서 세션이 생기면 ID를 확인해 MEMORY.md에도 확정 반영한다.
 
 ## 채널 운영 방식
 
