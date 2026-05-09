@@ -13,8 +13,9 @@
 ## 채널 상태
 
 ```text
-Discord: #cosmetic-commerce (생성됨, 채널 ID 대기 중)
+Discord: #cosmetic-commerce (1502461461811695727)
 Created: 2026-05-09 09:06 KST
+First message: 1502463846084771840
 ```
 
 Leo가 채널 ID를 알려주거나, 해당 채널에서 OpenClaw/Rina를 한 번 멘션해서 세션이 생기면 ID를 확인해 MEMORY.md에도 확정 반영한다.
