@@ -1,0 +1,977 @@
+[
+  {
+    "slug": "hyaluronic-acid-toner",
+    "name": "유어스킨플러스 히알루론산 토너",
+    "coupangUrl": "https://www.coupang.com/vp/products/9025733014",
+    "coupang": {
+      "productId": "9025733014",
+      "itemId": "26470069791",
+      "vendorItemId": null,
+      "originalPrice": 20000,
+      "salePrice": 10900,
+      "discountRate": "45%",
+      "unitPrice": "10ml당 218원",
+      "reviewCount": 33,
+      "seller": "(주)유어스킨",
+      "attributes": [
+        "사용대상: 남녀공용",
+        "사용 부위: 얼굴",
+        "피부고민: 진정/보습",
+        "피부타입: 모든피부"
+      ],
+      "source": "search-index"
+    },
+    "cafe24Path": "/product/유어스킨플러스-히알루론산-토너/25/category/1/display/2/?icid=MAIN.product_listmain_1",
+    "cafe24Url": "https://yourskinplus.cafe24.com/product/유어스킨플러스-히알루론산-토너/25/category/1/display/2/?icid=MAIN.product_listmain_1",
+    "cafe24": {
+      "productNo": "25",
+      "productCode": "P000000Z",
+      "itemCode": "P000000Z000A",
+      "productName": "유어스킨플러스 히알루론산 토너",
+      "productPrice": 10000,
+      "productPriceMobile": 10000,
+      "stockNumber": 0,
+      "isSoldoutIcon": "T",
+      "productImageTiny": "202508/2a92173ddb3eae2565d9d8e0e7bdda6b.png",
+      "rawHtmlPath": "data/coupang/raw/hyaluronic-acid-toner.html",
+      "productImageUrls": [
+        "https://yourskinplus.cafe24.com/web/product/big/202508/5cf5ee9e25cc83993edbc41c73cbafa7.png",
+        "https://yourskinplus.cafe24.com/web/product/small/202508/28a6905cc7f567ad747aaa99ad197bee.png"
+      ],
+      "detailImageUrls": [
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755054853-001.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/002.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/003.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/004.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/005.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/006.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/007.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/008.png"
+      ]
+    },
+    "images": {
+      "product": [
+        {
+          "url": "https://yourskinplus.cafe24.com/web/product/big/202508/5cf5ee9e25cc83993edbc41c73cbafa7.png",
+          "filePath": "data/coupang/images/hyaluronic-acid-toner/product/01.png",
+          "bytes": 1145006,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 1333,
+            "height": 1999,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/product/small/202508/28a6905cc7f567ad747aaa99ad197bee.png",
+          "filePath": "data/coupang/images/hyaluronic-acid-toner/product/02.png",
+          "bytes": 18057,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 147,
+            "height": 220,
+            "format": "png"
+          }
+        }
+      ],
+      "detail": [
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755054853-001.png",
+          "filePath": "data/coupang/images/hyaluronic-acid-toner/detail/01.png",
+          "bytes": 660255,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/002.png",
+          "filePath": "data/coupang/images/hyaluronic-acid-toner/detail/02.png",
+          "bytes": 243244,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/003.png",
+          "filePath": "data/coupang/images/hyaluronic-acid-toner/detail/03.png",
+          "bytes": 432297,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/004.png",
+          "filePath": "data/coupang/images/hyaluronic-acid-toner/detail/04.png",
+          "bytes": 483794,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/005.png",
+          "filePath": "data/coupang/images/hyaluronic-acid-toner/detail/05.png",
+          "bytes": 262153,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/006.png",
+          "filePath": "data/coupang/images/hyaluronic-acid-toner/detail/06.png",
+          "bytes": 427196,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/007.png",
+          "filePath": "data/coupang/images/hyaluronic-acid-toner/detail/07.png",
+          "bytes": 554046,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/008.png",
+          "filePath": "data/coupang/images/hyaluronic-acid-toner/detail/08.png",
+          "bytes": 94091,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        }
+      ]
+    },
+    "collectionStatus": "downloaded",
+    "collectionNotes": []
+  },
+  {
+    "slug": "low-ph-cleansing-gel",
+    "name": "유어스킨플러스 로우 피에이치 클렌징 젤",
+    "coupangUrl": "https://www.coupang.com/vp/products/9025751494",
+    "coupang": {
+      "productId": "9025751494",
+      "itemId": "26470131485",
+      "vendorItemId": null,
+      "originalPrice": 19500,
+      "salePrice": 10500,
+      "discountRate": "46%",
+      "unitPrice": "10ml당 350원",
+      "reviewCount": 23,
+      "seller": "(주)유어스킨",
+      "attributes": [
+        "사용기한: 상품 상세페이지 참조",
+        "용기 타입: 펌프형",
+        "피부고민: 진정/보습",
+        "피부타입: 모든피부"
+      ],
+      "source": "search-index"
+    },
+    "cafe24Path": "/product/유어스킨플러스-로우피에이치-마일드-클렌징-젤/28/category/1/display/2/?icid=MAIN.product_listmain_1",
+    "cafe24Url": "https://yourskinplus.cafe24.com/product/유어스킨플러스-로우피에이치-마일드-클렌징-젤/28/category/1/display/2/?icid=MAIN.product_listmain_1",
+    "cafe24": {
+      "productNo": "28",
+      "productCode": "P00000BC",
+      "itemCode": "P00000BC000A",
+      "productName": "유어스킨플러스 로우피에이치 & 마일드 클렌징 젤",
+      "productPrice": 10000,
+      "productPriceMobile": 10000,
+      "stockNumber": 0,
+      "isSoldoutIcon": "T",
+      "productImageTiny": "202508/a7f489896b22b6782f883d33b5477710.png",
+      "rawHtmlPath": "data/coupang/raw/low-ph-cleansing-gel.html",
+      "productImageUrls": [
+        "https://yourskinplus.cafe24.com/web/product/big/202508/e0e808b53f765a407c2a5336ee84adca.png",
+        "https://yourskinplus.cafe24.com/web/product/small/202508/578b931d4b70e9314cbebebdb86a8a89.png"
+      ],
+      "detailImageUrls": [
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-001.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-002.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-003.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-004.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-005.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-006.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-007.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-008.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-009.png"
+      ]
+    },
+    "images": {
+      "product": [
+        {
+          "url": "https://yourskinplus.cafe24.com/web/product/big/202508/e0e808b53f765a407c2a5336ee84adca.png",
+          "filePath": "data/coupang/images/low-ph-cleansing-gel/product/01.png",
+          "bytes": 833495,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 1499,
+            "height": 1999,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/product/small/202508/578b931d4b70e9314cbebebdb86a8a89.png",
+          "filePath": "data/coupang/images/low-ph-cleansing-gel/product/02.png",
+          "bytes": 22628,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 165,
+            "height": 220,
+            "format": "png"
+          }
+        }
+      ],
+      "detail": [
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-001.png",
+          "filePath": "data/coupang/images/low-ph-cleansing-gel/detail/01.png",
+          "bytes": 486233,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-002.png",
+          "filePath": "data/coupang/images/low-ph-cleansing-gel/detail/02.png",
+          "bytes": 363654,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-003.png",
+          "filePath": "data/coupang/images/low-ph-cleansing-gel/detail/03.png",
+          "bytes": 878185,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-004.png",
+          "filePath": "data/coupang/images/low-ph-cleansing-gel/detail/04.png",
+          "bytes": 1428894,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-005.png",
+          "filePath": "data/coupang/images/low-ph-cleansing-gel/detail/05.png",
+          "bytes": 381086,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-006.png",
+          "filePath": "data/coupang/images/low-ph-cleansing-gel/detail/06.png",
+          "bytes": 825289,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-007.png",
+          "filePath": "data/coupang/images/low-ph-cleansing-gel/detail/07.png",
+          "bytes": 784641,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-008.png",
+          "filePath": "data/coupang/images/low-ph-cleansing-gel/detail/08.png",
+          "bytes": 554046,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060875-009.png",
+          "filePath": "data/coupang/images/low-ph-cleansing-gel/detail/09.png",
+          "bytes": 88341,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        }
+      ]
+    },
+    "collectionStatus": "downloaded",
+    "collectionNotes": []
+  },
+  {
+    "slug": "rose-damascus-tonic-essence",
+    "name": "유어스킨플러스 로즈 다마스쿠스 토닉 에센스",
+    "coupangUrl": "https://www.coupang.com/vp/products/9025775541?itemId=26470208024&vendorItemId=93445364050",
+    "coupang": {
+      "productId": "9025775541",
+      "itemId": "26470208024",
+      "vendorItemId": "93445364050",
+      "originalPrice": null,
+      "salePrice": null,
+      "discountRate": null,
+      "unitPrice": null,
+      "reviewCount": null,
+      "seller": "(주)유어스킨",
+      "attributes": [],
+      "source": "user-provided-url"
+    },
+    "cafe24Path": "/product/유어스킨플러스-로즈-다마스쿠스-토닉-에센스/26/category/1/display/2/?icid=MAIN.product_listmain_1",
+    "cafe24Url": "https://yourskinplus.cafe24.com/product/유어스킨플러스-로즈-다마스쿠스-토닉-에센스/26/category/1/display/2/?icid=MAIN.product_listmain_1",
+    "cafe24": {
+      "productNo": "26",
+      "productCode": "P00000BA",
+      "itemCode": "P00000BA000A",
+      "productName": "유어스킨플러스 로즈 다마스쿠스 토닉 에센스",
+      "productPrice": 10000,
+      "productPriceMobile": 10000,
+      "stockNumber": 0,
+      "isSoldoutIcon": "T",
+      "productImageTiny": "202508/d97832fb5cfe6a6e772919b0ddbde8c9.png",
+      "rawHtmlPath": "data/coupang/raw/rose-damascus-tonic-essence.html",
+      "productImageUrls": [
+        "https://yourskinplus.cafe24.com/web/product/big/202508/4823246221fd877adc69c55a1ad65673.png",
+        "https://yourskinplus.cafe24.com/web/product/small/202508/6d04686b87065c35173590224f408728.png"
+      ],
+      "detailImageUrls": [
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-001.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-002.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-003.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-004.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-005.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-006.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-007.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-008.png"
+      ]
+    },
+    "images": {
+      "product": [
+        {
+          "url": "https://yourskinplus.cafe24.com/web/product/big/202508/4823246221fd877adc69c55a1ad65673.png",
+          "filePath": "data/coupang/images/rose-damascus-tonic-essence/product/01.png",
+          "bytes": 2889893,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 1333,
+            "height": 1999,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/product/small/202508/6d04686b87065c35173590224f408728.png",
+          "filePath": "data/coupang/images/rose-damascus-tonic-essence/product/02.png",
+          "bytes": 32257,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 147,
+            "height": 220,
+            "format": "png"
+          }
+        }
+      ],
+      "detail": [
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-001.png",
+          "filePath": "data/coupang/images/rose-damascus-tonic-essence/detail/01.png",
+          "bytes": 638940,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-002.png",
+          "filePath": "data/coupang/images/rose-damascus-tonic-essence/detail/02.png",
+          "bytes": 712650,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-003.png",
+          "filePath": "data/coupang/images/rose-damascus-tonic-essence/detail/03.png",
+          "bytes": 1014250,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-004.png",
+          "filePath": "data/coupang/images/rose-damascus-tonic-essence/detail/04.png",
+          "bytes": 650912,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-005.png",
+          "filePath": "data/coupang/images/rose-damascus-tonic-essence/detail/05.png",
+          "bytes": 594000,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-006.png",
+          "filePath": "data/coupang/images/rose-damascus-tonic-essence/detail/06.png",
+          "bytes": 513381,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-007.png",
+          "filePath": "data/coupang/images/rose-damascus-tonic-essence/detail/07.png",
+          "bytes": 554046,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755056969-008.png",
+          "filePath": "data/coupang/images/rose-damascus-tonic-essence/detail/08.png",
+          "bytes": 88160,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        }
+      ]
+    },
+    "collectionStatus": "downloaded",
+    "collectionNotes": []
+  },
+  {
+    "slug": "younger-than-all-in-one-lotion",
+    "name": "유어스킨플러스 영거 댄 올인원 로션",
+    "coupangUrl": "https://www.coupang.com/vp/products/9025793946?itemId=26470268560&vendorItemId=93445424254",
+    "coupang": {
+      "productId": "9025793946",
+      "itemId": "26470268560",
+      "vendorItemId": "93445424254",
+      "originalPrice": 18000,
+      "salePrice": 9500,
+      "discountRate": "47%",
+      "unitPrice": "10ml당 475원",
+      "reviewCount": 33,
+      "seller": "(주)유어스킨",
+      "attributes": [
+        "사용기한: 상품 상세페이지 참조",
+        "올인원 여부: 올인원",
+        "피부고민: 진정/보습",
+        "피부타입: 모든피부",
+        "사용대상: 남성용"
+      ],
+      "source": "search-index"
+    },
+    "cafe24Path": "/product/유어스킨플러스-영거댄-올인원-로션/27/category/1/display/2/?icid=MAIN.product_listmain_1",
+    "cafe24Url": "https://yourskinplus.cafe24.com/product/유어스킨플러스-영거댄-올인원-로션/27/category/1/display/2/?icid=MAIN.product_listmain_1",
+    "cafe24": {
+      "productNo": "27",
+      "productCode": "P00000BB",
+      "itemCode": "P00000BB000A",
+      "productName": "유어스킨플러스 영거댄 올인원 로션",
+      "productPrice": 10000,
+      "productPriceMobile": 10000,
+      "stockNumber": 0,
+      "isSoldoutIcon": "T",
+      "productImageTiny": "202508/1763b0b9482e344912e87d48e4b50f96.png",
+      "rawHtmlPath": "data/coupang/raw/younger-than-all-in-one-lotion.html",
+      "productImageUrls": [
+        "https://yourskinplus.cafe24.com/web/product/big/202508/8b0fe95b1bb9337006dcd97a4f612af6.png",
+        "https://yourskinplus.cafe24.com/web/product/small/202508/d3b0b3645b7fd9ce22b6168cca07c5db.png"
+      ],
+      "detailImageUrls": [
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-001.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-002.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-003.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-004.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-005.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-006.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-007.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-008.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/009.png"
+      ]
+    },
+    "images": {
+      "product": [
+        {
+          "url": "https://yourskinplus.cafe24.com/web/product/big/202508/8b0fe95b1bb9337006dcd97a4f612af6.png",
+          "filePath": "data/coupang/images/younger-than-all-in-one-lotion/product/01.png",
+          "bytes": 2950811,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 1333,
+            "height": 1999,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/product/small/202508/d3b0b3645b7fd9ce22b6168cca07c5db.png",
+          "filePath": "data/coupang/images/younger-than-all-in-one-lotion/product/02.png",
+          "bytes": 33565,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 147,
+            "height": 220,
+            "format": "png"
+          }
+        }
+      ],
+      "detail": [
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-001.png",
+          "filePath": "data/coupang/images/younger-than-all-in-one-lotion/detail/01.png",
+          "bytes": 940257,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-002.png",
+          "filePath": "data/coupang/images/younger-than-all-in-one-lotion/detail/02.png",
+          "bytes": 259332,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-003.png",
+          "filePath": "data/coupang/images/younger-than-all-in-one-lotion/detail/03.png",
+          "bytes": 594906,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-004.png",
+          "filePath": "data/coupang/images/younger-than-all-in-one-lotion/detail/04.png",
+          "bytes": 275448,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-005.png",
+          "filePath": "data/coupang/images/younger-than-all-in-one-lotion/detail/05.png",
+          "bytes": 1244835,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-006.png",
+          "filePath": "data/coupang/images/younger-than-all-in-one-lotion/detail/06.png",
+          "bytes": 395571,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-007.png",
+          "filePath": "data/coupang/images/younger-than-all-in-one-lotion/detail/07.png",
+          "bytes": 232730,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755060638-008.png",
+          "filePath": "data/coupang/images/younger-than-all-in-one-lotion/detail/08.png",
+          "bytes": 554046,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/009.png",
+          "filePath": "data/coupang/images/younger-than-all-in-one-lotion/detail/09.png",
+          "bytes": 91716,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        }
+      ]
+    },
+    "collectionStatus": "downloaded",
+    "collectionNotes": []
+  },
+  {
+    "slug": "moisture-lip-balm",
+    "name": "유어스킨플러스 모이스춰 립밤",
+    "coupangUrl": "https://www.coupang.com/vp/products/9025810298?itemId=26470336590&vendorItemId=93445490553",
+    "coupang": {
+      "productId": "9025810298",
+      "itemId": "26470336590",
+      "vendorItemId": "93445490553",
+      "originalPrice": 18000,
+      "salePrice": 9900,
+      "discountRate": "45%",
+      "unitPrice": "10g당 12,375원",
+      "reviewCount": 23,
+      "seller": "(주)유어스킨",
+      "attributes": [
+        "사용기한: 상품 상세페이지 참조",
+        "색상계열: 무색",
+        "용기형태: 스틱/펜슬형",
+        "사용대상: 남녀공용"
+      ],
+      "source": "search-index"
+    },
+    "cafe24Path": "/product/유어스킨플러스-모이스춰-립밤/30/category/1/display/2/?icid=MAIN.product_listmain_1",
+    "cafe24Url": "https://yourskinplus.cafe24.com/product/유어스킨플러스-모이스춰-립밤/30/category/1/display/2/?icid=MAIN.product_listmain_1",
+    "cafe24": {
+      "productNo": "30",
+      "productCode": "P00000BE",
+      "itemCode": "P00000BE000A",
+      "productName": "유어스킨플러스 모이스춰 립밤",
+      "productPrice": 10000,
+      "productPriceMobile": 10000,
+      "stockNumber": 0,
+      "isSoldoutIcon": "T",
+      "productImageTiny": "202508/173d181d48995eb2b95115f4c950817d.jpg",
+      "rawHtmlPath": "data/coupang/raw/moisture-lip-balm.html",
+      "productImageUrls": [
+        "https://yourskinplus.cafe24.com/web/product/big/202508/de49d938c7a7fca165a148837ae5cc44.jpg",
+        "https://yourskinplus.cafe24.com/web/product/small/202508/a48cdfbd9be31d7e7dfed3e729666459.jpg"
+      ],
+      "detailImageUrls": [
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755061057-001.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755061057-002.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755061057-003.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755061057-004.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755061057-005.png",
+        "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755061056-006.png"
+      ]
+    },
+    "images": {
+      "product": [
+        {
+          "url": "https://yourskinplus.cafe24.com/web/product/big/202508/de49d938c7a7fca165a148837ae5cc44.jpg",
+          "filePath": "data/coupang/images/moisture-lip-balm/product/01.jpg",
+          "bytes": 111078,
+          "contentType": "image/jpeg",
+          "dimensions": {
+            "width": 1257,
+            "height": 1999,
+            "format": "jpeg"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/product/small/202508/a48cdfbd9be31d7e7dfed3e729666459.jpg",
+          "filePath": "data/coupang/images/moisture-lip-balm/product/02.jpg",
+          "bytes": 3724,
+          "contentType": "image/jpeg",
+          "dimensions": {
+            "width": 138,
+            "height": 220,
+            "format": "jpeg"
+          }
+        }
+      ],
+      "detail": [
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755061057-001.png",
+          "filePath": "data/coupang/images/moisture-lip-balm/detail/01.png",
+          "bytes": 749654,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755061057-002.png",
+          "filePath": "data/coupang/images/moisture-lip-balm/detail/02.png",
+          "bytes": 318688,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755061057-003.png",
+          "filePath": "data/coupang/images/moisture-lip-balm/detail/03.png",
+          "bytes": 385117,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755061057-004.png",
+          "filePath": "data/coupang/images/moisture-lip-balm/detail/04.png",
+          "bytes": 747316,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755061057-005.png",
+          "filePath": "data/coupang/images/moisture-lip-balm/detail/05.png",
+          "bytes": 554046,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        },
+        {
+          "url": "https://yourskinplus.cafe24.com/web/upload/NNEditor/20250813/copy-1755061056-006.png",
+          "filePath": "data/coupang/images/moisture-lip-balm/detail/06.png",
+          "bytes": 66463,
+          "contentType": "image/png",
+          "dimensions": {
+            "width": 860,
+            "height": 1100,
+            "format": "png"
+          }
+        }
+      ]
+    },
+    "collectionStatus": "downloaded",
+    "collectionNotes": []
+  },
+  {
+    "slug": "hyaluronic-acid-aqua-lotion",
+    "name": "유어스킨플러스 히알루론산 아쿠아 로션",
+    "coupangUrl": "https://www.coupang.com/vp/products/9218811640",
+    "coupang": {
+      "productId": "9218811640",
+      "itemId": "27239514580",
+      "vendorItemId": null,
+      "originalPrice": 19000,
+      "salePrice": 10300,
+      "discountRate": "45%",
+      "unitPrice": "100ml당 3,433원",
+      "reviewCount": 33,
+      "seller": "(주)유어스킨",
+      "attributes": [
+        "사용기한: 상품 상세페이지 참조",
+        "장점: 보습",
+        "사용 부위: 얼굴",
+        "향 유무: 무향",
+        "피부고민: 진정/보습"
+      ],
+      "source": "search-index"
+    },
+    "cafe24Path": null,
+    "cafe24Url": null,
+    "cafe24": null,
+    "images": {
+      "product": [],
+      "detail": []
+    },
+    "collectionStatus": "metadata-only",
+    "collectionNotes": [
+      "Cafe24 상세 페이지를 찾지 못해 이미지 다운로드를 건너뜀"
+    ]
+  },
+  {
+    "slug": "pure-deep-cleansing-oil",
+    "name": "유어스킨플러스 퓨어 딥 클렌징 오일",
+    "coupangUrl": "https://www.coupang.com/vp/products/9221762154",
+    "coupang": {
+      "productId": "9221762154",
+      "itemId": "27251064471",
+      "vendorItemId": null,
+      "originalPrice": 23000,
+      "salePrice": 12700,
+      "discountRate": "44%",
+      "unitPrice": "10ml당 423원",
+      "reviewCount": 32,
+      "seller": "(주)유어스킨",
+      "attributes": [
+        "유통기한: 2027-12-21 또는 이후",
+        "용기 타입: 펌프형",
+        "피부타입: 모든피부",
+        "장점: 모공 관리",
+        "피부고민: 블랙헤드 제거"
+      ],
+      "source": "search-index"
+    },
+    "cafe24Path": null,
+    "cafe24Url": null,
+    "cafe24": null,
+    "images": {
+      "product": [],
+      "detail": []
+    },
+    "collectionStatus": "metadata-only",
+    "collectionNotes": [
+      "Cafe24 상세 페이지를 찾지 못해 이미지 다운로드를 건너뜀"
+    ]
+  },
+  {
+    "slug": "whitening-tone-care-cream",
+    "name": "유어스킨플러스 화이트닝 톤 케어 크림",
+    "coupangUrl": "https://www.coupang.com/vp/products/9264527939",
+    "coupang": {
+      "productId": "9264527939",
+      "itemId": "27414863570",
+      "vendorItemId": null,
+      "originalPrice": 18500,
+      "salePrice": 10100,
+      "discountRate": "45%",
+      "unitPrice": "10ml당 505원",
+      "reviewCount": 21,
+      "seller": "(주)유어스킨",
+      "attributes": [
+        "사용기한: 상품 상세페이지 참조",
+        "사용 부위: 얼굴",
+        "크림 타입: 크림",
+        "피부고민: 브라이트닝",
+        "피부타입: 모든피부"
+      ],
+      "source": "search-index"
+    },
+    "cafe24Path": null,
+    "cafe24Url": null,
+    "cafe24": null,
+    "images": {
+      "product": [],
+      "detail": []
+    },
+    "collectionStatus": "metadata-only",
+    "collectionNotes": [
+      "Cafe24 상세 페이지를 찾지 못해 이미지 다운로드를 건너뜀"
+    ]
+  },
+  {
+    "slug": "unknown-coupang-product",
+    "name": "미확인 쿠팡 등록 상품",
+    "coupangUrl": null,
+    "coupang": {
+      "productId": null,
+      "itemId": null,
+      "vendorItemId": null,
+      "originalPrice": null,
+      "salePrice": null,
+      "discountRate": null,
+      "unitPrice": null,
+      "reviewCount": null,
+      "seller": "(주)유어스킨",
+      "attributes": [],
+      "source": "not-found"
+    },
+    "cafe24Path": null,
+    "cafe24Url": null,
+    "cafe24": null,
+    "images": {
+      "product": [],
+      "detail": []
+    },
+    "collectionStatus": "metadata-only",
+    "collectionNotes": [
+      "Cafe24 상세 페이지를 찾지 못해 이미지 다운로드를 건너뜀"
+    ]
+  }
+]

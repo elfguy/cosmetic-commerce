@@ -1,0 +1,36 @@
+{
+  "productCount": 9,
+  "downloadedProductCount": 5,
+  "totalProductImages": 10,
+  "totalDetailImages": 40,
+  "blockedOrMetadataOnly": [
+    {
+      "name": "유어스킨플러스 히알루론산 아쿠아 로션",
+      "status": "metadata-only",
+      "notes": [
+        "Cafe24 상세 페이지를 찾지 못해 이미지 다운로드를 건너뜀"
+      ]
+    },
+    {
+      "name": "유어스킨플러스 퓨어 딥 클렌징 오일",
+      "status": "metadata-only",
+      "notes": [
+        "Cafe24 상세 페이지를 찾지 못해 이미지 다운로드를 건너뜀"
+      ]
+    },
+    {
+      "name": "유어스킨플러스 화이트닝 톤 케어 크림",
+      "status": "metadata-only",
+      "notes": [
+        "Cafe24 상세 페이지를 찾지 못해 이미지 다운로드를 건너뜀"
+      ]
+    },
+    {
+      "name": "미확인 쿠팡 등록 상품",
+      "status": "metadata-only",
+      "notes": [
+        "Cafe24 상세 페이지를 찾지 못해 이미지 다운로드를 건너뜀"
+      ]
+    }
+  ]
+}

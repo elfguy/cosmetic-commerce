@@ -1,0 +1,660 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteData from '../../data/yourskin-products.json';
+
+const { brand, products } = siteData;
+const formatPrice = (price) => `${Number(price).toLocaleString('ko-KR')}원`;
+const routineProducts = products.filter((product) => ['rose-essence', 'aqua-lotion', 'soothing-cream', 'cleansing-oil'].includes(product.slug));
+const skinTypes = [
+  { type: '건조함이 느껴지는 피부', product: '저분자 히알루론산 토너', text: '세안 후 첫 수분을 넉넉하게 채우는 아침 루틴' },
+  { type: '세안 후 당김이 부담인 피부', product: '로우 피에이치 클렌징 젤', text: '아침에도 편안한 약산성 젤 클렌징' },
+  { type: '산뜻한 향과 결 정돈을 원하는 피부', product: '로즈 다마스쿠스 토닉 에센스', text: '꽃 원료의 감성을 부담 없는 첫 단계로 연결' },
+];
+const story = [
+  { title: '아침 햇살 루틴', text: '세안, 토너, 로션의 흐름을 욕실과 화장대 분위기로 자연스럽게 보여줍니다.' },
+  { title: '원료 스토리', text: '허브, 꽃, 잎, 식물성 오일을 일상 속 피부 관리 장면과 연결합니다.' },
+  { title: '사용 후기', text: '전후 비교 대신 산뜻함, 편안함, 매일 쓰기 쉬운 느낌을 중심으로 말합니다.' },
+];
+const palette = [
+  { name: 'Cream', value: '#fbf0df' },
+  { name: 'Peach beige', value: '#e7b9a2' },
+  { name: 'Olive green', value: '#6f7a4e' },
+  { name: 'Warm brown', value: '#7b563f' },
+];
+---
+
+<BaseLayout title="유어스킨플러스 자연 라이프스타일 목업" description="따뜻하고 감성적인 자연주의 스킨케어 라이프스타일 웹사이트 목업">
+  <main class="lifestyle-shop">
+    <header class="site-header">
+      <a class="brand-word" href="/" aria-label="유어스킨플러스 홈">
+        <span>Your Skin</span>
+        <strong>Plus</strong>
+      </a>
+      <nav aria-label="라이프스타일 메뉴">
+        <a href="#routine">Routine</a>
+        <a href="#skin-type">Skin Type</a>
+        <a href="#story">Ingredient Story</a>
+        <a href="#review">Review</a>
+      </nav>
+      <a class="header-cta" href="#routine">루틴 보기</a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-media" aria-label="자연 원료와 일상 루틴 이미지">
+        <img src="/coupang/images/rose-damascus-tonic-essence/product/01.png" alt="화장대 위에 놓인 유어스킨플러스 로즈 에센스 제품" />
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Natural Lifestyle Mockup 04</p>
+        <h1>매일의 피부 루틴에 신선한 자연을 더하세요</h1>
+        <span>
+          아침 햇살, 식물, 화장대 위 제품이 함께 놓인 듯한 따뜻한 자연주의 공식몰.
+          프리미엄이지만 친근하게, 신선한 원료와 매일 쓰는 루틴을 연결합니다.
+        </span>
+        <div class="hero-actions">
+          <a class="primary" href="#skin-type">나에게 맞는 제품 찾기</a>
+          <a class="secondary" href="#story">원료 스토리 보기</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="brief" aria-label="목업 콘셉트 설명">
+      <article>
+        <p class="eyebrow">Brand concept</p>
+        <h2>자연 속 일상 루틴을 닮은 따뜻한 스킨케어 사이트</h2>
+        <span>꽃, 잎, 허브 이미지를 생활 장면과 결합해 민감한 피부도 편하게 접근할 수 있는 브랜드 톤을 만듭니다.</span>
+      </article>
+      <div class="palette">
+        {palette.map((color) => (
+          <div>
+            <span style={`background:${color.value}`}></span>
+            <strong>{color.name}</strong>
+            <em>{color.value}</em>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="routine" id="routine">
+      <div class="section-head">
+        <p class="eyebrow">Morning routine</p>
+        <h2>자연 원료와 일상 루틴을 연결합니다.</h2>
+        <span>제품을 기능별로만 나열하지 않고, 아침과 저녁의 실제 사용 장면 안에 배치합니다.</span>
+      </div>
+      <div class="routine-grid">
+        {routineProducts.map((product, index) => (
+          <article class="routine-card">
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <img src={product.image} alt={product.fullName} loading={index < 2 ? 'eager' : 'lazy'} />
+            <div>
+              <strong>{product.name}</strong>
+              <p>{product.heroLine}</p>
+              <em>{formatPrice(product.price)}</em>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="skin-type" id="skin-type">
+      <div>
+        <p class="eyebrow">Skin type guide</p>
+        <h2>피부 타입별 제품 추천</h2>
+        <span>과장된 의학적 표현 없이, 고객이 느끼는 일상적인 피부 상태로 추천 문장을 만듭니다.</span>
+      </div>
+      <div class="skin-list">
+        {skinTypes.map((item) => (
+          <article>
+            <strong>{item.type}</strong>
+            <span>{item.product}</span>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="ingredient-story" id="story">
+      <figure>
+        <img src="/coupang/images/rose-damascus-tonic-essence/detail/03.png" alt="다마스크 로즈 플라워 오일과 자연 원료 스토리" />
+      </figure>
+      <div>
+        <p class="eyebrow">Ingredient story</p>
+        <h2>꽃과 잎, 식물성 오일이 피부 루틴으로 들어오는 순간</h2>
+        <span>
+          원료의 출처와 수확, 보관, 제조를 긴 설명 대신 따뜻한 장면과 짧은 문장으로 보여줍니다.
+        </span>
+        <div class="story-grid">
+          {story.map((item) => (
+            <article>
+              <strong>{item.title}</strong>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="review-cta" id="review">
+      <div class="review-copy">
+        <p class="eyebrow">Natural review tone</p>
+        <h2>“피부가 예민한 날에도 루틴이 무겁지 않아서 계속 손이 갑니다.”</h2>
+        <span>후기는 드라마틱한 변화보다 매일 사용했을 때의 산뜻함, 편안함, 향과 사용감의 균형을 중심으로 구성합니다.</span>
+      </div>
+      <aside class="brand-story">
+        <strong>대표 카피 문구</strong>
+        <p>매일의 피부 루틴에 신선한 자연을 더하세요</p>
+        <span>{brand.name}는 천연 소재와 깨끗한 유통 과정을 일상적인 스킨케어 언어로 전달합니다.</span>
+        <a href="#routine">브랜드 스토리로 구매하기</a>
+      </aside>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(body) {
+    background: #fbf0df;
+  }
+
+  .lifestyle-shop {
+    --ink: #241b15;
+    --muted: #755f52;
+    --line: rgba(36, 27, 21, .14);
+    --cream: #fbf0df;
+    --peach: #e7b9a2;
+    --olive: #6f7a4e;
+    --brown: #7b563f;
+    --paper: #fffaf2;
+    min-height: 100vh;
+    color: var(--ink);
+    font-family: var(--font-body);
+    background:
+      linear-gradient(90deg, rgba(111, 122, 78, .08) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(123, 86, 63, .06) 1px, transparent 1px),
+      #fbf0df;
+    background-size: 50px 50px, 50px 50px;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: 190px 1fr auto;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(251, 240, 223, .9);
+    padding: 16px clamp(24px, 5vw, 72px);
+    backdrop-filter: blur(18px);
+  }
+
+  .brand-word,
+  .site-header a,
+  .primary,
+  .secondary,
+  .brand-story a {
+    color: inherit;
+    font-weight: 850;
+    text-decoration: none;
+  }
+
+  .brand-word {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    white-space: nowrap;
+    font-family: var(--font-latin);
+    text-transform: uppercase;
+  }
+
+  .brand-word span,
+  .brand-word strong {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .brand-word strong {
+    color: var(--olive);
+  }
+
+  .site-header nav {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .header-cta,
+  .primary,
+  .secondary,
+  .brand-story a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    border-radius: 999px;
+    font-weight: 650;
+    padding: 0 18px;
+  }
+
+  .site-header .header-cta {
+    justify-self: end;
+    color: #fffaf2;
+    white-space: nowrap;
+  }
+
+  .header-cta,
+  .primary,
+  .brand-story a {
+    background: var(--brown);
+    color: #fffaf2;
+  }
+
+  .secondary {
+    border: 1px solid var(--line);
+    background: rgba(255, 250, 242, .72);
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(420px, 520px) minmax(0, 1fr);
+    gap: 58px;
+    align-items: center;
+    padding: 68px clamp(24px, 5vw, 72px) 52px;
+  }
+
+  .hero-media {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 620px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background:
+      radial-gradient(circle at 24% 22%, rgba(231, 185, 162, .36), transparent 12rem),
+      radial-gradient(circle at 82% 76%, rgba(111, 122, 78, .22), transparent 13rem),
+      linear-gradient(145deg, #fffaf2, #f3dfcb);
+    overflow: hidden;
+    box-shadow: 0 28px 80px rgba(36, 27, 21, .12);
+  }
+
+  .hero-media::before,
+  .hero-media::after {
+    content: '';
+    position: absolute;
+    border-radius: 50% 50% 50% 12%;
+    background: rgba(231, 185, 162, .34);
+    transform: rotate(34deg);
+  }
+
+  .hero-media::before {
+    left: 36px;
+    bottom: 46px;
+    width: 128px;
+    height: 92px;
+  }
+
+  .hero-media::after {
+    right: 42px;
+    top: 58px;
+    width: 116px;
+    height: 82px;
+    background: rgba(111, 122, 78, .24);
+  }
+
+  .hero-media img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 330px;
+    max-height: 540px;
+    object-fit: contain;
+    filter: drop-shadow(0 26px 32px rgba(36, 27, 21, .16));
+  }
+
+  .eyebrow {
+    margin: 0;
+    color: var(--olive);
+    font-size: 12px;
+    font-weight: 950;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    word-break: keep-all;
+  }
+
+  h1 {
+    max-width: 800px;
+    margin-top: 16px;
+    font-family: var(--font-display);
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 34px;
+    font-weight: 550;
+    line-height: 1.22;
+    letter-spacing: 0;
+  }
+
+  .hero-copy > span,
+  .brief article > span,
+  .section-head > span,
+  .skin-type > div > span,
+  .ingredient-story > div > span,
+  .review-copy > span,
+  .brand-story span {
+    display: block;
+    max-width: 650px;
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.78;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .brief,
+  .routine,
+  .skin-type,
+  .ingredient-story,
+  .review-cta {
+    border-top: 1px solid var(--line);
+    padding: 48px clamp(24px, 5vw, 72px);
+  }
+
+  .brief {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 520px;
+    gap: 36px;
+    background: rgba(255, 250, 242, .5);
+  }
+
+  .brief h2,
+  .section-head h2,
+  .skin-type h2,
+  .ingredient-story h2,
+  .review-copy h2 {
+    margin-top: 10px;
+  }
+
+  .palette {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .palette div {
+    display: grid;
+    gap: 8px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    padding: 12px;
+  }
+
+  .palette span {
+    height: 86px;
+    border: 1px solid rgba(36, 27, 21, .08);
+    border-radius: 6px;
+  }
+
+  .palette strong {
+    font-size: 14px;
+  }
+
+  .palette em {
+    color: var(--muted);
+    font-size: 12px;
+    font-style: normal;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 28px;
+    margin-bottom: 24px;
+  }
+
+  .routine-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .routine-card,
+  .skin-list article,
+  .story-grid article,
+  .brand-story {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 250, 242, .82);
+  }
+
+  .routine-card {
+    display: grid;
+    grid-template-rows: auto 240px minmax(220px, auto);
+    overflow: hidden;
+  }
+
+  .routine-card > span {
+    padding: 18px 18px 0;
+    color: var(--olive);
+    font-family: var(--font-serif);
+    font-size: 34px;
+    font-weight: 700;
+  }
+
+  .routine-card img {
+    align-self: center;
+    justify-self: center;
+    width: 82%;
+    max-height: 210px;
+    object-fit: contain;
+    filter: drop-shadow(0 16px 16px rgba(36, 27, 21, .12));
+  }
+
+  .routine-card div {
+    display: grid;
+    gap: 10px;
+    border-top: 1px solid var(--line);
+    padding: 18px;
+  }
+
+  .routine-card strong {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .routine-card p,
+  .skin-list p,
+  .story-grid p {
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .routine-card em {
+    color: var(--brown);
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 950;
+  }
+
+  .skin-type {
+    display: grid;
+    grid-template-columns: 360px minmax(0, 1fr);
+    gap: 34px;
+  }
+
+  .skin-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .skin-list article {
+    display: grid;
+    gap: 12px;
+    min-height: 240px;
+    padding: 22px;
+  }
+
+  .skin-list strong {
+    font-size: 23px;
+  }
+
+  .skin-list span {
+    color: var(--olive);
+    font-weight: 900;
+  }
+
+  .ingredient-story {
+    display: grid;
+    grid-template-columns: 430px minmax(0, 1fr);
+    gap: 44px;
+    align-items: center;
+    background: rgba(255, 250, 242, .54);
+  }
+
+  .ingredient-story figure {
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .ingredient-story img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1.2;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .story-grid article {
+    display: grid;
+    gap: 12px;
+    min-height: 190px;
+    padding: 20px;
+  }
+
+  .story-grid strong {
+    font-size: 20px;
+  }
+
+  .review-cta {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 380px;
+    gap: 28px;
+    align-items: stretch;
+    padding-bottom: 74px;
+  }
+
+  .brand-story {
+    display: grid;
+    align-content: center;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .brand-story strong {
+    color: var(--olive);
+  }
+
+  .brand-story p {
+    font-size: 26px;
+    font-weight: 850;
+    line-height: 1.35;
+  }
+
+  .brand-story span {
+    margin-top: 0;
+    font-size: 16px;
+  }
+
+  @media (max-width: 1160px) {
+    .site-header,
+    .hero,
+    .brief,
+    .skin-type,
+    .ingredient-story,
+    .review-cta {
+      grid-template-columns: 1fr;
+    }
+
+    .site-header nav {
+      justify-content: flex-start;
+    }
+
+    .site-header .header-cta {
+      justify-self: start;
+    }
+
+    .routine-grid,
+    .skin-list,
+    .story-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 720px) {
+    .site-header,
+    .hero,
+    .brief,
+    .routine,
+    .skin-type,
+    .ingredient-story,
+    .review-cta {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    .hero-media {
+      height: 430px;
+    }
+
+    .section-head {
+      display: block;
+    }
+
+    .palette,
+    .routine-grid,
+    .skin-list,
+    .story-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
