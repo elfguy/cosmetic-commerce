@@ -31,6 +31,19 @@ npm install
 npm run dev
 ```
 
+## GitHub
+
+- Repository: https://github.com/elfguy/cosmetic-commerce
+- Owner: `elfguy`
+- Visibility: `PRIVATE`
+- Local remote: `origin` → `git@github.com:elfguy/cosmetic-commerce.git`
+
+Remote 연결 시:
+
+```bash
+git remote add origin git@github.com:elfguy/cosmetic-commerce.git
+```
+
 ## 문서
 
 - `docs/01-product-brief.md` — 제품/사업 브리프
@@ -38,3 +51,11 @@ npm run dev
 - `docs/03-marketing-plan.md` — 마케팅/콘텐츠 전략
 - `docs/04-commerce-architecture.md` — 쇼핑몰 구조/DB/결제 방향
 - `docs/05-discord.md` — Discord 채널/운영 메모
+- `docs/06-coupang-product-urls.md` — 쿠팡 등록 상품 URL 조사 메모
+- `docs/07-coupang-product-analysis-plan.md` — 쿠팡 상품/이미지 수집 및 분석 계획
+- `docs/08-naver-shopping-search.md` — 네이버 쇼핑/스마트스토어 검색 노출 확인
+- `docs/09-naver-smartstore-access-options.md` — 네이버 스마트스토어 상세페이지 접근 방법 검토
+- `docs/10-asset-collection-guide.md` — 유어스킨 상세페이지/상품 이미지 수집 가이드
+- `docs/11-product-feature-summary.md` — 상품별 확인 정보와 안전한 특장점 정리
+- `docs/12-marketing-strategy-research.md` — 효능 주장 없이 AI를 활용하는 마케팅 운영 전략
+- `docs/13-marketing-budget.md` — AI 활용 마케팅 비용/광고 테스트 예산 추정
