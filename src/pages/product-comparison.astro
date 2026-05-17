@@ -1,0 +1,831 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import comparisonData from '../../data/yourskinplus-8-product-comparison.json';
+
+const products = comparisonData.products;
+const formatWon = (value) => `${Number(value).toLocaleString('ko-KR')}원`;
+const formatRating = (rating) => `${rating.coupang.toFixed(1)} / ${rating.coupangReviews}개`;
+const totalReviews = products.reduce((sum, product) => sum + product.rating.coupangReviews, 0);
+const averagePrice = Math.round(products.reduce((sum, product) => sum + product.price.sale, 0) / products.length);
+const functionalCount = products.filter((product) => product.notice.functionalCosmetic !== '해당 없음').length;
+const lowestUnit = products.reduce((min, product) => (product.price.unitPrice < min.price.unitPrice ? product : min), products[0]);
+const generatedLabel = new Date(comparisonData.generatedAt).toLocaleDateString('ko-KR', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+});
+
+const groupMap = {
+  'hyaluronic-toner': { key: 'hydration', label: '수분/보습' },
+  'aqua-lotion': { key: 'hydration', label: '수분/보습' },
+  'rose-essence': { key: 'hydration', label: '수분/보습' },
+  'cleansing-oil': { key: 'cleansing', label: '클렌징' },
+  'cleansing-gel': { key: 'cleansing', label: '클렌징' },
+  'all-in-one-lotion': { key: 'functional', label: '기능성/남성' },
+  'whitening-cream': { key: 'functional', label: '기능성/톤케어' },
+  'moisture-lip-balm': { key: 'lip', label: '립케어' },
+};
+
+const roleLabels = {
+  humectants: '수분/보습',
+  soothing: '진정 보조',
+  texturePH: '제형/pH',
+  botanical: '식물 추출물',
+  preservation: '보존/보조',
+  emollients: '유분 보습막',
+  fermentBotanical: '발효/식물',
+  antioxidants: '항산화 컨셉',
+  cleansingBase: '세정 오일',
+  emulsifier: '유화',
+  scentEssentialOil: '향/에센셜오일',
+  surfactants: '계면활성제',
+  functional: '기능성',
+  emollientsOcclusive: '보습막',
+  colorFragrance: '색/향',
+  antioxidantConcept: '브라이트닝 컨셉',
+};
+
+const groupFor = (product) => groupMap[product.slug] ?? { key: 'etc', label: '기타' };
+const searchable = (product) =>
+  [
+    product.name,
+    product.shortName,
+    product.category,
+    product.routineStep,
+    product.positioning.oneLine,
+    product.positioning.keyClaims.join(' '),
+    product.positioning.keywords.join(' '),
+    product.ingredients.full.join(' '),
+    product.ingredients.analysis,
+    product.ingredients.cautions.join(' '),
+  ].join(' ');
+---
+
+<BaseLayout title="유어스킨플러스 8개 제품 비교표" description="유어스킨플러스 8개 쿠팡 등록 상품의 가격, 채널, 상세 이미지, 전성분, 성분 역할 분석표">
+  <main class="comparison-app">
+    <header class="comparison-header">
+      <div>
+        <p class="eyebrow">Yourskin+ SKU analysis</p>
+        <h1>8개 제품 가격·상세·전성분 비교표</h1>
+        <p class="lead">
+          쿠팡에서 확인한 8개 상품을 타사 제품과 같은 축으로 비교할 수 있도록 가격, 채널, 기능성 고시, 전성분 역할, 표현 주의사항까지 구조화했습니다.
+        </p>
+      </div>
+      <div class="source-box">
+        <span>기준일</span>
+        <strong>{generatedLabel}</strong>
+        <a href="/coupang-mock/">상세 목업 보기</a>
+      </div>
+    </header>
+
+    <section class="metric-strip" aria-label="요약 지표">
+      <div>
+        <span>등록 상품</span>
+        <strong>{products.length}개</strong>
+      </div>
+      <div>
+        <span>쿠팡 리뷰 합계</span>
+        <strong>{totalReviews.toLocaleString('ko-KR')}개</strong>
+      </div>
+      <div>
+        <span>평균 판매가</span>
+        <strong>{formatWon(averagePrice)}</strong>
+      </div>
+      <div>
+        <span>기능성 제품</span>
+        <strong>{functionalCount}개</strong>
+      </div>
+      <div>
+        <span>최저 단가</span>
+        <strong>{lowestUnit.shortName} · {formatWon(lowestUnit.price.unitPrice)}/{lowestUnit.price.unitBasis}</strong>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="표 필터">
+      <label class="search-field">
+        <span>검색</span>
+        <input id="product-search" type="search" placeholder="성분, 상품명, 키워드 검색" />
+      </label>
+      <div class="segment" aria-label="상품군 필터">
+        <button type="button" data-filter="all" class="is-active">전체</button>
+        <button type="button" data-filter="hydration">수분/보습</button>
+        <button type="button" data-filter="cleansing">클렌징</button>
+        <button type="button" data-filter="functional">기능성</button>
+        <button type="button" data-filter="lip">립케어</button>
+      </div>
+      <span id="visible-count">{products.length}개 표시</span>
+    </section>
+
+    <section class="table-shell" aria-label="상품 비교표">
+      <table>
+        <colgroup>
+          <col class="col-product" />
+          <col class="col-position" />
+          <col class="col-price" />
+          <col class="col-rating" />
+          <col class="col-ingredients" />
+          <col class="col-analysis" />
+          <col class="col-caution" />
+          <col class="col-links" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>상품</th>
+            <th>포지션</th>
+            <th>가격/단가</th>
+            <th>성과</th>
+            <th>핵심 성분</th>
+            <th>성분 분석</th>
+            <th>주의/검증</th>
+            <th>링크</th>
+          </tr>
+        </thead>
+        <tbody>
+          {products.map((product) => {
+            const group = groupFor(product);
+            const firstIngredients = product.ingredients.heroIngredients.map((item) => item.name).join(' · ');
+            return (
+              <tr data-group={group.key} data-search={searchable(product)}>
+                <td class="product-cell">
+                  <div class="product-wrap">
+                    <img src={product.assets.thumbnail} alt={`${product.shortName} 상세 이미지`} />
+                    <div>
+                      <span>{group.label}</span>
+                      <strong>{product.shortName}</strong>
+                      <em>{product.volume.label}</em>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <strong class="table-title">{product.routineStep}</strong>
+                  <p>{product.positioning.oneLine}</p>
+                  <div class="tags">
+                    {product.positioning.keywords.slice(0, 4).map((keyword) => <span>{keyword}</span>)}
+                  </div>
+                </td>
+                <td class="price-cell">
+                  <strong>{formatWon(product.price.sale)}</strong>
+                  <span>정가 {formatWon(product.price.original)} · {product.price.discountRate}%</span>
+                  <em>{formatWon(product.price.unitPrice)} / {product.price.unitBasis}</em>
+                </td>
+                <td>
+                  <strong class="table-title">쿠팡 {formatRating(product.rating)}</strong>
+                  <p>{product.commerce.naverExposure}</p>
+                </td>
+                <td>
+                  <strong class="table-title">{product.notice.functionalCosmetic}</strong>
+                  <p>{firstIngredients}</p>
+                </td>
+                <td>
+                  <p>{product.ingredients.analysis}</p>
+                </td>
+                <td>
+                  <ul class="compact-list">
+                    {product.ingredients.cautions.slice(0, 2).map((caution) => <li>{caution}</li>)}
+                    {product.notice.dataQualityNotes?.map((note) => <li>{note}</li>)}
+                  </ul>
+                </td>
+                <td class="link-cell">
+                  <a href={product.commerce.coupangUrl} target="_blank" rel="noreferrer">쿠팡</a>
+                  {product.commerce.naverUrl ? <a href={product.commerce.naverUrl} target="_blank" rel="noreferrer">네이버</a> : <span>네이버 미확인</span>}
+                  <a href={product.assets.noticeImage} target="_blank" rel="noreferrer">고시 이미지</a>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </section>
+
+    <section class="analysis-grid" aria-label="상세 성분 분석">
+      {products.map((product, index) => {
+        const group = groupFor(product);
+        return (
+          <article data-group={group.key} data-search={searchable(product)}>
+            <header>
+              <img src={product.assets.thumbnail} alt={`${product.shortName} 제품 이미지`} />
+              <div>
+                <span>{String(index + 1).padStart(2, '0')} · {group.label}</span>
+                <h2>{product.shortName}</h2>
+                <p>{product.positioning.targetNeed}</p>
+              </div>
+            </header>
+
+            <div class="claim-row">
+              {product.positioning.keyClaims.map((claim) => <span>{claim}</span>)}
+            </div>
+
+            <div class="role-matrix">
+              {Object.entries(product.ingredients.roleGroups).map(([role, items]) => (
+                <div>
+                  <strong>{roleLabels[role] ?? role}</strong>
+                  <p>{items.join(', ')}</p>
+                </div>
+              ))}
+            </div>
+
+            <div class="hero-ingredients">
+              <h3>대표 성분 근거</h3>
+              {product.ingredients.heroIngredients.map((ingredient) => (
+                <div>
+                  <strong>{ingredient.name}</strong>
+                  <span>{ingredient.role}</span>
+                  <p>{ingredient.evidence}</p>
+                </div>
+              ))}
+            </div>
+
+            <details>
+              <summary>전성분 {product.ingredients.full.length}개 보기</summary>
+              <div class="ingredient-cloud">
+                {product.ingredients.full.map((ingredient) => <span>{ingredient}</span>)}
+              </div>
+            </details>
+
+            <footer>
+              <strong>타사 비교 축</strong>
+              <p>{product.comparisonAxes.join(' · ')}</p>
+            </footer>
+          </article>
+        );
+      })}
+    </section>
+
+    <section class="source-note">
+      <h2>데이터 사용 메모</h2>
+      <p>
+        원본 구조화 데이터는 <code>data/yourskinplus-8-product-comparison.json</code>에 저장했습니다.
+        전성분 OCR은 라벨 이미지 기준으로 수기 보정했지만, 실제 판매 전에는 원본 라벨 또는 제조사 원장과 한 번 더 대조하는 것이 안전합니다.
+      </p>
+    </section>
+  </main>
+
+  <script is:inline>
+    const searchInput = document.getElementById('product-search');
+    const buttons = document.querySelectorAll('[data-filter]');
+    const filterTargets = document.querySelectorAll('[data-group][data-search]');
+    const visibleCount = document.getElementById('visible-count');
+    let activeFilter = 'all';
+
+    function normalize(value) {
+      return String(value || '').toLowerCase().replace(/\s+/g, '');
+    }
+
+    function applyFilters() {
+      const query = normalize(searchInput.value);
+      let visible = 0;
+
+      filterTargets.forEach((target) => {
+        const matchesFilter = activeFilter === 'all' || target.dataset.group === activeFilter;
+        const matchesSearch = !query || normalize(target.dataset.search).includes(query);
+        const isVisible = matchesFilter && matchesSearch;
+        target.hidden = !isVisible;
+        if (target.tagName === 'TR') {
+          target.style.display = isVisible ? '' : 'none';
+          if (isVisible) visible += 1;
+        }
+      });
+
+      visibleCount.textContent = `${visible}개 표시`;
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        activeFilter = button.dataset.filter;
+        buttons.forEach((item) => item.classList.toggle('is-active', item === button));
+        applyFilters();
+      });
+    });
+
+    searchInput.addEventListener('input', applyFilters);
+  </script>
+</BaseLayout>
+
+<style>
+  :global(body) {
+    background: #f4f7f5;
+    color: #17201c;
+  }
+
+  :global(.noise::before) {
+    opacity: 0.12;
+  }
+
+  .comparison-app {
+    --ink: #17201c;
+    --muted: #66746e;
+    --line: #d9e1dc;
+    --panel: #ffffff;
+    --panel-soft: #eef5f1;
+    --mint: #0f9f8c;
+    --coral: #d96c4b;
+    --charcoal: #24312c;
+    min-height: 100vh;
+    padding: 32px;
+  }
+
+  .comparison-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 24px;
+    align-items: end;
+    margin-bottom: 22px;
+  }
+
+  .eyebrow,
+  .source-box span,
+  .metric-strip span,
+  .search-field span,
+  .product-cell span,
+  .analysis-grid article header span {
+    margin: 0;
+    color: var(--mint);
+    font: 800 12px/1.1 var(--font-latin);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    max-width: 880px;
+    font-size: clamp(34px, 4.2vw, 64px);
+    line-height: 0.98;
+    letter-spacing: 0;
+    word-break: keep-all;
+  }
+
+  .lead {
+    max-width: 760px;
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .source-box {
+    display: grid;
+    gap: 8px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    padding: 18px;
+  }
+
+  .source-box strong {
+    font-size: 22px;
+  }
+
+  a {
+    color: var(--charcoal);
+    font-weight: 800;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+  }
+
+  .metric-strip {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--line);
+    margin-bottom: 18px;
+  }
+
+  .metric-strip div {
+    display: grid;
+    gap: 8px;
+    background: var(--panel);
+    padding: 18px;
+    min-height: 76px;
+  }
+
+  .metric-strip strong {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: minmax(260px, 380px) minmax(0, 1fr) auto;
+    gap: 14px;
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 12px;
+    backdrop-filter: blur(12px);
+  }
+
+  .search-field {
+    display: grid;
+    gap: 8px;
+  }
+
+  .search-field input {
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: #f8fbf9;
+    color: var(--ink);
+    font: 700 15px/1 var(--font-body);
+    outline: none;
+    padding: 12px 13px;
+  }
+
+  .search-field input:focus {
+    border-color: var(--mint);
+    box-shadow: 0 0 0 3px rgba(15, 159, 140, 0.14);
+  }
+
+  .segment {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .segment button {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--panel);
+    color: var(--charcoal);
+    cursor: pointer;
+    font: 800 13px/1 var(--font-body);
+    padding: 10px 13px;
+  }
+
+  .segment button.is-active {
+    border-color: var(--mint);
+    background: var(--mint);
+    color: #fff;
+  }
+
+  #visible-count {
+    color: var(--coral);
+    font-weight: 900;
+    white-space: nowrap;
+  }
+
+  .table-shell {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    margin-top: 18px;
+  }
+
+  table {
+    width: 100%;
+    min-width: 1660px;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .col-product {
+    width: 250px;
+  }
+
+  .col-position {
+    width: 230px;
+  }
+
+  .col-price {
+    width: 140px;
+  }
+
+  .col-rating {
+    width: 170px;
+  }
+
+  .col-ingredients {
+    width: 250px;
+  }
+
+  .col-analysis {
+    width: 280px;
+  }
+
+  .col-caution {
+    width: 250px;
+  }
+
+  .col-links {
+    width: 90px;
+  }
+
+  th,
+  td {
+    box-sizing: border-box;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 14px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: #24312c;
+    color: #fff;
+    font-size: 13px;
+  }
+
+  td {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+  }
+
+  th:last-child,
+  td:last-child {
+    border-right: 0;
+  }
+
+  tr:hover td {
+    background: #f8fbf9;
+  }
+
+  .product-cell {
+    overflow-wrap: normal;
+  }
+
+  .product-wrap {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+  }
+
+  .product-wrap img {
+    width: 76px;
+    height: 96px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .product-wrap div {
+    display: grid;
+    gap: 7px;
+    align-content: start;
+  }
+
+  .product-cell strong,
+  .table-title,
+  .price-cell strong {
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  .product-cell em,
+  .price-cell em,
+  .price-cell span {
+    color: var(--muted);
+    font-style: normal;
+  }
+
+  .price-cell {
+    min-width: 150px;
+  }
+
+  .price-cell strong,
+  .price-cell span,
+  .price-cell em {
+    display: block;
+  }
+
+  .tags,
+  .claim-row,
+  .ingredient-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tags span,
+  .claim-row span,
+  .ingredient-cloud span {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--panel-soft);
+    color: var(--charcoal);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.2;
+    padding: 6px 8px;
+  }
+
+  .compact-list {
+    display: grid;
+    gap: 6px;
+    margin: 0;
+    padding-left: 17px;
+  }
+
+  .link-cell {
+    min-width: 120px;
+  }
+
+  .link-cell a,
+  .link-cell span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+
+  .link-cell span {
+    color: var(--muted);
+    font-weight: 800;
+  }
+
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+  }
+
+  .analysis-grid article {
+    display: grid;
+    gap: 16px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    padding: 18px;
+  }
+
+  .analysis-grid article header {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+
+  .analysis-grid article header img {
+    width: 92px;
+    height: 116px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .analysis-grid h2 {
+    margin-top: 6px;
+    font-size: 24px;
+    letter-spacing: 0;
+  }
+
+  .analysis-grid article header p,
+  .source-note p,
+  .role-matrix p,
+  .hero-ingredients p,
+  .hero-ingredients span,
+  details {
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .role-matrix {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .role-matrix div,
+  .hero-ingredients div {
+    border-left: 3px solid var(--mint);
+    background: #f8fbf9;
+    padding: 10px 12px;
+  }
+
+  .role-matrix strong,
+  .hero-ingredients strong,
+  .source-note h2 {
+    color: var(--ink);
+  }
+
+  .hero-ingredients {
+    display: grid;
+    gap: 8px;
+  }
+
+  .hero-ingredients h3 {
+    font-size: 15px;
+  }
+
+  .hero-ingredients span {
+    display: block;
+    color: var(--coral);
+    font-weight: 900;
+  }
+
+  details {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  summary {
+    color: var(--ink);
+    cursor: pointer;
+    font-weight: 900;
+  }
+
+  .ingredient-cloud {
+    margin-top: 12px;
+  }
+
+  .analysis-grid footer {
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+  }
+
+  .analysis-grid footer strong {
+    color: var(--coral);
+  }
+
+  .analysis-grid footer p {
+    margin-top: 6px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .source-note {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #24312c;
+    color: #fff;
+    margin-top: 24px;
+    padding: 22px;
+  }
+
+  .source-note h2,
+  .source-note p,
+  .source-note code {
+    color: #fff;
+  }
+
+  .source-note code {
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.14);
+    padding: 2px 5px;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  @media (max-width: 1100px) {
+    .comparison-app {
+      padding: 22px;
+    }
+
+    .comparison-header,
+    .toolbar,
+    .analysis-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .metric-strip {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+  }
+
+  @media (max-width: 640px) {
+    .comparison-app {
+      padding: 14px;
+    }
+
+    h1 {
+      font-size: 38px;
+    }
+
+    .metric-strip,
+    .role-matrix {
+      grid-template-columns: 1fr;
+    }
+
+    .analysis-grid article header {
+      grid-template-columns: 74px 1fr;
+    }
+
+    .analysis-grid article header img {
+      width: 74px;
+      height: 94px;
+    }
+  }
+</style>

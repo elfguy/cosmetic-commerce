@@ -1,7 +1,7 @@
 {
   "source": "data/coupang/downloads",
-  "generatedAt": "2026-05-16T11:44:30.732Z",
-  "count": 7,
+  "generatedAt": "2026-05-17T02:02:23.315Z",
+  "count": 8,
   "products": [
     {
       "slug": "9025751494",
@@ -697,6 +697,152 @@
         },
         {
           "src": "/coupang-detail/9221762154/14.png",
+          "originalFileName": "7412f26fda70b9485ae68931cc11c054916cd90875e6f29db13eef04c94d.png",
+          "sourceOrder": 102,
+          "width": 780,
+          "height": 1360,
+          "bytes": 352561
+        }
+      ]
+    },
+    {
+      "slug": "9264527939",
+      "fileName": "유어스킨플러스 화이트닝 톤 케어 크림 - 페이셜크림 _ 쿠팡.html",
+      "fileSize": 2816193,
+      "name": "유어스킨플러스 화이트닝 톤 케어 크림",
+      "description": "쿠팡에서 유어스킨플러스 화이트닝 톤 케어 크림 구매하고 더 많은 혜택을 받으세요! 지금 할인중인 다른 페이셜크림 제품도 바로 쿠팡에서 확인할 수 있습니다.",
+      "productId": "9264527939",
+      "itemId": "27414863570",
+      "sku": "9264527939-27414863570",
+      "url": "https://www.coupang.com/vp/products/9264527939?itemId=27414863570&vendorItemId=94380449351",
+      "category": "페이셜크림",
+      "categories": [
+        "쿠팡수입",
+        "뷰티",
+        "스킨케어",
+        "크림/올인원",
+        "페이셜크림"
+      ],
+      "price": 10100,
+      "originalPrice": 18500,
+      "discountRate": 45,
+      "availability": "InStock",
+      "ratingValue": 5,
+      "reviewCount": 23,
+      "images": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/7e20/33ecb9de5fe6530fd33075b19d8feb715f87527ff073beccad861e0883da.png",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/ccba/755f8fa4ffb0a1a8de95d3f8df1518de366124ade3f55022bdd74bddf89f.png",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/0212/a747dff1c0c412f851264d6bb726fd925e2090bb163b5388389c286f7115.png",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/7aae/ca00f5a0fb696411c1770639f36125663a0c45ead91bdfce46d575566011.png",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/db3e/35499d45cf5048d516f47a180f3ec11a6c6ee11201498c90ee4140c1d793.png"
+      ],
+      "detailImages": [
+        {
+          "src": "/coupang-detail/9264527939/01.png",
+          "originalFileName": "125285b9f5f53ecc8de8b331af1aa3e02bed58dc13d9bbe6bd1b7ac7e5a9.png",
+          "sourceOrder": 89,
+          "width": 780,
+          "height": 1360,
+          "bytes": 518459
+        },
+        {
+          "src": "/coupang-detail/9264527939/02.png",
+          "originalFileName": "e509189ca2f8e35c9858c7cb126867f6d318ae48599bf0c870a2db491f5a.png",
+          "sourceOrder": 90,
+          "width": 780,
+          "height": 1360,
+          "bytes": 601128
+        },
+        {
+          "src": "/coupang-detail/9264527939/03.png",
+          "originalFileName": "ac8d9fc7345185f1393d7f4b5b39a7b34c90378248adc0a62b5896670e99.png",
+          "sourceOrder": 91,
+          "width": 780,
+          "height": 1360,
+          "bytes": 668022
+        },
+        {
+          "src": "/coupang-detail/9264527939/04.png",
+          "originalFileName": "1b81ed04c5c448e05ca97b77ce6011998e8685157c5929f4b25d43838613.png",
+          "sourceOrder": 92,
+          "width": 780,
+          "height": 1360,
+          "bytes": 598413
+        },
+        {
+          "src": "/coupang-detail/9264527939/05.png",
+          "originalFileName": "951b5478f3544438b72b50e47fff4b7e189271e5b1ce90eeb25056663b92.png",
+          "sourceOrder": 93,
+          "width": 780,
+          "height": 1360,
+          "bytes": 566506
+        },
+        {
+          "src": "/coupang-detail/9264527939/06.png",
+          "originalFileName": "eccf9753a2ebd52336791e0547a6bc8a3a01984496218e6cad499db8f890.png",
+          "sourceOrder": 94,
+          "width": 780,
+          "height": 1360,
+          "bytes": 211058
+        },
+        {
+          "src": "/coupang-detail/9264527939/07.png",
+          "originalFileName": "4bcc71db84cbd64375441ac890fe8b2c4308381d547ff3e80f48545d5fbc.png",
+          "sourceOrder": 95,
+          "width": 780,
+          "height": 1360,
+          "bytes": 944488
+        },
+        {
+          "src": "/coupang-detail/9264527939/08.png",
+          "originalFileName": "b8694771c10b82cf6459154afd3753df18dce70d60c67b8c14b37337e25d.png",
+          "sourceOrder": 96,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1117662
+        },
+        {
+          "src": "/coupang-detail/9264527939/09.png",
+          "originalFileName": "753f7f535eda3e69f1da3ba9031dc99911d62899072490c3afeb93142185.png",
+          "sourceOrder": 97,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1165290
+        },
+        {
+          "src": "/coupang-detail/9264527939/10.png",
+          "originalFileName": "1cc777dabc4e728d1adb618b0ef48525e64c0f304a47cf770db3caa68148.png",
+          "sourceOrder": 98,
+          "width": 780,
+          "height": 1360,
+          "bytes": 378797
+        },
+        {
+          "src": "/coupang-detail/9264527939/11.png",
+          "originalFileName": "85a9d906027839ba5f01f2996170ab6a4e882cd15d42c69ea4b7addbda5a.png",
+          "sourceOrder": 99,
+          "width": 780,
+          "height": 1360,
+          "bytes": 382357
+        },
+        {
+          "src": "/coupang-detail/9264527939/12.png",
+          "originalFileName": "d14d6d3920a71870e054794aead6e932aec8c125d2908db79a8cd8efbba6.png",
+          "sourceOrder": 100,
+          "width": 780,
+          "height": 1360,
+          "bytes": 428022
+        },
+        {
+          "src": "/coupang-detail/9264527939/13.png",
+          "originalFileName": "d479b1999cae296309c2c37d52ee6b6f7541509ca241b13a6acc75721a16.png",
+          "sourceOrder": 101,
+          "width": 780,
+          "height": 1360,
+          "bytes": 127147
+        },
+        {
+          "src": "/coupang-detail/9264527939/14.png",
           "originalFileName": "7412f26fda70b9485ae68931cc11c054916cd90875e6f29db13eef04c94d.png",
           "sourceOrder": 102,
           "width": 780,

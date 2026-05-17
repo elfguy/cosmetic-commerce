@@ -1,0 +1,461 @@
+{
+  "generatedAt": "2026-05-17",
+  "scope": "쿠팡에서 유어스킨플러스 8개 상품과 유사한 상품군의 고리뷰/고구매 신호 상품 조사",
+  "method": [
+    "쿠팡 상품 상세 및 쿠팡 검색 노출 결과에서 리뷰 수, 한 달 구매 신호, 가격, 단위가를 확인했다.",
+    "가격과 리뷰 수는 쿠팡 노출 시점에 따라 바뀔 수 있으므로 광고 집행 직전 재확인이 필요하다.",
+    "정확히 같은 제형이 적은 상품군은 구매 의도가 비슷한 대체재를 함께 넣었다."
+  ],
+  "categories": [
+    {
+      "key": "hydration-toner",
+      "label": "수분/진정 토너",
+      "yoursProducts": ["hyaluronic-toner", "rose-essence"],
+      "marketRead": "대용량 토너는 라운드랩, 토니모리처럼 리뷰와 월 구매 신호가 큰 브랜드가 강하다. 유어스킨플러스는 500ml, 218원/10ml 단가와 히알루론산 다종 성분을 전면에 두면 가격 경쟁력은 있다.",
+      "competitors": [
+        {
+          "id": "roundlab-dokdo-toner-500",
+          "brand": "라운드랩",
+          "name": "독도 토너 500ml",
+          "url": "https://www.coupang.com/vp/products/1414809213",
+          "reviewCount": 59291,
+          "monthlyPurchaseSignal": "한 달간 2만명 이상 구매",
+          "monthlyPurchaseMin": 20000,
+          "price": 14170,
+          "volume": "500ml",
+          "unitPriceLabel": "283원/10ml",
+          "positioning": "국민 토너급 인지도, 진정/보습 대용량",
+          "threatLevel": "high",
+          "takeaway": "리뷰 신뢰와 월 구매 신호가 압도적이다. 우리 토너는 단가가 더 낮지만 리뷰 증거가 부족하다.",
+          "sourceNote": "검색 결과 기준 2026-05-16 전후 노출"
+        },
+        {
+          "id": "tonymoly-wonder-hyaluronic-toner-500",
+          "brand": "토니모리",
+          "name": "원더 히알루론산 촉촉 토너 500ml",
+          "url": "https://www.coupang.com/vp/products/5375159669",
+          "reviewCount": 3328,
+          "monthlyPurchaseSignal": "한 달간 3,000명 이상 구매",
+          "monthlyPurchaseMin": 3000,
+          "price": 12000,
+          "volume": "500ml",
+          "unitPriceLabel": "240원/10ml",
+          "positioning": "히알루론산 대용량 토너, 저가 진입 상품",
+          "threatLevel": "high",
+          "takeaway": "우리 토너와 가장 직접적인 가격/용량 경쟁군이다. 단가 차이가 작아 성분과 사용 장면 카피가 중요하다.",
+          "sourceNote": "검색 결과 기준 2026-05-01 전후 노출"
+        },
+        {
+          "id": "thelab-oligo-hyaluronic-toner-300",
+          "brand": "더랩바이블랑두",
+          "name": "올리고 히알루론산 저분자 딥 토너 300ml",
+          "url": "https://www.coupang.com/vp/products/7426781694",
+          "reviewCount": 1236,
+          "monthlyPurchaseSignal": "한 달간 1,000명 이상 구매",
+          "monthlyPurchaseMin": 1000,
+          "price": 19900,
+          "volume": "300ml",
+          "unitPriceLabel": "663원/10ml",
+          "positioning": "저분자 히알루론산, 무향, 수분 공급",
+          "threatLevel": "medium",
+          "takeaway": "성분 전문성 포지션이다. 우리 제품은 더 큰 용량과 낮은 단가로 실사용량을 강조할 수 있다.",
+          "sourceNote": "검색 결과 기준 2026-05-10 전후 노출"
+        },
+        {
+          "id": "anua-heartleaf-toner-500",
+          "brand": "아누아",
+          "name": "어성초 77 진정 수딩 토너 500ml",
+          "url": "https://www.coupang.com/vp/products/6403381561",
+          "reviewCount": 8245,
+          "monthlyPurchaseSignal": "한 달간 100명 이상 구매",
+          "monthlyPurchaseMin": 100,
+          "price": 33000,
+          "volume": "500ml",
+          "unitPriceLabel": "660원/10ml",
+          "positioning": "어성초 진정 토너, 민감 피부",
+          "threatLevel": "medium",
+          "takeaway": "로즈 토닉 에센스와는 성분은 다르지만 진정/수딩 토너 수요에서 경쟁한다. 로즈 감성보다 피부 진정 근거가 더 강하게 보인다.",
+          "sourceNote": "검색 결과 기준 2026-04-23 전후 노출"
+        }
+      ]
+    },
+    {
+      "key": "daily-lotion",
+      "label": "대용량 보습 로션",
+      "yoursProducts": ["aqua-lotion"],
+      "marketRead": "보습 로션은 얼굴용뿐 아니라 바디/패밀리 로션 대형 브랜드와 가격 비교가 걸린다. 유어스킨플러스는 얼굴과 건조 부위에 넉넉히 쓰는 산뜻한 로션으로 포지션을 좁히는 편이 유리하다.",
+      "competitors": [
+        {
+          "id": "cetaphil-moisturizing-lotion-591",
+          "brand": "세타필",
+          "name": "모이스춰라이징 로션 591ml",
+          "url": "https://www.coupang.com/vp/products/7164345502",
+          "reviewCount": 190028,
+          "monthlyPurchaseSignal": "한 달간 6만명 이상 구매",
+          "monthlyPurchaseMin": 60000,
+          "price": 12700,
+          "volume": "591ml",
+          "unitPriceLabel": "2,149원/100ml",
+          "positioning": "대중적 고보습 바디/페이스 로션",
+          "threatLevel": "high",
+          "takeaway": "판매량과 리뷰 신뢰가 압도적이다. 정면 가격 경쟁보다 히알루론산, 무향, 얼굴 루틴 세트로 차별화해야 한다.",
+          "sourceNote": "검색 결과 기준 2026-02 전후 노출"
+        },
+        {
+          "id": "illiyoon-ceramide-ato-lotion-350",
+          "brand": "일리윤",
+          "name": "세라마이드 아토 로션 무향 350ml 3개",
+          "url": "https://www.coupang.com/vp/products/9039379842",
+          "reviewCount": 125735,
+          "monthlyPurchaseSignal": "한 달간 100명 이상 구매",
+          "monthlyPurchaseMin": 100,
+          "price": 31950,
+          "volume": "350ml x 3",
+          "unitPriceLabel": "3,043원/100ml",
+          "positioning": "세라마이드, 무향, 민감/건조 피부",
+          "threatLevel": "high",
+          "takeaway": "무향과 장벽 보습 키워드가 강하다. 우리 로션은 히알루론산 보습과 토너 세트 구매를 묶어야 한다.",
+          "sourceNote": "검색 결과 기준 2026-05-10 전후 노출"
+        },
+        {
+          "id": "roundlab-dokdo-toner-lotion-set",
+          "brand": "라운드랩",
+          "name": "독도 토너 500ml + 로션 200ml 세트",
+          "url": "https://www.coupang.com/vp/products/5065206671",
+          "reviewCount": 6115,
+          "monthlyPurchaseSignal": "한 달간 1,000명 이상 구매",
+          "monthlyPurchaseMin": 1000,
+          "price": 27470,
+          "volume": "토너 500ml + 로션 200ml",
+          "unitPriceLabel": "세트 27,470원",
+          "positioning": "토너+로션 보습 루틴 세트",
+          "threatLevel": "high",
+          "takeaway": "우리 토너+아쿠아 로션 세트 기획의 직접 벤치마크다. 세트 가격과 리뷰 증거를 빨리 만들어야 한다.",
+          "sourceNote": "검색 결과 기준 2026-05-10 전후 노출"
+        }
+      ]
+    },
+    {
+      "key": "cleansing-oil",
+      "label": "클렌징 오일",
+      "yoursProducts": ["cleansing-oil"],
+      "marketRead": "클렌징 오일은 마녀공장, 한스킨처럼 블랙헤드/모공 세정과 대량 리뷰를 가진 제품이 강하다. 유어스킨플러스는 300ml 대용량과 423원/10ml 단가가 매우 강한 진입 포인트다.",
+      "competitors": [
+        {
+          "id": "manyo-pure-cleansing-oil-200",
+          "brand": "마녀공장",
+          "name": "퓨어 클렌징 오일 200ml",
+          "url": "https://www.coupang.com/vp/products/8548621895",
+          "reviewCount": 34443,
+          "monthlyPurchaseSignal": "한 달간 1만명 이상 구매",
+          "monthlyPurchaseMin": 10000,
+          "price": 16420,
+          "volume": "200ml",
+          "unitPriceLabel": "821원/10ml",
+          "positioning": "베스트셀링 클렌징 오일, 블랙헤드/메이크업 세정",
+          "threatLevel": "high",
+          "takeaway": "카테고리 대표 상품이다. 우리 제품은 단가와 용량 우위가 있어 유화 장면과 가격 효율을 강조한다.",
+          "sourceNote": "검색 결과 기준 2026-01 전후 노출"
+        },
+        {
+          "id": "hanskin-pha-cleansing-oil-300",
+          "brand": "한스킨",
+          "name": "클렌징오일 앤 블랙헤드 PHA 300ml",
+          "url": "https://www.coupang.com/vp/products/1380963",
+          "reviewCount": 35660,
+          "monthlyPurchaseSignal": "한 달간 4,000명 이상 구매",
+          "monthlyPurchaseMin": 4000,
+          "price": 18770,
+          "volume": "300ml",
+          "unitPriceLabel": "626원/10ml",
+          "positioning": "블랙헤드, PHA, 모공 세정",
+          "threatLevel": "high",
+          "takeaway": "우리 제품과 같은 300ml라 비교가 쉽다. 단가 우위는 있으나 블랙헤드 키워드 근거는 더 약하다.",
+          "sourceNote": "검색 결과 기준 2026-04-24 전후 노출"
+        },
+        {
+          "id": "anua-heartleaf-cleansing-oil-200x2",
+          "brand": "아누아",
+          "name": "어성초 클렌징 오일 200ml 2개",
+          "url": "https://www.coupang.com/vp/products/7539494342",
+          "reviewCount": 2419,
+          "monthlyPurchaseSignal": "한 달간 700명 이상 구매",
+          "monthlyPurchaseMin": 700,
+          "price": 29900,
+          "volume": "200ml x 2",
+          "unitPriceLabel": "748원/10ml",
+          "positioning": "어성초, 모공 케어, 민감 피부",
+          "threatLevel": "medium",
+          "takeaway": "민감/모공 키워드가 강하다. 우리 제품은 오일 종류와 유화 과정을 더 명확히 보여줘야 한다.",
+          "sourceNote": "검색 결과 기준 2026-04-28 전후 노출"
+        },
+        {
+          "id": "beautyrecipe-little-mermaid-cleansing-oil-300",
+          "brand": "뷰티레시피",
+          "name": "리틀머메이드 디스 이즈 프린세스 클렌징오일 300ml",
+          "url": "https://www.coupang.com/np/products/brand-shop%3FbrandName%3D%25EB%25B7%25B0%25ED%258B%25B0%25EB%25A0%2588%25EC%258B%259C%25ED%2594%25BC",
+          "reviewCount": 5104,
+          "monthlyPurchaseSignal": "브랜드샵 노출",
+          "monthlyPurchaseMin": null,
+          "price": 11900,
+          "volume": "300ml",
+          "unitPriceLabel": "397원/10ml",
+          "positioning": "저가 300ml 클렌징 오일",
+          "threatLevel": "medium",
+          "takeaway": "가격은 우리보다 더 공격적이다. 브랜드 신뢰와 사용감 증거가 없으면 단가만으로는 차별화가 어렵다.",
+          "sourceNote": "쿠팡 브랜드샵 검색 결과 기준"
+        }
+      ]
+    },
+    {
+      "key": "low-ph-cleanser",
+      "label": "약산성 클렌저",
+      "yoursProducts": ["cleansing-gel"],
+      "marketRead": "약산성 세안제는 코스알엑스, 에뛰드, 비플레인처럼 리뷰 신뢰가 큰 제품이 많다. 유어스킨플러스 젤 클렌저는 300ml 펌프형과 350원/10ml 단가가 가장 큰 무기다.",
+      "competitors": [
+        {
+          "id": "cosrx-low-ph-good-morning-gel-150",
+          "brand": "코스알엑스",
+          "name": "약산성 굿모닝 클렌징 젤 150ml",
+          "url": "https://www.coupang.com/vp/products/2472153",
+          "reviewCount": 9522,
+          "monthlyPurchaseSignal": "한 달간 2,000명 이상 구매",
+          "monthlyPurchaseMin": 2000,
+          "price": 7120,
+          "volume": "150ml",
+          "unitPriceLabel": "475원/10ml",
+          "positioning": "약산성 젤 클렌저 대표 상품",
+          "threatLevel": "high",
+          "takeaway": "검색 키워드 적합도가 높다. 우리 제품은 더 큰 용량, 낮은 단가, 펌프형 편의성을 강조한다.",
+          "sourceNote": "검색 결과 기준 2026-05-09 전후 노출"
+        },
+        {
+          "id": "etude-soonjung-ph-65-whip-150",
+          "brand": "에뛰드",
+          "name": "순정 약산성 6.5 휩 클렌저 150ml",
+          "url": "https://www.coupang.com/vp/products/5231966510",
+          "reviewCount": 20613,
+          "monthlyPurchaseSignal": "한 달간 400명 이상 구매",
+          "monthlyPurchaseMin": 400,
+          "price": 9220,
+          "volume": "150ml",
+          "unitPriceLabel": "615원/10ml",
+          "positioning": "약산성, 민감 피부, 휩 클렌저",
+          "threatLevel": "high",
+          "takeaway": "리뷰 수와 브랜드 신뢰가 강하다. 우리 젤은 거품형보다 산뜻한 젤/펌프 사용감을 차별화한다.",
+          "sourceNote": "검색 결과 기준 2026-05-09 전후 노출"
+        },
+        {
+          "id": "beplain-mungbean-cleanser-120x2",
+          "brand": "비플레인",
+          "name": "녹두 약산성 클렌징폼 120ml 2개",
+          "url": "https://www.coupang.com/vp/products/7144144379",
+          "reviewCount": 26906,
+          "monthlyPurchaseSignal": "한 달간 100명 이상 구매",
+          "monthlyPurchaseMin": 100,
+          "price": 23300,
+          "volume": "120ml x 2",
+          "unitPriceLabel": "971원/10ml",
+          "positioning": "녹두, 비건, 약산성 폼",
+          "threatLevel": "medium",
+          "takeaway": "성분 스토리가 강하다. 우리 제품은 가격과 용량은 좋지만 자연 원료 스토리 보강이 필요하다.",
+          "sourceNote": "검색 결과 기준 노출"
+        }
+      ]
+    },
+    {
+      "key": "whitening-tone-care",
+      "label": "미백/톤업 크림",
+      "yoursProducts": ["whitening-cream"],
+      "marketRead": "미백/톤업 크림은 코스노리, 뷰티레시피처럼 리뷰가 큰 제품이 강하다. 유어스킨플러스는 200ml 대용량과 505원/10ml 단가가 좋지만, 기능성 근거와 톤 보정 사용 장면을 더 선명하게 보여야 한다.",
+      "competitors": [
+        {
+          "id": "beautyrecipe-snowwhite-mela-stop-80",
+          "brand": "뷰티레시피",
+          "name": "스노우화이트 멜라 스탑 화이트닝 크림 80ml",
+          "url": "https://www.coupang.com/np/products/brand-shop?brandName=%EB%B7%B0%ED%8B%B0%EB%A0%88%EC%8B%9C%ED%94%BC",
+          "reviewCount": 18717,
+          "monthlyPurchaseSignal": "브랜드샵 고리뷰 노출",
+          "monthlyPurchaseMin": null,
+          "price": 12500,
+          "volume": "80ml",
+          "unitPriceLabel": "1,563원/10ml",
+          "positioning": "화이트닝 크림, 저가 고리뷰",
+          "threatLevel": "high",
+          "takeaway": "리뷰 신뢰가 강하지만 단가는 우리보다 높다. 우리 제품은 대용량 데일리 톤 케어로 포지션을 잡을 수 있다.",
+          "sourceNote": "쿠팡 브랜드샵/검색 결과 기준"
+        },
+        {
+          "id": "cosnori-whitening-dress-toneup-50",
+          "brand": "코스노리",
+          "name": "화이트닝 드레스 톤업크림 50ml",
+          "url": "https://www.coupang.com/np/products/brand-shop?brandName=%EC%BD%94%EC%8A%A4%EB%85%B8%EB%A6%AC",
+          "reviewCount": 17653,
+          "monthlyPurchaseSignal": "브랜드샵 고리뷰 노출",
+          "monthlyPurchaseMin": null,
+          "price": 16490,
+          "volume": "50ml",
+          "unitPriceLabel": "3,298원/10ml",
+          "positioning": "톤업크림 대표 상품, 미백 기능성",
+          "threatLevel": "high",
+          "takeaway": "톤업 카테고리 인지도가 높다. 우리 제품은 미백 기능성+200ml 용량으로 데일리 바디/페이스 확장성을 보여줘야 한다.",
+          "sourceNote": "쿠팡 브랜드샵 검색 결과 기준"
+        },
+        {
+          "id": "nacific-phyto-niacin-toneup-300",
+          "brand": "네시픽",
+          "name": "피토 나이아신 화이트닝 바디 톤업 크림 300ml",
+          "url": "https://www.coupang.com/vp/products/7255548822",
+          "reviewCount": 1252,
+          "monthlyPurchaseSignal": "한 달간 100명 이상 구매",
+          "monthlyPurchaseMin": 100,
+          "price": 17760,
+          "volume": "300ml",
+          "unitPriceLabel": "592원/10ml",
+          "positioning": "나이아신, 바디 톤업, 대용량",
+          "threatLevel": "medium",
+          "takeaway": "우리와 같은 대용량 톤 케어 경쟁군이다. 단가와 기능성 고시 범위를 명확히 비교해야 한다.",
+          "sourceNote": "검색 결과 기준 2026-05 전후 노출"
+        }
+      ]
+    },
+    {
+      "key": "men-all-in-one",
+      "label": "남성 올인원",
+      "yoursProducts": ["all-in-one-lotion"],
+      "marketRead": "남성 올인원은 저가 대용량과 기능성 문구가 치열하다. 유어스킨플러스는 4-in-1, 미백/주름개선 이중기능성, 200ml 용량을 한 화면에서 바로 이해시키는 게 중요하다.",
+      "competitors": [
+        {
+          "id": "eunyul-mayu-men-allinone-125x2",
+          "brand": "은율",
+          "name": "마유 남자 올인원 125ml 2개",
+          "url": "https://www.coupang.com/vp/products/6228372649",
+          "reviewCount": 13853,
+          "monthlyPurchaseSignal": "한 달간 400명 이상 구매",
+          "monthlyPurchaseMin": 400,
+          "price": 12100,
+          "volume": "125ml x 2",
+          "unitPriceLabel": "484원/10ml",
+          "positioning": "저가 남성 올인원, 2개 구성",
+          "threatLevel": "high",
+          "takeaway": "리뷰와 가격이 강하다. 우리 올인원은 기능성 고시와 면도 후 루틴을 더 선명하게 제시해야 한다.",
+          "sourceNote": "검색 결과 기준 2026-04 전후 노출"
+        },
+        {
+          "id": "holtsformen-allinone-1l-x2",
+          "brand": "홀츠포맨",
+          "name": "남자 올인원 화장품 1L 2개",
+          "url": "https://www.coupang.com/vp/products/8400137045",
+          "reviewCount": 4447,
+          "monthlyPurchaseSignal": "한 달간 100명 이상 구매",
+          "monthlyPurchaseMin": 100,
+          "price": 51850,
+          "volume": "1L x 2",
+          "unitPriceLabel": "259원/10ml",
+          "positioning": "초대용량 남성 올인원, 미백/주름/보습",
+          "threatLevel": "medium",
+          "takeaway": "단가가 매우 낮다. 우리 제품은 초대용량이 아니라 얼굴용 기능성 올인원으로 품질 이미지를 세워야 한다.",
+          "sourceNote": "검색 결과 기준 2026-05 전후 노출"
+        },
+        {
+          "id": "md638-men-allinone-200",
+          "brand": "MD638",
+          "name": "미백 향이좋은 남자 올인원 스킨 로션 주름개선 200ml",
+          "url": "https://www.coupang.com/vp/products/8207958025",
+          "reviewCount": 980,
+          "monthlyPurchaseSignal": "한 달간 900명 이상 구매",
+          "monthlyPurchaseMin": 900,
+          "price": 19750,
+          "volume": "200ml",
+          "unitPriceLabel": "988원/10ml",
+          "positioning": "향, 미백, 주름개선, 남성 올인원",
+          "threatLevel": "medium",
+          "takeaway": "월 구매 신호가 좋다. 우리 제품은 가격이 낮아 상세페이지 신뢰만 확보하면 경쟁 가능성이 있다.",
+          "sourceNote": "검색 결과 기준 2026-04 전후 노출"
+        }
+      ]
+    },
+    {
+      "key": "lip-balm",
+      "label": "립밤",
+      "yoursProducts": ["moisture-lip-balm"],
+      "marketRead": "립밤은 이니스프리, 바세린, 에뛰드처럼 브랜드 인지도와 저가 상품이 강하다. 유어스킨플러스 립밤은 단가 경쟁이 어렵기 때문에 무색, 남녀공용, 보습막 성분과 세트 증정 전략이 더 현실적이다.",
+      "competitors": [
+        {
+          "id": "innisfree-canola-honey-lip-balm",
+          "brand": "이니스프리",
+          "name": "유채꿀 립밤",
+          "url": "https://www.coupang.com/vp/products/8502038937",
+          "reviewCount": 21244,
+          "monthlyPurchaseSignal": "한 달간 8,000명 이상 구매",
+          "monthlyPurchaseMin": 8000,
+          "price": 5730,
+          "volume": "립밤",
+          "unitPriceLabel": "16,371원/10g",
+          "positioning": "꿀 보습, 브랜드 립밤",
+          "threatLevel": "high",
+          "takeaway": "구매 신호가 매우 강하다. 우리 립밤은 단품 주력보다 세트 구성 또는 사은품 전략이 맞다.",
+          "sourceNote": "검색 결과 기준 2026-05 전후 노출"
+        },
+        {
+          "id": "vaseline-lip-therapy",
+          "brand": "바세린",
+          "name": "립 테라피 립밤",
+          "url": "https://www.coupang.com/vp/products/7673486",
+          "reviewCount": 28378,
+          "monthlyPurchaseSignal": "한 달간 300명 이상 구매",
+          "monthlyPurchaseMin": 300,
+          "price": 7290,
+          "volume": "립밤",
+          "unitPriceLabel": "3,471원/10g",
+          "positioning": "저가 보습 립밤 대표 상품",
+          "threatLevel": "high",
+          "takeaway": "가격과 리뷰에서 압도적이다. 우리 립밤은 직접 가격 경쟁보다 자연유래 오일/버터 성분과 휴대성을 강조한다.",
+          "sourceNote": "검색 결과 기준 2026-05 전후 노출"
+        },
+        {
+          "id": "etude-ginger-sugar-lip-balm",
+          "brand": "에뛰드",
+          "name": "진저슈가 에센셜 립밤",
+          "url": "https://www.coupang.com/vp/products/6659710427",
+          "reviewCount": 3087,
+          "monthlyPurchaseSignal": "한 달간 1,000명 이상 구매",
+          "monthlyPurchaseMin": 1000,
+          "price": 5940,
+          "volume": "립밤",
+          "unitPriceLabel": "3,960원/10ml",
+          "positioning": "진저슈가 보습막, 브랜드 립케어",
+          "threatLevel": "medium",
+          "takeaway": "브랜드와 가격이 강하다. 우리 립밤은 무색 데일리, 남녀공용, 선물/세트 보조 상품으로 보는 게 현실적이다.",
+          "sourceNote": "검색 결과 기준 2026-04 전후 노출"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "strongestCompetitors": [
+      "세타필 모이스춰라이징 로션",
+      "라운드랩 독도 토너",
+      "마녀공장 퓨어 클렌징 오일",
+      "한스킨 클렌징오일 앤 블랙헤드 PHA",
+      "이니스프리 유채꿀 립밤"
+    ],
+    "yourskinplusAdvantages": [
+      "토너, 클렌징 오일, 클렌징 젤, 화이트닝 톤 케어 크림은 단위 가격 경쟁력이 있다.",
+      "8개 라인업을 루틴 세트로 묶을 수 있어 단품 브랜드보다 객단가 설계가 쉽다.",
+      "기능성 상품 2개는 미백/주름개선 고시 범위를 활용한 전환 카피를 만들 수 있다."
+    ],
+    "yourskinplusRisks": [
+      "현재 쿠팡 리뷰 수가 23~34개 수준이라 리뷰 신뢰 격차가 크다.",
+      "립밤은 대형 브랜드 대비 단가 경쟁이 어렵다.",
+      "로션은 세타필/일리윤처럼 초대형 보습 로션과 비교되면 브랜드 신뢰에서 밀린다."
+    ],
+    "recommendedActions": [
+      "히알루론산 토너와 아쿠아 로션은 세트 구성으로 라운드랩 세트와 비교한다.",
+      "클렌징 오일은 300ml, 423원/10ml, 유화 과정을 첫 화면 핵심 메시지로 둔다.",
+      "클렌징 젤은 약산성 펌프형 300ml와 낮은 단가를 코스알엑스 대비 포인트로 쓴다.",
+      "화이트닝 톤 케어 크림은 200ml 대용량 미백 기능성으로 코스노리/뷰티레시피보다 가격 효율을 강조한다.",
+      "립밤은 단품 광고보다 세트 증정, 장바구니 보조 상품, 남녀공용 휴대용으로 운영한다."
+    ]
+  }
+}

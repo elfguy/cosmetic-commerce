@@ -20,7 +20,11 @@ function parseJsonLd(html) {
 }
 
 function slugifyProductId(url = "") {
-  return url.split("/").filter(Boolean).pop() || "unknown-product";
+  try {
+    return new URL(url).pathname.split("/").filter(Boolean).pop() || "unknown-product";
+  } catch {
+    return url.split("?")[0].split("/").filter(Boolean).pop() || "unknown-product";
+  }
 }
 
 function getImageDimensions(filePath) {

@@ -2,16 +2,74 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import coupangData from '../../data/coupang/downloaded-products.json';
 
-const products = coupangData.products;
-const activeProduct = products[0];
+const defaultInsight = (product) => ({
+  summary: `${product.category} 카테고리 검색 의도, 할인율, 리뷰 수, 상세 이미지 구성을 기준으로 후킹과 구매 근거를 재배치합니다.`,
+  strategy: [
+    `${product.category} 카테고리 검색 의도를 첫 화면 문장에 반영`,
+    `${product.discountRate}% 할인과 ${product.reviewCount}개 리뷰를 구매 버튼 근처에 고정`,
+    `상세 이미지 ${product.detailImages.length}장을 후킹, 성분 근거, 사용감, 구매 근거 순서로 분석`,
+  ],
+  auditTitle: `${product.name.replace('유어스킨플러스 ', '')} 상세 흐름`,
+  auditLead: '저장된 상세 이미지를 후킹, 근거, 사용법, 구매 불안 해소 단계로 나누어 자사몰 상세페이지에 재배치합니다.',
+  flow: [
+    { label: 'Hook', range: '대표 이미지', text: '상품명과 카테고리 니즈를 첫 화면에서 바로 이해시키는 구조가 필요합니다.' },
+    { label: 'Proof', range: '성분/효능 근거', text: '원료와 기능성 표현은 단정형 카피보다 확인 가능한 근거와 함께 배치합니다.' },
+    { label: 'Routine', range: '사용법', text: '사용 시점, 사용 부위, 함께 쓰기 좋은 루틴을 짧게 정리합니다.' },
+    { label: 'Trust', range: '구매 안심', text: '제조사, 배송, 교환, 공식 판매자 확인 정보를 구매 하단에 둡니다.' },
+  ],
+  strengths: ['가격과 용량을 한눈에 비교하기 쉽다', '상세 이미지 수가 충분해 설득 흐름을 만들 수 있다'],
+  risks: ['상세 이미지 안의 강한 표현은 기능성 근거 확인 후 자사몰 카피로 재작성해야 한다'],
+  nextActions: ['첫 화면 CTA 근처에 핵심 효능, 용량, 공식 판매자 신뢰 요소를 압축 배치한다'],
+});
+
+const insightByProductId = {
+  '9264527939': {
+    summary: '14장 상세 이미지는 자연스러운 톤 정리 후킹에서 미백 기능성, 비타민/글루타치온, Fresh Bud No.6, 저자극/EWG, 제조 신선도, 공식 판매자 경고까지 이어지는 풀 퍼널 구조입니다.',
+    strategy: [
+      '첫 화면은 자연스러운 톤 케어, 200ml 용량, 미백 기능성화장품 인증을 한 줄로 압축',
+      '나이아신아마이드, 비타민 콤플렉스, 글루타치온, Fresh Bud No.6 근거는 원료 특성 표현으로 정리',
+      '저자극 지수 0.00, EWG 그린, 제조 6개월 이내 보증은 구매 버튼 하단 신뢰 배지로 재배치',
+    ],
+    auditTitle: '화이트닝 톤 케어 크림 상세페이지 분석',
+    auditLead: '현재 상세페이지는 근거가 많지만 메시지가 길게 흩어져 있습니다. 자사몰에서는 첫 화면을 간결하게 만들고, 인증/시험/제조 신뢰 요소를 접히지 않는 영역과 구매 CTA 주변에 모아야 합니다.',
+    flow: [
+      { label: '01 Hook', range: '1-3장', text: '제품컷, 추천 대상, 5대 포인트로 톤 케어 필요성을 빠르게 제시합니다. 다만 첫 화면의 핵심 문장은 더 짧게 압축할 여지가 있습니다.' },
+      { label: '02 Functional Proof', range: '4-6장', text: '비타민 B3/B5, 글루타치온, 나이아신아마이드, 미백 기능성 고시를 중심으로 브라이트닝 근거를 제시합니다.' },
+      { label: '03 Sensitive Skin Trust', range: '7-9장', text: 'Fresh Bud No.6, 저자극 지수 0.00, EWG 그린, 무향을 묶어 민감 피부 안심 근거로 구성합니다.' },
+      { label: '04 Freshness and Use', range: '10-13장', text: '제조일자 표기, 제조 6개월 이내 출고, 사용법, 전성분, 고객센터 정보로 구매 불안을 줄입니다.' },
+      { label: '05 Official Seller', range: '14장', text: '무단 리셀러 경고는 신뢰에는 도움이 되지만 구매 흐름을 끊을 수 있어 하단 안내 배너로 축소하는 편이 좋습니다.' },
+    ],
+    strengths: [
+      '미백 기능성화장품 고시와 효능 문구가 이미지 안에 포함되어 상품 포지션이 명확함',
+      '저자극 시험, EWG, 무향, 제조일자 공개, 직접 제조 판매까지 신뢰 소재가 풍부함',
+      '200ml 대용량과 10,100원 가격이 데일리 톤 케어 제품으로 설득력이 있음',
+    ],
+    risks: [
+      '강한 화이트닝 효과 표현은 원료 특성, 기능성 심사 범위, 시험 조건을 함께 보여줘야 함',
+      '추천 대상 문장이 길고 중복되어 모바일 첫 화면에서는 핵심 가치가 늦게 보일 수 있음',
+      '리셀러 경고 이미지는 자사몰 상세 최하단으로 보내고 구매 CTA 주변에는 공식 판매자 배지만 남기는 것이 좋음',
+    ],
+    nextActions: [
+      '첫 화면: 자연 톤 케어, 미백 기능성, 200ml, 제조 6개월 이내를 4개 배지로 요약',
+      '중간 영역: 미백 기능성, 저자극 0.00, EWG 그린, Fresh Bud No.6을 증거 카드로 재구성',
+      '하단 영역: 사용법, 전성분, 고객센터, 공식 판매자 확인을 접히는 정보 블록으로 정리',
+    ],
+  },
+};
+
+const products = coupangData.products.map((product) => ({
+  ...product,
+  insight: insightByProductId[product.productId] || defaultInsight(product),
+}));
+const activeProduct = products.find((product) => product.productId === '9264527939') || products[0];
 const totalReviews = products.reduce((sum, product) => sum + product.reviewCount, 0);
 const averageDiscount = Math.round(products.reduce((sum, product) => sum + product.discountRate, 0) / products.length);
 const bestValue = [...products].sort((a, b) => b.discountRate - a.discountRate)[0];
 const formatPrice = (value) => `${Number(value).toLocaleString('ko-KR')}원`;
-const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
+const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 1024).toFixed(1)}MB` : '미저장';
 ---
 
-<BaseLayout title="쿠팡 상품 상세 분석 목업" description="저장한 쿠팡 상품 HTML 7개를 기반으로 만든 상품 상세페이지 분석용 목업">
+<BaseLayout title="쿠팡 상품 상세 분석 목업" description="쿠팡에서 확인한 유어스킨플러스 상품 8개를 기반으로 만든 상품 상세페이지 분석용 목업">
   <main class="coupang-workbench">
     <aside class="product-rail" aria-label="쿠팡 저장 상품 목록">
       <a class="brand-mark" href="/">
@@ -19,7 +77,7 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
       </a>
       <div class="rail-summary">
         <p>Coupang archive</p>
-        <strong>{products.length}개 저장 HTML</strong>
+        <strong>{products.length}개 확인 상품</strong>
         <span>{coupangData.source}</span>
       </div>
       <nav class="rail-concept-links" aria-label="쇼핑몰 콘셉트 빠른 링크">
@@ -30,7 +88,7 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
       </nav>
       <nav class="product-list" aria-label="분석 상품 선택">
         {products.map((product, index) => (
-          <button class:list={['product-button', index === 0 && 'is-active']} type="button" data-product={product.slug}>
+          <button class:list={['product-button', product.slug === activeProduct.slug && 'is-active']} type="button" data-product={product.slug}>
             <span>{String(index + 1).padStart(2, '0')}</span>
             <strong>{product.name.replace('유어스킨플러스 ', '')}</strong>
             <em>{formatPrice(product.price)} · 리뷰 {product.reviewCount}</em>
@@ -44,7 +102,7 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
         <div class="header-copy">
           <p>Product detail mockup</p>
           <h1>쿠팡 상품 상세 분석</h1>
-          <span>저장 HTML 7개에서 추출한 상세 이미지와 구매 지표를 한 화면에서 검토합니다.</span>
+          <span>Chrome에서 확인한 8개 상품을 기준으로 저장 상세 이미지와 구매 지표를 한 화면에서 검토합니다.</span>
         </div>
         <div class="header-metrics" aria-label="전체 상품 요약">
           <span><strong>{totalReviews}</strong> total reviews</span>
@@ -53,16 +111,16 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
         </div>
       </header>
 
-      <section class="concept-link-board" aria-label="쇼핑몰 콘셉트 버전 보기">
+      <section class="concept-link-board" aria-label="자사몰 쇼핑몰 목업 시안 보기">
         <div>
           <p>Storefront concepts</p>
-          <h2>상세 분석에서 바로 보는 공식몰 디자인 버전</h2>
+          <h2>상세 분석에서 바로 보는 자사몰 쇼핑몰 목업 시안</h2>
         </div>
         <div class="concept-links">
           <a href="/shop-concept">
             <span>01</span>
             <strong>Natural Premium</strong>
-            <em>고급 천연 화장품 공식몰</em>
+            <em>고급 천연 화장품 자사몰</em>
           </a>
           <a href="/shop-clinical">
             <span>02</span>
@@ -72,7 +130,7 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
           <a href="/shop-luxury">
             <span>03</span>
             <strong>Clean Beauty</strong>
-            <em>미니멀 성분 투명성 중심 공식몰</em>
+            <em>미니멀 성분 투명성 중심 자사몰</em>
           </a>
           <a href="/shop-editorial">
             <span>04</span>
@@ -141,9 +199,7 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
           <div class="analysis-copy">
             <h3>상세페이지 개선 방향</h3>
             <ol id="strategy-list">
-              <li>{activeProduct.category} 카테고리 검색 의도를 첫 화면 문장에 반영</li>
-              <li>{activeProduct.discountRate}% 할인과 {activeProduct.reviewCount}개 리뷰를 구매 버튼 근처에 고정</li>
-              <li>상세 이미지 {activeProduct.detailImages.length}장을 후킹, 성분 근거, 사용감, 구매 근거 순서로 분석</li>
+              {activeProduct.insight.strategy.map((item) => <li>{item}</li>)}
             </ol>
           </div>
           <div class="file-note">
@@ -156,15 +212,13 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
       <section class="detail-image-section" aria-label="쿠팡 상세 이미지 분석">
         <div class="section-heading">
           <p>Coupang detail images</p>
-          <h2>저장된 상세 이미지 흐름</h2>
+          <h2>확인된 상세/대표 이미지 흐름</h2>
         </div>
         <div class="detail-image-layout">
           <aside class="image-analysis">
             <strong id="detail-count">{activeProduct.detailImages.length}장</strong>
             <span>쿠팡 상세 이미지</span>
-            <p id="detail-summary">
-              첫 화면 후킹 이미지부터 제품 정보와 구매 설득 이미지를 순서대로 검토합니다. 각 이미지는 저장 HTML의 `_files` 폴더에서 추출한 로컬 사본입니다.
-            </p>
+            <p id="detail-summary">{activeProduct.insight.summary}</p>
           </aside>
           <div class="detail-image-feed" id="detail-image-feed">
             {activeProduct.detailImages.map((image, index) => (
@@ -180,7 +234,44 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
         </div>
       </section>
 
-      <section class="comparison-section" aria-label="7개 상품 비교">
+      <section class="content-audit-section" aria-label="상세페이지 구성 분석">
+        <div class="section-heading">
+          <p>Detail page audit</p>
+          <h2 id="audit-title">{activeProduct.insight.auditTitle}</h2>
+        </div>
+        <p class="audit-lead" id="audit-lead">{activeProduct.insight.auditLead}</p>
+        <div class="audit-grid" id="audit-grid">
+          {activeProduct.insight.flow.map((item) => (
+            <article>
+              <span>{item.range}</span>
+              <strong>{item.label}</strong>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+        <div class="audit-note-grid">
+          <article>
+            <span>Strength</span>
+            <ul id="strength-list">
+              {activeProduct.insight.strengths.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+          <article>
+            <span>Risk</span>
+            <ul id="risk-list">
+              {activeProduct.insight.risks.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+          <article>
+            <span>Redesign</span>
+            <ul id="action-list">
+              {activeProduct.insight.nextActions.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="comparison-section" aria-label="8개 상품 비교">
         <div class="section-heading">
           <p>Line-up comparison</p>
           <h2>가격, 리뷰, 이미지 구성 비교</h2>
@@ -195,7 +286,7 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
             <span>이미지</span>
           </div>
           {products.map((product) => (
-            <button class="table-row" type="button" data-product={product.slug}>
+            <button class:list={['table-row', product.slug === activeProduct.slug && 'is-active']} type="button" data-product={product.slug}>
               <span>{product.name.replace('유어스킨플러스 ', '')}</span>
               <span>{product.category}</span>
               <span>{formatPrice(product.price)}</span>
@@ -214,12 +305,19 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
     const products = JSON.parse(document.getElementById('coupang-products').textContent);
     const bySlug = new Map(products.map((product) => [product.slug, product]));
     const formatPrice = (value) => `${Number(value).toLocaleString('ko-KR')}원`;
-    const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
+    const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 1024).toFixed(1)}MB` : '미저장';
     const nodes = {
       heroImage: document.getElementById('hero-image'),
       thumbStrip: document.getElementById('thumb-strip'),
       detailCount: document.getElementById('detail-count'),
+      detailSummary: document.getElementById('detail-summary'),
       detailFeed: document.getElementById('detail-image-feed'),
+      auditTitle: document.getElementById('audit-title'),
+      auditLead: document.getElementById('audit-lead'),
+      auditGrid: document.getElementById('audit-grid'),
+      strengthList: document.getElementById('strength-list'),
+      riskList: document.getElementById('risk-list'),
+      actionList: document.getElementById('action-list'),
       breadcrumb: document.getElementById('breadcrumb'),
       name: document.getElementById('product-name'),
       description: document.getElementById('product-description'),
@@ -242,6 +340,13 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
       fileName: document.getElementById('file-name'),
     };
 
+    const escapeHtml = (value) => String(value)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+
     function bindThumbnails() {
       document.querySelectorAll('.thumb-button').forEach((button) => {
         button.addEventListener('click', () => {
@@ -256,8 +361,8 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
       nodes.heroImage.src = detailImages[0]?.src || product.images[0];
       nodes.heroImage.alt = `${product.name} 상세 이미지`;
       nodes.thumbStrip.innerHTML = detailImages.slice(0, 8).map((image, index) => `
-        <button class="thumb-button ${index === 0 ? 'is-active' : ''}" type="button" data-image="${image.src}">
-          <img src="${image.src}" alt="${product.name} 상세 이미지 ${index + 1}" loading="lazy" />
+        <button class="thumb-button ${index === 0 ? 'is-active' : ''}" type="button" data-image="${escapeHtml(image.src)}">
+          <img src="${escapeHtml(image.src)}" alt="${escapeHtml(product.name)} 상세 이미지 ${index + 1}" loading="lazy" />
         </button>
       `).join('');
       nodes.breadcrumb.textContent = product.categories.join(' / ');
@@ -273,26 +378,36 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
       nodes.itemId.textContent = product.itemId;
       nodes.imageCount.textContent = `${detailImages.length}장`;
       nodes.fileSize.textContent = formatBytes(product.fileSize);
-      nodes.sourceLink.href = product.url;
+      nodes.sourceLink.href = product.url || '#';
+      nodes.sourceLink.setAttribute('href', product.url || '#');
       nodes.priceScore.textContent = product.discountRate >= 46 ? '강함' : '보통';
       nodes.discountMeter.value = product.discountRate;
       nodes.trustScore.textContent = product.reviewCount >= 30 ? '리뷰 우위' : '리뷰 보강 필요';
       nodes.reviewMeter.value = product.reviewCount;
-      nodes.strategy.innerHTML = [
-        `${product.category} 카테고리 검색 의도를 첫 화면 문장에 반영`,
-        `${product.discountRate}% 할인과 ${product.reviewCount}개 리뷰를 구매 버튼 근처에 고정`,
-        `상세 이미지 ${detailImages.length}장을 후킹, 성분 근거, 사용감, 구매 근거 순서로 분석`,
-      ].map((item) => `<li>${item}</li>`).join('');
+      nodes.strategy.innerHTML = product.insight.strategy.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
       nodes.detailCount.textContent = `${detailImages.length}장`;
+      nodes.detailSummary.textContent = product.insight.summary;
       nodes.detailFeed.innerHTML = detailImages.map((image, index) => `
         <figure>
-          <img src="${image.src}" alt="${product.name} 상세 이미지 ${index + 1}" loading="lazy" />
+          <img src="${escapeHtml(image.src)}" alt="${escapeHtml(product.name)} 상세 이미지 ${index + 1}" loading="lazy" />
           <figcaption>
             <strong>${String(index + 1).padStart(2, '0')}</strong>
             <span>${image.width}x${image.height}</span>
           </figcaption>
         </figure>
       `).join('');
+      nodes.auditTitle.textContent = product.insight.auditTitle;
+      nodes.auditLead.textContent = product.insight.auditLead;
+      nodes.auditGrid.innerHTML = product.insight.flow.map((item) => `
+        <article>
+          <span>${escapeHtml(item.range)}</span>
+          <strong>${escapeHtml(item.label)}</strong>
+          <p>${escapeHtml(item.text)}</p>
+        </article>
+      `).join('');
+      nodes.strengthList.innerHTML = product.insight.strengths.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
+      nodes.riskList.innerHTML = product.insight.risks.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
+      nodes.actionList.innerHTML = product.insight.nextActions.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
       nodes.fileName.textContent = product.fileName;
       document.querySelectorAll('[data-product]').forEach((button) => {
         button.classList.toggle('is-active', button.dataset.product === product.slug);
@@ -900,7 +1015,8 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
     margin: 34px auto 0;
   }
 
-  .detail-image-section {
+  .detail-image-section,
+  .content-audit-section {
     max-width: 1280px;
     margin: 34px auto 0;
   }
@@ -973,6 +1089,101 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
     color: var(--muted);
     font-size: 12px;
     font-weight: 900;
+  }
+
+  .content-audit-section {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.78);
+    padding: 24px;
+  }
+
+  .audit-lead {
+    max-width: 920px;
+    margin: -2px 0 20px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .audit-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .audit-grid article {
+    min-height: 210px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fbfaf5;
+    padding: 16px;
+  }
+
+  .audit-grid span,
+  .audit-note-grid span {
+    display: inline-flex;
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 950;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .audit-grid strong {
+    display: block;
+    margin-top: 14px;
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
+  .audit-grid p {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .audit-note-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .audit-note-grid article {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    padding: 16px;
+  }
+
+  .audit-note-grid ul {
+    display: grid;
+    gap: 10px;
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .audit-note-grid li {
+    position: relative;
+    padding-left: 14px;
+    color: rgba(21, 21, 21, 0.76);
+    font-size: 13px;
+    font-weight: 750;
+    line-height: 1.6;
+  }
+
+  .audit-note-grid li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--red);
   }
 
   .section-heading {
@@ -1059,6 +1270,11 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
     .detail-image-layout {
       grid-template-columns: 1fr;
     }
+
+    .audit-grid,
+    .audit-note-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
 
   @media (max-width: 1400px) {
@@ -1088,7 +1304,9 @@ const formatBytes = (value) => `${(Number(value) / 1024 / 1024).toFixed(1)}MB`;
 
     .product-list,
     .id-grid,
-    .thumb-strip {
+    .thumb-strip,
+    .audit-grid,
+    .audit-note-grid {
       grid-template-columns: 1fr;
     }
 
