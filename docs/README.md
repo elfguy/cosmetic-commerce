@@ -33,10 +33,12 @@
 ## 디자인 목업
 
 - `14-storefront-mockup-design-system.md`: 유어스킨플러스 자사몰 쇼핑몰 목업 4종, 디자인 방향, 타이포그래피, 검증 URL
+- `19-brand-logo-direction.md`: YOURSKIN PLUS 프리미엄 자연주의 로고 방향, 로고 시안 4종, 벡터 초안, 사용 가이드
 
 ## 현재 구현 라우트
 
 - `/`: 유어스킨플러스 판매/마케팅 운영 대시보드. 프로젝트 기본 진입 페이지
+- `/brand-logo`: YOURSKIN PLUS 브랜드 로고 방향성, 로고 시안 4종, Calm Leaf Drop 벡터 초안, 컬러 팔레트
 - `/coupang-mock`: 쿠팡 저장 HTML 기반 상품 상세 분석 보드
 - `/shop-concept`: 자사몰 쇼핑몰 목업, 내추럴 프리미엄 방향
 - `/shop-clinical`: 자사몰 쇼핑몰 목업, Fresh Ingredient Chain 유통 신뢰 방향
@@ -54,3 +56,7 @@
 - `public/naver/product-images/`: 네이버 상품 이미지
 - `public/coupang/images/`: 쿠팡 상품/상세 이미지
 - `public/yourskin-logo-header-v18.png`: 현재 헤더용 로고 이미지
+- `public/brand/logo-concepts/`: 생성한 YOURSKIN PLUS 로고 후보 보드 4종. 02번을 현재 기준 시안으로 사용
+- `public/brand/yourskin-plus-logo-primary.svg`: 추천 컬러 벡터 로고 초안
+- `public/brand/yourskin-plus-logo-mono.svg`: 흑백 벡터 로고 초안
+- `public/brand/yourskin-plus-symbol.svg`: 심볼 단독 벡터 초안

@@ -60,3 +60,4 @@ git remote add origin git@github.com:elfguy/cosmetic-commerce.git
 - `docs/12-marketing-strategy-research.md` — 효능 주장 없이 AI를 활용하는 마케팅 운영 전략
 - `docs/13-marketing-budget.md` — AI 활용 마케팅 비용/광고 테스트 예산 추정
 - `docs/16-yourskinplus-8-product-comparison.md` — 쿠팡 등록 8개 제품 가격/채널/전성분/성분 분석 비교표
+- `docs/19-brand-logo-direction.md` — YOURSKIN PLUS 프리미엄 자연주의 로고 방향과 웹 검토 페이지 정리
