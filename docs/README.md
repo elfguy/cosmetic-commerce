@@ -48,6 +48,7 @@
 - `/shop-editorial`: 자사몰 쇼핑몰 목업, 자연 라이프스타일 방향
 - `/product-comparison`: 유어스킨플러스 8개 상품 가격, 채널, 전성분, 성분 분석 비교표
 - `/competitor-comparison`: 쿠팡 인기 유사 상품과 유어스킨플러스 상품의 가격, 리뷰, 월 구매 신호 비교표
+- `/toner-detail-renewal`: 히알루론산 토너 대표이미지/상세페이지 HTML 검토 시안
 
 ## 주요 데이터/자산
 

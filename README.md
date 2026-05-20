@@ -63,3 +63,7 @@ git remote add origin git@github.com:elfguy/cosmetic-commerce.git
 - `docs/19-brand-logo-direction.md` — YOURSKIN PLUS 프리미엄 자연주의 로고 방향, 40대 이상 타깃 실사용 SVG 로고 시스템, 웹 검토 페이지 정리
 - `docs/20-monthly-10m-sales-plan.md` — 쿠팡/스마트스토어 기반 월 매출 1,000만원 달성 30일 실행 전략
 - `docs/21-hyaluronic-toner-detail-renewal-plan.md` — 히알루론산 토너 대표이미지/상세페이지 리뉴얼 기획, 신선 출고/자연유래 보습 성분 메시지와 제작 지시서
+
+## HTML 검토 페이지
+
+- `/toner-detail-renewal` — 히알루론산 토너 대표이미지/상세페이지 HTML 시안

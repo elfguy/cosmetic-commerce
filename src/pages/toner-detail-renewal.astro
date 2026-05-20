@@ -1,0 +1,655 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = '히알루론산 토너 상세페이지 HTML 시안';
+const description = '유어스킨플러스 히알루론산 토너 500ml 대표이미지와 상세페이지 리뉴얼 HTML 시안';
+
+const productImage = '/coupang/images/hyaluronic-acid-toner/product/01.png';
+const naverImage = '/naver/product-images/hyaluronic-toner.jpg';
+const sections = [
+  {
+    eyebrow: 'Fresh Stock First',
+    title: '최근 제조분을 우선 출고하는 500ml 히알루론산 수분 토너',
+    body: '세안 후 건조한 피부에 산뜻한 수분감을 전하고, 닦토부터 스킨팩까지 넉넉하게 사용할 수 있는 데일리 토너입니다.',
+    image: '/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/02-detail-hero.jpg',
+  },
+  {
+    eyebrow: 'Freshness Control',
+    title: '제조일자와 사용기한을 확인할 수 있도록 관리합니다',
+    body: '오래 쌓아둔 재고보다 최근 제조분을 우선 출고하는 것을 원칙으로 관리합니다. 제품에는 제조일자와 사용기한이 표기되어 구매 후 직접 확인할 수 있습니다.',
+    image: '/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/03-detail-fresh-shipping.jpg',
+  },
+  {
+    eyebrow: 'Daily Routine',
+    title: '닦토, 흡토, 스킨팩까지 하나로 쓰는 수분 루틴',
+    body: '화장솜에 적셔 피부결을 정돈하고, 손바닥으로 눌러 흡수시키고, 건조한 부위에는 짧은 스킨팩으로 활용하세요.',
+    image: '/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/04-detail-usage.jpg',
+  },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="toner-page">
+    <section class="review-bar" aria-label="작업 상태">
+      <a href="/">YOURSKIN+</a>
+      <span>HTML Review Draft</span>
+      <strong>Hyaluronic Toner 500ml</strong>
+    </section>
+
+    <section class="top-grid">
+      <div class="headline">
+        <p>유어스킨플러스 히알루론산 토너</p>
+        <h1>신선 출고 메시지를 가진 대용량 수분 토너 상세페이지</h1>
+        <span>
+          쿠팡 업로드 전 검토용 HTML 시안입니다. 실제 업로드 이미지는 이 페이지의 섹션을 기준으로
+          780px 세로 이미지로 캡처하거나 재디자인하면 됩니다.
+        </span>
+      </div>
+
+      <div class="hero-card">
+        <img src={productImage} alt="유어스킨플러스 히알루론산 토너 제품 컷" />
+        <div class="hero-copy">
+          <em>500ml</em>
+          <strong>히알루론산 수분 토너</strong>
+          <span>최근 제조분 우선 출고 · 자연유래 보습 성분 함유</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-board" aria-label="대표이미지 후보">
+      <div class="section-heading">
+        <p>Representative Images</p>
+        <h2>대표이미지 후보</h2>
+        <span>쿠팡 실제 업로드는 안전판을 먼저 권장합니다. 6개월 문구는 재고/출고 기준을 보장할 수 있을 때만 사용합니다.</span>
+      </div>
+      <div class="representative-grid">
+        <article>
+          <img src="/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/01-representative-safe.jpg" alt="최근 제조분 우선 출고 대표이미지 안전판" />
+          <div>
+            <strong>안전판</strong>
+            <span>최근 제조분 우선 출고</span>
+          </div>
+        </article>
+        <article>
+          <img src="/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/01-representative-6month.jpg" alt="제조 6개월 이내 출고 대표이미지 강한판" />
+          <div>
+            <strong>강한판</strong>
+            <span>제조 6개월 이내 출고</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="detail-preview" aria-label="상세페이지 HTML 시안">
+      <div class="section-heading">
+        <p>Detail Page Flow</p>
+        <h2>상세페이지 흐름</h2>
+        <span>수분감, 제조 신뢰, 사용법 순서로 초반 이탈을 줄이는 구조입니다.</span>
+      </div>
+
+      <div class="mobile-canvas">
+        <section class="detail-hero">
+          <div class="copy">
+            <p>세안 후 첫 수분</p>
+            <h2>최근 제조분을 우선 출고하는 500ml 히알루론산 수분 토너</h2>
+            <span>건조한 피부에 산뜻한 수분감을 더하고 닦토부터 스킨팩까지 넉넉하게.</span>
+          </div>
+          <img src={productImage} alt="히알루론산 토너 제품" />
+          <div class="badges">
+            <span>500ml 대용량</span>
+            <span>히알루론산 함유</span>
+            <span>자연유래 보습 성분</span>
+          </div>
+        </section>
+
+        <section class="problem-section">
+          <p>이런 날 필요합니다</p>
+          <h2>세안 후 빠르게 당기고, 화장 전 피부결이 건조하게 느껴질 때</h2>
+          <ul>
+            <li>화장솜에 넉넉히 적셔 닦토로 피부결 정돈</li>
+            <li>손바닥으로 눌러 흡수시키는 산뜻한 흡토</li>
+            <li>건조한 부위에 짧게 올리는 데일리 스킨팩</li>
+          </ul>
+        </section>
+
+        <section class="fresh-section">
+          <div>
+            <p>Fresh Stock First</p>
+            <h2>최근 제조분을 우선 출고합니다</h2>
+            <span>제조일자와 사용기한을 제품에 표기해 구매 후 직접 확인할 수 있도록 관리합니다.</span>
+          </div>
+          <div class="fresh-card">
+            <strong>출고 관리 체크</strong>
+            <span>제조일자 확인</span>
+            <span>사용기한 표기</span>
+            <span>최근 제조분 우선</span>
+          </div>
+        </section>
+
+        <section class="ingredient-section">
+          <p>Natural Origin Moisture</p>
+          <h2>자연유래 보습 성분과 히알루론산을 담은 데일리 토너</h2>
+          <div class="ingredient-grid">
+            <article>
+              <strong>히알루론산</strong>
+              <span>피부에 수분감을 더하는 대표 보습 성분</span>
+            </article>
+            <article>
+              <strong>판테놀</strong>
+              <span>건조한 피부에 편안한 보습감을 더하는 성분</span>
+            </article>
+            <article>
+              <strong>병풀추출물</strong>
+              <span>자연유래 성분으로 산뜻한 사용감 보조</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="routine-section">
+          <p>How To Use</p>
+          <h2>하나로 쓰는 4가지 수분 루틴</h2>
+          <div class="routine-grid">
+            <article><em>01</em><strong>닦토</strong><span>화장솜에 적셔 피부결 정돈</span></article>
+            <article><em>02</em><strong>흡토</strong><span>손바닥으로 가볍게 눌러 흡수</span></article>
+            <article><em>03</em><strong>스킨팩</strong><span>건조한 부위에 짧게 수분감</span></article>
+            <article><em>04</em><strong>레이어링</strong><span>건조한 날 2~3회 얇게 덧바름</span></article>
+          </div>
+        </section>
+
+        <section class="faq-section">
+          <p>Before Buying</p>
+          <h2>구매 전 확인하세요</h2>
+          <details open>
+            <summary>끈적임이 있나요?</summary>
+            <span>무겁게 남는 고보습감보다 산뜻한 수분감을 중심으로 사용하는 데일리 토너입니다.</span>
+          </details>
+          <details>
+            <summary>스킨팩으로 써도 되나요?</summary>
+            <span>화장솜에 충분히 적셔 건조한 부위에 짧게 올리는 방식으로 활용할 수 있습니다.</span>
+          </details>
+          <details>
+            <summary>6개월 이내 제조 문구를 써도 되나요?</summary>
+            <span>전 채널에서 제조일 기준 6개월 이내 제품만 출고할 수 있을 때만 사용합니다. 기본 문구는 최근 제조분 우선 출고입니다.</span>
+          </details>
+        </section>
+      </div>
+    </section>
+
+    <section class="asset-strip" aria-label="생성 이미지">
+      {sections.map((section) => (
+        <article>
+          <img src={section.image} alt={section.title} />
+          <div>
+            <p>{section.eyebrow}</p>
+            <strong>{section.title}</strong>
+            <span>{section.body}</span>
+          </div>
+        </article>
+      ))}
+      <article>
+        <img src={naverImage} alt="기존 네이버 대표이미지" />
+        <div>
+          <p>Original Reference</p>
+          <strong>기존 상품 이미지</strong>
+          <span>파란 배지와 6개월 보장 문구를 안전한 톤으로 재구성했습니다.</span>
+        </div>
+      </article>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(body) {
+    background: #f7fbfa;
+    color: #1d3030;
+  }
+
+  .toner-page {
+    min-height: 100vh;
+    background:
+      linear-gradient(90deg, rgba(191, 220, 220, 0.22) 1px, transparent 1px),
+      linear-gradient(rgba(191, 220, 220, 0.2) 1px, transparent 1px),
+      radial-gradient(circle at 12% 18%, rgba(197, 233, 239, 0.8), transparent 28rem),
+      radial-gradient(circle at 85% 10%, rgba(229, 239, 224, 0.95), transparent 30rem),
+      #f7fbfa;
+    background-size: 52px 52px, 52px 52px, auto, auto, auto;
+  }
+
+  .review-bar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 18px;
+    align-items: center;
+    padding: 14px clamp(18px, 4vw, 56px);
+    border-bottom: 1px solid rgba(107, 139, 136, 0.24);
+    background: rgba(247, 251, 250, 0.88);
+    backdrop-filter: blur(16px);
+  }
+
+  .review-bar a,
+  .review-bar strong {
+    color: #315f50;
+    font-family: var(--font-latin);
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .review-bar span {
+    color: #6f8584;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .top-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+    gap: clamp(24px, 5vw, 72px);
+    align-items: end;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: clamp(56px, 8vw, 110px) clamp(18px, 4vw, 56px) 40px;
+  }
+
+  .headline p,
+  .section-heading p,
+  .asset-strip p,
+  .mobile-canvas p {
+    margin: 0 0 12px;
+    color: #4f8f79;
+    font-family: var(--font-latin);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .headline h1 {
+    max-width: 760px;
+    margin: 0;
+    color: #182a2b;
+    font-size: clamp(42px, 6vw, 86px);
+    line-height: 0.98;
+    letter-spacing: 0;
+  }
+
+  .headline span,
+  .section-heading span {
+    display: block;
+    max-width: 650px;
+    margin-top: 24px;
+    color: #5f7373;
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  .hero-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 560px;
+    border: 1px solid rgba(141, 177, 173, 0.42);
+    border-radius: 8px;
+    background: linear-gradient(160deg, rgba(255,255,255,0.95), rgba(228, 245, 247, 0.75));
+    box-shadow: 0 30px 80px rgba(53, 91, 92, 0.14);
+  }
+
+  .hero-card img {
+    position: absolute;
+    bottom: -52px;
+    left: 50%;
+    width: 78%;
+    max-width: 380px;
+    transform: translateX(-50%);
+    filter: drop-shadow(22px 34px 28px rgba(37, 67, 70, 0.22));
+  }
+
+  .hero-copy {
+    position: absolute;
+    top: 34px;
+    left: 34px;
+    right: 34px;
+    display: grid;
+    gap: 8px;
+  }
+
+  .hero-copy em {
+    color: #4c91a5;
+    font-family: var(--font-latin);
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 800;
+  }
+
+  .hero-copy strong {
+    max-width: 280px;
+    color: #1d3030;
+    font-size: 32px;
+    line-height: 1.18;
+  }
+
+  .hero-copy span {
+    color: #5f7373;
+    line-height: 1.55;
+  }
+
+  .image-board,
+  .detail-preview,
+  .asset-strip {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 54px clamp(18px, 4vw, 56px);
+  }
+
+  .section-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1fr);
+    gap: 28px;
+    align-items: end;
+    margin-bottom: 28px;
+  }
+
+  .section-heading h2 {
+    margin: 0;
+    color: #1d3030;
+    font-size: clamp(30px, 4vw, 52px);
+    line-height: 1.05;
+  }
+
+  .representative-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .representative-grid article,
+  .asset-strip article {
+    overflow: hidden;
+    border: 1px solid rgba(141, 177, 173, 0.42);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.82);
+  }
+
+  .representative-grid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  .representative-grid div,
+  .asset-strip div {
+    display: grid;
+    gap: 6px;
+    padding: 18px;
+  }
+
+  .representative-grid strong,
+  .asset-strip strong {
+    color: #1d3030;
+    font-size: 21px;
+  }
+
+  .representative-grid span,
+  .asset-strip span {
+    color: #607474;
+    line-height: 1.55;
+  }
+
+  .mobile-canvas {
+    width: min(100%, 780px);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid rgba(141, 177, 173, 0.42);
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 34px 90px rgba(41, 72, 74, 0.13);
+  }
+
+  .mobile-canvas section {
+    padding: 64px 58px;
+  }
+
+  .detail-hero {
+    position: relative;
+    min-height: 820px;
+    background:
+      radial-gradient(circle at 18% 20%, rgba(213, 242, 247, 0.9), transparent 28rem),
+      linear-gradient(180deg, #f7fcfc, #fff);
+  }
+
+  .detail-hero .copy {
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+  }
+
+  .mobile-canvas h2 {
+    margin: 0;
+    color: #1d3030;
+    font-size: clamp(30px, 5vw, 52px);
+    line-height: 1.12;
+    letter-spacing: 0;
+  }
+
+  .mobile-canvas .copy span,
+  .fresh-section span,
+  .faq-section span {
+    display: block;
+    margin-top: 18px;
+    color: #5f7373;
+    font-size: 20px;
+    line-height: 1.65;
+  }
+
+  .detail-hero img {
+    position: absolute;
+    right: 54px;
+    bottom: 70px;
+    width: min(46%, 310px);
+    filter: drop-shadow(20px 30px 26px rgba(44, 73, 75, 0.22));
+  }
+
+  .badges {
+    position: absolute;
+    left: 58px;
+    right: 58px;
+    bottom: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .badges span {
+    display: grid;
+    min-height: 74px;
+    place-items: center;
+    border: 1px solid rgba(141, 177, 173, 0.45);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.86);
+    color: #315f50;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  .problem-section {
+    background: #f5fbfa;
+  }
+
+  .problem-section ul {
+    display: grid;
+    gap: 14px;
+    margin: 36px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .problem-section li {
+    padding: 20px 22px;
+    border-left: 5px solid #78a7a9;
+    background: #fff;
+    color: #425c5c;
+    font-size: 20px;
+  }
+
+  .fresh-section {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 28px;
+    align-items: center;
+    background: linear-gradient(135deg, #fbf8ee, #f4fbf6);
+  }
+
+  .fresh-card {
+    display: grid;
+    gap: 14px;
+    padding: 26px;
+    border: 1px solid rgba(126, 158, 126, 0.35);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.82);
+  }
+
+  .fresh-card strong {
+    color: #315f50;
+    font-size: 22px;
+  }
+
+  .fresh-card span {
+    margin: 0;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: #eff7ef;
+    color: #395b4c;
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .ingredient-section {
+    background: #ffffff;
+  }
+
+  .ingredient-grid,
+  .routine-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 34px;
+  }
+
+  .ingredient-grid article,
+  .routine-grid article {
+    min-height: 150px;
+    padding: 22px;
+    border: 1px solid rgba(141, 177, 173, 0.42);
+    border-radius: 8px;
+    background: #f8fcfc;
+  }
+
+  .ingredient-grid strong,
+  .routine-grid strong {
+    display: block;
+    color: #1d3030;
+    font-size: 21px;
+  }
+
+  .ingredient-grid span,
+  .routine-grid span {
+    display: block;
+    margin-top: 12px;
+    color: #5f7373;
+    line-height: 1.55;
+  }
+
+  .routine-section {
+    background: #f6fbfb;
+  }
+
+  .routine-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .routine-grid em {
+    display: block;
+    margin-bottom: 18px;
+    color: #5f9fb2;
+    font-family: var(--font-latin);
+    font-style: normal;
+    font-weight: 800;
+  }
+
+  .faq-section {
+    background: #fff;
+  }
+
+  .faq-section details {
+    margin-top: 16px;
+    padding: 20px 22px;
+    border: 1px solid rgba(141, 177, 173, 0.42);
+    border-radius: 8px;
+    background: #f8fcfc;
+  }
+
+  .faq-section summary {
+    cursor: pointer;
+    color: #1d3030;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  .asset-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    padding-bottom: 90px;
+  }
+
+  .asset-strip img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  @media (max-width: 860px) {
+    .review-bar,
+    .top-grid,
+    .section-heading,
+    .representative-grid,
+    .asset-strip,
+    .fresh-section,
+    .ingredient-grid,
+    .routine-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .review-bar {
+      position: static;
+    }
+
+    .hero-card {
+      min-height: 500px;
+    }
+
+    .mobile-canvas section {
+      padding: 44px 24px;
+    }
+
+    .detail-hero {
+      min-height: 780px;
+    }
+
+    .detail-hero img {
+      right: 20px;
+      width: 48%;
+    }
+
+    .badges {
+      left: 20px;
+      right: 20px;
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
