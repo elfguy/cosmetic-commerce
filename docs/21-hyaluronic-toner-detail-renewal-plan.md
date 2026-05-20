@@ -343,3 +343,45 @@ HTML 검토 페이지:
 
 - src/pages/toner-detail-renewal.astro
 - 로컬/VPN: /toner-detail-renewal
+
+## 14. 3차 이미지/HTML 재기획
+
+작성일: 2026-05-20
+
+Leo 피드백 반영: 2차 시안은 '제조 6개월 이내 보장' 정보는 잘 보이지만 구매욕이 약했다. 에이전트 3개를 투입해 쿠팡 토너 상세 구조, 대표이미지, 구매심리 카피를 나눠 검토했고, 결론은 '히알루론산 성분'보다 '매일 아끼지 않고 쓰는 500ml 데일리 수분 토너 + 제조 신뢰'로 팔아야 한다는 것이다.
+
+3차 포지셔닝:
+
+> 매일 쓰는 토너라면, 넉넉하고 신선하게.
+> 직접 제조, 제조 6개월 이내 보장, 500ml 대용량 수분 토너.
+
+저장 위치:
+
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/00-contact-sheet-v3.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/01-main-routine-fresh-v3.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/02-main-thumbnail-v3.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/03-detail-hero-routine-v3.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/04-detail-why-500ml-v3.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/05-detail-fresh-proof-v3.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/06-detail-ingredients-v3.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/07-detail-final-cta-v3.jpg
+
+3차 개선 원칙:
+
+| 항목 | 2차 문제 | 3차 개선 |
+|---|---|---|
+| 구매욕 | 정보 전달 중심 | 화장솜 사용 장면과 피부 루틴 이미지 추가 |
+| 500ml | 용량 숫자 중심 | 닦토, 흡토, 스킨팩까지 아낌없이 쓰는 행동 이점으로 번역 |
+| 제조 신뢰 | 배지처럼 노출 | 오래된 재고 걱정을 줄이는 구매 이유로 설명 |
+| 성분 | 히알루론산을 전면 강조 | 자연유래 보습 성분과 산뜻한 수분감 중심으로 안전하게 표현 |
+| 상세 흐름 | 제품 설명형 | 문제 공감 -> 대용량 해결 -> 제조 신뢰 -> 성분 -> 구매 확신 |
+
+대표이미지 권장:
+
+- 쿠팡 검색 썸네일용: 02-main-thumbnail-v3.jpg
+- 상세 상단/보조 이미지용: 01-main-routine-fresh-v3.jpg
+
+HTML 검토 페이지:
+
+- src/pages/toner-detail-renewal.astro
+- 로컬/VPN: /toner-detail-renewal
