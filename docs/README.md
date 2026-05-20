@@ -30,6 +30,7 @@
 - `13-marketing-budget.md`: 마케팅 예산 메모
 - `18-ai-agent-marketing-operating-plan.md`: 멀티 에이전트 기반 AI 마케팅 운영 계획과 30일 실행안
 - `20-monthly-10m-sales-plan.md`: 쿠팡/스마트스토어 기반 월 매출 1,000만원 달성 30일 실행 전략
+- `21-hyaluronic-toner-detail-renewal-plan.md`: 히알루론산 토너 대표이미지/상세페이지 리뉴얼 기획, 신선 출고/자연유래 보습 성분 메시지와 제작 지시서
 
 ## 디자인 목업
 
