@@ -313,3 +313,33 @@
 - 쿠팡 실제 업로드는 01-representative-safe.jpg를 우선 권장한다.
 - 01-representative-6month.jpg는 제조일 기준 6개월 이내 출고를 전 채널에서 운영상 보장할 수 있을 때만 사용한다.
 - 다음 버전에서는 실제 촬영 컷을 추가해 화장솜, 손등 제형, 제조일자 라벨을 더 사실적으로 보강한다.
+
+
+## 13. 2차 이미지/HTML 개선
+
+작성일: 2026-05-20
+
+Leo 피드백 반영: 유어스킨플러스는 직접 제조 제품이고, 제조 6개월 이내 보장 내용은 쿠팡에도 확인받은 강점이다. 따라서 1차 시안의 안전한 표현보다 2차 시안에서는 '제조 6개월 이내 보장'을 대표이미지와 상세 초반부의 핵심 후킹으로 격상했다.
+
+저장 위치:
+
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/00-contact-sheet-v2.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/01-main-coupang-v2.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/01-main-clean-v2.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/02-detail-hero-v2.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/03-detail-sixmonth-proof-v2.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/04-detail-benchmark-flow-v2.jpg
+
+2차 개선점:
+
+| 항목 | 1차 | 2차 |
+|---|---|---|
+| 대표 후킹 | 최근 제조분 우선 출고 | 제조 6개월 이내 보장 |
+| 썸네일 가독성 | 제품/카피가 약함 | 파란 핵심 배지 + 500ml + 상품명 크게 배치 |
+| 상세 구조 | 수분감/출고/사용법 | 숫자 후킹 -> 수분 사용감 -> 성분 근거 -> 사용법 -> 출고 신뢰 |
+| 쿠팡형 메시지 | 안전 표현 중심 | 구매자가 바로 이해하는 숫자/보장 메시지 중심 |
+
+HTML 검토 페이지:
+
+- src/pages/toner-detail-renewal.astro
+- 로컬/VPN: /toner-detail-renewal

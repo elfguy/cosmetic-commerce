@@ -6,24 +6,25 @@ const description = '유어스킨플러스 히알루론산 토너 500ml 대표�
 
 const productImage = '/coupang/images/hyaluronic-acid-toner/product/01.png';
 const naverImage = '/naver/product-images/hyaluronic-toner.jpg';
+const draftBaseV2 = '/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2';
 const sections = [
   {
-    eyebrow: 'Fresh Stock First',
-    title: '최근 제조분을 우선 출고하는 500ml 히알루론산 수분 토너',
-    body: '세안 후 건조한 피부에 산뜻한 수분감을 전하고, 닦토부터 스킨팩까지 넉넉하게 사용할 수 있는 데일리 토너입니다.',
-    image: '/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/02-detail-hero.jpg',
+    eyebrow: 'Main Hook',
+    title: '제조 6개월 이내 보장, 500ml 히알루론산 수분 토너',
+    body: '쿠팡 썸네일에서 가장 먼저 보여야 할 숫자 메시지입니다. 6개월 보장, 500ml, 수분 토너를 한 화면에 고정합니다.',
+    image: '/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/02-detail-hero-v2.jpg',
   },
   {
-    eyebrow: 'Freshness Control',
-    title: '제조일자와 사용기한을 확인할 수 있도록 관리합니다',
-    body: '오래 쌓아둔 재고보다 최근 제조분을 우선 출고하는 것을 원칙으로 관리합니다. 제품에는 제조일자와 사용기한이 표기되어 구매 후 직접 확인할 수 있습니다.',
-    image: '/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/03-detail-fresh-shipping.jpg',
+    eyebrow: 'Freshness Proof',
+    title: '제조 6개월 이내 제품만 출고합니다',
+    body: '직접 제조 제품이라는 신뢰를 상세 초반에 배치합니다. 제조일자, 사용기한, 쿠팡 확인 완료를 구매 불안 제거 요소로 씁니다.',
+    image: '/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/03-detail-sixmonth-proof-v2.jpg',
   },
   {
-    eyebrow: 'Daily Routine',
-    title: '닦토, 흡토, 스킨팩까지 하나로 쓰는 수분 루틴',
-    body: '화장솜에 적셔 피부결을 정돈하고, 손바닥으로 눌러 흡수시키고, 건조한 부위에는 짧은 스킨팩으로 활용하세요.',
-    image: '/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/04-detail-usage.jpg',
+    eyebrow: 'Winning Flow',
+    title: '잘 팔리는 토너 상세 구조를 반영한 설득 순서',
+    body: '숫자 후킹, 수분 사용감, 성분 근거, 사용법, 출고 신뢰 순서로 상세페이지 흐름을 재정리합니다.',
+    image: '/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/04-detail-benchmark-flow-v2.jpg',
   },
 ];
 ---
@@ -39,7 +40,7 @@ const sections = [
     <section class="top-grid">
       <div class="headline">
         <p>유어스킨플러스 히알루론산 토너</p>
-        <h1>신선 출고 메시지를 가진 대용량 수분 토너 상세페이지</h1>
+        <h1>6개월 보장 토너 상세 시안</h1>
         <span>
           쿠팡 업로드 전 검토용 HTML 시안입니다. 실제 업로드 이미지는 이 페이지의 섹션을 기준으로
           780px 세로 이미지로 캡처하거나 재디자인하면 됩니다.
@@ -51,7 +52,7 @@ const sections = [
         <div class="hero-copy">
           <em>500ml</em>
           <strong>히알루론산 수분 토너</strong>
-          <span>최근 제조분 우선 출고 · 자연유래 보습 성분 함유</span>
+          <span>제조 6개월 이내 보장 · 자연유래 보습 성분 함유</span>
         </div>
       </div>
     </section>
@@ -60,21 +61,21 @@ const sections = [
       <div class="section-heading">
         <p>Representative Images</p>
         <h2>대표이미지 후보</h2>
-        <span>쿠팡 실제 업로드는 안전판을 먼저 권장합니다. 6개월 문구는 재고/출고 기준을 보장할 수 있을 때만 사용합니다.</span>
+        <span>직접 제조 제품이고 쿠팡 확인을 받은 6개월 보장 메시지를 대표이미지에서 가장 먼저 보이게 재구성했습니다.</span>
       </div>
       <div class="representative-grid">
         <article>
-          <img src="/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/01-representative-safe.jpg" alt="최근 제조분 우선 출고 대표이미지 안전판" />
+          <img src={draftBaseV2 + '/01-main-coupang-v2.jpg'} alt="제조 6개월 이내 보장 대표이미지 v2" />
           <div>
-            <strong>안전판</strong>
-            <span>최근 제조분 우선 출고</span>
+            <strong>쿠팡형 메인</strong>
+            <span>6개월 보장, 500ml, 수분 토너를 크게 노출</span>
           </div>
         </article>
         <article>
-          <img src="/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/01-representative-6month.jpg" alt="제조 6개월 이내 출고 대표이미지 강한판" />
+          <img src={draftBaseV2 + '/01-main-clean-v2.jpg'} alt="제조 6개월 이내 보장 클린 대표이미지 v2" />
           <div>
-            <strong>강한판</strong>
-            <span>제조 6개월 이내 출고</span>
+            <strong>클린형 메인</strong>
+            <span>제품을 더 크게 보이고 배지를 정리한 버전</span>
           </div>
         </article>
       </div>
@@ -84,21 +85,21 @@ const sections = [
       <div class="section-heading">
         <p>Detail Page Flow</p>
         <h2>상세페이지 흐름</h2>
-        <span>수분감, 제조 신뢰, 사용법 순서로 초반 이탈을 줄이는 구조입니다.</span>
+        <span>쿠팡 인기 토너 상세에서 반복되는 숫자 후킹, 수분 사용감, 성분 근거, 사용법, 신뢰 순서를 반영했습니다.</span>
       </div>
 
       <div class="mobile-canvas">
         <section class="detail-hero">
           <div class="copy">
             <p>세안 후 첫 수분</p>
-            <h2>최근 제조분을 우선 출고하는 500ml 히알루론산 수분 토너</h2>
+            <h2>제조 6개월 이내 보장 500ml 히알루론산 수분 토너</h2>
             <span>건조한 피부에 산뜻한 수분감을 더하고 닦토부터 스킨팩까지 넉넉하게.</span>
           </div>
           <img src={productImage} alt="히알루론산 토너 제품" />
           <div class="badges">
             <span>500ml 대용량</span>
             <span>히알루론산 함유</span>
-            <span>자연유래 보습 성분</span>
+            <span>6개월 이내 보장</span>
           </div>
         </section>
 
@@ -114,15 +115,16 @@ const sections = [
 
         <section class="fresh-section">
           <div>
-            <p>Fresh Stock First</p>
-            <h2>최근 제조분을 우선 출고합니다</h2>
-            <span>제조일자와 사용기한을 제품에 표기해 구매 후 직접 확인할 수 있도록 관리합니다.</span>
+            <p>Fresh Stock Promise</p>
+            <h2>제조 6개월 이내 제품만 출고합니다</h2>
+            <span>직접 제조하는 제품으로 제조일자와 사용기한을 확인해 출고합니다. 쿠팡 확인을 받은 강점이므로 상세 초반에 배치합니다.</span>
           </div>
           <div class="fresh-card">
             <strong>출고 관리 체크</strong>
             <span>제조일자 확인</span>
             <span>사용기한 표기</span>
-            <span>최근 제조분 우선</span>
+            <span>쿠팡 확인 완료</span>
+            <span>6개월 이내 출고</span>
           </div>
         </section>
 
@@ -167,9 +169,9 @@ const sections = [
             <summary>스킨팩으로 써도 되나요?</summary>
             <span>화장솜에 충분히 적셔 건조한 부위에 짧게 올리는 방식으로 활용할 수 있습니다.</span>
           </details>
-          <details>
+          <details open>
             <summary>6개월 이내 제조 문구를 써도 되나요?</summary>
-            <span>전 채널에서 제조일 기준 6개월 이내 제품만 출고할 수 있을 때만 사용합니다. 기본 문구는 최근 제조분 우선 출고입니다.</span>
+            <span>직접 제조 제품이고 쿠팡 확인을 받은 내용이므로 대표이미지와 상세 초반에 적극 사용합니다.</span>
           </details>
         </section>
       </div>
@@ -191,7 +193,7 @@ const sections = [
         <div>
           <p>Original Reference</p>
           <strong>기존 상품 이미지</strong>
-          <span>파란 배지와 6개월 보장 문구를 안전한 톤으로 재구성했습니다.</span>
+          <span>기존보다 6개월 보장 메시지를 더 크게, 상품명과 용량을 더 읽히게 재구성했습니다.</span>
         </div>
       </article>
     </section>
@@ -267,7 +269,7 @@ const sections = [
     text-transform: uppercase;
   }
 
-  .headline h1 {
+    .headline h1 {
     max-width: 760px;
     margin: 0;
     color: #182a2b;
@@ -627,10 +629,48 @@ const sections = [
 
     .review-bar {
       position: static;
+      grid-template-columns: 1fr;
+      gap: 4px;
+      padding: 12px 18px;
+    }
+
+    .top-grid {
+      padding-top: 36px;
+    }
+
+    .headline h1 {
+      font-size: clamp(38px, 10vw, 54px);
+      line-height: 1.06;
+    }
+
+    .headline span,
+    .section-heading span {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 1.6;
     }
 
     .hero-card {
-      min-height: 500px;
+      min-height: 460px;
+    }
+
+    .hero-card img {
+      bottom: -40px;
+      width: 66%;
+    }
+
+    .hero-copy {
+      top: 24px;
+      left: 24px;
+      right: 24px;
+    }
+
+    .hero-copy em {
+      font-size: 42px;
+    }
+
+    .hero-copy strong {
+      font-size: 26px;
     }
 
     .mobile-canvas section {
