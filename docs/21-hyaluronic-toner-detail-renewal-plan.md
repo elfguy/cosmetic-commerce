@@ -283,3 +283,33 @@
 5. 쿠팡 광고는 상세페이지 교체 후 7일 단위로 토너 ROAS, 클릭률, 구매전환율을 다시 본다.
 6. 토너 전환율이 개선되면 '토너 + 아쿠아 로션' 수분 루틴 세트 상세페이지를 같은 구조로 확장한다.
 
+## 12. 1차 이미지 시안
+
+작성일: 2026-05-20
+
+기존 토너 상품컷을 유지하고, 본 문서의 메시지 가이드에 맞춰 대표이미지와 상세 초반부 이미지를 1차로 재구성했다. 원본 파일은 덮어쓰지 않고 별도 폴더에 저장했다.
+
+저장 위치:
+
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/00-contact-sheet.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/01-representative-safe.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/01-representative-6month.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/02-detail-hero.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/03-detail-fresh-shipping.jpg
+- public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20/04-detail-usage.jpg
+
+시안별 용도:
+
+| 파일 | 용도 | 비고 |
+|---|---|---|
+| 01-representative-safe.jpg | 쿠팡 대표이미지 안전판 | '최근 제조분 우선 출고' 표현 사용 |
+| 01-representative-6month.jpg | 쿠팡 대표이미지 강한판 | 실제 재고 기준으로 6개월 이내 제조분만 출고 가능할 때 사용 |
+| 02-detail-hero.jpg | 상세페이지 첫 화면 | 500ml, 산뜻한 수분감, 자연유래 보습 성분 강조 |
+| 03-detail-fresh-shipping.jpg | 제조/출고 신뢰 섹션 | 제조일자/사용기한 표기와 최근 제조분 우선 출고 메시지 |
+| 04-detail-usage.jpg | 사용법 섹션 | 닦토, 흡토, 스킨팩, 레이어링 사용 장면 |
+
+1차 시안 판단:
+
+- 쿠팡 실제 업로드는 01-representative-safe.jpg를 우선 권장한다.
+- 01-representative-6month.jpg는 제조일 기준 6개월 이내 출고를 전 채널에서 운영상 보장할 수 있을 때만 사용한다.
+- 다음 버전에서는 실제 촬영 컷을 추가해 화장솜, 손등 제형, 제조일자 라벨을 더 사실적으로 보강한다.
