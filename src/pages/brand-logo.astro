@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
+const logoAssetVersion = '20260519a';
+const versionedAsset = (path: string) => `${path}?v=${logoAssetVersion}`;
+
 const brandPillars = [
   {
     title: 'Natural Ingredients',
@@ -30,56 +33,67 @@ const colors = [
 ];
 
 const rules = [
-  '워드마크는 넓은 자간과 얇은 두께를 유지한다.',
-  '잎사귀를 장식으로 늘리지 않고 심볼 안에 한 번만 사용한다.',
-  '골드는 얇은 라인, 작은 점, 플러스 포인트로만 제한한다.',
-  '흑백 버전에서도 드롭, 잎, 작은 플러스가 식별되어야 한다.',
-  '자사몰 헤더에는 워드마크, 상세 이미지에는 심볼 배지를 우선 사용한다.',
+  '자사몰 헤더와 상품 상세 첫 화면은 워드마크를 우선 사용한다.',
+  '패키지 캡, 봉인 스티커, 배지는 YSP 심볼만 사용한다.',
+  '골드는 얇은 라인과 작은 플러스 포인트로만 제한한다.',
+  '작은 크기에서는 잎 장식을 줄이고 YSP 실루엣을 먼저 읽히게 한다.',
+  '인쇄 원본 제작 시에는 현재 SVG 텍스트를 선택 폰트 기준으로 아웃라인 변환한다.',
 ];
 
-const simplifiedDirection = [
+const productionCriteria = [
   {
-    title: 'Drop Outline',
-    text: '이슬방울 외곽선 하나로 수분감과 순한 사용감을 전달합니다.',
+    title: 'Wordmark First',
+    text: '실제 판매 화면에서는 브랜드명을 먼저 읽히게 하고, 심볼은 보조 자산으로 운용합니다.',
   },
   {
-    title: 'Single Leaf',
-    text: '잎은 한 장만 사용해 자연 성분 이미지를 남기되 장식성을 줄입니다.',
+    title: 'YSP Seal',
+    text: '프리미엄 패키지에서는 YSP 원형 실을 캡, 스티커, 금박 포인트로 반복 사용합니다.',
   },
   {
-    title: 'Small Plus',
-    text: '플러스는 기능성이나 의료 느낌이 강해지지 않도록 작은 골드 포인트로만 둡니다.',
+    title: 'Low Decoration',
+    text: '잎과 드롭은 설명적 장식이 아니라 수분감과 자연 유래 이미지를 암시하는 정도로만 둡니다.',
   },
   {
-    title: 'Wide Wordmark',
-    text: '얇은 산세리프와 넓은 자간으로 프리미엄 패키지 인상을 만듭니다.',
+    title: 'Print Ready',
+    text: '웹 검토 후 실제 패키지 제작 단계에서는 폰트 아웃라인, 여백, 단색 버전을 확정해야 합니다.',
   },
 ];
 
-const logoConcepts = [
+const premiumLogoDrafts = [
   {
-    title: 'Botanical Dew Seal',
-    file: '/brand/logo-concepts/01-botanical-dew-seal.png',
-    note: '프리미엄감은 좋지만 심볼 요소가 많아 작은 크기에서 복잡합니다.',
-    status: '보조 참고',
+    title: 'Signature Wordmark',
+    file: '/brand/open-design-concepts/01-pure-serif-wordmark.svg',
+    mood: '메인 로고, 웹 헤더, 박스 전면',
+    strategy: '브랜드명을 가장 먼저 읽히게 하는 주력안입니다. 40대 이상 타깃에게 신뢰감과 고급감을 주기 위해 세리프 워드마크와 낮은 채도의 식물 포인트만 남겼습니다.',
+    status: '메인 추천',
   },
   {
-    title: 'Calm Leaf Drop',
-    file: '/brand/logo-concepts/02-calm-leaf-drop.png',
-    note: '현재 벡터 초안의 기준 시안입니다. 열린 드롭, 넓은 잎, 물결 잎맥, 작은 플러스를 반영합니다.',
-    status: '기준 시안',
+    title: 'YSP Botanical Seal',
+    file: '/brand/open-design-concepts/02-ysp-monogram-seal.svg',
+    mood: '심볼, 캡, 스티커, 금박',
+    strategy: '패키지 반복 자산으로 가장 강한 안입니다. 로고 전체를 작게 줄이지 않고 YSP 실만 단독으로 쓰면 고급 세트와 선물 패키지에서 브랜드 기억을 만들기 좋습니다.',
+    status: '심볼 추천',
   },
   {
-    title: 'Seoul Barrier Flow',
-    file: '/brand/logo-concepts/03-seoul-barrier-flow.png',
-    note: '피부 장벽 감성은 좋지만 심볼이 브랜드 마크로는 다소 설명적입니다.',
-    status: '보조 후보',
+    title: 'Botanical Cut Wordmark',
+    file: '/brand/open-design-concepts/03-botanical-cut.svg',
+    mood: '천연 성분 라인, 상세 섹션',
+    strategy: '잎을 장식으로 흩뿌리지 않고 하나의 커팅 형태로 압축했습니다. 자연 유래 성분을 강조하는 라인이나 상세페이지 성분 섹션에 적합합니다.',
+    status: '천연 성분',
   },
   {
-    title: 'Minimal Circulation',
-    file: '/brand/logo-concepts/04-minimal-circulation.png',
-    note: '가장 절제된 방향이지만 유어스킨플러스만의 차별 신호가 약합니다.',
-    status: '보조 후보',
+    title: 'Skin Dew Lockup',
+    file: '/brand/open-design-concepts/04-skin-dew-mark.svg',
+    mood: '보습 라인, 세럼, 크림',
+    strategy: '수분, 피부 장벽, 자연 성분을 한 번에 보여주는 가로형 락업입니다. 보습 크림, 토너, 세럼 상세 첫 화면에 쓰기 좋습니다.',
+    status: '보습 라인',
+  },
+  {
+    title: 'Apothecary Label',
+    file: '/brand/open-design-concepts/05-apothecary-label.svg',
+    mood: '박스 라벨, 세트 구성, 신뢰형',
+    strategy: '고급 약국형 라벨 구조입니다. 기능성처럼 과장하지 않으면서 신뢰감이 강해 40대 이상 고객 대상 세트 패키지에 적합합니다.',
+    status: '신뢰형',
   },
 ];
 ---
@@ -98,12 +112,12 @@ const logoConcepts = [
           <p class="eyebrow">Brand identity direction</p>
           <h1><span>YOURSKIN PLUS</span> 자연 성분 기반 프리미엄 클린 뷰티 로고 방향</h1>
           <p>
-            로고 시안 보드를 다시 포함하고, Calm Leaf Drop 시안의 열린 드롭 라인, 넓은 잎, 물결 잎맥, 작은 플러스에 맞춰 벡터 초안을 다시 조정했습니다.
+            기존 설명용 시안을 걷어내고, 실제 웹과 패키지에서 사용할 수 있는 벡터 로고 시스템으로 다시 정리했습니다.
           </p>
         </div>
         <div class="hero-logo" aria-label="추천 벡터 로고 초안">
-          <img src="/brand/yourskin-plus-logo-primary.svg" alt="YOURSKIN PLUS 컬러 로고 벡터 초안" />
-          <span>Recommended vector draft</span>
+          <img src={versionedAsset('/brand/yourskin-plus-logo-primary.svg')} alt="YOURSKIN PLUS 메인 로고" />
+          <span>Production-ready vector direction</span>
         </div>
       </div>
     </section>
@@ -111,19 +125,81 @@ const logoConcepts = [
     <section class="summary-band">
       <article>
         <span>추천 콘셉트</span>
-        <strong>Calm Leaf Drop</strong>
-        <p>드롭, 잎, 작은 플러스만 남긴 가장 단순한 프리미엄 방향입니다.</p>
+        <strong>Signature Wordmark</strong>
+        <p>판매 화면에서 브랜드명이 가장 또렷하게 읽히는 주력 로고입니다.</p>
       </article>
       <article>
         <span>브랜드 무드</span>
-        <strong>Calm Seoul Luxury</strong>
-        <p>한국 화장품의 깨끗함과 절제된 프리미엄 패키지 감성을 맞춥니다.</p>
+        <strong>Calm Natural Luxury</strong>
+        <p>딥그린, 세리프 워드마크, 절제된 골드 포인트로 고급 천연화장품 인상을 맞춥니다.</p>
       </article>
       <article>
-        <span>문서 위치</span>
-        <strong>docs/19</strong>
-        <p>로고 방향, 팔레트, 사용 가이드는 문서로 함께 정리했습니다.</p>
+        <span>실사용 자산</span>
+        <strong>Primary / Mono / Symbol</strong>
+        <p>웹, 상세페이지, 패키지에 바로 대입할 수 있도록 3개 운용 자산을 분리했습니다.</p>
       </article>
+    </section>
+
+    <section class="section-block premium-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Professional SVG logo drafts</p>
+          <h2>실사용 벡터 로고 후보 5종</h2>
+        </div>
+        <p class="section-note">모든 후보는 SVG로 다시 설계했으며, 메인 추천안은 워드마크와 YSP 심볼 조합입니다.</p>
+      </div>
+      <div class="premium-grid">
+        {premiumLogoDrafts.map((draft, index) => (
+          <article class:list={['premium-card', index < 2 && 'recommended']}>
+            <img src={versionedAsset(draft.file)} alt={`YOURSKIN PLUS ${draft.title} 로고 시안`} />
+            <div class="premium-copy">
+              <span>{draft.status}</span>
+              <h3>{draft.title}</h3>
+              <strong>{draft.mood}</strong>
+              <p>{draft.strategy}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section-block logo-system">
+      <div class="section-heading">
+        <p class="eyebrow">Production logo system</p>
+        <h2>바로 운용할 기본 로고 시스템</h2>
+      </div>
+      <div class="system-grid">
+        <article class="system-card wide">
+          <span>Primary</span>
+          <img src={versionedAsset('/brand/yourskin-plus-logo-primary.svg')} alt="YOURSKIN PLUS 컬러 로고" />
+        </article>
+        <article class="system-card dark">
+          <span>Monochrome</span>
+          <img src={versionedAsset('/brand/yourskin-plus-logo-mono.svg')} alt="YOURSKIN PLUS 흑백 로고" />
+        </article>
+        <article class="system-card symbol-card">
+          <span>Symbol</span>
+          <img src={versionedAsset('/brand/yourskin-plus-symbol.svg')} alt="YOURSKIN PLUS 심볼" />
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">Production criteria</p>
+        <h2>실사용 기준</h2>
+      </div>
+      <div class="concept-grid text-only">
+        {productionCriteria.map((item) => (
+          <article class="concept-card simple-card">
+            <span>{item.title}</span>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+      <p class="reference-note">
+        현재 SVG는 웹과 내부 검토에 바로 사용할 수 있는 벡터 자산입니다. 인쇄용 최종 CI 원본은 선택한 폰트를 확정한 뒤 문자 아웃라인 변환과 최소 크기 테스트를 거쳐 마감합니다.
+      </p>
     </section>
 
     <section class="section-block">
@@ -139,67 +215,6 @@ const logoConcepts = [
           </article>
         ))}
       </div>
-    </section>
-
-    <section class="section-block">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Logo concept boards</p>
-          <h2>로고 시안 4종</h2>
-        </div>
-        <p class="section-note">현재 벡터는 02번 시안을 기준으로 정리했습니다.</p>
-      </div>
-      <div class="concept-grid">
-        {logoConcepts.map((concept, index) => (
-          <article class:list={['concept-card', index === 1 && 'selected']}>
-            <img src={concept.file} alt={`YOURSKIN PLUS ${concept.title} 로고 시안`} />
-            <div class="concept-copy">
-              <span>{concept.status}</span>
-              <h3>{concept.title}</h3>
-              <p>{concept.note}</p>
-            </div>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <section class="section-block logo-system">
-      <div class="section-heading">
-        <p class="eyebrow">Logo system</p>
-        <h2>웹과 패키지에서 바로 검토할 벡터 초안</h2>
-      </div>
-      <div class="system-grid">
-        <article class="system-card wide">
-          <span>Primary</span>
-          <img src="/brand/yourskin-plus-logo-primary.svg" alt="YOURSKIN PLUS 컬러 로고" />
-        </article>
-        <article class="system-card dark">
-          <span>Monochrome</span>
-          <img src="/brand/yourskin-plus-logo-mono.svg" alt="YOURSKIN PLUS 흑백 로고" />
-        </article>
-        <article class="system-card symbol-card">
-          <span>Symbol</span>
-          <img src="/brand/yourskin-plus-symbol.svg" alt="YOURSKIN PLUS 심볼" />
-        </article>
-      </div>
-    </section>
-
-    <section class="section-block">
-      <div class="section-heading">
-        <p class="eyebrow">Simplified direction</p>
-        <h2>단순화 기준</h2>
-      </div>
-      <div class="concept-grid text-only">
-        {simplifiedDirection.map((item) => (
-          <article class="concept-card simple-card">
-            <span>{item.title}</span>
-            <p>{item.text}</p>
-          </article>
-        ))}
-      </div>
-      <p class="reference-note">
-        로고 형태는 후보 시안으로 비교하되, 패키지 목업의 문자와 제품 이미지는 왜곡될 수 있어 실제 상품 이미지나 최종 원본으로 사용하지 않습니다.
-      </p>
     </section>
 
     <section class="section-block guide-grid">
@@ -310,6 +325,7 @@ const logoConcepts = [
   .summary-band article,
   .pillar-grid article,
   .system-card,
+  .premium-card,
   .concept-card,
   .palette-panel,
   .rules-panel {
@@ -468,6 +484,89 @@ const logoConcepts = [
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 14px;
+  }
+
+  .premium-section {
+    margin-bottom: 54px;
+  }
+
+  .premium-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .premium-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--paper);
+  }
+
+  .premium-card.recommended {
+    border-color: rgba(199, 166, 112, 0.76);
+    box-shadow: 0 24px 76px rgba(20, 61, 46, 0.14);
+  }
+
+  .premium-card.recommended::before {
+    content: 'Recommended';
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 1;
+    padding: 7px 10px;
+    color: #fffdf8;
+    background: rgba(20, 61, 46, 0.92);
+    border: 1px solid rgba(255, 253, 248, 0.28);
+    border-radius: 999px;
+    font-family: var(--font-latin);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .premium-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    background: #fffdf8;
+  }
+
+  .premium-copy {
+    display: grid;
+    gap: 8px;
+    min-height: 220px;
+    padding: 20px;
+  }
+
+  .premium-copy span {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .premium-copy h3 {
+    margin: 0;
+    color: var(--forest);
+    font-family: var(--font-latin);
+    font-size: 24px;
+    line-height: 1.08;
+  }
+
+  .premium-copy strong {
+    color: #33453a;
+    font-size: 14px;
+    line-height: 1.48;
+    word-break: keep-all;
+  }
+
+  .premium-copy p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.66;
+    word-break: keep-all;
   }
 
   .pillar-grid article {
@@ -726,6 +825,7 @@ const logoConcepts = [
       grid-template-columns: 1fr;
     }
 
+    .premium-grid,
     .pillar-grid,
     .concept-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -752,6 +852,7 @@ const logoConcepts = [
     }
 
     .summary-band,
+    .premium-grid,
     .pillar-grid,
     .concept-grid,
     .color-list {

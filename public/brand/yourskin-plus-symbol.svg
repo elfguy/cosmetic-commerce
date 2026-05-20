@@ -1,11 +1,12 @@
-<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">YOURSKIN PLUS calm leaf drop symbol</title>
-  <desc id="desc">A vector logo draft following the selected Calm Leaf Drop concept board.</desc>
-  <path d="M78 18C70.7 34.2 56.7 47.4 49.1 64.1C38.8 86.7 45.8 111.7 68.3 120.5C83.8 126.6 101.6 120.2 112.3 106.2" stroke="#143D2E" stroke-width="7.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M78 18C87 36.4 104.7 50.4 113.3 70.5" stroke="#143D2E" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M53.8 91.5C68.4 73.1 96.5 67.7 121.7 75.5C114.2 96 96 112.9 73.7 111.7C64 111.2 56.2 104.3 53.8 91.5Z" fill="#8AA38F"/>
-  <path d="M56.5 91C70.1 103.8 91 104.7 117.8 78" stroke="#F8F1E7" stroke-width="6.4" stroke-linecap="round"/>
-  <path d="M51.7 101.3C67.9 116.8 94.2 119.6 113.4 97.2" stroke="#143D2E" stroke-width="3.4" stroke-linecap="round"/>
-  <path d="M128.4 39V61.4" stroke="#C7A670" stroke-width="4" stroke-linecap="round"/>
-  <path d="M117.2 50.2H139.6" stroke="#C7A670" stroke-width="4" stroke-linecap="round"/>
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">YOURSKIN PLUS symbol</title>
+  <desc id="desc">YSP botanical seal symbol for YOURSKIN PLUS.</desc>
+  <circle cx="120" cy="120" r="96" stroke="#143D2E" stroke-width="2"/>
+  <circle cx="120" cy="120" r="78" stroke="#D8D1C2" stroke-width="1.4"/>
+  <circle cx="120" cy="120" r="52" fill="#143D2E"/>
+  <text x="120" y="134" text-anchor="middle" fill="#FFFDF8" font-family="'Iowan Old Style', 'Bodoni 72', Georgia, serif" font-size="39" font-weight="400" letter-spacing="3">YSP</text>
+  <path d="M91 155C106 142 133 140 150 154C131 167 108 167 91 155Z" fill="#8C9F8C"/>
+  <path d="M99 155C115 153 132 148 146 142" stroke="#FFFDF8" stroke-width="2" stroke-linecap="round"/>
+  <path d="M120 24V42" stroke="#C5A66E" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M111 33H129" stroke="#C5A66E" stroke-width="1.8" stroke-linecap="round"/>
 </svg>
