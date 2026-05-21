@@ -1,7 +1,7 @@
 {
   "source": "data/coupang/downloads",
-  "generatedAt": "2026-05-17T02:02:23.315Z",
-  "count": 8,
+  "generatedAt": "2026-05-21T00:33:45.992Z",
+  "count": 9,
   "products": [
     {
       "slug": "9025751494",
@@ -1149,6 +1149,46 @@
           "height": 1360,
           "bytes": 352561
         }
+      ]
+    },
+    {
+      "slug": "9402735935",
+      "fileName": "Chrome 갤러리 이미지 수집: 유어스킨플러스 피디알엔 히알루론산 수딩 크림",
+      "fileSize": 0,
+      "name": "유어스킨플러스 피디알엔 히알루론산 수딩 크림",
+      "description": "쿠팡 Chrome 확인 기준 200ml 속건조 수딩 크림. 제품 갤러리 이미지는 수집했지만 쿠팡 상세페이지 세로 이미지/고시정보 원본은 아직 미수집 상태입니다.",
+      "productId": "9402735935",
+      "itemId": "27931591582",
+      "vendorItemId": "94889995486",
+      "sku": "9402735935-27931591582",
+      "url": "https://www.coupang.com/vp/products/9402735935?itemId=27931591582&vendorItemId=94889995486",
+      "category": "페이셜크림",
+      "categories": [
+        "쿠팡수입",
+        "뷰티",
+        "스킨케어",
+        "크림/올인원",
+        "페이셜크림"
+      ],
+      "price": 12800,
+      "originalPrice": 23000,
+      "discountRate": 44,
+      "availability": "InStock",
+      "ratingValue": 0,
+      "reviewCount": 0,
+      "images": [
+        "/coupang-detail/9402735935/01.png",
+        "/coupang-detail/9402735935/02.jpg",
+        "/coupang-detail/9402735935/03.jpg",
+        "/coupang-detail/9402735935/04.jpg",
+        "/coupang-detail/9402735935/05.jpg",
+        "/coupang-detail/9402735935/06.jpg"
+      ],
+      "detailImages": [],
+      "dataQualityNotes": [
+        "Chrome 페이지에서 제품 갤러리 이미지 6장을 수집해 로컬 저장.",
+        "쿠팡 상세페이지용 세로 이미지/고시정보는 아직 수집되지 않았으므로 detailImages에는 넣지 않음.",
+        "Wing 상품관리 또는 브라우저의 웹페이지 전체 저장으로 상세 이미지 원본을 추가 수집해야 함."
       ]
     }
   ]

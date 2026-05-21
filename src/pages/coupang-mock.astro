@@ -23,6 +23,37 @@ const defaultInsight = (product) => ({
 });
 
 const insightByProductId = {
+  '9402735935': {
+    summary: 'Chrome에서 상품명, 가격, 용량, 상품번호는 확인됐지만 상세 이미지 원본은 아직 로컬에 저장되지 않았습니다. 현재는 대표 이미지 1장 기준으로 수딩/PDRN/히알루론산 포지션을 임시 분석합니다.',
+    strategy: [
+      '첫 화면은 200ml, 속건조 수딩, PDRN/히알루론산 컨셉을 짧게 압축',
+      'PDRN은 기능성 효능처럼 단정하지 말고 컨셉 원료로만 표현',
+      '상세 이미지와 고시정보를 수집한 뒤 전성분, 제조 신선도, 사용감 근거를 보강',
+    ],
+    auditTitle: '피디알엔 히알루론산 수딩 크림 상세페이지 분석',
+    auditLead: '현재는 Chrome 확인 정보만 들어간 임시 분석입니다. 쿠팡 상세 이미지 원본을 저장한 뒤 전성분, 고시정보, 상세 이미지 흐름을 다시 분석해야 합니다.',
+    flow: [
+      { label: '01 Hook', range: '대표 이미지', text: 'PDRN, 히알루론산, 수딩 크림, 200ml를 첫 화면에서 바로 읽히게 구성합니다.' },
+      { label: '02 Proof', range: '상세 수집 필요', text: 'PDRN/히알루론산의 실제 전성분 표기와 함량 또는 컨셉 근거를 확인해야 합니다.' },
+      { label: '03 Routine', range: '사용법', text: '기초 케어 마지막 단계, 건조한 부위 덧바름, 데일리 보습 크림 맥락으로 정리합니다.' },
+      { label: '04 Trust', range: '고시정보', text: '제조사, 사용기한, 전성분, 공식 판매자 정보를 상세 하단 신뢰 블록으로 모읍니다.' },
+    ],
+    strengths: [
+      '200ml에 12,800원이라 페이셜 크림 카테고리에서 용량 대비 가격 소구가 가능함',
+      'PDRN과 히알루론산 키워드가 최근 수요와 잘 맞음',
+      '기존 톤 케어 크림과 다른 수딩/속건조 포지션으로 라인업 확장이 가능함',
+    ],
+    risks: [
+      'PDRN 효능을 기능성처럼 표현하면 광고 심의 리스크가 있음',
+      '전성분과 고시정보 확인 전에는 진정, 개선, 회복 표현을 단정하면 안 됨',
+      '현재 저장된 상세 이미지가 없어 상세 흐름 평가는 임시 상태임',
+    ],
+    nextActions: [
+      'Chrome/Wing에서 상세 이미지와 고시정보 저장',
+      '전성분 OCR 후 PDRN/히알루론산 표기 근거 확인',
+      '수딩 크림 전용 대표 이미지와 상세 첫 3장 메시지 재구성',
+    ],
+  },
   '9264527939': {
     summary: '14장 상세 이미지는 자연스러운 톤 정리 후킹에서 미백 기능성, 비타민/글루타치온, Fresh Bud No.6, 저자극/EWG, 제조 신선도, 공식 판매자 경고까지 이어지는 풀 퍼널 구조입니다.',
     strategy: [
@@ -67,9 +98,16 @@ const averageDiscount = Math.round(products.reduce((sum, product) => sum + produ
 const bestValue = [...products].sort((a, b) => b.discountRate - a.discountRate)[0];
 const formatPrice = (value) => `${Number(value).toLocaleString('ko-KR')}원`;
 const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 1024).toFixed(1)}MB` : '미저장';
+const productVisuals = (product) => product.detailImages?.length ? product.detailImages : (product.images || []).map((src, index) => ({
+  src,
+  width: null,
+  height: null,
+  sourceOrder: index + 1,
+}));
+const imageSourceLabel = (product) => product.detailImages?.length ? '쿠팡 상세 이미지' : '제품 갤러리 이미지';
 ---
 
-<BaseLayout title="쿠팡 상품 상세 분석 목업" description="쿠팡에서 확인한 유어스킨플러스 상품 8개를 기반으로 만든 상품 상세페이지 분석용 목업">
+<BaseLayout title="쿠팡 상품 상세 분석 목업" description={`쿠팡에서 확인한 유어스킨플러스 상품 ${products.length}개를 기반으로 만든 상품 상세페이지 분석용 목업`}>
   <main class="coupang-workbench">
     <aside class="product-rail" aria-label="쿠팡 저장 상품 목록">
       <a class="brand-mark" href="/">
@@ -102,7 +140,7 @@ const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 10
         <div class="header-copy">
           <p>Product detail mockup</p>
           <h1>쿠팡 상품 상세 분석</h1>
-          <span>Chrome에서 확인한 8개 상품을 기준으로 저장 상세 이미지와 구매 지표를 한 화면에서 검토합니다.</span>
+          <span>Chrome에서 확인한 {products.length}개 상품을 기준으로 저장 상세 이미지와 구매 지표를 한 화면에서 검토합니다.</span>
         </div>
         <div class="header-metrics" aria-label="전체 상품 요약">
           <span><strong>{totalReviews}</strong> total reviews</span>
@@ -144,12 +182,12 @@ const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 10
         <div class="mock-product">
           <div class="image-column">
             <div class="hero-image">
-              <img id="hero-image" src={activeProduct.detailImages[0].src} alt={`${activeProduct.name} 상세 이미지`} />
+              <img id="hero-image" src={productVisuals(activeProduct)[0]?.src} alt={`${activeProduct.name} 제품 이미지`} />
             </div>
             <div class="thumb-strip" id="thumb-strip">
-              {activeProduct.detailImages.slice(0, 8).map((image, index) => (
+              {productVisuals(activeProduct).slice(0, 8).map((image, index) => (
                 <button class:list={['thumb-button', index === 0 && 'is-active']} type="button" data-image={image.src}>
-                  <img src={image.src} alt={`${activeProduct.name} 상세 이미지 ${index + 1}`} loading={index === 0 ? 'eager' : 'lazy'} />
+                  <img src={image.src} alt={`${activeProduct.name} 제품 이미지 ${index + 1}`} loading={index === 0 ? 'eager' : 'lazy'} />
                 </button>
               ))}
             </div>
@@ -174,7 +212,7 @@ const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 10
             <dl class="id-grid">
               <div><dt>Product ID</dt><dd id="product-id">{activeProduct.productId}</dd></div>
               <div><dt>Item ID</dt><dd id="item-id">{activeProduct.itemId}</dd></div>
-              <div><dt>Detail images</dt><dd id="image-count">{activeProduct.detailImages.length}장</dd></div>
+              <div><dt>Detail images</dt><dd id="image-count">{activeProduct.detailImages.length ? `${activeProduct.detailImages.length}장` : '미수집'}</dd></div>
               <div><dt>HTML size</dt><dd id="file-size">{formatBytes(activeProduct.fileSize)}</dd></div>
             </dl>
             <div class="action-row">
@@ -216,20 +254,25 @@ const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 10
         </div>
         <div class="detail-image-layout">
           <aside class="image-analysis">
-            <strong id="detail-count">{activeProduct.detailImages.length}장</strong>
-            <span>쿠팡 상세 이미지</span>
+            <strong id="detail-count">{activeProduct.detailImages.length ? `${activeProduct.detailImages.length}장` : '미수집'}</strong>
+            <span id="detail-source-label">{imageSourceLabel(activeProduct)}</span>
             <p id="detail-summary">{activeProduct.insight.summary}</p>
           </aside>
           <div class="detail-image-feed" id="detail-image-feed">
-            {activeProduct.detailImages.map((image, index) => (
-              <figure>
-                <img src={image.src} alt={`${activeProduct.name} 상세 이미지 ${index + 1}`} loading={index < 2 ? 'eager' : 'lazy'} />
-                <figcaption>
-                  <strong>{String(index + 1).padStart(2, '0')}</strong>
-                  <span>{image.width}x{image.height}</span>
-                </figcaption>
-              </figure>
-            ))}
+            {activeProduct.detailImages.length ? activeProduct.detailImages.map((image, index) => (
+                <figure>
+                  <img src={image.src} alt={`${activeProduct.name} 상세 이미지 ${index + 1}`} loading={index < 2 ? 'eager' : 'lazy'} />
+                  <figcaption>
+                    <strong>{String(index + 1).padStart(2, '0')}</strong>
+                    <span>{image.width}x{image.height}</span>
+                  </figcaption>
+                </figure>
+              )) : (
+                <div class="empty-detail-note">
+                  <strong>상세 이미지 원본 미수집</strong>
+                  <p>현재 저장된 이미지는 상품 상단 갤러리입니다. 쿠팡 상세페이지 세로 이미지와 고시정보는 Wing 또는 웹페이지 전체 저장으로 추가 수집해야 합니다.</p>
+                </div>
+              )}
           </div>
         </div>
       </section>
@@ -271,7 +314,7 @@ const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 10
         </div>
       </section>
 
-      <section class="comparison-section" aria-label="8개 상품 비교">
+      <section class="comparison-section" aria-label={`${products.length}개 상품 비교`}>
         <div class="section-heading">
           <p>Line-up comparison</p>
           <h2>가격, 리뷰, 이미지 구성 비교</h2>
@@ -292,7 +335,7 @@ const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 10
               <span>{formatPrice(product.price)}</span>
               <span>{product.discountRate}%</span>
               <span>{product.reviewCount}</span>
-            <span>{product.detailImages.length}</span>
+            <span>{product.detailImages.length || '미수집'}</span>
           </button>
         ))}
         </div>
@@ -338,6 +381,7 @@ const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 10
       reviewMeter: document.getElementById('review-meter'),
       strategy: document.getElementById('strategy-list'),
       fileName: document.getElementById('file-name'),
+      detailSourceLabel: document.getElementById('detail-source-label'),
     };
 
     const escapeHtml = (value) => String(value)
@@ -358,11 +402,12 @@ const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 10
 
     function render(product) {
       const detailImages = product.detailImages || [];
-      nodes.heroImage.src = detailImages[0]?.src || product.images[0];
-      nodes.heroImage.alt = `${product.name} 상세 이미지`;
-      nodes.thumbStrip.innerHTML = detailImages.slice(0, 8).map((image, index) => `
+      const visuals = detailImages.length ? detailImages : (product.images || []).map((src, index) => ({ src, sourceOrder: index + 1 }));
+      nodes.heroImage.src = visuals[0]?.src || '';
+      nodes.heroImage.alt = `${product.name} 제품 이미지`;
+      nodes.thumbStrip.innerHTML = visuals.slice(0, 8).map((image, index) => `
         <button class="thumb-button ${index === 0 ? 'is-active' : ''}" type="button" data-image="${escapeHtml(image.src)}">
-          <img src="${escapeHtml(image.src)}" alt="${escapeHtml(product.name)} 상세 이미지 ${index + 1}" loading="lazy" />
+          <img src="${escapeHtml(image.src)}" alt="${escapeHtml(product.name)} 제품 이미지 ${index + 1}" loading="lazy" />
         </button>
       `).join('');
       nodes.breadcrumb.textContent = product.categories.join(' / ');
@@ -376,7 +421,7 @@ const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 10
       nodes.salePrice.textContent = formatPrice(product.price);
       nodes.productId.textContent = product.productId;
       nodes.itemId.textContent = product.itemId;
-      nodes.imageCount.textContent = `${detailImages.length}장`;
+      nodes.imageCount.textContent = detailImages.length ? `${detailImages.length}장` : '미수집';
       nodes.fileSize.textContent = formatBytes(product.fileSize);
       nodes.sourceLink.href = product.url || '#';
       nodes.sourceLink.setAttribute('href', product.url || '#');
@@ -385,9 +430,10 @@ const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 10
       nodes.trustScore.textContent = product.reviewCount >= 30 ? '리뷰 우위' : '리뷰 보강 필요';
       nodes.reviewMeter.value = product.reviewCount;
       nodes.strategy.innerHTML = product.insight.strategy.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
-      nodes.detailCount.textContent = `${detailImages.length}장`;
+      nodes.detailCount.textContent = detailImages.length ? `${detailImages.length}장` : '미수집';
+      nodes.detailSourceLabel.textContent = detailImages.length ? '쿠팡 상세 이미지' : '제품 갤러리 이미지';
       nodes.detailSummary.textContent = product.insight.summary;
-      nodes.detailFeed.innerHTML = detailImages.map((image, index) => `
+      nodes.detailFeed.innerHTML = detailImages.length ? detailImages.map((image, index) => `
         <figure>
           <img src="${escapeHtml(image.src)}" alt="${escapeHtml(product.name)} 상세 이미지 ${index + 1}" loading="lazy" />
           <figcaption>
@@ -395,7 +441,12 @@ const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 10
             <span>${image.width}x${image.height}</span>
           </figcaption>
         </figure>
-      `).join('');
+      `).join('') : `
+        <div class="empty-detail-note">
+          <strong>상세 이미지 원본 미수집</strong>
+          <p>현재 저장된 이미지는 상품 상단 갤러리입니다. 쿠팡 상세페이지 세로 이미지와 고시정보는 Wing 또는 웹페이지 전체 저장으로 추가 수집해야 합니다.</p>
+        </div>
+      `;
       nodes.auditTitle.textContent = product.insight.auditTitle;
       nodes.auditLead.textContent = product.insight.auditLead;
       nodes.auditGrid.innerHTML = product.insight.flow.map((item) => `
@@ -1089,6 +1140,26 @@ const formatBytes = (value) => Number(value) > 0 ? `${(Number(value) / 1024 / 10
     color: var(--muted);
     font-size: 12px;
     font-weight: 900;
+  }
+
+  .empty-detail-note {
+    border: 1px dashed rgba(21, 21, 21, 0.24);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.72);
+    padding: 28px;
+  }
+
+  .empty-detail-note strong {
+    display: block;
+    color: var(--ink);
+    font-size: 18px;
+  }
+
+  .empty-detail-note p {
+    max-width: 620px;
+    margin: 10px 0 0;
+    color: var(--muted);
+    line-height: 1.7;
   }
 
   .content-audit-section {

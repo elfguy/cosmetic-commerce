@@ -19,6 +19,7 @@ const groupMap = {
   'hyaluronic-toner': { key: 'hydration', label: '수분/보습' },
   'aqua-lotion': { key: 'hydration', label: '수분/보습' },
   'rose-essence': { key: 'hydration', label: '수분/보습' },
+  'soothing-cream': { key: 'hydration', label: '수분/보습' },
   'cleansing-oil': { key: 'cleansing', label: '클렌징' },
   'cleansing-gel': { key: 'cleansing', label: '클렌징' },
   'all-in-one-lotion': { key: 'functional', label: '기능성/남성' },
@@ -61,14 +62,14 @@ const searchable = (product) =>
   ].join(' ');
 ---
 
-<BaseLayout title="유어스킨플러스 8개 제품 비교표" description="유어스킨플러스 8개 쿠팡 등록 상품의 가격, 채널, 상세 이미지, 전성분, 성분 역할 분석표">
+<BaseLayout title={`유어스킨플러스 ${products.length}개 제품 비교표`} description={`유어스킨플러스 ${products.length}개 쿠팡 등록 상품의 가격, 채널, 상세 이미지, 전성분, 성분 역할 분석표`}>
   <main class="comparison-app">
     <header class="comparison-header">
       <div>
         <p class="eyebrow">Yourskin+ SKU analysis</p>
-        <h1>8개 제품 가격·상세·전성분 비교표</h1>
+        <h1>{products.length}개 제품 가격·상세·전성분 비교표</h1>
         <p class="lead">
-          쿠팡에서 확인한 8개 상품을 타사 제품과 같은 축으로 비교할 수 있도록 가격, 채널, 기능성 고시, 전성분 역할, 표현 주의사항까지 구조화했습니다.
+          쿠팡에서 확인한 {products.length}개 상품을 타사 제품과 같은 축으로 비교할 수 있도록 가격, 채널, 기능성 고시, 전성분 역할, 표현 주의사항까지 구조화했습니다.
         </p>
       </div>
       <div class="source-box">
@@ -188,7 +189,7 @@ const searchable = (product) =>
                 <td class="link-cell">
                   <a href={product.commerce.coupangUrl} target="_blank" rel="noreferrer">쿠팡</a>
                   {product.commerce.naverUrl ? <a href={product.commerce.naverUrl} target="_blank" rel="noreferrer">네이버</a> : <span>네이버 미확인</span>}
-                  <a href={product.assets.noticeImage} target="_blank" rel="noreferrer">고시 이미지</a>
+                  {product.assets.noticeImage ? <a href={product.assets.noticeImage} target="_blank" rel="noreferrer">고시 이미지</a> : <span>고시 미수집</span>}
                 </td>
               </tr>
             );
