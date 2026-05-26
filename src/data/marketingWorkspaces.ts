@@ -43,6 +43,25 @@ export const marketingWorkspaces: MarketingWorkspace[] = [
     nextAction: 'V8 Fresh Set을 대표 후보로 두고 V7 광고형 컷과 첫 화면 설득력을 비교',
     versions: [
       {
+        id: 'original-v1-v2-compare',
+        label: 'Original / V1 / V2 Compare',
+        status: 'candidate',
+        date: '2026-05-26',
+        summary: '기존 원본, V1, 현재 활성 V2의 대표 이미지와 상세 이미지 흐름을 한 화면에서 비교하는 기준 페이지입니다.',
+        preview: '/coupang/images/aqua-lotion/versions/v2/representative/01.png',
+        primaryUrl: '/marketing/aqua-lotion-version-compare/',
+        links: [
+          { label: '비교 페이지', href: '/marketing/aqua-lotion-version-compare/', kind: 'page' },
+          { label: 'V2 대표 1번', href: '/coupang/images/aqua-lotion/versions/v2/representative/01.png', kind: 'image' },
+          { label: '원본 상세 1번', href: '/coupang/images/aqua-lotion/versions/original/detail/01.png', kind: 'image' },
+        ],
+        metrics: [
+          { label: '버전', value: '3' },
+          { label: '대표', value: '17' },
+          { label: '상세', value: '34' },
+        ],
+      },
+      {
         id: 'v8-fresh-set',
         label: 'V8 Fresh Set',
         status: 'candidate',
