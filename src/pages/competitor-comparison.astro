@@ -100,7 +100,7 @@ const categoryTone = {
         <p class="eyebrow">Coupang market scan</p>
         <h1>쿠팡 인기 유사 상품과 비교한 판매 전략 보드</h1>
         <p class="lead">
-          리뷰와 월 구매 신호가 큰 경쟁 상품을 우선으로 잡고, 유어스킨플러스 8개 상품의 가격 효율, 리뷰 격차, 상세페이지 보완 포인트를 같은 기준으로 정리했습니다.
+          리뷰와 월 구매 신호가 큰 경쟁 상품을 우선으로 잡고, 유어스킨플러스 {products.length}개 상품의 가격 효율, 리뷰 격차, 상세페이지 보완 포인트를 같은 기준으로 정리했습니다.
         </p>
       </div>
       <aside class="source-card">
@@ -148,7 +148,7 @@ const categoryTone = {
         <p class="eyebrow">Main gap</p>
         <h2>리뷰 신뢰 격차가 가장 큽니다</h2>
         <p>
-          이번 경쟁군의 리뷰 합계는 {formatNumber(competitorTotalReviews)}개입니다. 유어스킨플러스 8개 상품의 쿠팡 리뷰 합계는 {formatNumber(yourTotalReviews)}개라서, 상세 첫 화면에서 가격보다 먼저 리뷰 부족을 보완할 근거가 필요합니다.
+          이번 경쟁군의 리뷰 합계는 {formatNumber(competitorTotalReviews)}개입니다. 유어스킨플러스 {products.length}개 상품의 쿠팡 리뷰 합계는 {formatNumber(yourTotalReviews)}개라서, 상세 첫 화면에서 가격보다 먼저 리뷰 부족을 보완할 근거가 필요합니다.
         </p>
       </article>
       <article class="insight">

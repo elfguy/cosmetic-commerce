@@ -1,0 +1,112 @@
+{
+  "createdAt": "2026-05-24T15:19:17.695Z",
+  "size": {
+    "width": 780,
+    "height": 1360
+  },
+  "cuts": [
+    {
+      "index": 1,
+      "title": "첫 후킹",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/01-01-hero-hook.jpg"
+    },
+    {
+      "index": 2,
+      "title": "추천 대상",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/02-02-recommend-checklist.jpg"
+    },
+    {
+      "index": 3,
+      "title": "8가지 근거",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/03-03-eight-reasons.jpg"
+    },
+    {
+      "index": 4,
+      "title": "8중 히알루론산",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/04-04-hyaluronic-layer.jpg"
+    },
+    {
+      "index": 5,
+      "title": "병풀·해양심층수·AHA/PHA",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/05-05-nature-blend.jpg"
+    },
+    {
+      "index": 6,
+      "title": "Fresh Bud No.6",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/06-06-fresh-bud.jpg"
+    },
+    {
+      "index": 7,
+      "title": "발효추출물과 식물오일",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/07-07-ferment-oil.jpg"
+    },
+    {
+      "index": 8,
+      "title": "저자극 테스트",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/08-08-low-irritation-test.jpg"
+    },
+    {
+      "index": 9,
+      "title": "EWG 그린과 무향",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/09-09-ewg-fragrance-free.jpg"
+    },
+    {
+      "index": 10,
+      "title": "약산성 pH",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/10-10-mild-ph.jpg"
+    },
+    {
+      "index": 11,
+      "title": "제조일자",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/11-11-fresh-manufacture.jpg"
+    },
+    {
+      "index": 12,
+      "title": "사용법",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/12-12-how-to-use.jpg"
+    },
+    {
+      "index": 13,
+      "title": "포장과 직접 제조",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/13-13-eco-direct-manufacture.jpg"
+    },
+    {
+      "index": 14,
+      "title": "고시정보와 전성분",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/14-14-product-notice.jpg"
+    },
+    {
+      "index": 15,
+      "title": "공식 판매처 확인",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/cuts/15-15-official-seller-warning.jpg"
+    }
+  ],
+  "bundles": [
+    {
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/bundles/detail-v6-01-hook.jpg",
+      "width": 780,
+      "height": 4080
+    },
+    {
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/bundles/detail-v6-02-ingredients-a.jpg",
+      "width": 780,
+      "height": 4080
+    },
+    {
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/bundles/detail-v6-03-ingredients-trust.jpg",
+      "width": 780,
+      "height": 4080
+    },
+    {
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/bundles/detail-v6-04-ph-fresh-use.jpg",
+      "width": 780,
+      "height": 4080
+    },
+    {
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/bundles/detail-v6-05-brand-notice.jpg",
+      "width": 780,
+      "height": 4080
+    }
+  ],
+  "preview": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v6/preview/v6-contact-sheet.jpg"
+}

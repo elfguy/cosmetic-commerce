@@ -45,8 +45,18 @@
 2. 사용자가 접근 가능한 브라우저에서 저장한 HAR 파일
 3. 쿠팡 Wing 상품 수정/미리보기 화면에서 확인 가능한 상세 이미지 URL 또는 상품 등록 JSON
 
+2026-05-24 기준 쿠팡 셀러 OpenAPI 접속 정보는 `.env.local`에 등록되어 있고, 상품 목록/상세 조회는 정상 동작을 확인했다. 이후 API 접근은 `docs/28-coupang-openapi-access.md`의 HMAC 방식과 `scripts/check-coupang-openapi.mjs`를 기준으로 한다.
+
+같은 날 `scripts/sync-coupang-openapi-products.mjs`로 현재 등록 상품 11개를 조회해 `data/coupang/openapi-products.json`, `data/coupang/openapi-sync-report.json`, `data/coupang/downloaded-products.json`를 갱신했고, API 상세 이미지 147장을 `public/coupang-detail/{productId}/` 아래에 다운로드했다. 쿠팡 상품 자체를 변경하지 않고 조회 전용으로 실행했다.
+
 ## 재수집
 
 ```bash
 node scripts/collect-yourskinplus-products.mjs
+```
+
+## OpenAPI 동기화
+
+```bash
+node scripts/sync-coupang-openapi-products.mjs
 ```

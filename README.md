@@ -65,6 +65,8 @@ git remote add origin git@github.com:elfguy/cosmetic-commerce.git
 - `docs/21-hyaluronic-toner-detail-renewal-plan.md` — 히알루론산 토너 대표이미지/상세페이지 리뉴얼 기획, 신선 출고/자연유래 보습 성분 메시지와 제작 지시서
 - `docs/24-coupang-drive-asset-match.md` — 쿠팡 등록 8개 상품과 Google Drive 제품 이미지 폴더 매칭표, 작업 폴더 구조 기록
 - `docs/26-coupang-seo-video-notes.md` — 쿠팡 검색 노출/SEO 판매 노하우 영상 정리와 유어스킨 9개 상품 적용 체크리스트
+- `docs/27-multi-agent-product-detail-image-workflow.md` — 여러 AI 에이전트로 상품 상세이미지를 제작하는 쿠팡/화장품용 워크플로우와 유튜브 리서치 정리
+- `docs/28-coupang-openapi-access.md` — 쿠팡 셀러 OpenAPI 로컬 접속 정보, HMAC 인증, 상품 조회 검증 절차
 
 ## HTML 검토 페이지
 

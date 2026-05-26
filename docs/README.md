@@ -23,6 +23,7 @@
 - `15-whitening-tone-care-detail-analysis.md`: 화이트닝 톤 케어 크림 쿠팡 상세 이미지 분석과 자사몰 재구성안
 - `16-yourskinplus-8-product-comparison.md`: 쿠팡 등록 8개 제품 가격/채널/전성분/성분 역할 비교표
 - `17-coupang-competitor-comparison.md`: 쿠팡 내 유사 인기 상품과 자사 상품 비교, 가격/리뷰/구매 신호 분석
+- `28-coupang-openapi-access.md`: 쿠팡 셀러 OpenAPI 접속 정보 저장 위치, HMAC 인증 방식, 상품 목록/상세 조회 검증 절차
 
 ## 마케팅/운영
 
@@ -31,6 +32,7 @@
 - `18-ai-agent-marketing-operating-plan.md`: 멀티 에이전트 기반 AI 마케팅 운영 계획과 30일 실행안
 - `20-monthly-10m-sales-plan.md`: 쿠팡/스마트스토어 기반 월 매출 1,000만원 달성 30일 실행 전략
 - `21-hyaluronic-toner-detail-renewal-plan.md`: 히알루론산 토너 대표이미지/상세페이지 리뉴얼 기획, 신선 출고/자연유래 보습 성분 메시지와 제작 지시서
+- `27-multi-agent-product-detail-image-workflow.md`: 여러 AI 에이전트로 상품 상세이미지를 제작하는 쿠팡/화장품용 워크플로우와 유튜브 리서치 정리
 
 ## 디자인 목업
 

@@ -1,16 +1,19 @@
 {
-  "generatedAt": "2026-05-21T00:33:45.994Z",
-  "scope": "쿠팡 상세 페이지에서 확인한 유어스킨플러스 9개 상품",
+  "generatedAt": "2026-05-24T10:48:53.524Z",
+  "scope": "쿠팡 OpenAPI로 확인한 유어스킨플러스 11개 상품",
   "basis": [
     "data/coupang/downloaded-products.json",
     "public/coupang-detail/{productId}/ 상세 이미지",
     "data/naver/products.json",
-    "docs/11-product-feature-summary.md"
+    "docs/11-product-feature-summary.md",
+    "data/coupang/openapi-products.json",
+    "data/coupang/openapi-sync-report.json"
   ],
   "notes": [
     "전성분은 상세 이미지 고시정보를 macOS Vision OCR로 1차 추출한 뒤 이미지 원문을 보며 수기 보정했다.",
     "효능 표현은 상세 고시정보에 표시된 기능성 범위와 일반 화장품 표현 가능 범위를 분리했다.",
-    "가격, 리뷰 수, 평점은 2026-05-17 저장 데이터 기준이다."
+    "가격과 상세 이미지는 2026-05-24 쿠팡 OpenAPI 조회 결과를 기준으로 갱신했다.",
+    "OpenAPI 신규 확인 상품 중 일부는 전성분 OCR과 네이버 URL 확인 전이므로 컨셉/상세 이미지 기준 임시 분석으로 표시한다."
   ],
   "products": [
     {
@@ -41,7 +44,7 @@
         "naverReviews": 26
       },
       "commerce": {
-        "coupangUrl": "https://www.coupang.com/vp/products/9025733014",
+        "coupangUrl": "https://www.coupang.com/vp/products/9025733014?itemId=26470069791&vendorItemId=93445228832",
         "naverUrl": "https://smartstore.naver.com/main/products/12597599110",
         "naverExposure": "네이버플러스 스토어 + 가격비교 중복 노출"
       },
@@ -173,7 +176,8 @@
         "진정 보조 성분",
         "무향 여부",
         "스킨팩 활용성"
-      ]
+      ],
+      "vendorItemId": "93445228832"
     },
     {
       "slug": "aqua-lotion",
@@ -190,11 +194,11 @@
         "label": "300ml / 10.14 fl. oz"
       },
       "price": {
-        "sale": 9800,
+        "sale": 10300,
         "original": 19000,
-        "discountRate": 48,
+        "discountRate": 46,
         "unitBasis": "10ml",
-        "unitPrice": 327
+        "unitPrice": 343
       },
       "rating": {
         "coupang": 5,
@@ -203,7 +207,7 @@
         "naverReviews": 26
       },
       "commerce": {
-        "coupangUrl": "https://www.coupang.com/vp/products/9218811640",
+        "coupangUrl": "https://www.coupang.com/vp/products/9218811640?itemId=27239514580&vendorItemId=94206581276",
         "naverUrl": "https://smartstore.naver.com/main/products/12763872443",
         "naverExposure": "네이버플러스 스토어 + 가격비교 중복 노출"
       },
@@ -348,7 +352,8 @@
         "HA ppm",
         "향 유무",
         "얼굴/바디 사용 확장"
-      ]
+      ],
+      "vendorItemId": "94206581276"
     },
     {
       "slug": "cleansing-oil",
@@ -378,7 +383,7 @@
         "naverReviews": 24
       },
       "commerce": {
-        "coupangUrl": "https://www.coupang.com/vp/products/9221762154",
+        "coupangUrl": "https://www.coupang.com/vp/products/9221762154?itemId=27251064471&vendorItemId=94217941616",
         "naverUrl": "https://smartstore.naver.com/main/products/12763986151",
         "naverExposure": "네이버플러스 스토어 노출"
       },
@@ -480,7 +485,8 @@
         "에센셜오일 포함 여부",
         "펌프 용기",
         "블랙헤드 표현 안전성"
-      ]
+      ],
+      "vendorItemId": "94217941616"
     },
     {
       "slug": "cleansing-gel",
@@ -510,7 +516,7 @@
         "naverReviews": 23
       },
       "commerce": {
-        "coupangUrl": "https://www.coupang.com/vp/products/9025751494",
+        "coupangUrl": "https://www.coupang.com/vp/products/9025751494?itemId=26470131485&vendorItemId=93445288720",
         "naverUrl": "https://smartstore.naver.com/main/products/12597627146",
         "naverExposure": "네이버플러스 스토어 노출"
       },
@@ -640,7 +646,8 @@
         "300ml 펌프형",
         "세안 후 당김 표현",
         "아침 세안 적합성"
-      ]
+      ],
+      "vendorItemId": "93445288720"
     },
     {
       "slug": "rose-essence",
@@ -670,7 +677,7 @@
         "naverReviews": null
       },
       "commerce": {
-        "coupangUrl": "https://www.coupang.com/vp/products/9025775541",
+        "coupangUrl": "https://www.coupang.com/vp/products/9025775541?itemId=26470208024&vendorItemId=93445364050",
         "naverUrl": "https://smartstore.naver.com/main/products/12597635848",
         "naverExposure": "네이버 가격비교 중복 정리"
       },
@@ -780,13 +787,14 @@
         "감성형 패키징",
         "150ml 단위가",
         "향 민감 고객 안내"
-      ]
+      ],
+      "vendorItemId": "93445364050"
     },
     {
       "slug": "all-in-one-lotion",
       "productId": "9025793946",
       "itemId": "26470268560",
-      "name": "유어스킨플러스 영거 댄 올인원 로션",
+      "name": "유어스킨플러스 영거댄 올인원 로션",
       "shortName": "영거 댄 올인원",
       "category": "남성 올인원 로션",
       "routineStep": "세안/면도 후 단일 보습",
@@ -810,7 +818,7 @@
         "naverReviews": null
       },
       "commerce": {
-        "coupangUrl": "https://www.coupang.com/vp/products/9025793946",
+        "coupangUrl": "https://www.coupang.com/vp/products/9025793946?itemId=26470268560&vendorItemId=93445424254",
         "naverUrl": null,
         "naverExposure": "현재 정리 데이터 내 직접 상품 URL 미확인"
       },
@@ -945,7 +953,8 @@
         "남성 타깃 명확성",
         "면도 후 사용성",
         "리뷰 수"
-      ]
+      ],
+      "vendorItemId": "93445424254"
     },
     {
       "slug": "moisture-lip-balm",
@@ -962,11 +971,11 @@
         "label": "4g / 0.14 oz"
       },
       "price": {
-        "sale": 9600,
+        "sale": 9900,
         "original": 18000,
-        "discountRate": 47,
+        "discountRate": 45,
         "unitBasis": "1g",
-        "unitPrice": 2400
+        "unitPrice": 24750
       },
       "rating": {
         "coupang": 5,
@@ -975,7 +984,7 @@
         "naverReviews": null
       },
       "commerce": {
-        "coupangUrl": "https://www.coupang.com/vp/products/9025810298",
+        "coupangUrl": "https://www.coupang.com/vp/products/9025810298?itemId=26470336590&vendorItemId=93445490553",
         "naverUrl": null,
         "naverExposure": "현재 정리 데이터 내 직접 상품 URL 미확인"
       },
@@ -1073,7 +1082,8 @@
         "무색 여부",
         "개봉 후 사용기간",
         "g당 가격"
-      ]
+      ],
+      "vendorItemId": "93445490553"
     },
     {
       "slug": "whitening-cream",
@@ -1249,6 +1259,122 @@
       ]
     },
     {
+      "slug": "white-glow-tone-up-cream",
+      "productId": "9025800758",
+      "itemId": "26470298069",
+      "vendorItemId": "93445452670",
+      "name": "유어스킨플러스 화이트 글로우 톤업 크림",
+      "shortName": "화이트 글로우 톤업 크림",
+      "category": "페이셜 크림 / 톤업",
+      "routineStep": "기초 케어 마지막 단계",
+      "skinType": "모든 피부 타입",
+      "volume": {
+        "amount": 200,
+        "unit": "ml",
+        "label": "200ml"
+      },
+      "price": {
+        "sale": 10100,
+        "original": 18500,
+        "discountRate": 45,
+        "unitBasis": "10ml",
+        "unitPrice": 505
+      },
+      "rating": {
+        "coupang": 0,
+        "coupangReviews": 0,
+        "naver": null,
+        "naverReviews": null
+      },
+      "commerce": {
+        "coupangUrl": "https://www.coupang.com/vp/products/9025800758?itemId=26470298069&vendorItemId=93445452670",
+        "naverUrl": null,
+        "naverExposure": "현재 정리 데이터 내 네이버 직접 상품 URL 미확인"
+      },
+      "assets": {
+        "thumbnail": "/coupang-detail/9025800758/01.png",
+        "detailRoot": "/coupang-detail/9025800758/",
+        "detailImageCount": 11,
+        "noticeImage": null
+      },
+      "positioning": {
+        "oneLine": "화이트 글로우와 톤업 키워드를 앞세운 200ml 데일리 톤업 크림.",
+        "targetNeed": "자연스럽게 화사한 피부 표현과 데일리 크림 사용감을 함께 원하는 고객",
+        "keyClaims": [
+          "톤업 크림",
+          "화이트 글로우 컨셉",
+          "200ml 대용량",
+          "데일리 피부 표현"
+        ],
+        "keywords": [
+          "톤업",
+          "화이트 글로우",
+          "크림",
+          "200ml",
+          "데일리 톤 케어"
+        ]
+      },
+      "notice": {
+        "shelfLife": "상품 상세페이지 참조",
+        "howToUse": "기초케어 마지막 단계에 적당량을 얼굴과 노출 부위에 펴 바릅니다.",
+        "manufacturer": "(주)유어스킨",
+        "country": "대한민국",
+        "functionalCosmetic": "상세 고시정보 추가 확인 필요",
+        "dataQualityNotes": [
+          "2026-05-24 쿠팡 OpenAPI에서 상세 이미지 11장을 다운로드해 반영.",
+          "전성분 OCR과 기능성 고시 세부 검증은 추가 확인 필요."
+        ]
+      },
+      "ingredients": {
+        "full": [
+          "상세 이미지/고시정보 OCR 추가 확인 필요"
+        ],
+        "roleGroups": {
+          "functional": [
+            "기능성 고시 확인 필요"
+          ],
+          "emollients": [
+            "크림 보습막"
+          ],
+          "antioxidantConcept": [
+            "화이트 글로우 컨셉"
+          ],
+          "preservation": [
+            "상세 확인 필요"
+          ]
+        },
+        "heroIngredients": [
+          {
+            "name": "화이트 글로우 컨셉",
+            "role": "톤업 포지션",
+            "evidence": "쿠팡 상품명과 상세 이미지 기준"
+          },
+          {
+            "name": "200ml 대용량",
+            "role": "가격/용량 경쟁력",
+            "evidence": "쿠팡 옵션 200ml 1개 기준"
+          },
+          {
+            "name": "크림 베이스",
+            "role": "데일리 마무리",
+            "evidence": "상품 카테고리와 상세 이미지 기준"
+          }
+        ],
+        "analysis": "화이트닝 톤 케어 크림과 유사한 톤 케어 수요를 겨냥하되, 현재는 전성분 OCR 전이므로 톤업/피부 표현 중심으로 보수적으로 다룬다.",
+        "cautions": [
+          "기능성 여부와 효능 성분은 고시정보 확인 전까지 단정하지 않는다.",
+          "톤업 효과는 메이크업/피부 표현 맥락으로 제한한다."
+        ]
+      },
+      "comparisonAxes": [
+        "톤업 포지션",
+        "200ml 단가",
+        "상세 이미지 11장",
+        "기능성 고시 확인",
+        "화이트닝 크림과 역할 분리"
+      ]
+    },
+    {
       "slug": "soothing-cream",
       "productId": "9402735935",
       "itemId": "27931591582",
@@ -1284,10 +1410,10 @@
       "assets": {
         "thumbnail": "/coupang-detail/9402735935/01.png",
         "detailRoot": "/coupang-detail/9402735935/",
-        "detailImageCount": 0,
+        "detailImageCount": 15,
         "noticeImage": null,
         "galleryRoot": "/coupang-detail/9402735935/",
-        "galleryImageCount": 6
+        "galleryImageCount": 15
       },
       "positioning": {
         "oneLine": "PDRN과 히알루론산 키워드를 앞세운 200ml 속건조 수딩 크림.",
@@ -1313,13 +1439,13 @@
         "country": "대한민국",
         "functionalCosmetic": "해당 없음",
         "dataQualityNotes": [
-          "Chrome 페이지에서 상품명, 가격, 용량, 상품번호와 제품 갤러리 이미지 6장을 확인.",
-          "상세 세로 이미지와 전성분/고시정보는 아직 미수집. 쿠팡 상세페이지 원본과 동일하게 보려면 Wing 또는 웹페이지 전체 저장이 필요."
+          "2026-05-24 쿠팡 OpenAPI에서 상세 이미지 15장을 다운로드해 반영.",
+          "전성분 OCR과 기능성 고시 세부 검증은 추가 확인 필요."
         ]
       },
       "ingredients": {
         "full": [
-          "상세 이미지/고시정보 추가 수집 필요"
+          "상세 이미지/고시정보 OCR 추가 확인 필요"
         ],
         "roleGroups": {
           "humectants": [
@@ -1349,7 +1475,7 @@
             "evidence": "Chrome 상품 옵션 200ml x 1개 확인"
           }
         ],
-        "analysis": "현재 확인 가능한 정보와 제품 갤러리 기준으로는 200ml 수딩 보습 크림이다. 단, 쿠팡 상세페이지 세로 이미지와 고시정보를 아직 수집하지 못했으므로 전성분, 사용감 근거, 표현 가능 범위는 확정 전이다.",
+        "analysis": "쿠팡 OpenAPI 기준 상세 이미지 15장을 확보했다. PDRN/히알루론산은 현재 컨셉 키워드로 다루고, 전성분 OCR 전에는 효능 표현을 단정하지 않는다.",
         "cautions": [
           "PDRN은 기능성 효능처럼 단정하지 말고 컨셉 원료로 표현한다.",
           "전성분과 고시정보 수집 전에는 진정/개선 효과를 단정하지 않는다."
@@ -1360,7 +1486,120 @@
         "히알루론산 보습 성분",
         "200ml 단가",
         "수딩/속건조 포지션",
-        "상세 이미지 수집 필요"
+        "상세 이미지 15장"
+      ]
+    },
+    {
+      "slug": "pdrn-hyaluronic-ampoule",
+      "productId": "9402746236",
+      "itemId": "27931626293",
+      "vendorItemId": "94890028910",
+      "name": "유어스킨플러스 피디알렌 히알루론산 앰플",
+      "shortName": "PDRN 히알루론산 앰플",
+      "category": "앰플 / 집중 보습",
+      "routineStep": "토너 다음 집중 케어 단계",
+      "skinType": "모든 피부 타입",
+      "volume": {
+        "amount": 25,
+        "unit": "ml",
+        "label": "25ml"
+      },
+      "price": {
+        "sale": 12500,
+        "original": 12500,
+        "discountRate": 0,
+        "unitBasis": "10ml",
+        "unitPrice": 5000
+      },
+      "rating": {
+        "coupang": 0,
+        "coupangReviews": 0,
+        "naver": null,
+        "naverReviews": null
+      },
+      "commerce": {
+        "coupangUrl": "https://www.coupang.com/vp/products/9402746236?itemId=27931626293&vendorItemId=94890028910",
+        "naverUrl": null,
+        "naverExposure": "현재 정리 데이터 내 네이버 직접 상품 URL 미확인"
+      },
+      "assets": {
+        "thumbnail": "/coupang-detail/9402746236/01.png",
+        "detailRoot": "/coupang-detail/9402746236/",
+        "detailImageCount": 12,
+        "noticeImage": null
+      },
+      "positioning": {
+        "oneLine": "PDRN과 히알루론산 키워드를 담은 25ml 집중 보습 앰플.",
+        "targetNeed": "토너 후 가볍게 더하는 집중 수분 단계를 원하는 고객",
+        "keyClaims": [
+          "PDRN 컨셉",
+          "히알루론산 보습 컨셉",
+          "25ml 앰플",
+          "집중 케어 단계"
+        ],
+        "keywords": [
+          "PDRN",
+          "히알루론산",
+          "앰플",
+          "집중보습",
+          "25ml"
+        ]
+      },
+      "notice": {
+        "shelfLife": "상품 상세페이지 참조",
+        "howToUse": "토너 사용 후 적당량을 얼굴 전체에 펴 바르고 크림으로 마무리합니다.",
+        "manufacturer": "(주)유어스킨",
+        "country": "대한민국",
+        "functionalCosmetic": "상세 고시정보 추가 확인 필요",
+        "dataQualityNotes": [
+          "2026-05-24 쿠팡 OpenAPI에서 상세 이미지 12장을 다운로드해 반영.",
+          "전성분 OCR과 기능성 고시 세부 검증은 추가 확인 필요."
+        ]
+      },
+      "ingredients": {
+        "full": [
+          "상세 이미지/고시정보 OCR 추가 확인 필요"
+        ],
+        "roleGroups": {
+          "humectants": [
+            "히알루론산 보습 컨셉"
+          ],
+          "activeConcept": [
+            "PDRN 컨셉 원료 확인 필요"
+          ],
+          "preservation": [
+            "상세 확인 필요"
+          ]
+        },
+        "heroIngredients": [
+          {
+            "name": "PDRN",
+            "role": "컨셉 원료",
+            "evidence": "쿠팡 상품명 기준. 전성분 내 정확한 표기 확인 필요"
+          },
+          {
+            "name": "히알루론산",
+            "role": "보습 컨셉",
+            "evidence": "쿠팡 상품명 기준. 상세 고시정보 확인 필요"
+          },
+          {
+            "name": "25ml 앰플",
+            "role": "집중 케어 제형",
+            "evidence": "쿠팡 옵션 25ml 1개 기준"
+          }
+        ],
+        "analysis": "PDRN과 히알루론산을 전면에 둔 집중 케어 앰플이다. 전성분 OCR 전까지는 효능 단정 대신 수분 루틴 보강과 컨셉 원료 중심으로 표현한다.",
+        "cautions": [
+          "PDRN은 기능성 효능처럼 단정하지 말고 컨셉 원료로 표현한다.",
+          "전성분 확인 전에는 개선/회복/진정 효과를 단정하지 않는다."
+        ]
+      },
+      "comparisonAxes": [
+        "PDRN 표기 근거",
+        "히알루론산 보습 컨셉",
+        "25ml 단가",
+        "앰플 루틴 단계",
+        "상세 이미지 12장"
       ]
     }
   ]

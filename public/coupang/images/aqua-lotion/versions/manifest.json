@@ -1,0 +1,35 @@
+{
+  "productId": "9218811640",
+  "activeVersion": "v2",
+  "versions": [
+    {
+      "id": "v2",
+      "label": "V2",
+      "representativeCount": 6,
+      "detailCount": 11,
+      "source": "public/coupang/images/aqua-lotion/versions/v2"
+    },
+    {
+      "id": "v1",
+      "label": "V1",
+      "representativeCount": 5,
+      "detailCount": 8,
+      "source": "public/coupang/images/aqua-lotion/versions/v1"
+    },
+    {
+      "id": "original",
+      "label": "원본",
+      "representativeCount": 6,
+      "detailCount": 15,
+      "source": "public/coupang/images/aqua-lotion/versions/original"
+    }
+  ],
+  "originalRepresentativeSourceUrls": [
+    "https://image.coupangcdn.com/image/vendor_inventory/395a/7f9ed30cd9fc8aa3ec0e2f472ab99f1451adf13f1ee006196ed9c741e622.png",
+    "https://image.coupangcdn.com/image/vendor_inventory/affb/354c819e29da6ace813926c1665f1f9ae69267dbe8d074b024f14273ce17.png",
+    "https://image.coupangcdn.com/image/vendor_inventory/3d9b/752225a109434950d162deeed94948b446caf293ece95140471b310ca3ea.png",
+    "https://image.coupangcdn.com/image/vendor_inventory/4c45/b9a2eab32f79ff7c38196cf4945a9bb4352e6a218392ce62bfa481ec2e61.png",
+    "https://image.coupangcdn.com/image/vendor_inventory/60d9/cb70f3528fef74b520491d853f37240cd3ebf19e6f0f6bf57645461f0980.png",
+    "https://image.coupangcdn.com/image/vendor_inventory/0a60/e2ffc2f60d866f5be4ede556608cae9991bfcbf48973e176f45003c51cd5.png"
+  ]
+}
