@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { marketingWorkspaces } from '../../data/marketingWorkspaces';
+
+const workspace = marketingWorkspaces.find((item) => item.slug === 'aqua-lotion');
+
+if (!workspace) {
+  throw new Error('Aqua lotion marketing workspace is missing.');
+}
+
+const statusLabel = {
+  draft: '초안',
+  review: '검토',
+  candidate: '후보',
+  archive: '보관',
+};
+
+const statusClass = {
+  draft: 'is-draft',
+  review: 'is-review',
+  candidate: 'is-candidate',
+  archive: 'is-archive',
+};
+
+const activeVersion = workspace.versions[0];
+---
+
+<BaseLayout title="아쿠아로션 상세 이미지 개선 보드" description="아쿠아로션 상세 이미지 개선 버전과 산출물을 비교하고 바로 열어보는 마케팅 작업공간">
+  <main class="asset-workbench">
+    <aside class="asset-rail" aria-label="마케팅 작업공간 메뉴">
+      <a class="rail-brand" href="/">
+        <img src="/yourskin-logo-header-v18.png" alt="YOURSKIN+" />
+        <span>Marketing Command</span>
+      </a>
+
+      <nav class="rail-links" aria-label="상위 화면">
+        <a href="/">대시보드</a>
+        <a href="/product-comparison/">제품 비교표</a>
+        <a href="/coupang-mock/">쿠팡 상세 분석</a>
+      </nav>
+
+      <section class="rail-card">
+        <p>현재 작업</p>
+        <strong>{workspace.title}</strong>
+        <span>{workspace.versions.length}개 버전 · {workspace.category}</span>
+      </section>
+
+      <nav class="version-nav" aria-label="상세 이미지 버전">
+        {workspace.versions.map((version) => (
+          <a href={`#${version.id}`}>
+            <span>{version.label}</span>
+            <small>{statusLabel[version.status]} · {version.date}</small>
+          </a>
+        ))}
+      </nav>
+    </aside>
+
+    <section class="asset-stage">
+      <header class="asset-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Product asset workspace</p>
+          <h1>{workspace.title}</h1>
+          <p>{workspace.objective}</p>
+          <div class="hero-actions">
+            <a class="primary-link" href={activeVersion.primaryUrl} target="_blank" rel="noreferrer">최신 후보 열기</a>
+            <a class="ghost-link" href="/coupang/images/aqua-lotion/renewal-2026-05-25-v8-fresh-set/preview/v8-fresh-contact-sheet.jpg" target="_blank" rel="noreferrer">컨택시트 보기</a>
+          </div>
+        </div>
+
+        <figure class="hero-preview">
+          <img src={workspace.thumbnail} alt={`${workspace.productName} 제품 이미지`} />
+          <figcaption>
+            <span>Next action</span>
+            <strong>{workspace.nextAction}</strong>
+          </figcaption>
+        </figure>
+      </header>
+
+      <section class="version-spotlight" aria-label="선택 버전 미리보기">
+        <div class="spotlight-copy">
+          <p class="eyebrow">Selected preview</p>
+          <h2 id="spotlight-title">{activeVersion.label}</h2>
+          <p id="spotlight-summary">{activeVersion.summary}</p>
+          <div class="spotlight-metrics" id="spotlight-metrics">
+            {activeVersion.metrics.map((metric) => (
+              <span><strong>{metric.value}</strong>{metric.label}</span>
+            ))}
+          </div>
+          <div class="spotlight-links" id="spotlight-links">
+            {activeVersion.links.map((link) => (
+              <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+            ))}
+          </div>
+        </div>
+        <a id="spotlight-image-link" class="spotlight-image" href={activeVersion.primaryUrl} target="_blank" rel="noreferrer">
+          <img id="spotlight-image" src={activeVersion.preview} alt={`${activeVersion.label} 미리보기`} />
+        </a>
+      </section>
+
+      <section class="version-grid" aria-label="아쿠아로션 상세 이미지 버전 목록">
+        {workspace.versions.map((version) => (
+          <article id={version.id} class:list={['version-card', statusClass[version.status]]}>
+            <button
+              type="button"
+              class="version-preview"
+              data-version={version.id}
+              data-label={version.label}
+              data-summary={version.summary}
+              data-preview={version.preview}
+              data-primary={version.primaryUrl}
+              data-links={JSON.stringify(version.links)}
+              data-metrics={JSON.stringify(version.metrics)}
+            >
+              <img src={version.preview} alt={`${version.label} 미리보기`} loading="lazy" />
+            </button>
+
+            <div class="version-body">
+              <div class="version-head">
+                <span>{statusLabel[version.status]}</span>
+                <small>{version.date}</small>
+              </div>
+              <h2>{version.label}</h2>
+              <p>{version.summary}</p>
+
+              <dl class="version-metrics">
+                {version.metrics.map((metric) => (
+                  <div>
+                    <dt>{metric.label}</dt>
+                    <dd>{metric.value}</dd>
+                  </div>
+                ))}
+              </dl>
+
+              <div class="version-links">
+                {version.links.map((link) => (
+                  <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+                ))}
+              </div>
+            </div>
+          </article>
+        ))}
+      </section>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  const title = document.getElementById('spotlight-title');
+  const summary = document.getElementById('spotlight-summary');
+  const image = document.getElementById('spotlight-image');
+  const imageLink = document.getElementById('spotlight-image-link');
+  const metrics = document.getElementById('spotlight-metrics');
+  const links = document.getElementById('spotlight-links');
+
+  const parseDataset = (value) => {
+    try {
+      return JSON.parse(value || '[]');
+    } catch {
+      return [];
+    }
+  };
+
+  const escapeHtml = (value) => String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;');
+
+  document.querySelectorAll('.version-preview').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (!title || !summary || !image || !imageLink || !metrics || !links) return;
+
+      title.textContent = button.dataset.label || '';
+      summary.textContent = button.dataset.summary || '';
+      image.setAttribute('src', button.dataset.preview || '');
+      image.setAttribute('alt', `${button.dataset.label || '버전'} 미리보기`);
+      imageLink.setAttribute('href', button.dataset.primary || button.dataset.preview || '#');
+
+      metrics.innerHTML = parseDataset(button.dataset.metrics)
+        .map((metric) => `<span><strong>${escapeHtml(metric.value)}</strong>${escapeHtml(metric.label)}</span>`)
+        .join('');
+
+      links.innerHTML = parseDataset(button.dataset.links)
+        .map((link) => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noreferrer">${escapeHtml(link.label)}</a>`)
+        .join('');
+    });
+  });
+</script>
+
+<style>
+  :global(body) { background: #f4f8f5; }
+  :global(body.noise::before) { opacity: 0.05; }
+  .asset-workbench {
+    --ink: #18241f; --muted: #637169; --soft: #eef5ef; --panel: #ffffff; --line: #dce5dc; --green: #254d3e; --coral: #bd664e;
+    min-height: 100vh; display: grid; grid-template-columns: 280px minmax(0, 1fr);
+    background: linear-gradient(90deg, rgba(37,77,62,.055) 1px, transparent 1px), linear-gradient(180deg, rgba(37,77,62,.04) 1px, transparent 1px), #f4f8f5;
+    background-size: 34px 34px; color: var(--ink);
+  }
+  a { color: inherit; text-decoration: none; }
+  .asset-rail { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; gap: 16px; padding: 24px 18px; overflow-y: auto; background: #fff; border-right: 1px solid var(--line); }
+  .rail-brand { display: grid; gap: 10px; }
+  .rail-brand img { width: 148px; }
+  .rail-brand span, .eyebrow { color: var(--coral); font-family: var(--font-latin); font-size: 10px; font-weight: 900; letter-spacing: 0; text-transform: uppercase; }
+  .rail-links, .version-nav { display: grid; gap: 7px; }
+  .rail-links a, .version-nav a { display: grid; gap: 3px; padding: 11px 12px; border: 1px solid transparent; border-radius: 7px; color: var(--ink); font-size: 13px; font-weight: 800; }
+  .rail-links a:hover, .version-nav a:hover { background: #f5f8f4; border-color: var(--line); }
+  .version-nav small { color: var(--muted); font-size: 11px; font-weight: 600; }
+  .rail-card { display: grid; gap: 7px; padding: 15px; background: var(--soft); border: 1px solid #d7e5d9; border-radius: 8px; }
+  .rail-card p, .rail-card span { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+  .rail-card strong { color: var(--green); font-size: 18px; line-height: 1.35; }
+  .asset-stage { width: min(100%, 1480px); margin: 0 auto; padding: 30px; }
+  .asset-hero { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 20px; align-items: stretch; margin-bottom: 18px; }
+  .hero-copy, .hero-preview, .version-spotlight, .version-card { background: rgba(255,255,255,.94); border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 12px 30px rgba(22,36,30,.06); }
+  .hero-copy { display: grid; align-content: center; gap: 14px; padding: 28px; }
+  .hero-copy h1 { max-width: 780px; margin: 0; font-size: clamp(31px, 4vw, 56px); line-height: 1.08; letter-spacing: 0; word-break: keep-all; }
+  .hero-copy p { max-width: 760px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.75; word-break: keep-all; }
+  .hero-actions, .spotlight-links, .version-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .primary-link, .ghost-link, .spotlight-links a, .version-links a { display: inline-flex; align-items: center; min-height: 38px; padding: 0 13px; border-radius: 7px; font-size: 13px; font-weight: 900; }
+  .primary-link { color: #fff; background: var(--green); }
+  .ghost-link, .spotlight-links a, .version-links a { color: var(--green); background: var(--soft); border: 1px solid #d5e3d7; }
+  .hero-preview { margin: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; overflow: hidden; }
+  .hero-preview img { width: 100%; height: 280px; object-fit: contain; padding: 24px; background: linear-gradient(135deg, #e6f2ec, #f8fbf8); }
+  .hero-preview figcaption { display: grid; gap: 5px; padding: 18px; border-top: 1px solid var(--line); }
+  .hero-preview span { color: var(--coral); font-size: 11px; font-weight: 900; text-transform: uppercase; }
+  .hero-preview strong { font-size: 15px; line-height: 1.55; word-break: keep-all; }
+  .version-spotlight { display: grid; grid-template-columns: minmax(0, .95fr) minmax(360px, 1.05fr); gap: 18px; padding: 18px; margin-bottom: 18px; }
+  .spotlight-copy { display: grid; align-content: start; gap: 13px; padding: 12px; }
+  .spotlight-copy h2 { margin: 0; font-size: 28px; line-height: 1.18; }
+  .spotlight-copy p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; word-break: keep-all; }
+  .spotlight-metrics, .version-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .spotlight-metrics span, .version-metrics div { padding: 10px; background: #f6faf6; border: 1px solid var(--line); border-radius: 7px; color: var(--muted); font-size: 11px; }
+  .spotlight-metrics strong, .version-metrics dd { display: block; margin: 0 0 3px; color: var(--ink); font-family: var(--font-latin); font-size: 18px; font-weight: 900; }
+  .version-metrics { margin: 0; }
+  .version-metrics dt { color: var(--muted); font-size: 10px; font-weight: 800; }
+  .spotlight-image { max-height: 620px; overflow: auto; background: #e8f2ee; border: 1px solid #d4e3da; border-radius: 8px; }
+  .spotlight-image img { width: 100%; display: block; }
+  .version-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .version-card { min-width: 0; overflow: hidden; }
+  .version-preview { width: 100%; height: 230px; display: block; padding: 0; background: #e9f3ee; border: 0; border-bottom: 1px solid var(--line); cursor: pointer; overflow: hidden; }
+  .version-preview img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 180ms ease; }
+  .version-preview:hover img { transform: scale(1.025); }
+  .version-body { display: grid; gap: 11px; padding: 15px; }
+  .version-head { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+  .version-head span { padding: 4px 8px; color: var(--green); background: var(--soft); border-radius: 999px; font-size: 11px; font-weight: 900; }
+  .is-candidate .version-head span { color: #fff; background: var(--green); }
+  .is-review .version-head span { color: #1f5561; background: #dff0f2; }
+  .is-archive .version-head span { color: #6c6f6a; background: #f0f1ed; }
+  .version-head small { color: var(--muted); font-size: 11px; font-weight: 800; }
+  .version-body h2 { margin: 0; font-size: 19px; line-height: 1.25; }
+  .version-body p { min-height: 84px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; word-break: keep-all; }
+  @media (max-width: 1180px) { .asset-hero, .version-spotlight { grid-template-columns: 1fr; } .version-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 860px) { .asset-workbench { grid-template-columns: 1fr; } .asset-rail { position: relative; height: auto; border-right: 0; border-bottom: 1px solid var(--line); } .version-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); } .asset-stage { padding: 22px 14px; } }
+  @media (max-width: 620px) { .hero-copy { padding: 22px; } .hero-copy h1 { font-size: 31px; } .version-grid, .version-nav, .spotlight-metrics, .version-metrics { grid-template-columns: 1fr; } .spotlight-image { max-height: 520px; } }
+</style>

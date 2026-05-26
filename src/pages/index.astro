@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import comparisonData from '../../data/yourskinplus-8-product-comparison.json';
+import { activeMarketingWorkspaces } from '../data/marketingWorkspaces';
 
 const products = comparisonData.products;
 const formatWon = (value) => `${Number(value).toLocaleString('ko-KR')}원`;
@@ -51,6 +52,12 @@ const priorityProducts = [
 
 const workLinks = [
   {
+    href: '/marketing/aqua-lotion-detail-images/',
+    label: '아쿠아로션 상세 이미지 버전',
+    meta: 'V1~V8 산출물',
+    text: '아쿠아 로션 상세 이미지 개선 버전과 최신 후보, 컨택시트, 컷 파일을 바로 엽니다.',
+  },
+  {
     href: '/brand-logo/',
     label: '브랜드 로고 방향',
     meta: 'YOURSKIN PLUS CI',
@@ -82,6 +89,11 @@ const conceptLinks = [
   { href: '/shop-luxury/', label: 'Clean Beauty', text: '미니멀 성분 투명성' },
   { href: '/shop-editorial/', label: 'Lifestyle', text: '자연주의 콘텐츠형' },
 ];
+
+const workspaceStats = {
+  active: activeMarketingWorkspaces.length,
+  versions: activeMarketingWorkspaces.reduce((sum, workspace) => sum + workspace.versions.length, 0),
+};
 
 const campaignRows = [
   {
@@ -233,7 +245,7 @@ const complianceNotes = [
           </div>
           <div class="priority-list">
             {priorityProducts.map(({ product, lane, reason, action }, index) => (
-              <a class="priority-item" href="/product-comparison/">
+              <a class="priority-item" href={product.slug === 'aqua-lotion' ? '/marketing/aqua-lotion-detail-images/' : '/product-comparison/'}>
                 <img src={product.assets.thumbnail} alt={`${product.shortName} 대표 이미지`} loading="lazy" />
                 <div>
                   <span>{String(index + 1).padStart(2, '0')} · {lane}</span>
@@ -245,6 +257,29 @@ const complianceNotes = [
             ))}
           </div>
         </article>
+      </section>
+
+      <section class="panel workspace-library">
+        <div class="panel-heading wide-heading">
+          <div>
+            <p class="eyebrow">Marketing workspaces</p>
+            <h2>제품별 마케팅 작업공간</h2>
+          </div>
+          <span>{workspaceStats.active}개 활성 · {workspaceStats.versions}개 버전</span>
+        </div>
+        <div class="workspace-card-grid">
+          {activeMarketingWorkspaces.map((workspace) => (
+            <a class="workspace-card" href={workspace.pageUrl}>
+              <img src={workspace.thumbnail} alt={`${workspace.productName} 대표 이미지`} loading="lazy" />
+              <div>
+                <span>{workspace.category}</span>
+                <h3>{workspace.title}</h3>
+                <p>{workspace.objective}</p>
+                <small>{workspace.versions.length}개 버전 · {workspace.nextAction}</small>
+              </div>
+            </a>
+          ))}
+        </div>
       </section>
 
       <section class="panel campaign-panel">
@@ -724,9 +759,86 @@ const complianceNotes = [
     font-weight: 800;
   }
 
+  .workspace-library,
   .campaign-panel,
   .lineup-panel {
     margin-bottom: 18px;
+  }
+
+  .wide-heading > span {
+    flex: 0 0 auto;
+    padding: 9px 11px;
+    color: var(--green);
+    background: var(--green-2);
+    border: 1px solid #cfe0d0;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .workspace-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .workspace-card {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 14px;
+    padding: 14px;
+    background: #fbfcf8;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+  }
+
+  .workspace-card:hover {
+    border-color: #afc4b5;
+    box-shadow: 0 12px 28px rgba(25, 45, 34, 0.08);
+  }
+
+  .workspace-card img {
+    width: 120px;
+    height: 150px;
+    object-fit: contain;
+    padding: 10px;
+    background: #eef4ed;
+    border-radius: 6px;
+  }
+
+  .workspace-card div {
+    min-width: 0;
+    display: grid;
+    align-content: start;
+    gap: 6px;
+  }
+
+  .workspace-card span {
+    color: var(--coral);
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  .workspace-card h3 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.25;
+    word-break: keep-all;
+  }
+
+  .workspace-card p,
+  .workspace-card small {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+    word-break: keep-all;
+  }
+
+  .workspace-card small {
+    color: var(--green);
+    font-weight: 800;
   }
 
   .campaign-table-wrap {
@@ -921,6 +1033,7 @@ const complianceNotes = [
 
   @media (max-width: 1280px) {
     .metric-grid,
+    .workspace-card-grid,
     .lineup-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -952,6 +1065,7 @@ const complianceNotes = [
     }
 
     .metric-grid,
+    .workspace-card-grid,
     .lineup-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -963,6 +1077,7 @@ const complianceNotes = [
     }
 
     .metric-grid,
+    .workspace-card-grid,
     .lineup-grid,
     .work-nav,
     .concept-nav {
@@ -1287,9 +1402,84 @@ const complianceNotes = [
     color: var(--green);
   }
 
+  .workspace-library,
   .campaign-panel,
   .lineup-panel {
     margin-bottom: 14px;
+  }
+
+  .wide-heading > span {
+    padding: 8px 11px;
+    color: var(--green);
+    background: var(--green-soft);
+    border: 1px solid #d5e3d7;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .workspace-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .workspace-card {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+
+  .workspace-card:hover {
+    border-color: var(--line-strong);
+    box-shadow: 0 8px 18px rgba(31, 42, 37, 0.06);
+  }
+
+  .workspace-card img {
+    width: 96px;
+    height: 120px;
+    object-fit: contain;
+    padding: 8px;
+    background: #f1f6f1;
+    border-radius: 6px;
+  }
+
+  .workspace-card div {
+    min-width: 0;
+    display: grid;
+    align-content: start;
+    gap: 5px;
+  }
+
+  .workspace-card span {
+    color: var(--coral);
+    font-size: 10px;
+    font-weight: 900;
+  }
+
+  .workspace-card h3 {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.28;
+    word-break: keep-all;
+  }
+
+  .workspace-card p,
+  .workspace-card small {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.45;
+    word-break: keep-all;
+  }
+
+  .workspace-card small {
+    color: var(--green);
+    font-weight: 800;
   }
 
   .campaign-table-wrap {
@@ -1405,6 +1595,7 @@ const complianceNotes = [
 
   @media (max-width: 1280px) {
     .metric-grid,
+    .workspace-card-grid,
     .lineup-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -1435,6 +1626,7 @@ const complianceNotes = [
     .work-nav,
     .concept-nav,
     .metric-grid,
+    .workspace-card-grid,
     .lineup-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -1446,6 +1638,7 @@ const complianceNotes = [
     }
 
     .metric-grid,
+    .workspace-card-grid,
     .lineup-grid,
     .work-nav,
     .concept-nav {
