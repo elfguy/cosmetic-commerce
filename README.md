@@ -44,6 +44,16 @@ Remote 연결 시:
 git remote add origin git@github.com:elfguy/cosmetic-commerce.git
 ```
 
+## Coupang: 유어스킨플러스 상품 URL
+
+- https://www.coupang.com/vp/products/9025733014
+- https://www.coupang.com/vp/products/9025775541
+- https://www.coupang.com/vp/products/9025751494
+- https://www.coupang.com/vp/products/9025793946
+- https://www.coupang.com/vp/products/9218811640
+- https://www.coupang.com/vp/products/9221762154
+- https://www.coupang.com/vp/products/9025810298
+
 ## 문서
 
 - `docs/01-product-brief.md` — 제품/사업 브리프
@@ -59,3 +69,15 @@ git remote add origin git@github.com:elfguy/cosmetic-commerce.git
 - `docs/11-product-feature-summary.md` — 상품별 확인 정보와 안전한 특장점 정리
 - `docs/12-marketing-strategy-research.md` — 효능 주장 없이 AI를 활용하는 마케팅 운영 전략
 - `docs/13-marketing-budget.md` — AI 활용 마케팅 비용/광고 테스트 예산 추정
+- `docs/16-yourskinplus-8-product-comparison.md` — 쿠팡 등록 8개 제품 가격/채널/전성분/성분 분석 비교표
+- `docs/19-brand-logo-direction.md` — YOURSKIN PLUS 프리미엄 자연주의 로고 방향, 40대 이상 타깃 실사용 SVG 로고 시스템, 웹 검토 페이지 정리
+- `docs/20-monthly-10m-sales-plan.md` — 쿠팡/스마트스토어 기반 월 매출 1,000만원 달성 30일 실행 전략
+- `docs/21-hyaluronic-toner-detail-renewal-plan.md` — 히알루론산 토너 대표이미지/상세페이지 리뉴얼 기획, 신선 출고/자연유래 보습 성분 메시지와 제작 지시서
+- `docs/24-coupang-drive-asset-match.md` — 쿠팡 등록 8개 상품과 Google Drive 제품 이미지 폴더 매칭표, 작업 폴더 구조 기록
+- `docs/26-coupang-seo-video-notes.md` — 쿠팡 검색 노출/SEO 판매 노하우 영상 정리와 유어스킨 9개 상품 적용 체크리스트
+- `docs/27-multi-agent-product-detail-image-workflow.md` — 여러 AI 에이전트로 상품 상세이미지를 제작하는 쿠팡/화장품용 워크플로우와 유튜브 리서치 정리
+- `docs/28-coupang-openapi-access.md` — 쿠팡 셀러 OpenAPI 로컬 접속 정보, HMAC 인증, 상품 조회 검증 절차
+
+## HTML 검토 페이지
+
+- `/toner-detail-renewal` — 히알루론산 토너 대표이미지/상세페이지 HTML 시안
