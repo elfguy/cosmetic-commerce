@@ -15,6 +15,7 @@ const versions = versionsManifest.versions.map((version) => ({
 
 const activeVersion = versions.find((version) => version.id === versionsManifest.activeVersion) ?? versions[0];
 const maxDetailCount = Math.max(...versions.map((version) => version.detailCount));
+const initialSelected = new Set(['original', 'v1', activeVersion.id]);
 ---
 
 <BaseLayout title="아쿠아로션 원본·V1·V2 비교" description="아쿠아로션 원본, V1, V2 대표 이미지와 상세 이미지를 비교하는 마케팅 검토 페이지">
@@ -28,10 +29,10 @@ const maxDetailCount = Math.max(...versions.map((version) => version.detailCount
       <div class="hero-layout">
         <div>
           <p class="eyebrow">Aqua lotion version compare</p>
-          <h1>원본, V1, V2 상세 이미지 비교</h1>
+          <h1>선택 버전 상세 이미지 비교</h1>
           <p>
-            기존 쿠팡 원본 상세와 개선안 V1, 현재 활성 버전 V2를 한 화면에서 비교합니다.
-            대표 이미지 구성과 상세 이미지 흐름을 분리해서 보고, 어느 버전을 판매 페이지 기준안으로 삼을지 판단합니다.
+            버전이 늘어나도 전체를 한꺼번에 펼치지 않고, 비교할 2~3개만 선택해서 봅니다.
+            PC에서는 선택 버전을 나란히 비교하고, 모바일에서는 선택 버전 중심으로 세로 확인합니다.
           </p>
         </div>
         <aside>
@@ -42,18 +43,32 @@ const maxDetailCount = Math.max(...versions.map((version) => version.detailCount
       </div>
     </header>
 
-    <section class="version-tabs" aria-label="버전 빠른 이동">
-      {versions.map((version) => (
-        <a class:list={[version.id === activeVersion.id && 'is-active']} href={`#${version.id}`}>
-          <span>{version.label}</span>
-          <strong>대표 {version.representativeCount} · 상세 {version.detailCount}</strong>
-        </a>
-      ))}
+    <section class="compare-controls" aria-label="비교 버전 선택">
+      <div class="control-copy">
+        <p class="eyebrow">Version library</p>
+        <h2>비교할 버전 선택</h2>
+        <p>최대 3개까지 선택됩니다. 원본, 현재 후보, 직전 후보처럼 필요한 조합만 남겨서 비교합니다.</p>
+      </div>
+      <div class="preset-row" aria-label="추천 비교 조합">
+        <button type="button" data-preset="original,v1,v2">원본 / V1 / V2</button>
+        <button type="button" data-preset={`original,${activeVersion.id}`}>원본 / 현재</button>
+        <button type="button" data-preset={`v1,${activeVersion.id}`}>V1 / 현재</button>
+      </div>
+      <div class="version-picker">
+        {versions.map((version) => (
+          <label class:list={['version-choice', initialSelected.has(version.id) && 'is-selected']}>
+            <input type="checkbox" value={version.id} checked={initialSelected.has(version.id)} />
+            <span>{version.label}</span>
+            <strong>대표 {version.representativeCount} · 상세 {version.detailCount}</strong>
+          </label>
+        ))}
+      </div>
+      <p id="selection-note" class="selection-note">현재 3개 버전을 비교 중입니다.</p>
     </section>
 
     <section class="summary-grid" aria-label="버전 요약">
       {versions.map((version) => (
-        <article id={version.id}>
+        <article id={version.id} data-version-card={version.id}>
           <div class="summary-image">
             <img src={version.representativeImages[0]} alt={`${version.label} 대표 이미지 1`} loading="lazy" />
           </div>
@@ -76,7 +91,7 @@ const maxDetailCount = Math.max(...versions.map((version) => version.detailCount
       </div>
       <div class="version-columns">
         {versions.map((version) => (
-          <article class="image-column">
+          <article class="image-column" data-version-column={version.id}>
             <h3>{version.label}</h3>
             <div class="image-stack representative-stack">
               {version.representativeImages.map((src, index) => (
@@ -98,7 +113,7 @@ const maxDetailCount = Math.max(...versions.map((version) => version.detailCount
       </div>
       <div class="flow-table" style={`--rows: ${maxDetailCount};`}>
         {versions.map((version) => (
-          <article class="flow-column">
+          <article class="flow-column" data-version-column={version.id}>
             <h3>{version.label}</h3>
             {version.detailImages.map((src, index) => (
               <a class="flow-card" href={src} target="_blank" rel="noreferrer">
@@ -112,6 +127,70 @@ const maxDetailCount = Math.max(...versions.map((version) => version.detailCount
     </section>
   </main>
 </BaseLayout>
+
+<script>
+  const maxSelection = 3;
+  const choices = Array.from(document.querySelectorAll('.version-choice'));
+  const inputs = Array.from(document.querySelectorAll('.version-choice input'));
+  const presetButtons = Array.from(document.querySelectorAll('[data-preset]'));
+  const note = document.getElementById('selection-note');
+  const versionCards = Array.from(document.querySelectorAll('[data-version-card]'));
+  const versionColumns = Array.from(document.querySelectorAll('[data-version-column]'));
+
+  const selectedValues = () => inputs.filter((input) => input.checked).map((input) => input.value);
+
+  const syncSelection = () => {
+    let selected = selectedValues();
+
+    if (selected.length > maxSelection) {
+      const lastChecked = document.activeElement;
+      inputs.forEach((input) => {
+        if (input !== lastChecked && selectedValues().length > maxSelection) {
+          input.checked = false;
+        }
+      });
+      selected = selectedValues();
+    }
+
+    if (selected.length === 0 && inputs[0]) {
+      inputs[0].checked = true;
+      selected = selectedValues();
+    }
+
+    choices.forEach((choice) => {
+      const input = choice.querySelector('input');
+      choice.classList.toggle('is-selected', Boolean(input?.checked));
+    });
+
+    const selectedSet = new Set(selected);
+    versionCards.forEach((card) => {
+      card.classList.toggle('is-hidden', !selectedSet.has(card.dataset.versionCard || ''));
+    });
+    versionColumns.forEach((column) => {
+      column.classList.toggle('is-hidden', !selectedSet.has(column.dataset.versionColumn || ''));
+    });
+
+    if (note) {
+      note.textContent = `현재 ${selected.length}개 버전을 비교 중입니다.`;
+    }
+  };
+
+  inputs.forEach((input) => {
+    input.addEventListener('change', syncSelection);
+  });
+
+  presetButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const preset = new Set((button.dataset.preset || '').split(',').filter(Boolean).slice(0, maxSelection));
+      inputs.forEach((input) => {
+        input.checked = preset.has(input.value);
+      });
+      syncSelection();
+    });
+  });
+
+  syncSelection();
+</script>
 
 <style>
   :global(body) {
@@ -146,7 +225,7 @@ const maxDetailCount = Math.max(...versions.map((version) => version.detailCount
   }
 
   .compare-hero,
-  .version-tabs,
+  .compare-controls,
   .summary-grid article,
   .compare-section {
     width: min(100%, 1480px);
@@ -243,38 +322,106 @@ const maxDetailCount = Math.max(...versions.map((version) => version.detailCount
     font-size: 42px;
   }
 
-  .version-tabs {
+  .compare-controls {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 12px 28px rgba(29, 41, 36, 0.055);
     margin-top: 16px;
     margin-bottom: 16px;
   }
 
-  .version-tabs a {
+  .control-copy {
+    display: grid;
+    align-content: start;
+    gap: 7px;
+  }
+
+  .control-copy h2 {
+    margin: 0;
+    font-size: 21px;
+    line-height: 1.2;
+  }
+
+  .control-copy p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .preset-row,
+  .version-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .preset-row {
+    align-self: start;
+  }
+
+  .preset-row button {
+    min-height: 38px;
+    padding: 0 12px;
+    color: var(--green);
+    background: var(--soft);
+    border: 1px solid #d4e2d6;
+    border-radius: 7px;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  .version-picker {
+    grid-column: 2;
+  }
+
+  .version-choice {
     display: grid;
     gap: 4px;
-    padding: 14px;
+    min-width: 170px;
+    padding: 12px 13px;
     background: #fff;
     border: 1px solid var(--line);
     border-radius: 8px;
+    cursor: pointer;
   }
 
-  .version-tabs a.is-active {
+  .version-choice input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .version-choice.is-selected {
     color: #fff;
     background: var(--green);
     border-color: var(--green);
   }
 
-  .version-tabs span {
-    font-size: 16px;
+  .version-choice span {
+    font-size: 15px;
     font-weight: 900;
   }
 
-  .version-tabs strong {
+  .version-choice strong {
     color: inherit;
     font-size: 12px;
     opacity: 0.78;
+  }
+
+  .selection-note {
+    grid-column: 2;
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
   }
 
   .summary-grid {
@@ -366,6 +513,12 @@ const maxDetailCount = Math.max(...versions.map((version) => version.detailCount
     gap: 12px;
   }
 
+  .summary-grid article.is-hidden,
+  .version-columns [data-version-column].is-hidden,
+  .flow-table [data-version-column].is-hidden {
+    display: none;
+  }
+
   .image-column,
   .flow-column {
     min-width: 0;
@@ -433,14 +586,16 @@ const maxDetailCount = Math.max(...versions.map((version) => version.detailCount
 
   @media (max-width: 1180px) {
     .hero-layout,
+    .compare-controls,
     .summary-grid,
     .version-columns,
     .flow-table {
       grid-template-columns: 1fr;
     }
 
-    .version-tabs {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+    .version-picker,
+    .selection-note {
+      grid-column: auto;
     }
   }
 
@@ -457,7 +612,7 @@ const maxDetailCount = Math.max(...versions.map((version) => version.detailCount
       font-size: 32px;
     }
 
-    .version-tabs,
+    .compare-controls,
     .summary-grid article {
       grid-template-columns: 1fr;
     }
