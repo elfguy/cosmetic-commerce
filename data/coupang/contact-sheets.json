@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "hyaluronic-acid-toner",
+    "name": "유어스킨플러스 히알루론산 토너",
+    "path": "data/coupang/contact-sheets/hyaluronic-acid-toner.jpg"
+  },
+  {
+    "slug": "low-ph-cleansing-gel",
+    "name": "유어스킨플러스 로우 피에이치 클렌징 젤",
+    "path": "data/coupang/contact-sheets/low-ph-cleansing-gel.jpg"
+  },
+  {
+    "slug": "rose-damascus-tonic-essence",
+    "name": "유어스킨플러스 로즈 다마스쿠스 토닉 에센스",
+    "path": "data/coupang/contact-sheets/rose-damascus-tonic-essence.jpg"
+  },
+  {
+    "slug": "younger-than-all-in-one-lotion",
+    "name": "유어스킨플러스 영거 댄 올인원 로션",
+    "path": "data/coupang/contact-sheets/younger-than-all-in-one-lotion.jpg"
+  },
+  {
+    "slug": "moisture-lip-balm",
+    "name": "유어스킨플러스 모이스춰 립밤",
+    "path": "data/coupang/contact-sheets/moisture-lip-balm.jpg"
+  }
+]

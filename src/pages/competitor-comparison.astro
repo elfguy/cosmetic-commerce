@@ -1,0 +1,1052 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import competitorData from '../../data/coupang-competitor-products.json';
+import comparisonData from '../../data/yourskinplus-8-product-comparison.json';
+
+const formatWon = (value) => `${Number(value).toLocaleString('ko-KR')}원`;
+const formatNumber = (value) => Number(value || 0).toLocaleString('ko-KR');
+const formatMonthly = (value, label) => {
+  if (label) return label;
+  if (!value) return '확인 필요';
+  return `한 달간 ${formatNumber(value)}명 이상 구매`;
+};
+
+const products = comparisonData.products;
+const productBySlug = new Map(products.map((product) => [product.slug, product]));
+const categories = competitorData.categories.map((category) => {
+  const yoursProducts = category.yoursProducts
+    .map((slug) => productBySlug.get(slug))
+    .filter(Boolean);
+  const topCompetitor = category.competitors.reduce(
+    (top, item) => (item.reviewCount > top.reviewCount ? item : top),
+    category.competitors[0],
+  );
+  const yourReviewCount = yoursProducts.reduce((sum, product) => sum + product.rating.coupangReviews, 0);
+  const yourLowestUnit = yoursProducts.reduce(
+    (lowest, product) => (!lowest || product.price.unitPrice < lowest.price.unitPrice ? product : lowest),
+    null,
+  );
+
+  return {
+    ...category,
+    yoursProducts,
+    topCompetitor,
+    yourReviewCount,
+    yourLowestUnit,
+  };
+});
+
+const competitors = categories.flatMap((category) =>
+  category.competitors.map((competitor) => ({
+    ...competitor,
+    categoryLabel: category.label,
+    categoryKey: category.key,
+  })),
+);
+const topReview = competitors.reduce((top, item) => (item.reviewCount > top.reviewCount ? item : top), competitors[0]);
+const topMonthly = competitors.reduce(
+  (top, item) => ((item.monthlyPurchaseMin || 0) > (top.monthlyPurchaseMin || 0) ? item : top),
+  competitors[0],
+);
+const highThreatCount = competitors.filter((item) => item.threatLevel === 'high').length;
+const highDemandCount = competitors.filter((item) => (item.monthlyPurchaseMin || 0) >= 1000).length;
+const yourTotalReviews = products.reduce((sum, product) => sum + product.rating.coupangReviews, 0);
+const competitorTotalReviews = competitors.reduce((sum, item) => sum + item.reviewCount, 0);
+const generatedLabel = new Date(competitorData.generatedAt).toLocaleDateString('ko-KR', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+});
+
+const threatLabel = {
+  high: '높음',
+  medium: '중간',
+  low: '낮음',
+};
+
+const threatTone = {
+  high: 'danger',
+  medium: 'watch',
+  low: 'calm',
+};
+
+const categoryTone = {
+  'hydration-toner': '수분 진입',
+  'daily-lotion': '보습 볼륨',
+  'cleansing-oil': '모공 세정',
+  'low-ph-cleanser': '약산성',
+  'whitening-tone-care': '기능성',
+  'men-all-in-one': '남성 루틴',
+  'lip-balm': '보조 상품',
+};
+---
+
+<BaseLayout title="쿠팡 타사 제품 비교" description="유어스킨플러스와 쿠팡 내 유사 인기 상품의 가격, 리뷰, 월 구매 신호 비교 대시보드">
+  <main class="competitor-app">
+    <header class="topbar">
+      <a class="brand" href="/">
+        <img src="/yourskin-logo-header-v18.png" alt="YOURSKIN+" />
+        <span>Competitor Desk</span>
+      </a>
+      <nav aria-label="주요 화면">
+        <a href="/">대시보드</a>
+        <a href="/product-comparison/">자사 제품표</a>
+        <a href="/coupang-mock/">상세 분석</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Coupang market scan</p>
+        <h1>쿠팡 인기 유사 상품과 비교한 판매 전략 보드</h1>
+        <p class="lead">
+          리뷰와 월 구매 신호가 큰 경쟁 상품을 우선으로 잡고, 유어스킨플러스 {products.length}개 상품의 가격 효율, 리뷰 격차, 상세페이지 보완 포인트를 같은 기준으로 정리했습니다.
+        </p>
+      </div>
+      <aside class="source-card">
+        <span>확인 기준</span>
+        <strong>{generatedLabel}</strong>
+        <p>쿠팡 검색/상품 노출 기준. 가격, 리뷰, 월 구매 신호는 변동 가능성이 있어 광고 집행 전 재확인이 필요합니다.</p>
+      </aside>
+    </section>
+
+    <section class="metric-grid" aria-label="경쟁 조사 요약">
+      <article>
+        <span>비교 카테고리</span>
+        <strong>{categories.length}개</strong>
+        <small>토너, 로션, 클렌징, 기능성, 립케어</small>
+      </article>
+      <article>
+        <span>경쟁 상품</span>
+        <strong>{competitors.length}개</strong>
+        <small>리뷰/구매 신호 우선 선별</small>
+      </article>
+      <article>
+        <span>고위협 상품</span>
+        <strong>{highThreatCount}개</strong>
+        <small>리뷰 규모와 구매 신호가 큰 제품</small>
+      </article>
+      <article>
+        <span>월 구매 1천+</span>
+        <strong>{highDemandCount}개</strong>
+        <small>검색 결과에서 수요가 확인된 제품</small>
+      </article>
+      <article>
+        <span>리뷰 최상위</span>
+        <strong>{topReview.brand}</strong>
+        <small>{formatNumber(topReview.reviewCount)}개, {topReview.name}</small>
+      </article>
+      <article>
+        <span>월 구매 최상위</span>
+        <strong>{topMonthly.brand}</strong>
+        <small>{formatMonthly(topMonthly.monthlyPurchaseMin, topMonthly.monthlyPurchaseSignal)}</small>
+      </article>
+    </section>
+
+    <section class="insight-grid" aria-label="핵심 인사이트">
+      <article class="insight main">
+        <p class="eyebrow">Main gap</p>
+        <h2>리뷰 신뢰 격차가 가장 큽니다</h2>
+        <p>
+          이번 경쟁군의 리뷰 합계는 {formatNumber(competitorTotalReviews)}개입니다. 유어스킨플러스 {products.length}개 상품의 쿠팡 리뷰 합계는 {formatNumber(yourTotalReviews)}개라서, 상세 첫 화면에서 가격보다 먼저 리뷰 부족을 보완할 근거가 필요합니다.
+        </p>
+      </article>
+      <article class="insight">
+        <p class="eyebrow">Price opening</p>
+        <h2>가격 효율은 진입 무기</h2>
+        <p>토너, 클렌징 오일, 클렌징 젤, 화이트닝 톤 케어 크림은 단위가 기준으로 경쟁군 대비 낮게 보일 수 있습니다.</p>
+      </article>
+      <article class="insight">
+        <p class="eyebrow">Bundle strategy</p>
+        <h2>단품보다 루틴 세트</h2>
+        <p>대형 브랜드와 직접 신뢰 싸움을 하기보다 수분 루틴, 클렌징 루틴, 기능성 전환 상품으로 묶는 구성이 유리합니다.</p>
+      </article>
+    </section>
+
+    <section class="category-jump" aria-label="카테고리 바로가기">
+      {categories.map((category) => (
+        <a href={`#${category.key}`}>
+          <span>{categoryTone[category.key]}</span>
+          <strong>{category.label}</strong>
+          <small>{category.competitors.length}개 경쟁 상품</small>
+        </a>
+      ))}
+    </section>
+
+    <section class="table-panel" aria-label="전체 경쟁 상품 요약">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">Competitive table</p>
+          <h2>경쟁 상품 전체 요약</h2>
+        </div>
+        <a href="/product-comparison/">자사 제품표 보기</a>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <colgroup>
+            <col class="col-category" />
+            <col class="col-product" />
+            <col class="col-signal" />
+            <col class="col-price" />
+            <col class="col-threat" />
+            <col class="col-takeaway" />
+            <col class="col-source" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>군</th>
+              <th>상품</th>
+              <th>리뷰/구매</th>
+              <th>가격/단가</th>
+              <th>위협도</th>
+              <th>우리 대응</th>
+              <th>출처</th>
+            </tr>
+          </thead>
+          <tbody>
+            {competitors.map((competitor) => (
+              <tr>
+                <td>{competitor.categoryLabel}</td>
+                <td>
+                  <strong>{competitor.brand}</strong>
+                  <span>{competitor.name}</span>
+                  <em>{competitor.positioning}</em>
+                </td>
+                <td>
+                  <strong>{formatNumber(competitor.reviewCount)}개</strong>
+                  <span>{formatMonthly(competitor.monthlyPurchaseMin, competitor.monthlyPurchaseSignal)}</span>
+                </td>
+                <td>
+                  <strong>{formatWon(competitor.price)}</strong>
+                  <span>{competitor.volume}</span>
+                  <em>{competitor.unitPriceLabel}</em>
+                </td>
+                <td>
+                  <span class={`threat ${threatTone[competitor.threatLevel]}`}>{threatLabel[competitor.threatLevel]}</span>
+                </td>
+                <td>{competitor.takeaway}</td>
+                <td>
+                  <a href={competitor.url} target="_blank" rel="noreferrer">쿠팡</a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="category-stack" aria-label="카테고리별 비교">
+      {categories.map((category) => (
+        <article class="category-panel" id={category.key}>
+          <header>
+            <div>
+              <p class="eyebrow">{categoryTone[category.key]}</p>
+              <h2>{category.label}</h2>
+              <p>{category.marketRead}</p>
+            </div>
+            <div class="category-stat">
+              <span>최대 경쟁 리뷰</span>
+              <strong>{formatNumber(category.topCompetitor.reviewCount)}개</strong>
+              <small>{category.topCompetitor.brand} · {category.topCompetitor.name}</small>
+            </div>
+          </header>
+
+          <div class="compare-grid">
+            <section class="your-products">
+              <h3>유어스킨플러스</h3>
+              <div class="your-product-list">
+                {category.yoursProducts.map((product) => (
+                  <a class="your-product" href={product.commerce.coupangUrl} target="_blank" rel="noreferrer">
+                    <img src={product.assets.thumbnail} alt={`${product.shortName} 대표 이미지`} loading="lazy" />
+                    <div>
+                      <strong>{product.shortName}</strong>
+                      <span>{product.volume.label}</span>
+                      <dl>
+                        <div>
+                          <dt>판매가</dt>
+                          <dd>{formatWon(product.price.sale)}</dd>
+                        </div>
+                        <div>
+                          <dt>단가</dt>
+                          <dd>{formatWon(product.price.unitPrice)}/{product.price.unitBasis}</dd>
+                        </div>
+                        <div>
+                          <dt>리뷰</dt>
+                          <dd>{formatNumber(product.rating.coupangReviews)}개</dd>
+                        </div>
+                      </dl>
+                      <p>{product.positioning.oneLine}</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </section>
+
+            <section class="competitor-cards">
+              <h3>쿠팡 경쟁군</h3>
+              <div class="competitor-list">
+                {category.competitors.map((competitor) => (
+                  <a class="competitor-card" href={competitor.url} target="_blank" rel="noreferrer">
+                    <div class="competitor-head">
+                      <div>
+                        <span>{competitor.brand}</span>
+                        <strong>{competitor.name}</strong>
+                      </div>
+                      <em class={`threat ${threatTone[competitor.threatLevel]}`}>{threatLabel[competitor.threatLevel]}</em>
+                    </div>
+                    <div class="signal-row">
+                      <div>
+                        <span>리뷰</span>
+                        <strong>{formatNumber(competitor.reviewCount)}개</strong>
+                      </div>
+                      <div>
+                        <span>구매 신호</span>
+                        <strong>{formatMonthly(competitor.monthlyPurchaseMin, competitor.monthlyPurchaseSignal)}</strong>
+                      </div>
+                      <div>
+                        <span>가격</span>
+                        <strong>{formatWon(competitor.price)}</strong>
+                      </div>
+                    </div>
+                    <p>{competitor.takeaway}</p>
+                    <small>{competitor.sourceNote}</small>
+                  </a>
+                ))}
+              </div>
+            </section>
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <section class="strategy-panel" aria-label="전략 정리">
+      <div>
+        <p class="eyebrow">Use in marketing</p>
+        <h2>다음 상세페이지 고도화 방향</h2>
+      </div>
+      <div class="strategy-grid">
+        <article>
+          <h3>강점</h3>
+          <ul>
+            {competitorData.summary.yourskinplusAdvantages.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+        <article>
+          <h3>리스크</h3>
+          <ul>
+            {competitorData.summary.yourskinplusRisks.map((item) => <li>{item}</li>)}
+          </ul>
+        </article>
+        <article>
+          <h3>실행 순서</h3>
+          <ol>
+            {competitorData.summary.recommendedActions.map((item) => <li>{item}</li>)}
+          </ol>
+        </article>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(body) {
+    background: #eef2ed;
+    color: #16231f;
+  }
+
+  :global(.noise::before) {
+    opacity: 0.1;
+  }
+
+  .competitor-app {
+    --ink: #16231f;
+    --muted: #65736f;
+    --line: #d7dfd9;
+    --panel: #ffffff;
+    --paper: #f7faf6;
+    --forest: #17352e;
+    --teal: #167a70;
+    --rust: #bf654d;
+    --amber: #dbab43;
+    --blue: #2f667a;
+    min-height: 100vh;
+    padding: 28px;
+    background:
+      linear-gradient(90deg, rgba(22, 35, 31, 0.05) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(22, 35, 31, 0.04) 1px, transparent 1px),
+      #eef2ed;
+    background-size: 34px 34px;
+    font-family: var(--font-body);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 34px;
+  }
+
+  .brand {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    color: var(--forest);
+    font-family: var(--font-latin);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .brand img {
+    width: 148px;
+    height: auto;
+    padding: 9px 11px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+
+  .topbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  .topbar nav a,
+  .panel-heading a {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.86);
+    color: var(--forest);
+    font-size: 13px;
+    font-weight: 800;
+    padding: 10px 12px;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 22px;
+    align-items: stretch;
+    margin-bottom: 18px;
+  }
+
+  .eyebrow,
+  .metric-grid span,
+  .source-card span,
+  .category-jump span,
+  .category-stat span,
+  .your-product span,
+  .competitor-head span,
+  .signal-row span {
+    color: var(--teal);
+    font-family: var(--font-latin);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    max-width: 910px;
+    margin-top: 8px;
+    font-size: 54px;
+    line-height: 1.04;
+    letter-spacing: 0;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  .lead {
+    max-width: 840px;
+    margin-top: 14px;
+    color: #4f5f59;
+    font-size: 16px;
+    line-height: 1.78;
+    word-break: keep-all;
+  }
+
+  .source-card,
+  .metric-grid article,
+  .insight,
+  .category-jump a,
+  .table-panel,
+  .category-panel,
+  .strategy-panel {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 18px 42px rgba(23, 53, 46, 0.08);
+  }
+
+  .source-card {
+    display: grid;
+    align-content: center;
+    gap: 10px;
+    border-top: 5px solid var(--rust);
+    padding: 22px;
+  }
+
+  .source-card strong {
+    color: var(--ink);
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .source-card p,
+  .insight p,
+  .category-panel header p,
+  .competitor-card p,
+  .your-product p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.65;
+    word-break: keep-all;
+  }
+
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .metric-grid article {
+    min-height: 126px;
+    display: grid;
+    align-content: space-between;
+    gap: 12px;
+    padding: 17px;
+  }
+
+  .metric-grid strong {
+    color: var(--ink);
+    font-family: var(--font-latin);
+    font-size: 27px;
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  .metric-grid small {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.45;
+    word-break: keep-all;
+  }
+
+  .insight-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) repeat(2, minmax(0, 0.8fr));
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .insight {
+    display: grid;
+    align-content: start;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .insight.main {
+    background: #17352e;
+    color: #f7faf6;
+  }
+
+  .insight.main .eyebrow {
+    color: #efb86b;
+  }
+
+  .insight.main p {
+    color: #c9d8d1;
+  }
+
+  .insight h2,
+  .panel-heading h2,
+  .category-panel h2,
+  .strategy-panel h2 {
+    color: inherit;
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: 0;
+    word-break: keep-all;
+  }
+
+  .category-jump {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .category-jump a {
+    display: grid;
+    gap: 8px;
+    min-height: 104px;
+    padding: 16px;
+    transition: transform 160ms ease, border-color 160ms ease;
+  }
+
+  .category-jump a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(22, 122, 112, 0.45);
+  }
+
+  .category-jump strong {
+    color: var(--ink);
+    font-size: 17px;
+    line-height: 1.28;
+  }
+
+  .category-jump small {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .table-panel,
+  .category-panel,
+  .strategy-panel {
+    padding: 22px;
+    margin-bottom: 18px;
+  }
+
+  .panel-heading,
+  .category-panel header {
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #ffffff;
+  }
+
+  table {
+    width: 100%;
+    min-width: 1320px;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .col-category {
+    width: 130px;
+  }
+
+  .col-product {
+    width: 260px;
+  }
+
+  .col-signal {
+    width: 190px;
+  }
+
+  .col-price {
+    width: 140px;
+  }
+
+  .col-threat {
+    width: 94px;
+  }
+
+  .col-takeaway {
+    width: 390px;
+  }
+
+  .col-source {
+    width: 82px;
+  }
+
+  th,
+  td {
+    box-sizing: border-box;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 13px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    background: #17352e;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 900;
+  }
+
+  td {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+  }
+
+  td strong,
+  td span,
+  td em {
+    display: block;
+  }
+
+  td strong {
+    color: var(--ink);
+  }
+
+  td em {
+    margin-top: 4px;
+    color: #74817c;
+    font-style: normal;
+  }
+
+  td a {
+    color: var(--teal);
+    font-weight: 900;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+
+  th:last-child,
+  td:last-child {
+    border-right: 0;
+  }
+
+  tbody tr:hover td {
+    background: #f8fbf8;
+  }
+
+  .threat {
+    display: inline-flex;
+    width: fit-content;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+    padding: 7px 9px;
+    white-space: nowrap;
+  }
+
+  .threat.danger {
+    border-color: rgba(191, 101, 77, 0.34);
+    background: rgba(191, 101, 77, 0.12);
+    color: #9c3e2e;
+  }
+
+  .threat.watch {
+    border-color: rgba(219, 171, 67, 0.5);
+    background: rgba(219, 171, 67, 0.15);
+    color: #7c5b13;
+  }
+
+  .threat.calm {
+    border-color: rgba(47, 102, 122, 0.3);
+    background: rgba(47, 102, 122, 0.12);
+    color: #2f667a;
+  }
+
+  .category-stack {
+    display: grid;
+    gap: 18px;
+  }
+
+  .category-panel {
+    scroll-margin-top: 22px;
+  }
+
+  .category-panel header > div:first-child {
+    max-width: 820px;
+    display: grid;
+    gap: 8px;
+  }
+
+  .category-stat {
+    width: 250px;
+    display: grid;
+    flex: 0 0 auto;
+    gap: 7px;
+    border-left: 5px solid var(--blue);
+    background: #f4f8f8;
+    padding: 16px;
+  }
+
+  .category-stat strong {
+    color: var(--ink);
+    font-family: var(--font-latin);
+    font-size: 26px;
+    line-height: 1.1;
+  }
+
+  .category-stat small {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .compare-grid {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.55fr);
+    gap: 16px;
+  }
+
+  .your-products,
+  .competitor-cards {
+    display: grid;
+    align-content: start;
+    gap: 12px;
+  }
+
+  .your-products h3,
+  .competitor-cards h3,
+  .strategy-grid h3 {
+    color: var(--forest);
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  .your-product-list,
+  .competitor-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .your-product {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #f9fbf8;
+    padding: 12px;
+  }
+
+  .your-product img {
+    width: 88px;
+    height: 112px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .your-product div {
+    min-width: 0;
+    display: grid;
+    gap: 7px;
+  }
+
+  .your-product strong,
+  .competitor-head strong {
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.35;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  .your-product dl,
+  .signal-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--line);
+  }
+
+  .your-product dl {
+    margin: 0;
+  }
+
+  .your-product dl div,
+  .signal-row div {
+    min-width: 0;
+    display: grid;
+    gap: 5px;
+    background: #ffffff;
+    padding: 9px;
+  }
+
+  .your-product dt,
+  .your-product dd {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .your-product dt {
+    color: var(--muted);
+    font-weight: 800;
+  }
+
+  .your-product dd,
+  .signal-row strong {
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 900;
+    overflow-wrap: anywhere;
+  }
+
+  .competitor-card {
+    display: grid;
+    gap: 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 14px;
+    transition: border-color 160ms ease, transform 160ms ease;
+  }
+
+  .competitor-card:hover {
+    transform: translateY(-1px);
+    border-color: rgba(22, 122, 112, 0.45);
+  }
+
+  .competitor-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .competitor-head > div {
+    min-width: 0;
+    display: grid;
+    gap: 5px;
+  }
+
+  .competitor-card small {
+    color: #7a8781;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .strategy-panel {
+    display: grid;
+    gap: 18px;
+  }
+
+  .strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .strategy-grid article {
+    display: grid;
+    align-content: start;
+    gap: 12px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    padding: 18px;
+  }
+
+  .strategy-grid ul,
+  .strategy-grid ol {
+    display: grid;
+    gap: 9px;
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .strategy-grid li {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+    word-break: keep-all;
+  }
+
+  @media (max-width: 1280px) {
+    .metric-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .category-jump {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 980px) {
+    .competitor-app {
+      padding: 18px;
+    }
+
+    .topbar,
+    .hero,
+    .panel-heading,
+    .category-panel header {
+      display: grid;
+    }
+
+    .hero,
+    .compare-grid,
+    .strategy-grid,
+    .insight-grid {
+      grid-template-columns: 1fr;
+    }
+
+    h1 {
+      font-size: 38px;
+    }
+
+    .category-stat {
+      width: auto;
+    }
+
+    .category-jump {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 620px) {
+    .competitor-app {
+      padding: 14px;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    .lead {
+      font-size: 15px;
+    }
+
+    .metric-grid,
+    .category-jump,
+    .your-product,
+    .your-product dl,
+    .signal-row {
+      grid-template-columns: 1fr;
+    }
+
+    .topbar nav {
+      justify-content: flex-start;
+    }
+
+    .brand {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>

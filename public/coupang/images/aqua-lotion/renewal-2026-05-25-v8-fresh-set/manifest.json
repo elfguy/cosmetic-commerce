@@ -1,0 +1,50 @@
+{
+  "product": "유어스킨플러스 히알루론산 아쿠아 로션",
+  "generatedAt": "2026-05-25T01:33:50.447Z",
+  "sourceAssets": [
+    "/coupang/images/aqua-lotion/assets/drive/aqua-lotion-packshot.png",
+    "/coupang/images/aqua-lotion/assets/drive/aqua-lotion-lab-scene.png",
+    "/coupang/images/aqua-lotion/assets/drive/aqua-lotion-water-scene.png",
+    "/coupang/images/aqua-lotion/assets/drive/aqua-lotion-pump-closeup.png",
+    "/coupang/images/aqua-lotion/assets/drive/aqua-lotion-transparent-main.png"
+  ],
+  "backgroundTexture": "/coupang/images/aqua-lotion/generated/aqua-lotion-fresh-water-hero-v1.png",
+  "cuts": [
+    {
+      "file": "01-main-fresh-hero.jpg",
+      "title": "대표 이미지 후보",
+      "path": "/coupang/images/aqua-lotion/renewal-2026-05-25-v8-fresh-set/cuts/01-main-fresh-hero.jpg",
+      "width": 780,
+      "height": 1360
+    },
+    {
+      "file": "02-fresh-manufacture-proof.jpg",
+      "title": "제조일자 확인 근거",
+      "path": "/coupang/images/aqua-lotion/renewal-2026-05-25-v8-fresh-set/cuts/02-fresh-manufacture-proof.jpg",
+      "width": 780,
+      "height": 1360
+    },
+    {
+      "file": "03-hyaluronic-aqua-moisture.jpg",
+      "title": "히알루론산 보습 컨셉",
+      "path": "/coupang/images/aqua-lotion/renewal-2026-05-25-v8-fresh-set/cuts/03-hyaluronic-aqua-moisture.jpg",
+      "width": 780,
+      "height": 1360
+    },
+    {
+      "file": "04-daily-use-routine.jpg",
+      "title": "사용 루틴",
+      "path": "/coupang/images/aqua-lotion/renewal-2026-05-25-v8-fresh-set/cuts/04-daily-use-routine.jpg",
+      "width": 780,
+      "height": 1360
+    },
+    {
+      "file": "05-product-notice-and-claim-check.jpg",
+      "title": "상품 정보와 표현 검수",
+      "path": "/coupang/images/aqua-lotion/renewal-2026-05-25-v8-fresh-set/cuts/05-product-notice-and-claim-check.jpg",
+      "width": 780,
+      "height": 1360
+    }
+  ],
+  "preview": "/coupang/images/aqua-lotion/renewal-2026-05-25-v8-fresh-set/preview/v8-fresh-contact-sheet.jpg"
+}

@@ -1,0 +1,129 @@
+{
+  "createdAt": "2026-05-24T15:57:18.372Z",
+  "designDirection": "광고 컷처럼 보이도록 원본 상품/성분/인증 요소와 무료 스톡 사용 장면·물방울 배경을 크게 사용하고 텍스트 박스 비중을 줄인 V7.",
+  "size": {
+    "width": 780,
+    "height": 1360
+  },
+  "cuts": [
+    {
+      "index": 1,
+      "title": "제품 후킹 광고 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/01-01-ad-hero-water-product.jpg"
+    },
+    {
+      "index": 2,
+      "title": "사람 사용 장면 광고 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/02-02-ad-use-moment.jpg"
+    },
+    {
+      "index": 3,
+      "title": "8가지 근거 광고 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/03-03-ad-eight-reasons.jpg"
+    },
+    {
+      "index": 4,
+      "title": "8중 히알루론산 광고 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/04-04-ad-hyaluronic-water.jpg"
+    },
+    {
+      "index": 5,
+      "title": "병풀·해양심층수·AHA/PHA 광고 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/05-05-ad-centella-sea-aha.jpg"
+    },
+    {
+      "index": 6,
+      "title": "Fresh Bud No.6 광고 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/06-06-ad-fresh-bud.jpg"
+    },
+    {
+      "index": 7,
+      "title": "발효·식물오일 광고 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/07-07-ad-ferment-oil.jpg"
+    },
+    {
+      "index": 8,
+      "title": "저자극 테스트 광고 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/08-08-ad-low-irritation-test.jpg"
+    },
+    {
+      "index": 9,
+      "title": "EWG·무향 광고 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/09-09-ad-ewg-fragrance-free.jpg"
+    },
+    {
+      "index": 10,
+      "title": "약산성 pH 광고 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/10-10-ad-mild-ph.jpg"
+    },
+    {
+      "index": 11,
+      "title": "신선 제조 광고 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/11-11-ad-fresh-manufacture.jpg"
+    },
+    {
+      "index": 12,
+      "title": "사용법 광고 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/12-12-ad-how-to-use.jpg"
+    },
+    {
+      "index": 13,
+      "title": "친환경 포장·직접 제조 광고 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/13-13-ad-eco-direct.jpg"
+    },
+    {
+      "index": 14,
+      "title": "고시정보 안내 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/14-14-ad-product-notice.jpg"
+    },
+    {
+      "index": 15,
+      "title": "공식 판매처 안내 컷",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/cuts/15-15-ad-official-seller.jpg"
+    }
+  ],
+  "bundles": [
+    {
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/bundles/detail-v7-01-hero-use-reasons.jpg",
+      "width": 780,
+      "height": 4080
+    },
+    {
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/bundles/detail-v7-02-ingredients-story.jpg",
+      "width": 780,
+      "height": 4080
+    },
+    {
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/bundles/detail-v7-03-ingredients-trust.jpg",
+      "width": 780,
+      "height": 4080
+    },
+    {
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/bundles/detail-v7-04-ph-fresh-use.jpg",
+      "width": 780,
+      "height": 4080
+    },
+    {
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/bundles/detail-v7-05-brand-notice.jpg",
+      "width": 780,
+      "height": 4080
+    }
+  ],
+  "fullStack": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/detail-v7-full-stack.jpg",
+  "preview": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/preview/v7-contact-sheet.jpg",
+  "viewAll": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/renewal-2026-05-25-v7/view-all.html",
+  "sourceAssets": [
+    {
+      "name": "Pexels lotion hand use scene",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/assets/stock/pexels-hand-pump-lotion-5563659.jpg",
+      "source": "https://www.pexels.com/photo/faceless-female-cosmetologist-applying-lotion-on-hand-5563659/",
+      "licensePage": "https://www.pexels.com/license/"
+    },
+    {
+      "name": "Unsplash water droplets texture",
+      "file": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/assets/stock/unsplash-water-droplets-9w5T19x1Y74.jpg",
+      "source": "https://unsplash.com/photos/clear-glass-bottle-with-water-droplets-9w5T19x1Y74",
+      "licensePage": "https://unsplash.com/license/"
+    }
+  ]
+}

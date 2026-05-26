@@ -1,0 +1,7 @@
+<svg width="180" height="56" viewBox="0 0 180 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">YOURSKIN+</title>
+  <text x="0" y="39" fill="#171717" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="31" font-weight="700" letter-spacing="-1.45">YOURSKIN</text>
+  <ellipse cx="147.2" cy="14.9" rx="6.8" ry="3.1" transform="rotate(-31 147.2 14.9)" fill="#58A83F"/>
+  <path d="M143.5 17C146.5 15.4 149.5 14.1 153 13" stroke="#2F7F31" stroke-width="0.9" stroke-linecap="round"/>
+  <text x="156" y="39" fill="#58A83F" font-family="Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="34" font-weight="700">+</text>
+</svg>

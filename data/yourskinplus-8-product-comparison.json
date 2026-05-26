@@ -1,0 +1,1606 @@
+{
+  "generatedAt": "2026-05-24T10:48:53.524Z",
+  "scope": "쿠팡 OpenAPI로 확인한 유어스킨플러스 11개 상품",
+  "basis": [
+    "data/coupang/downloaded-products.json",
+    "public/coupang-detail/{productId}/ 상세 이미지",
+    "data/naver/products.json",
+    "docs/11-product-feature-summary.md",
+    "data/coupang/openapi-products.json",
+    "data/coupang/openapi-sync-report.json"
+  ],
+  "notes": [
+    "전성분은 상세 이미지 고시정보를 macOS Vision OCR로 1차 추출한 뒤 이미지 원문을 보며 수기 보정했다.",
+    "효능 표현은 상세 고시정보에 표시된 기능성 범위와 일반 화장품 표현 가능 범위를 분리했다.",
+    "가격과 상세 이미지는 2026-05-24 쿠팡 OpenAPI 조회 결과를 기준으로 갱신했다.",
+    "OpenAPI 신규 확인 상품 중 일부는 전성분 OCR과 네이버 URL 확인 전이므로 컨셉/상세 이미지 기준 임시 분석으로 표시한다."
+  ],
+  "products": [
+    {
+      "slug": "hyaluronic-toner",
+      "productId": "9025733014",
+      "itemId": "26470069791",
+      "name": "유어스킨플러스 히알루론산 토너",
+      "shortName": "히알루론산 토너",
+      "category": "스킨 / 수분 토너",
+      "routineStep": "세안 후 첫 수분",
+      "skinType": "모든 피부 타입",
+      "volume": {
+        "amount": 500,
+        "unit": "ml",
+        "label": "500ml / 16.9 fl. oz"
+      },
+      "price": {
+        "sale": 10900,
+        "original": 20000,
+        "discountRate": 46,
+        "unitBasis": "10ml",
+        "unitPrice": 218
+      },
+      "rating": {
+        "coupang": 5,
+        "coupangReviews": 34,
+        "naver": 4.96,
+        "naverReviews": 26
+      },
+      "commerce": {
+        "coupangUrl": "https://www.coupang.com/vp/products/9025733014?itemId=26470069791&vendorItemId=93445228832",
+        "naverUrl": "https://smartstore.naver.com/main/products/12597599110",
+        "naverExposure": "네이버플러스 스토어 + 가격비교 중복 노출"
+      },
+      "assets": {
+        "thumbnail": "/coupang-detail/9025733014/01.png",
+        "detailRoot": "/coupang-detail/9025733014/",
+        "detailImageCount": 14,
+        "noticeImage": "/coupang-detail/9025733014/13.png"
+      },
+      "positioning": {
+        "oneLine": "500ml 대용량으로 닦토, 스킨팩, 레이어링까지 쓰기 쉬운 수분 토너.",
+        "targetNeed": "세안 후 빠르게 건조해지거나 화장솜 사용량이 많은 고객",
+        "keyClaims": [
+          "500ml 대용량",
+          "8종 히알루론산 컨셉",
+          "병풀/판테놀/알란토인 진정 보조",
+          "스킨팩/닦토/레이어링 활용"
+        ],
+        "keywords": [
+          "수분",
+          "저분자 히알루론산",
+          "대용량",
+          "스킨팩",
+          "진정 보습"
+        ]
+      },
+      "notice": {
+        "shelfLife": "제조일로부터 24개월 / 개봉 후 12개월",
+        "howToUse": "세안 후 화장솜 혹은 손에 적당량을 덜어 얼굴에 펴 발라 부드럽게 흡수시켜 줍니다.",
+        "manufacturer": "(주)유어스킨",
+        "country": "대한민국",
+        "functionalCosmetic": "해당 없음"
+      },
+      "ingredients": {
+        "full": [
+          "정제수",
+          "부틸렌글라이콜",
+          "글리세린",
+          "프로판다이올",
+          "글리세릴글루코사이드",
+          "해수",
+          "병풀추출물",
+          "판테놀",
+          "소듐하이알루로네이트(1100ppm)",
+          "다이프로필렌글라이콜",
+          "하이드록시아세토페논",
+          "카프릴릴글라이콜",
+          "알란토인",
+          "글루코오스",
+          "1,2-헥산다이올",
+          "알지닌",
+          "글루코노락톤",
+          "시트릭애씨드",
+          "다이포타슘글리시리제이트",
+          "밀싹추출물",
+          "브로콜리추출물",
+          "양배추추출물",
+          "자주개자리추출물",
+          "무씨추출물",
+          "유채추출물",
+          "하이드록시프로필트라이모늄하이알루로네이트(10ppm)",
+          "소듐아세틸레이티드하이알루로네이트(1ppm)",
+          "하이드롤라이즈드하이알루로닉애씨드(1ppm)",
+          "하이알루로닉애씨드(0.25ppm)",
+          "소듐하이알루로네이트크로스폴리머(0.1ppm)",
+          "하이드롤라이즈드소듐하이알루로네이트(0.1ppm)",
+          "포타슘하이알루로네이트(0.02ppm)"
+        ],
+        "roleGroups": {
+          "humectants": [
+            "부틸렌글라이콜",
+            "글리세린",
+            "프로판다이올",
+            "글리세릴글루코사이드",
+            "글루코오스",
+            "히알루론산 복합체"
+          ],
+          "soothing": [
+            "병풀추출물",
+            "판테놀",
+            "알란토인",
+            "다이포타슘글리시리제이트"
+          ],
+          "texturePH": [
+            "글루코노락톤",
+            "시트릭애씨드",
+            "알지닌"
+          ],
+          "botanical": [
+            "밀싹추출물",
+            "브로콜리추출물",
+            "양배추추출물",
+            "자주개자리추출물",
+            "무씨추출물",
+            "유채추출물"
+          ],
+          "preservation": [
+            "하이드록시아세토페논",
+            "카프릴릴글라이콜",
+            "1,2-헥산다이올"
+          ]
+        },
+        "heroIngredients": [
+          {
+            "name": "소듐하이알루로네이트 1100ppm 외 HA 복합체",
+            "role": "수분 결합/보습 컨셉",
+            "evidence": "전성분 내 함량 표기"
+          },
+          {
+            "name": "병풀추출물 + 판테놀 + 알란토인",
+            "role": "진정 보조 원료",
+            "evidence": "상위권 보조 성분"
+          },
+          {
+            "name": "글루코노락톤 + 시트릭애씨드",
+            "role": "피부결/pH 보조",
+            "evidence": "저함량 pH/각질 케어 성격 원료"
+          }
+        ],
+        "analysis": "보습제와 다종 히알루론산이 중심인 수분 토너다. 병풀, 판테놀, 알란토인, 감초산 유도체가 함께 있어 민감/건조 루틴의 첫 단계로 설명하기 좋다.",
+        "cautions": [
+          "히알루론산의 종류와 ppm은 장점이지만 치료/개선 표현은 피한다.",
+          "글루코노락톤/시트릭애씨드가 있어 민감 피부에는 패치 테스트 안내가 안전하다."
+        ]
+      },
+      "comparisonAxes": [
+        "용량 대비 가격",
+        "히알루론산 종류/함량 표기",
+        "진정 보조 성분",
+        "무향 여부",
+        "스킨팩 활용성"
+      ],
+      "vendorItemId": "93445228832"
+    },
+    {
+      "slug": "aqua-lotion",
+      "productId": "9218811640",
+      "itemId": "27239514580",
+      "name": "유어스킨플러스 히알루론산 아쿠아 로션",
+      "shortName": "아쿠아 로션",
+      "category": "로션 / 데일리 보습",
+      "routineStep": "토너 다음 보습",
+      "skinType": "모든 피부 타입",
+      "volume": {
+        "amount": 300,
+        "unit": "ml",
+        "label": "300ml / 10.14 fl. oz"
+      },
+      "price": {
+        "sale": 10300,
+        "original": 19000,
+        "discountRate": 46,
+        "unitBasis": "10ml",
+        "unitPrice": 343
+      },
+      "rating": {
+        "coupang": 5,
+        "coupangReviews": 34,
+        "naver": 4.88,
+        "naverReviews": 26
+      },
+      "commerce": {
+        "coupangUrl": "https://www.coupang.com/vp/products/9218811640?itemId=27239514580&vendorItemId=94206581276",
+        "naverUrl": "https://smartstore.naver.com/main/products/12763872443",
+        "naverExposure": "네이버플러스 스토어 + 가격비교 중복 노출"
+      },
+      "assets": {
+        "thumbnail": "/coupang-detail/9218811640/01.png",
+        "detailRoot": "/coupang-detail/9218811640/",
+        "detailImageCount": 15,
+        "noticeImage": "/coupang-detail/9218811640/14.png"
+      },
+      "positioning": {
+        "oneLine": "얼굴과 건조 부위에 넉넉히 쓰기 쉬운 300ml 산뜻 보습 로션.",
+        "targetNeed": "끈적한 크림은 부담스럽고 데일리 보습 로션을 찾는 고객",
+        "keyClaims": [
+          "300ml 대용량",
+          "히알루론산 보습 컨셉",
+          "오일/버터가 들어간 로션 베이스",
+          "무향 노출"
+        ],
+        "keywords": [
+          "보습",
+          "로션",
+          "300ml",
+          "히알루론산",
+          "무향"
+        ]
+      },
+      "notice": {
+        "shelfLife": "제조일로부터 24개월 / 개봉 후 12개월",
+        "howToUse": "적당량을 덜어 얼굴에 골고루 펴 바른 후 두드리 듯이 흡수시켜 줍니다.",
+        "manufacturer": "(주)유어스킨",
+        "country": "대한민국",
+        "functionalCosmetic": "해당 없음",
+        "dataQualityNotes": [
+          "전성분 이미지에 글리세릴스테아레이트에스이와 다이프로필렌글라이콜이 중복 표기되어 있어 원본 라벨 재확인이 필요하다."
+        ]
+      },
+      "ingredients": {
+        "full": [
+          "정제수",
+          "글리세린",
+          "카프릴릭/카프릭트라이글리세라이드",
+          "프로판다이올",
+          "글리세릴스테아레이트에스이",
+          "다이프로필렌글라이콜",
+          "마카다미아씨오일",
+          "글리세릴스테아레이트에스이",
+          "다이프로필렌글라이콜",
+          "해바라기씨오일",
+          "하이드록시아세토페논",
+          "솔비탄스테아레이트",
+          "카보머",
+          "카프릴릴글라이콜",
+          "세테아릴알코올",
+          "시어버터",
+          "소듐하이알루로네이트(2,050ppm)",
+          "알지닌",
+          "해수",
+          "부틸렌글라이콜",
+          "로즈힙열매오일",
+          "1,2-헥산다이올",
+          "토코페롤",
+          "병풀추출물",
+          "효모/겨우살이발효추출물",
+          "효모/띠뿌리발효추출물",
+          "락토바실러스/콩발효추출물",
+          "다이포타슘글리시리제이트",
+          "밀싹추출물",
+          "브로콜리추출물",
+          "양배추추출물",
+          "자주개자리추출물",
+          "하이드록시프로필트라이모늄하이알루로네이트",
+          "무씨추출물",
+          "유채추출물",
+          "소듐아세틸레이티드하이알루로네이트(0.5ppm)",
+          "하이드롤라이즈드하이알루로닉애씨드(0.5ppm)",
+          "하이알루로닉애씨드(0.125ppm)",
+          "소듐하이알루로네이트크로스폴리머(0.05ppm)",
+          "하이드롤라이즈드소듐하이알루로네이트(0.05ppm)",
+          "포타슘하이알루로네이트(0.01ppm)"
+        ],
+        "roleGroups": {
+          "humectants": [
+            "글리세린",
+            "프로판다이올",
+            "다이프로필렌글라이콜",
+            "부틸렌글라이콜",
+            "히알루론산 복합체"
+          ],
+          "emollients": [
+            "카프릴릭/카프릭트라이글리세라이드",
+            "마카다미아씨오일",
+            "해바라기씨오일",
+            "시어버터",
+            "로즈힙열매오일",
+            "세테아릴알코올"
+          ],
+          "soothing": [
+            "병풀추출물",
+            "다이포타슘글리시리제이트"
+          ],
+          "fermentBotanical": [
+            "효모/겨우살이발효추출물",
+            "효모/띠뿌리발효추출물",
+            "락토바실러스/콩발효추출물",
+            "Fresh Bud No.6 계열 식물 추출물"
+          ],
+          "antioxidants": [
+            "토코페롤"
+          ],
+          "preservation": [
+            "하이드록시아세토페논",
+            "카프릴릴글라이콜",
+            "1,2-헥산다이올"
+          ]
+        },
+        "heroIngredients": [
+          {
+            "name": "소듐하이알루로네이트 2,050ppm",
+            "role": "대표 보습 성분",
+            "evidence": "전성분 내 ppm 표기"
+          },
+          {
+            "name": "마카다미아씨오일 + 해바라기씨오일 + 시어버터",
+            "role": "보습막/유연감",
+            "evidence": "로션 베이스 주요 에몰리언트"
+          },
+          {
+            "name": "발효추출물 3종",
+            "role": "컨셉 원료",
+            "evidence": "후반부 보조 성분"
+          }
+        ],
+        "analysis": "수분제와 유분 보습막 성분이 함께 있는 로션형 포뮬러다. 토너보다 보습 지속감과 피부 유연감을 설명하기 좋고, 크림보다 가볍게 쓰는 포지션이 맞다.",
+        "cautions": [
+          "중복 표기 성분은 라벨 원본으로 재확인해야 한다.",
+          "발효추출물은 원료 컨셉으로 설명하고 효능 단정은 피한다."
+        ]
+      },
+      "comparisonAxes": [
+        "300ml 가격 경쟁력",
+        "오일/버터 보습막",
+        "HA ppm",
+        "향 유무",
+        "얼굴/바디 사용 확장"
+      ],
+      "vendorItemId": "94206581276"
+    },
+    {
+      "slug": "cleansing-oil",
+      "productId": "9221762154",
+      "itemId": "27251064471",
+      "name": "유어스킨플러스 퓨어 딥 클렌징 오일",
+      "shortName": "퓨어 딥 클렌징 오일",
+      "category": "클렌징 오일",
+      "routineStep": "1차 세안",
+      "skinType": "모든 피부 타입",
+      "volume": {
+        "amount": 300,
+        "unit": "ml",
+        "label": "300ml / 10.14 fl. oz"
+      },
+      "price": {
+        "sale": 12700,
+        "original": 23000,
+        "discountRate": 45,
+        "unitBasis": "10ml",
+        "unitPrice": 423
+      },
+      "rating": {
+        "coupang": 5,
+        "coupangReviews": 32,
+        "naver": 4.96,
+        "naverReviews": 24
+      },
+      "commerce": {
+        "coupangUrl": "https://www.coupang.com/vp/products/9221762154?itemId=27251064471&vendorItemId=94217941616",
+        "naverUrl": "https://smartstore.naver.com/main/products/12763986151",
+        "naverExposure": "네이버플러스 스토어 노출"
+      },
+      "assets": {
+        "thumbnail": "/coupang-detail/9221762154/01.png",
+        "detailRoot": "/coupang-detail/9221762154/",
+        "detailImageCount": 14,
+        "noticeImage": "/coupang-detail/9221762154/13.png"
+      },
+      "positioning": {
+        "oneLine": "메이크업, 선크림, 피지 세정을 위한 300ml 대용량 첫 세안 오일.",
+        "targetNeed": "블랙헤드가 신경 쓰이는 코 주변, 선크림/메이크업 세정이 필요한 고객",
+        "keyClaims": [
+          "300ml 펌프형",
+          "오일 베이스 세정",
+          "유화 과정 강조",
+          "모공/블랙헤드 세정 관리"
+        ],
+        "keywords": [
+          "클렌징 오일",
+          "블랙헤드",
+          "모공 세정",
+          "유화",
+          "300ml"
+        ]
+      },
+      "notice": {
+        "shelfLife": "제조일로부터 24개월 / 개봉 후 12개월",
+        "howToUse": "적당량을 덜어 얼굴 전체에 부드럽게 마사지하듯 문지른 후 손에 약간의 물을 묻혀 다시 마사지한 뒤 미온수로 깨끗하게 씻어 줍니다.",
+        "manufacturer": "(주)유어스킨",
+        "country": "대한민국",
+        "functionalCosmetic": "해당 없음"
+      },
+      "ingredients": {
+        "full": [
+          "카프릴릭/카프릭트라이글리세라이드",
+          "올리브오일",
+          "솔베스-30테트라올리에이트",
+          "호호바씨오일",
+          "마카다미아씨오일",
+          "해바라기씨오일",
+          "토코페롤",
+          "버지니아풍년화추출물",
+          "녹차추출물",
+          "바다포도추출물",
+          "율무씨추출물",
+          "라벤더오일"
+        ],
+        "roleGroups": {
+          "cleansingBase": [
+            "카프릴릭/카프릭트라이글리세라이드",
+            "올리브오일",
+            "호호바씨오일",
+            "마카다미아씨오일",
+            "해바라기씨오일"
+          ],
+          "emulsifier": [
+            "솔베스-30테트라올리에이트"
+          ],
+          "botanical": [
+            "버지니아풍년화추출물",
+            "녹차추출물",
+            "바다포도추출물",
+            "율무씨추출물"
+          ],
+          "antioxidants": [
+            "토코페롤"
+          ],
+          "scentEssentialOil": [
+            "라벤더오일"
+          ]
+        },
+        "heroIngredients": [
+          {
+            "name": "카프릴릭/카프릭트라이글리세라이드",
+            "role": "가벼운 오일 세정 베이스",
+            "evidence": "전성분 첫 번째"
+          },
+          {
+            "name": "솔베스-30테트라올리에이트",
+            "role": "유화 보조",
+            "evidence": "오일 클렌저 핵심 사용감"
+          },
+          {
+            "name": "호호바/마카다미아/해바라기 오일",
+            "role": "부드러운 롤링감",
+            "evidence": "식물성 오일 구성"
+          }
+        ],
+        "analysis": "짧고 명확한 오일 클렌저 조성이다. 오일 베이스와 유화제가 중심이라 사용법 섹션에서 물을 묻혀 유화하는 장면을 보여주는 것이 전환에 중요하다.",
+        "cautions": [
+          "라벤더오일이 있어 향/에센셜오일 민감 고객에게는 주의 문구가 필요하다.",
+          "블랙헤드 제거 단정 대신 블랙헤드가 신경 쓰이는 부위의 세정 관리로 표현한다."
+        ]
+      },
+      "comparisonAxes": [
+        "오일 종류",
+        "유화제 유무",
+        "에센셜오일 포함 여부",
+        "펌프 용기",
+        "블랙헤드 표현 안전성"
+      ],
+      "vendorItemId": "94217941616"
+    },
+    {
+      "slug": "cleansing-gel",
+      "productId": "9025751494",
+      "itemId": "26470131485",
+      "name": "유어스킨플러스 로우 피에이치 클렌징 젤",
+      "shortName": "로우 피에이치 클렌징 젤",
+      "category": "약산성 젤 클렌저",
+      "routineStep": "2차 세안 / 아침 세안",
+      "skinType": "모든 피부 타입",
+      "volume": {
+        "amount": 300,
+        "unit": "ml",
+        "label": "300ml / 10.14 fl. oz"
+      },
+      "price": {
+        "sale": 10500,
+        "original": 19500,
+        "discountRate": 46,
+        "unitBasis": "10ml",
+        "unitPrice": 350
+      },
+      "rating": {
+        "coupang": 5,
+        "coupangReviews": 24,
+        "naver": 4.96,
+        "naverReviews": 23
+      },
+      "commerce": {
+        "coupangUrl": "https://www.coupang.com/vp/products/9025751494?itemId=26470131485&vendorItemId=93445288720",
+        "naverUrl": "https://smartstore.naver.com/main/products/12597627146",
+        "naverExposure": "네이버플러스 스토어 노출"
+      },
+      "assets": {
+        "thumbnail": "/coupang-detail/9025751494/01.png",
+        "detailRoot": "/coupang-detail/9025751494/",
+        "detailImageCount": 14,
+        "noticeImage": "/coupang-detail/9025751494/13.png"
+      },
+      "positioning": {
+        "oneLine": "세안 후 당김이 부담스러운 피부를 위한 약산성 젤 클렌저.",
+        "targetNeed": "아침 세안, 2차 세안, 산뜻하지만 덜 건조한 세안을 원하는 고객",
+        "keyClaims": [
+          "약산성/pH 키워드",
+          "300ml 펌프형",
+          "당김 완화 니즈",
+          "순한 계면활성제 조합"
+        ],
+        "keywords": [
+          "약산성",
+          "젤클렌저",
+          "pH",
+          "아침 세안",
+          "300ml"
+        ]
+      },
+      "notice": {
+        "shelfLife": "제조일로부터 24개월 / 개봉 후 12개월",
+        "howToUse": "물기 있는 손에 적당량을 덜어 충분히 거품을 낸 뒤, 얼굴에 부드럽게 마사지하듯 문지른 후 미온수로 깨끗하게 씻어줍니다.",
+        "manufacturer": "(주)유어스킨",
+        "country": "대한민국",
+        "functionalCosmetic": "해당 없음"
+      },
+      "ingredients": {
+        "full": [
+          "정제수",
+          "라우릴글루코사이드",
+          "글리세린",
+          "다이소듐코코암포다이아세테이트",
+          "소듐라우로일글루타메이트",
+          "소듐클로라이드",
+          "코코-글루코사이드",
+          "아크릴레이트/C10-30알킬아크릴레이트크로스폴리머",
+          "다이프로필렌글라이콜",
+          "하이드록시아세토페논",
+          "카프릴릴글라이콜",
+          "알란토인",
+          "알지닌",
+          "부틸렌글라이콜",
+          "헥실렌글라이콜",
+          "다이소듐이디티에이",
+          "1,2-헥산다이올",
+          "다이포타슘글리시리제이트",
+          "밀싹추출물",
+          "브로콜리추출물",
+          "양배추추출물",
+          "자주개자리추출물",
+          "무씨추출물",
+          "유채추출물",
+          "소듐하이알루로네이트",
+          "하이드록시프로필트라이모늄하이알루로네이트",
+          "소듐아세틸레이티드하이알루로네이트",
+          "하이드롤라이즈드하이알루로닉애씨드",
+          "하이알루로닉애씨드",
+          "소듐하이알루로네이트크로스폴리머",
+          "하이드롤라이즈드소듐하이알루로네이트",
+          "포타슘하이알루로네이트"
+        ],
+        "roleGroups": {
+          "surfactants": [
+            "라우릴글루코사이드",
+            "다이소듐코코암포다이아세테이트",
+            "소듐라우로일글루타메이트",
+            "코코-글루코사이드"
+          ],
+          "humectants": [
+            "글리세린",
+            "다이프로필렌글라이콜",
+            "부틸렌글라이콜",
+            "헥실렌글라이콜",
+            "히알루론산 복합체"
+          ],
+          "soothing": [
+            "알란토인",
+            "다이포타슘글리시리제이트"
+          ],
+          "texturePH": [
+            "소듐클로라이드",
+            "아크릴레이트/C10-30알킬아크릴레이트크로스폴리머",
+            "알지닌"
+          ],
+          "botanical": [
+            "Fresh Bud No.6 계열 식물 추출물"
+          ],
+          "preservation": [
+            "하이드록시아세토페논",
+            "카프릴릴글라이콜",
+            "1,2-헥산다이올"
+          ]
+        },
+        "heroIngredients": [
+          {
+            "name": "라우릴글루코사이드 + 코코-글루코사이드",
+            "role": "비이온 계면활성제",
+            "evidence": "주요 세정 베이스"
+          },
+          {
+            "name": "다이소듐코코암포다이아세테이트",
+            "role": "양쪽성 보조 계면활성제",
+            "evidence": "마일드 클렌징 조합"
+          },
+          {
+            "name": "소듐라우로일글루타메이트",
+            "role": "아미노산계 세정 성분",
+            "evidence": "저자극/약산성 컨셉과 연결"
+          }
+        ],
+        "analysis": "비이온, 양쪽성, 아미노산계 계면활성제를 섞은 젤 클렌저다. 보습제와 진정 보조 성분도 들어 있어 세안 후 당김이 적은 제품으로 설명하기 좋다.",
+        "cautions": [
+          "pH 수치를 직접 제시하려면 시험값 또는 상세 이미지 내 수치 근거가 필요하다.",
+          "히알루론산은 세안 제품에서는 잔류 보습보다 컨셉 보조로 보는 것이 맞다."
+        ]
+      },
+      "comparisonAxes": [
+        "계면활성제 조합",
+        "pH 시험값 유무",
+        "300ml 펌프형",
+        "세안 후 당김 표현",
+        "아침 세안 적합성"
+      ],
+      "vendorItemId": "93445288720"
+    },
+    {
+      "slug": "rose-essence",
+      "productId": "9025775541",
+      "itemId": "26470208024",
+      "name": "유어스킨플러스 로즈 다마스쿠스 토닉 에센스",
+      "shortName": "로즈 토닉 에센스",
+      "category": "토너 겸 에센스",
+      "routineStep": "세안 후 첫 단계 / 토너 다음",
+      "skinType": "모든 피부 타입",
+      "volume": {
+        "amount": 150,
+        "unit": "ml",
+        "label": "150ml / 5.07 fl. oz"
+      },
+      "price": {
+        "sale": 10100,
+        "original": 18000,
+        "discountRate": 44,
+        "unitBasis": "10ml",
+        "unitPrice": 673
+      },
+      "rating": {
+        "coupang": 5,
+        "coupangReviews": 23,
+        "naver": null,
+        "naverReviews": null
+      },
+      "commerce": {
+        "coupangUrl": "https://www.coupang.com/vp/products/9025775541?itemId=26470208024&vendorItemId=93445364050",
+        "naverUrl": "https://smartstore.naver.com/main/products/12597635848",
+        "naverExposure": "네이버 가격비교 중복 정리"
+      },
+      "assets": {
+        "thumbnail": "/coupang-detail/9025775541/01.png",
+        "detailRoot": "/coupang-detail/9025775541/",
+        "detailImageCount": 12,
+        "noticeImage": "/coupang-detail/9025775541/11.png"
+      },
+      "positioning": {
+        "oneLine": "프로방스장미꽃수 286,500ppm을 앞세운 감성형 토닉 에센스.",
+        "targetNeed": "산뜻한 첫 단계와 로즈 원료 감성을 원하는 고객",
+        "keyClaims": [
+          "로즈 워터 고함량 표기",
+          "갈락토미세스 발효여과물",
+          "병풀/알란토인 진정 보조",
+          "펌프형 150ml"
+        ],
+        "keywords": [
+          "장미수",
+          "로즈",
+          "토닉 에센스",
+          "갈락토미세스",
+          "피부결"
+        ]
+      },
+      "notice": {
+        "shelfLife": "제조일로부터 24개월 / 개봉 후 12개월",
+        "howToUse": "세안 후 본품 적당량을 취해 피부에 골고루 펴 바릅니다.",
+        "manufacturer": "(주)유어스킨",
+        "country": "대한민국",
+        "functionalCosmetic": "해당 없음",
+        "dataQualityNotes": [
+          "고시정보 이미지의 150ml / 16.9 fl. oz 표기는 용량 환산이 맞지 않아 라벨 재확인이 필요하다."
+        ]
+      },
+      "ingredients": {
+        "full": [
+          "정제수",
+          "프로방스장미꽃수(286,500ppm)",
+          "글리세린",
+          "프로판다이올",
+          "부틸렌글라이콜",
+          "갈락토미세스발효여과물",
+          "다마스크장미꽃추출물(50ppm)",
+          "병풀추출물",
+          "다이프로필렌글라이콜",
+          "소듐하이알루로네이트",
+          "1,2-헥산다이올",
+          "하이드록시아세토페논",
+          "카프릴릴글라이콜",
+          "알란토인",
+          "펜틸렌글라이콜",
+          "다이포타슘글리시리제이트"
+        ],
+        "roleGroups": {
+          "humectants": [
+            "글리세린",
+            "프로판다이올",
+            "부틸렌글라이콜",
+            "다이프로필렌글라이콜",
+            "소듐하이알루로네이트",
+            "펜틸렌글라이콜"
+          ],
+          "botanicalFerment": [
+            "프로방스장미꽃수",
+            "갈락토미세스발효여과물",
+            "다마스크장미꽃추출물"
+          ],
+          "soothing": [
+            "병풀추출물",
+            "알란토인",
+            "다이포타슘글리시리제이트"
+          ],
+          "preservation": [
+            "1,2-헥산다이올",
+            "하이드록시아세토페논",
+            "카프릴릴글라이콜"
+          ]
+        },
+        "heroIngredients": [
+          {
+            "name": "프로방스장미꽃수 286,500ppm",
+            "role": "로즈 컨셉/수분 베이스",
+            "evidence": "전성분 내 고함량 표기"
+          },
+          {
+            "name": "갈락토미세스발효여과물",
+            "role": "피부결 컨셉 원료",
+            "evidence": "상위 보조 성분"
+          },
+          {
+            "name": "병풀추출물 + 알란토인",
+            "role": "진정 보조",
+            "evidence": "전성분 중반부"
+          }
+        ],
+        "analysis": "로즈 원료와 발효여과물이 차별점인 감성형 수분 에센스다. 보습제 조합은 가볍고, 크림 전 첫 단계 또는 토너 다음 단계 제품으로 포지셔닝하기 좋다.",
+        "cautions": [
+          "장미 원료는 향/식물성 원료에 민감한 고객에게 주의가 필요할 수 있다.",
+          "발효 원료는 피부 개선 단정보다 피부결/루틴 컨셉으로 표현한다."
+        ]
+      },
+      "comparisonAxes": [
+        "로즈워터 함량 표기",
+        "발효 원료",
+        "감성형 패키징",
+        "150ml 단위가",
+        "향 민감 고객 안내"
+      ],
+      "vendorItemId": "93445364050"
+    },
+    {
+      "slug": "all-in-one-lotion",
+      "productId": "9025793946",
+      "itemId": "26470268560",
+      "name": "유어스킨플러스 영거댄 올인원 로션",
+      "shortName": "영거 댄 올인원",
+      "category": "남성 올인원 로션",
+      "routineStep": "세안/면도 후 단일 보습",
+      "skinType": "모든 피부 타입",
+      "volume": {
+        "amount": 200,
+        "unit": "ml",
+        "label": "200ml / 6.76 fl. oz"
+      },
+      "price": {
+        "sale": 9900,
+        "original": 18000,
+        "discountRate": 45,
+        "unitBasis": "10ml",
+        "unitPrice": 495
+      },
+      "rating": {
+        "coupang": 5,
+        "coupangReviews": 33,
+        "naver": null,
+        "naverReviews": null
+      },
+      "commerce": {
+        "coupangUrl": "https://www.coupang.com/vp/products/9025793946?itemId=26470268560&vendorItemId=93445424254",
+        "naverUrl": null,
+        "naverExposure": "현재 정리 데이터 내 직접 상품 URL 미확인"
+      },
+      "assets": {
+        "thumbnail": "/coupang-detail/9025793946/01.png",
+        "detailRoot": "/coupang-detail/9025793946/",
+        "detailImageCount": 14,
+        "noticeImage": "/coupang-detail/9025793946/13.png"
+      },
+      "positioning": {
+        "oneLine": "스킨, 로션, 에센스, 크림 단계를 줄이는 남성용 이중기능성 올인원.",
+        "targetNeed": "복잡한 스킨케어를 싫어하고 면도 후 빠르게 바를 제품이 필요한 남성 고객",
+        "keyClaims": [
+          "4-in-1 올인원",
+          "미백/주름개선 이중기능성",
+          "나이아신아마이드 + 아데노신",
+          "8종 히알루론산 보습 컨셉"
+        ],
+        "keywords": [
+          "남성",
+          "올인원",
+          "미백 주름개선",
+          "면도 후",
+          "간편 루틴"
+        ]
+      },
+      "notice": {
+        "shelfLife": "제조일로부터 24개월 / 개봉 후 12개월",
+        "howToUse": "세안, 면도 후 적당량을 덜어 얼굴에 골고루 펴 바른 뒤 가볍게 두드려 흡수시켜 줍니다.",
+        "manufacturer": "(주)유어스킨",
+        "country": "대한민국",
+        "functionalCosmetic": "미백 및 주름개선 기능성",
+        "functionalIngredients": [
+          "나이아신아마이드",
+          "아데노신"
+        ]
+      },
+      "ingredients": {
+        "full": [
+          "정제수",
+          "부틸렌글라이콜",
+          "글리세린",
+          "나이아신아마이드",
+          "프로판다이올",
+          "카프릴릭/카프릭트라이글리세라이드",
+          "다이프로필렌글라이콜",
+          "소듐폴리아크릴레이트",
+          "글리세릴스테아레이트에스이",
+          "하이드록시아세토페논",
+          "카프릴릴글라이콜",
+          "솔비탄스테아레이트",
+          "세테아릴알코올",
+          "해바라기씨오일",
+          "시어버터",
+          "마카다미아씨오일",
+          "밀싹추출물",
+          "브로콜리추출물",
+          "양배추추출물",
+          "자주개자리추출물",
+          "무씨추출물",
+          "유채추출물",
+          "소듐하이알루로네이트",
+          "하이드록시프로필트라이모늄하이알루로네이트",
+          "소듐아세틸레이티드하이알루로네이트",
+          "하이드롤라이즈드하이알루로닉애씨드",
+          "하이알루로닉애씨드",
+          "소듐하이알루로네이트크로스폴리머",
+          "하이드롤라이즈드소듐하이알루로네이트",
+          "포타슘하이알루로네이트",
+          "아데노신",
+          "다이소듐이디티에이",
+          "1,2-헥산다이올",
+          "다이포타슘글리시리제이트"
+        ],
+        "roleGroups": {
+          "functional": [
+            "나이아신아마이드",
+            "아데노신"
+          ],
+          "humectants": [
+            "부틸렌글라이콜",
+            "글리세린",
+            "프로판다이올",
+            "다이프로필렌글라이콜",
+            "히알루론산 복합체"
+          ],
+          "emollients": [
+            "카프릴릭/카프릭트라이글리세라이드",
+            "세테아릴알코올",
+            "해바라기씨오일",
+            "시어버터",
+            "마카다미아씨오일"
+          ],
+          "botanical": [
+            "Fresh Bud No.6 계열 식물 추출물"
+          ],
+          "soothing": [
+            "다이포타슘글리시리제이트"
+          ],
+          "preservation": [
+            "하이드록시아세토페논",
+            "카프릴릴글라이콜",
+            "1,2-헥산다이올"
+          ]
+        },
+        "heroIngredients": [
+          {
+            "name": "나이아신아마이드",
+            "role": "미백 기능성 성분",
+            "evidence": "고시정보 효능성분"
+          },
+          {
+            "name": "아데노신",
+            "role": "주름개선 기능성 성분",
+            "evidence": "고시정보 효능성분"
+          },
+          {
+            "name": "8종 히알루론산 복합체",
+            "role": "수분 컨셉",
+            "evidence": "전성분 내 HA 계열 다수"
+          }
+        ],
+        "analysis": "상위에 나이아신아마이드가 있고 아데노신까지 들어간 기능성 올인원이다. 보습제, 오일, 버터, 히알루론산을 함께 배치해 단일 제품으로 루틴을 줄이는 메시지가 가장 설득력 있다.",
+        "cautions": [
+          "남성 트러블, 여드름 개선 표현은 피하고 면도 후 건조함/간편 보습으로 표현한다.",
+          "미백/주름개선은 고시 문구 범위 안에서만 사용한다."
+        ]
+      },
+      "comparisonAxes": [
+        "기능성 성분",
+        "올인원 단계 축소",
+        "남성 타깃 명확성",
+        "면도 후 사용성",
+        "리뷰 수"
+      ],
+      "vendorItemId": "93445424254"
+    },
+    {
+      "slug": "moisture-lip-balm",
+      "productId": "9025810298",
+      "itemId": "26470336590",
+      "name": "유어스킨플러스 모이스춰 립밤",
+      "shortName": "모이스춰 립밤",
+      "category": "립케어 / 무색 립밤",
+      "routineStep": "수시 사용",
+      "skinType": "모든 피부 타입",
+      "volume": {
+        "amount": 4,
+        "unit": "g",
+        "label": "4g / 0.14 oz"
+      },
+      "price": {
+        "sale": 9900,
+        "original": 18000,
+        "discountRate": 45,
+        "unitBasis": "1g",
+        "unitPrice": 24750
+      },
+      "rating": {
+        "coupang": 5,
+        "coupangReviews": 24,
+        "naver": null,
+        "naverReviews": null
+      },
+      "commerce": {
+        "coupangUrl": "https://www.coupang.com/vp/products/9025810298?itemId=26470336590&vendorItemId=93445490553",
+        "naverUrl": null,
+        "naverExposure": "현재 정리 데이터 내 직접 상품 URL 미확인"
+      },
+      "assets": {
+        "thumbnail": "/coupang-detail/9025810298/01.png",
+        "detailRoot": "/coupang-detail/9025810298/",
+        "detailImageCount": 12,
+        "noticeImage": "/coupang-detail/9025810298/11.png"
+      },
+      "positioning": {
+        "oneLine": "해바라기씨오일, 비즈왁스, 야자씨버터 기반의 무색 데일리 립밤.",
+        "targetNeed": "입술 각질과 건조함을 수시로 관리하고 싶은 남녀공용 립케어 고객",
+        "keyClaims": [
+          "무색 스틱형",
+          "오일/왁스/버터 보습막",
+          "휴대성",
+          "개봉 후 6개월"
+        ],
+        "keywords": [
+          "립밤",
+          "무색",
+          "보습막",
+          "휴대용",
+          "남녀공용"
+        ]
+      },
+      "notice": {
+        "shelfLife": "제조일로부터 24개월 / 개봉 후 6개월",
+        "howToUse": "입술이 건조할 때 덧 발라줍니다.",
+        "manufacturer": "(주)유어스킨",
+        "country": "대한민국",
+        "functionalCosmetic": "해당 없음",
+        "dataQualityNotes": [
+          "상품 노출 구성 수량은 쿠팡 옵션에서 재확인 필요. 고시정보 기준 용량은 4g이다."
+        ]
+      },
+      "ingredients": {
+        "full": [
+          "해바라기씨오일",
+          "비즈왁스",
+          "야자씨버터",
+          "호호바씨오일",
+          "올리브오일",
+          "올리브껍질오일",
+          "포도씨오일",
+          "잇꽃씨오일",
+          "식물성오일",
+          "토코페롤"
+        ],
+        "roleGroups": {
+          "emollientsOcclusive": [
+            "해바라기씨오일",
+            "비즈왁스",
+            "야자씨버터",
+            "호호바씨오일",
+            "올리브오일",
+            "올리브껍질오일",
+            "포도씨오일",
+            "잇꽃씨오일",
+            "식물성오일"
+          ],
+          "antioxidants": [
+            "토코페롤"
+          ],
+          "colorFragrance": [
+            "무색 제품으로 노출. 전성분에는 별도 색소/향료 표기가 보이지 않음"
+          ]
+        },
+        "heroIngredients": [
+          {
+            "name": "해바라기씨오일",
+            "role": "입술 유연감",
+            "evidence": "전성분 첫 번째"
+          },
+          {
+            "name": "비즈왁스",
+            "role": "보습막/스틱 제형",
+            "evidence": "상위 성분"
+          },
+          {
+            "name": "야자씨버터 + 호호바씨오일",
+            "role": "부드러운 발림",
+            "evidence": "오일/버터 조합"
+          }
+        ],
+        "analysis": "수분을 공급하는 워터 베이스가 아니라 오일, 왁스, 버터로 보습막을 만드는 립밤이다. 제형 클로즈업과 휴대 장면을 강화하면 제품 이해가 빠르다.",
+        "cautions": [
+          "비즈왁스가 들어 있어 비건 립밤으로 표현하면 안 된다.",
+          "천연/자연유래 표현은 함량 근거가 없으면 과하게 쓰지 않는다."
+        ]
+      },
+      "comparisonAxes": [
+        "오일/왁스 비중",
+        "비건 여부",
+        "무색 여부",
+        "개봉 후 사용기간",
+        "g당 가격"
+      ],
+      "vendorItemId": "93445490553"
+    },
+    {
+      "slug": "whitening-cream",
+      "productId": "9264527939",
+      "itemId": "27414863570",
+      "vendorItemId": "94380449351",
+      "name": "유어스킨플러스 화이트닝 톤 케어 크림",
+      "shortName": "화이트닝 톤 케어 크림",
+      "category": "페이셜 크림 / 톤 케어",
+      "routineStep": "기초 케어 마지막 단계",
+      "skinType": "모든 피부 타입",
+      "volume": {
+        "amount": 200,
+        "unit": "ml",
+        "label": "200ml / 6.76 fl. oz"
+      },
+      "price": {
+        "sale": 10100,
+        "original": 18500,
+        "discountRate": 45,
+        "unitBasis": "10ml",
+        "unitPrice": 505
+      },
+      "rating": {
+        "coupang": 5,
+        "coupangReviews": 23,
+        "naver": null,
+        "naverReviews": null
+      },
+      "commerce": {
+        "coupangUrl": "https://www.coupang.com/vp/products/9264527939?itemId=27414863570&vendorItemId=94380449351",
+        "naverUrl": "https://smartstore.naver.com/main/products/12873483979",
+        "naverExposure": "네이버 가격비교 중복 정리"
+      },
+      "assets": {
+        "thumbnail": "/coupang-detail/9264527939/01.png",
+        "detailRoot": "/coupang-detail/9264527939/",
+        "detailImageCount": 14,
+        "noticeImage": "/coupang-detail/9264527939/13.png"
+      },
+      "positioning": {
+        "oneLine": "나이아신아마이드 고시 기반의 200ml 미백 기능성 톤 케어 크림.",
+        "targetNeed": "칙칙해 보이는 피부 인상과 건조함을 함께 관리하고 싶은 고객",
+        "keyClaims": [
+          "미백 기능성화장품",
+          "나이아신아마이드",
+          "시어버터/식물성 오일 보습",
+          "글루타티온/토코페롤 컨셉"
+        ],
+        "keywords": [
+          "미백",
+          "화이트닝",
+          "톤 케어",
+          "나이아신아마이드",
+          "200ml"
+        ]
+      },
+      "notice": {
+        "shelfLife": "제조일로부터 24개월 / 개봉 후 12개월",
+        "howToUse": "기초케어 마지막 단계에 얼굴 전체에 고르게 펴 발라줍니다.",
+        "manufacturer": "(주)유어스킨",
+        "country": "대한민국",
+        "functionalCosmetic": "미백 기능성",
+        "functionalIngredients": [
+          "나이아신아마이드"
+        ],
+        "functionalClaim": "피부의 미백에 도움을 줍니다."
+      },
+      "ingredients": {
+        "full": [
+          "정제수",
+          "카프릴릭/카프릭트라이글리세라이드",
+          "글리세린",
+          "시어버터",
+          "나이아신아마이드",
+          "폴리글리세릴-3다이스테아레이트",
+          "세테아릴올리베이트",
+          "프로판다이올",
+          "세테아릴알코올",
+          "솔비탄올리베이트",
+          "비타민나무열매추출물",
+          "다이프로필렌글라이콜",
+          "해바라기씨오일",
+          "마카다미아씨오일",
+          "아르간커넬오일",
+          "하이드록시아세토페논",
+          "카보머",
+          "카프릴릴글라이콜",
+          "글리세릴스테아레이트시트레이트",
+          "판테놀",
+          "알지닌",
+          "부틸렌글라이콜",
+          "밀싹추출물",
+          "브로콜리추출물",
+          "양배추추출물",
+          "자주개자리추출물",
+          "무씨추출물",
+          "유채추출물",
+          "펜틸렌글라이콜",
+          "글루타티온",
+          "다이포타슘글리시리제이트",
+          "다이소듐이디티에이",
+          "토코페롤",
+          "1,2-헥산다이올"
+        ],
+        "roleGroups": {
+          "functional": [
+            "나이아신아마이드"
+          ],
+          "humectants": [
+            "글리세린",
+            "프로판다이올",
+            "다이프로필렌글라이콜",
+            "부틸렌글라이콜",
+            "펜틸렌글라이콜"
+          ],
+          "emollients": [
+            "카프릴릭/카프릭트라이글리세라이드",
+            "시어버터",
+            "세테아릴알코올",
+            "해바라기씨오일",
+            "마카다미아씨오일",
+            "아르간커넬오일"
+          ],
+          "soothing": [
+            "판테놀",
+            "다이포타슘글리시리제이트"
+          ],
+          "antioxidantConcept": [
+            "비타민나무열매추출물",
+            "글루타티온",
+            "토코페롤"
+          ],
+          "botanical": [
+            "Fresh Bud No.6 계열 식물 추출물"
+          ],
+          "preservation": [
+            "하이드록시아세토페논",
+            "카프릴릴글라이콜",
+            "1,2-헥산다이올"
+          ]
+        },
+        "heroIngredients": [
+          {
+            "name": "나이아신아마이드",
+            "role": "미백 기능성 성분",
+            "evidence": "고시정보 효능성분"
+          },
+          {
+            "name": "시어버터 + 식물성 오일",
+            "role": "크림 보습막",
+            "evidence": "전성분 상위권"
+          },
+          {
+            "name": "글루타티온 + 토코페롤",
+            "role": "브라이트닝 컨셉 보조",
+            "evidence": "후반부 컨셉 원료"
+          }
+        ],
+        "analysis": "나이아신아마이드가 상위에 있는 기능성 크림이다. 유분 보습막이 있는 크림 베이스라 톤 케어와 보습을 같이 보여주는 구성이 적합하다.",
+        "cautions": [
+          "미백 표현은 '피부의 미백에 도움' 고시 문구를 기준으로 쓴다.",
+          "글루타티온은 기능성 성분으로 고시된 것이 아니므로 원료 컨셉으로만 다룬다.",
+          "낮 사용 장면에는 자외선 차단제 병행 안내가 필요하다."
+        ]
+      },
+      "comparisonAxes": [
+        "나이아신아마이드 위치",
+        "미백 기능성 고시",
+        "크림 보습막",
+        "브라이트닝 보조 원료",
+        "200ml 가격"
+      ]
+    },
+    {
+      "slug": "white-glow-tone-up-cream",
+      "productId": "9025800758",
+      "itemId": "26470298069",
+      "vendorItemId": "93445452670",
+      "name": "유어스킨플러스 화이트 글로우 톤업 크림",
+      "shortName": "화이트 글로우 톤업 크림",
+      "category": "페이셜 크림 / 톤업",
+      "routineStep": "기초 케어 마지막 단계",
+      "skinType": "모든 피부 타입",
+      "volume": {
+        "amount": 200,
+        "unit": "ml",
+        "label": "200ml"
+      },
+      "price": {
+        "sale": 10100,
+        "original": 18500,
+        "discountRate": 45,
+        "unitBasis": "10ml",
+        "unitPrice": 505
+      },
+      "rating": {
+        "coupang": 0,
+        "coupangReviews": 0,
+        "naver": null,
+        "naverReviews": null
+      },
+      "commerce": {
+        "coupangUrl": "https://www.coupang.com/vp/products/9025800758?itemId=26470298069&vendorItemId=93445452670",
+        "naverUrl": null,
+        "naverExposure": "현재 정리 데이터 내 네이버 직접 상품 URL 미확인"
+      },
+      "assets": {
+        "thumbnail": "/coupang-detail/9025800758/01.png",
+        "detailRoot": "/coupang-detail/9025800758/",
+        "detailImageCount": 11,
+        "noticeImage": null
+      },
+      "positioning": {
+        "oneLine": "화이트 글로우와 톤업 키워드를 앞세운 200ml 데일리 톤업 크림.",
+        "targetNeed": "자연스럽게 화사한 피부 표현과 데일리 크림 사용감을 함께 원하는 고객",
+        "keyClaims": [
+          "톤업 크림",
+          "화이트 글로우 컨셉",
+          "200ml 대용량",
+          "데일리 피부 표현"
+        ],
+        "keywords": [
+          "톤업",
+          "화이트 글로우",
+          "크림",
+          "200ml",
+          "데일리 톤 케어"
+        ]
+      },
+      "notice": {
+        "shelfLife": "상품 상세페이지 참조",
+        "howToUse": "기초케어 마지막 단계에 적당량을 얼굴과 노출 부위에 펴 바릅니다.",
+        "manufacturer": "(주)유어스킨",
+        "country": "대한민국",
+        "functionalCosmetic": "상세 고시정보 추가 확인 필요",
+        "dataQualityNotes": [
+          "2026-05-24 쿠팡 OpenAPI에서 상세 이미지 11장을 다운로드해 반영.",
+          "전성분 OCR과 기능성 고시 세부 검증은 추가 확인 필요."
+        ]
+      },
+      "ingredients": {
+        "full": [
+          "상세 이미지/고시정보 OCR 추가 확인 필요"
+        ],
+        "roleGroups": {
+          "functional": [
+            "기능성 고시 확인 필요"
+          ],
+          "emollients": [
+            "크림 보습막"
+          ],
+          "antioxidantConcept": [
+            "화이트 글로우 컨셉"
+          ],
+          "preservation": [
+            "상세 확인 필요"
+          ]
+        },
+        "heroIngredients": [
+          {
+            "name": "화이트 글로우 컨셉",
+            "role": "톤업 포지션",
+            "evidence": "쿠팡 상품명과 상세 이미지 기준"
+          },
+          {
+            "name": "200ml 대용량",
+            "role": "가격/용량 경쟁력",
+            "evidence": "쿠팡 옵션 200ml 1개 기준"
+          },
+          {
+            "name": "크림 베이스",
+            "role": "데일리 마무리",
+            "evidence": "상품 카테고리와 상세 이미지 기준"
+          }
+        ],
+        "analysis": "화이트닝 톤 케어 크림과 유사한 톤 케어 수요를 겨냥하되, 현재는 전성분 OCR 전이므로 톤업/피부 표현 중심으로 보수적으로 다룬다.",
+        "cautions": [
+          "기능성 여부와 효능 성분은 고시정보 확인 전까지 단정하지 않는다.",
+          "톤업 효과는 메이크업/피부 표현 맥락으로 제한한다."
+        ]
+      },
+      "comparisonAxes": [
+        "톤업 포지션",
+        "200ml 단가",
+        "상세 이미지 11장",
+        "기능성 고시 확인",
+        "화이트닝 크림과 역할 분리"
+      ]
+    },
+    {
+      "slug": "soothing-cream",
+      "productId": "9402735935",
+      "itemId": "27931591582",
+      "vendorItemId": "94889995486",
+      "name": "유어스킨플러스 피디알엔 히알루론산 수딩 크림",
+      "shortName": "피디알엔 히알루론산 수딩 크림",
+      "category": "페이셜 크림 / 수딩 보습",
+      "routineStep": "기초 케어 마지막 단계",
+      "skinType": "모든 피부 타입",
+      "volume": {
+        "amount": 200,
+        "unit": "ml",
+        "label": "200ml"
+      },
+      "price": {
+        "sale": 12800,
+        "original": 23000,
+        "discountRate": 44,
+        "unitBasis": "10ml",
+        "unitPrice": 640
+      },
+      "rating": {
+        "coupang": 0,
+        "coupangReviews": 0,
+        "naver": null,
+        "naverReviews": null
+      },
+      "commerce": {
+        "coupangUrl": "https://www.coupang.com/vp/products/9402735935?itemId=27931591582&vendorItemId=94889995486",
+        "naverUrl": null,
+        "naverExposure": "현재 정리 데이터 내 네이버 직접 상품 URL 미확인"
+      },
+      "assets": {
+        "thumbnail": "/coupang-detail/9402735935/01.png",
+        "detailRoot": "/coupang-detail/9402735935/",
+        "detailImageCount": 15,
+        "noticeImage": null,
+        "galleryRoot": "/coupang-detail/9402735935/",
+        "galleryImageCount": 15
+      },
+      "positioning": {
+        "oneLine": "PDRN과 히알루론산 키워드를 앞세운 200ml 속건조 수딩 크림.",
+        "targetNeed": "건조함과 편안한 보습 마무리를 원하는 고객",
+        "keyClaims": [
+          "PDRN 컨셉",
+          "히알루론산 보습 컨셉",
+          "200ml 대용량",
+          "속건조/수딩 니즈"
+        ],
+        "keywords": [
+          "PDRN",
+          "히알루론산",
+          "수딩크림",
+          "속건조",
+          "200ml"
+        ]
+      },
+      "notice": {
+        "shelfLife": "상품 상세페이지 추가 수집 필요",
+        "howToUse": "기초 케어 마지막 단계에 적당량을 얼굴에 펴 바릅니다.",
+        "manufacturer": "(주)유어스킨",
+        "country": "대한민국",
+        "functionalCosmetic": "해당 없음",
+        "dataQualityNotes": [
+          "2026-05-24 쿠팡 OpenAPI에서 상세 이미지 15장을 다운로드해 반영.",
+          "전성분 OCR과 기능성 고시 세부 검증은 추가 확인 필요."
+        ]
+      },
+      "ingredients": {
+        "full": [
+          "상세 이미지/고시정보 OCR 추가 확인 필요"
+        ],
+        "roleGroups": {
+          "humectants": [
+            "히알루론산 보습 컨셉"
+          ],
+          "soothing": [
+            "수딩 크림 포지션"
+          ],
+          "activeConcept": [
+            "PDRN 컨셉 원료 확인 필요"
+          ]
+        },
+        "heroIngredients": [
+          {
+            "name": "PDRN",
+            "role": "컨셉 원료",
+            "evidence": "쿠팡 상품명 기준. 전성분 내 정확한 표기와 함량 확인 필요"
+          },
+          {
+            "name": "히알루론산",
+            "role": "보습 컨셉",
+            "evidence": "쿠팡 상품명 기준. 상세 고시정보 확인 필요"
+          },
+          {
+            "name": "200ml 대용량",
+            "role": "가격/용량 경쟁력",
+            "evidence": "Chrome 상품 옵션 200ml x 1개 확인"
+          }
+        ],
+        "analysis": "쿠팡 OpenAPI 기준 상세 이미지 15장을 확보했다. PDRN/히알루론산은 현재 컨셉 키워드로 다루고, 전성분 OCR 전에는 효능 표현을 단정하지 않는다.",
+        "cautions": [
+          "PDRN은 기능성 효능처럼 단정하지 말고 컨셉 원료로 표현한다.",
+          "전성분과 고시정보 수집 전에는 진정/개선 효과를 단정하지 않는다."
+        ]
+      },
+      "comparisonAxes": [
+        "PDRN 표기 근거",
+        "히알루론산 보습 성분",
+        "200ml 단가",
+        "수딩/속건조 포지션",
+        "상세 이미지 15장"
+      ]
+    },
+    {
+      "slug": "pdrn-hyaluronic-ampoule",
+      "productId": "9402746236",
+      "itemId": "27931626293",
+      "vendorItemId": "94890028910",
+      "name": "유어스킨플러스 피디알렌 히알루론산 앰플",
+      "shortName": "PDRN 히알루론산 앰플",
+      "category": "앰플 / 집중 보습",
+      "routineStep": "토너 다음 집중 케어 단계",
+      "skinType": "모든 피부 타입",
+      "volume": {
+        "amount": 25,
+        "unit": "ml",
+        "label": "25ml"
+      },
+      "price": {
+        "sale": 12500,
+        "original": 12500,
+        "discountRate": 0,
+        "unitBasis": "10ml",
+        "unitPrice": 5000
+      },
+      "rating": {
+        "coupang": 0,
+        "coupangReviews": 0,
+        "naver": null,
+        "naverReviews": null
+      },
+      "commerce": {
+        "coupangUrl": "https://www.coupang.com/vp/products/9402746236?itemId=27931626293&vendorItemId=94890028910",
+        "naverUrl": null,
+        "naverExposure": "현재 정리 데이터 내 네이버 직접 상품 URL 미확인"
+      },
+      "assets": {
+        "thumbnail": "/coupang-detail/9402746236/01.png",
+        "detailRoot": "/coupang-detail/9402746236/",
+        "detailImageCount": 12,
+        "noticeImage": null
+      },
+      "positioning": {
+        "oneLine": "PDRN과 히알루론산 키워드를 담은 25ml 집중 보습 앰플.",
+        "targetNeed": "토너 후 가볍게 더하는 집중 수분 단계를 원하는 고객",
+        "keyClaims": [
+          "PDRN 컨셉",
+          "히알루론산 보습 컨셉",
+          "25ml 앰플",
+          "집중 케어 단계"
+        ],
+        "keywords": [
+          "PDRN",
+          "히알루론산",
+          "앰플",
+          "집중보습",
+          "25ml"
+        ]
+      },
+      "notice": {
+        "shelfLife": "상품 상세페이지 참조",
+        "howToUse": "토너 사용 후 적당량을 얼굴 전체에 펴 바르고 크림으로 마무리합니다.",
+        "manufacturer": "(주)유어스킨",
+        "country": "대한민국",
+        "functionalCosmetic": "상세 고시정보 추가 확인 필요",
+        "dataQualityNotes": [
+          "2026-05-24 쿠팡 OpenAPI에서 상세 이미지 12장을 다운로드해 반영.",
+          "전성분 OCR과 기능성 고시 세부 검증은 추가 확인 필요."
+        ]
+      },
+      "ingredients": {
+        "full": [
+          "상세 이미지/고시정보 OCR 추가 확인 필요"
+        ],
+        "roleGroups": {
+          "humectants": [
+            "히알루론산 보습 컨셉"
+          ],
+          "activeConcept": [
+            "PDRN 컨셉 원료 확인 필요"
+          ],
+          "preservation": [
+            "상세 확인 필요"
+          ]
+        },
+        "heroIngredients": [
+          {
+            "name": "PDRN",
+            "role": "컨셉 원료",
+            "evidence": "쿠팡 상품명 기준. 전성분 내 정확한 표기 확인 필요"
+          },
+          {
+            "name": "히알루론산",
+            "role": "보습 컨셉",
+            "evidence": "쿠팡 상품명 기준. 상세 고시정보 확인 필요"
+          },
+          {
+            "name": "25ml 앰플",
+            "role": "집중 케어 제형",
+            "evidence": "쿠팡 옵션 25ml 1개 기준"
+          }
+        ],
+        "analysis": "PDRN과 히알루론산을 전면에 둔 집중 케어 앰플이다. 전성분 OCR 전까지는 효능 단정 대신 수분 루틴 보강과 컨셉 원료 중심으로 표현한다.",
+        "cautions": [
+          "PDRN은 기능성 효능처럼 단정하지 말고 컨셉 원료로 표현한다.",
+          "전성분 확인 전에는 개선/회복/진정 효과를 단정하지 않는다."
+        ]
+      },
+      "comparisonAxes": [
+        "PDRN 표기 근거",
+        "히알루론산 보습 컨셉",
+        "25ml 단가",
+        "앰플 루틴 단계",
+        "상세 이미지 12장"
+      ]
+    }
+  ]
+}

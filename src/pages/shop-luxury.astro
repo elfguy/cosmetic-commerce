@@ -1,0 +1,621 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteData from '../../data/yourskin-products.json';
+
+const { products } = siteData;
+const formatPrice = (price) => `${Number(price).toLocaleString('ko-KR')}원`;
+const heroProduct = products.find((product) => product.slug === 'cleansing-gel') ?? products[0];
+const lineup = products.slice(0, 6);
+const transparency = [
+  { title: '원료 출처 공개', text: '자연 유래 원료의 역할과 사용 목적을 제품 카드에서 함께 보여줍니다.' },
+  { title: 'No Harsh Ingredients', text: '자극적인 이미지를 피하고 순한 사용감, 산뜻한 마무리 중심으로 설명합니다.' },
+  { title: 'Fresh batch note', text: '제조일자와 빠른 출고 흐름을 간결한 라벨 정보처럼 배치합니다.' },
+];
+const philosophy = [
+  '불필요하게 복잡한 효과 표현을 덜어냅니다.',
+  '천연 소재의 신선함과 깨끗한 유통 과정을 남깁니다.',
+  '민감한 피부도 부담 없이 고를 수 있는 언어를 사용합니다.',
+];
+const palette = [
+  { name: 'Clean white', value: '#ffffff' },
+  { name: 'Soft gray', value: '#ecefec' },
+  { name: 'Glass green', value: '#dce9df' },
+  { name: 'Ink', value: '#161a17' },
+];
+---
+
+<BaseLayout title="유어스킨플러스 미니멀 클린 뷰티 목업" description="깨끗하고 세련된 클린 뷰티 스타일의 유어스킨플러스 웹사이트 목업">
+  <main class="clean-beauty">
+    <header class="site-header">
+      <a class="brand-word" href="/" aria-label="유어스킨플러스 홈">
+        <span>Your Skin</span>
+        <strong>Plus</strong>
+      </a>
+      <nav aria-label="미니멀 클린 뷰티 메뉴">
+        <a href="#transparency">Transparency</a>
+        <a href="#lineup">Lineup</a>
+        <a href="#origin">Origin</a>
+        <a href="#philosophy">Philosophy</a>
+      </nav>
+      <a class="header-cta" href="#lineup">제품 보기</a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Minimal Clean Beauty Mockup 03</p>
+        <h1>불필요한 것은 덜고, 신선한 자연만 더하다</h1>
+        <span>
+          흰 여백과 투명한 유리감, 정돈된 제품 정보로 천연 소재와 신선한 원료 유통을 가장 간결하게 보여주는 클린 뷰티 공식몰입니다.
+        </span>
+        <div class="hero-actions">
+          <a class="primary" href="#transparency">성분 투명성 보기</a>
+          <a class="secondary" href="#lineup">나에게 맞는 제품 찾기</a>
+        </div>
+      </div>
+      <figure class="hero-product">
+        <img src="/coupang-detail/9025751494/01.png" alt={heroProduct.fullName} />
+        <figcaption>
+          <span>{heroProduct.category} · {heroProduct.volume}</span>
+          <strong>{heroProduct.name}</strong>
+          <em>{formatPrice(heroProduct.price)}</em>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="brief" aria-label="목업 콘셉트 설명">
+      <article>
+        <p class="eyebrow">Brand concept</p>
+        <h2>클린 뷰티 공식몰처럼 보이는 절제된 자연주의</h2>
+        <span>제품 이미지를 크게 두고, 성분과 유통 정보를 라벨처럼 정리합니다. 화려한 장식보다 깨끗한 선택 기준을 만드는 방향입니다.</span>
+      </article>
+      <div class="palette">
+        {palette.map((color) => (
+          <div>
+            <span style={`background:${color.value}`}></span>
+            <strong>{color.name}</strong>
+            <em>{color.value}</em>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="transparency" id="transparency">
+      <div class="section-head">
+        <p class="eyebrow">Ingredient transparency</p>
+        <h2>성분을 숨기지 않고, 필요한 만큼만 보여줍니다.</h2>
+      </div>
+      <div class="transparency-grid">
+        {transparency.map((item) => (
+          <article>
+            <strong>{item.title}</strong>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="lineup" id="lineup">
+      <div class="section-head">
+        <p class="eyebrow">Product lineup</p>
+        <h2>피부에 부담 없는 데일리 라인업</h2>
+      </div>
+      <div class="lineup-grid">
+        {lineup.map((product) => (
+          <article class="lineup-card">
+            <img src={product.image} alt={product.fullName} loading="lazy" />
+            <div>
+              <span>{product.category} · {product.volume}</span>
+              <h3>{product.name}</h3>
+              <p>{product.problem}</p>
+              <strong>{formatPrice(product.price)}</strong>
+              <a href={product.smartstoreUrl} target="_blank" rel="noreferrer">제품 보기</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="origin" id="origin">
+      <div class="origin-visual">
+        <img src="/coupang-detail/9025751494/06.png" alt="약산성 pH와 제품 안정성을 설명하는 제품 상세 이미지" />
+      </div>
+      <div class="origin-copy">
+        <p class="eyebrow">Natural origin</p>
+        <h2>자연 유래 성분은 조용하고 정확하게 설명합니다.</h2>
+        <span>
+          허브, 꽃, 식물성 오일, 수분 베이스의 역할을 기능성 과장 없이 “어떤 루틴에서 편한가”로 번역합니다.
+        </span>
+        <dl>
+          <div><dt>대표 카피</dt><dd>불필요한 것은 덜고, 신선한 자연만 더하다</dd></div>
+          <div><dt>표현 방식</dt><dd>라벨형 정보, 투명한 팔레트, 제품 중심의 여백</dd></div>
+          <div><dt>제품 카드</dt><dd>카테고리, 용량, 사용 고민, 가격을 한 번에 확인</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="philosophy" id="philosophy">
+      <div>
+        <p class="eyebrow">Brand philosophy</p>
+        <h2>건강한 피부를 위한 조용한 기준</h2>
+      </div>
+      <ol>
+        {philosophy.map((item) => <li>{item}</li>)}
+      </ol>
+      <a href="#lineup">심플하게 구매하기</a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(body) {
+    background: #f7f8f6;
+  }
+
+  .clean-beauty {
+    --ink: #161a17;
+    --muted: #626b64;
+    --line: rgba(22, 26, 23, .12);
+    --paper: #ffffff;
+    --soft: #ecefec;
+    --glass: rgba(255, 255, 255, .72);
+    --green: #708a70;
+    min-height: 100vh;
+    color: var(--ink);
+    font-family: var(--font-body);
+    background:
+      linear-gradient(180deg, #ffffff 0%, #f7f8f6 44%, #ecefec 100%);
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: 190px 1fr auto;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(255, 255, 255, .86);
+    padding: 16px clamp(24px, 5vw, 72px);
+    backdrop-filter: blur(18px);
+  }
+
+  .brand-word,
+  .site-header a,
+  .primary,
+  .secondary,
+  .lineup-card a,
+  .philosophy a {
+    color: inherit;
+    font-weight: 850;
+    text-decoration: none;
+  }
+
+  .brand-word {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    white-space: nowrap;
+    font-family: var(--font-latin);
+    text-transform: uppercase;
+  }
+
+  .brand-word span,
+  .brand-word strong {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .brand-word strong {
+    color: var(--green);
+  }
+
+  .site-header nav {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .header-cta,
+  .primary,
+  .secondary,
+  .lineup-card a,
+  .philosophy a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border-radius: 999px;
+    font-weight: 650;
+    padding: 0 17px;
+  }
+
+  .site-header .header-cta {
+    justify-self: end;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  .header-cta,
+  .primary,
+  .philosophy a {
+    background: var(--ink);
+    color: #fff;
+  }
+
+  .secondary,
+  .lineup-card a {
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, .75);
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 470px;
+    gap: 64px;
+    align-items: center;
+    min-height: 720px;
+    padding: 72px clamp(24px, 5vw, 72px);
+  }
+
+  .eyebrow {
+    margin: 0;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 950;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    word-break: keep-all;
+  }
+
+  h1 {
+    max-width: 780px;
+    margin-top: 16px;
+    font-family: var(--font-display);
+    font-size: 54px;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 34px;
+    font-weight: 550;
+    line-height: 1.22;
+    letter-spacing: 0;
+  }
+
+  .hero-copy > span,
+  .brief article > span,
+  .origin-copy > span {
+    display: block;
+    max-width: 620px;
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.78;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .hero-product {
+    display: grid;
+    gap: 22px;
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, .94), rgba(220, 233, 223, .7));
+    padding: 30px;
+    box-shadow: 0 30px 90px rgba(22, 26, 23, .1);
+  }
+
+  .hero-product img {
+    width: min(76%, 300px);
+    max-height: 430px;
+    justify-self: center;
+    object-fit: contain;
+    filter: drop-shadow(0 22px 22px rgba(22, 26, 23, .14));
+  }
+
+  .hero-product figcaption {
+    display: grid;
+    gap: 8px;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+  }
+
+  .hero-product span,
+  .lineup-card span,
+  .origin-copy dt {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 850;
+  }
+
+  .hero-product strong {
+    font-size: 24px;
+  }
+
+  .hero-product em {
+    color: var(--green);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 950;
+  }
+
+  .brief,
+  .transparency,
+  .lineup,
+  .origin,
+  .philosophy {
+    border-top: 1px solid var(--line);
+    padding: 48px clamp(24px, 5vw, 72px);
+  }
+
+  .brief {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 520px;
+    gap: 36px;
+    background: rgba(255, 255, 255, .62);
+  }
+
+  .brief h2,
+  .section-head h2,
+  .origin-copy h2,
+  .philosophy h2 {
+    margin-top: 10px;
+  }
+
+  .palette {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .palette div {
+    display: grid;
+    gap: 8px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    padding: 12px;
+  }
+
+  .palette span {
+    height: 86px;
+    border: 1px solid rgba(22, 26, 23, .08);
+    border-radius: 6px;
+  }
+
+  .palette strong {
+    font-size: 14px;
+  }
+
+  .palette em {
+    color: var(--muted);
+    font-size: 12px;
+    font-style: normal;
+  }
+
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 28px;
+    margin-bottom: 24px;
+  }
+
+  .transparency-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .transparency-grid article {
+    display: grid;
+    gap: 14px;
+    min-height: 210px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--glass);
+    padding: 24px;
+  }
+
+  .transparency-grid strong {
+    font-size: 24px;
+  }
+
+  .transparency-grid p,
+  .lineup-card p,
+  .origin-copy dd,
+  .philosophy li {
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .lineup-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .lineup-card {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    min-height: 280px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .82);
+    overflow: hidden;
+  }
+
+  .lineup-card img {
+    align-self: center;
+    justify-self: center;
+    width: 86%;
+    max-height: 220px;
+    object-fit: contain;
+    filter: drop-shadow(0 16px 16px rgba(22, 26, 23, .08));
+  }
+
+  .lineup-card div {
+    display: grid;
+    align-content: start;
+    gap: 10px;
+    border-left: 1px solid var(--line);
+    padding: 18px;
+  }
+
+  .lineup-card h3 {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .lineup-card strong {
+    color: var(--green);
+    font-size: 23px;
+  }
+
+  .lineup-card a {
+    justify-self: start;
+    min-height: 40px;
+  }
+
+  .origin {
+    display: grid;
+    grid-template-columns: 430px minmax(0, 1fr);
+    gap: 44px;
+    align-items: center;
+    background: #ffffff;
+  }
+
+  .origin-visual {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .origin-visual img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1.18;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .origin-copy dl {
+    display: grid;
+    gap: 1px;
+    max-width: 720px;
+    margin: 28px 0 0;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .origin-copy div {
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    gap: 18px;
+    background: #fff;
+    padding: 16px;
+  }
+
+  .philosophy {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 560px) auto;
+    gap: 30px;
+    align-items: center;
+    padding-bottom: 72px;
+  }
+
+  .philosophy ol {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding-left: 22px;
+  }
+
+  .philosophy a {
+    min-height: 52px;
+  }
+
+  @media (max-width: 1180px) {
+    .site-header,
+    .hero,
+    .brief,
+    .origin,
+    .philosophy {
+      grid-template-columns: 1fr;
+    }
+
+    .site-header nav {
+      justify-content: flex-start;
+    }
+
+    .site-header .header-cta {
+      justify-self: start;
+    }
+
+    .lineup-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 760px) {
+    .site-header,
+    .hero,
+    .brief,
+    .transparency,
+    .lineup,
+    .origin,
+    .philosophy {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    .section-head {
+      display: block;
+    }
+
+    .palette,
+    .transparency-grid,
+    .lineup-grid,
+    .lineup-card,
+    .origin-copy div {
+      grid-template-columns: 1fr;
+    }
+
+    .lineup-card div {
+      border-left: 0;
+      border-top: 1px solid var(--line);
+    }
+  }
+</style>

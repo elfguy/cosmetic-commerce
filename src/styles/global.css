@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +6,10 @@
 :root {
   color-scheme: light;
   background: #F8F1E7;
+  --font-body: 'IBM Plex Sans KR', 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
+  --font-display: 'IBM Plex Sans KR', 'Pretendard', 'Apple SD Gothic Neo', sans-serif;
+  --font-latin: 'Manrope', 'IBM Plex Sans KR', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
 }
 
 html {
@@ -20,7 +24,7 @@ body {
     radial-gradient(circle at 86% 18%, rgba(123, 139, 111, 0.18), transparent 30rem),
     #F8F1E7;
   color: #241C18;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: var(--font-body);
 }
 
 .noise::before {

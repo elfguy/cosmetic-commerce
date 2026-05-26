@@ -1,0 +1,880 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const logoAssetVersion = '20260519a';
+const versionedAsset = (path: string) => `${path}?v=${logoAssetVersion}`;
+
+const brandPillars = [
+  {
+    title: 'Natural Ingredients',
+    text: '신선한 허브, 식물 추출, 자연 유래 원료 이미지를 심볼의 잎맥으로 압축합니다.',
+  },
+  {
+    title: 'Clean Extraction',
+    text: '투명하고 깨끗한 추출 공정을 이슬방울과 넓은 여백으로 표현합니다.',
+  },
+  {
+    title: 'Skin Barrier',
+    text: '피부 장벽과 수분 밸런스를 보호감 있는 드롭 실루엣과 안정적인 비례로 암시합니다.',
+  },
+  {
+    title: 'Seoul Premium',
+    text: '과한 장식 없이 정확한 자간, 얇은 라인, 낮은 채도의 그린 팔레트로 고급감을 만듭니다.',
+  },
+];
+
+const colors = [
+  { name: 'Deep Forest', hex: '#143D2E' },
+  { name: 'Sage Vein', hex: '#8AA38F' },
+  { name: 'Warm Ivory', hex: '#F8F1E7' },
+  { name: 'Soft Beige', hex: '#D9D1BE' },
+  { name: 'Champagne', hex: '#C7A670' },
+  { name: 'Charcoal', hex: '#171B18' },
+];
+
+const rules = [
+  '자사몰 헤더와 상품 상세 첫 화면은 워드마크를 우선 사용한다.',
+  '패키지 캡, 봉인 스티커, 배지는 YSP 심볼만 사용한다.',
+  '골드는 얇은 라인과 작은 플러스 포인트로만 제한한다.',
+  '작은 크기에서는 잎 장식을 줄이고 YSP 실루엣을 먼저 읽히게 한다.',
+  '인쇄 원본 제작 시에는 현재 SVG 텍스트를 선택 폰트 기준으로 아웃라인 변환한다.',
+];
+
+const productionCriteria = [
+  {
+    title: 'Wordmark First',
+    text: '실제 판매 화면에서는 브랜드명을 먼저 읽히게 하고, 심볼은 보조 자산으로 운용합니다.',
+  },
+  {
+    title: 'YSP Seal',
+    text: '프리미엄 패키지에서는 YSP 원형 실을 캡, 스티커, 금박 포인트로 반복 사용합니다.',
+  },
+  {
+    title: 'Low Decoration',
+    text: '잎과 드롭은 설명적 장식이 아니라 수분감과 자연 유래 이미지를 암시하는 정도로만 둡니다.',
+  },
+  {
+    title: 'Print Ready',
+    text: '웹 검토 후 실제 패키지 제작 단계에서는 폰트 아웃라인, 여백, 단색 버전을 확정해야 합니다.',
+  },
+];
+
+const premiumLogoDrafts = [
+  {
+    title: 'Signature Wordmark',
+    file: '/brand/open-design-concepts/01-pure-serif-wordmark.svg',
+    mood: '메인 로고, 웹 헤더, 박스 전면',
+    strategy: '브랜드명을 가장 먼저 읽히게 하는 주력안입니다. 40대 이상 타깃에게 신뢰감과 고급감을 주기 위해 세리프 워드마크와 낮은 채도의 식물 포인트만 남겼습니다.',
+    status: '메인 추천',
+  },
+  {
+    title: 'YSP Botanical Seal',
+    file: '/brand/open-design-concepts/02-ysp-monogram-seal.svg',
+    mood: '심볼, 캡, 스티커, 금박',
+    strategy: '패키지 반복 자산으로 가장 강한 안입니다. 로고 전체를 작게 줄이지 않고 YSP 실만 단독으로 쓰면 고급 세트와 선물 패키지에서 브랜드 기억을 만들기 좋습니다.',
+    status: '심볼 추천',
+  },
+  {
+    title: 'Botanical Cut Wordmark',
+    file: '/brand/open-design-concepts/03-botanical-cut.svg',
+    mood: '천연 성분 라인, 상세 섹션',
+    strategy: '잎을 장식으로 흩뿌리지 않고 하나의 커팅 형태로 압축했습니다. 자연 유래 성분을 강조하는 라인이나 상세페이지 성분 섹션에 적합합니다.',
+    status: '천연 성분',
+  },
+  {
+    title: 'Skin Dew Lockup',
+    file: '/brand/open-design-concepts/04-skin-dew-mark.svg',
+    mood: '보습 라인, 세럼, 크림',
+    strategy: '수분, 피부 장벽, 자연 성분을 한 번에 보여주는 가로형 락업입니다. 보습 크림, 토너, 세럼 상세 첫 화면에 쓰기 좋습니다.',
+    status: '보습 라인',
+  },
+  {
+    title: 'Apothecary Label',
+    file: '/brand/open-design-concepts/05-apothecary-label.svg',
+    mood: '박스 라벨, 세트 구성, 신뢰형',
+    strategy: '고급 약국형 라벨 구조입니다. 기능성처럼 과장하지 않으면서 신뢰감이 강해 40대 이상 고객 대상 세트 패키지에 적합합니다.',
+    status: '신뢰형',
+  },
+];
+---
+
+<BaseLayout title="YOURSKIN PLUS 브랜드 로고 방향" description="유어스킨플러스 프리미엄 자연주의 스킨케어 로고 콘셉트 보드">
+  <main class="brand-page">
+    <section class="brand-hero">
+      <nav class="top-nav" aria-label="페이지 이동">
+        <a href="/">Marketing Dashboard</a>
+        <a href="/shop-concept/">Storefront Mockup</a>
+        <a href="/product-comparison/">Product Analysis</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Brand identity direction</p>
+          <h1><span>YOURSKIN PLUS</span> 자연 성분 기반 프리미엄 클린 뷰티 로고 방향</h1>
+          <p>
+            기존 설명용 시안을 걷어내고, 실제 웹과 패키지에서 사용할 수 있는 벡터 로고 시스템으로 다시 정리했습니다.
+          </p>
+        </div>
+        <div class="hero-logo" aria-label="추천 벡터 로고 초안">
+          <img src={versionedAsset('/brand/yourskin-plus-logo-primary.svg')} alt="YOURSKIN PLUS 메인 로고" />
+          <span>Production-ready vector direction</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="summary-band">
+      <article>
+        <span>추천 콘셉트</span>
+        <strong>Signature Wordmark</strong>
+        <p>판매 화면에서 브랜드명이 가장 또렷하게 읽히는 주력 로고입니다.</p>
+      </article>
+      <article>
+        <span>브랜드 무드</span>
+        <strong>Calm Natural Luxury</strong>
+        <p>딥그린, 세리프 워드마크, 절제된 골드 포인트로 고급 천연화장품 인상을 맞춥니다.</p>
+      </article>
+      <article>
+        <span>실사용 자산</span>
+        <strong>Primary / Mono / Symbol</strong>
+        <p>웹, 상세페이지, 패키지에 바로 대입할 수 있도록 3개 운용 자산을 분리했습니다.</p>
+      </article>
+    </section>
+
+    <section class="section-block premium-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Professional SVG logo drafts</p>
+          <h2>실사용 벡터 로고 후보 5종</h2>
+        </div>
+        <p class="section-note">모든 후보는 SVG로 다시 설계했으며, 메인 추천안은 워드마크와 YSP 심볼 조합입니다.</p>
+      </div>
+      <div class="premium-grid">
+        {premiumLogoDrafts.map((draft, index) => (
+          <article class:list={['premium-card', index < 2 && 'recommended']}>
+            <img src={versionedAsset(draft.file)} alt={`YOURSKIN PLUS ${draft.title} 로고 시안`} />
+            <div class="premium-copy">
+              <span>{draft.status}</span>
+              <h3>{draft.title}</h3>
+              <strong>{draft.mood}</strong>
+              <p>{draft.strategy}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section-block logo-system">
+      <div class="section-heading">
+        <p class="eyebrow">Production logo system</p>
+        <h2>바로 운용할 기본 로고 시스템</h2>
+      </div>
+      <div class="system-grid">
+        <article class="system-card wide">
+          <span>Primary</span>
+          <img src={versionedAsset('/brand/yourskin-plus-logo-primary.svg')} alt="YOURSKIN PLUS 컬러 로고" />
+        </article>
+        <article class="system-card dark">
+          <span>Monochrome</span>
+          <img src={versionedAsset('/brand/yourskin-plus-logo-mono.svg')} alt="YOURSKIN PLUS 흑백 로고" />
+        </article>
+        <article class="system-card symbol-card">
+          <span>Symbol</span>
+          <img src={versionedAsset('/brand/yourskin-plus-symbol.svg')} alt="YOURSKIN PLUS 심볼" />
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">Production criteria</p>
+        <h2>실사용 기준</h2>
+      </div>
+      <div class="concept-grid text-only">
+        {productionCriteria.map((item) => (
+          <article class="concept-card simple-card">
+            <span>{item.title}</span>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+      <p class="reference-note">
+        현재 SVG는 웹과 내부 검토에 바로 사용할 수 있는 벡터 자산입니다. 인쇄용 최종 CI 원본은 선택한 폰트를 확정한 뒤 문자 아웃라인 변환과 최소 크기 테스트를 거쳐 마감합니다.
+      </p>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <p class="eyebrow">Brand pillars</p>
+        <h2>로고가 전달해야 할 네 가지 인상</h2>
+      </div>
+      <div class="pillar-grid">
+        {brandPillars.map((pillar) => (
+          <article>
+            <h3>{pillar.title}</h3>
+            <p>{pillar.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section-block guide-grid">
+      <article class="palette-panel">
+        <div class="section-heading compact">
+          <p class="eyebrow">Palette</p>
+          <h2>권장 컬러</h2>
+        </div>
+        <div class="color-list">
+          {colors.map((color) => (
+            <div>
+              <span style={`background:${color.hex}`}></span>
+              <strong>{color.name}</strong>
+              <small>{color.hex}</small>
+            </div>
+          ))}
+        </div>
+      </article>
+
+      <article class="rules-panel">
+        <div class="section-heading compact">
+          <p class="eyebrow">Usage rules</p>
+          <h2>운영 원칙</h2>
+        </div>
+        <ol>
+          {rules.map((rule) => (
+            <li>{rule}</li>
+          ))}
+        </ol>
+      </article>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(body) {
+    background: #f8f1e7;
+  }
+
+  :global(body.noise::before) {
+    opacity: 0.04;
+  }
+
+  .brand-page {
+    --ink: #171b18;
+    --forest: #143d2e;
+    --sage: #8aa38f;
+    --ivory: #f8f1e7;
+    --paper: #fffdf8;
+    --beige: #d9d1be;
+    --gold: #c7a670;
+    --muted: #68746b;
+    --line: rgba(20, 61, 46, 0.16);
+    min-height: 100vh;
+    padding: 28px;
+    color: var(--ink);
+    background:
+      linear-gradient(90deg, rgba(20, 61, 46, 0.045) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(20, 61, 46, 0.04) 1px, transparent 1px),
+      var(--ivory);
+    background-size: 42px 42px;
+    font-family: var(--font-body);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .brand-hero,
+  .summary-band,
+  .section-block {
+    width: min(100%, 1440px);
+    margin: 0 auto;
+  }
+
+  .brand-hero {
+    padding: 10px 0 24px;
+  }
+
+  .top-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 34px;
+  }
+
+  .top-nav a {
+    padding: 9px 12px;
+    color: var(--forest);
+    background: rgba(255, 253, 248, 0.82);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-family: var(--font-latin);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(420px, 0.72fr);
+    gap: 28px;
+    align-items: stretch;
+  }
+
+  .hero-copy,
+  .hero-logo,
+  .summary-band article,
+  .pillar-grid article,
+  .system-card,
+  .premium-card,
+  .concept-card,
+  .palette-panel,
+  .rules-panel {
+    background: rgba(255, 253, 248, 0.93);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 22px 60px rgba(20, 61, 46, 0.08);
+  }
+
+  .hero-copy {
+    display: grid;
+    align-content: end;
+    min-height: 520px;
+    padding: clamp(28px, 4.2vw, 62px);
+    background: var(--paper);
+  }
+
+  .eyebrow {
+    margin: 0;
+    color: var(--gold);
+    font-family: var(--font-latin);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .hero-copy h1 {
+    max-width: 860px;
+    margin: 12px 0 18px;
+    color: var(--forest);
+    font-size: clamp(34px, 5vw, 72px);
+    line-height: 1.02;
+    letter-spacing: 0;
+    word-break: keep-all;
+  }
+
+  .hero-copy h1 span {
+    display: block;
+    margin-bottom: 6px;
+    font-family: var(--font-latin);
+    font-size: 0.86em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-copy p {
+    max-width: 760px;
+    margin: 0;
+    color: #4f5c54;
+    font-size: 17px;
+    line-height: 1.78;
+    word-break: keep-all;
+  }
+
+  .hero-logo {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 20px;
+    min-height: 520px;
+    padding: 36px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(248, 241, 231, 0.9)),
+      var(--paper);
+  }
+
+  .hero-logo img {
+    width: min(100%, 520px);
+    height: auto;
+  }
+
+  .hero-logo span {
+    color: var(--muted);
+    font-family: var(--font-latin);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .summary-band {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+
+  .summary-band article {
+    min-height: 150px;
+    display: grid;
+    align-content: space-between;
+    gap: 12px;
+    padding: 22px;
+  }
+
+  .summary-band span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .summary-band strong {
+    color: var(--forest);
+    font-family: var(--font-latin);
+    font-size: 26px;
+    line-height: 1.08;
+  }
+
+  .summary-band p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.55;
+    word-break: keep-all;
+  }
+
+  .section-block {
+    margin-bottom: 42px;
+  }
+
+  .section-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: end;
+    margin-bottom: 16px;
+  }
+
+  .section-heading h2 {
+    margin: 5px 0 0;
+    color: var(--forest);
+    font-size: clamp(24px, 3vw, 38px);
+    line-height: 1.14;
+    letter-spacing: 0;
+    word-break: keep-all;
+  }
+
+  .section-note {
+    max-width: 380px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: right;
+    word-break: keep-all;
+  }
+
+  .section-heading.compact {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .pillar-grid,
+  .concept-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .premium-section {
+    margin-bottom: 54px;
+  }
+
+  .premium-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .premium-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--paper);
+  }
+
+  .premium-card.recommended {
+    border-color: rgba(199, 166, 112, 0.76);
+    box-shadow: 0 24px 76px rgba(20, 61, 46, 0.14);
+  }
+
+  .premium-card.recommended::before {
+    content: 'Recommended';
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 1;
+    padding: 7px 10px;
+    color: #fffdf8;
+    background: rgba(20, 61, 46, 0.92);
+    border: 1px solid rgba(255, 253, 248, 0.28);
+    border-radius: 999px;
+    font-family: var(--font-latin);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .premium-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    background: #fffdf8;
+  }
+
+  .premium-copy {
+    display: grid;
+    gap: 8px;
+    min-height: 220px;
+    padding: 20px;
+  }
+
+  .premium-copy span {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .premium-copy h3 {
+    margin: 0;
+    color: var(--forest);
+    font-family: var(--font-latin);
+    font-size: 24px;
+    line-height: 1.08;
+  }
+
+  .premium-copy strong {
+    color: #33453a;
+    font-size: 14px;
+    line-height: 1.48;
+    word-break: keep-all;
+  }
+
+  .premium-copy p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.66;
+    word-break: keep-all;
+  }
+
+  .pillar-grid article {
+    min-height: 220px;
+    display: grid;
+    align-content: space-between;
+    gap: 18px;
+    padding: 24px;
+  }
+
+  .pillar-grid h3 {
+    margin: 0;
+    color: var(--forest);
+    font-family: var(--font-latin);
+    font-size: 22px;
+    line-height: 1.12;
+  }
+
+  .pillar-grid p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    word-break: keep-all;
+  }
+
+  .system-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr) 260px;
+    gap: 14px;
+  }
+
+  .system-card {
+    min-height: 270px;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 16px;
+    padding: 24px;
+  }
+
+  .system-card span {
+    color: var(--muted);
+    font-family: var(--font-latin);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .system-card img {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+  }
+
+  .system-card.dark {
+    background: #101511;
+  }
+
+  .system-card.dark span {
+    color: #d9d1be;
+  }
+
+  .system-card.dark img {
+    filter: invert(1);
+  }
+
+  .symbol-card img {
+    max-width: 160px;
+  }
+
+  .concept-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--paper);
+  }
+
+  .concept-card.selected {
+    border-color: rgba(199, 166, 112, 0.72);
+    box-shadow: 0 24px 70px rgba(20, 61, 46, 0.13);
+  }
+
+  .concept-card.selected::before {
+    content: 'Selected direction';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    padding: 7px 9px;
+    color: #fffdf8;
+    background: rgba(20, 61, 46, 0.92);
+    border: 1px solid rgba(255, 253, 248, 0.28);
+    border-radius: 999px;
+    font-family: var(--font-latin);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  .concept-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    background: #ede5d8;
+  }
+
+  .text-only {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .simple-card {
+    min-height: 180px;
+    display: grid;
+    align-content: space-between;
+    gap: 20px;
+    padding: 22px;
+  }
+
+  .simple-card span {
+    color: var(--forest);
+    font-family: var(--font-latin);
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.15;
+  }
+
+  .simple-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.68;
+    word-break: keep-all;
+  }
+
+  .reference-note {
+    max-width: 940px;
+    margin: 14px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+    word-break: keep-all;
+  }
+
+  .concept-copy {
+    display: grid;
+    gap: 9px;
+    padding: 18px;
+  }
+
+  .concept-copy span {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .concept-copy h3 {
+    margin: 0;
+    color: var(--forest);
+    font-family: var(--font-latin);
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
+  .concept-copy p,
+  .concept-copy small {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.58;
+    word-break: keep-all;
+  }
+
+  .concept-copy small {
+    color: #385646;
+    font-weight: 800;
+  }
+
+  .guide-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 14px;
+  }
+
+  .palette-panel,
+  .rules-panel {
+    padding: 24px;
+  }
+
+  .color-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .color-list div {
+    display: grid;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .color-list span {
+    width: 100%;
+    height: 58px;
+    border: 1px solid rgba(20, 61, 46, 0.14);
+    border-radius: 8px;
+  }
+
+  .color-list strong {
+    color: var(--forest);
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+  .color-list small {
+    color: var(--muted);
+    font-family: var(--font-latin);
+    font-size: 12px;
+  }
+
+  .rules-panel ol {
+    display: grid;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    counter-reset: rules;
+  }
+
+  .rules-panel li {
+    counter-increment: rules;
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    color: #35433a;
+    font-size: 14px;
+    line-height: 1.65;
+    word-break: keep-all;
+  }
+
+  .rules-panel li::before {
+    content: counter(rules, decimal-leading-zero);
+    color: var(--gold);
+    font-family: var(--font-latin);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  @media (max-width: 1180px) {
+    .hero-grid,
+    .system-grid,
+    .guide-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .premium-grid,
+    .pillar-grid,
+    .concept-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero-copy,
+    .hero-logo {
+      min-height: 420px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .brand-page {
+      padding: 16px;
+    }
+
+    .hero-copy,
+    .hero-logo,
+    .summary-band article,
+    .pillar-grid article,
+    .palette-panel,
+    .rules-panel {
+      padding: 18px;
+    }
+
+    .summary-band,
+    .premium-grid,
+    .pillar-grid,
+    .concept-grid,
+    .color-list {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-copy,
+    .hero-logo {
+      min-height: auto;
+    }
+
+    .hero-copy h1 {
+      font-size: 36px;
+    }
+
+    .section-heading {
+      display: block;
+    }
+
+    .section-note {
+      margin-top: 8px;
+      text-align: left;
+    }
+  }
+</style>

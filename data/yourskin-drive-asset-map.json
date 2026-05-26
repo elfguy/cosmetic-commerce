@@ -1,0 +1,141 @@
+{
+  "checkedAt": "2026-05-21",
+  "driveFolder": {
+    "name": "yourskin",
+    "url": "https://drive.google.com/drive/folders/1JHfueX2yODQ4X2BOOcsA3GlUfEkmyaQc",
+    "access": "public viewer confirmed"
+  },
+  "sourceBasis": [
+    "docs/06-coupang-product-urls.md",
+    "data/yourskinplus-8-product-comparison.json",
+    "Google Drive public folder listing fetched 2026-05-21",
+    "Web search spot-check for current Coupang product URLs on 2026-05-21",
+    "Leo provided Coupang short link for soothing cream on 2026-05-21; OpenClaw Chrome resolved the exact product title, itemId, and vendorItemId"
+  ],
+  "products": [
+    {
+      "status": "matched",
+      "slug": "hyaluronic-acid-toner",
+      "coupangName": "유어스킨플러스 히알루론산 토너",
+      "shortName": "히알루론산 토너",
+      "category": "스킨 / 수분 토너",
+      "volume": "500ml",
+      "productId": "9025733014",
+      "coupangUrl": "https://www.coupang.com/vp/products/9025733014",
+      "driveFolderName": "히알루론산토너",
+      "driveTopFileName": "히알루론산토너.png",
+      "workFolder": "data/source-assets/yourskin-drive/hyaluronic-acid-toner"
+    },
+    {
+      "status": "matched",
+      "slug": "aqua-lotion",
+      "coupangName": "유어스킨플러스 히알루론산 아쿠아 로션",
+      "shortName": "아쿠아 로션",
+      "category": "로션 / 데일리 보습",
+      "volume": "300ml",
+      "productId": "9218811640",
+      "coupangUrl": "https://www.coupang.com/vp/products/9218811640",
+      "driveFolderName": "아쿠아로션",
+      "driveTopFileName": "아쿠아로션.png",
+      "workFolder": "data/source-assets/yourskin-drive/aqua-lotion"
+    },
+    {
+      "status": "matched",
+      "slug": "cleansing-oil",
+      "coupangName": "유어스킨플러스 퓨어 딥 클렌징 오일",
+      "shortName": "퓨어 딥 클렌징 오일",
+      "category": "클렌징 오일",
+      "volume": "300ml",
+      "productId": "9221762154",
+      "coupangUrl": "https://www.coupang.com/vp/products/9221762154",
+      "driveFolderName": "클렌징오일",
+      "driveTopFileName": "클렌징오일.png",
+      "workFolder": "data/source-assets/yourskin-drive/cleansing-oil"
+    },
+    {
+      "status": "matched",
+      "slug": "low-ph-cleansing-gel",
+      "coupangName": "유어스킨플러스 로우 피에이치 클렌징 젤",
+      "shortName": "로우 피에이치 클렌징 젤",
+      "category": "약산성 젤 클렌저",
+      "volume": "300ml",
+      "productId": "9025751494",
+      "coupangUrl": "https://www.coupang.com/vp/products/9025751494",
+      "driveFolderName": "클렌징젤",
+      "driveTopFileName": "클렌징젤.png",
+      "workFolder": "data/source-assets/yourskin-drive/low-ph-cleansing-gel"
+    },
+    {
+      "status": "matched",
+      "slug": "rose-damascus-tonic-essence",
+      "coupangName": "유어스킨플러스 로즈 다마스쿠스 토닉 에센스",
+      "shortName": "로즈 토닉 에센스",
+      "category": "토너 겸 에센스",
+      "volume": "150ml",
+      "productId": "9025775541",
+      "coupangUrl": "https://www.coupang.com/vp/products/9025775541",
+      "driveFolderName": "로즈에센스",
+      "driveTopFileName": "로즈에센스.jpg",
+      "workFolder": "data/source-assets/yourskin-drive/rose-damascus-tonic-essence"
+    },
+    {
+      "status": "matched",
+      "slug": "younger-than-all-in-one-lotion",
+      "coupangName": "유어스킨플러스 영거 댄 올인원 로션",
+      "shortName": "영거 댄 올인원",
+      "category": "남성 올인원 로션",
+      "volume": "200ml",
+      "productId": "9025793946",
+      "coupangUrl": "https://www.coupang.com/vp/products/9025793946",
+      "driveFolderName": "올인원로션",
+      "driveTopFileName": "올인원로션.png",
+      "workFolder": "data/source-assets/yourskin-drive/younger-than-all-in-one-lotion"
+    },
+    {
+      "status": "matched",
+      "slug": "moisture-lip-balm",
+      "coupangName": "유어스킨플러스 모이스춰 립밤",
+      "shortName": "모이스춰 립밤",
+      "category": "립케어 / 무색 립밤",
+      "volume": "4g; Coupang option quantity needs reconfirmation",
+      "productId": "9025810298",
+      "coupangUrl": "https://www.coupang.com/vp/products/9025810298",
+      "driveFolderName": "립밤",
+      "driveTopFileName": "모이수춰립밤.png",
+      "workFolder": "data/source-assets/yourskin-drive/moisture-lip-balm",
+      "notes": "Drive spelling appears as 모이수춰립밤.png."
+    },
+    {
+      "status": "matched",
+      "slug": "whitening-tone-care-cream",
+      "coupangName": "유어스킨플러스 화이트닝 톤 케어 크림",
+      "shortName": "화이트닝 톤 케어 크림",
+      "category": "페이셜 크림 / 톤 케어",
+      "volume": "200ml",
+      "productId": "9264527939",
+      "itemId": "27414863570",
+      "vendorItemId": "94380449351",
+      "coupangUrl": "https://www.coupang.com/vp/products/9264527939?itemId=27414863570&vendorItemId=94380449351",
+      "driveFolderName": "톤케어크림",
+      "driveTopFileName": "톤케어크림.png",
+      "workFolder": "data/source-assets/yourskin-drive/whitening-tone-care-cream"
+    },
+    {
+      "status": "matched",
+      "slug": "unmatched-soothing-cream",
+      "coupangName": "유어스킨플러스 피디알엔 히알루론산 수딩 크림",
+      "shortName": "수딩크림",
+      "category": "페이셜크림",
+      "volume": null,
+      "productId": "9402735935",
+      "itemId": "27931591582",
+      "vendorItemId": "94889995486",
+      "coupangShortUrl": "https://link.coupang.com/a/dVaHrRpFro?abTestInfo=100412_group_A",
+      "coupangUrl": "https://www.coupang.com/vp/products/9402735935?itemId=27931591582&vendorItemId=94889995486",
+      "driveFolderName": "수딩크림",
+      "driveTopFileName": "수딩크림.png",
+      "workFolder": "data/source-assets/yourskin-drive/unmatched-soothing-cream",
+      "notes": "Confirmed via OpenClaw Chrome tab title and resolved URL. Fetch still receives Akamai Access Denied, so use Chrome/Wing for page body checks."
+    }
+  ]
+}

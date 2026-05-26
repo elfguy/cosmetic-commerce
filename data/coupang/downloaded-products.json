@@ -1,0 +1,4461 @@
+{
+  "source": "coupang-openapi",
+  "generatedAt": "2026-05-24T10:39:15.609Z",
+  "count": 11,
+  "products": [
+    {
+      "slug": "9402746236",
+      "fileName": "Coupang OpenAPI",
+      "fileSize": 0,
+      "name": "유어스킨플러스 피디알렌 히알루론산 앰플",
+      "description": "유어스킨플러스 피디알렌 히알루론산 앰플",
+      "productId": "9402746236",
+      "sellerProductId": "16067541475",
+      "itemId": "27931626293",
+      "vendorItemId": "94890028910",
+      "sku": "",
+      "url": "https://www.coupang.com/vp/products/9402746236?itemId=27931626293&vendorItemId=94890028910",
+      "category": "쿠팡 등록 상품",
+      "categories": [
+        56172
+      ],
+      "price": 12500,
+      "originalPrice": 12500,
+      "discountRate": 0,
+      "availability": "승인완료",
+      "ratingValue": 0,
+      "reviewCount": 0,
+      "images": [
+        "https://image.coupangcdn.com/image/vendor_inventory/f73e/3aea0f698fbc7b41026bf70d13e0cb62f26b77bf9daf2aac01e55a76205b.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/b0e8/d0098516d49f80a8cd31bfacc2674e758dadadac27e9dd6aa23f99c1ffae.jpg",
+        "https://image.coupangcdn.com/image/vendor_inventory/658b/6a678de26391aeff3dae8ba86d1605fefb0e16e8d9f4a349d659c841cd07.jpg"
+      ],
+      "detailImages": [
+        {
+          "src": "/coupang-detail/9402746236/01.png",
+          "cdnPath": "vendor_inventory/1184/5e2055fa94ba6967d3b0c276e80797eca6f8dd8cd9b9dd9e8dd5cfefb14a.png",
+          "sourceOrder": 1,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1136678
+        },
+        {
+          "src": "/coupang-detail/9402746236/02.png",
+          "cdnPath": "vendor_inventory/00b7/2fe6659e4eb7e704e9a32d2aa8368ac25822cbd4fce769a5e6ac050305cb.png",
+          "sourceOrder": 2,
+          "width": 780,
+          "height": 1360,
+          "bytes": 786519
+        },
+        {
+          "src": "/coupang-detail/9402746236/03.png",
+          "cdnPath": "vendor_inventory/cdb6/cc23d31e5b04a3194823fd274b9c8898ea0013fc2ebe3f125b796ae11950.png",
+          "sourceOrder": 3,
+          "width": 780,
+          "height": 1360,
+          "bytes": 939503
+        },
+        {
+          "src": "/coupang-detail/9402746236/04.png",
+          "cdnPath": "vendor_inventory/e3a3/5483e2c881df3ef712a8f286696dc9b841e2d43f85a3285418576bcd31ce.png",
+          "sourceOrder": 4,
+          "width": 780,
+          "height": 1360,
+          "bytes": 626438
+        },
+        {
+          "src": "/coupang-detail/9402746236/05.png",
+          "cdnPath": "vendor_inventory/3795/74847e1d5dddbeae2a4584d17739326ffc5322c88486a79b75ae32287958.png",
+          "sourceOrder": 5,
+          "width": 780,
+          "height": 1360,
+          "bytes": 613144
+        },
+        {
+          "src": "/coupang-detail/9402746236/06.png",
+          "cdnPath": "vendor_inventory/1974/9db26cd1e8dee03192ad7da66ca742682e9ee30b801159ce5edeebe954ec.png",
+          "sourceOrder": 6,
+          "width": 780,
+          "height": 1360,
+          "bytes": 468768
+        },
+        {
+          "src": "/coupang-detail/9402746236/07.png",
+          "cdnPath": "vendor_inventory/c69b/ac9c78ccb1c548c313604691f01dff1e8fd795fcf384b190e549babe8f15.png",
+          "sourceOrder": 7,
+          "width": 780,
+          "height": 1360,
+          "bytes": 252894
+        },
+        {
+          "src": "/coupang-detail/9402746236/08.png",
+          "cdnPath": "vendor_inventory/e9ae/df77023a5f0daac126f3dc296b6bcb7362cecc651d090f73d6cd5674932a.png",
+          "sourceOrder": 8,
+          "width": 780,
+          "height": 1360,
+          "bytes": 611445
+        },
+        {
+          "src": "/coupang-detail/9402746236/09.png",
+          "cdnPath": "vendor_inventory/803f/5636e13a94cdbb7367607b1bd24aae7701db1bad38fd2dd592a5c1cd079a.png",
+          "sourceOrder": 9,
+          "width": 780,
+          "height": 1360,
+          "bytes": 561857
+        },
+        {
+          "src": "/coupang-detail/9402746236/10.png",
+          "cdnPath": "vendor_inventory/557d/d4d6f3826781483b501d5f2d63ff4777784ec8c1e4e9404529f63073fa03.png",
+          "sourceOrder": 10,
+          "width": 780,
+          "height": 1360,
+          "bytes": 428022
+        },
+        {
+          "src": "/coupang-detail/9402746236/11.png",
+          "cdnPath": "vendor_inventory/3bb7/7dd6f020b711823fb3ca75c1a9d82eac829701b5e5fbdbdf67c3be1afa97.png",
+          "sourceOrder": 11,
+          "width": 780,
+          "height": 1360,
+          "bytes": 118790
+        },
+        {
+          "src": "/coupang-detail/9402746236/12.png",
+          "cdnPath": "vendor_inventory/3f2b/400d6fb71bc2a9840b727e01fd5a2725de7996135094f99eb01204adca05.png",
+          "sourceOrder": 12,
+          "width": 780,
+          "height": 1360,
+          "bytes": 352561
+        }
+      ],
+      "api": {
+        "source": "coupang-openapi",
+        "sellerProductId": "16067541475",
+        "statusName": "승인완료",
+        "saleStartedAt": "2026-02-27T15:25:27",
+        "saleEndedAt": "2099-12-31T00:00:00",
+        "brand": "유어스킨플러스(YOURSKIN+)",
+        "displayProductName": "유어스킨플러스 피디알렌 히알루론산 앰플",
+        "generalProductName": "유어스킨플러스 피디알렌 히알루론산 앰플",
+        "productGroup": "쿠팡 등록 상품",
+        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/f73e/3aea0f698fbc7b41026bf70d13e0cb62f26b77bf9daf2aac01e55a76205b.png",
+        "productImageCount": 3,
+        "detailContentImageCount": 12,
+        "searchTags": [],
+        "notices": [
+          {
+            "name": "용량(중량)",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제품 주요 사양",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용기한 또는 개봉 후 사용기간",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용방법",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제조국",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따라 기재, 표시하여야 하는 모든 성분",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따른 기능성 화장품 심사(또는 보고)를 필함 해당 유무",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용할 때 주의사항",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "품질보증기준",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "소비자상담관련 전화번호",
+            "content": "상품 상세페이지 참조"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "스킨케어 향",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 유형 무료",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "기능성화장품 인증여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 중량(g)",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "주성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부톤",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 특징",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향 유무",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 용량",
+            "value": "25ml",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "선케어 SPF",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부고민",
+            "value": "진정/보습",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 색상계열",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "GTIN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Parent MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Variation MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부타입",
+            "value": "모든피부",
+            "unit": "NONE"
+          },
+          {
+            "name": "향기",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제품의 권장 용도",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 용량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "수량",
+            "value": "1개",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "사이즈",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "용기형태",
+            "value": "스포이드형",
+            "unit": "NONE"
+          },
+          {
+            "name": "구성품",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "스킨케어 특별성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용 부위",
+            "value": "얼굴",
+            "unit": "NONE"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "9402735935",
+      "fileName": "Chrome 갤러리 이미지 수집: 유어스킨플러스 피디알엔 히알루론산 수딩 크림",
+      "fileSize": 0,
+      "name": "유어스킨플러스 피디알엔 히알루론산 수딩 크림",
+      "description": "쿠팡 Chrome 확인 기준 200ml 속건조 수딩 크림. 제품 갤러리 이미지는 수집했지만 쿠팡 상세페이지 세로 이미지/고시정보 원본은 아직 미수집 상태입니다.",
+      "productId": "9402735935",
+      "sellerProductId": "16067531249",
+      "itemId": "27931591582",
+      "vendorItemId": "94889995486",
+      "sku": "9402735935-27931591582",
+      "url": "https://www.coupang.com/vp/products/9402735935?itemId=27931591582&vendorItemId=94889995486",
+      "category": "페이셜크림",
+      "categories": [
+        "쿠팡수입",
+        "뷰티",
+        "스킨케어",
+        "크림/올인원",
+        "페이셜크림"
+      ],
+      "price": 12800,
+      "originalPrice": 23000,
+      "discountRate": 44,
+      "availability": "승인완료",
+      "ratingValue": 0,
+      "reviewCount": 0,
+      "images": [
+        "https://image.coupangcdn.com/image/vendor_inventory/7a78/f036ddce8f3e099c35803673469aef4382b27e6e5a0a351e244859da8cc2.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/6c15/8c9fa265138f1d15e38075bd638fe10ad02dee99f40b843bf5743a423537.jpg",
+        "https://image.coupangcdn.com/image/vendor_inventory/9544/ef2f52182378a889fed4289df53083bf487edd21bd465472f811b6f5e4a6.jpg",
+        "https://image.coupangcdn.com/image/vendor_inventory/5927/48c19e71900ec548fb98ccb7ed2ad54f1f66981eeeca79c8abe3b3d8bd7b.jpg",
+        "https://image.coupangcdn.com/image/vendor_inventory/abc9/51bc234c4f529bd46cc2f642933994ae68948e6cc2ec4280c3054b09dee1.jpg",
+        "https://image.coupangcdn.com/image/vendor_inventory/f956/b33caf168530f552d1bf7706da48f94ec5ff886c9781310b0e40b406a8b4.jpg"
+      ],
+      "detailImages": [
+        {
+          "src": "/coupang-detail/9402735935/01.png",
+          "cdnPath": "vendor_inventory/a035/b1d3aa8f9838fd087ba7cdc25fdffb1d43b6956903d7b69e4a0f0a43b18f.png",
+          "sourceOrder": 1,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1018568
+        },
+        {
+          "src": "/coupang-detail/9402735935/02.png",
+          "cdnPath": "vendor_inventory/280a/e89820faf1aaf1d8e04667484c3928dbe74f42c24f931befc0d34dbe7425.png",
+          "sourceOrder": 2,
+          "width": 780,
+          "height": 1360,
+          "bytes": 640029
+        },
+        {
+          "src": "/coupang-detail/9402735935/03.png",
+          "cdnPath": "vendor_inventory/49eb/8041a4f44d3ae4cbc3076ead8fb1d0fc0e9228da3012babd742605db884a.png",
+          "sourceOrder": 3,
+          "width": 780,
+          "height": 1360,
+          "bytes": 693748
+        },
+        {
+          "src": "/coupang-detail/9402735935/04.png",
+          "cdnPath": "vendor_inventory/5b0a/d2ab7b4888ef627f379c15c07bf9f807ffcb13b3aab7f38263a0d648c1ae.png",
+          "sourceOrder": 4,
+          "width": 780,
+          "height": 1360,
+          "bytes": 673379
+        },
+        {
+          "src": "/coupang-detail/9402735935/05.png",
+          "cdnPath": "vendor_inventory/a290/26bfebd324ce2dd5fa6e9952795f2e71f4aab086b4f0f18d33ec82022ffd.png",
+          "sourceOrder": 5,
+          "width": 780,
+          "height": 1360,
+          "bytes": 637713
+        },
+        {
+          "src": "/coupang-detail/9402735935/06.png",
+          "cdnPath": "vendor_inventory/c8a6/7de3903fc14d116021fa20df64d49c6c58538794349289e28489cb3026b2.png",
+          "sourceOrder": 6,
+          "width": 780,
+          "height": 1360,
+          "bytes": 726728
+        },
+        {
+          "src": "/coupang-detail/9402735935/07.png",
+          "cdnPath": "vendor_inventory/f8c7/eed3ebd9d84bd1a914cd683a15e4d0e6b095c758d0c19ebd5086ad339357.png",
+          "sourceOrder": 7,
+          "width": 780,
+          "height": 1360,
+          "bytes": 835168
+        },
+        {
+          "src": "/coupang-detail/9402735935/08.png",
+          "cdnPath": "vendor_inventory/b717/552eb528a2f8cf1a7daf4b48bfa15ebcef572c64f7e105a105d792d4c5e4.png",
+          "sourceOrder": 8,
+          "width": 780,
+          "height": 1360,
+          "bytes": 377398
+        },
+        {
+          "src": "/coupang-detail/9402735935/09.png",
+          "cdnPath": "vendor_inventory/9e88/b2536b4e5fe9a36ffff02fd78af4bc9e5477c163e24482f827d657e715f7.png",
+          "sourceOrder": 9,
+          "width": 780,
+          "height": 1360,
+          "bytes": 317867
+        },
+        {
+          "src": "/coupang-detail/9402735935/10.png",
+          "cdnPath": "vendor_inventory/b749/8459be320b28a720749f8a02a19d0f94b61c8715e0177d1c7aa73f65f9de.png",
+          "sourceOrder": 10,
+          "width": 780,
+          "height": 1360,
+          "bytes": 679246
+        },
+        {
+          "src": "/coupang-detail/9402735935/11.png",
+          "cdnPath": "vendor_inventory/ff34/b5e2144827ef4082203ff1f69a55c14748bbc22eb366f103bedfe1a5fbba.png",
+          "sourceOrder": 11,
+          "width": 780,
+          "height": 1360,
+          "bytes": 378622
+        },
+        {
+          "src": "/coupang-detail/9402735935/12.png",
+          "cdnPath": "vendor_inventory/fc5d/f95b98741f34489d2c39aba4d8d165254b4380367045aa22e9526f7cc0a5.png",
+          "sourceOrder": 12,
+          "width": 780,
+          "height": 1360,
+          "bytes": 518726
+        },
+        {
+          "src": "/coupang-detail/9402735935/13.png",
+          "cdnPath": "vendor_inventory/1e15/3de98dd2ab07ed9df575f82663da79ce0a3fb5750c9fdbed4e8126ef62c1.png",
+          "sourceOrder": 13,
+          "width": 780,
+          "height": 1360,
+          "bytes": 428022
+        },
+        {
+          "src": "/coupang-detail/9402735935/14.png",
+          "cdnPath": "vendor_inventory/b611/f89841f172fef6cc5d373cb6a3d7c4d598d8f3c8aabd4f29fa95096740d8.png",
+          "sourceOrder": 14,
+          "width": 780,
+          "height": 1360,
+          "bytes": 132689
+        },
+        {
+          "src": "/coupang-detail/9402735935/15.png",
+          "cdnPath": "vendor_inventory/cab0/7412f26fda70b9485ae68931cc11c054916cd90875e6f29db13eef04c94d.png",
+          "sourceOrder": 15,
+          "width": 780,
+          "height": 1360,
+          "bytes": 352561
+        }
+      ],
+      "api": {
+        "source": "coupang-openapi",
+        "sellerProductId": "16067531249",
+        "statusName": "승인완료",
+        "saleStartedAt": "2026-04-28T09:52:12",
+        "saleEndedAt": "2099-12-31T00:00:00",
+        "brand": "유어스킨플러스(YOURSKIN+)",
+        "displayProductName": "유어스킨플러스 피디알엔 히알루론산 수딩 크림",
+        "generalProductName": "유어스킨플러스 피디알엔 히알루론산 수딩 크림",
+        "productGroup": "페이셜크림",
+        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/7a78/f036ddce8f3e099c35803673469aef4382b27e6e5a0a351e244859da8cc2.png",
+        "productImageCount": 6,
+        "detailContentImageCount": 15,
+        "searchTags": [],
+        "notices": [
+          {
+            "name": "용량(중량)",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제품 주요 사양",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용기한 또는 개봉 후 사용기간",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용방법",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제조국",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따라 기재, 표시하여야 하는 모든 성분",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따른 기능성 화장품 심사(또는 보고)를 필함 해당 유무",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용할 때 주의사항",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "품질보증기준",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "소비자상담관련 전화번호",
+            "content": "상품 상세페이지 참조"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 유형 무료",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "구성",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "기능성화장품 인증여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 중량(g)",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "바디용품 사용대상",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제품의 특정 용도",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "마사지용 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "주성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "간단한 제품 설명",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 특징",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향 유무",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "바디로션 기능",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 용량",
+            "value": "200ml",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "제품 장점",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 향",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "선케어 SPF",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부고민",
+            "value": "속건조",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 색상계열",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "특별한 기능",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "GTIN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Parent MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Variation MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드케어 용기타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부타입",
+            "value": "모든피부",
+            "unit": "NONE"
+          },
+          {
+            "name": "용기 종류",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향기",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제품의 권장 용도",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 용량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "수량",
+            "value": "1개",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "바디케어 제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "기획세트 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "패키지 유형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사이즈",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "크림 타입",
+            "value": "크림",
+            "unit": "NONE"
+          },
+          {
+            "name": "미스트 종류",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "안개분사 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "용기형태",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드케어 타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용대상",
+            "value": "남녀공용",
+            "unit": "NONE"
+          },
+          {
+            "name": "스킨케어 특별성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "패턴",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용 부위",
+            "value": "얼굴",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티오일 성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "스타일",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 수량",
+            "value": "",
+            "unit": "NONE"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "9264527939",
+      "fileName": "유어스킨플러스 화이트닝 톤 케어 크림 - 페이셜크림 _ 쿠팡.html",
+      "fileSize": 2816193,
+      "name": "유어스킨플러스 화이트닝 톤 케어 크림",
+      "description": "쿠팡에서 유어스킨플러스 화이트닝 톤 케어 크림 구매하고 더 많은 혜택을 받으세요! 지금 할인중인 다른 페이셜크림 제품도 바로 쿠팡에서 확인할 수 있습니다.",
+      "productId": "9264527939",
+      "sellerProductId": "15939226045",
+      "itemId": "27414863570",
+      "vendorItemId": "94380449351",
+      "sku": "9264527939-27414863570",
+      "url": "https://www.coupang.com/vp/products/9264527939?itemId=27414863570&vendorItemId=94380449351",
+      "category": "페이셜크림",
+      "categories": [
+        "쿠팡수입",
+        "뷰티",
+        "스킨케어",
+        "크림/올인원",
+        "페이셜크림"
+      ],
+      "price": 10100,
+      "originalPrice": 18500,
+      "discountRate": 45,
+      "availability": "승인완료",
+      "ratingValue": 5,
+      "reviewCount": 23,
+      "images": [
+        "https://image.coupangcdn.com/image/vendor_inventory/7e20/33ecb9de5fe6530fd33075b19d8feb715f87527ff073beccad861e0883da.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/ccba/755f8fa4ffb0a1a8de95d3f8df1518de366124ade3f55022bdd74bddf89f.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/0212/a747dff1c0c412f851264d6bb726fd925e2090bb163b5388389c286f7115.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/7aae/ca00f5a0fb696411c1770639f36125663a0c45ead91bdfce46d575566011.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/db3e/35499d45cf5048d516f47a180f3ec11a6c6ee11201498c90ee4140c1d793.png"
+      ],
+      "detailImages": [
+        {
+          "src": "/coupang-detail/9264527939/01.png",
+          "cdnPath": "vendor_inventory/d1c9/125285b9f5f53ecc8de8b331af1aa3e02bed58dc13d9bbe6bd1b7ac7e5a9.png",
+          "sourceOrder": 1,
+          "width": 780,
+          "height": 1360,
+          "bytes": 518459
+        },
+        {
+          "src": "/coupang-detail/9264527939/02.png",
+          "cdnPath": "vendor_inventory/92b9/e509189ca2f8e35c9858c7cb126867f6d318ae48599bf0c870a2db491f5a.png",
+          "sourceOrder": 2,
+          "width": 780,
+          "height": 1360,
+          "bytes": 601128
+        },
+        {
+          "src": "/coupang-detail/9264527939/03.png",
+          "cdnPath": "vendor_inventory/6276/ac8d9fc7345185f1393d7f4b5b39a7b34c90378248adc0a62b5896670e99.png",
+          "sourceOrder": 3,
+          "width": 780,
+          "height": 1360,
+          "bytes": 668022
+        },
+        {
+          "src": "/coupang-detail/9264527939/04.png",
+          "cdnPath": "vendor_inventory/0129/1b81ed04c5c448e05ca97b77ce6011998e8685157c5929f4b25d43838613.png",
+          "sourceOrder": 4,
+          "width": 780,
+          "height": 1360,
+          "bytes": 598413
+        },
+        {
+          "src": "/coupang-detail/9264527939/05.png",
+          "cdnPath": "vendor_inventory/70a8/951b5478f3544438b72b50e47fff4b7e189271e5b1ce90eeb25056663b92.png",
+          "sourceOrder": 5,
+          "width": 780,
+          "height": 1360,
+          "bytes": 566506
+        },
+        {
+          "src": "/coupang-detail/9264527939/06.png",
+          "cdnPath": "vendor_inventory/6053/eccf9753a2ebd52336791e0547a6bc8a3a01984496218e6cad499db8f890.png",
+          "sourceOrder": 6,
+          "width": 780,
+          "height": 1360,
+          "bytes": 211058
+        },
+        {
+          "src": "/coupang-detail/9264527939/07.png",
+          "cdnPath": "vendor_inventory/272b/4bcc71db84cbd64375441ac890fe8b2c4308381d547ff3e80f48545d5fbc.png",
+          "sourceOrder": 7,
+          "width": 780,
+          "height": 1360,
+          "bytes": 944488
+        },
+        {
+          "src": "/coupang-detail/9264527939/08.png",
+          "cdnPath": "vendor_inventory/4fba/b8694771c10b82cf6459154afd3753df18dce70d60c67b8c14b37337e25d.png",
+          "sourceOrder": 8,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1117662
+        },
+        {
+          "src": "/coupang-detail/9264527939/09.png",
+          "cdnPath": "vendor_inventory/352f/753f7f535eda3e69f1da3ba9031dc99911d62899072490c3afeb93142185.png",
+          "sourceOrder": 9,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1165290
+        },
+        {
+          "src": "/coupang-detail/9264527939/10.png",
+          "cdnPath": "vendor_inventory/1fbd/1cc777dabc4e728d1adb618b0ef48525e64c0f304a47cf770db3caa68148.png",
+          "sourceOrder": 10,
+          "width": 780,
+          "height": 1360,
+          "bytes": 378797
+        },
+        {
+          "src": "/coupang-detail/9264527939/11.png",
+          "cdnPath": "vendor_inventory/57d9/85a9d906027839ba5f01f2996170ab6a4e882cd15d42c69ea4b7addbda5a.png",
+          "sourceOrder": 11,
+          "width": 780,
+          "height": 1360,
+          "bytes": 382357
+        },
+        {
+          "src": "/coupang-detail/9264527939/12.png",
+          "cdnPath": "vendor_inventory/a6cd/d14d6d3920a71870e054794aead6e932aec8c125d2908db79a8cd8efbba6.png",
+          "sourceOrder": 12,
+          "width": 780,
+          "height": 1360,
+          "bytes": 428022
+        },
+        {
+          "src": "/coupang-detail/9264527939/13.png",
+          "cdnPath": "vendor_inventory/a99e/d479b1999cae296309c2c37d52ee6b6f7541509ca241b13a6acc75721a16.png",
+          "sourceOrder": 13,
+          "width": 780,
+          "height": 1360,
+          "bytes": 127147
+        },
+        {
+          "src": "/coupang-detail/9264527939/14.png",
+          "cdnPath": "vendor_inventory/cab0/7412f26fda70b9485ae68931cc11c054916cd90875e6f29db13eef04c94d.png",
+          "sourceOrder": 14,
+          "width": 780,
+          "height": 1360,
+          "bytes": 352561
+        }
+      ],
+      "api": {
+        "source": "coupang-openapi",
+        "sellerProductId": "15939226045",
+        "statusName": "승인완료",
+        "saleStartedAt": "2026-04-20T16:28:45",
+        "saleEndedAt": "2099-12-31T00:00:00",
+        "brand": "유어스킨플러스",
+        "displayProductName": "유어스킨플러스 화이트닝 톤 케어 크림",
+        "generalProductName": "유어스킨플러스 화이트닝 톤 케어 크림",
+        "productGroup": "페이셜크림",
+        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/7e20/33ecb9de5fe6530fd33075b19d8feb715f87527ff073beccad861e0883da.png",
+        "productImageCount": 5,
+        "detailContentImageCount": 14,
+        "searchTags": [
+          "광채 톤업크림",
+          "미백 화이트닝 크림",
+          "미백크림",
+          "미백화이트닝크림",
+          "미백화장품",
+          "수면 미백크림",
+          "수면 톤업크림",
+          "얼굴 미백크림",
+          "얼굴 톤업크림",
+          "얼굴 화이트닝 크림",
+          "여성 미백크림",
+          "여성 톤업크림",
+          "여성 화이트닝 크림",
+          "잡티 화이트닝 크림",
+          "크림",
+          "톤업",
+          "톤업크림",
+          "화이트닝",
+          "화이트닝 톤업 크림",
+          "화이트닝크림"
+        ],
+        "notices": [
+          {
+            "name": "용량(중량)",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제품 주요 사양",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용기한 또는 개봉 후 사용기간",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용방법",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제조국",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따라 기재, 표시하여야 하는 모든 성분",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따른 기능성 화장품 심사(또는 보고)를 필함 해당 유무",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용할 때 주의사항",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "품질보증기준",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "소비자상담관련 전화번호",
+            "content": "상품 상세페이지 참조"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 유형 무료",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "구성",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "기능성화장품 인증여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 중량(g)",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "바디용품 사용대상",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제품의 특정 용도",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "마사지용 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "주성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "간단한 제품 설명",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 특징",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향 유무",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "바디로션 기능",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 용량",
+            "value": "200ml",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "제품 장점",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 향",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "선케어 SPF",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부고민",
+            "value": "브라이트닝",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 색상계열",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "특별한 기능",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "GTIN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Parent MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Variation MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드케어 용기타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부타입",
+            "value": "모든피부",
+            "unit": "NONE"
+          },
+          {
+            "name": "용기 종류",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향기",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제품의 권장 용도",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 용량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "수량",
+            "value": "1개",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "바디케어 제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "기획세트 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "패키지 유형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사이즈",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "크림 타입",
+            "value": "크림",
+            "unit": "NONE"
+          },
+          {
+            "name": "미스트 종류",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "안개분사 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "용기형태",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드케어 타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용대상",
+            "value": "남녀공용",
+            "unit": "NONE"
+          },
+          {
+            "name": "스킨케어 특별성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "패턴",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용 부위",
+            "value": "얼굴",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티오일 성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "스타일",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 수량",
+            "value": "",
+            "unit": "NONE"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "9221762154",
+      "fileName": "유어스킨플러스 퓨어 딥 클렌징 오일 - 오일_워터 _ 쿠팡.html",
+      "fileSize": 2932608,
+      "name": "유어스킨플러스 퓨어 딥 클렌징 오일",
+      "description": "쿠팡에서 유어스킨플러스 퓨어 딥 클렌징 오일 구매하고 더 많은 혜택을 받으세요! 지금 할인중인 다른 오일/워터 제품도 바로 쿠팡에서 확인할 수 있습니다.",
+      "productId": "9221762154",
+      "sellerProductId": "15895536803",
+      "itemId": "27251064471",
+      "vendorItemId": "94217941616",
+      "sku": "9221762154-27251064471",
+      "url": "https://www.coupang.com/vp/products/9221762154?itemId=27251064471&vendorItemId=94217941616",
+      "category": "오일/워터",
+      "categories": [
+        "생활용품",
+        "바디/세안",
+        "클렌징/필링",
+        "클렌징",
+        "오일/워터"
+      ],
+      "price": 12700,
+      "originalPrice": 23000,
+      "discountRate": 45,
+      "availability": "승인완료",
+      "ratingValue": 5,
+      "reviewCount": 32,
+      "images": [
+        "https://image.coupangcdn.com/image/vendor_inventory/0f2a/a03a7972af9216210a9a6498b1494ee87992353f73a4c7f89510eaed4f9c.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/2502/449b97de173391425be1f8ac00e711e4c16c7c03bb6c41ce019610b4879d.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/f439/24e6d08c9ee37ad838fbea11fbcf782ec232f2d7dae234db42d2581c8611.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/e2d3/f7a91995be08fa5c79524014e3c67cfd13ee2a7aab37085b36c83a50cfa0.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/bf3b/6e88ebc909349950224c9a0c9835be7fb4336c0f2e8aa268913827f21e35.png"
+      ],
+      "detailImages": [
+        {
+          "src": "/coupang-detail/9221762154/01.png",
+          "cdnPath": "vendor_inventory/7834/8907c86dd55d11b24b9446572b0a8984ef3aa34770b0cb75207127ac7daa.png",
+          "sourceOrder": 1,
+          "width": 780,
+          "height": 1360,
+          "bytes": 871049
+        },
+        {
+          "src": "/coupang-detail/9221762154/02.png",
+          "cdnPath": "vendor_inventory/72ae/1d994ddcfbdd0824d8f7446c4f8c54b3ddcab438e99d94f79c11cc5bf0d1.png",
+          "sourceOrder": 2,
+          "width": 780,
+          "height": 1360,
+          "bytes": 333758
+        },
+        {
+          "src": "/coupang-detail/9221762154/03.png",
+          "cdnPath": "vendor_inventory/eaff/df7f2da46a9b073765b7103e711fe0d21426bad465d45a7a7bf864d9d97f.png",
+          "sourceOrder": 3,
+          "width": 780,
+          "height": 1360,
+          "bytes": 382661
+        },
+        {
+          "src": "/coupang-detail/9221762154/04.png",
+          "cdnPath": "vendor_inventory/0273/4ec072eebc8663bbdab93077899470cb64872cef87a028e8262060a97bd4.png",
+          "sourceOrder": 4,
+          "width": 780,
+          "height": 1360,
+          "bytes": 528133
+        },
+        {
+          "src": "/coupang-detail/9221762154/05.png",
+          "cdnPath": "vendor_inventory/3b00/8a6430f88ca8cda4e135e52f0ea83bffb52567b9e3a07f3dd0aa3b50991e.png",
+          "sourceOrder": 5,
+          "width": 780,
+          "height": 1360,
+          "bytes": 803966
+        },
+        {
+          "src": "/coupang-detail/9221762154/06.png",
+          "cdnPath": "vendor_inventory/cc41/7dff84a644a3ebabc3ad8ebf1c7979892647d19795222b86f53dfda913b0.png",
+          "sourceOrder": 6,
+          "width": 780,
+          "height": 1360,
+          "bytes": 297191
+        },
+        {
+          "src": "/coupang-detail/9221762154/07.png",
+          "cdnPath": "vendor_inventory/bd9b/33f0f1362a54966a7c120abecab40bc3d15002ff90427aa710a916c9500a.png",
+          "sourceOrder": 7,
+          "width": 780,
+          "height": 1360,
+          "bytes": 475185
+        },
+        {
+          "src": "/coupang-detail/9221762154/08.png",
+          "cdnPath": "vendor_inventory/e598/41c8442d8a3c9f01d9f845c1850c96559299b5a39c4b2ad94ef28ef12ec9.png",
+          "sourceOrder": 8,
+          "width": 780,
+          "height": 1360,
+          "bytes": 731825
+        },
+        {
+          "src": "/coupang-detail/9221762154/09.png",
+          "cdnPath": "vendor_inventory/b5e2/ac1474ccffa844a989445f25e60c25f40dd00ff49de5a291e1522c8b7bc8.png",
+          "sourceOrder": 9,
+          "width": 780,
+          "height": 1360,
+          "bytes": 469113
+        },
+        {
+          "src": "/coupang-detail/9221762154/10.png",
+          "cdnPath": "vendor_inventory/6cf4/18ea9b96e50498aedf9d7cb2a36827d85276aa1eb23d485a1bf570087897.png",
+          "sourceOrder": 10,
+          "width": 780,
+          "height": 1360,
+          "bytes": 378797
+        },
+        {
+          "src": "/coupang-detail/9221762154/11.png",
+          "cdnPath": "vendor_inventory/b008/9fdcb32d2a34b175e5abfcafed30f1f77348e757346f3f9a2e1a12b38cd5.png",
+          "sourceOrder": 11,
+          "width": 780,
+          "height": 1360,
+          "bytes": 351563
+        },
+        {
+          "src": "/coupang-detail/9221762154/12.png",
+          "cdnPath": "vendor_inventory/a9cb/8f9f0d362c9345e675904b5d7436e38c58f8565cfe4c682b6e892276627d.png",
+          "sourceOrder": 12,
+          "width": 780,
+          "height": 1360,
+          "bytes": 428022
+        },
+        {
+          "src": "/coupang-detail/9221762154/13.png",
+          "cdnPath": "vendor_inventory/0256/75eb1ad7f86a4dbc0fb0f2da53eb7c73304281c0ff6e880b988c8f00e7c8.png",
+          "sourceOrder": 13,
+          "width": 780,
+          "height": 1360,
+          "bytes": 97660
+        },
+        {
+          "src": "/coupang-detail/9221762154/14.png",
+          "cdnPath": "vendor_inventory/cab0/7412f26fda70b9485ae68931cc11c054916cd90875e6f29db13eef04c94d.png",
+          "sourceOrder": 14,
+          "width": 780,
+          "height": 1360,
+          "bytes": 352561
+        }
+      ],
+      "api": {
+        "source": "coupang-openapi",
+        "sellerProductId": "15895536803",
+        "statusName": "승인완료",
+        "saleStartedAt": "2026-04-23T15:05:50",
+        "saleEndedAt": "2099-12-31T00:00:00",
+        "brand": "유어스킨플러스",
+        "displayProductName": "유어스킨플러스 퓨어 딥 클렌징 오일",
+        "generalProductName": "유어스킨플러스 퓨어 딥 클렌징 오일",
+        "productGroup": "오일/워터",
+        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/0f2a/a03a7972af9216210a9a6498b1494ee87992353f73a4c7f89510eaed4f9c.png",
+        "productImageCount": 5,
+        "detailContentImageCount": 14,
+        "searchTags": [
+          "남자 클렌징오일",
+          "딥클렌징 오일",
+          "블렉헤드",
+          "블렉헤드오일",
+          "크린싱오일",
+          "클렌징 오일",
+          "클렌징오일",
+          "클렌징오일 대용량",
+          "클렌징오일대용량",
+          "클렌징오일블랙헤드",
+          "클린징오일"
+        ],
+        "notices": [
+          {
+            "name": "용량(중량)",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제품 주요 사양",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용기한 또는 개봉 후 사용기간",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용방법",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제조국",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따라 기재, 표시하여야 하는 모든 성분",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따른 기능성 화장품 심사(또는 보고)를 필함 해당 유무",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용할 때 주의사항",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "품질보증기준",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "소비자상담관련 전화번호",
+            "content": "상품 상세페이지 참조"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "순 함량 중량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "스킨케어 향",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제형",
+            "value": "오일",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 유형 무료",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "항균기능 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드워시 대상",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 중량(g)",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부톤",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 특징",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "화장품 용기 타입",
+            "value": "펌프형",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 용량",
+            "value": "300ml",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "제품 장점",
+            "value": "모공 관리",
+            "unit": "NONE"
+          },
+          {
+            "name": "리무버 타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 향",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "선케어 SPF",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "바디워시/클렌저 제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부고민",
+            "value": "블랙헤드 제거",
+            "unit": "NONE"
+          },
+          {
+            "name": "바디워시/클렌저 피부고민",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "비누 종류",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "비누 사용대상",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 색상계열",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "본품/리필",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "특별한 기능",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "GTIN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Parent MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Variation MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드워시 용기타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부타입",
+            "value": "모든피부",
+            "unit": "NONE"
+          },
+          {
+            "name": "용기 종류",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향기",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 용량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "수량",
+            "value": "1개",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "피부 세정제 사용부위",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "패키지 유형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사이즈",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "때비누 제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "성별",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "순 내용 양",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "포함 구성 요소",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 수량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용대상",
+            "value": "남녀공용",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드케어 피부고민",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드워시 타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용 부위",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "풋케어 타입",
+            "value": "",
+            "unit": "NONE"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "9218811640",
+      "fileName": "유어스킨플러스 히알루론산 아쿠아 로션 - 로션 _ 쿠팡.html",
+      "fileSize": 2916605,
+      "name": "유어스킨플러스 히알루론산 아쿠아 로션",
+      "description": "쿠팡에서 유어스킨플러스 히알루론산 아쿠아 로션 구매하고 더 많은 혜택을 받으세요! 지금 할인중인 다른 로션 제품도 바로 쿠팡에서 확인할 수 있습니다.",
+      "productId": "9218811640",
+      "sellerProductId": "15895499351",
+      "itemId": "27239514580",
+      "vendorItemId": "94206581276",
+      "sku": "9218811640-27239514580",
+      "url": "https://www.coupang.com/vp/products/9218811640?itemId=27239514580&vendorItemId=94206581276",
+      "category": "로션",
+      "categories": [
+        "쿠팡수입",
+        "뷰티",
+        "스킨케어",
+        "로션"
+      ],
+      "price": 10300,
+      "originalPrice": 19000,
+      "discountRate": 46,
+      "availability": "승인완료",
+      "ratingValue": 5,
+      "reviewCount": 34,
+      "images": [
+        "https://image.coupangcdn.com/image/vendor_inventory/395a/7f9ed30cd9fc8aa3ec0e2f472ab99f1451adf13f1ee006196ed9c741e622.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/affb/354c819e29da6ace813926c1665f1f9ae69267dbe8d074b024f14273ce17.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/3d9b/752225a109434950d162deeed94948b446caf293ece95140471b310ca3ea.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/4c45/b9a2eab32f79ff7c38196cf4945a9bb4352e6a218392ce62bfa481ec2e61.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/60d9/cb70f3528fef74b520491d853f37240cd3ebf19e6f0f6bf57645461f0980.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/0a60/e2ffc2f60d866f5be4ede556608cae9991bfcbf48973e176f45003c51cd5.png"
+      ],
+      "detailImages": [
+        {
+          "src": "/coupang-detail/9218811640/01.png",
+          "cdnPath": "vendor_inventory/8c4c/653067fb87651d36e7d7f259c55abe3f03531e1200b738d13c0e1ca10366.png",
+          "sourceOrder": 1,
+          "width": 780,
+          "height": 1360,
+          "bytes": 984292
+        },
+        {
+          "src": "/coupang-detail/9218811640/02.png",
+          "cdnPath": "vendor_inventory/1821/ab5751fc4be322b58958dd084e846b7a900e3095f2afc5d3c71c9afab1b4.png",
+          "sourceOrder": 2,
+          "width": 780,
+          "height": 1360,
+          "bytes": 799634
+        },
+        {
+          "src": "/coupang-detail/9218811640/03.png",
+          "cdnPath": "vendor_inventory/2411/24826165798838789da59d34dce81dbdf204399946f5e063e78ff0a6f160.png",
+          "sourceOrder": 3,
+          "width": 780,
+          "height": 1360,
+          "bytes": 230651
+        },
+        {
+          "src": "/coupang-detail/9218811640/04.png",
+          "cdnPath": "vendor_inventory/9575/f12d2677a6e4827f2f1bbd7b1263f8f5354752a9bd954aafb802aa0c69f1.png",
+          "sourceOrder": 4,
+          "width": 780,
+          "height": 1360,
+          "bytes": 724847
+        },
+        {
+          "src": "/coupang-detail/9218811640/05.png",
+          "cdnPath": "vendor_inventory/4871/7570c8045dff2c7e11a68b00f62d1ffa912a8743ef4c94a12029c512d797.png",
+          "sourceOrder": 5,
+          "width": 780,
+          "height": 1360,
+          "bytes": 528146
+        },
+        {
+          "src": "/coupang-detail/9218811640/06.png",
+          "cdnPath": "vendor_inventory/2652/de69eb5556e7f0d8177ab05a24b44a3633e058c178e77183c766b7ce0aaf.png",
+          "sourceOrder": 6,
+          "width": 780,
+          "height": 1360,
+          "bytes": 765284
+        },
+        {
+          "src": "/coupang-detail/9218811640/07.png",
+          "cdnPath": "vendor_inventory/2f44/b51e5a0faf63363c414edb0e02a923aaa063b02c479992ab2328022d1cb4.png",
+          "sourceOrder": 7,
+          "width": 780,
+          "height": 1360,
+          "bytes": 755830
+        },
+        {
+          "src": "/coupang-detail/9218811640/08.png",
+          "cdnPath": "vendor_inventory/1bbf/72462d58793d642cef275d5adc9a79ebb4bcfa64354ae77722b5f7da2560.png",
+          "sourceOrder": 8,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1107739
+        },
+        {
+          "src": "/coupang-detail/9218811640/09.png",
+          "cdnPath": "vendor_inventory/7901/88d2412d5b5f37a87ae9ca18d59c084ed16b6a86b3a437daf62a2278ee2d.png",
+          "sourceOrder": 9,
+          "width": 780,
+          "height": 1360,
+          "bytes": 376943
+        },
+        {
+          "src": "/coupang-detail/9218811640/10.png",
+          "cdnPath": "vendor_inventory/8f02/f9907948718d6904654b27e9ab2c7d9a84cd63ee19ffeea9c8fe0dff9e4f.png",
+          "sourceOrder": 10,
+          "width": 780,
+          "height": 1360,
+          "bytes": 741338
+        },
+        {
+          "src": "/coupang-detail/9218811640/11.png",
+          "cdnPath": "vendor_inventory/2d39/1009ae4707b2e86d05b0dfff17cee4f913fe514a95bbe32d0127da05b9ad.png",
+          "sourceOrder": 11,
+          "width": 780,
+          "height": 1360,
+          "bytes": 379454
+        },
+        {
+          "src": "/coupang-detail/9218811640/12.png",
+          "cdnPath": "vendor_inventory/b6e1/10063e705a574a21d8bb3679e3e34fcf632b5bbecb7105710b5af6ffcf51.png",
+          "sourceOrder": 12,
+          "width": 780,
+          "height": 1360,
+          "bytes": 635182
+        },
+        {
+          "src": "/coupang-detail/9218811640/13.png",
+          "cdnPath": "vendor_inventory/b248/b19537ce6baa92477381241e7394eea837901101f624639426c29459a9d4.png",
+          "sourceOrder": 13,
+          "width": 780,
+          "height": 1360,
+          "bytes": 428022
+        },
+        {
+          "src": "/coupang-detail/9218811640/14.png",
+          "cdnPath": "vendor_inventory/c9c3/7075a8d40a21eca2b63a0c479e0302deb4bc6fc9e2ced7a472919d0a3506.png",
+          "sourceOrder": 14,
+          "width": 780,
+          "height": 1360,
+          "bytes": 145732
+        },
+        {
+          "src": "/coupang-detail/9218811640/15.png",
+          "cdnPath": "vendor_inventory/cab0/7412f26fda70b9485ae68931cc11c054916cd90875e6f29db13eef04c94d.png",
+          "sourceOrder": 15,
+          "width": 780,
+          "height": 1360,
+          "bytes": 352561
+        }
+      ],
+      "api": {
+        "source": "coupang-openapi",
+        "sellerProductId": "15895499351",
+        "statusName": "승인완료",
+        "saleStartedAt": "2026-04-21T12:59:08",
+        "saleEndedAt": "2099-12-31T00:00:00",
+        "brand": "유어스킨플러스",
+        "displayProductName": "유어스킨플러스 히알루론산 아쿠아 로션",
+        "generalProductName": "유어스킨플러스 히알루론산 아쿠아 로션",
+        "productGroup": "로션",
+        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/395a/7f9ed30cd9fc8aa3ec0e2f472ab99f1451adf13f1ee006196ed9c741e622.png",
+        "productImageCount": 6,
+        "detailContentImageCount": 15,
+        "searchTags": [
+          "8중 히알루론산",
+          "남성 에멀젼",
+          "남자 로션",
+          "남자 수분로션",
+          "로션",
+          "모이스춰 로션",
+          "보습로션",
+          "수분 로션",
+          "스킨로션",
+          "얼굴 로션",
+          "얼굴로션",
+          "에멀젼",
+          "여성 로션",
+          "여성 로션 대용량",
+          "여성 로션 에멀젼",
+          "여성 수분로션",
+          "여성로션",
+          "저분자 히알루론산 로션",
+          "히알루론산 로션",
+          "히알루론산 스킨로션"
+        ],
+        "notices": [
+          {
+            "name": "용량(중량)",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제품 주요 사양",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용기한 또는 개봉 후 사용기간",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용방법",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제조국",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따라 기재, 표시하여야 하는 모든 성분",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따른 기능성 화장품 심사(또는 보고)를 필함 해당 유무",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용할 때 주의사항",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "품질보증기준",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "소비자상담관련 전화번호",
+            "content": "상품 상세페이지 참조"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "제형",
+            "value": "로션",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 유형 무료",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "구성",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "기능성화장품 인증여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 중량(g)",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "바디용품 사용대상",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제품의 특정 용도",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "마사지용 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "주성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "간단한 제품 설명",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 특징",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향 유무",
+            "value": "무향",
+            "unit": "NONE"
+          },
+          {
+            "name": "바디로션 기능",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 용량",
+            "value": "300ml",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "제품 장점",
+            "value": "보습",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 향",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "선케어 SPF",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부고민",
+            "value": "진정/보습",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 색상계열",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "특별한 기능",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "GTIN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Parent MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Variation MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드케어 용기타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부타입",
+            "value": "모든피부",
+            "unit": "NONE"
+          },
+          {
+            "name": "용기 종류",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향기",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제품의 권장 용도",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 용량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "수량",
+            "value": "1개",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "바디케어 제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "기획세트 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "패키지 유형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사이즈",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "크림 타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "미스트 종류",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "안개분사 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "용기형태",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드케어 타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용대상",
+            "value": "남녀공용",
+            "unit": "NONE"
+          },
+          {
+            "name": "스킨케어 특별성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "패턴",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용 부위",
+            "value": "얼굴",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티오일 성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "스타일",
+            "value": "",
+            "unit": "NONE"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "9025810298",
+      "fileName": "유어스킨플러스 모이스춰 립밤 - 립케어 _ 쿠팡.html",
+      "fileSize": 2864164,
+      "name": "유어스킨플러스 모이스춰 립밤",
+      "description": "쿠팡에서 유어스킨플러스 모이스춰 립밤 구매하고 더 많은 혜택을 받으세요! 지금 할인중인 다른 립케어 제품도 바로 쿠팡에서 확인할 수 있습니다.",
+      "productId": "9025810298",
+      "sellerProductId": "15704881596",
+      "itemId": "26470336590",
+      "vendorItemId": "93445490553",
+      "sku": "9025810298-26470336590",
+      "url": "https://www.coupang.com/vp/products/9025810298?itemId=26470336590&vendorItemId=93445490553",
+      "category": "립케어",
+      "categories": [
+        "R.LUX",
+        "뷰티",
+        "메이크업",
+        "립 메이크업",
+        "립케어"
+      ],
+      "price": 9900,
+      "originalPrice": 18000,
+      "discountRate": 45,
+      "availability": "승인완료",
+      "ratingValue": 5,
+      "reviewCount": 24,
+      "images": [
+        "https://image.coupangcdn.com/image/vendor_inventory/4a8c/9981784fa537d7cc5f4035d0c984f0da73c9191076226216d98c710a20d9.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/0b89/fdcc17a05a04f951a13133f92206cb99bf632ccbf0bdf06752278532b9e1.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/0d2c/8caf43061c193f1990b314241e660e34f63fb2d342846ecc206c130f61c8.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/6af6/ef80d0b544262a7eb23a5339ca2d98448f12c4a740e29f4539df745888ef.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/9407/f18148aab67654542085b2e0b5ab1885f5ac4d9c5889dc77fb3c8825662c.png"
+      ],
+      "detailImages": [
+        {
+          "src": "/coupang-detail/9025810298/01.png",
+          "cdnPath": "vendor_inventory/a3b8/348ae53b03c09280dccd752185212eb76fc73b2ef55ae2f939465179fb45.png",
+          "sourceOrder": 1,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1109140
+        },
+        {
+          "src": "/coupang-detail/9025810298/02.png",
+          "cdnPath": "vendor_inventory/eaea/0712dfc2eaada278457a99db00612b5780283a77b574a3a5e5584bc45044.png",
+          "sourceOrder": 2,
+          "width": 780,
+          "height": 1360,
+          "bytes": 654449
+        },
+        {
+          "src": "/coupang-detail/9025810298/03.png",
+          "cdnPath": "vendor_inventory/21d1/5fb733d8eeada959177190b7e860c3270980fbce4a9707b42905ea5d8dd6.png",
+          "sourceOrder": 3,
+          "width": 780,
+          "height": 1360,
+          "bytes": 655897
+        },
+        {
+          "src": "/coupang-detail/9025810298/04.png",
+          "cdnPath": "vendor_inventory/6c09/a2d8d1d7225e47f5b600139e52ccde17df274ed93ee1fe8da7a816e1b8c9.png",
+          "sourceOrder": 4,
+          "width": 780,
+          "height": 1360,
+          "bytes": 470039
+        },
+        {
+          "src": "/coupang-detail/9025810298/05.png",
+          "cdnPath": "vendor_inventory/44fd/1000ebe46aca5678e6b11b824c5dd9a36a4fc02e6ba8e98edc340f1e24fe.png",
+          "sourceOrder": 5,
+          "width": 780,
+          "height": 1360,
+          "bytes": 674985
+        },
+        {
+          "src": "/coupang-detail/9025810298/06.png",
+          "cdnPath": "vendor_inventory/5a11/021b1b754510743f168829b2d7f54b6147f81f9179eac9ab8e9b10cedbec.png",
+          "sourceOrder": 6,
+          "width": 780,
+          "height": 1360,
+          "bytes": 290363
+        },
+        {
+          "src": "/coupang-detail/9025810298/07.png",
+          "cdnPath": "vendor_inventory/4183/243e7cd100b57a7e9e563e4a5f2950cdf9606d9b7b4711502aba170325c0.png",
+          "sourceOrder": 7,
+          "width": 780,
+          "height": 1360,
+          "bytes": 317552
+        },
+        {
+          "src": "/coupang-detail/9025810298/08.png",
+          "cdnPath": "vendor_inventory/d234/97e55893acb6add2781422633d7837739a85aa5e2f755268126e541e3a0e.png",
+          "sourceOrder": 8,
+          "width": 780,
+          "height": 1360,
+          "bytes": 379203
+        },
+        {
+          "src": "/coupang-detail/9025810298/09.png",
+          "cdnPath": "vendor_inventory/5f50/e521c38b37c62caede900d553033e8c6671d728f8fadb278c681b60db859.png",
+          "sourceOrder": 9,
+          "width": 780,
+          "height": 1360,
+          "bytes": 348470
+        },
+        {
+          "src": "/coupang-detail/9025810298/10.png",
+          "cdnPath": "vendor_inventory/fd96/75b3384a9164c8ab3f1d7d067cd7f6e6c704f5d8f48591d96132de58a75d.png",
+          "sourceOrder": 10,
+          "width": 780,
+          "height": 1360,
+          "bytes": 428022
+        },
+        {
+          "src": "/coupang-detail/9025810298/11.png",
+          "cdnPath": "vendor_inventory/2729/41377190194da196d487c3ba20f02b7a6e55e85de2025e792b39c75b2028.png",
+          "sourceOrder": 11,
+          "width": 779,
+          "height": 1142,
+          "bytes": 222479
+        },
+        {
+          "src": "/coupang-detail/9025810298/12.png",
+          "cdnPath": "vendor_inventory/0211/9004c6f48331555f0b311a1e168fafa9ccfa66b1cb828a27704d41904aa1.png",
+          "sourceOrder": 12,
+          "width": 780,
+          "height": 1360,
+          "bytes": 352561
+        }
+      ],
+      "api": {
+        "source": "coupang-openapi",
+        "sellerProductId": "15704881596",
+        "statusName": "승인완료",
+        "saleStartedAt": "2026-04-02T16:26:01",
+        "saleEndedAt": "2099-12-31T00:00:00",
+        "brand": "유어스킨플러스",
+        "displayProductName": "유어스킨플러스 모이스춰 립밤",
+        "generalProductName": "유어스킨플러스 모이스춰 립밤",
+        "productGroup": "립케어",
+        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/4a8c/9981784fa537d7cc5f4035d0c984f0da73c9191076226216d98c710a20d9.png",
+        "productImageCount": 5,
+        "detailContentImageCount": 12,
+        "searchTags": [
+          "남자 립밤",
+          "남자 립밤 무색",
+          "남자립밤",
+          "립글로스",
+          "립밤",
+          "립밤무색",
+          "립케어",
+          "무색 립밤",
+          "무색립밤",
+          "보습 립밤",
+          "보습립밤",
+          "여성 립밤",
+          "여성 무색립밤",
+          "여자 립밤",
+          "여자 립밤 무색",
+          "여자립밤",
+          "입술보호제",
+          "챕스틱",
+          "천연립밤",
+          "컬러립밤"
+        ],
+        "notices": [
+          {
+            "name": "용량(중량)",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제품 주요 사양",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용기한 또는 개봉 후 사용기간",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용방법",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제조국",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따라 기재, 표시하여야 하는 모든 성분",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따른 기능성 화장품 심사(또는 보고)를 필함 해당 유무",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용할 때 주의사항",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "품질보증기준",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "소비자상담관련 전화번호",
+            "content": "상품 상세페이지 참조"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "피부타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 용량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 유형 무료",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "수량",
+            "value": "2개",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "립메이크업 발림성",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사이즈",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "기능성화장품 인증여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 중량(g)",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 피니쉬타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 특징",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향 유무",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "선케어 SPF",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용대상",
+            "value": "남녀공용",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부고민",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 중량",
+            "value": "4g",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "립메이크업 용기형태",
+            "value": "스틱/펜슬형",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 색상계열",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "GTIN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Parent MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "색상/향",
+            "value": "무색",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "립밤 색상계열",
+            "value": "무색",
+            "unit": "NONE"
+          },
+          {
+            "name": "립메이크업 제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Variation MPN",
+            "value": "",
+            "unit": "NONE"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "9025800758",
+      "fileName": "Coupang OpenAPI",
+      "fileSize": 0,
+      "name": "유어스킨플러스 화이트 글로우 톤업 크림",
+      "description": "유어스킨플러스 화이트 글로우 톤업 크림",
+      "productId": "9025800758",
+      "sellerProductId": "15704868952",
+      "itemId": "26470298069",
+      "vendorItemId": "93445452670",
+      "sku": "",
+      "url": "https://www.coupang.com/vp/products/9025800758?itemId=26470298069&vendorItemId=93445452670",
+      "category": "쿠팡 등록 상품",
+      "categories": [
+        56163
+      ],
+      "price": 10100,
+      "originalPrice": 18500,
+      "discountRate": 45,
+      "availability": "승인완료",
+      "ratingValue": 0,
+      "reviewCount": 0,
+      "images": [
+        "https://image.coupangcdn.com/image/vendor_inventory/ffa9/a4b03169879922a7473543c3282024c71ae402fe171189a6a51a6a69e756.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/7a3b/673f9981d513dacbfa3df0962903996ba4d009bade6c549ef9ac8e803635.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/f660/294016c0d904a020643f9a055195c094b89eca25d0464ac6f0540e78bb93.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/67ee/b3d7f65497a2744f9bd228c462475327519d775281af179f22cd3b387ed1.png"
+      ],
+      "detailImages": [
+        {
+          "src": "/coupang-detail/9025800758/01.png",
+          "cdnPath": "vendor_inventory/9e5c/68c2a8c57c7698e4e9a3182e00c84e31403861dab039ec9f26e77420f19d.png",
+          "sourceOrder": 1,
+          "width": 779,
+          "height": 997,
+          "bytes": 833355
+        },
+        {
+          "src": "/coupang-detail/9025800758/02.png",
+          "cdnPath": "vendor_inventory/fdca/240d9f2ce1a91991f9bfff98f40d1d89ab798faa73e9b2384788250c6c9c.png",
+          "sourceOrder": 2,
+          "width": 780,
+          "height": 544,
+          "bytes": 225920
+        },
+        {
+          "src": "/coupang-detail/9025800758/03.png",
+          "cdnPath": "vendor_inventory/5caa/6efc8c97e96ff7da6616221e172fc36bb3c928948847ec8363f2a5e4949e.png",
+          "sourceOrder": 3,
+          "width": 779,
+          "height": 997,
+          "bytes": 294719
+        },
+        {
+          "src": "/coupang-detail/9025800758/04.png",
+          "cdnPath": "vendor_inventory/8c6c/30f0e969135dbee47bcd75ba012c69fdf2e68b0a6616181793ce2874de5b.png",
+          "sourceOrder": 4,
+          "width": 779,
+          "height": 997,
+          "bytes": 538676
+        },
+        {
+          "src": "/coupang-detail/9025800758/05.png",
+          "cdnPath": "vendor_inventory/9df9/c70b4689e9161848e26bb5d41288879728264f95f049ec62a4d297c90d5c.png",
+          "sourceOrder": 5,
+          "width": 779,
+          "height": 997,
+          "bytes": 417182
+        },
+        {
+          "src": "/coupang-detail/9025800758/06.png",
+          "cdnPath": "vendor_inventory/22d6/24d698e953bad8e3fc43876ad5f9f1a7209c10854fae06e569e1edaf7152.png",
+          "sourceOrder": 6,
+          "width": 779,
+          "height": 997,
+          "bytes": 478779
+        },
+        {
+          "src": "/coupang-detail/9025800758/07.png",
+          "cdnPath": "vendor_inventory/e843/651fc6b97b89d7bc0d01d3035a2239acb1a999ec7e681a535388bb0c3a86.png",
+          "sourceOrder": 7,
+          "width": 779,
+          "height": 997,
+          "bytes": 296262
+        },
+        {
+          "src": "/coupang-detail/9025800758/08.png",
+          "cdnPath": "vendor_inventory/7a92/7a3af02ee5db32c51413e56ede2828c00303a4206fcfa07cf78c6ae08fce.png",
+          "sourceOrder": 8,
+          "width": 779,
+          "height": 997,
+          "bytes": 281347
+        },
+        {
+          "src": "/coupang-detail/9025800758/09.png",
+          "cdnPath": "vendor_inventory/6d9d/e4bf230d305919aa3763640a0bf51cbd2dfaf565be252683e2a638d75af2.png",
+          "sourceOrder": 9,
+          "width": 779,
+          "height": 997,
+          "bytes": 429824
+        },
+        {
+          "src": "/coupang-detail/9025800758/10.png",
+          "cdnPath": "vendor_inventory/d145/21620acd5e65a5088e3322f64969bc73276bac7b89cd6b8d1547ddc4da3b.png",
+          "sourceOrder": 10,
+          "width": 779,
+          "height": 997,
+          "bytes": 404129
+        },
+        {
+          "src": "/coupang-detail/9025800758/11.png",
+          "cdnPath": "vendor_inventory/dcaf/dcf3ddf1626e3efb5b004894daa7a457eb713769e411da35c5db5338ee8d.png",
+          "sourceOrder": 11,
+          "width": 779,
+          "height": 997,
+          "bytes": 126287
+        }
+      ],
+      "api": {
+        "source": "coupang-openapi",
+        "sellerProductId": "15704868952",
+        "statusName": "승인완료",
+        "saleStartedAt": "2025-12-17T17:13:39",
+        "saleEndedAt": "2099-12-31T00:00:00",
+        "brand": "유어스킨플러스",
+        "displayProductName": "유어스킨플러스 화이트 글로우 톤업 크림",
+        "generalProductName": "유어스킨플러스 화이트 글로우 톤업 크림",
+        "productGroup": "쿠팡 등록 상품",
+        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/ffa9/a4b03169879922a7473543c3282024c71ae402fe171189a6a51a6a69e756.png",
+        "productImageCount": 4,
+        "detailContentImageCount": 11,
+        "searchTags": [
+          "광채 톤업크림",
+          "미백 화이트닝 크림",
+          "미백크림",
+          "미백화이트닝크림",
+          "미백화장품",
+          "수면 미백크림",
+          "수면 톤업크림",
+          "얼굴 미백크림",
+          "얼굴 톤업크림",
+          "얼굴 화이트닝 크림",
+          "여성 미백크림",
+          "여성 톤업크림",
+          "여성 화이트닝 크림",
+          "잡티 화이트닝 크림",
+          "크림",
+          "톤업",
+          "톤업크림",
+          "화이트닝",
+          "화이트닝 톤업 크림",
+          "화이트닝크림"
+        ],
+        "notices": [
+          {
+            "name": "용량(중량)",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제품 주요 사양",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용기한 또는 개봉 후 사용기간",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용방법",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제조국",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따라 기재, 표시하여야 하는 모든 성분",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따른 기능성 화장품 심사(또는 보고)를 필함 해당 유무",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용할 때 주의사항",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "품질보증기준",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "소비자상담관련 전화번호",
+            "content": "상품 상세페이지 참조"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 유형 무료",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "구성",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "기능성화장품 인증여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 중량(g)",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "바디용품 사용대상",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제품의 특정 용도",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "마사지용 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "주성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "간단한 제품 설명",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 특징",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향 유무",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "바디로션 기능",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 용량",
+            "value": "200ml",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "제품 장점",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 향",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "선케어 SPF",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부고민",
+            "value": "브라이트닝",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 색상계열",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "특별한 기능",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "GTIN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Parent MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Variation MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드케어 용기타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부타입",
+            "value": "모든피부",
+            "unit": "NONE"
+          },
+          {
+            "name": "용기 종류",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향기",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제품의 권장 용도",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 용량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "수량",
+            "value": "1개",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "바디케어 제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "기획세트 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "패키지 유형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사이즈",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "크림 타입",
+            "value": "크림",
+            "unit": "NONE"
+          },
+          {
+            "name": "미스트 종류",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "안개분사 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "용기형태",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드케어 타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용대상",
+            "value": "남녀공용",
+            "unit": "NONE"
+          },
+          {
+            "name": "스킨케어 특별성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "패턴",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용 부위",
+            "value": "얼굴",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티오일 성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "스타일",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 수량",
+            "value": "",
+            "unit": "NONE"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "9025793946",
+      "fileName": "유어스킨플러스 영거 댄 올인원 로션 - 올인원 _ 쿠팡.html",
+      "fileSize": 2938495,
+      "name": "유어스킨플러스 영거댄 올인원 로션",
+      "description": "쿠팡에서 유어스킨플러스 영거 댄 올인원 로션 구매하고 더 많은 혜택을 받으세요! 지금 할인중인 다른 올인원 제품도 바로 쿠팡에서 확인할 수 있습니다.",
+      "productId": "9025793946",
+      "sellerProductId": "15704852570",
+      "itemId": "26470268560",
+      "vendorItemId": "93445424254",
+      "sku": "9025793946-26470268560",
+      "url": "https://www.coupang.com/vp/products/9025793946?itemId=26470268560&vendorItemId=93445424254",
+      "category": "올인원",
+      "categories": [
+        "R.LUX",
+        "뷰티",
+        "남성화장품",
+        "남성 스킨케어",
+        "올인원"
+      ],
+      "price": 9900,
+      "originalPrice": 18000,
+      "discountRate": 45,
+      "availability": "승인완료",
+      "ratingValue": 5,
+      "reviewCount": 33,
+      "images": [
+        "https://image.coupangcdn.com/image/vendor_inventory/78a5/30a0bd10d30f918244f5880a4c6244e3f6467c6aab3267ccc25010d383e5.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/8289/6ebc6be2dd2336e656b50ecc4b62c53797c659bde1e9827b7a0a778b638e.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/2616/b2500bf3c720a07f540f22886a177dbaa7cf9ee99e93f086b3828d322059.jpg",
+        "https://image.coupangcdn.com/image/vendor_inventory/7032/df19119ef4afca4d05cce8ef2d2c162558176039766e38ce987014918b2e.jpg",
+        "https://image.coupangcdn.com/image/vendor_inventory/52ad/ecea36a4aa25650baf7e15ceb14ebfe936592c93636c823d775d7c50dffd.jpg",
+        "https://image.coupangcdn.com/image/vendor_inventory/f464/785697ce573d4887d3386b854de0a041937c80a38371c837c26e0ced5a4e.jpg",
+        "https://image.coupangcdn.com/image/vendor_inventory/4e07/dd6c98f2d98b73b6b2d3ea438479fd1eed441515951b089f1b34759c35e2.jpg",
+        "https://image.coupangcdn.com/image/vendor_inventory/e749/f9e9f011723ffb066ef8a7627f05694921ddcc3d1c4198ee76e6202b0e69.jpg"
+      ],
+      "detailImages": [
+        {
+          "src": "/coupang-detail/9025793946/01.png",
+          "cdnPath": "vendor_inventory/c7dc/91ab69357db7feca0758ceffef9b78528610b356f5408c43e8e21e14a42a.png",
+          "sourceOrder": 1,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1207224
+        },
+        {
+          "src": "/coupang-detail/9025793946/02.png",
+          "cdnPath": "vendor_inventory/8eea/5cdf06f8190478c8aa929a9e736ef90f88b963bcd270649820bfad0a9145.png",
+          "sourceOrder": 2,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1020177
+        },
+        {
+          "src": "/coupang-detail/9025793946/03.png",
+          "cdnPath": "vendor_inventory/b94d/dbae80ce546cdbf7c830de3f05942288b9182179fdd6d15420271cd62b40.png",
+          "sourceOrder": 3,
+          "width": 780,
+          "height": 1360,
+          "bytes": 402886
+        },
+        {
+          "src": "/coupang-detail/9025793946/04.png",
+          "cdnPath": "vendor_inventory/eae2/c0609828ac7969a4048c7b8fd1e82b9c583f2091cd149436ce508074f65a.png",
+          "sourceOrder": 4,
+          "width": 780,
+          "height": 1360,
+          "bytes": 956220
+        },
+        {
+          "src": "/coupang-detail/9025793946/05.png",
+          "cdnPath": "vendor_inventory/8102/4b7bb276f51ffde8390e047877c84ca50fbee1bc169237c21c3f1b327e64.png",
+          "sourceOrder": 5,
+          "width": 780,
+          "height": 1360,
+          "bytes": 583616
+        },
+        {
+          "src": "/coupang-detail/9025793946/06.png",
+          "cdnPath": "vendor_inventory/6252/9e710236997f0dc4c6319e7a1a66ba1cd7056932336741aa56f8c5a72a32.png",
+          "sourceOrder": 6,
+          "width": 780,
+          "height": 1360,
+          "bytes": 726974
+        },
+        {
+          "src": "/coupang-detail/9025793946/07.png",
+          "cdnPath": "vendor_inventory/d828/1286f9e1d532f65f32f4c0f69891b0f466bd9b64f3520d73bd33a6ff60f0.png",
+          "sourceOrder": 7,
+          "width": 780,
+          "height": 1360,
+          "bytes": 764445
+        },
+        {
+          "src": "/coupang-detail/9025793946/08.png",
+          "cdnPath": "vendor_inventory/f9e7/0e102eab0c81b1a088ece845417347f2b2655d6129d40f57760f9cad7a80.png",
+          "sourceOrder": 8,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1216898
+        },
+        {
+          "src": "/coupang-detail/9025793946/09.png",
+          "cdnPath": "vendor_inventory/0300/60e86d64d365783b7d44e66bb80f3d65b5ad0abc983bde57b29e4a3791e5.png",
+          "sourceOrder": 9,
+          "width": 780,
+          "height": 1360,
+          "bytes": 692007
+        },
+        {
+          "src": "/coupang-detail/9025793946/10.png",
+          "cdnPath": "vendor_inventory/aea5/41c55a55c016b453fe87e51c8ae7c20b45394028bfc09b08ddeadca1f096.png",
+          "sourceOrder": 10,
+          "width": 780,
+          "height": 1360,
+          "bytes": 378797
+        },
+        {
+          "src": "/coupang-detail/9025793946/11.png",
+          "cdnPath": "vendor_inventory/af36/fe94a2f9ceadf7de0ae0218e1797325a31e3a6568d9869c443c0a4f460d1.png",
+          "sourceOrder": 11,
+          "width": 780,
+          "height": 1360,
+          "bytes": 977651
+        },
+        {
+          "src": "/coupang-detail/9025793946/12.png",
+          "cdnPath": "vendor_inventory/c3c0/9e8424e290bc8d1a90ab54827fd5a5077f2a6bfc73e113acf3d767cad60b.png",
+          "sourceOrder": 12,
+          "width": 780,
+          "height": 1360,
+          "bytes": 428022
+        },
+        {
+          "src": "/coupang-detail/9025793946/13.png",
+          "cdnPath": "vendor_inventory/77ee/9cabb1e84b6d545d3f513b4a4be9949a8a913a70df2f07bbd1c571742d71.png",
+          "sourceOrder": 13,
+          "width": 780,
+          "height": 1360,
+          "bytes": 142152
+        },
+        {
+          "src": "/coupang-detail/9025793946/14.png",
+          "cdnPath": "vendor_inventory/cab0/7412f26fda70b9485ae68931cc11c054916cd90875e6f29db13eef04c94d.png",
+          "sourceOrder": 14,
+          "width": 780,
+          "height": 1360,
+          "bytes": 352561
+        }
+      ],
+      "api": {
+        "source": "coupang-openapi",
+        "sellerProductId": "15704852570",
+        "statusName": "승인완료",
+        "saleStartedAt": "2026-05-24T13:58:21",
+        "saleEndedAt": "2099-12-31T00:00:00",
+        "brand": "유어스킨플러스",
+        "displayProductName": "유어스킨플러스 영거 댄 올인원 로션",
+        "generalProductName": "유어스킨플러스 영거 댄 올인원 로션",
+        "productGroup": "올인원",
+        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/78a5/30a0bd10d30f918244f5880a4c6244e3f6467c6aab3267ccc25010d383e5.png",
+        "productImageCount": 8,
+        "detailContentImageCount": 14,
+        "searchTags": [
+          "2중기능성로션",
+          "기능성화장품",
+          "남자 올인원 로션",
+          "남자로션",
+          "남자스킨로션",
+          "남자올인원",
+          "남자올인원로션",
+          "남자화장품올인원",
+          "로션",
+          "링클케어올인원",
+          "미백올인원",
+          "미백주름개선올인원",
+          "미백주름개선화장품",
+          "미백화장품",
+          "올인원",
+          "올인원 로션",
+          "올인원로션",
+          "주름개선올인원",
+          "주름개선화장품",
+          "화이트닝올인원"
+        ],
+        "notices": [
+          {
+            "name": "용량(중량)",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제품 주요 사양",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용기한 또는 개봉 후 사용기간",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용방법",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제조국",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따라 기재, 표시하여야 하는 모든 성분",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따른 기능성 화장품 심사(또는 보고)를 필함 해당 유무",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용할 때 주의사항",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "품질보증기준",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "소비자상담관련 전화번호",
+            "content": "상품 상세페이지 참조"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 유형 무료",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "기능성화장품 인증여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 중량(g)",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 특징",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "남성 스킨케어 제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향 유무",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "무색/유색",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "바디로션 기능",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 용량",
+            "value": "200ml",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "제품 장점",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 향",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "선케어 SPF",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "남성 올인원 케어 피부고민",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "선케어 PA지수",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부고민",
+            "value": "진정/보습",
+            "unit": "NONE"
+          },
+          {
+            "name": "선케어/태닝 사용부위",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "특별한 기능",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "GTIN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Parent MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Variation MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부타입",
+            "value": "모든피부",
+            "unit": "NONE"
+          },
+          {
+            "name": "올인원 여부",
+            "value": "올인원",
+            "unit": "NONE"
+          },
+          {
+            "name": "향기",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 용량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "수량",
+            "value": "1개",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "기획세트 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사이즈",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "용기형태",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용대상",
+            "value": "남성용",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용 부위",
+            "value": "",
+            "unit": "NONE"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "9025775541",
+      "fileName": "유어스킨플러스 로즈 다마스쿠스 토닉 에센스 - 에센스_세럼_앰플 _ 쿠팡.html",
+      "fileSize": 2474665,
+      "name": "유어스킨플러스 로즈 다마스쿠스 토닉 에센스",
+      "description": "쿠팡에서 유어스킨플러스 로즈 다마스쿠스 토닉 에센스 구매하고 더 많은 혜택을 받으세요! 지금 할인중인 다른 에센스/세럼/앰플 제품도 바로 쿠팡에서 확인할 수 있습니다.",
+      "productId": "9025775541",
+      "sellerProductId": "15704834371",
+      "itemId": "26470208024",
+      "vendorItemId": "93445364050",
+      "sku": "9025775541-26470208024",
+      "url": "https://www.coupang.com/vp/products/9025775541?itemId=26470208024&vendorItemId=93445364050",
+      "category": "에센스/세럼/앰플",
+      "categories": [
+        "R.LUX",
+        "뷰티",
+        "스킨케어",
+        "스킨케어",
+        "에센스/세럼/앰플"
+      ],
+      "price": 10100,
+      "originalPrice": 18000,
+      "discountRate": 44,
+      "availability": "승인완료",
+      "ratingValue": 5,
+      "reviewCount": 23,
+      "images": [
+        "https://image.coupangcdn.com/image/vendor_inventory/d9f0/6b2b1ce2c819aa9238ce29c471ff4e5179bb36fb5931a73186fe289f1fda.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/f928/467b6a20b5043941b70356a2869f4405a62b63579741040f94a67036c9ab.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/6f3f/c538d224b61b787ae115cbe2342c278d7ee805ba2051a89f952b7ca72371.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/85ab/b357b7c4eccf5cdc01bac127ca73215081cf366e84cbda99d4131b2ca159.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/0685/383c2e7963bdea208b768506fb774bedb3ee2dde5f0f39134880b5ef8d24.png"
+      ],
+      "detailImages": [
+        {
+          "src": "/coupang-detail/9025775541/01.png",
+          "cdnPath": "vendor_inventory/8b38/a09471ef898bace68570e39502a87039e0518d3d2e68e6ff6d1b8fe8b58f.png",
+          "sourceOrder": 1,
+          "width": 780,
+          "height": 1360,
+          "bytes": 999154
+        },
+        {
+          "src": "/coupang-detail/9025775541/02.png",
+          "cdnPath": "vendor_inventory/57d4/85454d3af553fc5b2a50dbedfd8fc22c7ced1e5f7b9f508119efe0660b41.png",
+          "sourceOrder": 2,
+          "width": 780,
+          "height": 1360,
+          "bytes": 744252
+        },
+        {
+          "src": "/coupang-detail/9025775541/03.png",
+          "cdnPath": "vendor_inventory/fcad/abd3d578ae82b91a2d0c85cd6a6219ce6ce3c5d15d2e1cc5708ea1f7cac4.png",
+          "sourceOrder": 3,
+          "width": 780,
+          "height": 1360,
+          "bytes": 933752
+        },
+        {
+          "src": "/coupang-detail/9025775541/04.png",
+          "cdnPath": "vendor_inventory/d0a3/eaabd2f2407c01d869da39bfd25539683735931d4602a99f53b361176b10.png",
+          "sourceOrder": 4,
+          "width": 780,
+          "height": 1360,
+          "bytes": 428434
+        },
+        {
+          "src": "/coupang-detail/9025775541/05.png",
+          "cdnPath": "vendor_inventory/034e/07b8a7117739ebdfe890e6e19f5f41d2581d8d52724cf18c572af58d746d.png",
+          "sourceOrder": 5,
+          "width": 780,
+          "height": 1360,
+          "bytes": 675975
+        },
+        {
+          "src": "/coupang-detail/9025775541/06.png",
+          "cdnPath": "vendor_inventory/0c73/d9ba4aa8f0bac4a27719391d91e80b702985bb638df82772b1f0b6f7541e.png",
+          "sourceOrder": 6,
+          "width": 780,
+          "height": 1360,
+          "bytes": 724107
+        },
+        {
+          "src": "/coupang-detail/9025775541/07.png",
+          "cdnPath": "vendor_inventory/d8a2/598ab42887645f4936a4919ca344aab949be7ee414ca95d8f133c63ffc4f.png",
+          "sourceOrder": 7,
+          "width": 780,
+          "height": 1360,
+          "bytes": 468290
+        },
+        {
+          "src": "/coupang-detail/9025775541/08.png",
+          "cdnPath": "vendor_inventory/280d/0c9c32d241112fd51718af28114f9ccd59032f1504ac3d7c0a836438a75b.png",
+          "sourceOrder": 8,
+          "width": 780,
+          "height": 1360,
+          "bytes": 379203
+        },
+        {
+          "src": "/coupang-detail/9025775541/09.png",
+          "cdnPath": "vendor_inventory/7517/34419f3a8527437e00426419afa605a3520bc5d038e3d9b8bbb3b96268ad.png",
+          "sourceOrder": 9,
+          "width": 780,
+          "height": 1360,
+          "bytes": 265054
+        },
+        {
+          "src": "/coupang-detail/9025775541/10.png",
+          "cdnPath": "vendor_inventory/ed8c/195bc4379e2aacab1d94a07c599737015b7e3854388942d7a53805b8c5d3.png",
+          "sourceOrder": 10,
+          "width": 780,
+          "height": 1360,
+          "bytes": 428022
+        },
+        {
+          "src": "/coupang-detail/9025775541/11.png",
+          "cdnPath": "vendor_inventory/bf39/666f151ef3166d27b6d44ba4b040e3087c3a0248de0c4ea84432290ee7bb.png",
+          "sourceOrder": 11,
+          "width": 780,
+          "height": 1360,
+          "bytes": 98977
+        },
+        {
+          "src": "/coupang-detail/9025775541/12.png",
+          "cdnPath": "vendor_inventory/cab0/7412f26fda70b9485ae68931cc11c054916cd90875e6f29db13eef04c94d.png",
+          "sourceOrder": 12,
+          "width": 780,
+          "height": 1360,
+          "bytes": 352561
+        }
+      ],
+      "api": {
+        "source": "coupang-openapi",
+        "sellerProductId": "15704834371",
+        "statusName": "승인완료",
+        "saleStartedAt": "2026-04-23T14:21:28",
+        "saleEndedAt": "2099-12-31T00:00:00",
+        "brand": "유어스킨플러스",
+        "displayProductName": "유어스킨플러스 로즈 다마스쿠스 토닉 에센스",
+        "generalProductName": "유어스킨플러스 로즈 다마스쿠스 토닉 에센스",
+        "productGroup": "에센스/세럼/앰플",
+        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/d9f0/6b2b1ce2c819aa9238ce29c471ff4e5179bb36fb5931a73186fe289f1fda.png",
+        "productImageCount": 5,
+        "detailContentImageCount": 12,
+        "searchTags": [
+          "다마스쿠스",
+          "로즈 에센스 스킨",
+          "로즈 토너",
+          "로즈세럼",
+          "바디워시",
+          "불가리안 로즈",
+          "불가리안 로즈 미스트",
+          "불가리안 로즈 에센스",
+          "불가리안 로즈워터",
+          "불가리안로즈",
+          "불가리안로즈 컨디셔너",
+          "불가리안로즈 향수",
+          "세럼",
+          "스킨",
+          "에센스",
+          "장미수토너",
+          "장미스킨",
+          "장미에센스",
+          "토너",
+          "토닉에센스"
+        ],
+        "notices": [
+          {
+            "name": "용량(중량)",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제품 주요 사양",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용기한 또는 개봉 후 사용기간",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용방법",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제조국",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따라 기재, 표시하여야 하는 모든 성분",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따른 기능성 화장품 심사(또는 보고)를 필함 해당 유무",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용할 때 주의사항",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "품질보증기준",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "소비자상담관련 전화번호",
+            "content": "상품 상세페이지 참조"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "스킨케어 향",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 유형 무료",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "기능성화장품 인증여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 중량(g)",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "주성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부톤",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 특징",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향 유무",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 용량",
+            "value": "150ml",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "선케어 SPF",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부고민",
+            "value": "진정/보습",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 색상계열",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "GTIN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Parent MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Variation MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부타입",
+            "value": "모든피부",
+            "unit": "NONE"
+          },
+          {
+            "name": "향기",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제품의 권장 용도",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 용량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "수량",
+            "value": "1개",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "사이즈",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "용기형태",
+            "value": "펌프형",
+            "unit": "NONE"
+          },
+          {
+            "name": "구성품",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "스킨케어 특별성분",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용 부위",
+            "value": "얼굴",
+            "unit": "NONE"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "9025751494",
+      "fileName": "유어스킨플러스 로우 피에이치 클렌징 젤 - 폼_젤_파우더_비누 _ 쿠팡.html",
+      "fileSize": 2950739,
+      "name": "유어스킨플러스 로우 피에이치 클렌징 젤",
+      "description": "쿠팡에서 유어스킨플러스 로우 피에이치 클렌징 젤 구매하고 더 많은 혜택을 받으세요! 지금 할인중인 다른 폼/젤/파우더/비누 제품도 바로 쿠팡에서 확인할 수 있습니다.",
+      "productId": "9025751494",
+      "sellerProductId": "15704797033",
+      "itemId": "26470131485",
+      "vendorItemId": "93445288720",
+      "sku": "9025751494-26470131485",
+      "url": "https://www.coupang.com/vp/products/9025751494?itemId=26470131485&vendorItemId=93445288720",
+      "category": "폼/젤/파우더/비누",
+      "categories": [
+        "생활용품",
+        "바디/세안",
+        "클렌징/필링",
+        "클렌징",
+        "폼/젤/파우더/비누"
+      ],
+      "price": 10500,
+      "originalPrice": 19500,
+      "discountRate": 46,
+      "availability": "승인완료",
+      "ratingValue": 5,
+      "reviewCount": 24,
+      "images": [
+        "https://image.coupangcdn.com/image/vendor_inventory/de32/f5d7db33069eba1d733664906b5a4c39b678cf9f5107e99eb15c06302527.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/6b4d/106e09820202e00b104467d33774643ef9a26c9a619a09aa784dbaceb658.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/3b79/766361b64051df55db9377b79f70096e87c62b0f20dbcf1bb2342effb418.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/073a/0b482809c70a85752b26a02c59b9b9510396232144219d6d8dbe715201b9.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/170d/487b9c75b808f1212c34cd49d32154809cf480e203da34f46b6f83914ed8.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/0023/fd2366897d2cabc32b5ce44b1440171836b8543144143d0e10ac55f3bb7c.png"
+      ],
+      "detailImages": [
+        {
+          "src": "/coupang-detail/9025751494/01.png",
+          "cdnPath": "vendor_inventory/f7fe/7b0d7e0706b0cbf5ca9db887c7385767baab71564fc887fc2dd746792baf.png",
+          "sourceOrder": 1,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1019860
+        },
+        {
+          "src": "/coupang-detail/9025751494/02.png",
+          "cdnPath": "vendor_inventory/cdfc/20b0ee3ba5fd6d40dc983ad43a4a8f12edd0e101c446b8d8d2c6e37082de.png",
+          "sourceOrder": 2,
+          "width": 780,
+          "height": 1360,
+          "bytes": 857118
+        },
+        {
+          "src": "/coupang-detail/9025751494/03.png",
+          "cdnPath": "vendor_inventory/20b3/698cdf0593b4acbff66d310ad70870778f26ab78321878408c77c24c9dbf.png",
+          "sourceOrder": 3,
+          "width": 780,
+          "height": 1360,
+          "bytes": 310408
+        },
+        {
+          "src": "/coupang-detail/9025751494/04.png",
+          "cdnPath": "vendor_inventory/ef79/4596cbabb0bddb6804120ec51f17cf4be8c698e433a72545144337dc5fc4.png",
+          "sourceOrder": 4,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1257212
+        },
+        {
+          "src": "/coupang-detail/9025751494/05.png",
+          "cdnPath": "vendor_inventory/5d3a/46dc649a8da5056768e3934d044f1044520950a3c2dbcbfb908d4631da64.png",
+          "sourceOrder": 5,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1044782
+        },
+        {
+          "src": "/coupang-detail/9025751494/06.png",
+          "cdnPath": "vendor_inventory/3f1e/d8aedacb61c228636c911b49ae3dde18e86f50615e6984b84d703c383426.png",
+          "sourceOrder": 6,
+          "width": 780,
+          "height": 1360,
+          "bytes": 729564
+        },
+        {
+          "src": "/coupang-detail/9025751494/07.png",
+          "cdnPath": "vendor_inventory/3448/ab28b0db55e6bed3a5e234ceb457dadaab18962b5491fe646a4af33a1651.png",
+          "sourceOrder": 7,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1450359
+        },
+        {
+          "src": "/coupang-detail/9025751494/08.png",
+          "cdnPath": "vendor_inventory/21a6/a1fbdf0fe70bac5aadafef1fef9ebb0b5596d39d071ec2248e6400b0e9a2.png",
+          "sourceOrder": 8,
+          "width": 780,
+          "height": 1360,
+          "bytes": 356400
+        },
+        {
+          "src": "/coupang-detail/9025751494/09.png",
+          "cdnPath": "vendor_inventory/311d/e9313f0544409d0c4d6c45d4d7b36b113b196b59271b2d6e2514c3411d68.png",
+          "sourceOrder": 9,
+          "width": 780,
+          "height": 1360,
+          "bytes": 392166
+        },
+        {
+          "src": "/coupang-detail/9025751494/10.png",
+          "cdnPath": "vendor_inventory/41bc/2dae8b5bc6e93ea2038c6da3ce2f612dac929a3f0723fdc6116dab142e1b.png",
+          "sourceOrder": 10,
+          "width": 780,
+          "height": 1360,
+          "bytes": 378797
+        },
+        {
+          "src": "/coupang-detail/9025751494/11.png",
+          "cdnPath": "vendor_inventory/3cc8/b47b3ed459f5e956b8177b0f579f5a3c0c5965cbdba47c06cb2c00014663.png",
+          "sourceOrder": 11,
+          "width": 780,
+          "height": 1360,
+          "bytes": 607742
+        },
+        {
+          "src": "/coupang-detail/9025751494/12.png",
+          "cdnPath": "vendor_inventory/85bd/f87e2b509ba9fee6c3c188f1fe654bc38493871b7ec97b265e3ffaef226b.png",
+          "sourceOrder": 12,
+          "width": 780,
+          "height": 1360,
+          "bytes": 428022
+        },
+        {
+          "src": "/coupang-detail/9025751494/13.png",
+          "cdnPath": "vendor_inventory/b9b2/4746d0fddcbaba77164c82978d056471f852b03fe17bd5f37c9a0874de72.png",
+          "sourceOrder": 13,
+          "width": 780,
+          "height": 1360,
+          "bytes": 132458
+        },
+        {
+          "src": "/coupang-detail/9025751494/14.png",
+          "cdnPath": "vendor_inventory/cab0/7412f26fda70b9485ae68931cc11c054916cd90875e6f29db13eef04c94d.png",
+          "sourceOrder": 14,
+          "width": 780,
+          "height": 1360,
+          "bytes": 352561
+        }
+      ],
+      "api": {
+        "source": "coupang-openapi",
+        "sellerProductId": "15704797033",
+        "statusName": "승인완료",
+        "saleStartedAt": "2026-04-21T14:00:22",
+        "saleEndedAt": "2099-12-31T00:00:00",
+        "brand": "유어스킨플러스",
+        "displayProductName": "유어스킨플러스 로우 피에이치 클렌징 젤",
+        "generalProductName": "유어스킨플러스 로우 피에이치 클렌징 젤",
+        "productGroup": "폼/젤/파우더/비누",
+        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/de32/f5d7db33069eba1d733664906b5a4c39b678cf9f5107e99eb15c06302527.png",
+        "productImageCount": 6,
+        "detailContentImageCount": 14,
+        "searchTags": [
+          "거품 클렌저",
+          "세안제",
+          "약산성 클렌징 젤 폼",
+          "약산성 클렌징젤",
+          "약산성클렌저",
+          "약산성클렌징",
+          "약산성폼클렌징",
+          "젤 클렌저",
+          "젤클렌저",
+          "젤클렌징",
+          "클렌저",
+          "클렌징",
+          "클렌징 젤",
+          "클렌징밀크",
+          "클렌징젤",
+          "클렌징폼",
+          "포밍 클렌저",
+          "폼클렌저",
+          "폼클렌징",
+          "피부과 클렌징젤"
+        ],
+        "notices": [
+          {
+            "name": "용량(중량)",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제품 주요 사양",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용기한 또는 개봉 후 사용기간",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용방법",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제조국",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따라 기재, 표시하여야 하는 모든 성분",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따른 기능성 화장품 심사(또는 보고)를 필함 해당 유무",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용할 때 주의사항",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "품질보증기준",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "소비자상담관련 전화번호",
+            "content": "상품 상세페이지 참조"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "순 함량 중량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "스킨케어 향",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 유형 무료",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "항균기능 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드워시 대상",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 중량(g)",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부톤",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 특징",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "화장품 용기 타입",
+            "value": "펌프형",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 용량",
+            "value": "300ml",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "제품 장점",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "리무버 타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 향",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "선케어 SPF",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "바디워시/클렌저 제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부고민",
+            "value": "진정/보습",
+            "unit": "NONE"
+          },
+          {
+            "name": "바디워시/클렌저 피부고민",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "비누 종류",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "비누 사용대상",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "뷰티 색상계열",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "본품/리필",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "특별한 기능",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "GTIN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Parent MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Variation MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드워시 용기타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부타입",
+            "value": "모든피부",
+            "unit": "NONE"
+          },
+          {
+            "name": "용기 종류",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향기",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 용량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "수량",
+            "value": "1개",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "피부 세정제 사용부위",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "패키지 유형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사이즈",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "때비누 제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "성별",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "순 내용 양",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "포함 구성 요소",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 수량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용대상",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드케어 피부고민",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "핸드워시 타입",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용 부위",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "풋케어 타입",
+            "value": "",
+            "unit": "NONE"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "9025733014",
+      "fileName": "유어스킨플러스 히알루론산 토너 - 스킨 _ 쿠팡.html",
+      "fileSize": 2928861,
+      "name": "유어스킨플러스 히알루론산 토너",
+      "description": "쿠팡에서 유어스킨플러스 히알루론산 토너 구매하고 더 많은 혜택을 받으세요! 지금 할인중인 다른 스킨 제품도 바로 쿠팡에서 확인할 수 있습니다.",
+      "productId": "9025733014",
+      "sellerProductId": "15704749086",
+      "itemId": "26470069791",
+      "vendorItemId": "93445228832",
+      "sku": "9025733014-26470069791",
+      "url": "https://www.coupang.com/vp/products/9025733014?itemId=26470069791&vendorItemId=93445228832",
+      "category": "스킨",
+      "categories": [
+        "쿠팡수입",
+        "뷰티",
+        "스킨케어",
+        "스킨"
+      ],
+      "price": 10900,
+      "originalPrice": 20000,
+      "discountRate": 46,
+      "availability": "승인완료",
+      "ratingValue": 5,
+      "reviewCount": 34,
+      "images": [
+        "https://image.coupangcdn.com/image/vendor_inventory/image_audit/prod/f6000045-4e6a-428f-bac2-595842c0ba03_fixing_v2.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/4337/647f73ceeed8e61a70cf84632781d847f391fcbc7693aea499fd64351422.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/bc4a/c9e4b12317c4c1175a10b0ecaa6c418f755a29a5947223388c81477533b5.jpg",
+        "https://image.coupangcdn.com/image/vendor_inventory/47b0/97ea193247674a075f3da80934e561fb2f1731551e88a0aadfa0571ca975.jpg",
+        "https://image.coupangcdn.com/image/vendor_inventory/c47d/36609401205b608d1ebaf04c69e7c7076ab7e2cdedf9f5701f12c45749df.jpg",
+        "https://image.coupangcdn.com/image/vendor_inventory/51d8/f876c1529b099eebb7215d706bf8e704f4cddb4304169ee15809db52221b.jpg"
+      ],
+      "detailImages": [
+        {
+          "src": "/coupang-detail/9025733014/01.png",
+          "cdnPath": "vendor_inventory/2aaf/c37e3107ab069d81cdc43e4a281e869afa3a73456dbfdb9e93025ebcd8e5.png",
+          "sourceOrder": 1,
+          "width": 780,
+          "height": 1360,
+          "bytes": 994863
+        },
+        {
+          "src": "/coupang-detail/9025733014/02.png",
+          "cdnPath": "vendor_inventory/4974/f50ddd04142cb2c602064e41df485f0ac9e1cca3e1a2e12056f8aa33114a.png",
+          "sourceOrder": 2,
+          "width": 780,
+          "height": 1360,
+          "bytes": 609323
+        },
+        {
+          "src": "/coupang-detail/9025733014/03.png",
+          "cdnPath": "vendor_inventory/71a4/da97ed83622d914946c47647b4d2651eacb8fdb264f88c4c01a2ef9dcbef.png",
+          "sourceOrder": 3,
+          "width": 780,
+          "height": 1360,
+          "bytes": 195243
+        },
+        {
+          "src": "/coupang-detail/9025733014/04.png",
+          "cdnPath": "vendor_inventory/f56f/3f4c047b38dd5ffd26107616150c418282e86f905a750890c294535e345b.png",
+          "sourceOrder": 4,
+          "width": 780,
+          "height": 1360,
+          "bytes": 724656
+        },
+        {
+          "src": "/coupang-detail/9025733014/05.png",
+          "cdnPath": "vendor_inventory/4556/9c095f6d06d0a048ffbde250a0467860ebe4c4c498b5b3a582fe724269a2.png",
+          "sourceOrder": 5,
+          "width": 780,
+          "height": 1360,
+          "bytes": 528146
+        },
+        {
+          "src": "/coupang-detail/9025733014/06.png",
+          "cdnPath": "vendor_inventory/a9d7/feb8840d9e521afb6702d60b9b3266048dfc6db352fcaff7d83df0eab7f9.png",
+          "sourceOrder": 6,
+          "width": 780,
+          "height": 1360,
+          "bytes": 944996
+        },
+        {
+          "src": "/coupang-detail/9025733014/07.png",
+          "cdnPath": "vendor_inventory/f1a2/c025dcbe089283f579dab24ab80fb677ecf78488674bb26f8eb6fd426d37.png",
+          "sourceOrder": 7,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1116782
+        },
+        {
+          "src": "/coupang-detail/9025733014/08.png",
+          "cdnPath": "vendor_inventory/04c7/b2734131a7a675010e872e6489a85feddff59a260e58cdbdb7b68ed572a8.png",
+          "sourceOrder": 8,
+          "width": 780,
+          "height": 1360,
+          "bytes": 1164919
+        },
+        {
+          "src": "/coupang-detail/9025733014/09.png",
+          "cdnPath": "vendor_inventory/e042/49c55dea2840e8e4d1b1ae606b8636c8de13cd98ce6c158f5ab6db7f080f.png",
+          "sourceOrder": 9,
+          "width": 780,
+          "height": 1360,
+          "bytes": 727899
+        },
+        {
+          "src": "/coupang-detail/9025733014/10.png",
+          "cdnPath": "vendor_inventory/f8f4/39c6cc043c4697ddacd61eaf5542c1dc3f6270eaf56436753ada4545b9d0.png",
+          "sourceOrder": 10,
+          "width": 780,
+          "height": 1360,
+          "bytes": 378622
+        },
+        {
+          "src": "/coupang-detail/9025733014/11.png",
+          "cdnPath": "vendor_inventory/7d8f/145d00b4e7875ada7f771ab7ead2889a32037c707a0a0b8c0fdc71ceb469.png",
+          "sourceOrder": 11,
+          "width": 780,
+          "height": 1360,
+          "bytes": 716166
+        },
+        {
+          "src": "/coupang-detail/9025733014/12.png",
+          "cdnPath": "vendor_inventory/e20e/b461a7ecc39bb056681aa766f4acb7963dc00bfcfd78045cfaadf8250c1a.png",
+          "sourceOrder": 12,
+          "width": 780,
+          "height": 1360,
+          "bytes": 428022
+        },
+        {
+          "src": "/coupang-detail/9025733014/13.png",
+          "cdnPath": "vendor_inventory/6e61/6773204ad18e89b7eb8277039b46cca3cdf5282a06c4dcfe1a0026b6a59d.png",
+          "sourceOrder": 13,
+          "width": 780,
+          "height": 1360,
+          "bytes": 337212
+        },
+        {
+          "src": "/coupang-detail/9025733014/14.png",
+          "cdnPath": "vendor_inventory/cab0/7412f26fda70b9485ae68931cc11c054916cd90875e6f29db13eef04c94d.png",
+          "sourceOrder": 14,
+          "width": 780,
+          "height": 1360,
+          "bytes": 352561
+        }
+      ],
+      "api": {
+        "source": "coupang-openapi",
+        "sellerProductId": "15704749086",
+        "statusName": "승인완료",
+        "saleStartedAt": "2026-04-20T15:40:08",
+        "saleEndedAt": "2099-12-31T00:00:00",
+        "brand": "유어스킨플러스",
+        "displayProductName": "유어스킨플러스 히알루론산 토너",
+        "generalProductName": "유어스킨플러스 히알루론산 토너",
+        "productGroup": "스킨",
+        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/image_audit/prod/f6000045-4e6a-428f-bac2-595842c0ba03_fixing_v2.png",
+        "productImageCount": 6,
+        "detailContentImageCount": 14,
+        "searchTags": [
+          "8중 히알루론산 토너",
+          "리얼 히알루로닉 100 토너",
+          "리얼히알루로닉100토너",
+          "수분토너",
+          "스킨",
+          "여성 히알루론산 스킨",
+          "저분자 히알루론산 토너",
+          "토너",
+          "히알루로닉",
+          "히알루로닉 세럼",
+          "히알루로닉 애시드",
+          "히알루로닉 앰플",
+          "히알루로닉 토너",
+          "히알루로닉스킨",
+          "히알루론산",
+          "히알루론산 원액",
+          "히알루론산 토너",
+          "히알루론산스킨토너",
+          "히알루론산앰플",
+          "히알루론산토너"
+        ],
+        "notices": [
+          {
+            "name": "용량(중량)",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제품 주요 사양",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용기한 또는 개봉 후 사용기간",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용방법",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "제조국",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따라 기재, 표시하여야 하는 모든 성분",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "화장품법에 따른 기능성 화장품 심사(또는 보고)를 필함 해당 유무",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "사용할 때 주의사항",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "품질보증기준",
+            "content": "상품 상세페이지 참조"
+          },
+          {
+            "name": "소비자상담관련 전화번호",
+            "content": "상품 상세페이지 참조"
+          }
+        ],
+        "attributes": [
+          {
+            "name": "피부타입",
+            "value": "모든피부",
+            "unit": "NONE"
+          },
+          {
+            "name": "향기",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "올인원 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "스킨케어 향",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제품의 권장 용도",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 용량",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "제형",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 유형 무료",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "수량",
+            "value": "1개",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "기획세트 여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "기능성화장품 인증여부",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "사이즈",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "총 중량(g)",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "재료 특징",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "향 유무",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "개당 용량",
+            "value": "500ml",
+            "unit": "EXPOSED"
+          },
+          {
+            "name": "제품 장점",
+            "value": "보습",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용대상",
+            "value": "남녀공용",
+            "unit": "NONE"
+          },
+          {
+            "name": "피부고민",
+            "value": "진정/보습",
+            "unit": "NONE"
+          },
+          {
+            "name": "사용 부위",
+            "value": "얼굴",
+            "unit": "NONE"
+          },
+          {
+            "name": "GTIN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Parent MPN",
+            "value": "",
+            "unit": "NONE"
+          },
+          {
+            "name": "Variation MPN",
+            "value": "",
+            "unit": "NONE"
+          }
+        ]
+      }
+    }
+  ]
+}

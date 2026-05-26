@@ -1,0 +1,178 @@
+{
+  "checkedAt": "2026-05-09",
+  "store": {
+    "name": "유어스킨플러스",
+    "url": "https://smartstore.naver.com/yourskinplus",
+    "searchUrl": "https://search.naver.com/search.naver?query=%EC%9C%A0%EC%96%B4%EC%8A%A4%ED%82%A8%ED%94%8C%EB%9F%AC%EC%8A%A4",
+    "description": "네어버와 함께 발전하는 쇼핑몰이 되고 싶습니다."
+  },
+  "smartstoreProducts": [
+    {
+      "slug": "aqua-lotion",
+      "name": "유어스킨플러스 히알루론산 아쿠아 로션 300ml",
+      "shortName": "히알루론산 아쿠아 로션",
+      "price": 10300,
+      "discountRate": "45%",
+      "rating": 4.88,
+      "reviewCount": 26,
+      "shipping": "무료",
+      "url": "https://smartstore.naver.com/main/products/12763872443",
+      "image": "/naver/product-images/aqua-lotion.jpg",
+      "source": "네이버플러스 스토어",
+      "positioning": "가벼운 보습과 진정이 필요한 데일리 로션",
+      "detailDirection": [
+        "300ml 대용량과 100ml당 3,433원 단위가를 첫 화면에서 강조",
+        "보습/진정/무향 키워드로 민감 피부 루틴 설계",
+        "쿠팡과 네이버 가격·리뷰 수 차이를 별도 관리"
+      ],
+      "keywords": ["300ml", "보습", "진정", "무향", "무료배송"]
+    },
+    {
+      "slug": "hyaluronic-toner",
+      "name": "유어스킨플러스 저분자히알루론산토너 스킨 원액 앰플 500ml",
+      "shortName": "저분자 히알루론산 토너",
+      "price": 10900,
+      "discountRate": "45%",
+      "rating": 4.96,
+      "reviewCount": 26,
+      "shipping": "무료",
+      "url": "https://smartstore.naver.com/main/products/12597599110",
+      "image": "/naver/product-images/hyaluronic-toner.jpg",
+      "source": "네이버플러스 스토어",
+      "positioning": "500ml 대용량 저분자 히알루론산 수분 토너",
+      "detailDirection": [
+        "500ml 대용량과 10,900원 가격 경쟁력을 최상단에 배치",
+        "스킨/원액/앰플 검색어를 상세 제목과 섹션에 반영",
+        "수분 레이어링, 닦토, 스킨팩 사용 장면을 분리"
+      ],
+      "keywords": ["500ml", "저분자", "수분", "스킨팩", "무료배송"]
+    },
+    {
+      "slug": "cleansing-oil",
+      "name": "유어스킨플러스 저자극클렌징오일 대용량 모공관리 블랙헤드 300ml",
+      "shortName": "퓨어 딥 클렌징 오일",
+      "price": 12700,
+      "discountRate": "44%",
+      "rating": 4.96,
+      "reviewCount": 24,
+      "shipping": "무료",
+      "url": "https://smartstore.naver.com/main/products/12763986151",
+      "image": "/naver/product-images/cleansing-oil.jpg",
+      "source": "네이버플러스 스토어",
+      "positioning": "블랙헤드와 모공 노폐물을 겨냥한 대용량 저자극 클렌징 오일",
+      "detailDirection": [
+        "모공관리/블랙헤드 검색 니즈를 첫 문장에 반영",
+        "오일 유화 과정과 사용 전후 이미지를 상세 핵심으로 설계",
+        "300ml 대용량과 44% 할인 가격을 구매 근거로 노출"
+      ],
+      "keywords": ["300ml", "저자극", "모공관리", "블랙헤드", "무료배송"]
+    },
+    {
+      "slug": "cleansing-gel",
+      "name": "유어스킨플러스 약산성 클렌징젤 젤클렌저 로우 피에이치 300ml",
+      "shortName": "로우 피에이치 클렌징 젤",
+      "price": 10500,
+      "discountRate": "46%",
+      "rating": 4.96,
+      "reviewCount": 23,
+      "shipping": "무료",
+      "url": "https://smartstore.naver.com/main/products/12597627146",
+      "image": "/naver/product-images/cleansing-gel.jpg",
+      "source": "네이버플러스 스토어",
+      "positioning": "pH 밸런스와 세안 후 당김을 줄이는 약산성 젤 클렌저",
+      "detailDirection": [
+        "약산성/pH/젤클렌저 키워드를 반복 노출",
+        "세안 후 당김·민감 피부 문제를 전환 카피로 사용",
+        "300ml 펌프형 사용성과 46% 할인을 구매 버튼 주변에 배치"
+      ],
+      "keywords": ["300ml", "약산성", "pH", "젤클렌저", "무료배송"]
+    },
+    {
+      "slug": "rose-essence",
+      "name": "유어스킨플러스 장미에센스 장마수토너 불가리안로즈 150ml",
+      "shortName": "로즈 다마스쿠스 토닉 에센스",
+      "price": 10100,
+      "discountRate": "44%",
+      "rating": null,
+      "reviewCount": null,
+      "shipping": "무료",
+      "url": "https://smartstore.naver.com/main/products/12597635848",
+      "image": "/naver/product-images/rose-essence.jpg",
+      "source": "네이버 가격비교 중복 정리",
+      "positioning": "장미수 토너와 에센스 감성을 결합한 150ml 로즈 케어",
+      "detailDirection": [
+        "네이버 가격비교와 쿠팡에 중복 노출되는 로즈 라인을 하나의 상품으로 통합",
+        "장미수/불가리안로즈/토닉 에센스 검색어를 첫 화면과 섹션 제목에 반영",
+        "150ml 용량과 10,100원 가격을 선물형·감성형 구매 근거로 배치"
+      ],
+      "keywords": ["150ml", "장미수", "로즈", "토닉에센스", "중복정리"]
+    },
+    {
+      "slug": "whitening-cream",
+      "name": "유어스킨플러스 미백화이트닝크림 톤케어 기능성화장품 200ml",
+      "shortName": "화이트닝 톤 케어 크림",
+      "price": 10100,
+      "discountRate": "45%",
+      "rating": null,
+      "reviewCount": null,
+      "shipping": "무료",
+      "url": "https://smartstore.naver.com/main/products/12873483979",
+      "image": "/naver/product-images/whitening-cream.jpg",
+      "source": "네이버 가격비교 중복 정리",
+      "positioning": "칙칙함과 건조함을 함께 겨냥하는 200ml 톤 케어 크림",
+      "detailDirection": [
+        "네이버 가격비교의 스마트스토어/쿠팡 중복 노출을 하나의 상품으로 통합",
+        "미백/톤케어/기능성화장품 검색어를 상세 첫 줄에 흡수",
+        "200ml 대용량과 10,100원 가격을 구매 버튼 주변의 핵심 지표로 고정"
+      ],
+      "keywords": ["200ml", "미백", "톤케어", "기능성화장품", "중복정리"]
+    },
+    {
+      "slug": "soothing-cream",
+      "name": "유어스킨플러스 피디알렌 히알루론산 수딩 크림 200ml",
+      "shortName": "PDRN 히알루론산 수딩 크림",
+      "price": 12800,
+      "discountRate": "44%",
+      "rating": null,
+      "reviewCount": null,
+      "shipping": "무료",
+      "url": "https://smartstore.naver.com/main/products/13176378779",
+      "image": "/naver/product-images/soothing-cream.jpg",
+      "source": "네이버 가격비교 중복 정리",
+      "positioning": "히알루론산 수분감과 산뜻한 마무리를 내세우는 200ml 수딩 크림",
+      "detailDirection": [
+        "피디알렌/PDRN 표기 차이를 같은 수딩 크림 상품군으로 정리",
+        "히알루론산/수딩/크림 검색어를 문제 제기와 성분 섹션에 반복 배치",
+        "12,800원 가격대와 200ml 용량을 데일리 크림 구매 근거로 사용"
+      ],
+      "keywords": ["200ml", "PDRN", "히알루론산", "수딩", "중복정리"]
+    }
+  ],
+  "priceCompareProducts": [
+    {
+      "name": "유어스킨플러스 장미에센스 장마수토너 불가리안로즈 150ml",
+      "price": 10100,
+      "seller": "스마트스토어 / 쿠팡 중복 노출"
+    },
+    {
+      "name": "유어스킨플러스 미백화이트닝크림 톤케어 기능성화장품 200ml",
+      "price": 10100,
+      "seller": "스마트스토어 / 쿠팡 중복 노출"
+    },
+    {
+      "name": "유어스킨플러스 피디알렌 히알루론산 수딩 크림 200ml",
+      "price": 12800,
+      "seller": "스마트스토어 / 쿠팡 중복 노출"
+    },
+    {
+      "name": "유어스킨플러스 히알루론산 아쿠아 로션",
+      "price": 10300,
+      "seller": "스마트스토어 / 쿠팡 중복 노출"
+    },
+    {
+      "name": "유어스킨플러스 히알루론산 토너 1개 500ml",
+      "price": 10900,
+      "seller": "스마트스토어 / 쿠팡 중복 노출"
+    }
+  ]
+}

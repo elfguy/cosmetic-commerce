@@ -1,0 +1,636 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import siteData from '../../data/yourskin-products.json';
+
+const { brand, products } = siteData;
+const formatPrice = (price) => `${Number(price).toLocaleString('ko-KR')}원`;
+const process = [
+  { title: '산지', text: '허브와 꽃 원료의 수확 시점 기록', code: 'FARM' },
+  { title: '선별', text: '향, 색, 수분감 기준으로 원료 분류', code: 'SORT' },
+  { title: '저온 보관', text: '원료 특성에 맞춘 온도와 습도 관리', code: 'COLD' },
+  { title: '제조', text: '필요한 수량만 빠르게 배합', code: 'MAKE' },
+  { title: '배송', text: '제조일자와 출고 흐름을 함께 안내', code: 'SHIP' },
+];
+const freshnessCards = [
+  { name: '로즈 플라워 워터', origin: 'Bulgaria concept', freshness: '수확 후 향 보존 중심', image: '/coupang-detail/9025775541/02.png' },
+  { name: '병풀 추출물', origin: 'Herbal care', freshness: '잎의 수분감과 색 보존', image: '/coupang-detail/9025733014/03.png' },
+  { name: '식물성 오일', origin: 'Clean oil blend', freshness: '산패를 줄이는 차광 보관', image: '/coupang-detail/9221762154/03.png' },
+  { name: '히알루론산 수분 베이스', origin: 'Hydration base', freshness: '제형 안정성 중심 관리', image: '/coupang-detail/9218811640/02.png' },
+];
+const recommended = products.filter((product) => ['rose-essence', 'hyaluronic-toner', 'cleansing-gel', 'aqua-lotion'].includes(product.slug));
+const palette = [
+  { name: 'White', value: '#ffffff' },
+  { name: 'Light green', value: '#dcefd8' },
+  { name: 'Mint', value: '#bfe4cf' },
+  { name: 'Pale yellow', value: '#f5e9a8' },
+];
+---
+
+<BaseLayout title="유어스킨플러스 Fresh Ingredient Chain 목업" description="원료 수확부터 제조와 배송까지 신선한 유통 과정을 강조한 유어스킨플러스 웹사이트 목업">
+  <main class="fresh-chain-shop">
+    <header class="site-header">
+      <a class="brand-word" href="/" aria-label="유어스킨플러스 홈">
+        <span>Your Skin</span>
+        <strong>Plus</strong>
+      </a>
+      <nav aria-label="Fresh Chain 메뉴">
+        <a href="#chain">Fresh Chain</a>
+        <a href="#origin">Origin</a>
+        <a href="#products">Products</a>
+        <a href="#delivery">Fresh Delivery</a>
+      </nav>
+      <a class="header-cta" href="#delivery">정기배송 보기</a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Fresh Ingredient Chain Mockup 02</p>
+        <h1>수확한 자연의 신선함을 피부까지 그대로</h1>
+        <span>
+          유어스킨플러스는 산지에서 제품까지의 원료 흐름을 시각화해 신선한 원료를 빠르게 전달하는 브랜드 이미지를 만듭니다.
+        </span>
+        <div class="hero-actions">
+          <a class="primary" href="#chain">Fresh Chain 살펴보기</a>
+          <a class="secondary" href="#origin">원료별 신선도 보기</a>
+        </div>
+      </div>
+
+      <div class="chain-map" aria-label="원료 수확부터 배송까지의 흐름">
+        {process.map((item, index) => (
+          <article>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <strong>{item.title}</strong>
+            <em>{item.code}</em>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="concept-board" aria-label="목업 콘셉트 설명">
+      <article>
+        <p class="eyebrow">Brand concept</p>
+        <h2>농장에서 피부까지 이어지는 투명한 유통형 공식몰</h2>
+        <span>복잡한 화장품 성분 설명보다 수확, 선별, 저온 보관, 제조, 배송 흐름을 인포그래픽으로 보여줘 신선함을 직관적으로 이해하게 만듭니다.</span>
+      </article>
+      <div class="palette">
+        {palette.map((color) => (
+          <div>
+            <span style={`background:${color.value}`}></span>
+            <strong>{color.name}</strong>
+            <em>{color.value}</em>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="fresh-chain" id="chain">
+      <div class="section-head">
+        <p class="eyebrow">Fresh Ingredient Chain</p>
+        <h2>산지 → 선별 → 저온 보관 → 제조 → 배송</h2>
+        <span>각 단계는 구매 전 고객이 궁금해하는 “얼마나 신선하게 관리되는가”를 증명하는 정보 단위입니다.</span>
+      </div>
+      <div class="flow-line">
+        {process.map((item) => (
+          <article>
+            <b>{item.code}</b>
+            <strong>{item.title}</strong>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="origin-section" id="origin">
+      <div class="section-head">
+        <p class="eyebrow">Freshness cards</p>
+        <h2>원료별 신선도 카드</h2>
+        <span>원료의 출처, 보관 방식, 제품 적용 이유를 카드로 정리해 공식몰의 신뢰도를 높입니다.</span>
+      </div>
+      <div class="origin-grid">
+        {freshnessCards.map((card) => (
+          <article>
+            <img src={card.image} alt={`${card.name} 원료 신선도 이미지`} loading="lazy" />
+            <div>
+              <span>{card.origin}</span>
+              <h3>{card.name}</h3>
+              <p>{card.freshness}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="product-section" id="products">
+      <div class="section-head">
+        <p class="eyebrow">Fresh routine products</p>
+        <h2>신선 원료 스토리와 연결되는 제품 추천</h2>
+        <span>{brand.name}의 제품군을 원료 출처와 루틴 목적에 맞춰 추천합니다.</span>
+      </div>
+      <div class="product-grid">
+        {recommended.map((product) => (
+          <article class="product-card">
+            <img src={product.image} alt={product.fullName} loading="lazy" />
+            <div>
+              <span>{product.category} · {product.volume}</span>
+              <h3>{product.name}</h3>
+              <p>{product.heroLine}</p>
+              <strong>{formatPrice(product.price)}</strong>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="delivery-cta" id="delivery">
+      <div>
+        <p class="eyebrow">Fresh delivery CTA</p>
+        <h2>신선한 원료를 빠르게 전달하는 정기배송 콘셉트</h2>
+        <span>제조일자 확인, 낮은 재고 회전 주기, 빠른 출고 메시지를 묶어 “신선 배송” 구매 전환을 만듭니다.</span>
+      </div>
+      <a href="#products">신선 배송 루틴 담기</a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(body) {
+    background: #f7fbf4;
+  }
+
+  .fresh-chain-shop {
+    --ink: #18221b;
+    --muted: #607166;
+    --line: rgba(24, 34, 27, .13);
+    --green: #4d8d58;
+    --mint: #bfe4cf;
+    --light: #dcefd8;
+    --yellow: #f5e9a8;
+    --paper: #ffffff;
+    min-height: 100vh;
+    color: var(--ink);
+    font-family: var(--font-body);
+    background:
+      linear-gradient(90deg, rgba(77, 141, 88, .08) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(77, 141, 88, .07) 1px, transparent 1px),
+      #f7fbf4;
+    background-size: 42px 42px, 42px 42px;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: 190px 1fr auto;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(247, 251, 244, .92);
+    padding: 16px clamp(24px, 5vw, 72px);
+    backdrop-filter: blur(18px);
+  }
+
+  .brand-word,
+  .site-header a,
+  .primary,
+  .secondary,
+  .delivery-cta a {
+    color: inherit;
+    font-weight: 850;
+    text-decoration: none;
+  }
+
+  .brand-word {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    white-space: nowrap;
+    font-family: var(--font-latin);
+    text-transform: uppercase;
+  }
+
+  .brand-word span,
+  .brand-word strong {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .brand-word strong {
+    color: var(--green);
+  }
+
+  .site-header nav {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .header-cta,
+  .primary,
+  .secondary,
+  .delivery-cta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    border-radius: 999px;
+    font-weight: 650;
+    padding: 0 18px;
+  }
+
+  .site-header .header-cta {
+    justify-self: end;
+    color: #fff;
+    white-space: nowrap;
+  }
+
+  .header-cta,
+  .primary,
+  .delivery-cta a {
+    background: var(--green);
+    color: #fff;
+  }
+
+  .secondary {
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, .75);
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, .95fr) minmax(540px, 1.05fr);
+    gap: 42px;
+    align-items: center;
+    padding: 72px clamp(24px, 5vw, 72px) 46px;
+  }
+
+  .eyebrow {
+    margin: 0;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 950;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    word-break: keep-all;
+  }
+
+  h1 {
+    max-width: 690px;
+    margin-top: 14px;
+    font-family: var(--font-display);
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 34px;
+    font-weight: 550;
+    line-height: 1.22;
+    letter-spacing: 0;
+  }
+
+  .hero-copy > span,
+  .concept-board article > span,
+  .section-head > span,
+  .delivery-cta span {
+    display: block;
+    max-width: 620px;
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.78;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .chain-map {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .chain-map article {
+    position: relative;
+    display: grid;
+    align-content: start;
+    gap: 12px;
+    min-height: 300px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  .chain-map article:nth-child(odd) {
+    background: #f0faef;
+  }
+
+  .chain-map article::after {
+    content: '';
+    position: absolute;
+    right: -28px;
+    bottom: -40px;
+    width: 120px;
+    height: 170px;
+    border-radius: 90px 90px 20px 90px;
+    background: rgba(191, 228, 207, .52);
+    transform: rotate(28deg);
+  }
+
+  .chain-map span {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 950;
+  }
+
+  .chain-map strong {
+    font-size: 22px;
+    font-weight: 650;
+  }
+
+  .chain-map em {
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--ink);
+    font-style: normal;
+    font-weight: 950;
+  }
+
+  .chain-map p,
+  .flow-line p,
+  .origin-grid p,
+  .product-card p {
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  .concept-board,
+  .fresh-chain,
+  .origin-section,
+  .product-section,
+  .delivery-cta {
+    border-top: 1px solid var(--line);
+    padding: 48px clamp(24px, 5vw, 72px);
+  }
+
+  .concept-board {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 520px;
+    gap: 36px;
+    background: rgba(255, 255, 255, .54);
+  }
+
+  .concept-board h2,
+  .section-head h2,
+  .delivery-cta h2 {
+    margin-top: 10px;
+  }
+
+  .palette {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .palette div {
+    display: grid;
+    gap: 8px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    padding: 12px;
+  }
+
+  .palette span {
+    height: 86px;
+    border: 1px solid rgba(24, 34, 27, .08);
+    border-radius: 6px;
+  }
+
+  .palette strong {
+    font-size: 14px;
+  }
+
+  .palette em {
+    color: var(--muted);
+    font-size: 12px;
+    font-style: normal;
+  }
+
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 28px;
+    margin-bottom: 24px;
+  }
+
+  .flow-line {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  .flow-line article {
+    position: relative;
+    display: grid;
+    align-content: start;
+    gap: 12px;
+    min-height: 240px;
+    border-right: 1px solid var(--line);
+    padding: 22px;
+  }
+
+  .flow-line article:last-child {
+    border-right: 0;
+  }
+
+  .flow-line b {
+    color: var(--green);
+    font-family: var(--font-serif);
+    font-size: 34px;
+  }
+
+  .flow-line strong {
+    font-size: 22px;
+  }
+
+  .origin-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .origin-grid article,
+  .product-card {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, .84);
+    overflow: hidden;
+  }
+
+  .origin-grid img {
+    width: 100%;
+    aspect-ratio: 1 / .82;
+    border-bottom: 1px solid var(--line);
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .origin-grid div,
+  .product-card div {
+    display: grid;
+    gap: 10px;
+    padding: 18px;
+  }
+
+  .origin-grid span,
+  .product-card span {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .origin-grid h3,
+  .product-card h3 {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .product-card {
+    display: grid;
+    grid-template-rows: 240px minmax(250px, auto);
+  }
+
+  .product-card img {
+    align-self: center;
+    justify-self: center;
+    width: 82%;
+    max-height: 210px;
+    object-fit: contain;
+    filter: drop-shadow(0 18px 18px rgba(24, 34, 27, .1));
+  }
+
+  .product-card strong {
+    margin-top: auto;
+    color: var(--green);
+    font-size: 24px;
+  }
+
+  .delivery-cta {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 26px;
+    align-items: center;
+    padding-bottom: 74px;
+    background:
+      linear-gradient(135deg, rgba(220, 239, 216, .9), rgba(245, 233, 168, .58)),
+      #f7fbf4;
+  }
+
+  .delivery-cta a {
+    min-height: 54px;
+  }
+
+  @media (max-width: 1180px) {
+    .site-header,
+    .hero,
+    .concept-board,
+    .delivery-cta {
+      grid-template-columns: 1fr;
+    }
+
+    .site-header nav {
+      justify-content: flex-start;
+    }
+
+    .site-header .header-cta {
+      justify-self: start;
+    }
+
+    .chain-map,
+    .flow-line,
+    .origin-grid,
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flow-line article {
+      border-right: 0;
+      border-bottom: 1px solid var(--line);
+    }
+  }
+
+  @media (max-width: 720px) {
+    .site-header,
+    .hero,
+    .concept-board,
+    .fresh-chain,
+    .origin-section,
+    .product-section,
+    .delivery-cta {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    .section-head {
+      display: block;
+    }
+
+    .chain-map,
+    .flow-line,
+    .origin-grid,
+    .product-grid,
+    .palette {
+      grid-template-columns: 1fr;
+    }
+
+    .chain-map article {
+      min-height: 230px;
+    }
+  }
+</style>

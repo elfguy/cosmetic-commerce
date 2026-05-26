@@ -1,0 +1,761 @@
+{
+  "brand": {
+    "name": "유어스킨플러스",
+    "englishName": "Yourskin+",
+    "tagline": "매일 쓰는 대용량 스킨케어를 더 정직하고 편안하게.",
+    "story": "유어스킨은 피부 타입별 맞춤 화장품 연구에서 출발한 가족 브랜드입니다. 네이버와 쿠팡에 이미 노출된 제품 데이터를 기반으로, 공식 사이트에서는 제품의 쓰임과 루틴을 더 보기 쉽게 정리합니다.",
+    "smartstoreUrl": "https://smartstore.naver.com/yourskinplus"
+  },
+  "products": [
+    {
+      "slug": "hyaluronic-toner",
+      "name": "저분자 히알루론산 토너",
+      "fullName": "유어스킨플러스 저분자히알루론산토너 스킨 원액 앰플 500ml",
+      "volume": "500ml",
+      "price": 10900,
+      "originalPrice": 20000,
+      "discountRate": "46%",
+      "rating": 4.96,
+      "reviewCount": 26,
+      "image": "/coupang-detail/9025733014/01.png",
+      "smartstoreUrl": "https://smartstore.naver.com/main/products/12597599110",
+      "category": "수분 토너",
+      "heroLine": "세안 후 첫 수분, 500ml로 넉넉하게 채우는 저분자 히알루론산 루틴.",
+      "problem": "속건조가 자주 느껴지거나 스킨팩·닦토를 부담 없이 쓰고 싶은 피부를 위한 대용량 수분 베이스.",
+      "benefits": [
+        "500ml 대용량",
+        "저분자 히알루론산 컨셉",
+        "스킨팩/레이어링 활용",
+        "무료배송 노출"
+      ],
+      "routine": [
+        "세안 후 화장솜 또는 손바닥에 덜어 피부결 정돈",
+        "건조한 부위는 2~3회 레이어링",
+        "화장솜에 충분히 적셔 3분 수분팩으로 활용"
+      ],
+      "keywords": [
+        "저분자",
+        "수분",
+        "스킨팩",
+        "대용량"
+      ],
+      "productId": "9025733014",
+      "itemId": "26470069791",
+      "vendorItemId": "93445228832",
+      "coupangUrl": "https://www.coupang.com/vp/products/9025733014?itemId=26470069791&vendorItemId=93445228832"
+    },
+    {
+      "slug": "aqua-lotion",
+      "name": "히알루론산 아쿠아 로션",
+      "fullName": "유어스킨플러스 히알루론산 아쿠아 로션 300ml",
+      "volume": "300ml",
+      "price": 10300,
+      "originalPrice": 19000,
+      "discountRate": "46%",
+      "rating": 4.88,
+      "reviewCount": 26,
+      "image": "/coupang/images/aqua-lotion/versions/original/representative/01.png",
+      "generatedHeroImage": "/coupang/images/aqua-lotion/assets/drive/aqua-lotion-water-scene.png",
+      "smartstoreUrl": "https://smartstore.naver.com/main/products/12763872443",
+      "category": "데일리 로션",
+      "heroLine": "제조일자와 사용기한 확인 기준을 함께 보여주는 300ml 아쿠아 보습 로션.",
+      "problem": "매일 얼굴과 바디에 닿는 로션은 산뜻한 수분감만큼 제조 이력 확인도 중요합니다. 제품 하단과 고시정보에서 제조일자와 사용기한을 확인하는 기준을 함께 보여줍니다.",
+      "benefits": [
+        "제조일자 확인 가능한 출고 기준",
+        "300ml 대용량",
+        "히알루론산 보습 성분 컨셉",
+        "얼굴·바디 데일리 사용",
+        "산뜻한 데일리 보습"
+      ],
+      "routine": [
+        "토너 사용 후 적당량을 덜어 얼굴에 얇게 펴 바르기",
+        "샤워 후 건조한 팔·다리·목 부위에 추가 사용",
+        "수령 후 제조일자와 사용기한을 확인하고 아침·저녁 데일리 루틴으로 사용"
+      ],
+      "keywords": [
+        "제조일자 확인",
+        "제조이력 확인",
+        "산뜻",
+        "아쿠아 보습",
+        "대용량"
+      ],
+      "freshness": {
+        "label": "Date check",
+        "headline": "제조일자 확인 기준으로 출고",
+        "body": "제품별 제조일자와 사용기한을 직접 확인할 수 있도록 제품 하단과 고시정보 확인 방법을 안내합니다.",
+        "checkpoints": [
+          "제조번호와 제조일자 표기",
+          "공식 판매처 기준 출고 관리",
+          "사용기한: 제조일로부터 24개월 / 개봉 후 12개월"
+        ]
+      },
+      "proofPoints": [
+        {
+          "label": "Date",
+          "title": "제조일자 확인",
+          "body": "첫 화면과 구매 근거 영역에서 제조일자 확인 기준을 반복 노출해 신뢰 메시지를 놓치지 않게 구성합니다."
+        },
+        {
+          "label": "Aqua",
+          "title": "히알루론산 성분",
+          "body": "히알루론산 보습 성분 컨셉을 청량한 블루·민트 톤으로 시각화합니다."
+        },
+        {
+          "label": "Daily",
+          "title": "300ml 데일리 로션",
+          "body": "얼굴과 건조 부위에 넉넉히 쓰기 좋은 데일리 펌프형 로션 포지션을 유지합니다."
+        }
+      ],
+      "representativeImageSet": [
+        {
+          "title": "크림은 무겁고 토너는 부족할 때",
+          "src": "/coupang/images/aqua-lotion/versions/v2/representative/01.png"
+        },
+        {
+          "title": "온 가족이 함께 쓰는 데일리 보습",
+          "src": "/coupang/images/aqua-lotion/versions/v2/representative/02.png"
+        },
+        {
+          "title": "더 신선하게 더 안심하게",
+          "src": "/coupang/images/aqua-lotion/versions/v2/representative/03.png"
+        },
+        {
+          "title": "민감 피부를 위한 순한 케어",
+          "src": "/coupang/images/aqua-lotion/versions/v2/representative/04.png"
+        },
+        {
+          "title": "수분·진정·보호를 한 번에",
+          "src": "/coupang/images/aqua-lotion/versions/v2/representative/05.png"
+        },
+        {
+          "title": "제조 6개월 이내 신선 제품",
+          "src": "/coupang/images/aqua-lotion/versions/v2/representative/06.png"
+        }
+      ],
+      "activeDetailVersionId": "v2",
+      "salesImageSet": [
+        {
+          "title": "인트로 / 제품 소개",
+          "src": "/coupang/images/aqua-lotion/versions/v2/detail/01.png"
+        },
+        {
+          "title": "온 가족 데일리 보습",
+          "src": "/coupang/images/aqua-lotion/versions/v2/detail/02.png"
+        },
+        {
+          "title": "8종 히알루론산 수분 충전",
+          "src": "/coupang/images/aqua-lotion/versions/v2/detail/03.png"
+        },
+        {
+          "title": "수분 진정 피부결 케어",
+          "src": "/coupang/images/aqua-lotion/versions/v2/detail/04.png"
+        },
+        {
+          "title": "자연 성분 진정 케어",
+          "src": "/coupang/images/aqua-lotion/versions/v2/detail/05.png"
+        },
+        {
+          "title": "Fresh Bud No.6 특허 진정 원료",
+          "src": "/coupang/images/aqua-lotion/versions/v2/detail/06.png"
+        },
+        {
+          "title": "발효 성분 / 식물 오일",
+          "src": "/coupang/images/aqua-lotion/versions/v2/detail/07.png"
+        },
+        {
+          "title": "피부 저자극 테스트 완료",
+          "src": "/coupang/images/aqua-lotion/versions/v2/detail/08.png"
+        },
+        {
+          "title": "제조일자 / 신선도",
+          "src": "/coupang/images/aqua-lotion/versions/v2/detail/09.png"
+        },
+        {
+          "title": "사용법 / 제품 정보 / 전성분",
+          "src": "/coupang/images/aqua-lotion/versions/v2/detail/10.png"
+        },
+        {
+          "title": "비공식 리셀러 주의 안내",
+          "src": "/coupang/images/aqua-lotion/versions/v2/detail/11.png"
+        }
+      ],
+      "detailImageVersions": [
+        {
+          "id": "v2",
+          "label": "V2",
+          "createdAt": "2026-05-25",
+          "status": "current",
+          "source": "public/coupang/images/aqua-lotion/versions/v2",
+          "sourceArchive": "/Users/elfguy/Downloads/유어스킨플러스_아쿠아로션_상세이미지_로고수정본.zip",
+          "representativeImages": [
+            {
+              "title": "크림은 무겁고 토너는 부족할 때",
+              "src": "/coupang/images/aqua-lotion/versions/v2/representative/01.png"
+            },
+            {
+              "title": "온 가족이 함께 쓰는 데일리 보습",
+              "src": "/coupang/images/aqua-lotion/versions/v2/representative/02.png"
+            },
+            {
+              "title": "더 신선하게 더 안심하게",
+              "src": "/coupang/images/aqua-lotion/versions/v2/representative/03.png"
+            },
+            {
+              "title": "민감 피부를 위한 순한 케어",
+              "src": "/coupang/images/aqua-lotion/versions/v2/representative/04.png"
+            },
+            {
+              "title": "수분·진정·보호를 한 번에",
+              "src": "/coupang/images/aqua-lotion/versions/v2/representative/05.png"
+            },
+            {
+              "title": "제조 6개월 이내 신선 제품",
+              "src": "/coupang/images/aqua-lotion/versions/v2/representative/06.png"
+            }
+          ],
+          "detailImages": [
+            {
+              "title": "인트로 / 제품 소개",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/01.png"
+            },
+            {
+              "title": "온 가족 데일리 보습",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/02.png"
+            },
+            {
+              "title": "8종 히알루론산 수분 충전",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/03.png"
+            },
+            {
+              "title": "수분 진정 피부결 케어",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/04.png"
+            },
+            {
+              "title": "자연 성분 진정 케어",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/05.png"
+            },
+            {
+              "title": "Fresh Bud No.6 특허 진정 원료",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/06.png"
+            },
+            {
+              "title": "발효 성분 / 식물 오일",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/07.png"
+            },
+            {
+              "title": "피부 저자극 테스트 완료",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/08.png"
+            },
+            {
+              "title": "제조일자 / 신선도",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/09.png"
+            },
+            {
+              "title": "사용법 / 제품 정보 / 전성분",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/10.png"
+            },
+            {
+              "title": "비공식 리셀러 주의 안내",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/11.png"
+            }
+          ]
+        },
+        {
+          "id": "v1",
+          "label": "V1",
+          "createdAt": "2026-05-25",
+          "status": "previous",
+          "source": "public/coupang/images/aqua-lotion/versions/v1",
+          "representativeImages": [
+            {
+              "title": "대표 이미지 - 상품 중심",
+              "src": "/coupang/images/aqua-lotion/versions/v1/representative/01.png"
+            },
+            {
+              "title": "메인 - 제품명과 신선 제품 보장",
+              "src": "/coupang/images/aqua-lotion/versions/v1/representative/02.png"
+            },
+            {
+              "title": "메인 - 수분 진정 보호 성분",
+              "src": "/coupang/images/aqua-lotion/versions/v1/representative/03.png"
+            },
+            {
+              "title": "메인 - 순한 포뮬라",
+              "src": "/coupang/images/aqua-lotion/versions/v1/representative/04.png"
+            },
+            {
+              "title": "메인 - 8종 히알루론산",
+              "src": "/coupang/images/aqua-lotion/versions/v1/representative/05.png"
+            }
+          ],
+          "detailImages": [
+            {
+              "title": "인트로 / 제품 소개",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/01.png"
+            },
+            {
+              "title": "추천 대상 / 핵심 포인트",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/02.png"
+            },
+            {
+              "title": "Point 1 / 8종 히알루론산",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/03.png"
+            },
+            {
+              "title": "Point 2·3 / 자연성분과 Fresh Bud No.6",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/04.png"
+            },
+            {
+              "title": "Fresh Bud No.6 특허 진정 원료",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/05.png"
+            },
+            {
+              "title": "Point 4·5 / 발효 성분과 저자극",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/06.png"
+            },
+            {
+              "title": "순한 포뮬라 / pH·EWG·신선도",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/07.png"
+            },
+            {
+              "title": "사용법 / 친환경 포장 / 상품 정보",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/08.png"
+            }
+          ]
+        },
+        {
+          "id": "original",
+          "label": "원본",
+          "createdAt": "현재 쿠팡 등록본",
+          "status": "original",
+          "source": "public/coupang/images/aqua-lotion/versions/original",
+          "representativeImages": [
+            {
+              "title": "원본 메인 이미지",
+              "src": "/coupang/images/aqua-lotion/versions/original/representative/01.png"
+            },
+            {
+              "title": "원본 추가 대표 이미지 02",
+              "src": "/coupang/images/aqua-lotion/versions/original/representative/02.png"
+            },
+            {
+              "title": "원본 추가 대표 이미지 03",
+              "src": "/coupang/images/aqua-lotion/versions/original/representative/03.png"
+            },
+            {
+              "title": "원본 추가 대표 이미지 04",
+              "src": "/coupang/images/aqua-lotion/versions/original/representative/04.png"
+            },
+            {
+              "title": "원본 추가 대표 이미지 05",
+              "src": "/coupang/images/aqua-lotion/versions/original/representative/05.png"
+            },
+            {
+              "title": "원본 추가 대표 이미지 06",
+              "src": "/coupang/images/aqua-lotion/versions/original/representative/06.png"
+            }
+          ],
+          "detailImages": [
+            {
+              "title": "원본 상세 01",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/01.png"
+            },
+            {
+              "title": "원본 상세 02",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/02.png"
+            },
+            {
+              "title": "원본 상세 03",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/03.png"
+            },
+            {
+              "title": "원본 상세 04",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/04.png"
+            },
+            {
+              "title": "원본 상세 05",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/05.png"
+            },
+            {
+              "title": "원본 상세 06",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/06.png"
+            },
+            {
+              "title": "원본 상세 07",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/07.png"
+            },
+            {
+              "title": "원본 상세 08",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/08.png"
+            },
+            {
+              "title": "원본 상세 09",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/09.png"
+            },
+            {
+              "title": "원본 상세 10",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/10.png"
+            },
+            {
+              "title": "원본 상세 11",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/11.png"
+            },
+            {
+              "title": "원본 상세 12",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/12.png"
+            },
+            {
+              "title": "원본 상세 13",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/13.png"
+            },
+            {
+              "title": "원본 상세 14",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/14.png"
+            },
+            {
+              "title": "원본 상세 15",
+              "src": "/coupang/images/aqua-lotion/versions/original/detail/15.png"
+            }
+          ]
+        }
+      ],
+      "productId": "9218811640",
+      "itemId": "27239514580",
+      "vendorItemId": "94206581276",
+      "coupangUrl": "https://www.coupang.com/vp/products/9218811640?itemId=27239514580&vendorItemId=94206581276"
+    },
+    {
+      "slug": "cleansing-oil",
+      "name": "퓨어 딥 클렌징 오일",
+      "fullName": "유어스킨플러스 저자극클렌징오일 대용량 모공관리 블랙헤드 300ml",
+      "volume": "300ml",
+      "price": 12700,
+      "originalPrice": 23000,
+      "discountRate": "45%",
+      "rating": 4.96,
+      "reviewCount": 24,
+      "image": "/coupang-detail/9221762154/01.png",
+      "smartstoreUrl": "https://smartstore.naver.com/main/products/12763986151",
+      "category": "클렌징 오일",
+      "heroLine": "메이크업과 피지를 부드럽게 녹이는 300ml 대용량 클렌징 오일.",
+      "problem": "블랙헤드·모공 노폐물·진한 선크림 세정이 고민인 피부를 위한 첫 세안 단계.",
+      "benefits": [
+        "저자극 클렌징 컨셉",
+        "블랙헤드/모공관리 검색 니즈",
+        "300ml 대용량",
+        "유화 과정 강조 가능"
+      ],
+      "routine": [
+        "마른 손과 얼굴에 2~3회 펌핑",
+        "코 주변과 턱 라인을 부드럽게 롤링",
+        "물을 묻혀 하얗게 유화한 뒤 미온수로 충분히 헹굼"
+      ],
+      "keywords": [
+        "클렌징",
+        "블랙헤드",
+        "모공",
+        "저자극"
+      ],
+      "productId": "9221762154",
+      "itemId": "27251064471",
+      "vendorItemId": "94217941616",
+      "coupangUrl": "https://www.coupang.com/vp/products/9221762154?itemId=27251064471&vendorItemId=94217941616"
+    },
+    {
+      "slug": "cleansing-gel",
+      "name": "로우 피에이치 클렌징 젤",
+      "fullName": "유어스킨플러스 약산성 클렌징젤 젤클렌저 로우 피에이치 300ml",
+      "volume": "300ml",
+      "price": 10500,
+      "originalPrice": 19500,
+      "discountRate": "46%",
+      "rating": 4.96,
+      "reviewCount": 23,
+      "image": "/coupang-detail/9025751494/01.png",
+      "smartstoreUrl": "https://smartstore.naver.com/main/products/12597627146",
+      "category": "약산성 클렌저",
+      "heroLine": "세안 후 당김을 줄이고 싶은 날, pH 밸런스를 생각한 젤 클렌저.",
+      "problem": "뽀득한 세안 뒤 건조함이 부담스럽거나 아침 세안용 순한 젤 타입을 찾는 루틴에 적합합니다.",
+      "benefits": [
+        "약산성/pH 키워드",
+        "젤 타입 클렌저",
+        "300ml 펌프형",
+        "46% 할인 노출"
+      ],
+      "routine": [
+        "젖은 손에 적당량을 덜어 거품 내기",
+        "얼굴 전체를 30초 내외로 부드럽게 마사지",
+        "미온수로 충분히 헹군 뒤 토너로 수분 보충"
+      ],
+      "keywords": [
+        "약산성",
+        "젤클렌저",
+        "pH",
+        "아침세안"
+      ],
+      "productId": "9025751494",
+      "itemId": "26470131485",
+      "vendorItemId": "93445288720",
+      "coupangUrl": "https://www.coupang.com/vp/products/9025751494?itemId=26470131485&vendorItemId=93445288720"
+    },
+    {
+      "slug": "rose-essence",
+      "name": "장미에센스 장미수 토너",
+      "fullName": "유어스킨플러스 장미에센스 장마수토너 불가리안로즈 150ml",
+      "volume": "150ml",
+      "price": 10100,
+      "originalPrice": 18000,
+      "discountRate": "44%",
+      "rating": null,
+      "reviewCount": null,
+      "image": "/coupang-detail/9025775541/01.png",
+      "smartstoreUrl": "https://smartstore.naver.com/yourskinplus",
+      "category": "로즈 토너",
+      "heroLine": "장미수 감성의 산뜻한 토너로 루틴에 향기로운 첫 결을 더합니다.",
+      "problem": "기초 첫 단계에서 산뜻한 사용감과 감성적인 로즈 컨셉을 원하는 고객을 위한 라인.",
+      "benefits": [
+        "불가리안 로즈 컨셉",
+        "150ml 휴대성",
+        "톤업 루틴 전 단계",
+        "선물형 비주얼"
+      ],
+      "routine": [
+        "세안 후 손바닥에 덜어 얼굴 전체에 흡수",
+        "건조한 날에는 2회 레이어링",
+        "크림 전 산뜻한 토너 단계로 사용"
+      ],
+      "keywords": [
+        "로즈",
+        "토너",
+        "산뜻",
+        "선물"
+      ],
+      "productId": "9025775541",
+      "itemId": "26470208024",
+      "vendorItemId": "93445364050",
+      "coupangUrl": "https://www.coupang.com/vp/products/9025775541?itemId=26470208024&vendorItemId=93445364050"
+    },
+    {
+      "slug": "all-in-one-lotion",
+      "name": "영거 댄 올인원 로션",
+      "fullName": "유어스킨플러스 영거 댄 올인원 로션 200ml",
+      "volume": "200ml",
+      "price": 9900,
+      "originalPrice": 18000,
+      "discountRate": "45%",
+      "rating": 5,
+      "reviewCount": 33,
+      "image": "/coupang-detail/9025793946/01.png",
+      "smartstoreUrl": "https://smartstore.naver.com/yourskinplus",
+      "category": "남성 올인원",
+      "heroLine": "스킨, 로션, 에센스, 크림을 한 번에 끝내는 남성용 올인원 로션.",
+      "problem": "면도 후 민감함과 번거로운 기초 단계를 줄이고 싶은 남성 피부 루틴에 맞춥니다.",
+      "benefits": [
+        "4-in-1 올인원 컨셉",
+        "미백/주름개선 이중기능성",
+        "8종 히알루론산 보습",
+        "200ml 데일리 용량"
+      ],
+      "routine": [
+        "세안 또는 면도 후 적당량을 덜기",
+        "얼굴 전체와 목 부위에 부드럽게 펴 바르기",
+        "건조한 부위는 한 번 더 덧발라 흡수"
+      ],
+      "keywords": [
+        "올인원",
+        "남성",
+        "면도후",
+        "이중기능성"
+      ],
+      "productId": "9025793946",
+      "itemId": "26470268560",
+      "vendorItemId": "93445424254",
+      "coupangUrl": "https://www.coupang.com/vp/products/9025793946?itemId=26470268560&vendorItemId=93445424254"
+    },
+    {
+      "slug": "moisture-lip-balm",
+      "name": "모이스춰 립밤",
+      "fullName": "유어스킨플러스 모이스춰 립밤 4g",
+      "volume": "4g",
+      "price": 9900,
+      "originalPrice": 18000,
+      "discountRate": "45%",
+      "rating": 5,
+      "reviewCount": 23,
+      "image": "/coupang-detail/9025810298/01.png",
+      "smartstoreUrl": "https://smartstore.naver.com/yourskinplus",
+      "category": "립 케어",
+      "heroLine": "건조한 입술에 수분과 영양을 더하는 자연유래 립 케어.",
+      "problem": "각질이 들뜨거나 쉽게 건조해지는 입술을 수시로 편하게 케어하고 싶은 루틴에 맞춥니다.",
+      "benefits": [
+        "아자씨버터 보습 컨셉",
+        "5가지 식물성 오일",
+        "무색 스틱 타입",
+        "남녀공용 립 케어"
+      ],
+      "routine": [
+        "입술이 건조할 때마다 수시로 바르기",
+        "외출 전 얇게 덧발라 보습막 만들기",
+        "잠들기 전 한 번 더 발라 밤사이 입술 케어"
+      ],
+      "keywords": [
+        "립밤",
+        "보습",
+        "무색",
+        "식물성오일"
+      ],
+      "productId": "9025810298",
+      "itemId": "26470336590",
+      "vendorItemId": "93445490553",
+      "coupangUrl": "https://www.coupang.com/vp/products/9025810298?itemId=26470336590&vendorItemId=93445490553"
+    },
+    {
+      "slug": "whitening-cream",
+      "name": "화이트닝 톤 케어 크림",
+      "fullName": "유어스킨플러스 미백화이트닝크림 톤케어 기능성화장품 200ml",
+      "volume": "200ml",
+      "price": 10100,
+      "originalPrice": 18500,
+      "discountRate": "45%",
+      "rating": null,
+      "reviewCount": null,
+      "image": "/coupang-detail/9264527939/01.png",
+      "smartstoreUrl": "https://smartstore.naver.com/yourskinplus",
+      "category": "톤 케어 크림",
+      "heroLine": "맑고 균일한 피부 표현을 위한 데일리 톤 케어 크림.",
+      "problem": "칙칙해 보이는 피부 인상과 건조함을 동시에 케어하고 싶은 데일리 크림 니즈에 맞춥니다.",
+      "benefits": [
+        "기능성화장품 키워드",
+        "200ml 대용량",
+        "톤 케어 컨셉",
+        "가격비교 노출"
+      ],
+      "routine": [
+        "스킨케어 마지막 단계에서 얇게 펴 바르기",
+        "목·팔 등 노출 부위에 함께 사용",
+        "낮 루틴에서는 자외선 차단제와 함께 사용"
+      ],
+      "keywords": [
+        "톤케어",
+        "미백",
+        "크림",
+        "대용량"
+      ],
+      "productId": "9264527939",
+      "itemId": "27414863570",
+      "vendorItemId": "94380449351",
+      "coupangUrl": "https://www.coupang.com/vp/products/9264527939?itemId=27414863570&vendorItemId=94380449351"
+    },
+    {
+      "slug": "white-glow-tone-up-cream",
+      "productId": "9025800758",
+      "name": "화이트 글로우 톤업 크림",
+      "fullName": "유어스킨플러스 화이트 글로우 톤업 크림 200ml",
+      "volume": "200ml",
+      "category": "톤업 크림",
+      "heroLine": "화사한 피부 표현을 위한 200ml 데일리 톤업 크림.",
+      "problem": "칙칙해 보이는 피부 톤을 자연스럽게 정돈하고, 데일리 크림처럼 넉넉하게 쓰고 싶은 루틴에 맞춥니다.",
+      "benefits": [
+        "톤업 크림 포지션",
+        "200ml 대용량",
+        "화이트 글로우 컨셉",
+        "쿠팡 등록 상세 이미지 확보"
+      ],
+      "routine": [
+        "스킨케어 마지막 단계에서 얇게 펴 바르기",
+        "목과 팔 등 노출 부위까지 자연스럽게 연결",
+        "낮 루틴에서는 자외선 차단제와 함께 사용"
+      ],
+      "keywords": [
+        "톤업",
+        "화이트 글로우",
+        "크림",
+        "대용량"
+      ],
+      "rating": null,
+      "reviewCount": null,
+      "smartstoreUrl": "https://smartstore.naver.com/yourskinplus",
+      "itemId": "26470298069",
+      "vendorItemId": "93445452670",
+      "price": 10100,
+      "originalPrice": 18500,
+      "discountRate": "45%",
+      "image": "/coupang-detail/9025800758/01.png",
+      "coupangUrl": "https://www.coupang.com/vp/products/9025800758?itemId=26470298069&vendorItemId=93445452670"
+    },
+    {
+      "slug": "soothing-cream",
+      "name": "PDRN 히알루론산 수딩 크림",
+      "fullName": "유어스킨플러스 피디알엔 히알루론산 수딩 크림 200ml",
+      "volume": "200ml",
+      "price": 12800,
+      "originalPrice": 23000,
+      "discountRate": "44%",
+      "rating": null,
+      "reviewCount": null,
+      "image": "/coupang-detail/9402735935/01.png",
+      "smartstoreUrl": "https://smartstore.naver.com/yourskinplus",
+      "category": "수딩 크림",
+      "heroLine": "히알루론산 수분감과 산뜻한 마무리를 담은 데일리 수딩 크림.",
+      "problem": "건조하고 예민해진 날, 무겁지 않은 크림으로 수분막을 더하고 싶은 루틴에 맞춥니다.",
+      "benefits": [
+        "히알루론산 수분 컨셉",
+        "수딩 크림 포지션",
+        "200ml 대용량",
+        "가격비교 노출"
+      ],
+      "routine": [
+        "토너와 로션 다음 단계에서 얼굴 전체에 펴 바르기",
+        "건조한 부위는 한 번 더 덧바르기",
+        "잠들기 전 얇은 수분막처럼 마무리"
+      ],
+      "keywords": [
+        "수딩",
+        "히알루론산",
+        "크림",
+        "보습"
+      ],
+      "productId": "9402735935",
+      "itemId": "27931591582",
+      "vendorItemId": "94889995486",
+      "coupangUrl": "https://www.coupang.com/vp/products/9402735935?itemId=27931591582&vendorItemId=94889995486"
+    },
+    {
+      "slug": "pdrn-hyaluronic-ampoule",
+      "productId": "9402746236",
+      "name": "PDRN 히알루론산 앰플",
+      "fullName": "유어스킨플러스 피디알렌 히알루론산 앰플 25ml",
+      "volume": "25ml",
+      "category": "수분 앰플",
+      "heroLine": "PDRN과 히알루론산 키워드를 담은 집중 보습 앰플.",
+      "problem": "토너와 크림 사이에 가볍게 더하는 집중 수분 단계가 필요한 루틴에 맞춥니다.",
+      "benefits": [
+        "25ml 앰플",
+        "PDRN 컨셉",
+        "히알루론산 보습 컨셉",
+        "상세 이미지 12장 확보"
+      ],
+      "routine": [
+        "토너 후 손바닥에 2~3방울 덜어 얼굴 전체에 펴 바르기",
+        "건조한 부위는 한 번 더 레이어링",
+        "로션이나 크림으로 마무리"
+      ],
+      "keywords": [
+        "PDRN",
+        "히알루론산",
+        "앰플",
+        "집중보습"
+      ],
+      "rating": null,
+      "reviewCount": null,
+      "smartstoreUrl": "https://smartstore.naver.com/yourskinplus",
+      "itemId": "27931626293",
+      "vendorItemId": "94890028910",
+      "price": 12500,
+      "originalPrice": 12500,
+      "discountRate": "0%",
+      "image": "/coupang-detail/9402746236/01.png",
+      "coupangUrl": "https://www.coupang.com/vp/products/9402746236?itemId=27931626293&vendorItemId=94890028910"
+    }
+  ]
+}

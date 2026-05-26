@@ -1,0 +1,17 @@
+<svg width="900" height="600" viewBox="0 0 900 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">YOURSKIN PLUS YSP Botanical Seal</title>
+  <desc id="desc">A premium monogram seal for packaging, caps, stickers, and embossing.</desc>
+  <rect width="900" height="600" fill="#FFFDF8"/>
+  <circle cx="450" cy="292" r="170" stroke="#143D2E" stroke-width="1.6"/>
+  <circle cx="450" cy="292" r="145" stroke="#D8D1C2" stroke-width="1"/>
+  <circle cx="450" cy="292" r="100" fill="#143D2E"/>
+  <text x="450" y="316" text-anchor="middle" fill="#FFFDF8" font-family="'Iowan Old Style', 'Bodoni 72', Georgia, serif" font-size="78" font-weight="400" letter-spacing="7">YSP</text>
+  <path d="M390 356C420 330 475 327 510 355C471 381 423 381 390 356Z" fill="#8C9F8C"/>
+  <path d="M404 357C437 353 472 347 500 334" stroke="#FFFDF8" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+  <path d="M450 96V128" stroke="#C5A66E" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M434 112H466" stroke="#C5A66E" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="450" y="186" text-anchor="middle" fill="#143D2E" font-family="'Avenir Next', 'Helvetica Neue', sans-serif" font-size="12" font-weight="600" letter-spacing="6">YOURSKIN</text>
+  <text x="450" y="430" text-anchor="middle" fill="#143D2E" font-family="'Avenir Next', 'Helvetica Neue', sans-serif" font-size="12" font-weight="600" letter-spacing="6">PLUS SKINCARE</text>
+  <path d="M257 292H309" stroke="#C5A66E" stroke-width="1.2"/>
+  <path d="M591 292H643" stroke="#C5A66E" stroke-width="1.2"/>
+</svg>
