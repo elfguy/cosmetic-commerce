@@ -36,3 +36,41 @@ body {
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
 }
+
+.topbar {
+  min-height: 64px !important;
+  box-sizing: border-box !important;
+}
+
+.topbar .logo img,
+.topbar .brand img,
+.side .brand img,
+.rail-brand img {
+  width: 132px !important;
+  height: auto !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.menu-toggle {
+  width: 42px !important;
+  height: 42px !important;
+  flex: 0 0 42px !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 720px) {
+  .topbar,
+  .side {
+    min-height: 62px !important;
+    box-sizing: border-box !important;
+  }
+
+  .topbar .logo img,
+  .topbar .brand img,
+  .side .brand img,
+  .rail-brand img {
+    width: 124px !important;
+  }
+}

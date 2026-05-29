@@ -6,3 +6,6 @@ dist
 .env.local
 .DS_Store
 data/coupang/openapi-products.json
+data/coupang/downloads/
+products/
+*.cjs
