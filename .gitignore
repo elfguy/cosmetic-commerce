@@ -7,5 +7,5 @@ dist
 .DS_Store
 data/coupang/openapi-products.json
 data/coupang/downloads/
-products/
+/products/
 *.cjs

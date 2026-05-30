@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import {
+  copyGuardrails,
+  focusProducts,
+  formatWon,
+  products,
+  supportProducts,
+  watchProducts,
+} from '../../data/marketingOps';
+
+const priorityLabel = {
+  focus: '집중',
+  support: '보조',
+  watch: '관찰',
+  archive: '보관',
+};
+
+const riskLabel = {
+  low: '낮음',
+  medium: '주의',
+  high: '높음',
+};
+---
+
+<BaseLayout title="유어스킨플러스 상품상세" description="유어스킨플러스 현재 적용 상품상세의 우선순위, 상태, 표현 리스크, 다음 액션을 관리하는 화면">
+  <SiteHeader active="/products/" />
+
+  <main class="product-board">
+    <header class="hero container">
+      <p class="eyebrow">Current product detail</p>
+      <h1>현재 적용된 상품상세를 기준으로 정리</h1>
+      <p class="lead">
+        각 상품의 가격, 리뷰, 상세 상태, 표현 리스크, 다음 작업만 간결하게 봅니다. 상세 버전은 여기서 계속 늘려갑니다.
+      </p>
+    </header>
+
+    <section class="summary container" aria-label="상품 상태 요약">
+      <article><strong>{focusProducts.length}</strong><span>집중 상품</span><small>{focusProducts.map((item) => item.shortName).join(', ')}</small></article>
+      <article><strong>{supportProducts.length}</strong><span>보조 상품</span><small>{supportProducts.map((item) => item.shortName).join(', ')}</small></article>
+      <article><strong>{watchProducts.length}</strong><span>관찰 상품</span><small>{watchProducts.map((item) => item.shortName).join(', ')}</small></article>
+      <article><strong>{products.length}</strong><span>전체 상품</span><small>현재 판매 상품 기준</small></article>
+    </section>
+
+    <section class="toolbar container" aria-label="상품 필터">
+      <button type="button" data-filter="all" class="is-active">전체</button>
+      <button type="button" data-filter="focus">집중</button>
+      <button type="button" data-filter="support">보조</button>
+      <button type="button" data-filter="watch">관찰</button>
+      <span id="visible-count">{products.length}개 표시</span>
+    </section>
+
+    <section class="cards container" aria-label="상품상세 목록">
+      {products.map((product) => (
+        <article class={'product-card is-' + product.ops.priority} data-priority={product.ops.priority}>
+          <a class="image" href={'/products/' + product.slug + '/'}>
+            <img src={product.assets.thumbnail} alt={product.shortName + ' 대표 이미지'} loading="lazy" />
+          </a>
+          <div class="body">
+            <div class="card-head">
+              <span>{priorityLabel[product.ops.priority]}</span>
+              <em class={'risk risk-' + product.ops.claimRisk}>리스크 {riskLabel[product.ops.claimRisk]}</em>
+            </div>
+            <h2>{product.shortName}</h2>
+            <p class="role">{product.ops.campaignRole}</p>
+            <dl class="facts">
+              <div><dt>판매가</dt><dd>{formatWon(product.price.sale)}</dd></div>
+              <div><dt>리뷰</dt><dd>{product.rating.coupangReviews}개</dd></div>
+              <div><dt>상세</dt><dd>{product.assets.detailImageCount}컷</dd></div>
+            </dl>
+            <div class="status">
+              <p><strong>상세</strong>{product.ops.detailStatus}</p>
+              <p><strong>버전</strong>{product.ops.assetStatus}</p>
+            </div>
+            <p class="next">{product.ops.nextAction}</p>
+            <div class="links">
+              <a href={'/products/' + product.slug + '/'}>상세 보기</a>
+              <a class="ext" href={product.commerce.coupangUrl} target="_blank" rel="noreferrer">쿠팡 ↗</a>
+              {product.commerce.naverUrl ? <a class="ext" href={product.commerce.naverUrl} target="_blank" rel="noreferrer">네이버 ↗</a> : null}
+              {product.ops.workspaceUrl ? <a href={product.ops.workspaceUrl}>소재</a> : null}
+            </div>
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <section class="guardrail container">
+      <div>
+        <p class="eyebrow">Copy guardrail</p>
+        <h2>상품 작업 전 공통 표현 규칙</h2>
+      </div>
+      <ul>
+        {copyGuardrails.map((item) => <li>{item}</li>)}
+      </ul>
+    </section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll('[data-filter]');
+  const cards = document.querySelectorAll('.product-card');
+  const count = document.getElementById('visible-count');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filter = button.getAttribute('data-filter') || 'all';
+      buttons.forEach((item) => item.classList.toggle('is-active', item === button));
+      let visible = 0;
+      cards.forEach((card) => {
+        const show = filter === 'all' || card.getAttribute('data-priority') === filter;
+        card.classList.toggle('is-hidden', !show);
+        if (show) visible += 1;
+      });
+      if (count) count.textContent = visible + '개 표시';
+    });
+  });
+</script>
+
+<style>
+  .product-board { color: var(--ink); padding-bottom: 8px; }
+  .product-board a { color: inherit; text-decoration: none; }
+
+  .hero { padding-block: clamp(28px, 5vw, 52px) clamp(12px, 2vw, 20px); }
+  .hero h1 { max-width: 18ch; margin: 10px 0 12px; font-size: clamp(28px, 4.4vw, 52px); line-height: 1.06; letter-spacing: -0.02em; }
+  .hero .lead { max-width: 64ch; margin: 0; color: var(--muted); font-size: clamp(15px, 1.4vw, 17px); line-height: 1.7; }
+
+  .summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding-block: 8px; }
+  .summary article {
+    min-height: 124px; display: grid; align-content: space-between; gap: 6px; padding: 18px;
+    border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--shadow-sm);
+  }
+  .summary strong { font-size: clamp(26px, 3vw, 34px); color: var(--accent); line-height: 1; }
+  .summary span { font-weight: 800; }
+  .summary small { color: var(--muted); line-height: 1.5; }
+
+  .toolbar {
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    margin-top: 14px; padding: 10px;
+    border: 1px solid var(--line); border-radius: var(--r); background: var(--surface);
+  }
+  .toolbar button {
+    min-height: 38px; padding: 0 14px;
+    border: 1px solid var(--line); border-radius: var(--r-pill);
+    background: var(--surface-2); color: var(--ink); font-weight: 700; cursor: pointer;
+  }
+  .toolbar button.is-active { background: var(--forest); color: #f7f3e9; border-color: var(--forest); }
+  .toolbar span { margin-left: auto; color: var(--muted); font-weight: 700; }
+
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+  .product-card {
+    overflow: hidden; display: grid; grid-template-rows: 210px 1fr;
+    border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--shadow-sm);
+  }
+  .product-card.is-hidden { display: none; }
+  .image img { width: 100%; height: 100%; object-fit: cover; background: var(--surface-3); }
+  .body { display: grid; gap: 12px; padding: 18px; align-content: start; }
+  .card-head { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+  .card-head span, .risk {
+    padding: 5px 10px; border-radius: var(--r-pill); font-size: 12px; font-weight: 800;
+    background: var(--surface-3); color: var(--forest);
+  }
+  .risk { font-style: normal; background: var(--accent-soft); color: var(--accent-ink); }
+  .risk-high { background: #f7ddd2; color: #8e2d1c; }
+  .risk-low { background: #e6efdc; color: #3a5a3f; }
+  .product-card h2 { margin: 0; font-size: clamp(19px, 2vw, 23px); letter-spacing: -0.01em; }
+  .role, .next { margin: 0; color: var(--muted); line-height: 1.5; }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0; }
+  .facts div { padding-top: 8px; border-top: 1px solid var(--line); }
+  dt { color: var(--muted); font-size: 12px; }
+  dd { margin: 3px 0 0; font-weight: 800; }
+  .status { display: grid; gap: 7px; padding: 12px; border-radius: var(--r-sm); background: var(--surface-2); }
+  .status p { display: grid; grid-template-columns: 44px 1fr; gap: 8px; margin: 0; color: var(--muted); line-height: 1.5; }
+  .status strong { color: var(--ink); }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .links a { padding: 8px 12px; border-radius: var(--r-pill); background: var(--forest); color: #f7f3e9; font-size: 13px; font-weight: 700; }
+  .links a.ext { background: var(--accent); }
+
+  .guardrail {
+    display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 22px; margin-top: 18px; padding: 24px;
+    border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--shadow-sm);
+  }
+  .guardrail h2 { margin: 4px 0 0; font-size: clamp(19px, 2vw, 24px); }
+  .guardrail ul { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+  .guardrail li { padding-left: 14px; border-left: 3px solid var(--accent); color: var(--ink); line-height: 1.55; }
+
+  @media (max-width: 1040px) {
+    .summary { grid-template-columns: 1fr 1fr; }
+    .cards { grid-template-columns: 1fr 1fr; }
+    .guardrail { grid-template-columns: 1fr; gap: 14px; }
+  }
+  @media (max-width: 600px) {
+    .summary { grid-template-columns: 1fr 1fr; }
+    .cards { grid-template-columns: 1fr; }
+    .toolbar { overflow-x: auto; flex-wrap: nowrap; }
+    .toolbar button { flex: 0 0 auto; }
+    .toolbar span { flex: 0 0 auto; margin-left: 6px; }
+    .product-card { grid-template-rows: 180px 1fr; }
+  }
+</style>
