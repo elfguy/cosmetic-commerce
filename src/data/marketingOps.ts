@@ -218,7 +218,7 @@ export const productVersions: Record<string, ProductVersion[]> = {
       status: 'archive',
       date: '2026-05-24',
       summary: '두 번째 개선 버전 — 대표 6장 + 상세 11장',
-      mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/aqua-lotion/versions/v2/representative/' + String(i + 1).padStart(2, '0') + '.png'),
+      mainImages: [6, 1, 2, 3, 4, 5].map((n) => '/coupang/images/aqua-lotion/versions/v2/representative/' + String(n).padStart(2, '0') + '.png'),
       detailImages: Array.from({ length: 11 }, (_, i) => '/coupang/images/aqua-lotion/versions/v2/detail/' + String(i + 1).padStart(2, '0') + '.png'),
     },
     {
