@@ -246,19 +246,37 @@ export function getVersions(slug: string, productId: string): ProductVersion[] {
   const custom = productVersions[slug];
   if (custom) return custom;
   // Default: main images from /coupang-main/, detail from /coupang-detail/
-  // Probe actual file counts
+  // Probe actual files. Some folders contain mixed png/jpg exports or duplicate
+  // numeric cuts (for example 02.png and 02.jpg). Do not infer `01..N.png`
+  // from a raw file count; that creates broken 404 image URLs.
   const mainDir = path.join(process.cwd(), 'public', 'coupang-main', slug);
   const detailDir = path.join(process.cwd(), 'public', 'coupang-detail', productId);
-  let mainCount = 0;
-  let detailCount = 0;
-  try {
-    const files = fs.readdirSync(mainDir);
-    mainCount = files.filter(f => /\d+\.(png|jpg|jpeg|webp)$/i.test(f)).length;
-  } catch { mainCount = 0; }
-  try {
-    const files = fs.readdirSync(detailDir);
-    detailCount = files.filter(f => /\d+\.(png|jpg|jpeg|webp)$/i.test(f)).length;
-  } catch { detailCount = 0; }
+
+  const listImageUrls = (dir: string, publicBase: string) => {
+    try {
+      const byNumber = new Map<number, string>();
+      const priority: Record<string, number> = { png: 4, webp: 3, jpg: 2, jpeg: 1 };
+      fs.readdirSync(dir).forEach((file) => {
+        const match = file.match(/^(\d+)\.(png|jpg|jpeg|webp)$/i);
+        if (!match) return;
+        const index = Number(match[1]);
+        const current = byNumber.get(index);
+        const ext = match[2].toLowerCase();
+        const currentExt = current?.split('.').pop()?.toLowerCase() ?? '';
+        if (!current || (priority[ext] ?? 0) > (priority[currentExt] ?? 0)) {
+          byNumber.set(index, file);
+        }
+      });
+      return [...byNumber.entries()]
+        .sort(([a], [b]) => a - b)
+        .map(([, file]) => publicBase + '/' + file);
+    } catch {
+      return [];
+    }
+  };
+
+  const mainImages = listImageUrls(mainDir, '/coupang-main/' + slug);
+  const detailImages = listImageUrls(detailDir, '/coupang-detail/' + productId);
 
   return [{
     id: 'live',
@@ -266,8 +284,8 @@ export function getVersions(slug: string, productId: string): ProductVersion[] {
     status: 'live',
     date: '-',
     summary: '현재 쿠팡에 적용된 메인 + 상세 이미지',
-    mainImages: mainCount > 0 ? Array.from({ length: mainCount }, (_, i) => '/coupang-main/' + slug + '/' + String(i + 1).padStart(2, '0') + '.png') : [],
-    detailImages: detailCount > 0 ? Array.from({ length: detailCount }, (_, i) => '/coupang-detail/' + productId + '/' + String(i + 1).padStart(2, '0') + '.png') : [],
+    mainImages,
+    detailImages,
   }];
 }
 

@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { siteSections } from '../data/siteMap';
-import { focusProducts, products } from '../data/marketingOps';
+import { commandTasks, focusProducts, products } from '../data/marketingOps';
 
 const totalPrice = products.reduce((sum, p) => sum + p.price.sale, 0);
 const totalReviews = products.reduce((sum, p) => sum + p.rating.coupangReviews, 0);
@@ -17,6 +17,7 @@ const stats = [
 ];
 
 const focusNames = focusProducts.map((p) => p.shortName).join(' · ');
+const todayTasks = commandTasks.slice(0, 3);
 ---
 
 <BaseLayout
@@ -46,6 +47,26 @@ const focusNames = focusProducts.map((p) => p.shortName).join(' · ');
         <p>{focusNames}</p>
         <a href="/workspaces/">상세 버전 랩으로 →</a>
       </aside>
+    </section>
+
+    <!-- TODAY ACTIONS -->
+    <section class="today container" aria-label="오늘 우선 작업">
+      <div class="today__head">
+        <p class="eyebrow">Today's priority</p>
+        <h2>오늘 바로 볼 작업</h2>
+      </div>
+      <div class="today__list">
+        {todayTasks.map((task) => (
+          <a class="task" href={task.href}>
+            <span class="task__state">{task.state}</span>
+            <span class="task__body">
+              <strong>{task.title}</strong>
+              <small>{task.product} · {task.label}</small>
+            </span>
+            <em aria-hidden="true">→</em>
+          </a>
+        ))}
+      </div>
     </section>
 
     <!-- STAT STRIP -->
@@ -151,6 +172,55 @@ const focusNames = focusProducts.map((p) => p.shortName).join(' · ');
   .hero__panel a { color: #fff; font-weight: 700; font-size: 14px; text-decoration: none; }
   .hero__panel a:hover { text-decoration: underline; }
 
+  /* TODAY ACTIONS */
+  .today {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 14px;
+    align-items: stretch;
+    padding-block: 4px clamp(20px, 4vw, 34px);
+  }
+  .today__head {
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    background: var(--surface-2);
+  }
+  .today__head h2 { margin: 7px 0 0; font-size: clamp(20px, 2.2vw, 26px); letter-spacing: -0.01em; }
+  .today__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .task {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 11px;
+    align-items: center;
+    min-height: 96px;
+    padding: 16px;
+    border-radius: var(--r);
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    color: inherit;
+    text-decoration: none;
+  }
+  .task:hover { border-color: var(--line-strong); transform: translateY(-1px); }
+  .task__state {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 30px;
+    padding-inline: 10px;
+    border-radius: var(--r-pill);
+    background: var(--forest);
+    color: #f7f3e9;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .task__body { display: grid; gap: 4px; min-width: 0; }
+  .task__body strong { font-size: 15px; line-height: 1.35; }
+  .task__body small { color: var(--muted); font-size: 12.5px; line-height: 1.4; }
+  .task em { color: var(--accent); font-style: normal; font-weight: 900; }
+
   /* STAT STRIP */
   .stats {
     display: grid;
@@ -232,11 +302,16 @@ const focusNames = focusProducts.map((p) => p.shortName).join(' · ');
   /* RESPONSIVE */
   @media (max-width: 860px) {
     .hero { grid-template-columns: 1fr; }
-    .hero__panel { order: -1; }
+    .today { grid-template-columns: 1fr; }
+    .today__list { grid-template-columns: 1fr; }
     .stats { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 460px) {
+    .hero { padding-block-start: 28px; }
+    .hero__text h1 { font-size: clamp(31px, 9vw, 38px); }
     .hero__cta .btn, .hero__cta .btn-ghost { flex: 1 1 auto; }
+    .today__head { padding: 0; border: 0; background: transparent; }
+    .task { min-height: 82px; }
     .stat { padding: 14px 15px; }
   }
 </style>
