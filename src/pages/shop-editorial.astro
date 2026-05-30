@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BackToHub from '../components/BackToHub.astro';
 import siteData from '../../data/yourskin-products.json';
 
 const { brand, products } = siteData;
@@ -24,6 +25,7 @@ const palette = [
 ---
 
 <BaseLayout title="유어스킨플러스 자연 라이프스타일 목업" description="따뜻하고 감성적인 자연주의 스킨케어 라이프스타일 웹사이트 목업">
+  <BackToHub label="자연 라이프스타일" kind="쇼핑몰 시안" />
   <main class="lifestyle-shop">
     <header class="site-header">
       <a class="brand-word" href="/" aria-label="유어스킨플러스 홈">
@@ -655,6 +657,38 @@ const palette = [
     .skin-list,
     .story-grid {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .lifestyle-shop img {
+      max-width: 100%;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    .hero-media img {
+      max-width: 100%;
+    }
+
+    .routine-card > span {
+      font-size: 30px;
+    }
+
+    .brand-story p {
+      font-size: 22px;
+    }
+
+    .hero-copy > span,
+    .brief article > span,
+    .section-head > span,
+    .skin-type > div > span,
+    .ingredient-story > div > span,
+    .review-copy > span,
+    .brand-story span {
+      overflow-wrap: anywhere;
     }
   }
 </style>

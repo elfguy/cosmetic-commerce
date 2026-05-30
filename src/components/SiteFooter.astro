@@ -1,0 +1,13 @@
+---
+// 모든 운영 페이지가 공유하는 하단 푸터.
+import { primaryNav } from '../data/siteMap';
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <span><strong>YOURSKIN+</strong> 내부 운영·마케팅 도구</span>
+    <nav class="site-footer__links" aria-label="푸터 메뉴">
+      {primaryNav.map((link) => <a href={link.href}>{link.label}</a>)}
+    </nav>
+  </div>
+</footer>

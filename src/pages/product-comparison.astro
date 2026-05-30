@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 import { formatWon, products } from '../data/marketingOps';
 
 const functionalProducts = products.filter((product) => product.notice.functionalCosmetic !== '해당 없음');
@@ -8,21 +10,14 @@ const highRisk = products.filter((product) => product.ops.claimRisk === 'high');
 ---
 
 <BaseLayout title="상품 데이터와 표현 검수표" description="유어스킨플러스 상품별 가격, 채널, 기능성, 표현 리스크를 마케팅 작업 기준으로 확인">
-  <main class="data-tool">
-    <header class="topbar">
-      <a href="/" class="brand"><img src="/yourskin-logo-header-v15.svg" alt="YOURSKIN+" /></a>
-      <nav>
-        <a href="/">대시보드</a>
-        <a href="/products/">상품상세</a>
-        <a href="/competitor-comparison/">경쟁상품</a>
-      </nav>
-    </header>
+  <SiteHeader active="" />
 
-    <section class="hero">
+  <main class="data-tool">
+    <section class="hero container">
       <div>
         <p class="eyebrow">Product data sheet</p>
         <h1>상품 데이터와 표현 리스크를 한 번에 확인</h1>
-        <p>예전 비교표를 마케팅 작업용 검수표로 바꿨습니다. 가격, 채널, 기능성 여부, 금지 표현 리스크, 다음 작업을 빠르게 확인합니다.</p>
+        <p class="lead">예전 비교표를 마케팅 작업용 검수표로 바꿨습니다. 가격, 채널, 기능성 여부, 금지 표현 리스크, 다음 작업을 빠르게 확인합니다.</p>
       </div>
       <div class="summary">
         <article><strong>{products.length}</strong><span>전체 상품</span></article>
@@ -32,9 +27,9 @@ const highRisk = products.filter((product) => product.ops.claimRisk === 'high');
       </div>
     </section>
 
-    <section class="risk-strip">
+    <section class="risk-strip container">
       <h2>먼저 확인할 것</h2>
-      <div>
+      <div class="risk-grid">
         {highRisk.map((product) => (
           <a href={'/products/' + product.slug + '/'}>
             <strong>{product.shortName}</strong>
@@ -44,7 +39,7 @@ const highRisk = products.filter((product) => product.ops.claimRisk === 'high');
       </div>
     </section>
 
-    <section class="table-wrap" aria-label="상품 검수표">
+    <section class="table-wrap container" aria-label="상품 검수표">
       <table>
         <thead>
           <tr>
@@ -89,44 +84,70 @@ const highRisk = products.filter((product) => product.ops.claimRisk === 'high');
       </table>
     </section>
   </main>
+
+  <SiteFooter />
 </BaseLayout>
 
 <style>
-  :global(body) { background: #eef1ec; }
-  .data-tool { --ink:#17211d; --muted:#68766f; --line:#d8e0d6; --paper:#fbfcf8; --dark:#12251f; --accent:#c76045; min-height:100vh; color:var(--ink); background:#eef1ec; font-family:var(--font-body); }
-  a { color:inherit; text-decoration:none; }
-  .topbar { position:sticky; top:0; z-index:10; display:flex; justify-content:space-between; align-items:center; gap:14px; padding:12px 22px; border-bottom:1px solid var(--line); background:rgba(238,241,236,.94); backdrop-filter:blur(12px); }
-  .brand img { width:146px; padding:8px 10px; border-radius:6px; background:#f8f4ea; }
-  nav { display:flex; flex-wrap:wrap; gap:8px; }
-  nav a, .links a { padding:9px 12px; border-radius:999px; background:var(--dark); color:#fffaf0; font-size:13px; font-weight:800; }
-  .hero { display:grid; grid-template-columns:minmax(0,1fr) 420px; gap:18px; padding:26px 22px 18px; }
-  .eyebrow { margin:0; color:var(--accent); font-family:var(--font-latin); font-size:11px; font-weight:800; text-transform:uppercase; }
-  .hero h1 { margin:8px 0 10px; font-size:clamp(38px,5vw,68px); line-height:1; letter-spacing:0; }
-  .hero p:not(.eyebrow) { max-width:760px; margin:0; color:var(--muted); font-size:17px; line-height:1.65; }
-  .summary { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-  .summary article, .risk-strip, .table-wrap { border:1px solid var(--line); border-radius:8px; background:var(--paper); box-shadow:0 14px 44px rgba(21,34,28,.08); }
-  .summary article { display:grid; gap:8px; padding:16px; }
-  .summary strong { color:var(--accent); font-size:32px; }
-  .summary span { font-weight:800; }
-  .risk-strip { margin:0 22px 18px; padding:20px; }
-  .risk-strip h2 { margin:0 0 14px; font-size:24px; }
-  .risk-strip div { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
-  .risk-strip a { display:grid; gap:6px; padding:14px; border:1px solid #efc9bb; border-radius:8px; background:#fff7f3; }
-  .risk-strip span { color:var(--muted); line-height:1.45; }
-  .table-wrap { overflow:auto; margin:0 22px 24px; }
-  table { width:100%; min-width:980px; border-collapse:collapse; }
-  th, td { padding:14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
-  th { position:sticky; top:67px; background:#f6f8f3; font-size:13px; }
-  td { color:#29342f; line-height:1.5; }
-  td > span, .product-cell span { display:block; color:var(--muted); font-size:13px; }
-  .product-cell { display:grid; grid-template-columns:58px minmax(0,1fr); gap:10px; align-items:center; }
-  .product-cell img { width:58px; height:58px; object-fit:cover; border-radius:6px; background:#eef1ec; }
-  .risk { display:inline-block; margin-top:6px; padding:4px 8px; border-radius:999px; background:#f6ece7; color:#9c4d36; font-size:12px; font-weight:800; }
-  .risk-high { background:#f7dfd6; color:#8e2d1c; }
-  .risk-low { background:#e8f1df; color:#315b4c; }
-  .links { min-width:160px; }
-  .links a { display:inline-block; margin:0 4px 6px 0; }
-  .links em { display:block; color:var(--muted); font-size:12px; font-style:normal; }
-  @media (max-width:900px) { .hero, .risk-strip div { grid-template-columns:1fr; } }
-  @media (max-width:720px) { .topbar { align-items:flex-start; padding:10px 12px; } .brand img { width:118px; padding:6px 8px; } nav { flex-wrap:nowrap; overflow-x:auto; max-width:58vw; } nav a { flex:0 0 auto; padding:8px 10px; font-size:12px; } .hero { padding:18px 12px 12px; } .hero h1 { font-size:30px; line-height:1.08; } .hero p:not(.eyebrow) { font-size:15px; } .summary { grid-template-columns:1fr 1fr; } .risk-strip, .table-wrap { margin-left:12px; margin-right:12px; } th { top:56px; } }
+  :global(body) { background: var(--bg); }
+  .data-tool { color: var(--ink); padding-bottom: 8px; }
+  .data-tool a { color: inherit; text-decoration: none; }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 420px;
+    gap: 18px;
+    align-items: end;
+    padding-block: clamp(28px, 5vw, 56px) clamp(18px, 3vw, 28px);
+  }
+  .hero h1 { margin: 10px 0; font-size: clamp(28px, 4.4vw, 52px); line-height: 1.06; letter-spacing: -0.02em; }
+  .hero .lead { max-width: 64ch; margin: 0; color: var(--muted); font-size: clamp(15px, 1.4vw, 17px); line-height: 1.65; }
+
+  .summary { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .summary article {
+    display: grid; align-content: space-between; gap: 8px; min-height: 110px; padding: 18px;
+    border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--shadow-sm);
+  }
+  .summary strong { color: var(--accent); font-size: clamp(26px, 3vw, 34px); line-height: 1; }
+  .summary span { font-weight: 800; }
+
+  .risk-strip {
+    margin-top: 8px; padding: 22px;
+    border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--shadow-sm);
+  }
+  .risk-strip h2 { margin: 0 0 14px; font-size: clamp(20px, 2.4vw, 26px); letter-spacing: -0.01em; }
+  .risk-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .risk-grid a {
+    display: grid; gap: 6px; padding: 14px;
+    border: 1px solid #ecccbe; border-radius: var(--r-sm); background: var(--accent-soft);
+  }
+  .risk-grid strong { color: var(--accent-ink); }
+  .risk-grid span { color: var(--muted); line-height: 1.45; }
+
+  .table-wrap {
+    overflow-x: auto; margin-top: 18px; padding: 0;
+    border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--shadow-sm);
+  }
+  table { width: 100%; min-width: 980px; border-collapse: collapse; }
+  th, td { padding: 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+  th { position: sticky; top: 0; background: var(--surface-3); font-size: 13px; }
+  td { color: var(--ink); line-height: 1.5; }
+  td > span, .product-cell span { display: block; color: var(--muted); font-size: 13px; }
+  .product-cell { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 10px; align-items: center; }
+  .product-cell img { width: 58px; height: 58px; max-width: 100%; object-fit: cover; border-radius: var(--r-sm); background: var(--surface-3); }
+  .risk { display: inline-block; margin-top: 6px; padding: 4px 8px; border-radius: var(--r-pill); background: var(--accent-soft); color: var(--accent-ink); font-size: 12px; font-weight: 800; }
+  .risk-high { background: #f7ddd2; color: #8e2d1c; }
+  .risk-low { background: #e6efdc; color: #3a5a3f; }
+  .links { min-width: 160px; }
+  .links a { display: inline-block; margin: 0 4px 6px 0; padding: 9px 12px; border-radius: var(--r-pill); background: var(--forest); color: #f7f3e9; font-size: 13px; font-weight: 800; }
+  .links em { display: block; color: var(--muted); font-size: 12px; font-style: normal; }
+
+  @media (max-width: 1000px) {
+    .hero { grid-template-columns: 1fr; gap: 14px; }
+    .risk-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .summary { grid-template-columns: 1fr 1fr; }
+    th { top: 0; }
+  }
 </style>

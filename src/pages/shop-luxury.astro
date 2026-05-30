@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BackToHub from '../components/BackToHub.astro';
 import siteData from '../../data/yourskin-products.json';
 
 const { products } = siteData;
@@ -25,6 +26,7 @@ const palette = [
 ---
 
 <BaseLayout title="유어스킨플러스 미니멀 클린 뷰티 목업" description="깨끗하고 세련된 클린 뷰티 스타일의 유어스킨플러스 웹사이트 목업">
+  <BackToHub label="미니멀 클린 뷰티" kind="쇼핑몰 시안" />
   <main class="clean-beauty">
     <header class="site-header">
       <a class="brand-word" href="/" aria-label="유어스킨플러스 홈">
@@ -164,6 +166,11 @@ const palette = [
     font-family: var(--font-body);
     background:
       linear-gradient(180deg, #ffffff 0%, #f7f8f6 44%, #ecefec 100%);
+    overflow-x: hidden;
+  }
+
+  .clean-beauty img {
+    max-width: 100%;
   }
 
   .site-header {
@@ -616,6 +623,39 @@ const palette = [
     .lineup-card div {
       border-left: 0;
       border-top: 1px solid var(--line);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .site-header,
+    .hero,
+    .brief,
+    .transparency,
+    .lineup,
+    .origin,
+    .philosophy {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .hero {
+      min-height: 0;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    .eyebrow {
+      overflow-wrap: anywhere;
+    }
+
+    .origin-copy div {
+      gap: 6px;
     }
   }
 </style>

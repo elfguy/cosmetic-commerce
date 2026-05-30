@@ -1,0 +1,175 @@
+// 전체 페이지를 섹션별로 묶는 단일 소스.
+// 허브(index)와 공유 네비게이션이 모두 이 파일을 참조한다.
+
+export type SiteLink = {
+  href: string;
+  title: string;
+  desc: string;
+  /** 우측 상단 태그(상태/유형) */
+  tag?: string;
+  /** 카드 커버 그라데이션 (이미지가 없을 때) */
+  cover?: string;
+  /** 실제 썸네일 경로 (있을 때만) */
+  thumb?: string;
+  /** 새 탭 여부 */
+  external?: boolean;
+};
+
+export type SiteSection = {
+  id: string;
+  label: string;
+  eyebrow: string;
+  desc: string;
+  links: SiteLink[];
+};
+
+/** 상단 공유 네비게이션에 항상 노출되는 핵심 메뉴 */
+export const primaryNav: { href: string; label: string }[] = [
+  { href: '/', label: '홈' },
+  { href: '/products/', label: '상품상세' },
+  { href: '/competitor-comparison/', label: '경쟁상품' },
+  { href: '/workspaces/', label: '작업실' },
+];
+
+export const siteSections: SiteSection[] = [
+  {
+    id: 'ops',
+    label: '운영 도구',
+    eyebrow: 'Operations',
+    desc: '판매 중인 상품을 기준으로 상세·경쟁·표현 리스크를 관리하는 핵심 화면입니다.',
+    links: [
+      {
+        href: '/products/',
+        title: '상품상세 보드',
+        desc: '상품별 가격·리뷰·상세 상태·표현 리스크·다음 작업을 우선순위로 정리.',
+        tag: '핵심',
+        cover: 'linear-gradient(135deg, #1f2a24, #38493f)',
+      },
+      {
+        href: '/competitor-comparison/',
+        title: '경쟁상품 분석',
+        desc: '카테고리별 경쟁군, 리뷰 격차, 월 구매 신호, 대응 메시지.',
+        tag: '핵심',
+        cover: 'linear-gradient(135deg, #8c4830, #b5654a)',
+      },
+      {
+        href: '/workspaces/',
+        title: '상세 버전 랩',
+        desc: '제품별 현재 적용 상세, 후보 버전, 최종 업로드 자료를 한 흐름에서 비교.',
+        tag: '핵심',
+        cover: 'linear-gradient(135deg, #2b3b32, #6f7d63)',
+      },
+      {
+        href: '/product-comparison/',
+        title: '상품 데이터·표현 검수표',
+        desc: '가격·채널·기능성·표현 리스크를 한 표에서 점검.',
+        cover: 'linear-gradient(135deg, #3a3a33, #6c6a60)',
+      },
+      {
+        href: '/coupang-mock/',
+        title: '쿠팡 원본 상세 검토실',
+        desc: '쿠팡에 등록된 원본 상세 흐름을 보고 개선 작업으로 연결.',
+        cover: 'linear-gradient(135deg, #6f2e2e, #b46a55)',
+      },
+    ],
+  },
+  {
+    id: 'detail',
+    label: '상세·이미지 작업',
+    eyebrow: 'Detail & assets',
+    desc: '상품 상세페이지와 대표/상세 이미지의 버전을 제작·비교하는 작업 공간입니다.',
+    links: [
+      {
+        href: '/marketing/aqua-lotion-detail-images/',
+        title: '아쿠아 로션 상세 이미지',
+        desc: '수분 루틴 세트용 대표/상세 이미지 버전 후보 관리.',
+        tag: '진행',
+        cover: 'linear-gradient(135deg, #2f5d6b, #7fb2c0)',
+      },
+      {
+        href: '/marketing/aqua-lotion-version-compare/',
+        title: '아쿠아 로션 버전 비교',
+        desc: '원본 / V1 / V2 대표·상세 이미지를 한 화면에서 비교.',
+        cover: 'linear-gradient(135deg, #2f4f5d, #5d8aa0)',
+      },
+      {
+        href: '/toner-detail-renewal/',
+        title: '히알루론산 토너 상세 리뉴얼',
+        desc: '신선 출고·자연유래 보습 메시지 기반 대표/상세 시안.',
+        tag: '시안',
+        cover: 'linear-gradient(135deg, #4a6b54, #93b08c)',
+      },
+    ],
+  },
+  {
+    id: 'shop',
+    label: '쇼핑몰 컨셉 시안',
+    eyebrow: 'Storefront concepts',
+    desc: '자사몰 방향을 검토하기 위한 4가지 컨셉 목업입니다. 톤과 정보 구성을 비교하세요.',
+    links: [
+      {
+        href: '/shop-concept/',
+        title: '내추럴 프리미엄',
+        desc: '천연 소재 기반 신선한 스킨케어 브랜드 컨셉.',
+        tag: '목업',
+        cover: 'linear-gradient(135deg, #3c4a34, #7b8b6f)',
+      },
+      {
+        href: '/shop-clinical/',
+        title: 'Fresh Ingredient Chain',
+        desc: '원료 수확 → 제조 → 배송 신선 유통 과정 강조.',
+        tag: '목업',
+        cover: 'linear-gradient(135deg, #234b46, #5d9b91)',
+      },
+      {
+        href: '/shop-editorial/',
+        title: '자연 라이프스타일',
+        desc: '따뜻하고 감성적인 자연주의 라이프스타일.',
+        tag: '목업',
+        cover: 'linear-gradient(135deg, #8c5a3a, #d2a273)',
+      },
+      {
+        href: '/shop-luxury/',
+        title: '미니멀 클린 뷰티',
+        desc: '깨끗하고 세련된 클린 뷰티 미니멀 스타일.',
+        tag: '목업',
+        cover: 'linear-gradient(135deg, #2b2b2b, #6f6f6f)',
+      },
+    ],
+  },
+  {
+    id: 'brand',
+    label: '브랜드·로고',
+    eyebrow: 'Brand & logo',
+    desc: 'YOURSKIN PLUS 로고와 타이포그래피 방향을 검토하는 보드입니다.',
+    links: [
+      {
+        href: '/brand-logo/',
+        title: '브랜드 로고 방향',
+        desc: '프리미엄 자연주의 로고 콘셉트 보드와 실사용 SVG 시스템.',
+        cover: 'linear-gradient(135deg, #2a3a32, #4f6155)',
+      },
+      {
+        href: '/brand-typography/',
+        title: '타이포 로고 고도화',
+        desc: '프리미엄 스킨케어 타이포그래피 로고 시안.',
+        cover: 'linear-gradient(135deg, #34322c, #6c6a60)',
+      },
+      {
+        href: '/logo-gallery/',
+        title: '로고 갤러리',
+        desc: '생성된 로고와 앱 아이콘 모음.',
+        cover: 'linear-gradient(135deg, #4a4438, #8a7f63)',
+      },
+      {
+        href: '/logo-inspiration/',
+        title: '로고 영감 보드',
+        desc: '로고 방향을 잡기 위한 레퍼런스 수집.',
+        cover: 'linear-gradient(135deg, #3d4a4a, #79938f)',
+      },
+    ],
+  },
+];
+
+/** 모든 링크를 평면 배열로 (검색/검증용) */
+export const allLinks: SiteLink[] = siteSections.flatMap((s) => s.links);

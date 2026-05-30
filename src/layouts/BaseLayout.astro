@@ -1,14 +1,31 @@
 ---
 import '../styles/global.css';
-const { title = 'Cosmetic Commerce', description = '화장품 마케팅과 쇼핑몰을 위한 브랜드 커머스 프로젝트' } = Astro.props;
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'YOURSKIN+ 운영 허브',
+  description = '유어스킨플러스 내부 운영·마케팅 도구 — 상품상세, 경쟁상품, 상세 이미지 작업을 한 곳에서.',
+} = Astro.props;
+const fullTitle = title.includes('YOURSKIN') ? title : `${title} · YOURSKIN+`;
 ---
 <!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#1f2a24" />
     <meta name="description" content={description} />
-    <title>{title}</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="ko_KR" />
+    <link rel="icon" href="/yourskin-logo.svg" type="image/svg+xml" />
+    <title>{fullTitle}</title>
   </head>
   <body class="noise">
     <slot />

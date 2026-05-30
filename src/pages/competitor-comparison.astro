@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 import competitorData from '../../data/coupang-competitor-products.json';
 import { products } from '../data/marketingOps';
 
@@ -16,33 +18,23 @@ const highThreats = categories.flatMap((category) => category.competitors.filter
 ---
 
 <BaseLayout title="유어스킨플러스 경쟁상품" description="유어스킨플러스 상품별 경쟁군, 리뷰 격차, 월 구매 신호, 대응 메시지를 정리">
-  <main class="competitor-tool">
-    <header class="topbar">
-      <a href="/" class="brand"><img src="/yourskin-logo-header-v15.svg" alt="YOURSKIN+" /></a>
-      <button class="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" data-menu-toggle>
-        <span></span><span></span><span></span>
-      </button>
-      <nav>
-        <a href="/">대시보드</a>
-        <a href="/products/">상품상세</a>
-        <a href="/competitor-comparison/">경쟁상품</a>
-      </nav>
-    </header>
+  <SiteHeader active="/competitor-comparison/" />
 
-    <section class="hero">
+  <main class="competitor-tool">
+    <section class="hero container">
       <div>
         <p class="eyebrow">Competitor products</p>
-        <h1>경쟁상품을 보고 우리 상세에서 무엇을 강조할지 정리</h1>
-        <p>리뷰 수, 월 구매 신호, 대응 메시지만 간결하게 봅니다.</p>
+        <h1>경쟁상품을 보고 우리 상세에서<br />무엇을 강조할지 정리</h1>
+        <p class="lead">리뷰 수, 월 구매 신호, 대응 메시지만 간결하게 봅니다.</p>
       </div>
       <div class="hero-card">
         <span>고위험 경쟁 상품</span>
         <strong>{highThreats.length}개</strong>
-        <small>리뷰/월구매 신호가 큰 상품군</small>
+        <small>리뷰·월구매 신호가 큰 상품군</small>
       </div>
     </section>
 
-    <section class="category-grid">
+    <section class="category-grid container" aria-label="카테고리별 경쟁상품">
       {categories.map((category) => (
         <article class="category-card">
           <div class="head">
@@ -62,54 +54,73 @@ const highThreats = categories.flatMap((category) => category.competitors.filter
           </div>
           <div class="links">
             {category.ours.map((product) => <a href={'/products/' + product.slug + '/'}>{product.shortName} 작업실</a>)}
-            <a href={category.top.url} target="_blank" rel="noreferrer">대표 경쟁 상품</a>
+            <a class="ext" href={category.top.url} target="_blank" rel="noreferrer">대표 경쟁 상품 ↗</a>
           </div>
         </article>
       ))}
     </section>
   </main>
+
+  <SiteFooter />
 </BaseLayout>
 
-<script>
-  const menuButton = document.querySelector('[data-menu-toggle]');
-  const nav = document.querySelector('.topbar nav');
-  menuButton?.addEventListener('click', () => {
-    const open = nav?.classList.toggle('is-open') ?? false;
-    menuButton.setAttribute('aria-expanded', String(open));
-  });
-</script>
-
 <style>
-  :global(body) { background:#eef1ec; }
-  .competitor-tool { --ink:#17211d; --muted:#68766f; --line:#d8e0d6; --paper:#fbfcf8; --dark:#12251f; --accent:#c76045; min-height:100vh; color:var(--ink); background:#eef1ec; font-family:var(--font-body); }
-  a { color:inherit; text-decoration:none; }
-  .topbar { position:sticky; top:0; z-index:10; display:flex; justify-content:space-between; align-items:center; gap:14px; padding:12px 22px; border-bottom:1px solid var(--line); background:rgba(238,241,236,.94); backdrop-filter:blur(12px); }
-  .brand img { width:146px; padding:8px 10px; border-radius:6px; background:#f8f4ea; }
-  nav { display:flex; flex-wrap:wrap; gap:8px; }
-  nav a, .links a { padding:9px 12px; border-radius:999px; background:var(--dark); color:#fffaf0; font-size:13px; font-weight:800; }
-  .menu-toggle { display:none; }
-  .hero { display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:18px; padding:26px 22px 18px; }
-  .eyebrow { margin:0; color:var(--accent); font-family:var(--font-latin); font-size:11px; font-weight:800; text-transform:uppercase; }
-  .hero h1 { max-width:940px; margin:8px 0 10px; font-size:clamp(38px,5vw,68px); line-height:1; letter-spacing:0; }
-  .hero p:not(.eyebrow) { max-width:760px; margin:0; color:var(--muted); font-size:17px; line-height:1.65; }
-  .hero-card, .category-card { border:1px solid var(--line); border-radius:8px; background:var(--paper); box-shadow:0 14px 44px rgba(21,34,28,.08); }
-  .hero-card { display:grid; align-content:end; gap:8px; padding:20px; background:var(--dark); color:#fffaf0; }
-  .hero-card span, .hero-card small { color:#c7d5cd; }
-  .hero-card strong { font-size:38px; }
-  .category-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; padding:0 22px 24px; }
-  .category-card { display:grid; gap:14px; padding:20px; }
-  .head { display:flex; justify-content:space-between; gap:10px; align-items:center; }
-  .head span, .head em { color:var(--muted); font-size:13px; font-weight:800; font-style:normal; }
-  .head em { padding:5px 8px; border-radius:999px; background:#f0f3ee; }
-  h2 { margin:0; font-size:27px; letter-spacing:0; }
-  .category-card p { margin:0; color:var(--muted); line-height:1.6; }
-  dl { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin:0; }
-  dl div { padding:12px; border-radius:8px; background:#f2f6f1; }
-  dt { color:var(--muted); font-size:12px; }
-  dd { margin:4px 0 0; font-weight:900; }
-  .response { padding:13px; border-radius:8px; background:#fff7f3; border:1px solid #efc9bb; }
-  .response strong { display:block; margin-bottom:6px; }
-  .links { display:flex; flex-wrap:wrap; gap:8px; }
-  @media (max-width:1000px) { .hero, .category-grid { grid-template-columns:1fr; } }
-  @media (max-width:720px) { .topbar { justify-content:space-between; padding:10px 12px; } .brand img { width:118px; padding:6px 8px; } .menu-toggle { display:grid; place-content:center; gap:4px; width:42px; height:42px; border:1px solid var(--line); border-radius:12px; background:#fff; cursor:pointer; } .menu-toggle span { display:block; width:18px; height:2px; border-radius:999px; background:var(--ink); } nav { position:absolute; top:62px; right:12px; z-index:30; display:none; width:min(220px, calc(100vw - 24px)); grid-template-columns:1fr; gap:6px; padding:6px; border:1px solid rgba(216,224,214,.9); border-radius:18px; background:rgba(251,252,248,.94); box-shadow:0 12px 36px rgba(18,37,31,.18); backdrop-filter:blur(14px); } nav.is-open { display:grid; } nav a { display:flex; align-items:center; justify-content:flex-start; min-height:42px; padding:0 12px; border-radius:13px; background:#fff; color:var(--ink); font-size:14px; } nav a:nth-of-type(3) { background:var(--dark); color:#fffaf0; } .hero { padding:18px 12px 12px; } .hero h1 { font-size:30px; line-height:1.08; } .hero p:not(.eyebrow) { font-size:15px; } .category-grid { padding:0 12px 18px; } .category-card { padding:16px; } dl { grid-template-columns:1fr; } h2 { font-size:23px; } }
+  .competitor-tool { color: var(--ink); }
+  .competitor-tool a { color: inherit; text-decoration: none; }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 18px;
+    align-items: end;
+    padding-block: clamp(28px, 5vw, 56px) clamp(18px, 3vw, 28px);
+  }
+  .hero h1 { margin: 10px 0; font-size: clamp(28px, 4.4vw, 52px); line-height: 1.06; letter-spacing: -0.02em; }
+  .hero .lead { margin: 0; max-width: 60ch; color: var(--muted); font-size: clamp(15px, 1.4vw, 17px); line-height: 1.65; }
+  .hero-card {
+    display: grid; align-content: end; gap: 6px;
+    padding: 22px; border-radius: var(--r);
+    background: var(--forest); color: #f4efe4; box-shadow: var(--shadow);
+  }
+  .hero-card span, .hero-card small { color: var(--forest-soft); font-size: 13px; }
+  .hero-card strong { font-size: 40px; line-height: 1; }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding-bottom: clamp(28px, 5vw, 52px);
+  }
+  .category-card {
+    display: grid; gap: 14px; padding: 22px;
+    border-radius: var(--r); background: var(--surface);
+    border: 1px solid var(--line); box-shadow: var(--shadow-sm);
+  }
+  .head { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+  .head span, .head em { color: var(--muted); font-size: 13px; font-weight: 700; font-style: normal; }
+  .head em { padding: 4px 10px; border-radius: var(--r-pill); background: var(--surface-3); }
+  .category-card h2 { margin: 0; font-size: clamp(20px, 2.4vw, 26px); letter-spacing: -0.01em; }
+  .category-card > p { margin: 0; color: var(--muted); line-height: 1.6; }
+  dl { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0; }
+  dl div { padding: 12px; border-radius: var(--r-sm); background: var(--surface-3); }
+  dt { color: var(--muted); font-size: 12px; }
+  dd { margin: 4px 0 0; font-weight: 800; }
+  .response { padding: 14px; border-radius: var(--r-sm); background: var(--accent-soft); border: 1px solid #ecccbe; }
+  .response strong { display: block; margin-bottom: 6px; color: var(--accent-ink); }
+  .response p { margin: 0; line-height: 1.55; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .links a {
+    padding: 9px 13px; border-radius: var(--r-pill);
+    background: var(--forest); color: #f7f3e9; font-size: 13px; font-weight: 700;
+  }
+  .links a.ext { background: var(--accent); }
+
+  @media (max-width: 1000px) {
+    .hero { grid-template-columns: 1fr; gap: 14px; }
+    .category-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 520px) {
+    dl { grid-template-columns: 1fr; }
+    .links a { flex: 1 1 auto; text-align: center; }
+  }
 </style>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BackToHub from '../components/BackToHub.astro';
 
 type LogoRef = {
   name: string;
@@ -100,6 +101,7 @@ const faviconUrl = (domain: string) =>
 ---
 
 <BaseLayout title="Logo Inspiration Board" description="YOURSKIN PLUS 로고 영감 수집 보드">
+  <BackToHub label="로고 영감 보드" kind="브랜드" />
   <main class="inspo-page">
     <section class="inspo-hero">
       <nav class="inspo-nav" aria-label="페이지 이동">
@@ -208,10 +210,15 @@ const faviconUrl = (domain: string) =>
 
   .inspo-page {
     min-height: 100vh;
+    overflow-x: hidden;
     background:
       linear-gradient(180deg, rgba(20, 61, 46, 0.09), rgba(248, 241, 231, 0) 420px),
       #f8f1e7;
     font-family: 'Tenor Sans', system-ui, sans-serif;
+  }
+
+  .inspo-page img {
+    max-width: 100%;
   }
 
   .inspo-hero,
@@ -546,6 +553,23 @@ const faviconUrl = (domain: string) =>
 
     .logo-card {
       min-height: 240px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    h1 {
+      font-size: clamp(42px, 13vw, 54px);
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .takeaway h2 {
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .logo-top a {
+      max-width: 150px;
     }
   }
 </style>

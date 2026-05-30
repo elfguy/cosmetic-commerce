@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
 import { formatWon, getVersions, statusLabel } from '../../data/marketingOps';
 import { products } from '../../data/marketingOps';
 
@@ -56,22 +58,11 @@ const playbook = playbooks[product.slug] ?? {
 ---
 
 <BaseLayout title={product.shortName + ' 상품상세'} description={product.shortName + ' 버전별 상품상세 관리'}>
-  <main class="detail" data-slug={product.slug}>
-    <!-- Topbar -->
-    <header class="topbar">
-      <a href="/" class="logo" aria-label="대시보드"><img src="/yourskin-logo-header-v15.svg" alt="YOURSKIN+" /></a>
-      <button class="menu-toggle" type="button" aria-label="메뉴" aria-expanded="false" data-menu-toggle>
-        <span></span><span></span><span></span>
-      </button>
-      <nav>
-        <a href="/">대시보드</a>
-        <a href="/products/">상품상세</a>
-        <a href="/competitor-comparison/">경쟁상품</a>
-      </nav>
-    </header>
+  <SiteHeader active="/products/" />
 
+  <main class="detail" data-slug={product.slug}>
     <!-- Product header -->
-    <section class="product-header">
+    <section class="product-header container">
       <div>
         <p class="eyebrow">{product.ops.campaignRole}</p>
         <h1>{product.shortName}</h1>
@@ -86,7 +77,7 @@ const playbook = playbooks[product.slug] ?? {
     </section>
 
     <!-- Version selector -->
-    <section class="versions" aria-label="버전 선택">
+    <section class="versions container" aria-label="버전 선택">
       <div class="version-tabs" data-version-tabs>
         {versions.map((v, i) => (
           <button
@@ -103,7 +94,7 @@ const playbook = playbooks[product.slug] ?? {
 
     <!-- Version content -->
     {versions.map((v, i) => (
-      <section class={'version-content' + (i === 0 ? ' is-active' : '')} data-version-content={v.id}>
+      <section class={'version-content container' + (i === 0 ? ' is-active' : '')} data-version-content={v.id}>
         <!-- Preview: Main slider + Detail scroll -->
         <div class="preview-area">
           <div class="phone phone-main">
@@ -174,7 +165,7 @@ const playbook = playbooks[product.slug] ?? {
     ))}
 
     <!-- Work section -->
-    <section class="work">
+    <section class="work container">
       <div class="panel next">
         <p class="eyebrow">Next action</p>
         <h2>{product.ops.nextAction}</h2>
@@ -211,6 +202,8 @@ const playbook = playbooks[product.slug] ?? {
     </section>
   </main>
 
+  <SiteFooter />
+
   <!-- Lightbox overlay -->
   <div id="lightbox" class="lightbox">
     <div class="lb-header">
@@ -237,13 +230,6 @@ const playbook = playbooks[product.slug] ?? {
 </BaseLayout>
 
 <script>
-  const menuBtn = document.querySelector('[data-menu-toggle]');
-  const nav = document.querySelector('.topbar nav');
-  menuBtn?.addEventListener('click', () => {
-    const open = nav?.classList.toggle('is-open') ?? false;
-    menuBtn.setAttribute('aria-expanded', String(open));
-  });
-
   const tabs = document.querySelectorAll('[data-version-id]');
   const contents = document.querySelectorAll('[data-version-content]');
 
@@ -407,41 +393,20 @@ const playbook = playbooks[product.slug] ?? {
 </script>
 
 <style is:global>
-  :global(body) { background: #eef1ec; }
+  :global(body) { background: var(--bg); }
   .detail {
-    --ink: #17211d;
-    --muted: #68766f;
-    --line: #d8e0d6;
-    --paper: #fbfcf8;
-    --dark: #12251f;
-    --accent: #c76045;
+    --paper: var(--surface);
+    --dark: var(--forest);
     min-height: 100vh;
     color: var(--ink);
     font-family: var(--font-body);
   }
   a { color: inherit; text-decoration: none; }
 
-  /* Topbar — same as other pages */
-  .topbar {
-    position: sticky; top: 0; z-index: 10;
-    display: flex; justify-content: space-between; align-items: center;
-    gap: 14px; padding: 12px 22px;
-    border-bottom: 1px solid var(--line);
-    background: rgba(238,241,236,.94); backdrop-filter: blur(12px);
-  }
-  .logo img { width: 146px; padding: 8px 10px; border-radius: 6px; background: transparent; }
-  nav { display: flex; flex-wrap: wrap; gap: 8px; }
-  nav a {
-    padding: 9px 12px; border-radius: 999px;
-    background: var(--dark); color: #fffaf0;
-    font-size: 13px; font-weight: 800;
-  }
-  .menu-toggle { display: none; }
-
   /* Product header */
   .product-header {
     display: grid; grid-template-columns: 1fr auto;
-    gap: 18px; padding: 26px 22px 18px;
+    gap: 18px; padding: 26px 0 18px;
   }
   .eyebrow {
     margin: 0; color: var(--accent);
@@ -453,42 +418,42 @@ const playbook = playbooks[product.slug] ?? {
   .stats {
     display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
     margin: 0; padding: 14px;
-    border: 1px solid var(--line); border-radius: 8px;
-    background: var(--paper); box-shadow: 0 12px 40px rgba(21,34,28,.07);
+    border: 1px solid var(--line); border-radius: var(--r);
+    background: var(--surface); box-shadow: var(--shadow-sm);
     align-self: start;
   }
-  .stats div { padding: 10px; border-radius: 6px; background: #f2f6f1; }
+  .stats div { padding: 10px; border-radius: var(--r-sm); background: var(--surface-3); }
   dt { color: var(--muted); font-size: 11px; }
   dd { margin: 3px 0 0; font-size: 18px; font-weight: 900; }
   .risk-high { color: #8e2d1c; }
-  .risk-medium { color: #9c4d36; }
+  .risk-medium { color: var(--accent-ink); }
   .risk-low { color: #315b4c; }
 
   /* Version selector */
-  .versions { padding: 0 22px 8px; }
+  .versions { padding: 0 0 8px; }
   .version-tabs {
     display: flex; gap: 6px; overflow-x: auto;
-    padding: 4px; border: 1px solid var(--line); border-radius: 12px;
-    background: var(--paper);
+    padding: 4px; border: 1px solid var(--line); border-radius: var(--r-sm);
+    background: var(--surface);
     -webkit-overflow-scrolling: touch;
   }
   .version-tab {
     display: flex; align-items: center; gap: 6px;
-    padding: 10px 16px; border-radius: 8px;
+    padding: 10px 16px; border-radius: var(--r-sm);
     border: 1px solid transparent; background: transparent;
     font-family: var(--font-body); font-size: 14px; font-weight: 700;
     color: var(--muted); cursor: pointer; white-space: nowrap;
     transition: all .15s;
   }
   .version-tab.is-active {
-    background: var(--dark); color: #fffaf0;
-    border-color: var(--dark);
+    background: var(--forest); color: #f7f3e9;
+    border-color: var(--forest);
   }
-  .version-tab.is-active .tab-status { background: rgba(255,255,255,.15); color: #fffaf0; }
+  .version-tab.is-active .tab-status { background: rgba(255,255,255,.15); color: #f7f3e9; }
   .tab-status {
-    padding: 2px 8px; border-radius: 999px;
+    padding: 2px 8px; border-radius: var(--r-pill);
     font-size: 11px; font-weight: 800;
-    background: #e7efe6; color: #4a6a5c;
+    background: var(--surface-3); color: #4a6a5c;
   }
   .status-live { background: #d4edda; color: #1a6b3c; }
   .status-candidate { background: #fff3cd; color: #856404; }
@@ -497,11 +462,11 @@ const playbook = playbooks[product.slug] ?? {
   .status-archive { background: #f0f0f0; color: #999; }
 
   /* Version content */
-  .version-content { display: none; padding: 0 22px 20px; }
+  .version-content { display: none; padding: 0 0 20px; }
   .version-content.is-active { display: block; }
 
   .preview-area {
-    display: grid; grid-template-columns: 200px 200px 1fr;
+    display: grid; grid-template-columns: 200px 200px minmax(0, 1fr);
     gap: 18px; align-items: start;
   }
 
@@ -571,8 +536,8 @@ const playbook = playbooks[product.slug] ?? {
 
   /* Version info */
   .version-info {
-    padding: 18px; border: 1px solid var(--line); border-radius: 8px;
-    background: var(--paper); box-shadow: 0 12px 40px rgba(21,34,28,.07);
+    padding: 18px; border: 1px solid var(--line); border-radius: var(--r);
+    background: var(--surface); box-shadow: var(--shadow-sm);
     display: grid; gap: 12px; align-self: start;
   }
   .info-row {
@@ -582,25 +547,25 @@ const playbook = playbooks[product.slug] ?? {
   .info-row span { color: var(--muted); font-size: 13px; }
   .info-row strong { font-size: 15px; }
   .info-desc { color: var(--muted); font-size: 14px; line-height: 1.6; margin: 0; }
-  .metrics { display: flex; gap: 12px; }
+  .metrics { display: flex; flex-wrap: wrap; gap: 12px; }
   .metric {
-    padding: 10px 14px; border-radius: 8px; background: #f2f6f1;
+    padding: 10px 14px; border-radius: var(--r-sm); background: var(--surface-3);
     display: grid; gap: 2px;
   }
   .metric strong { font-size: 18px; }
   .metric span { font-size: 11px; color: var(--muted); }
   .version-links { display: flex; flex-wrap: wrap; gap: 8px; }
   .version-links a {
-    padding: 8px 14px; border-radius: 999px;
-    background: var(--dark); color: #fffaf0;
+    padding: 8px 14px; border-radius: var(--r-pill);
+    background: var(--forest); color: #f7f3e9;
     font-size: 13px; font-weight: 800;
   }
 
   /* Work section */
-  .work { display: grid; gap: 16px; padding: 0 22px 32px; }
+  .work { display: grid; gap: 16px; padding: 0 0 32px; }
   .panel {
-    padding: 18px; border: 1px solid var(--line); border-radius: 8px;
-    background: var(--paper); box-shadow: 0 12px 40px rgba(21,34,28,.07);
+    padding: 18px; border: 1px solid var(--line); border-radius: var(--r);
+    background: var(--surface); box-shadow: var(--shadow-sm);
   }
   .panel h2 { margin: 0 0 10px; font-size: 20px; letter-spacing: 0; }
   .panel p { color: var(--muted); line-height: 1.6; margin: 0; }
@@ -608,12 +573,12 @@ const playbook = playbooks[product.slug] ?? {
   .panel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   ol, ul { display: grid; gap: 7px; margin: 0; padding-left: 18px; }
   li { line-height: 1.5; font-size: 14px; }
-  .copy { background: #f7fbf4; }
-  .danger { background: #fff7f3; border-color: #efc9bb; }
+  .copy { background: var(--surface-2); }
+  .danger { background: var(--accent-soft); border-color: #efc9bb; }
   .links-row { display: flex; flex-wrap: wrap; gap: 8px; }
   .links-row a {
-    padding: 9px 14px; border-radius: 999px;
-    background: var(--dark); color: #fffaf0;
+    padding: 9px 14px; border-radius: var(--r-pill);
+    background: var(--forest); color: #f7f3e9;
     font-size: 13px; font-weight: 800;
   }
 
@@ -719,57 +684,29 @@ const playbook = playbooks[product.slug] ?? {
   /* Responsive */
   @media (max-width: 1040px) {
     .product-header, .panel-grid { grid-template-columns: 1fr; }
-    .preview-area { grid-template-columns: 160px 160px 1fr; gap: 12px; }
+    .preview-area { grid-template-columns: 160px 160px minmax(0, 1fr); gap: 12px; }
     .phone-scroll { max-height: 380px; }
   }
   @media (max-width: 720px) {
-    .topbar { padding: 10px 14px; }
-    .logo img { width: 120px; padding: 6px 8px; }
-    .menu-toggle {
-      display: grid; place-content: center; gap: 4px;
-      width: 42px; height: 42px;
-      border: 1px solid var(--line); border-radius: 12px;
-      background: #fff; cursor: pointer;
-    }
-    .menu-toggle span {
-      display: block; width: 18px; height: 2px;
-      border-radius: 999px; background: var(--ink);
-    }
-    nav {
-      position: absolute; top: 62px; right: 12px; z-index: 30;
-      display: none; width: min(220px, calc(100vw - 24px));
-      grid-template-columns: 1fr; gap: 6px; padding: 6px;
-      border: 1px solid rgba(216,224,214,.9); border-radius: 18px;
-      background: rgba(251,252,248,.94); box-shadow: 0 12px 36px rgba(18,37,31,.18);
-      backdrop-filter: blur(14px);
-    }
-    nav.is-open { display: grid; }
-    nav a {
-      display: flex; align-items: center; min-height: 42px;
-      padding: 0 12px; border-radius: 13px;
-      background: #fff; color: var(--ink); font-size: 14px;
-    }
-    nav a:nth-of-type(2) { background: var(--dark); color: #fffaf0; }
-
-    .product-header { padding: 18px 14px 14px; }
+    .product-header { padding: 18px 0 14px; }
     h1 { font-size: 28px; }
     .headline { font-size: 14px; }
     .stats { grid-template-columns: 1fr 1fr; }
     dd { font-size: 15px; }
 
-    .versions { padding: 0 14px 8px; }
+    .versions { padding: 0 0 8px; }
     .version-tabs { gap: 4px; padding: 3px; }
     .version-tab { padding: 8px 12px; font-size: 13px; }
 
-    .version-content { padding: 0 14px 16px; }
-    .preview-area { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .version-content { padding: 0 0 16px; }
+    .preview-area { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
     .phone { border-width: 5px; border-radius: 16px; }
     .phone-scroll { max-height: 340px; }
     .phone-slider { height: 340px; }
     .version-info { grid-column: 1 / -1; }
     .version-info { padding: 14px; }
 
-    .work { padding: 0 14px 24px; }
+    .work { padding: 0 0 24px; }
     .panel h2 { font-size: 17px; }
     .next h2 { font-size: 20px; }
 
@@ -779,5 +716,10 @@ const playbook = playbooks[product.slug] ?? {
     .lb-nav { width: 38px; height: 38px; font-size: 20px; }
     .lb-prev { left: 4px; }
     .lb-next { right: 4px; }
+  }
+  @media (max-width: 420px) {
+    .preview-area { grid-template-columns: minmax(0, 1fr); }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .metrics { flex-wrap: wrap; }
   }
 </style>

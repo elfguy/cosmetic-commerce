@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BackToHub from '../components/BackToHub.astro';
 
 const title = '히알루론산 토너 상세페이지 HTML 시안';
 const description = '유어스킨플러스 히알루론산 토너 500ml 대표이미지와 상세페이지 리뉴얼 HTML 시안';
@@ -37,6 +38,7 @@ const sections = [
 ---
 
 <BaseLayout title={title} description={description}>
+  <BackToHub label="히알루론산 토너 상세 리뉴얼" kind="상세 시안" />
   <main class="toner-page">
     <section class="review-bar" aria-label="작업 상태">
       <a href="/">YOURSKIN+</a>
@@ -721,6 +723,50 @@ const sections = [
       left: 20px;
       right: 20px;
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .toner-page :where(img) {
+      max-width: 100%;
+    }
+
+    .top-grid,
+    .image-board,
+    .detail-preview,
+    .asset-strip {
+      padding-left: clamp(14px, 4vw, 18px);
+      padding-right: clamp(14px, 4vw, 18px);
+    }
+
+    .mobile-canvas section {
+      padding: 36px 18px;
+    }
+
+    .detail-hero {
+      min-height: 0;
+    }
+
+    .detail-hero img {
+      position: static;
+      display: block;
+      width: min(60%, 220px);
+      margin: 24px 0 0;
+    }
+
+    .badges {
+      position: static;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      margin-top: 28px;
+    }
+
+    .problem-section li,
+    .mobile-canvas .copy span,
+    .fresh-section span,
+    .faq-section span {
+      font-size: 16px;
     }
   }
 </style>

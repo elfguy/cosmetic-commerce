@@ -1,0 +1,17 @@
+---
+// 시안/컨셉/브랜드 페이지 상단에 얹는 얇은 바.
+// 고유 디자인은 유지하되 항상 허브로 돌아갈 수 있게 한다.
+interface Props {
+  label?: string;
+  kind?: string;
+}
+const { label = '', kind = '' } = Astro.props;
+---
+
+<div class="hubbar">
+  <a class="hubbar__back" href="/">
+    <span aria-hidden="true">←</span> 허브
+  </a>
+  {label && <span class="hubbar__label">{label}</span>}
+  {kind && <span class="hubbar__kind">{kind}</span>}
+</div>

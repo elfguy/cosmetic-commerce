@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BackToHub from '../components/BackToHub.astro';
 import siteData from '../../data/yourskin-products.json';
 
 const { brand, products } = siteData;
@@ -22,6 +23,7 @@ const freshChain = [
 ---
 
 <BaseLayout title="유어스킨플러스 내추럴 프리미엄 목업" description="천연 소재로 만든 신선한 스킨케어 브랜드의 내추럴 프리미엄 웹사이트 목업">
+  <BackToHub label="내추럴 프리미엄" kind="쇼핑몰 시안" />
   <main class="natural-premium">
     <header class="site-header">
       <a class="brand-word" href="/" aria-label="유어스킨플러스 홈">
@@ -664,6 +666,59 @@ const freshChain = [
 
     .hero-photo {
       height: 430px;
+    }
+  }
+
+  /* 360px 가로 오버플로 안전장치: 색/레이아웃 톤은 유지하고 폭만 가둔다 */
+  @media (max-width: 480px) {
+    .natural-premium {
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    .product-card h3,
+    .timeline strong,
+    .ingredient-grid strong {
+      overflow-wrap: anywhere;
+    }
+
+    .hero {
+      padding-top: 48px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    .hero-copy > span,
+    .section-head > span,
+    .design-brief article > span,
+    .review-cta article > span {
+      font-size: 16px;
+    }
+
+    .product-note {
+      grid-template-columns: 1fr;
+    }
+
+    .product-note em {
+      grid-row: auto;
+      grid-column: auto;
+    }
+
+    .timeline span {
+      font-size: 32px;
     }
   }
 </style>

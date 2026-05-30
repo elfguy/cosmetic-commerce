@@ -4,19 +4,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        cream: '#F8F1E7',
-        ink: '#241C18',
-        clay: '#B46A55',
-        rosewood: '#6F2E2E',
-        sage: '#7B8B6F',
-        pearl: '#FFFDFC'
+        bg: '#f4f3ee',
+        surface: '#ffffff',
+        ink: '#1a1915',
+        muted: '#6c6a60',
+        line: '#e6e3d9',
+        accent: '#b5654a',
+        accentInk: '#8c4830',
+        forest: '#1f2a24',
+        sage: '#7b8b6f'
       },
       fontFamily: {
-        display: ['Cormorant Garamond', 'serif'],
-        body: ['Noto Sans KR', 'sans-serif']
+        display: ['IBM Plex Sans KR', 'sans-serif'],
+        body: ['IBM Plex Sans KR', 'sans-serif'],
+        latin: ['Manrope', 'sans-serif'],
+        serif: ['Cormorant Garamond', 'serif']
+      },
+      borderRadius: {
+        DEFAULT: '16px',
+        lg: '22px'
       },
       boxShadow: {
-        soft: '0 24px 80px rgba(111, 46, 46, 0.16)'
+        soft: '0 20px 50px -28px rgba(31, 42, 36, 0.42)'
       }
     }
   },

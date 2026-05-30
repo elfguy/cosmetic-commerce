@@ -1,0 +1,56 @@
+---
+// 모든 운영 페이지가 공유하는 상단 네비게이션.
+// active prop 으로 현재 메뉴를 표시한다 (예: "/products/").
+import { primaryNav } from '../data/siteMap';
+
+interface Props {
+  active?: string;
+}
+const { active = '' } = Astro.props;
+
+const isActive = (href: string) =>
+  href === '/' ? active === '/' : active.startsWith(href);
+---
+
+<header class="site-nav">
+  <div class="container site-nav__inner">
+    <a class="site-nav__brand" href="/" aria-label="YOURSKIN PLUS 운영 허브">
+      <img src="/yourskin-logo-header-v15.svg" alt="YOURSKIN+" />
+    </a>
+
+    <button
+      class="site-nav__toggle"
+      type="button"
+      aria-label="메뉴 열기"
+      aria-expanded="false"
+      aria-controls="site-nav-links"
+      data-nav-toggle
+    >
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav__links" id="site-nav-links" aria-label="주 메뉴">
+      {primaryNav.map((link) => (
+        <a href={link.href} aria-current={isActive(link.href) ? 'page' : undefined}>
+          {link.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('[data-nav-toggle]');
+  const links = document.getElementById('site-nav-links');
+  toggle?.addEventListener('click', () => {
+    const open = links?.classList.toggle('is-open') ?? false;
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+  // 링크 클릭 시 모바일 메뉴 닫기
+  links?.querySelectorAll('a').forEach((a) =>
+    a.addEventListener('click', () => {
+      links.classList.remove('is-open');
+      toggle?.setAttribute('aria-expanded', 'false');
+    })
+  );
+</script>

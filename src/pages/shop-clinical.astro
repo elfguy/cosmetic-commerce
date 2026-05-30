@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BackToHub from '../components/BackToHub.astro';
 import siteData from '../../data/yourskin-products.json';
 
 const { brand, products } = siteData;
@@ -27,6 +28,7 @@ const palette = [
 ---
 
 <BaseLayout title="유어스킨플러스 Fresh Ingredient Chain 목업" description="원료 수확부터 제조와 배송까지 신선한 유통 과정을 강조한 유어스킨플러스 웹사이트 목업">
+  <BackToHub label="Fresh Ingredient Chain" kind="쇼핑몰 시안" />
   <main class="fresh-chain-shop">
     <header class="site-header">
       <a class="brand-word" href="/" aria-label="유어스킨플러스 홈">
@@ -631,6 +633,39 @@ const palette = [
 
     .chain-map article {
       min-height: 230px;
+    }
+  }
+
+  @media (max-width: 440px) {
+    .fresh-chain-shop {
+      overflow-x: hidden;
+    }
+
+    .fresh-chain-shop img {
+      max-width: 100%;
+    }
+
+    .site-header,
+    .hero,
+    .concept-board,
+    .fresh-chain,
+    .origin-section,
+    .product-section,
+    .delivery-cta {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    .site-header nav {
+      gap: 12px;
     }
   }
 </style>

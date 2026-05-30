@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BackToHub from '../components/BackToHub.astro';
 
 const typeDirections = [
   {
@@ -62,6 +63,7 @@ const typeDirections = [
 ---
 
 <BaseLayout title="YOURSKIN PLUS 타이포 로고 고도화" description="YOURSKIN PLUS 프리미엄 스킨케어 타이포그래피 로고 시안">
+  <BackToHub label="타이포 로고 고도화" kind="브랜드" />
   <main class="type-page">
     <section class="type-hero">
       <nav class="type-nav" aria-label="페이지 이동">
@@ -503,6 +505,42 @@ const typeDirections = [
     .clinical-luxe .wordmark span:last-child {
       padding-left: 0;
       border-left: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .type-page {
+      overflow-x: hidden;
+    }
+
+    /* 절대배치 + 포인트가 카드 밖으로 삐져나가 가로 오버플로를 만드는 것 방지 */
+    .plus-accent .wordmark p {
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    .plus-accent .wordmark i {
+      right: -28px;
+      top: -16px;
+    }
+
+    /* 마스트헤드 큰 자간이 좁은 화면에서 한 줄을 밀어내지 않도록 안전 처리 */
+    .masthead .wordmark span:last-child {
+      letter-spacing: 0.4em;
+    }
+
+    .wordmark p {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
+    .wordmark img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .type-hero h1 {
+      overflow-wrap: anywhere;
     }
   }
 </style>

@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
 import versionsManifest from '../../../public/coupang/images/aqua-lotion/versions/manifest.json';
 
 const versions = versionsManifest.versions.map((version) => ({
@@ -19,8 +21,10 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
 ---
 
 <BaseLayout title="아쿠아로션 원본·V1·V2 비교" description="아쿠아로션 원본, V1, V2 대표 이미지와 상세 이미지를 비교하는 마케팅 검토 페이지">
+  <SiteHeader active="" />
+
   <main class="version-compare">
-    <header class="compare-hero">
+    <header class="compare-hero container">
       <nav class="breadcrumb" aria-label="상위 이동">
         <a href="/">대시보드</a>
         <span>/</span>
@@ -43,7 +47,7 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
       </div>
     </header>
 
-    <section class="compare-controls" aria-label="비교 버전 선택">
+    <section class="compare-controls container" aria-label="비교 버전 선택">
       <div class="control-copy">
         <p class="eyebrow">Version library</p>
         <h2>비교할 버전 선택</h2>
@@ -66,7 +70,7 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
       <p id="selection-note" class="selection-note">현재 3개 버전을 비교 중입니다.</p>
     </section>
 
-    <section class="summary-grid" aria-label="버전 요약">
+    <section class="summary-grid container" aria-label="버전 요약">
       {versions.map((version) => (
         <article id={version.id} data-version-card={version.id}>
           <div class="summary-image">
@@ -84,7 +88,7 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
       ))}
     </section>
 
-    <section class="compare-section">
+    <section class="compare-section container">
       <div class="section-heading">
         <p class="eyebrow">Representative images</p>
         <h2>대표 이미지 비교</h2>
@@ -106,7 +110,7 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
       </div>
     </section>
 
-    <section class="compare-section">
+    <section class="compare-section container">
       <div class="section-heading">
         <p class="eyebrow">Detail flow</p>
         <h2>상세 이미지 흐름 비교</h2>
@@ -126,6 +130,8 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
       </div>
     </section>
   </main>
+
+  <SiteFooter />
 </BaseLayout>
 
 <script>
@@ -194,42 +200,21 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
 
 <style>
   :global(body) {
-    background: #f5f7f2;
-  }
-
-  :global(body.noise::before) {
-    opacity: 0.05;
+    background: var(--bg);
   }
 
   .version-compare {
-    --ink: #1d2924;
-    --muted: #647169;
-    --line: #dde5dc;
-    --panel: #ffffff;
-    --green: #254d3e;
-    --soft: #edf5ee;
-    --coral: #ba6048;
-    min-height: 100vh;
-    padding: 28px;
     color: var(--ink);
-    background:
-      linear-gradient(90deg, rgba(37, 77, 62, 0.045) 1px, transparent 1px),
-      linear-gradient(180deg, rgba(37, 77, 62, 0.035) 1px, transparent 1px),
-      #f5f7f2;
-    background-size: 34px 34px;
+    padding-bottom: 8px;
   }
 
-  a {
+  .version-compare a {
     color: inherit;
     text-decoration: none;
   }
 
-  .compare-hero,
-  .compare-controls,
-  .summary-grid article,
-  .compare-section {
-    width: min(100%, 1480px);
-    margin-inline: auto;
+  .compare-hero {
+    padding-block: clamp(20px, 4vw, 36px) 0;
   }
 
   .breadcrumb {
@@ -243,7 +228,7 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
   }
 
   .breadcrumb a:hover {
-    color: var(--green);
+    color: var(--forest);
   }
 
   .hero-layout {
@@ -257,10 +242,10 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
   .hero-layout aside,
   .summary-grid article,
   .compare-section {
-    background: rgba(255, 255, 255, 0.94);
+    background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 8px;
-    box-shadow: 0 12px 28px rgba(29, 41, 36, 0.055);
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
   }
 
   .hero-layout > div {
@@ -271,7 +256,7 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
 
   .eyebrow {
     margin: 0;
-    color: var(--coral);
+    color: var(--accent);
     font-family: var(--font-latin);
     font-size: 10px;
     font-weight: 900;
@@ -307,7 +292,7 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
     align-content: center;
     gap: 8px;
     padding: 24px;
-    border-left: 5px solid var(--green);
+    border-left: 5px solid var(--forest);
   }
 
   .hero-layout aside span {
@@ -317,7 +302,7 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
   }
 
   .hero-layout aside strong {
-    color: var(--green);
+    color: var(--forest);
     font-family: var(--font-latin);
     font-size: 42px;
   }
@@ -327,10 +312,10 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
     grid-template-columns: 280px minmax(0, 1fr);
     gap: 14px;
     padding: 16px;
-    background: rgba(255, 255, 255, 0.94);
+    background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 8px;
-    box-shadow: 0 12px 28px rgba(29, 41, 36, 0.055);
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
     margin-top: 16px;
     margin-bottom: 16px;
   }
@@ -368,10 +353,10 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
   .preset-row button {
     min-height: 38px;
     padding: 0 12px;
-    color: var(--green);
-    background: var(--soft);
-    border: 1px solid #d4e2d6;
-    border-radius: 7px;
+    color: var(--forest);
+    background: var(--forest-soft);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-sm);
     font: inherit;
     font-size: 12px;
     font-weight: 900;
@@ -387,9 +372,9 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
     gap: 4px;
     min-width: 170px;
     padding: 12px 13px;
-    background: #fff;
+    background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: 8px;
+    border-radius: var(--r-sm);
     cursor: pointer;
   }
 
@@ -401,8 +386,8 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
 
   .version-choice.is-selected {
     color: #fff;
-    background: var(--green);
-    border-color: var(--green);
+    background: var(--forest);
+    border-color: var(--forest);
   }
 
   .version-choice span {
@@ -425,11 +410,10 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
   }
 
   .summary-grid {
-    width: min(100%, 1480px);
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
-    margin: 0 auto 16px;
+    margin-bottom: 16px;
   }
 
   .summary-grid article {
@@ -443,8 +427,8 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
   .summary-image {
     height: 160px;
     overflow: hidden;
-    background: var(--soft);
-    border-radius: 7px;
+    background: var(--surface-3);
+    border-radius: var(--r-sm);
   }
 
   .summary-image img {
@@ -461,7 +445,7 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
   }
 
   .summary-grid span {
-    color: var(--coral);
+    color: var(--accent);
     font-size: 11px;
     font-weight: 900;
   }
@@ -482,10 +466,10 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
   .summary-grid a {
     justify-self: start;
     padding: 8px 10px;
-    color: var(--green);
-    background: var(--soft);
-    border: 1px solid #d4e2d6;
-    border-radius: 6px;
+    color: var(--forest);
+    background: var(--forest-soft);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-sm);
     font-size: 12px;
     font-weight: 900;
   }
@@ -535,8 +519,8 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
     margin: 0;
     padding: 11px 12px;
     color: #fff;
-    background: var(--green);
-    border-radius: 7px;
+    background: var(--forest);
+    border-radius: var(--r-sm);
     font-size: 15px;
   }
 
@@ -551,9 +535,9 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
     position: relative;
     display: block;
     overflow: hidden;
-    background: #eff5f0;
+    background: var(--surface-3);
     border: 1px solid var(--line);
-    border-radius: 8px;
+    border-radius: var(--r-sm);
   }
 
   .image-stack span,
@@ -564,8 +548,8 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
     z-index: 1;
     padding: 4px 7px;
     color: #fff;
-    background: rgba(37, 77, 62, 0.9);
-    border-radius: 999px;
+    background: var(--forest);
+    border-radius: var(--r-pill);
     font-family: var(--font-latin);
     font-size: 11px;
     font-weight: 900;
@@ -600,10 +584,6 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
   }
 
   @media (max-width: 720px) {
-    .version-compare {
-      padding: 18px 12px;
-    }
-
     .hero-layout > div {
       padding: 22px;
     }
@@ -615,6 +595,10 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
     .compare-controls,
     .summary-grid article {
       grid-template-columns: 1fr;
+    }
+
+    .version-choice {
+      min-width: 0;
     }
 
     .summary-image {
