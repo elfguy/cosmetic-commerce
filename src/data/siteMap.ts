@@ -137,38 +137,6 @@ export const siteSections: SiteSection[] = [
       },
     ],
   },
-  {
-    id: 'brand',
-    label: '브랜드·로고',
-    eyebrow: 'Brand & logo',
-    desc: 'YOURSKIN PLUS 로고와 타이포그래피 방향을 검토하는 보드입니다.',
-    links: [
-      {
-        href: '/brand-logo/',
-        title: '브랜드 로고 방향',
-        desc: '프리미엄 자연주의 로고 콘셉트 보드와 실사용 SVG 시스템.',
-        cover: 'linear-gradient(135deg, #2a3a32, #4f6155)',
-      },
-      {
-        href: '/brand-typography/',
-        title: '타이포 로고 고도화',
-        desc: '프리미엄 스킨케어 타이포그래피 로고 시안.',
-        cover: 'linear-gradient(135deg, #34322c, #6c6a60)',
-      },
-      {
-        href: '/logo-gallery/',
-        title: '로고 갤러리',
-        desc: '생성된 로고와 앱 아이콘 모음.',
-        cover: 'linear-gradient(135deg, #4a4438, #8a7f63)',
-      },
-      {
-        href: '/logo-inspiration/',
-        title: '로고 영감 보드',
-        desc: '로고 방향을 잡기 위한 레퍼런스 수집.',
-        cover: 'linear-gradient(135deg, #3d4a4a, #79938f)',
-      },
-    ],
-  },
 ];
 
 /** 모든 링크를 평면 배열로 (검색/검증용) */
