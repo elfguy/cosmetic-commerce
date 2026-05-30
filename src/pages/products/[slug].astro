@@ -406,7 +406,8 @@ const playbook = playbooks[product.slug] ?? {
   /* Product header */
   .product-header {
     display: grid; grid-template-columns: 1fr auto;
-    gap: 18px; padding: 26px 0 18px;
+    gap: 18px;
+    padding-block: 26px 18px;
   }
   .eyebrow {
     margin: 0; color: var(--accent);
@@ -430,7 +431,7 @@ const playbook = playbooks[product.slug] ?? {
   .risk-low { color: #315b4c; }
 
   /* Version selector */
-  .versions { padding: 0 0 8px; }
+  .versions { padding-block: 0 8px; }
   .version-tabs {
     display: flex; gap: 6px; overflow-x: auto;
     padding: 4px; border: 1px solid var(--line); border-radius: var(--r-sm);
@@ -462,7 +463,7 @@ const playbook = playbooks[product.slug] ?? {
   .status-archive { background: #f0f0f0; color: #999; }
 
   /* Version content */
-  .version-content { display: none; padding: 0 0 20px; }
+  .version-content { display: none; padding-block: 0 20px; }
   .version-content.is-active { display: block; }
 
   .preview-area {
@@ -562,7 +563,7 @@ const playbook = playbooks[product.slug] ?? {
   }
 
   /* Work section */
-  .work { display: grid; gap: 16px; padding: 0 0 32px; }
+  .work { display: grid; gap: 16px; padding-block: 0 32px; }
   .panel {
     padding: 18px; border: 1px solid var(--line); border-radius: var(--r);
     background: var(--surface); box-shadow: var(--shadow-sm);
@@ -688,17 +689,17 @@ const playbook = playbooks[product.slug] ?? {
     .phone-scroll { max-height: 380px; }
   }
   @media (max-width: 720px) {
-    .product-header { padding: 18px 0 14px; }
+    .product-header { padding-block: 18px 14px; }
     h1 { font-size: 28px; }
     .headline { font-size: 14px; }
     .stats { grid-template-columns: 1fr 1fr; }
     dd { font-size: 15px; }
 
-    .versions { padding: 0 0 8px; }
+    .versions { padding-block: 0 8px; }
     .version-tabs { gap: 4px; padding: 3px; }
     .version-tab { padding: 8px 12px; font-size: 13px; }
 
-    .version-content { padding: 0 0 16px; }
+    .version-content { padding-block: 0 16px; }
     .preview-area { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
     .phone { border-width: 5px; border-radius: 16px; }
     .phone-scroll { max-height: 340px; }
@@ -706,7 +707,7 @@ const playbook = playbooks[product.slug] ?? {
     .version-info { grid-column: 1 / -1; }
     .version-info { padding: 14px; }
 
-    .work { padding: 0 0 24px; }
+    .work { padding-block: 0 24px; }
     .panel h2 { font-size: 17px; }
     .next h2 { font-size: 20px; }
 
