@@ -406,8 +406,9 @@ const playbook = playbooks[product.slug] ?? {
   /* Product header */
   .product-header {
     display: grid; grid-template-columns: 1fr auto;
-    gap: 18px;
-    padding-block: 26px 18px;
+    gap: 22px;
+    padding-block: 30px 20px;
+    align-items: end;
   }
   .eyebrow {
     margin: 0; color: var(--accent);
@@ -415,15 +416,22 @@ const playbook = playbooks[product.slug] ?? {
     font-weight: 800; text-transform: uppercase;
   }
   h1 { margin: 8px 0 6px; font-size: clamp(32px, 5vw, 56px); line-height: 1; letter-spacing: 0; }
-  .headline { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.6; max-width: 600px; }
+  .headline { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.65; max-width: 620px; }
   .stats {
     display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
-    margin: 0; padding: 14px;
-    border: 1px solid var(--line); border-radius: var(--r);
-    background: var(--surface); box-shadow: var(--shadow-sm);
+    min-width: 320px;
+    margin: 0; padding: 0;
+    border: 0; border-radius: 0;
+    background: transparent; box-shadow: none;
     align-self: start;
   }
-  .stats div { padding: 10px; border-radius: var(--r-sm); background: var(--surface-3); }
+  .stats div {
+    padding: 13px 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--r-sm);
+    background: color-mix(in srgb, var(--surface) 88%, var(--bg));
+    box-shadow: var(--shadow-sm);
+  }
   dt { color: var(--muted); font-size: 11px; }
   dd { margin: 3px 0 0; font-size: 18px; font-weight: 900; }
   .risk-high { color: #8e2d1c; }
@@ -433,14 +441,15 @@ const playbook = playbooks[product.slug] ?? {
   /* Version selector */
   .versions { padding-block: 0 8px; }
   .version-tabs {
-    display: flex; gap: 6px; overflow-x: auto;
-    padding: 4px; border: 1px solid var(--line); border-radius: var(--r-sm);
-    background: var(--surface);
+    display: flex; gap: 8px; overflow-x: auto;
+    padding: 6px; border: 1px solid var(--line); border-radius: var(--r);
+    background: color-mix(in srgb, var(--surface) 82%, var(--bg));
+    box-shadow: var(--shadow-sm);
     -webkit-overflow-scrolling: touch;
   }
   .version-tab {
     display: flex; align-items: center; gap: 6px;
-    padding: 10px 16px; border-radius: var(--r-sm);
+    padding: 10px 16px; border-radius: var(--r-pill);
     border: 1px solid transparent; background: transparent;
     font-family: var(--font-body); font-size: 14px; font-weight: 700;
     color: var(--muted); cursor: pointer; white-space: nowrap;
@@ -449,6 +458,7 @@ const playbook = playbooks[product.slug] ?? {
   .version-tab.is-active {
     background: var(--forest); color: #f7f3e9;
     border-color: var(--forest);
+    box-shadow: 0 10px 22px -16px rgba(31, 42, 36, 0.7);
   }
   .version-tab.is-active .tab-status { background: rgba(255,255,255,.15); color: #f7f3e9; }
   .tab-status {
@@ -468,18 +478,19 @@ const playbook = playbooks[product.slug] ?? {
 
   .preview-area {
     display: grid; grid-template-columns: 200px 200px minmax(0, 1fr);
-    gap: 18px; align-items: start;
+    gap: 16px; align-items: start;
   }
 
   /* Phone */
   .phone {
-    border: 6px solid #1a1a1a; border-radius: 20px;
+    border: 1px solid var(--line); border-radius: var(--r-lg);
     overflow: hidden; background: #fff;
-    box-shadow: 0 12px 36px rgba(21,34,28,.15);
+    box-shadow: var(--shadow-sm);
   }
   .phone-bar {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 10px 14px; background: #1a1a1a; color: #eee;
+    padding: 11px 14px; background: var(--surface); color: var(--ink);
+    border-bottom: 1px solid var(--line);
     font-size: 12px; font-weight: 800;
   }
   .phone-bar strong { color: var(--accent); }
@@ -497,7 +508,7 @@ const playbook = playbooks[product.slug] ?? {
   /* Slider */
   .phone-slider {
     position: relative; overflow: hidden;
-    background: #f5f5f2; height: 420px;
+    background: #f8f7f2; height: 420px;
   }
   .slider-track {
     display: flex; height: 100%;
@@ -508,7 +519,7 @@ const playbook = playbooks[product.slug] ?? {
     display: flex; align-items: center; justify-content: center;
   }
   .slider-slide img {
-    max-width: 90%; max-height: 90%; object-fit: contain;
+    max-width: 88%; max-height: 88%; object-fit: contain;
     cursor: pointer; transition: opacity .15s;
   }
   .slider-slide img:hover { opacity: .85; }
@@ -524,7 +535,7 @@ const playbook = playbooks[product.slug] ?? {
   .slider-btn {
     position: absolute; top: 50%; transform: translateY(-50%);
     width: 32px; height: 32px; border-radius: 50%;
-    border: none; background: rgba(255,255,255,.8); color: #333;
+    border: 1px solid var(--line); background: rgba(255,255,255,.92); color: #333;
     font-size: 18px; cursor: pointer; z-index: 2;
     box-shadow: 0 2px 8px rgba(0,0,0,.15);
   }
@@ -537,7 +548,7 @@ const playbook = playbooks[product.slug] ?? {
 
   /* Version info */
   .version-info {
-    padding: 18px; border: 1px solid var(--line); border-radius: var(--r);
+    padding: 18px; border: 1px solid var(--line); border-radius: var(--r-lg);
     background: var(--surface); box-shadow: var(--shadow-sm);
     display: grid; gap: 12px; align-self: start;
   }
@@ -565,7 +576,7 @@ const playbook = playbooks[product.slug] ?? {
   /* Work section */
   .work { display: grid; gap: 16px; padding-block: 0 32px; }
   .panel {
-    padding: 18px; border: 1px solid var(--line); border-radius: var(--r);
+    padding: 18px; border: 1px solid var(--line); border-radius: var(--r-lg);
     background: var(--surface); box-shadow: var(--shadow-sm);
   }
   .panel h2 { margin: 0 0 10px; font-size: 20px; letter-spacing: 0; }
@@ -689,19 +700,21 @@ const playbook = playbooks[product.slug] ?? {
     .phone-scroll { max-height: 380px; }
   }
   @media (max-width: 720px) {
-    .product-header { padding-block: 18px 14px; }
+    .product-header { padding-block: 22px 16px; gap: 14px; }
     h1 { font-size: 28px; }
     .headline { font-size: 14px; }
-    .stats { grid-template-columns: 1fr 1fr; }
+    .stats { grid-template-columns: 1fr 1fr; min-width: 0; gap: 8px; }
+    .stats div { padding: 11px 12px; }
     dd { font-size: 15px; }
 
     .versions { padding-block: 0 8px; }
-    .version-tabs { gap: 4px; padding: 3px; }
-    .version-tab { padding: 8px 12px; font-size: 13px; }
+    .version-tabs { gap: 6px; padding: 5px; }
+    .version-tab { padding: 9px 13px; font-size: 13px; }
+    .version-tab:not(.is-active) .tab-status { display: none; }
 
     .version-content { padding-block: 0 16px; }
-    .preview-area { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
-    .phone { border-width: 5px; border-radius: 16px; }
+    .preview-area { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+    .phone { border-width: 1px; border-radius: var(--r-lg); }
     .phone-scroll { max-height: 340px; }
     .phone-slider { height: 340px; }
     .version-info { grid-column: 1 / -1; }
