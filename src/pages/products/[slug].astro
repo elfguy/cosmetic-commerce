@@ -1,9 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
-import { formatWon, getVersions, statusLabel } from '../../data/marketingOps';
-import { products } from '../../data/marketingOps';
+import SiteHeader from '../../components/SiteHeader.astro';
+import { formatWon, getVersions, products, statusLabel } from '../../data/marketingOps';
 
 export function getStaticPaths() {
   return products.map((product) => ({ params: { slug: product.slug }, props: { product } }));
@@ -11,729 +10,884 @@ export function getStaticPaths() {
 
 const { product } = Astro.props;
 const versions = getVersions(product.slug, product.productId);
-
-const playbooks: Record<string, { score: number; headline: string; firstCuts: string[]; copy: string[]; avoid: string[]; brief: string }> = {
-  'hyaluronic-toner': {
-    score: 82,
-    headline: '500ml 대용량 수분 토너를 첫 화면에서 바로 팔아야 합니다.',
-    firstCuts: ['500ml 대용량 + 수분 토너 선언', '스킨팩/닦토/레이어링 사용 장면', '히알루론산/병풀/판테놀 성분 + 가격 효율'],
-    copy: ['500ml 대용량으로 매일 부담 없이 쓰는 수분 토너', '화장솜에 듬뿍, 스킨팩부터 닦토까지', '8종 히알루론산 컨셉의 데일리 보습 루틴'],
-    avoid: ['속건조 개선 단정', '진정 치료/피부 개선 표현', '저자극 단정'],
-    brief: '780px 세로 5컷. 제품을 첫 컷 55% 이상.',
-  },
-  'aqua-lotion': {
-    score: 78,
-    headline: '토너와 묶이는 300ml 수분 로션, 이유를 더 선명하게.',
-    firstCuts: ['토너 다음 단계의 300ml 수분 로션', '토너+로션 수분 루틴 세트', '산뜻함/무향/데일리 사용감'],
-    copy: ['토너 다음, 산뜻하게 채우는 300ml 수분 로션', '대용량 보습 루틴을 부담 없이', '무향 데일리 로션으로 가족이 함께'],
-    avoid: ['피부 장벽 개선 단정', '발효 원료 효능 단정', '저자극/무자극 단정'],
-    brief: 'V8 후보 기준 첫 컷 판매 문구 + 세트 제안 보강.',
-  },
-  'cleansing-oil': {
-    score: 73,
-    headline: '블랙헤드는 세정 관리로, 유화 장면을 크게.',
-    firstCuts: ['선크림/피지 잔여감 문제 제시', '오일 롤링과 유화 장면', '블랙헤드 신경 쓰이는 부위 세정 관리'],
-    copy: ['선크림과 피지까지 부드럽게 녹이는 오일 세안', '물과 만나 산뜻하게 유화되는 클렌징 루틴'],
-    avoid: ['블랙헤드 제거', '모공 축소', '여드름 개선'],
-    brief: 'Before/After 과장 없이 유화 장면 중심 5컷.',
-  },
-  'whitening-cream': {
-    score: 80,
-    headline: '미백 기능성 근거를 첫 화면과 구매 버튼 근처에.',
-    firstCuts: ['미백 기능성화장품 고시 범위 표시', '나이아신아마이드 근거', '200ml 대용량 + 낮 사용 시 선케어 안내'],
-    copy: ['피부의 미백에 도움을 주는 기능성 톤 케어 크림', '나이아신아마이드 함유 데일리 미백 케어'],
-    avoid: ['즉시 미백', '기미/잡티 제거', '글루타티온 미백 효능 단정'],
-    brief: '기능성 고시 문구를 구매 근거 영역에 크게 배치.',
-  },
-};
-
-const playbook = playbooks[product.slug] ?? {
-  score: 62,
-  headline: '현재 적용 상세와 고시정보를 확인 후 첫 화면부터 정리.',
-  firstCuts: ['상품명/용량/핵심 용도 명확화', '고객 사용 상황 제시', '확인된 성분과 구매 근거 배치'],
-  copy: ['매일 쓰기 쉬운 데일리 케어 제품', '확인된 성분과 사용법 중심으로 소개'],
-  avoid: ['개선/치료/저자극 단정', '확인 전 기능성 표현'],
-  brief: '고시정보 확인 후 5컷 구조로 제작.',
-};
+const appliedVersion = versions.find((version) => version.status === 'live') ?? versions[0];
+const candidateVersion = [...versions].reverse().find((version) => version.status === 'candidate');
+const latestReviewVersion = candidateVersion ?? [...versions].reverse().find((version) => version.id !== appliedVersion.id) ?? appliedVersion;
+const defaultCompareIds = Array.from(new Set([appliedVersion.id, latestReviewVersion.id, versions.at(-2)?.id].filter(Boolean))).slice(0, 3);
+const appliedDetailCount = appliedVersion?.detailImages.length ?? 0;
+const appliedMainCount = appliedVersion?.mainImages.length ?? 0;
 ---
 
-<BaseLayout title={product.shortName + ' 상품상세'} description={product.shortName + ' 버전별 상품상세 관리'}>
+<BaseLayout title={product.shortName + ' 상세 이미지 검수'} description={product.shortName + ' 버전별 대표 이미지와 상세 이미지를 검수하고 비교합니다.'}>
   <SiteHeader active="/products/" />
 
-  <main class="detail" data-slug={product.slug}>
-    <!-- Product header -->
-    <section class="product-header container">
-      <div>
+  <main class="asset-review" data-slug={product.slug}>
+    <section class="review-hero container">
+      <div class="hero-copy">
         <p class="eyebrow">{product.ops.campaignRole}</p>
         <h1>{product.shortName}</h1>
-        <p class="headline">{playbook.headline}</p>
+        <p>{product.name}</p>
       </div>
-      <dl class="stats">
-        <div><dt>판매가</dt><dd>{formatWon(product.price.sale)}</dd></div>
-        <div><dt>리뷰</dt><dd>{product.rating.coupangReviews}개</dd></div>
-        <div><dt>리스크</dt><dd class={'risk-' + product.ops.claimRisk}>{product.ops.claimRisk}</dd></div>
-        <div><dt>점수</dt><dd>{playbook.score}</dd></div>
+
+      <dl class="hero-metrics" aria-label="상품 상태 요약">
+        <div>
+          <dt>현재 적용</dt>
+          <dd>{appliedVersion.label}</dd>
+        </div>
+        <div>
+          <dt>검토 후보</dt>
+          <dd>{candidateVersion?.label ?? '없음'}</dd>
+        </div>
+        <div>
+          <dt>적용 이미지</dt>
+          <dd>{appliedMainCount} + {appliedDetailCount}</dd>
+        </div>
+        <div>
+          <dt>판매가</dt>
+          <dd>{formatWon(product.price.sale)}</dd>
+        </div>
       </dl>
+
+      <div class="hero-links" aria-label="외부 링크">
+        <a href={product.commerce.coupangUrl} target="_blank" rel="noreferrer">쿠팡 상품</a>
+        {product.commerce.naverUrl ? <a href={product.commerce.naverUrl} target="_blank" rel="noreferrer">네이버 상품</a> : null}
+        {product.ops.workspaceUrl ? <a href={product.ops.workspaceUrl}>소재 작업실</a> : null}
+      </div>
     </section>
 
-    <!-- Version selector -->
-    <section class="versions container" aria-label="버전 선택">
+    <section class="version-toolbar container" aria-label="버전 선택">
       <div class="version-tabs" data-version-tabs>
-        {versions.map((v, i) => (
+        {versions.map((version) => (
           <button
             type="button"
-            class={'version-tab' + (i === 0 ? ' is-active' : '')}
-            data-version-id={v.id}
+            class:list={['version-tab', version.id === appliedVersion.id && 'is-applied', version.id === appliedVersion.id && 'is-viewing']}
+            data-version-tab={version.id}
           >
-            <span class="tab-label">{v.label}</span>
-            <span class={'tab-status status-' + v.status}>{statusLabel[v.status]}</span>
+            <span>{version.label}</span>
+            {version.id === appliedVersion.id && <strong aria-label="현재 적용">✓</strong>}
           </button>
         ))}
       </div>
     </section>
 
-    <!-- Version content -->
-    {versions.map((v, i) => (
-      <section class={'version-content container' + (i === 0 ? ' is-active' : '')} data-version-content={v.id}>
-        <!-- Preview: Main slider + Detail scroll -->
-        <div class="preview-area">
-          <div class="phone phone-main">
-            <div class="phone-bar">
-              <span>메인 이미지</span>
-              <strong>{v.mainImages.length}장</strong>
+    {versions.map((version) => (
+      <section class:list={['version-panel', 'container', version.id === appliedVersion.id && 'is-viewing']} data-version-panel={version.id}>
+        <div class="selected-version">
+          <aside class="version-brief">
+            <div class="brief-head">
+              <span class:list={['status-pill', 'status-' + version.status]}>{statusLabel[version.status]}</span>
+              <strong>{version.label}</strong>
             </div>
-            {v.mainImages.length > 0 ? (
-              <div class="phone-slider" data-slider>
-                <div class="slider-track">
-                  {v.mainImages.map((img, idx) => (
-                    <div class="slider-slide"><img src={img} alt={product.shortName + ' 메인 ' + (idx + 1)} loading={idx === 0 ? 'eager' : 'lazy'} /></div>
-                  ))}
-                </div>
-                <div class="slider-dots">
-                  {v.mainImages.map((_, idx) => (
-                    <span class={'dot' + (idx === 0 ? ' is-active' : '')} />
-                  ))}
-                </div>
-                {v.mainImages.length > 1 && (<>
-                  <button class="slider-btn slider-prev" type="button" aria-label="이전">‹</button>
-                  <button class="slider-btn slider-next" type="button" aria-label="다음">›</button>
-                </>)}
-              </div>
-            ) : <div class="no-image">없음</div>}
-          </div>
-
-          <div class="phone phone-detail">
-            <div class="phone-bar">
-              <span>상세 이미지</span>
-              <strong>{v.detailImages.length}장</strong>
-            </div>
-            <div class="phone-scroll">
-              {v.detailImages.length > 0 ? v.detailImages.map((img, idx) => (
-                <img src={img} alt={product.shortName + ' 상세 ' + (idx + 1)} loading="lazy" />
-              )) : <div class="no-image">없음</div>}
-            </div>
-          </div>
-
-          <!-- Version info -->
-          <div class="version-info">
-            <div class="info-row">
-              <span>상태</span>
-              <strong class={'status-' + v.status}>{statusLabel[v.status]}</strong>
-            </div>
-            <div class="info-row">
-              <span>날짜</span>
-              <strong>{v.date}</strong>
-            </div>
-            <p class="info-desc">{v.summary}</p>
-            {v.metrics && v.metrics.length > 0 && (
-              <div class="metrics">
-                {v.metrics.map((m) => (
-                  <div class="metric"><strong>{m.value}</strong><span>{m.label}</span></div>
+            <p>{version.summary}</p>
+            <dl>
+              <div><dt>대표</dt><dd>{version.mainImages.length}장</dd></div>
+              <div><dt>상세</dt><dd>{version.detailImages.length}장</dd></div>
+              <div><dt>날짜</dt><dd>{version.date}</dd></div>
+            </dl>
+            {version.links && version.links.length > 0 && (
+              <div class="asset-links">
+                {version.links.map((link) => (
+                  <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
                 ))}
               </div>
             )}
-            {v.links && v.links.length > 0 && (
-              <div class="version-links">
-                {v.links.map((l) => (
-                  <a href={l.href} target="_blank" rel="noreferrer">{l.label}</a>
-                ))}
-              </div>
-            )}
-          </div>
+          </aside>
+
+          <section class="main-images" aria-label={`${version.label} 대표 이미지`}>
+            <div class="section-head">
+              <p class="eyebrow">Main</p>
+              <h2>대표 이미지</h2>
+            </div>
+            <div class="main-strip">
+              {version.mainImages.length > 0 ? version.mainImages.map((src, index) => (
+                <a href={src} target="_blank" rel="noreferrer" class:list={['main-tile', index === 0 && 'is-primary']}>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <img src={src} alt={`${version.label} 대표 이미지 ${index + 1}`} loading={index === 0 ? 'eager' : 'lazy'} />
+                </a>
+              )) : <p class="empty-state">대표 이미지 없음</p>}
+            </div>
+          </section>
+
+          <section class="detail-images" aria-label={`${version.label} 상세 이미지`}>
+            <div class="section-head">
+              <p class="eyebrow">Detail</p>
+              <h2>상세 이미지</h2>
+            </div>
+            <div class="detail-stack">
+              {version.detailImages.length > 0 ? version.detailImages.map((src, index) => (
+                <a href={src} target="_blank" rel="noreferrer">
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <img src={src} alt={`${version.label} 상세 이미지 ${index + 1}`} loading="lazy" />
+                </a>
+              )) : <p class="empty-state">상세 이미지 없음</p>}
+            </div>
+          </section>
         </div>
       </section>
     ))}
 
-    <!-- Work section -->
-    <section class="work container">
-      <div class="panel next">
-        <p class="eyebrow">Next action</p>
-        <h2>{product.ops.nextAction}</h2>
-        <p>{product.ops.salesNote ?? product.ops.detailStatus}</p>
-      </div>
+    {versions.length > 1 && (
+      <section class="desktop-compare container" data-compare-root aria-label="PC 버전 비교">
+        <div class="compare-title">
+          <div>
+            <p class="eyebrow">Compare</p>
+            <h2>버전별 비교</h2>
+          </div>
+          <label class="sync-toggle">
+            <input type="checkbox" data-sync-scroll checked />
+            <span>상세 스크롤 동기화</span>
+          </label>
+        </div>
 
-      <div class="panel-grid">
-        <div class="panel">
-          <h2>첫 3컷</h2>
-          <ol>{playbook.firstCuts.map((c) => <li>{c}</li>)}</ol>
+        <div class="compare-controls" aria-label="비교 버전 선택">
+          {versions.map((version) => (
+            <label class:list={['compare-check', defaultCompareIds.includes(version.id) && 'is-selected']}>
+              <input type="checkbox" value={version.id} checked={defaultCompareIds.includes(version.id)} />
+              <span>{version.label}</span>
+              {version.id === appliedVersion.id && <strong>적용</strong>}
+            </label>
+          ))}
         </div>
-        <div class="panel copy">
-          <h2>사용 가능 카피</h2>
-          <ul>{playbook.copy.map((c) => <li>{c}</li>)}</ul>
-        </div>
-      </div>
+        <p class="compare-note" data-compare-note>최대 3개 버전까지 나란히 비교합니다.</p>
 
-      <div class="panel-grid">
-        <div class="panel">
-          <h2>제작 지시</h2>
-          <p>{playbook.brief}</p>
-        </div>
-        <div class="panel danger">
-          <h2>금지 표현</h2>
-          <ul>{playbook.avoid.map((a) => <li>{a}</li>)}</ul>
-        </div>
-      </div>
+        <div class="compare-grid" data-compare-grid style={`--visible-count: ${Math.max(defaultCompareIds.length, 1)};`}>
+          {versions.map((version) => (
+            <article class:list={['compare-column', !defaultCompareIds.includes(version.id) && 'is-hidden']} data-compare-column={version.id}>
+              <header>
+                <div>
+                  <span class:list={['status-pill', 'status-' + version.status]}>{version.id === appliedVersion.id ? '현재 적용' : statusLabel[version.status]}</span>
+                  <h3>{version.label}</h3>
+                </div>
+                <p>대표 {version.mainImages.length} · 상세 {version.detailImages.length}</p>
+              </header>
 
-      <div class="links-row">
-        <a href={product.commerce.coupangUrl} target="_blank" rel="noreferrer">쿠팡</a>
-        {product.commerce.naverUrl ? <a href={product.commerce.naverUrl} target="_blank" rel="noreferrer">네이버</a> : null}
-        {product.ops.workspaceUrl ? <a href={product.ops.workspaceUrl}>소재</a> : null}
-      </div>
-    </section>
+              <div class="compare-main">
+                {version.mainImages.slice(0, 3).map((src, index) => (
+                  <a href={src} target="_blank" rel="noreferrer">
+                    <img src={src} alt={`${version.label} 대표 비교 ${index + 1}`} loading="lazy" />
+                  </a>
+                ))}
+              </div>
+
+              <div class="compare-detail" data-compare-scroll>
+                {version.detailImages.map((src, index) => (
+                  <a href={src} target="_blank" rel="noreferrer">
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <img src={src} alt={`${version.label} 상세 비교 ${index + 1}`} loading="lazy" />
+                  </a>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
   </main>
 
   <SiteFooter />
-
-  <!-- Lightbox overlay -->
-  <div id="lightbox" class="lightbox">
-    <div class="lb-header">
-      <div class="lb-tabs" data-lb-tabs>
-        <button class="lb-tab is-active" data-lb-tab="main" type="button">메인 이미지</button>
-        <button class="lb-tab" data-lb-tab="detail" type="button">상세 이미지</button>
-      </div>
-      <button class="lb-close" type="button" aria-label="닫기">✕</button>
-    </div>
-    <!-- Main: slider -->
-    <div class="lb-main is-active" data-lb-content="main">
-      <button class="lb-nav lb-prev" type="button" aria-label="이전">‹</button>
-      <div class="lb-slide-wrap">
-        <div class="lb-slide-track"></div>
-      </div>
-      <button class="lb-nav lb-next" type="button" aria-label="다음">›</button>
-      <span class="lb-counter"></span>
-    </div>
-    <!-- Detail: scroll -->
-    <div class="lb-detail" data-lb-content="detail">
-      <div class="lb-detail-scroll"></div>
-    </div>
-  </div>
 </BaseLayout>
 
 <script>
-  const tabs = document.querySelectorAll('[data-version-id]');
-  const contents = document.querySelectorAll('[data-version-content]');
+  const tabs = document.querySelectorAll('[data-version-tab]');
+  const panels = document.querySelectorAll('[data-version-panel]');
 
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
-      const id = tab.getAttribute('data-version-id');
-      tabs.forEach((t) => t.classList.toggle('is-active', t === tab));
-      contents.forEach((c) => c.classList.toggle('is-active', c.getAttribute('data-version-content') === id));
+      const id = tab.getAttribute('data-version-tab');
+      tabs.forEach((item) => item.classList.toggle('is-viewing', item === tab));
+      panels.forEach((panel) => {
+        panel.classList.toggle('is-viewing', panel.getAttribute('data-version-panel') === id);
+      });
     });
   });
 
-  // Slider logic
-  document.querySelectorAll('[data-slider]').forEach((slider) => {
-    const track = slider.querySelector('.slider-track') as HTMLElement;
-    const dots = slider.querySelectorAll('.dot');
-    const prevBtn = slider.querySelector('.slider-prev');
-    const nextBtn = slider.querySelector('.slider-next');
-    const slideCount = slider.querySelectorAll('.slider-slide').length;
-    let current = 0;
+  document.querySelectorAll('[data-compare-root]').forEach((root) => {
+    const checkboxes = Array.from(root.querySelectorAll('.compare-check input'));
+    const labels = Array.from(root.querySelectorAll('.compare-check'));
+    const columns = Array.from(root.querySelectorAll('[data-compare-column]'));
+    const grid = root.querySelector('[data-compare-grid]');
+    const note = root.querySelector('[data-compare-note]');
+    const syncToggle = root.querySelector('[data-sync-scroll]');
+    const scrollers = Array.from(root.querySelectorAll('[data-compare-scroll]'));
+    let syncing = false;
 
-    function goTo(index: number) {
-      current = Math.max(0, Math.min(index, slideCount - 1));
-      if (track) track.style.transform = `translateX(-${current * 100}%)`;
-      dots.forEach((d, di) => d.classList.toggle('is-active', di === current));
+    function selectedIds() {
+      return checkboxes.filter((input) => input.checked).map((input) => input.value);
     }
 
-    prevBtn?.addEventListener('click', () => goTo(current - 1));
-    nextBtn?.addEventListener('click', () => goTo(current + 1));
-
-    // Touch swipe
-    let startX = 0;
-    slider.addEventListener('touchstart', (e) => {
-      startX = (e as TouchEvent).touches[0].clientX;
-    }, { passive: true });
-    slider.addEventListener('touchend', (e) => {
-      const diff = startX - (e as TouchEvent).changedTouches[0].clientX;
-      if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
-    }, { passive: true });
-  });
-
-  // Image lightbox
-  const overlay = document.getElementById('lightbox');
-  const lbClose = overlay?.querySelector('.lb-close');
-  const lbTabBtns = overlay?.querySelectorAll('.lb-tab');
-  const lbMain = overlay?.querySelector('[data-lb-content="main"]');
-  const lbDetail = overlay?.querySelector('[data-lb-content="detail"]');
-  const lbTrack = overlay?.querySelector('.lb-slide-track') as HTMLElement;
-  const lbDetailScroll = overlay?.querySelector('.lb-detail-scroll');
-  const lbPrev = overlay?.querySelector('.lb-prev');
-  const lbNext = overlay?.querySelector('.lb-next');
-  const lbCounter = overlay?.querySelector('.lb-counter');
-
-  let mainImages: string[] = [];
-  let detailImages: string[] = [];
-  let slideIndex = 0;
-
-  function openLightbox(mode: 'main' | 'detail', index?: number) {
-    if (!overlay) return;
-    overlay.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-    switchTab(mode);
-    if (mode === 'main' && index !== undefined) {
-      slideIndex = index;
-      renderMainSlider();
+    function refreshCompare() {
+      const selected = selectedIds();
+      labels.forEach((label) => {
+        const input = label.querySelector('input');
+        label.classList.toggle('is-selected', Boolean(input?.checked));
+      });
+      columns.forEach((column) => {
+        column.classList.toggle('is-hidden', !selected.includes(column.getAttribute('data-compare-column')));
+      });
+      grid?.style.setProperty('--visible-count', String(Math.max(selected.length, 1)));
+      if (note) note.textContent = selected.length + '개 버전을 비교 중입니다. 최대 3개까지 선택할 수 있습니다.';
     }
-  }
 
-  function closeLightbox() {
-    overlay?.classList.remove('is-open');
-    document.body.style.overflow = '';
-  }
-
-  function switchTab(tab: 'main' | 'detail') {
-    lbTabBtns?.forEach((b) => b.classList.toggle('is-active', b.getAttribute('data-lb-tab') === tab));
-    lbMain?.classList.toggle('is-active', tab === 'main');
-    lbDetail?.classList.toggle('is-active', tab === 'detail');
-    if (tab === 'main') renderMainSlider();
-  }
-
-  function renderMainSlider() {
-    if (!lbTrack || !lbCounter) return;
-    lbTrack.innerHTML = mainImages.map((src) => '<div><img src="' + src + '" alt="" /></div>').join('');
-    lbTrack.style.transform = `translateX(-${slideIndex * 100}%)`;
-    lbCounter.textContent = (slideIndex + 1) + ' / ' + mainImages.length;
-  }
-
-  function renderDetailScroll() {
-    if (!lbDetailScroll) return;
-    lbDetailScroll.innerHTML = detailImages.map((src) => '<img src="' + src + '" alt="" />').join('');
-  }
-
-  // Populate images from the active version
-  function loadVersionImages() {
-    const active = document.querySelector('.version-content.is-active');
-    if (!active) return;
-    mainImages = Array.from(active.querySelectorAll('.phone-main img')).map((i: HTMLImageElement) => i.src);
-    detailImages = Array.from(active.querySelectorAll('.phone-detail img')).map((i: HTMLImageElement) => i.src);
-    slideIndex = 0;
-  }
-
-  // Click phone images to open lightbox
-  document.querySelectorAll('.phone-main').forEach((phone) => {
-    phone.addEventListener('click', (e) => {
-      const img = (e.target as HTMLElement).closest('img');
-      if (!img) return;
-      loadVersionImages();
-      const idx = mainImages.indexOf(img.src);
-      openLightbox('main', idx >= 0 ? idx : 0);
-      renderDetailScroll();
+    checkboxes.forEach((input) => {
+      input.addEventListener('change', () => {
+        const selected = selectedIds();
+        if (selected.length > 3) {
+          input.checked = false;
+        }
+        if (selectedIds().length === 0) {
+          input.checked = true;
+        }
+        refreshCompare();
+      });
     });
-  });
 
-  document.querySelectorAll('.phone-detail').forEach((phone) => {
-    phone.addEventListener('click', (e) => {
-      const img = (e.target as HTMLElement).closest('img');
-      if (!img) return;
-      loadVersionImages();
-      openLightbox('detail');
-      renderDetailScroll();
-      // Scroll to clicked image
-      setTimeout(() => {
-        const imgs = lbDetailScroll?.querySelectorAll('img');
-        const idx = detailImages.indexOf(img.src);
-        if (imgs && idx >= 0) imgs[idx]?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+    scrollers.forEach((scroller) => {
+      scroller.addEventListener('scroll', () => {
+        if (!syncToggle?.checked || syncing || scroller.closest('.compare-column')?.classList.contains('is-hidden')) return;
+        const max = scroller.scrollHeight - scroller.clientHeight;
+        const ratio = max > 0 ? scroller.scrollTop / max : 0;
+        syncing = true;
+        scrollers.forEach((target) => {
+          if (target === scroller || target.closest('.compare-column')?.classList.contains('is-hidden')) return;
+          const targetMax = target.scrollHeight - target.clientHeight;
+          target.scrollTop = targetMax * ratio;
+        });
+        window.requestAnimationFrame(() => {
+          syncing = false;
+        });
+      }, { passive: true });
     });
-  });
 
-  // Tab switching
-  lbTabBtns?.forEach((btn) => {
-    btn.addEventListener('click', () => switchTab(btn.getAttribute('data-lb-tab') as 'main' | 'detail'));
-  });
-
-  // Nav buttons
-  lbPrev?.addEventListener('click', () => {
-    if (slideIndex > 0) { slideIndex--; renderMainSlider(); }
-  });
-  lbNext?.addEventListener('click', () => {
-    if (slideIndex < mainImages.length - 1) { slideIndex++; renderMainSlider(); }
-  });
-
-  // Swipe in lightbox main
-  let lbStartX = 0;
-  lbMain?.addEventListener('touchstart', (e) => { lbStartX = (e as TouchEvent).touches[0].clientX; }, { passive: true });
-  lbMain?.addEventListener('touchend', (e) => {
-    const diff = lbStartX - (e as TouchEvent).changedTouches[0].clientX;
-    if (Math.abs(diff) > 50) {
-      if (diff > 0 && slideIndex < mainImages.length - 1) { slideIndex++; renderMainSlider(); }
-      if (diff < 0 && slideIndex > 0) { slideIndex--; renderMainSlider(); }
-    }
-  }, { passive: true });
-
-  lbClose?.addEventListener('click', closeLightbox);
-  overlay?.addEventListener('click', (e) => { if (e.target === overlay) closeLightbox(); });
-  document.addEventListener('keydown', (e) => {
-    if (!overlay?.classList.contains('is-open')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft' && slideIndex > 0) { slideIndex--; renderMainSlider(); }
-    if (e.key === 'ArrowRight' && slideIndex < mainImages.length - 1) { slideIndex++; renderMainSlider(); }
+    refreshCompare();
   });
 </script>
 
 <style is:global>
-  :global(body) { background: var(--bg); }
-  .detail {
-    --paper: var(--surface);
-    --dark: var(--forest);
+  :global(body) {
+    background: var(--bg);
+  }
+
+  .asset-review {
+    --review-blue: #35647a;
+    --review-mint: #dfe9e2;
     min-height: 100vh;
     color: var(--ink);
     font-family: var(--font-body);
   }
-  a { color: inherit; text-decoration: none; }
 
-  /* Product header */
-  .product-header {
-    display: grid; grid-template-columns: 1fr auto;
-    gap: 22px;
-    padding-block: 30px 20px;
+  .asset-review a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .asset-review .eyebrow {
+    letter-spacing: 0;
+  }
+
+  .review-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 18px;
     align-items: end;
+    padding-block: 28px 14px;
   }
-  .eyebrow {
-    margin: 0; color: var(--accent);
-    font-family: var(--font-latin); font-size: 11px;
-    font-weight: 800; text-transform: uppercase;
+
+  .hero-copy h1 {
+    margin: 7px 0 7px;
+    font-size: 46px;
+    line-height: 1.05;
+    letter-spacing: 0;
   }
-  h1 { margin: 8px 0 6px; font-size: clamp(32px, 5vw, 56px); line-height: 1; letter-spacing: 0; }
-  .headline { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.65; max-width: 620px; }
-  .stats {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
-    min-width: 320px;
-    margin: 0; padding: 0;
-    border: 0; border-radius: 0;
-    background: transparent; box-shadow: none;
-    align-self: start;
+
+  .hero-copy p:last-child {
+    margin: 0;
+    max-width: 660px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.55;
   }
-  .stats div {
-    padding: 13px 14px;
+
+  .hero-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(96px, 1fr));
+    grid-column: 1 / -1;
+    gap: 8px;
+    margin: 2px 0 0;
+  }
+
+  .hero-metrics div {
+    min-width: 0;
+    padding: 12px 14px;
     border: 1px solid var(--line);
-    border-radius: var(--r-sm);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--surface) 88%, var(--bg));
+  }
+
+  .hero-metrics dt {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .hero-metrics dd {
+    margin: 4px 0 0;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 1.2;
+  }
+
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  .hero-links a,
+  .asset-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 8px 13px;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .hero-links a:first-child,
+  .asset-links a:first-child {
+    background: var(--forest);
+    color: #f7f3e9;
+    border-color: var(--forest);
+  }
+
+  .version-toolbar {
+    position: sticky;
+    top: var(--header-h);
+    z-index: 5;
+    padding-block: 6px 12px;
+    background: color-mix(in srgb, var(--bg) 84%, transparent);
+    backdrop-filter: blur(14px);
+  }
+
+  .version-tabs {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding: 6px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
     background: color-mix(in srgb, var(--surface) 88%, var(--bg));
     box-shadow: var(--shadow-sm);
   }
-  dt { color: var(--muted); font-size: 11px; }
-  dd { margin: 3px 0 0; font-size: 18px; font-weight: 900; }
-  .risk-high { color: #8e2d1c; }
-  .risk-medium { color: var(--accent-ink); }
-  .risk-low { color: #315b4c; }
 
-  /* Version selector */
-  .versions { padding-block: 0 8px; }
-  .version-tabs {
-    display: flex; gap: 8px; overflow-x: auto;
-    padding: 6px; border: 1px solid var(--line); border-radius: var(--r);
-    background: color-mix(in srgb, var(--surface) 82%, var(--bg));
-    box-shadow: var(--shadow-sm);
-    -webkit-overflow-scrolling: touch;
-  }
   .version-tab {
-    display: flex; align-items: center; gap: 6px;
-    padding: 10px 16px; border-radius: var(--r-pill);
-    border: 1px solid transparent; background: transparent;
-    font-family: var(--font-body); font-size: 14px; font-weight: 700;
-    color: var(--muted); cursor: pointer; white-space: nowrap;
-    transition: all .15s;
-  }
-  .version-tab.is-active {
-    background: var(--forest); color: #f7f3e9;
-    border-color: var(--forest);
-    box-shadow: 0 10px 22px -16px rgba(31, 42, 36, 0.7);
-  }
-  .version-tab.is-active .tab-status { background: rgba(255,255,255,.15); color: #f7f3e9; }
-  .tab-status {
-    padding: 2px 8px; border-radius: var(--r-pill);
-    font-size: 11px; font-weight: 800;
-    background: var(--surface-3); color: #4a6a5c;
-  }
-  .status-live { background: #d4edda; color: #1a6b3c; }
-  .status-candidate { background: #fff3cd; color: #856404; }
-  .status-review { background: #d1ecf1; color: #0c5460; }
-  .status-draft { background: #e2e3e5; color: #383d41; }
-  .status-archive { background: #f0f0f0; color: #999; }
-
-  /* Version content */
-  .version-content { display: none; padding-block: 0 20px; }
-  .version-content.is-active { display: block; }
-
-  .preview-area {
-    display: grid; grid-template-columns: 200px 200px minmax(0, 1fr);
-    gap: 16px; align-items: start;
-  }
-
-  /* Phone */
-  .phone {
-    border: 1px solid var(--line); border-radius: var(--r-lg);
-    overflow: hidden; background: #fff;
-    box-shadow: var(--shadow-sm);
-  }
-  .phone-bar {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 11px 14px; background: var(--surface); color: var(--ink);
-    border-bottom: 1px solid var(--line);
-    font-size: 12px; font-weight: 800;
-  }
-  .phone-bar strong { color: var(--accent); }
-  .phone-scroll {
-    max-height: 480px; overflow-y: auto; background: #f5f5f2;
-    -webkit-overflow-scrolling: touch;
-  }
-  .phone-scroll img {
-    display: block; width: 100%; min-height: 120px;
-    object-fit: cover; border-bottom: 1px solid #eee;
-    cursor: pointer; transition: opacity .15s;
-  }
-  .phone-scroll img:hover { opacity: .85; }
-
-  /* Slider */
-  .phone-slider {
-    position: relative; overflow: hidden;
-    background: #f8f7f2; height: 420px;
-  }
-  .slider-track {
-    display: flex; height: 100%;
-    transition: transform .3s ease;
-  }
-  .slider-slide {
-    min-width: 100%; height: 100%;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .slider-slide img {
-    max-width: 88%; max-height: 88%; object-fit: contain;
-    cursor: pointer; transition: opacity .15s;
-  }
-  .slider-slide img:hover { opacity: .85; }
-  .slider-dots {
-    position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
-    display: flex; gap: 6px;
-  }
-  .dot {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: rgba(0,0,0,.2); transition: all .2s;
-  }
-  .dot.is-active { background: var(--dark); transform: scale(1.3); }
-  .slider-btn {
-    position: absolute; top: 50%; transform: translateY(-50%);
-    width: 32px; height: 32px; border-radius: 50%;
-    border: 1px solid var(--line); background: rgba(255,255,255,.92); color: #333;
-    font-size: 18px; cursor: pointer; z-index: 2;
-    box-shadow: 0 2px 8px rgba(0,0,0,.15);
-  }
-  .slider-prev { left: 8px; }
-  .slider-next { right: 8px; }
-  .no-image {
-    display: grid; place-content: center;
-    min-height: 300px; color: #aaa; font-size: 14px;
-  }
-
-  /* Version info */
-  .version-info {
-    padding: 18px; border: 1px solid var(--line); border-radius: var(--r-lg);
-    background: var(--surface); box-shadow: var(--shadow-sm);
-    display: grid; gap: 12px; align-self: start;
-  }
-  .info-row {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 8px 0; border-bottom: 1px solid var(--line);
-  }
-  .info-row span { color: var(--muted); font-size: 13px; }
-  .info-row strong { font-size: 15px; }
-  .info-desc { color: var(--muted); font-size: 14px; line-height: 1.6; margin: 0; }
-  .metrics { display: flex; flex-wrap: wrap; gap: 12px; }
-  .metric {
-    padding: 10px 14px; border-radius: var(--r-sm); background: var(--surface-3);
-    display: grid; gap: 2px;
-  }
-  .metric strong { font-size: 18px; }
-  .metric span { font-size: 11px; color: var(--muted); }
-  .version-links { display: flex; flex-wrap: wrap; gap: 8px; }
-  .version-links a {
-    padding: 8px 14px; border-radius: var(--r-pill);
-    background: var(--forest); color: #f7f3e9;
-    font-size: 13px; font-weight: 800;
-  }
-
-  /* Work section */
-  .work { display: grid; gap: 16px; padding-block: 0 32px; }
-  .panel {
-    padding: 18px; border: 1px solid var(--line); border-radius: var(--r-lg);
-    background: var(--surface); box-shadow: var(--shadow-sm);
-  }
-  .panel h2 { margin: 0 0 10px; font-size: 20px; letter-spacing: 0; }
-  .panel p { color: var(--muted); line-height: 1.6; margin: 0; }
-  .next h2 { font-size: 24px; }
-  .panel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  ol, ul { display: grid; gap: 7px; margin: 0; padding-left: 18px; }
-  li { line-height: 1.5; font-size: 14px; }
-  .copy { background: var(--surface-2); }
-  .danger { background: var(--accent-soft); border-color: #efc9bb; }
-  .links-row { display: flex; flex-wrap: wrap; gap: 8px; }
-  .links-row a {
-    padding: 9px 14px; border-radius: var(--r-pill);
-    background: var(--forest); color: #f7f3e9;
-    font-size: 13px; font-weight: 800;
-  }
-
-  /* ─── Lightbox (high specificity for scoped CSS override) ─── */
-  .lightbox {
-    display: none; position: fixed; inset: 0; z-index: 1000;
-    background: #000; flex-direction: column;
-    overscroll-behavior: contain;
-  }
-  .lightbox.is-open { display: flex; }
-
-  .lightbox .lb-header {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: max(env(safe-area-inset-top), 8px) 12px 6px;
-    flex-shrink: 0; gap: 8px; height: 48px; box-sizing: border-box;
-  }
-  .lightbox .lb-tabs { display: flex; gap: 6px; }
-  .lightbox .lb-tab {
-    padding: 5px 14px; border-radius: 999px;
-    border: 1px solid rgba(255,255,255,.2); background: transparent;
-    color: rgba(255,255,255,.5); font-size: 12px; font-weight: 700;
-    cursor: pointer; font-family: var(--font-body);
-    transition: all .15s;
-  }
-  .lightbox .lb-tab.is-active {
-    background: #fff; color: #111; border-color: #fff;
-  }
-  .lightbox .lb-close {
-    width: 34px; height: 34px; border-radius: 50%;
-    border: none; background: rgba(255,255,255,.15); color: #fff;
-    font-size: 16px; cursor: pointer; flex-shrink: 0;
-    display: grid; place-content: center;
-  }
-
-  /* Main slider */
-  .lightbox .lb-main {
-    display: none; position: relative;
-    flex: 1 1 0%; min-height: 0;
-  }
-  .lightbox .lb-main.is-active { display: flex; }
-  .lightbox .lb-slide-wrap {
-    flex: 1 1 0%; min-height: 0;
-    overflow: hidden;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 7px;
+    min-width: 76px;
+    min-height: 40px;
+    padding: 8px 14px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--muted);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    white-space: nowrap;
   }
-  .lightbox .lb-slide-track {
-    display: flex; width: 100%; height: 100%;
-    transition: transform .3s ease;
-    will-change: transform;
-    flex-direction: row;
+
+  .version-tab.is-viewing {
+    border-color: var(--forest);
+    background: var(--forest);
+    color: #f7f3e9;
   }
-  .lightbox .lb-slide-track > div {
-    min-width: 100%; width: 100%;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-sizing: border-box;
+
+  .version-tab strong {
+    display: inline-grid;
+    place-items: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .18);
+    color: inherit;
+    font-size: 12px;
+    line-height: 1;
   }
-  .lightbox .lb-slide-track > div > img {
+
+  .version-panel {
+    display: none;
+    padding-block: 0 22px;
+  }
+
+  .version-panel.is-viewing {
     display: block;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain !important;
-    user-select: none; -webkit-user-drag: none;
-  }
-  .lightbox .lb-nav {
-    position: absolute; top: 50%; transform: translateY(-50%);
-    width: 44px; height: 44px; border-radius: 50%;
-    border: none; background: rgba(255,255,255,.18); color: #fff;
-    font-size: 24px; cursor: pointer; z-index: 2;
-    display: grid; place-content: center;
-    backdrop-filter: blur(4px);
-    transition: background .15s;
-  }
-  .lightbox .lb-nav:active { background: rgba(255,255,255,.35); }
-  .lightbox .lb-prev { left: 6px; }
-  .lightbox .lb-next { right: 6px; }
-  .lightbox .lb-counter {
-    position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
-    color: rgba(255,255,255,.8); font-size: 12px; font-weight: 700;
-    background: rgba(0,0,0,.5); padding: 4px 14px; border-radius: 999px;
-    backdrop-filter: blur(4px);
   }
 
-  /* Detail scroll */
-  .lightbox .lb-detail {
-    display: none; flex: 1 1 0%; min-height: 0; overflow: hidden;
-  }
-  .lightbox .lb-detail.is-active { display: flex; flex-direction: column; }
-  .lightbox .lb-detail-scroll {
-    flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch;
-    display: flex; flex-direction: column; align-items: center;
-    gap: 2px; padding: 8px 4px;
-    padding-bottom: max(env(safe-area-inset-bottom), 8px);
-  }
-  .lightbox .lb-detail-scroll img {
-    width: 100%; max-width: 100%; object-fit: contain;
-    border-radius: 4px;
+  .selected-version {
+    display: grid;
+    grid-template-columns: 280px minmax(0, .92fr) minmax(320px, 1.08fr);
+    gap: 14px;
+    align-items: start;
   }
 
-  /* Responsive */
-  @media (max-width: 1040px) {
-    .product-header, .panel-grid { grid-template-columns: 1fr; }
-    .preview-area { grid-template-columns: 160px 160px minmax(0, 1fr); gap: 12px; }
-    .phone-scroll { max-height: 380px; }
+  .version-brief,
+  .main-images,
+  .detail-images,
+  .desktop-compare {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
   }
+
+  .version-brief {
+    display: grid;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .brief-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .brief-head strong {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 26px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 900;
+    white-space: nowrap;
+  }
+
+  .status-live {
+    background: var(--review-mint);
+    color: #28543b;
+  }
+
+  .status-candidate {
+    background: #f8e2ce;
+    color: #8c4830;
+  }
+
+  .status-review {
+    background: #d9e8ef;
+    color: var(--review-blue);
+  }
+
+  .status-draft,
+  .status-archive {
+    background: var(--surface-3);
+    color: var(--muted);
+  }
+
+  .version-brief p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .version-brief dl {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin: 0;
+  }
+
+  .version-brief dl div {
+    min-width: 0;
+    padding: 10px;
+    border-radius: 8px;
+    background: var(--surface-3);
+  }
+
+  .version-brief dt {
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .version-brief dd {
+    margin: 3px 0 0;
+    font-size: 14px;
+    font-weight: 900;
+    overflow-wrap: anywhere;
+  }
+
+  .asset-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .main-images,
+  .detail-images {
+    overflow: hidden;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--line);
+    background: var(--surface-2);
+  }
+
+  .section-head h2 {
+    margin: 3px 0 0;
+    font-size: 18px;
+    line-height: 1.15;
+  }
+
+  .main-strip {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 10px;
+    max-height: 710px;
+    overflow: auto;
+  }
+
+  .main-tile {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 168px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #f8f8f4;
+    overflow: hidden;
+  }
+
+  .main-tile.is-primary {
+    grid-column: 1 / -1;
+    min-height: 320px;
+  }
+
+  .main-tile span,
+  .detail-stack span,
+  .compare-detail span {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: inline-grid;
+    place-items: center;
+    min-width: 28px;
+    height: 24px;
+    padding-inline: 7px;
+    border-radius: 999px;
+    background: rgba(31, 42, 36, .82);
+    color: #fff;
+    font-family: var(--font-latin);
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1;
+    z-index: 1;
+  }
+
+  .main-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .detail-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    max-height: 710px;
+    overflow: auto;
+    background: #f5f5f0;
+  }
+
+  .detail-stack a,
+  .compare-detail a {
+    position: relative;
+    display: block;
+    flex: 0 0 auto;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .detail-stack img,
+  .compare-detail img {
+    display: block;
+    width: 100%;
+  }
+
+  .empty-state {
+    margin: 0;
+    padding: 28px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .desktop-compare {
+    display: block;
+    padding: 16px;
+    margin-block: 8px 34px;
+  }
+
+  .compare-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+
+  .compare-title h2 {
+    margin: 4px 0 0;
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .sync-toggle,
+  .compare-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--muted);
+    cursor: pointer;
+  }
+
+  .sync-toggle input,
+  .compare-check input {
+    accent-color: var(--forest);
+  }
+
+  .compare-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-bottom: 8px;
+  }
+
+  .compare-check {
+    min-height: 38px;
+    padding: 8px 11px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface-2);
+  }
+
+  .compare-check.is-selected {
+    border-color: var(--forest);
+    background: var(--review-mint);
+    color: var(--forest);
+  }
+
+  .compare-check strong {
+    padding: 2px 6px;
+    border-radius: 999px;
+    background: var(--forest);
+    color: #fff;
+    font-size: 11px;
+  }
+
+  .compare-note {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--visible-count), minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .compare-column {
+    min-width: 0;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface-2);
+    overflow: hidden;
+  }
+
+  .compare-column.is-hidden {
+    display: none;
+  }
+
+  .compare-column header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+    padding: 12px;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+  }
+
+  .compare-column h3 {
+    margin: 7px 0 0;
+    font-size: 20px;
+    line-height: 1.1;
+  }
+
+  .compare-column header p {
+    margin: 2px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+  }
+
+  .compare-main {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    padding: 8px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .compare-main a {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .compare-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .compare-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 680px;
+    overflow: auto;
+    padding: 8px;
+    background: #efeee8;
+  }
+
+  @media (max-width: 1080px) {
+    .review-hero {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    .hero-links {
+      justify-content: flex-start;
+    }
+
+    .selected-version {
+      grid-template-columns: 230px minmax(0, 1fr);
+    }
+
+    .detail-images {
+      grid-column: 1 / -1;
+    }
+
+    .detail-stack {
+      max-height: 620px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .desktop-compare {
+      display: none;
+    }
+  }
+
   @media (max-width: 720px) {
-    .product-header { padding-block: 22px 16px; gap: 14px; }
-    h1 { font-size: 28px; }
-    .headline { font-size: 14px; }
-    .stats { grid-template-columns: 1fr 1fr; min-width: 0; gap: 8px; }
-    .stats div { padding: 11px 12px; }
-    dd { font-size: 15px; }
+    .review-hero {
+      padding-block: 22px 12px;
+    }
 
-    .versions { padding-block: 0 8px; }
-    .version-tabs { gap: 6px; padding: 5px; }
-    .version-tab { padding: 9px 13px; font-size: 13px; }
-    .version-tab:not(.is-active) .tab-status { display: none; }
+    .hero-copy h1 {
+      font-size: 32px;
+    }
 
-    .version-content { padding-block: 0 16px; }
-    .preview-area { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
-    .phone { border-width: 1px; border-radius: var(--r-lg); }
-    .phone-scroll { max-height: 340px; }
-    .phone-slider { height: 340px; }
-    .version-info { grid-column: 1 / -1; }
-    .version-info { padding: 14px; }
+    .hero-copy p:last-child {
+      font-size: 14px;
+    }
 
-    .work { padding-block: 0 24px; }
-    .panel h2 { font-size: 17px; }
-    .next h2 { font-size: 20px; }
+    .hero-metrics {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
-    /* Mobile lightbox */
-    .lb-header { height: 44px; padding-top: 6px; padding-bottom: 4px; }
-    .lb-close { width: 32px; height: 32px; font-size: 14px; }
-    .lb-nav { width: 38px; height: 38px; font-size: 20px; }
-    .lb-prev { left: 4px; }
-    .lb-next { right: 4px; }
+    .hero-metrics dd {
+      font-size: 16px;
+    }
+
+    .version-toolbar {
+      top: 0;
+      padding-block: 6px 10px;
+    }
+
+    .version-tab {
+      min-width: 68px;
+      min-height: 38px;
+      padding-inline: 12px;
+      font-size: 13px;
+    }
+
+    .selected-version {
+      grid-template-columns: 1fr;
+    }
+
+    .version-brief,
+    .main-images,
+    .detail-images {
+      box-shadow: none;
+    }
+
+    .main-strip {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      max-height: none;
+    }
+
+    .main-tile {
+      min-height: 150px;
+    }
+
+    .main-tile.is-primary {
+      min-height: 260px;
+    }
+
+    .detail-stack {
+      max-height: none;
+    }
   }
-  @media (max-width: 420px) {
-    .preview-area { grid-template-columns: minmax(0, 1fr); }
-    .stats { grid-template-columns: 1fr 1fr; }
-    .metrics { flex-wrap: wrap; }
+
+  @media (max-width: 440px) {
+    .hero-metrics {
+      grid-template-columns: 1fr;
+    }
+
+    .version-brief dl,
+    .main-strip {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

@@ -1,13 +1,13 @@
 {
   "productId": "9218811640",
-  "activeVersion": "v2",
+  "activeVersion": "original",
   "versions": [
     {
-      "id": "v2",
-      "label": "V2",
+      "id": "original",
+      "label": "원본",
       "representativeCount": 6,
-      "detailCount": 11,
-      "source": "public/coupang/images/aqua-lotion/versions/v2"
+      "detailCount": 15,
+      "source": "public/coupang/images/aqua-lotion/versions/original"
     },
     {
       "id": "v1",
@@ -17,11 +17,18 @@
       "source": "public/coupang/images/aqua-lotion/versions/v1"
     },
     {
-      "id": "original",
-      "label": "원본",
+      "id": "v2",
+      "label": "V2",
       "representativeCount": 6,
-      "detailCount": 15,
-      "source": "public/coupang/images/aqua-lotion/versions/original"
+      "detailCount": 11,
+      "source": "public/coupang/images/aqua-lotion/versions/v2"
+    },
+    {
+      "id": "v3",
+      "label": "V3",
+      "representativeCount": 5,
+      "detailCount": 9,
+      "source": "public/coupang/images/aqua-lotion/versions/v3"
     }
   ],
   "originalRepresentativeSourceUrls": [

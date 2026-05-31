@@ -16,11 +16,12 @@ const versions = versionsManifest.versions.map((version) => ({
 }));
 
 const activeVersion = versions.find((version) => version.id === versionsManifest.activeVersion) ?? versions[0];
+const latestCandidate = [...versions].reverse().find((version) => version.id !== activeVersion.id) ?? activeVersion;
 const maxDetailCount = Math.max(...versions.map((version) => version.detailCount));
-const initialSelected = new Set(['original', 'v1', activeVersion.id]);
+const initialSelected = new Set([activeVersion.id, 'v1', latestCandidate.id]);
 ---
 
-<BaseLayout title="아쿠아로션 원본·V1·V2 비교" description="아쿠아로션 원본, V1, V2 대표 이미지와 상세 이미지를 비교하는 마케팅 검토 페이지">
+<BaseLayout title="아쿠아로션 이미지 버전 비교" description="아쿠아로션 원본과 제작 버전의 대표 이미지와 상세 이미지를 비교하는 마케팅 검토 페이지">
   <SiteHeader active="" />
 
   <main class="version-compare">
@@ -40,7 +41,7 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
           </p>
         </div>
         <aside>
-          <span>Active version</span>
+          <span>Applied version</span>
           <strong>{activeVersion.label}</strong>
           <p>대표 {activeVersion.representativeCount}장 · 상세 {activeVersion.detailCount}장</p>
         </aside>
@@ -51,12 +52,12 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
       <div class="control-copy">
         <p class="eyebrow">Version library</p>
         <h2>비교할 버전 선택</h2>
-        <p>최대 3개까지 선택됩니다. 원본, 현재 후보, 직전 후보처럼 필요한 조합만 남겨서 비교합니다.</p>
+        <p>최대 3개까지 선택됩니다. 현재 적용본, 최신 후보, 직전 버전처럼 필요한 조합만 남겨서 비교합니다.</p>
       </div>
       <div class="preset-row" aria-label="추천 비교 조합">
-        <button type="button" data-preset="original,v1,v2">원본 / V1 / V2</button>
-        <button type="button" data-preset={`original,${activeVersion.id}`}>원본 / 현재</button>
-        <button type="button" data-preset={`v1,${activeVersion.id}`}>V1 / 현재</button>
+        <button type="button" data-preset={`${activeVersion.id},v1,${latestCandidate.id}`}>{activeVersion.label} / V1 / {latestCandidate.label}</button>
+        <button type="button" data-preset={`${activeVersion.id},${latestCandidate.id}`}>{activeVersion.label} / {latestCandidate.label}</button>
+        <button type="button" data-preset={`v2,${latestCandidate.id}`}>V2 / {latestCandidate.label}</button>
       </div>
       <div class="version-picker">
         {versions.map((version) => (
@@ -77,7 +78,7 @@ const initialSelected = new Set(['original', 'v1', activeVersion.id]);
             <img src={version.representativeImages[0]} alt={`${version.label} 대표 이미지 1`} loading="lazy" />
           </div>
           <div>
-            <span>{version.id === activeVersion.id ? '현재 활성' : '비교 대상'}</span>
+            <span>{version.id === activeVersion.id ? '현재 적용' : version.id === latestCandidate.id ? '최신 후보' : '비교 대상'}</span>
             <h2>{version.label}</h2>
             <p>
               대표 이미지 {version.representativeCount}장, 상세 이미지 {version.detailCount}장으로 구성된 아쿠아 로션 {version.label} 산출물입니다.

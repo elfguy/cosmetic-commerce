@@ -108,226 +108,99 @@
       ],
       "representativeImageSet": [
         {
-          "title": "크림은 무겁고 토너는 부족할 때",
-          "src": "/coupang/images/aqua-lotion/versions/v2/representative/01.png"
+          "title": "원본 메인 이미지",
+          "src": "/coupang/images/aqua-lotion/versions/original/representative/01.png"
         },
         {
-          "title": "온 가족이 함께 쓰는 데일리 보습",
-          "src": "/coupang/images/aqua-lotion/versions/v2/representative/02.png"
+          "title": "원본 추가 대표 이미지 02",
+          "src": "/coupang/images/aqua-lotion/versions/original/representative/02.png"
         },
         {
-          "title": "더 신선하게 더 안심하게",
-          "src": "/coupang/images/aqua-lotion/versions/v2/representative/03.png"
+          "title": "원본 추가 대표 이미지 03",
+          "src": "/coupang/images/aqua-lotion/versions/original/representative/03.png"
         },
         {
-          "title": "민감 피부를 위한 순한 케어",
-          "src": "/coupang/images/aqua-lotion/versions/v2/representative/04.png"
+          "title": "원본 추가 대표 이미지 04",
+          "src": "/coupang/images/aqua-lotion/versions/original/representative/04.png"
         },
         {
-          "title": "수분·진정·보호를 한 번에",
-          "src": "/coupang/images/aqua-lotion/versions/v2/representative/05.png"
+          "title": "원본 추가 대표 이미지 05",
+          "src": "/coupang/images/aqua-lotion/versions/original/representative/05.png"
         },
         {
-          "title": "제조 6개월 이내 신선 제품",
-          "src": "/coupang/images/aqua-lotion/versions/v2/representative/06.png"
+          "title": "원본 추가 대표 이미지 06",
+          "src": "/coupang/images/aqua-lotion/versions/original/representative/06.png"
         }
       ],
-      "activeDetailVersionId": "v2",
+      "activeDetailVersionId": "original",
       "salesImageSet": [
         {
-          "title": "인트로 / 제품 소개",
-          "src": "/coupang/images/aqua-lotion/versions/v2/detail/01.png"
+          "title": "원본 상세 01",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/01.png"
         },
         {
-          "title": "온 가족 데일리 보습",
-          "src": "/coupang/images/aqua-lotion/versions/v2/detail/02.png"
+          "title": "원본 상세 02",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/02.png"
         },
         {
-          "title": "8종 히알루론산 수분 충전",
-          "src": "/coupang/images/aqua-lotion/versions/v2/detail/03.png"
+          "title": "원본 상세 03",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/03.png"
         },
         {
-          "title": "수분 진정 피부결 케어",
-          "src": "/coupang/images/aqua-lotion/versions/v2/detail/04.png"
+          "title": "원본 상세 04",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/04.png"
         },
         {
-          "title": "자연 성분 진정 케어",
-          "src": "/coupang/images/aqua-lotion/versions/v2/detail/05.png"
+          "title": "원본 상세 05",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/05.png"
         },
         {
-          "title": "Fresh Bud No.6 특허 진정 원료",
-          "src": "/coupang/images/aqua-lotion/versions/v2/detail/06.png"
+          "title": "원본 상세 06",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/06.png"
         },
         {
-          "title": "발효 성분 / 식물 오일",
-          "src": "/coupang/images/aqua-lotion/versions/v2/detail/07.png"
+          "title": "원본 상세 07",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/07.png"
         },
         {
-          "title": "피부 저자극 테스트 완료",
-          "src": "/coupang/images/aqua-lotion/versions/v2/detail/08.png"
+          "title": "원본 상세 08",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/08.png"
         },
         {
-          "title": "제조일자 / 신선도",
-          "src": "/coupang/images/aqua-lotion/versions/v2/detail/09.png"
+          "title": "원본 상세 09",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/09.png"
         },
         {
-          "title": "사용법 / 제품 정보 / 전성분",
-          "src": "/coupang/images/aqua-lotion/versions/v2/detail/10.png"
+          "title": "원본 상세 10",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/10.png"
         },
         {
-          "title": "비공식 리셀러 주의 안내",
-          "src": "/coupang/images/aqua-lotion/versions/v2/detail/11.png"
+          "title": "원본 상세 11",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/11.png"
+        },
+        {
+          "title": "원본 상세 12",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/12.png"
+        },
+        {
+          "title": "원본 상세 13",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/13.png"
+        },
+        {
+          "title": "원본 상세 14",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/14.png"
+        },
+        {
+          "title": "원본 상세 15",
+          "src": "/coupang/images/aqua-lotion/versions/original/detail/15.png"
         }
       ],
       "detailImageVersions": [
         {
-          "id": "v2",
-          "label": "V2",
-          "createdAt": "2026-05-25",
-          "status": "current",
-          "source": "public/coupang/images/aqua-lotion/versions/v2",
-          "sourceArchive": "/Users/elfguy/Downloads/유어스킨플러스_아쿠아로션_상세이미지_로고수정본.zip",
-          "representativeImages": [
-            {
-              "title": "크림은 무겁고 토너는 부족할 때",
-              "src": "/coupang/images/aqua-lotion/versions/v2/representative/01.png"
-            },
-            {
-              "title": "온 가족이 함께 쓰는 데일리 보습",
-              "src": "/coupang/images/aqua-lotion/versions/v2/representative/02.png"
-            },
-            {
-              "title": "더 신선하게 더 안심하게",
-              "src": "/coupang/images/aqua-lotion/versions/v2/representative/03.png"
-            },
-            {
-              "title": "민감 피부를 위한 순한 케어",
-              "src": "/coupang/images/aqua-lotion/versions/v2/representative/04.png"
-            },
-            {
-              "title": "수분·진정·보호를 한 번에",
-              "src": "/coupang/images/aqua-lotion/versions/v2/representative/05.png"
-            },
-            {
-              "title": "제조 6개월 이내 신선 제품",
-              "src": "/coupang/images/aqua-lotion/versions/v2/representative/06.png"
-            }
-          ],
-          "detailImages": [
-            {
-              "title": "인트로 / 제품 소개",
-              "src": "/coupang/images/aqua-lotion/versions/v2/detail/01.png"
-            },
-            {
-              "title": "온 가족 데일리 보습",
-              "src": "/coupang/images/aqua-lotion/versions/v2/detail/02.png"
-            },
-            {
-              "title": "8종 히알루론산 수분 충전",
-              "src": "/coupang/images/aqua-lotion/versions/v2/detail/03.png"
-            },
-            {
-              "title": "수분 진정 피부결 케어",
-              "src": "/coupang/images/aqua-lotion/versions/v2/detail/04.png"
-            },
-            {
-              "title": "자연 성분 진정 케어",
-              "src": "/coupang/images/aqua-lotion/versions/v2/detail/05.png"
-            },
-            {
-              "title": "Fresh Bud No.6 특허 진정 원료",
-              "src": "/coupang/images/aqua-lotion/versions/v2/detail/06.png"
-            },
-            {
-              "title": "발효 성분 / 식물 오일",
-              "src": "/coupang/images/aqua-lotion/versions/v2/detail/07.png"
-            },
-            {
-              "title": "피부 저자극 테스트 완료",
-              "src": "/coupang/images/aqua-lotion/versions/v2/detail/08.png"
-            },
-            {
-              "title": "제조일자 / 신선도",
-              "src": "/coupang/images/aqua-lotion/versions/v2/detail/09.png"
-            },
-            {
-              "title": "사용법 / 제품 정보 / 전성분",
-              "src": "/coupang/images/aqua-lotion/versions/v2/detail/10.png"
-            },
-            {
-              "title": "비공식 리셀러 주의 안내",
-              "src": "/coupang/images/aqua-lotion/versions/v2/detail/11.png"
-            }
-          ]
-        },
-        {
-          "id": "v1",
-          "label": "V1",
-          "createdAt": "2026-05-25",
-          "status": "previous",
-          "source": "public/coupang/images/aqua-lotion/versions/v1",
-          "representativeImages": [
-            {
-              "title": "대표 이미지 - 상품 중심",
-              "src": "/coupang/images/aqua-lotion/versions/v1/representative/01.png"
-            },
-            {
-              "title": "메인 - 제품명과 신선 제품 보장",
-              "src": "/coupang/images/aqua-lotion/versions/v1/representative/02.png"
-            },
-            {
-              "title": "메인 - 수분 진정 보호 성분",
-              "src": "/coupang/images/aqua-lotion/versions/v1/representative/03.png"
-            },
-            {
-              "title": "메인 - 순한 포뮬라",
-              "src": "/coupang/images/aqua-lotion/versions/v1/representative/04.png"
-            },
-            {
-              "title": "메인 - 8종 히알루론산",
-              "src": "/coupang/images/aqua-lotion/versions/v1/representative/05.png"
-            }
-          ],
-          "detailImages": [
-            {
-              "title": "인트로 / 제품 소개",
-              "src": "/coupang/images/aqua-lotion/versions/v1/detail/01.png"
-            },
-            {
-              "title": "추천 대상 / 핵심 포인트",
-              "src": "/coupang/images/aqua-lotion/versions/v1/detail/02.png"
-            },
-            {
-              "title": "Point 1 / 8종 히알루론산",
-              "src": "/coupang/images/aqua-lotion/versions/v1/detail/03.png"
-            },
-            {
-              "title": "Point 2·3 / 자연성분과 Fresh Bud No.6",
-              "src": "/coupang/images/aqua-lotion/versions/v1/detail/04.png"
-            },
-            {
-              "title": "Fresh Bud No.6 특허 진정 원료",
-              "src": "/coupang/images/aqua-lotion/versions/v1/detail/05.png"
-            },
-            {
-              "title": "Point 4·5 / 발효 성분과 저자극",
-              "src": "/coupang/images/aqua-lotion/versions/v1/detail/06.png"
-            },
-            {
-              "title": "순한 포뮬라 / pH·EWG·신선도",
-              "src": "/coupang/images/aqua-lotion/versions/v1/detail/07.png"
-            },
-            {
-              "title": "사용법 / 친환경 포장 / 상품 정보",
-              "src": "/coupang/images/aqua-lotion/versions/v1/detail/08.png"
-            }
-          ]
-        },
-        {
           "id": "original",
           "label": "원본",
           "createdAt": "현재 쿠팡 등록본",
-          "status": "original",
+          "status": "current",
           "source": "public/coupang/images/aqua-lotion/versions/original",
           "representativeImages": [
             {
@@ -415,6 +288,217 @@
             {
               "title": "원본 상세 15",
               "src": "/coupang/images/aqua-lotion/versions/original/detail/15.png"
+            }
+          ]
+        },
+        {
+          "id": "v1",
+          "label": "V1",
+          "createdAt": "2026-05-25",
+          "status": "previous",
+          "source": "public/coupang/images/aqua-lotion/versions/v1",
+          "representativeImages": [
+            {
+              "title": "대표 이미지 - 상품 중심",
+              "src": "/coupang/images/aqua-lotion/versions/v1/representative/01.png"
+            },
+            {
+              "title": "메인 - 제품명과 신선 제품 보장",
+              "src": "/coupang/images/aqua-lotion/versions/v1/representative/02.png"
+            },
+            {
+              "title": "메인 - 수분 진정 보호 성분",
+              "src": "/coupang/images/aqua-lotion/versions/v1/representative/03.png"
+            },
+            {
+              "title": "메인 - 순한 포뮬라",
+              "src": "/coupang/images/aqua-lotion/versions/v1/representative/04.png"
+            },
+            {
+              "title": "메인 - 8종 히알루론산",
+              "src": "/coupang/images/aqua-lotion/versions/v1/representative/05.png"
+            }
+          ],
+          "detailImages": [
+            {
+              "title": "인트로 / 제품 소개",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/01.png"
+            },
+            {
+              "title": "추천 대상 / 핵심 포인트",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/02.png"
+            },
+            {
+              "title": "Point 1 / 8종 히알루론산",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/03.png"
+            },
+            {
+              "title": "Point 2·3 / 자연성분과 Fresh Bud No.6",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/04.png"
+            },
+            {
+              "title": "Fresh Bud No.6 특허 진정 원료",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/05.png"
+            },
+            {
+              "title": "Point 4·5 / 발효 성분과 저자극",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/06.png"
+            },
+            {
+              "title": "순한 포뮬라 / pH·EWG·신선도",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/07.png"
+            },
+            {
+              "title": "사용법 / 친환경 포장 / 상품 정보",
+              "src": "/coupang/images/aqua-lotion/versions/v1/detail/08.png"
+            }
+          ]
+        },
+        {
+          "id": "v2",
+          "label": "V2",
+          "createdAt": "2026-05-25",
+          "status": "previous",
+          "source": "public/coupang/images/aqua-lotion/versions/v2",
+          "sourceArchive": "/Users/elfguy/Downloads/유어스킨플러스_아쿠아로션_상세이미지_로고수정본.zip",
+          "representativeImages": [
+            {
+              "title": "크림은 무겁고 토너는 부족할 때",
+              "src": "/coupang/images/aqua-lotion/versions/v2/representative/01.png"
+            },
+            {
+              "title": "온 가족이 함께 쓰는 데일리 보습",
+              "src": "/coupang/images/aqua-lotion/versions/v2/representative/02.png"
+            },
+            {
+              "title": "더 신선하게 더 안심하게",
+              "src": "/coupang/images/aqua-lotion/versions/v2/representative/03.png"
+            },
+            {
+              "title": "민감 피부를 위한 순한 케어",
+              "src": "/coupang/images/aqua-lotion/versions/v2/representative/04.png"
+            },
+            {
+              "title": "수분·진정·보호를 한 번에",
+              "src": "/coupang/images/aqua-lotion/versions/v2/representative/05.png"
+            },
+            {
+              "title": "제조 6개월 이내 신선 제품",
+              "src": "/coupang/images/aqua-lotion/versions/v2/representative/06.png"
+            }
+          ],
+          "detailImages": [
+            {
+              "title": "인트로 / 제품 소개",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/01.png"
+            },
+            {
+              "title": "온 가족 데일리 보습",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/02.png"
+            },
+            {
+              "title": "8종 히알루론산 수분 충전",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/03.png"
+            },
+            {
+              "title": "수분 진정 피부결 케어",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/04.png"
+            },
+            {
+              "title": "자연 성분 진정 케어",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/05.png"
+            },
+            {
+              "title": "Fresh Bud No.6 특허 진정 원료",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/06.png"
+            },
+            {
+              "title": "발효 성분 / 식물 오일",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/07.png"
+            },
+            {
+              "title": "피부 저자극 테스트 완료",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/08.png"
+            },
+            {
+              "title": "제조일자 / 신선도",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/09.png"
+            },
+            {
+              "title": "사용법 / 제품 정보 / 전성분",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/10.png"
+            },
+            {
+              "title": "비공식 리셀러 주의 안내",
+              "src": "/coupang/images/aqua-lotion/versions/v2/detail/11.png"
+            }
+          ]
+        },
+        {
+          "id": "v3",
+          "label": "V3",
+          "createdAt": "2026-05-31",
+          "status": "candidate",
+          "source": "public/coupang/images/aqua-lotion/versions/v3",
+          "sourceNote": "최근 다운로드 ChatGPT 이미지 기반. 상세 중복 컷은 Point 6 문구가 없는 파일을 사용.",
+          "representativeImages": [
+            {
+              "title": "대표 이미지 - 상품 중심",
+              "src": "/coupang/images/aqua-lotion/versions/v3/representative/01.png"
+            },
+            {
+              "title": "메인 - 8종 히알루론산",
+              "src": "/coupang/images/aqua-lotion/versions/v3/representative/02.png"
+            },
+            {
+              "title": "메인 - 피부진정 성분 케어",
+              "src": "/coupang/images/aqua-lotion/versions/v3/representative/03.png"
+            },
+            {
+              "title": "메인 - 저자극 안심 보습",
+              "src": "/coupang/images/aqua-lotion/versions/v3/representative/04.png"
+            },
+            {
+              "title": "메인 - 온 가족 데일리 보습",
+              "src": "/coupang/images/aqua-lotion/versions/v3/representative/05.png"
+            }
+          ],
+          "detailImages": [
+            {
+              "title": "인트로 / 제품 소개",
+              "src": "/coupang/images/aqua-lotion/versions/v3/detail/01.png"
+            },
+            {
+              "title": "추천 대상 / 핵심 포인트",
+              "src": "/coupang/images/aqua-lotion/versions/v3/detail/02.png"
+            },
+            {
+              "title": "온 가족 데일리 보습",
+              "src": "/coupang/images/aqua-lotion/versions/v3/detail/03.png"
+            },
+            {
+              "title": "8종 히알루론산 레이어 보습",
+              "src": "/coupang/images/aqua-lotion/versions/v3/detail/04.png"
+            },
+            {
+              "title": "자연 유래 진정 & 영양 케어",
+              "src": "/coupang/images/aqua-lotion/versions/v3/detail/05.png"
+            },
+            {
+              "title": "저자극 테스트 / EWG / 무향",
+              "src": "/coupang/images/aqua-lotion/versions/v3/detail/06.png"
+            },
+            {
+              "title": "약산성 pH / 제조일자 신선도",
+              "src": "/coupang/images/aqua-lotion/versions/v3/detail/07.png"
+            },
+            {
+              "title": "사용법 / 포장 / 제품 정보",
+              "src": "/coupang/images/aqua-lotion/versions/v3/detail/08.png"
+            },
+            {
+              "title": "비공식 리셀러 주의 안내",
+              "src": "/coupang/images/aqua-lotion/versions/v3/detail/09.png"
             }
           ]
         }

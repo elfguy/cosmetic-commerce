@@ -25,6 +25,7 @@ const statusClass = {
 };
 
 const activeVersion = workspace.versions[0];
+const activeContactSheet = activeVersion.links.find((link) => link.label.includes('컨택시트'))?.href ?? activeVersion.preview;
 ---
 
 <BaseLayout title="아쿠아로션 상세 버전" description="아쿠아로션 상세 이미지 개선 버전과 산출물을 비교하고 바로 열어보는 상세 버전 화면">
@@ -38,8 +39,8 @@ const activeVersion = workspace.versions[0];
           <h1>{workspace.title}</h1>
           <p>{workspace.objective}</p>
           <div class="hero-actions">
-            <a class="primary-link" href={activeVersion.primaryUrl} target="_blank" rel="noreferrer">최신 후보 열기</a>
-            <a class="ghost-link" href="/coupang/images/aqua-lotion/renewal-2026-05-25-v8-fresh-set/preview/v8-fresh-contact-sheet.jpg" target="_blank" rel="noreferrer">컨택시트 보기</a>
+            <a class="primary-link" href={activeVersion.primaryUrl} target="_blank" rel="noreferrer">비교 페이지 열기</a>
+            <a class="ghost-link" href={activeContactSheet} target="_blank" rel="noreferrer">컨택시트 보기</a>
           </div>
         </div>
 
