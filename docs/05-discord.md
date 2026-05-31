@@ -13,12 +13,14 @@
 ## 채널 상태
 
 ```text
-Discord: #cosmetic-commerce (1502461461811695727)
-Created: 2026-05-09 09:06 KST
-First message: 1502463846084771840
+Discord Server: hermes (1510209465750786140)
+Discord Channel: #cosmetic-commerce (1510214053023449260)
+Channel URL: https://discord.com/channels/1510209465750786140/1510214053023449260
+Created: 2026-05-30 KST
+First message: 1510214054340333629
 ```
 
-Leo가 채널 ID를 알려주거나, 해당 채널에서 OpenClaw/Rina를 한 번 멘션해서 세션이 생기면 ID를 확인해 MEMORY.md에도 확정 반영한다.
+Hermes 봇 API로 채널 생성 및 첫 메시지 전송까지 검증 완료.
 
 ## 채널 운영 방식
 
