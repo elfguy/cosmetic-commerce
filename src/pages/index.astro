@@ -19,14 +19,6 @@ const stats = [
 const focusNames = focusProducts.map((p) => p.shortName).join(' · ');
 const todayTasks = commandTasks.slice(0, 3);
 
-const tileIcons = ['▦', '◌', '✦', '✓', '↗', '≋'];
-const getTileIcon = (sectionIndex: number, linkIndex: number) =>
-  tileIcons[(sectionIndex * 2 + linkIndex) % tileIcons.length];
-const getTileMeta = (sectionLabel: string, linkIndex: number) => {
-  if (sectionLabel.includes('운영')) return ['SKU', 'Risk', 'Next'][linkIndex % 3];
-  if (sectionLabel.includes('상세')) return ['Asset', 'Version', 'Copy'][linkIndex % 3];
-  return ['Mood', 'Store', 'Brand'][linkIndex % 3];
-};
 ---
 
 <BaseLayout
@@ -90,7 +82,7 @@ const getTileMeta = (sectionLabel: string, linkIndex: number) => {
     </section>
 
     <!-- SECTIONS -->
-    {siteSections.map((section, sectionIndex) => (
+    {siteSections.map((section) => (
       <section class="block container" id={section.id} aria-label={section.label}>
         <header class="block__head">
           <div>
@@ -100,25 +92,18 @@ const getTileMeta = (sectionLabel: string, linkIndex: number) => {
           <p class="block__desc">{section.desc}</p>
         </header>
         <div class="grid">
-          {section.links.map((link, linkIndex) => (
+          {section.links.map((link) => (
             <a class="tile" href={link.href}>
-              <span class="tile__cover" style={`background:${link.cover ?? 'linear-gradient(135deg,#2a3a32,#6f7d63)'}`}>
-                {link.thumb && <img src={link.thumb} alt="" loading="lazy" />}
-                <span class="tile__visual" aria-hidden="true">
-                  <span class="tile__icon">{getTileIcon(sectionIndex, linkIndex)}</span>
-                  <span class="tile__metric">
-                    <b>{String(linkIndex + 1).padStart(2, '0')}</b>
-                    <small>{getTileMeta(section.label, linkIndex)}</small>
-                  </span>
-                  <span class="tile__lines">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                  </span>
+              {link.thumb && (
+                <span class="tile__thumb">
+                  <img src={link.thumb} alt="" loading="lazy" />
                 </span>
-                {link.tag && <em class="tile__tag">{link.tag}</em>}
-              </span>
+              )}
               <span class="tile__body">
+                <span class="tile__meta">
+                  <span>{section.label}</span>
+                  {link.tag && <em>{link.tag}</em>}
+                </span>
                 <strong>{link.title}</strong>
                 <small>{link.desc}</small>
                 <span class="tile__go" aria-hidden="true">열기 →</span>
@@ -280,12 +265,13 @@ const getTileMeta = (sectionLabel: string, linkIndex: number) => {
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 248px), 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: 12px;
   }
   .tile {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    min-height: 148px;
     border-radius: var(--r);
     background: var(--surface);
     border: 1px solid var(--line);
@@ -293,96 +279,55 @@ const getTileMeta = (sectionLabel: string, linkIndex: number) => {
     text-decoration: none;
     color: inherit;
     overflow: hidden;
-    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
   }
-  .tile:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--line-strong); }
-  .tile__cover {
-    position: relative;
-    display: grid;
-    place-items: center;
-    aspect-ratio: 16 / 9;
-    background-size: cover;
-    background-position: center;
+  .tile::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 5px;
+    background: var(--accent);
+    opacity: 0.72;
+  }
+  .tile:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: var(--line-strong); background: var(--surface-2); }
+  .tile__thumb {
+    flex: 0 0 104px;
+    min-height: 100%;
     overflow: hidden;
+    background: var(--surface-3);
   }
-  .tile__cover::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.24), transparent 28%),
-      linear-gradient(135deg, rgba(255, 255, 255, 0.16), transparent 54%);
+  .tile__thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .tile__body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+    padding: 18px 18px 18px 22px;
+    flex: 1;
   }
-  .tile__cover::after {
-    content: '';
-    position: absolute;
-    right: -18%;
-    bottom: -38%;
-    width: 72%;
-    aspect-ratio: 1;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    box-shadow: inset 0 0 0 24px rgba(255, 255, 255, 0.06);
-  }
-  .tile__cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .tile__visual {
-    position: relative;
-    z-index: 1;
-    width: min(78%, 280px);
-    min-height: 54%;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr;
-    gap: 12px 14px;
+  .tile__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
     align-items: center;
-    padding: clamp(14px, 2.4vw, 22px);
-    border: 1px solid rgba(255, 255, 255, 0.26);
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.13);
-    box-shadow: 0 18px 46px -30px rgba(0, 0, 0, 0.55);
-    color: #fffaf0;
-    backdrop-filter: blur(4px);
-  }
-  .tile__icon {
-    display: grid;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0.92);
-    color: var(--forest);
-    font-family: var(--font-latin);
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 1;
-  }
-  .tile__metric { display: grid; gap: 1px; }
-  .tile__metric b { font-family: var(--font-latin); font-size: 24px; line-height: 1; letter-spacing: -0.04em; }
-  .tile__metric small { color: rgba(255, 250, 240, 0.8); font-family: var(--font-latin); font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
-  .tile__lines { grid-column: 1 / -1; display: grid; gap: 7px; margin-top: 2px; }
-  .tile__lines i {
-    display: block;
-    height: 7px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.72);
-  }
-  .tile__lines i:nth-child(2) { width: 72%; opacity: 0.62; }
-  .tile__lines i:nth-child(3) { width: 46%; opacity: 0.42; }
-  .tile__tag {
-    position: absolute;
-    top: 10px; left: 10px;
-    padding: 4px 10px;
-    border-radius: var(--r-pill);
-    background: rgba(255, 255, 255, 0.92);
-    color: var(--accent-ink);
+    color: var(--faint);
     font-size: 11.5px;
     font-weight: 800;
+  }
+  .tile__meta span,
+  .tile__meta em {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    padding: 3px 9px;
+    border-radius: var(--r-pill);
+    background: var(--surface-3);
     font-style: normal;
   }
-  .tile__body { display: flex; flex-direction: column; gap: 7px; padding: 16px 16px 18px; flex: 1; }
-  .tile__body strong { font-size: 16.5px; line-height: 1.3; }
+  .tile__meta em { background: var(--accent-soft); color: var(--accent-ink); }
+  .tile__body strong { font-size: 17px; line-height: 1.3; letter-spacing: -0.01em; }
   .tile__body small { color: var(--muted); font-size: 13px; line-height: 1.55; flex: 1; }
-  .tile__go { margin-top: 4px; color: var(--accent); font-size: 13px; font-weight: 700; }
+  .tile__go { margin-top: 2px; color: var(--accent); font-size: 13px; font-weight: 800; }
 
   /* RESPONSIVE */
   @media (max-width: 860px) {
