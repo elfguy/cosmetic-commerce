@@ -18,11 +18,12 @@ for (const n of ['01','02','03','04','05','06']) {
 // Keep only the approved first detail cut from V4 GPT Web.
 fs.copyFileSync(path.join(srcV4Web, 'detail/01.png'), path.join(outDetail, '01.png'));
 
-const product = path.join(base, 'versions/original/representative/01.png');
-const productAlt = path.join(base, 'assets/drive/aqua-lotion-transparent-main.png');
+// Use the clean packshot for generated detail cuts. Do not use marketing representative images here,
+// because they may contain external badges such as “6개월” that look like leftover numeric labels.
+const packshot = path.join(base, 'assets/drive/aqua-lotion-packshot.png');
+const product = packshot;
 const hand = path.join(base, 'assets/stock/pexels-hand-pump-lotion-5563659.jpg');
 const water = path.join(base, 'assets/stock/unsplash-water-droplets-9w5T19x1Y74.jpg');
-const packshot = path.join(base, 'assets/drive/aqua-lotion-packshot.png');
 
 function fileUrl(p) { return 'file://' + p; }
 
