@@ -29,6 +29,13 @@
       "representativeCount": 5,
       "detailCount": 9,
       "source": "public/coupang/images/aqua-lotion/versions/v3"
+    },
+    {
+      "id": "v4",
+      "label": "V4 GPT Images 2.0",
+      "representativeCount": 0,
+      "detailCount": 10,
+      "source": "public/coupang/images/aqua-lotion/versions/v4"
     }
   ],
   "originalRepresentativeSourceUrls": [

@@ -1,0 +1,30 @@
+{
+  "version": "v4",
+  "product": "aqua-lotion",
+  "generator": "ChatGPT Images 2.0",
+  "createdAt": "2026-06-01T09:07:59.509Z",
+  "base": "V2 overall mood + selected V3/V1 feedback",
+  "dimensions": {
+    "width": 876,
+    "height": 1796
+  },
+  "detail": [
+    "detail/01.png",
+    "detail/02.png",
+    "detail/03.png",
+    "detail/04.png",
+    "detail/05.png",
+    "detail/06.png",
+    "detail/07.png",
+    "detail/08.png",
+    "detail/09.png",
+    "detail/10.png"
+  ],
+  "contactSheet": "v4-detail-contact-sheet.png",
+  "referenceBoard": "v4-reference-board.png",
+  "prompt": "v4-gpt-images-prompt.md",
+  "notes": [
+    "Generated 10 cuts; cut 10 combines eco packaging, direct manufacturer sale, and official seller notice.",
+    "Review Korean text and claims before production upload."
+  ]
+}
