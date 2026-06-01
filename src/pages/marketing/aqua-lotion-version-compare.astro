@@ -35,8 +35,8 @@ const initialSelected = new Set([activeVersion.id]);
           <p class="eyebrow">Aqua lotion version compare</p>
           <h1>V4 상세 이미지 최종 후보</h1>
           <p>
-            웹 ChatGPT/GPT Images에서 생성해 다운로드한 V4 후보만 모아서 확인합니다.
-            대표 이미지는 기존 V2 유지본을 사용하고, 상세 이미지는 V4 GPT Web 생성본 10장입니다.
+            숫자 배지·POINT·STEP·CUT 라벨이 이미지 내부에 남지 않도록 정리한 V4.2 Clean 후보를 확인합니다.
+            대표 이미지는 기존 V4 후보를 유지하고, 상세 이미지는 1번 유지 + 2~10번 클린 교체본입니다.
           </p>
         </div>
         <aside>
@@ -50,8 +50,8 @@ const initialSelected = new Set([activeVersion.id]);
     <section class="compare-controls container" aria-label="비교 버전 선택">
       <div class="control-copy">
         <p class="eyebrow">Version library</p>
-        <h2>V4 후보</h2>
-        <p>현재는 V4 후보 1개만 표시합니다. 다른 보관본은 숨기고 최종 검수용 V4만 확인합니다.</p>
+        <h2>V4.2 후보</h2>
+        <p>현재는 클린 교체본을 기본으로 표시합니다. 이전 V4는 비교용으로만 남겨두었습니다.</p>
       </div>
       <div class="version-picker">
         {versions.map((version) => (

@@ -1,10 +1,17 @@
 {
   "productId": "9218811640",
-  "activeVersion": "v4-gpt-web",
+  "activeVersion": "v42-clean",
   "versions": [
     {
+      "id": "v42-clean",
+      "label": "V4.2 Clean",
+      "representativeCount": 6,
+      "detailCount": 10,
+      "source": "public/coupang/images/aqua-lotion/versions/v42-clean"
+    },
+    {
       "id": "v4-gpt-web",
-      "label": "V4",
+      "label": "V4 이전본",
       "representativeCount": 6,
       "detailCount": 10,
       "source": "public/coupang/images/aqua-lotion/versions/v4-gpt-web"
