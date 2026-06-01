@@ -95,7 +95,6 @@ const initialSelected = new Set([activeVersion.id]);
             <div class="image-stack representative-stack">
               {version.representativeImages.map((src, index) => (
                 <a href={src} target="_blank" rel="noreferrer">
-                  <span>{String(index + 1).padStart(2, '0')}</span>
                   <img src={src} alt={`${version.label} 대표 이미지 ${index + 1}`} loading="lazy" />
                 </a>
               ))}
@@ -116,7 +115,6 @@ const initialSelected = new Set([activeVersion.id]);
             <h3>{version.label}</h3>
             {version.detailImages.map((src, index) => (
               <a class="flow-card" href={src} target="_blank" rel="noreferrer">
-                <span>{String(index + 1).padStart(2, '0')}</span>
                 <img src={src} alt={`${version.label} 상세 이미지 ${index + 1}`} loading="lazy" />
               </a>
             ))}
