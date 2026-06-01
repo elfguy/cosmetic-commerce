@@ -1,0 +1,361 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+const publicDir = path.join(process.cwd(), 'public');
+const assetRoot = path.join(publicDir, 'drive-originals');
+const imageExt = new Set(['.jpg', '.jpeg', '.png', '.webp']);
+
+const productNames: Record<string, string> = {
+  'aqua-lotion': '히알루론산 아쿠아 로션',
+  'cleansing-oil': '퓨어 딥 클렌징 오일',
+  'hyaluronic-acid-toner': '히알루론산 토너',
+  'low-ph-cleansing-gel': '로우 피에이치 클렌징 젤',
+  'moisture-lip-balm': '모이스춰 립밤',
+  'rose-damascus-tonic-essence': '로즈 다마스쿠스 토닉 에센스',
+  'unmatched-soothing-cream': '피디알엔 히알루론산 수딩 크림',
+  'whitening-tone-care-cream': '화이트닝 톤 케어 크림',
+  'younger-than-all-in-one-lotion': '영거 댄 올인원 로션',
+};
+
+function walk(dir: string): string[] {
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) return walk(full);
+    return imageExt.has(path.extname(entry.name).toLowerCase()) ? [full] : [];
+  });
+}
+
+const files = walk(assetRoot).sort((a, b) => a.localeCompare(b, 'ko'));
+const assets = files.map((file) => {
+  const rel = path.relative(assetRoot, file).split(path.sep).join('/');
+  const [productSlug, ...rest] = rel.split('/');
+  const folder = rest.length > 1 ? rest.slice(0, -1).join(' / ') : '대표 이미지';
+  const url = `/drive-originals/${rel.split('/').map(encodeURIComponent).join('/')}`;
+  const stat = fs.statSync(file);
+  return {
+    productSlug,
+    productName: productNames[productSlug] ?? productSlug,
+    folder: folder.replace(/^downloaded\/?/, '') || '대표 이미지',
+    fileName: rest.at(-1) ?? rel,
+    url,
+    sizeMb: stat.size / 1024 / 1024,
+  };
+});
+
+const products = Object.entries(
+  assets.reduce<Record<string, { slug: string; name: string; count: number }>>((acc, item) => {
+    acc[item.productSlug] ??= { slug: item.productSlug, name: item.productName, count: 0 };
+    acc[item.productSlug].count += 1;
+    return acc;
+  }, {}),
+).map(([, value]) => value).sort((a, b) => a.name.localeCompare(b.name, 'ko'));
+
+const totalMb = assets.reduce((sum, item) => sum + item.sizeMb, 0);
+---
+
+<BaseLayout title="구글 드라이브 원본 이미지" description="구글 드라이브에서 내려받은 유어스킨플러스 원본 이미지를 상품별로 보고 다운로드하는 내부 작업실.">
+  <SiteHeader active="/drive-originals/" />
+
+  <main class="drive-page">
+    <section class="hero container">
+      <div class="hero__copy">
+        <p class="eyebrow">Google Drive source assets</p>
+        <h1>원본 이미지 보관함</h1>
+        <p>
+          구글 드라이브에서 내려받은 상품별 원본 이미지를 한 화면에서 확인하고,
+          GPT 웹/외부 편집 도구에 넣을 이미지를 바로 다운로드할 수 있게 정리했습니다.
+        </p>
+      </div>
+      <div class="hero__panel" aria-label="이미지 통계">
+        <strong>{assets.length}</strong>
+        <span>원본 이미지</span>
+        <em>{products.length}개 상품 · {totalMb.toFixed(1)}MB</em>
+      </div>
+    </section>
+
+    <section class="toolbar container" aria-label="상품 필터">
+      <button class="filter is-active" type="button" data-product="all">전체 <span>{assets.length}</span></button>
+      {products.map((product) => (
+        <button class="filter" type="button" data-product={product.slug}>
+          {product.name} <span>{product.count}</span>
+        </button>
+      ))}
+    </section>
+
+    <section class="asset-grid container" aria-label="원본 이미지 목록">
+      {assets.map((asset) => (
+        <article class="asset-card" data-card data-product={asset.productSlug}>
+          <a class="asset-card__image" href={asset.url} target="_blank" rel="noreferrer" aria-label={`${asset.productName} ${asset.fileName} 원본 보기`}>
+            <img src={asset.url} alt={`${asset.productName} 원본 이미지 - ${asset.fileName}`} loading="lazy" />
+          </a>
+          <div class="asset-card__body">
+            <p>{asset.productName}</p>
+            <h2>{asset.fileName}</h2>
+            <div class="asset-card__meta">
+              <span>{asset.folder}</span>
+              <span>{asset.sizeMb.toFixed(1)}MB</span>
+            </div>
+            <div class="asset-card__actions">
+              <a class="btn-dark" href={asset.url} download>다운로드</a>
+              <a class="btn-ghost" href={asset.url} target="_blank" rel="noreferrer">원본 보기</a>
+            </div>
+          </div>
+        </article>
+      ))}
+    </section>
+  </main>
+
+  <SiteFooter />
+
+  <script>
+    const filters = Array.from(document.querySelectorAll('[data-product].filter'));
+    const cards = Array.from(document.querySelectorAll('[data-card]'));
+
+    filters.forEach((button) => {
+      button.addEventListener('click', () => {
+        const product = button.getAttribute('data-product');
+        filters.forEach((item) => item.classList.toggle('is-active', item === button));
+        cards.forEach((card) => {
+          const show = product === 'all' || card.getAttribute('data-product') === product;
+          card.toggleAttribute('hidden', !show);
+        });
+      });
+    });
+  </script>
+</BaseLayout>
+
+<style>
+  .drive-page {
+    min-height: 100vh;
+    padding-bottom: 56px;
+    background:
+      radial-gradient(circle at 12% 12%, rgba(181, 101, 74, 0.14), transparent 30vw),
+      radial-gradient(circle at 82% 8%, rgba(123, 139, 111, 0.16), transparent 26vw),
+      var(--bg);
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 24px;
+    align-items: end;
+    padding-block: clamp(32px, 7vw, 74px) 22px;
+  }
+
+  .hero__copy h1 {
+    margin: 8px 0 12px;
+    max-width: 760px;
+    font-size: clamp(38px, 7vw, 82px);
+    line-height: 0.95;
+    letter-spacing: -0.065em;
+  }
+
+  .hero__copy p:not(.eyebrow) {
+    max-width: 760px;
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.72;
+  }
+
+  .hero__panel {
+    display: grid;
+    gap: 6px;
+    padding: 24px;
+    border: 1px solid rgba(31, 42, 36, 0.12);
+    border-radius: 28px;
+    background: color-mix(in srgb, var(--surface) 86%, transparent);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
+  }
+
+  .hero__panel strong {
+    font-family: var(--font-latin);
+    font-size: 58px;
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+  }
+
+  .hero__panel span {
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .hero__panel em {
+    color: var(--muted);
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .toolbar {
+    position: sticky;
+    top: var(--header-h);
+    z-index: 20;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-block: 12px;
+    border-block: 1px solid color-mix(in srgb, var(--line) 78%, transparent);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(14px);
+    scrollbar-width: thin;
+  }
+
+  .filter {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 38px;
+    padding: 8px 13px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-pill);
+    background: var(--surface);
+    color: var(--muted);
+    font: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .filter span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    padding-inline: 7px;
+    border-radius: var(--r-pill);
+    background: var(--surface-3);
+    color: var(--ink);
+    font-family: var(--font-latin);
+    font-size: 12px;
+  }
+
+  .filter.is-active {
+    border-color: var(--forest);
+    background: var(--forest);
+    color: #f7f3e9;
+  }
+
+  .filter.is-active span {
+    background: rgba(255, 255, 255, 0.14);
+    color: #f7f3e9;
+  }
+
+  .asset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 18px;
+    padding-top: 24px;
+  }
+
+  .asset-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .asset-card[hidden] { display: none; }
+
+  .asset-card__image {
+    display: grid;
+    place-items: center;
+    height: 260px;
+    padding: 14px;
+    background:
+      linear-gradient(45deg, rgba(31,42,36,0.035) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(31,42,36,0.035) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(31,42,36,0.035) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(31,42,36,0.035) 75%),
+      #fbfaf5;
+    background-size: 24px 24px;
+    background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+  }
+
+  .asset-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 14px;
+    transition: transform 0.22s ease;
+  }
+
+  .asset-card:hover .asset-card__image img { transform: scale(1.025); }
+
+  .asset-card__body {
+    display: grid;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .asset-card__body p,
+  .asset-card__body h2 {
+    margin: 0;
+    min-width: 0;
+  }
+
+  .asset-card__body p {
+    color: var(--accent-ink);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .asset-card__body h2 {
+    overflow-wrap: anywhere;
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .asset-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .asset-card__meta span {
+    display: inline-flex;
+    padding: 5px 9px;
+    border-radius: var(--r-pill);
+    background: var(--surface-3);
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .asset-card__actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding-top: 4px;
+  }
+
+  .asset-card__actions a {
+    min-width: 0;
+    padding-inline: 10px;
+  }
+
+  @media (max-width: 760px) {
+    .hero {
+      grid-template-columns: 1fr;
+      padding-top: 30px;
+    }
+    .hero__panel { max-width: 100%; }
+    .asset-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .asset-card__image { height: 190px; }
+    .asset-card__actions { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 430px) {
+    .asset-grid { grid-template-columns: 1fr; }
+    .asset-card__image { height: 250px; }
+  }
+</style>

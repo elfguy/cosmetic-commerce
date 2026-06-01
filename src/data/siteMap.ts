@@ -29,6 +29,7 @@ export const primaryNav: { href: string; label: string }[] = [
   { href: '/products/', label: '상품상세' },
   { href: '/competitor-comparison/', label: '경쟁상품' },
   { href: '/workspaces/', label: '작업실' },
+  { href: '/drive-originals/', label: '원본이미지' },
 ];
 
 export const siteSections: SiteSection[] = [
@@ -58,6 +59,13 @@ export const siteSections: SiteSection[] = [
         desc: '제품별 현재 적용 상세, 후보 버전, 최종 업로드 자료를 한 흐름에서 비교.',
         tag: '핵심',
         cover: 'linear-gradient(135deg, #2b3b32, #6f7d63)',
+      },
+      {
+        href: '/drive-originals/',
+        title: '구글 드라이브 원본 이미지',
+        desc: '드라이브에서 내려받은 상품별 원본 이미지를 확인하고 GPT 웹 제공용으로 다운로드.',
+        tag: '원본',
+        cover: 'linear-gradient(135deg, #264f55, #86bec0)',
       },
       {
         href: '/product-comparison/',
