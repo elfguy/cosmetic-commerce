@@ -40,8 +40,26 @@ export const marketingWorkspaces: MarketingWorkspace[] = [
     objective: '300ml 대용량 로션을 수분 루틴 세트의 보조 전환 상품으로 만들기 위해 대표 이미지와 상세 이미지 흐름을 비교합니다.',
     pageUrl: '/marketing/aqua-lotion-detail-images/',
     thumbnail: '/coupang/images/aqua-lotion/assets/drive/aqua-lotion-packshot.png',
-    nextAction: 'V4.1 상세 10장 최종 후보를 검수하고 쿠팡 업로드용으로 다운로드/적용 결정',
+    nextAction: '웹 GPT Images로 생성한 V4 01 테스트 컷을 먼저 검수하고, 통과 시 같은 방식으로 나머지 컷을 재생성',
     versions: [
+      {
+        id: 'v4-gpt-web-test-01',
+        label: 'V4 GPT Web Test 01',
+        status: 'review',
+        date: '2026-06-01',
+        summary: 'ChatGPT 웹/GPT Images로 생성 후 다운로드한 V4 상세 01 메인 히어로 테스트 컷입니다. Hermes 로컬 이미지 생성이나 코드 렌더링이 아니라 웹 GPT 이미지 결과물만 별도 등록했습니다.',
+        preview: '/coupang/images/aqua-lotion/versions/v4-gpt-web-test/detail/01.png',
+        primaryUrl: '/coupang/images/aqua-lotion/versions/v4-gpt-web-test/detail/01.png',
+        links: [
+          { label: '웹 GPT 생성 상세 01', href: '/coupang/images/aqua-lotion/versions/v4-gpt-web-test/detail/01.png', kind: 'image' },
+          { label: '사용 프롬프트', href: '/coupang/images/aqua-lotion/versions/v4-gpt-web-test/prompt.txt', kind: 'source' },
+        ],
+        metrics: [
+          { label: '생성 방식', value: 'ChatGPT Web' },
+          { label: '컷 수', value: '1' },
+          { label: '크기', value: '887×1774' },
+        ],
+      },
       {
         id: 'v41-final-candidate',
         label: 'V4.1 Final Candidate',
