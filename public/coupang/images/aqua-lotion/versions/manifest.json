@@ -38,8 +38,15 @@
       "source": "public/coupang/images/aqua-lotion/versions/v4"
     },
     {
+      "id": "v4-gpt-web",
+      "label": "V4 GPT Web Candidate",
+      "representativeCount": 0,
+      "detailCount": 10,
+      "source": "public/coupang/images/aqua-lotion/versions/v4-gpt-web"
+    },
+    {
       "id": "v41",
-      "label": "V4.1 최종 수정본",
+      "label": "V4.1 보관본",
       "representativeCount": 0,
       "detailCount": 10,
       "source": "public/coupang/images/aqua-lotion/versions/v41"

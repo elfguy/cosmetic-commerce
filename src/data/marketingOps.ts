@@ -250,11 +250,29 @@ export const productVersions: Record<string, ProductVersion[]> = {
       ],
     },
     {
-      id: 'v41',
-      label: 'V4.1',
+      id: 'v4-gpt-web',
+      label: 'V4 GPT Web',
       status: 'candidate',
       date: '2026-06-01',
-      summary: 'V4 상세 이미지 중 리스크가 있던 05/06/08/10을 코드 렌더링으로 수정한 최종 검수 후보입니다. 특허번호·시험번호·인증마크 임의 표기를 제거했습니다. 대표 이미지는 기존 요청대로 V2 대표 이미지를 유지합니다.',
+      summary: 'ChatGPT 웹/GPT Images에서 생성 후 다운로드한 상세 10장 후보입니다. Hermes 로컬 이미지 생성이 아니라 웹 GPT 결과물을 그대로 등록했습니다. 대표 이미지는 기존 요청대로 V2 대표 이미지를 유지합니다.',
+      mainImages: [6, 1, 2, 3, 4, 5].map((n) => '/coupang/images/aqua-lotion/versions/v2/representative/' + String(n).padStart(2, '0') + '.png'),
+      detailImages: Array.from({ length: 10 }, (_, i) => '/coupang/images/aqua-lotion/versions/v4-gpt-web/detail/' + String(i + 1).padStart(2, '0') + '.png'),
+      links: [
+        { label: '버전 비교', href: '/marketing/aqua-lotion-version-compare/' },
+        { label: 'V4 GPT Web 컨택시트', href: '/coupang/images/aqua-lotion/versions/v4-gpt-web/v4-gpt-web-contact-sheet.png' },
+      ],
+      metrics: [
+        { label: '대표', value: 'V2 유지 · 6' },
+        { label: '상세', value: '10' },
+        { label: '생성', value: 'ChatGPT Web' },
+      ],
+    },
+    {
+      id: 'v41',
+      label: 'V4.1',
+      status: 'archive',
+      date: '2026-06-01',
+      summary: 'V4 상세 이미지 중 리스크가 있던 05/06/08/10을 코드 렌더링으로 수정했던 이전 후보입니다. 현재는 웹 GPT Images 생성본을 우선 검수합니다.',
       mainImages: [6, 1, 2, 3, 4, 5].map((n) => '/coupang/images/aqua-lotion/versions/v2/representative/' + String(n).padStart(2, '0') + '.png'),
       detailImages: Array.from({ length: 10 }, (_, i) => '/coupang/images/aqua-lotion/versions/v41/detail/' + String(i + 1).padStart(2, '0') + '.png'),
       links: [
@@ -264,7 +282,7 @@ export const productVersions: Record<string, ProductVersion[]> = {
       metrics: [
         { label: '대표', value: 'V2 유지 · 6' },
         { label: '상세', value: '10' },
-        { label: '상태', value: '최종 후보' },
+        { label: '상태', value: '보관' },
       ],
     },
   ],
