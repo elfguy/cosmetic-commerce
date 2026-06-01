@@ -1,55 +1,13 @@
 {
   "productId": "9218811640",
-  "activeVersion": "original",
+  "activeVersion": "v4-gpt-web",
   "versions": [
     {
-      "id": "original",
-      "label": "원본",
-      "representativeCount": 6,
-      "detailCount": 15,
-      "source": "public/coupang/images/aqua-lotion/versions/original"
-    },
-    {
-      "id": "v1",
-      "label": "V1",
-      "representativeCount": 5,
-      "detailCount": 8,
-      "source": "public/coupang/images/aqua-lotion/versions/v1"
-    },
-    {
-      "id": "v2",
-      "label": "V2",
-      "representativeCount": 6,
-      "detailCount": 11,
-      "source": "public/coupang/images/aqua-lotion/versions/v2"
-    },
-    {
-      "id": "v3",
-      "label": "V3",
-      "representativeCount": 5,
-      "detailCount": 9,
-      "source": "public/coupang/images/aqua-lotion/versions/v3"
-    },
-    {
-      "id": "v4",
-      "label": "V4 GPT Images 2.0",
-      "representativeCount": 0,
-      "detailCount": 10,
-      "source": "public/coupang/images/aqua-lotion/versions/v4"
-    },
-    {
       "id": "v4-gpt-web",
-      "label": "V4 GPT Web Candidate",
-      "representativeCount": 0,
+      "label": "V4",
+      "representativeCount": 6,
       "detailCount": 10,
       "source": "public/coupang/images/aqua-lotion/versions/v4-gpt-web"
-    },
-    {
-      "id": "v41",
-      "label": "V4.1 보관본",
-      "representativeCount": 0,
-      "detailCount": 10,
-      "source": "public/coupang/images/aqua-lotion/versions/v41"
     }
   ],
   "originalRepresentativeSourceUrls": [

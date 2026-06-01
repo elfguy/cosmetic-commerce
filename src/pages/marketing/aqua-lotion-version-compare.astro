@@ -16,9 +16,8 @@ const versions = versionsManifest.versions.map((version) => ({
 }));
 
 const activeVersion = versions.find((version) => version.id === versionsManifest.activeVersion) ?? versions[0];
-const latestCandidate = [...versions].reverse().find((version) => version.id !== activeVersion.id) ?? activeVersion;
 const maxDetailCount = Math.max(...versions.map((version) => version.detailCount));
-const initialSelected = new Set([activeVersion.id, 'v1', latestCandidate.id]);
+const initialSelected = new Set([activeVersion.id]);
 ---
 
 <BaseLayout title="아쿠아로션 이미지 버전 비교" description="아쿠아로션 원본과 제작 버전의 대표 이미지와 상세 이미지를 비교하는 마케팅 검토 페이지">
@@ -34,10 +33,10 @@ const initialSelected = new Set([activeVersion.id, 'v1', latestCandidate.id]);
       <div class="hero-layout">
         <div>
           <p class="eyebrow">Aqua lotion version compare</p>
-          <h1>선택 버전 상세 이미지 비교</h1>
+          <h1>V4 상세 이미지 최종 후보</h1>
           <p>
-            버전이 늘어나도 전체를 한꺼번에 펼치지 않고, 비교할 2~3개만 선택해서 봅니다.
-            PC에서는 선택 버전을 나란히 비교하고, 모바일에서는 선택 버전 중심으로 세로 확인합니다.
+            웹 ChatGPT/GPT Images에서 생성해 다운로드한 V4 후보만 모아서 확인합니다.
+            대표 이미지는 기존 V2 유지본을 사용하고, 상세 이미지는 V4 GPT Web 생성본 10장입니다.
           </p>
         </div>
         <aside>
@@ -51,13 +50,8 @@ const initialSelected = new Set([activeVersion.id, 'v1', latestCandidate.id]);
     <section class="compare-controls container" aria-label="비교 버전 선택">
       <div class="control-copy">
         <p class="eyebrow">Version library</p>
-        <h2>비교할 버전 선택</h2>
-        <p>최대 3개까지 선택됩니다. 현재 적용본, 최신 후보, 직전 버전처럼 필요한 조합만 남겨서 비교합니다.</p>
-      </div>
-      <div class="preset-row" aria-label="추천 비교 조합">
-        <button type="button" data-preset={`${activeVersion.id},v1,${latestCandidate.id}`}>{activeVersion.label} / V1 / {latestCandidate.label}</button>
-        <button type="button" data-preset={`${activeVersion.id},${latestCandidate.id}`}>{activeVersion.label} / {latestCandidate.label}</button>
-        <button type="button" data-preset={`v2,${latestCandidate.id}`}>V2 / {latestCandidate.label}</button>
+        <h2>V4 후보</h2>
+        <p>현재는 V4 후보 1개만 표시합니다. 다른 보관본은 숨기고 최종 검수용 V4만 확인합니다.</p>
       </div>
       <div class="version-picker">
         {versions.map((version) => (
@@ -78,7 +72,7 @@ const initialSelected = new Set([activeVersion.id, 'v1', latestCandidate.id]);
             <img src={version.representativeImages[0]} alt={`${version.label} 대표 이미지 1`} loading="lazy" />
           </div>
           <div>
-            <span>{version.id === activeVersion.id ? '현재 적용' : version.id === latestCandidate.id ? '최신 후보' : '비교 대상'}</span>
+            <span>{version.id === activeVersion.id ? '현재 V4 후보' : '비교 대상'}</span>
             <h2>{version.label}</h2>
             <p>
               대표 이미지 {version.representativeCount}장, 상세 이미지 {version.detailCount}장으로 구성된 아쿠아 로션 {version.label} 산출물입니다.
@@ -136,7 +130,7 @@ const initialSelected = new Set([activeVersion.id, 'v1', latestCandidate.id]);
 </BaseLayout>
 
 <script>
-  const maxSelection = 3;
+  const maxSelection = 1;
   const choices = Array.from(document.querySelectorAll('.version-choice'));
   const inputs = Array.from(document.querySelectorAll('.version-choice input'));
   const presetButtons = Array.from(document.querySelectorAll('[data-preset]'));
