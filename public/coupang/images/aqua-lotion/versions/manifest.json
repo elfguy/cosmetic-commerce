@@ -36,6 +36,13 @@
       "representativeCount": 0,
       "detailCount": 10,
       "source": "public/coupang/images/aqua-lotion/versions/v4"
+    },
+    {
+      "id": "v41",
+      "label": "V4.1 최종 수정본",
+      "representativeCount": 5,
+      "detailCount": 10,
+      "source": "public/coupang/images/aqua-lotion/versions/v41"
     }
   ],
   "originalRepresentativeSourceUrls": [

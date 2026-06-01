@@ -233,7 +233,7 @@ export const productVersions: Record<string, ProductVersion[]> = {
     {
       id: 'v3',
       label: 'V3',
-      status: 'candidate',
+      status: 'archive',
       date: '2026-05-31',
       summary: '최근 다운로드 이미지로 구성한 대표 5장 + 상세 9장 후보입니다. 중복 상세 컷은 Point 6 문구가 없는 버전으로 교체했습니다.',
       mainImages: Array.from({ length: 5 }, (_, i) => '/coupang/images/aqua-lotion/versions/v3/representative/' + String(i + 1).padStart(2, '0') + '.png'),
@@ -246,7 +246,25 @@ export const productVersions: Record<string, ProductVersion[]> = {
       metrics: [
         { label: '대표', value: '5' },
         { label: '상세', value: '9' },
-        { label: '상태', value: '후보' },
+        { label: '상태', value: '보관' },
+      ],
+    },
+    {
+      id: 'v41',
+      label: 'V4.1',
+      status: 'candidate',
+      date: '2026-06-01',
+      summary: 'V4 상세 이미지 중 리스크가 있던 05/06/08/10을 코드 렌더링으로 수정한 최종 검수 후보입니다. 특허번호·시험번호·인증마크 임의 표기를 제거했습니다.',
+      mainImages: Array.from({ length: 5 }, (_, i) => '/coupang/images/aqua-lotion/versions/v3/representative/' + String(i + 1).padStart(2, '0') + '.png'),
+      detailImages: Array.from({ length: 10 }, (_, i) => '/coupang/images/aqua-lotion/versions/v41/detail/' + String(i + 1).padStart(2, '0') + '.png'),
+      links: [
+        { label: '버전 비교', href: '/marketing/aqua-lotion-version-compare/' },
+        { label: 'V4.1 상세 컨택시트', href: '/coupang/images/aqua-lotion/versions/v41/v41-detail-contact-sheet.png' },
+      ],
+      metrics: [
+        { label: '대표', value: '5' },
+        { label: '상세', value: '10' },
+        { label: '상태', value: '최종 후보' },
       ],
     },
   ],
