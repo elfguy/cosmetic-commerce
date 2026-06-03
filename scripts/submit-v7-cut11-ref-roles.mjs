@@ -1,0 +1,143 @@
+import { chromium } from 'playwright';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+
+const root = '/Users/elfguy/alba/cosmetic-commerce';
+const outDir = path.join(root, 'public/coupang/images/aqua-lotion/versions/v7-sequential-780');
+await fs.mkdir(path.join(outDir, 'prompts'), { recursive: true });
+await fs.mkdir(path.join(outDir, 'reference'), { recursive: true });
+await fs.mkdir(path.join(outDir, 'raw'), { recursive: true });
+
+const refs = [
+  {
+    role: 'NEGATIVE_STOP_REFERENCE__layout_only_do_not_copy_STOP',
+    src: path.join(root, 'public/coupang/images/aqua-lotion/versions/original/detail/12.png'),
+    dst: path.join(outDir, 'reference/cut11-refroles-01-negative-stop-layout-only.png'),
+  },
+  {
+    role: 'POSITIVE_PUMP_PRODUCT_PHOTO_REFERENCE__copy_photo_feel',
+    src: path.join(root, 'public/coupang/images/aqua-lotion/versions/v3/detail/08.png'),
+    dst: path.join(outDir, 'reference/cut11-refroles-02-positive-v3-08-pump-photo.png'),
+  },
+  {
+    role: 'POSITIVE_V7_TONE_BOARD__copy_tone_not_v3_style',
+    src: path.join(root, 'tmp-v7-01-10-contact-no-labels-v2.png'),
+    dst: path.join(outDir, 'reference/cut11-refroles-03-positive-v7-tone-board.png'),
+  },
+  {
+    role: 'CONTINUITY_REFERENCE__adjacent_cut_10',
+    src: path.join(outDir, 'detail/10.png'),
+    dst: path.join(outDir, 'reference/cut11-refroles-04-continuity-cut10.png'),
+  },
+  {
+    role: 'CURRENT_11_REFERENCE__avoid_overcopy_only_compare',
+    src: path.join(outDir, 'detail/11.png'),
+    dst: path.join(outDir, 'reference/cut11-refroles-05-current-11-compare-only.png'),
+  },
+];
+
+for (const r of refs) await fs.copyFile(r.src, r.dst);
+const uploadFiles = refs.map(r => r.dst);
+const roleText = refs.map((r, i) => `${i+1}. ${path.basename(r.dst)} = ${r.role}`).join('\n');
+
+const prompt = `쿠팡 상세페이지용 세로 이미지 1장을 생성해줘. 설명만 하지 말고 실제 이미지를 생성해줘.
+
+[첨부 이미지 역할 — 반드시 구분]
+${roleText}
+
+[가장 중요한 대표 요청]
+- 기존 사용법 이미지의 STOP 내용은 잘못됐다.
+- STOP 방향으로 돌리면 펌프 자체가 풀릴 수 있다는 오해를 준다.
+- 그래서 STOP 문구, STOP 화살표, STOP 방향 회전 안내는 절대 넣지 않는다.
+- 사용법/펌프 사진은 V3 08 사진이 더 낫다. 펌프/제품 사진감은 V3 08을 긍정 레퍼런스로 참고한다.
+- 하지만 최종 디자인 톤은 V3가 아니라 V7 01~10 톤보드에 맞춘다.
+
+[부정 레퍼런스 사용법]
+첨부한 기존 사용법/STOP 이미지는 부정 레퍼런스다.
+사용법 컷이라는 목적과 대략적인 정보 구조만 참고하고, STOP 표기/STOP 화살표/STOP 방향 안내/펌프를 돌려 분리하는 듯한 그림은 절대 따라 하지 마라.
+
+[긍정 레퍼런스 사용법]
+첨부한 V3 08 사진은 긍정 레퍼런스다.
+펌프 클로즈업, 제품을 눕힌 사진감, 촉촉한 물방울/수분감, 실제 제품 사진 느낌은 이 이미지를 참고한다.
+
+[V7 톤앤매너]
+최종 결과물은 V7 세트와 이어져야 한다.
+화이트 배경, 연아쿠아 수분감, 둥근 흰색 카드형 정보 블록, 깔끔한 상세페이지 인포그래픽 톤.
+잎사귀/식물 장식은 필수 아니다. 넣더라도 아주 작고 적게만. 상단을 잎사귀로 채우지 말 것.
+
+[이번 컷 주제]
+사용 방법 / HOW TO USE
+히알루론산 아쿠아 로션 사용법과 펌프 OPEN 안내.
+
+[이미지 안에 들어갈 문구 — 이 문구만 깔끔하게]
+사용 방법
+HOW TO USE
+
+얼굴에 골고루 펴 바른 후
+부드럽게 흡수시켜 주세요.
+
+건조한 부위에는
+한 번 더 덧발라 주세요.
+
+펌프 헤드를 OPEN 방향으로
+살짝 돌려 올린 후 눌러 사용하세요.
+
+무리하게 돌리거나 분리하지 마세요.
+
+[레이아웃]
+- 상단: 사용 방법 / HOW TO USE. 여백 넉넉하게, 깔끔하게.
+- 중앙: 둥근 흰색 카드 2개로 사용법을 정리. 텍스트가 주인공이다.
+- 하단 또는 우하단: 펌프 클로즈업 안내 카드. OPEN 글자와 부드러운 곡선 화살표 1개만.
+- 하단 제품 이미지는 작게 보조 배치. 제품 라벨은 가능하면 YOURSKIN+ / HYALURONIC ACID AQUA LOTION / 300ml 느낌 유지.
+- 제품 사진은 보조 요소다. 병이 화면 대부분을 차지하면 실패다.
+
+[펌프 안내 필수]
+- OPEN만 보여준다.
+- 펌프 헤드를 OPEN 방향으로 살짝 돌려 올리고 누르는 느낌만.
+- STOP 글자 금지.
+- STOP 화살표 금지.
+- STOP 방향 안내 금지.
+- 펌프가 빠지거나 분리되는 그림 금지.
+- 복잡한 기계식 잠금/해제 도식 금지.
+
+[절대 금지]
+- V7, v7, 버전명, 컷번호, 11, Point, POINT, CUT, STEP, page 같은 제작용 표식 금지.
+- 브라우저 UI, 휴대폰 UI, 검정 상태바 금지.
+- 한국어 오타/깨짐/잘림 금지.
+- 치료/완치/질병개선/효능보장 표현 금지.
+- STOP 관련 모든 표기 금지.
+- 상단 잎사귀 과다 금지.
+- 풀화면 병 클로즈업/고급 단독 제품 광고컷 금지.
+
+최종 비율은 780×1360 세로 상세페이지.`;
+
+await fs.writeFile(path.join(outDir, 'prompts/11-refroles-submitted.txt'), prompt);
+function getId(src) { try { return new URL(src).searchParams.get('id') || src; } catch { return src; } }
+const browser = await chromium.connectOverCDP('http://127.0.0.1:9222');
+const ctx = browser.contexts()[0];
+const page = await ctx.newPage();
+await page.goto('https://chatgpt.com/images/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+await page.waitForTimeout(5000);
+console.log('workspace', {url: page.url(), title: await page.title()});
+const create = page.getByText('이미지 만들기', { exact: true }).first();
+if (await create.count()) { await create.click({ timeout: 15000 }).catch(()=>{}); await page.waitForTimeout(3000); }
+await page.waitForSelector('#prompt-textarea', { timeout: 60000 });
+const before = await page.evaluate(() => Array.from(document.images).map(img => img.currentSrc || img.src).filter(src => src.includes('backend-api/estuary/content')));
+await fs.writeFile(path.join(outDir, 'prompts/11-refroles-before-ids.json'), JSON.stringify(before.map(getId), null, 2));
+await page.setInputFiles('input#upload-files, input#upload-photos, input#image-gen-action-modal-upload-photos', uploadFiles);
+console.log('uploaded refs', uploadFiles.length, uploadFiles);
+await page.waitForTimeout(10000);
+for (const text of ['확인', '완료']) {
+  const btn = page.getByRole('button', { name: text }).first();
+  if (await btn.count()) { await btn.click({ timeout: 3000 }).catch(() => {}); await page.waitForTimeout(1000); }
+}
+const composer = page.locator('#prompt-textarea').last();
+await composer.click();
+await page.keyboard.insertText(prompt);
+await page.waitForTimeout(500);
+await page.locator('button[data-testid="send-button"], #composer-submit-button, button[aria-label*="프롬프트 보내기"]').last().click({ timeout: 15000 });
+await page.waitForTimeout(15000);
+await fs.writeFile(path.join(outDir, 'prompts/11-refroles-chat-url.txt'), page.url() + '\n');
+await page.screenshot({ path: path.join(root, 'tmp-v7-cut11-refroles-submitted.png'), fullPage: true });
+console.log('submitted', { url: page.url(), title: await page.title() });
+process.exit(0);

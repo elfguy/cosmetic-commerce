@@ -1,0 +1,56 @@
+import { chromium } from 'playwright';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+
+const root = '/Users/elfguy/alba/cosmetic-commerce';
+const outDir = path.join(root, 'public/coupang/images/aqua-lotion/versions/v7-sequential-780');
+const resultFile = path.join(outDir, 'prompts/06-result.txt');
+let chatUrl = 'https://chatgpt.com/c/6a1e51a6-01e8-83a6-872e-60708ee3ff61';
+try { chatUrl = (await fs.readFile(resultFile, 'utf8')).split('\n')[0].trim() || chatUrl; } catch {}
+
+const prompt = `방금 생성한 06번 이미지를 같은 레이아웃/톤/품질로 수정해서 실제 이미지를 다시 생성해줘.
+
+[수정 핵심]
+- 하단의 특허증서/문서 그래픽 안에 회사명, 권리자명, 출원인, 등록권자, 문서 상세 텍스트가 읽히면 안 된다.
+- 이 특허는 원료에 대한 특허권이므로 우리 회사 명칭이나 YOURSKIN+, 제조사/판매사처럼 보이는 이름을 특허권자/회사명으로 넣지 않는다.
+- 특허증서 내부 내용은 흐리게 블루밍/블러 처리한다. 문서의 분위기와 테두리/인장 느낌만 남기고, 내부 글자는 읽을 수 없게 한다.
+- 특허증서에는 큰 공식 로고/정부기관 로고/회사명/권리자명/등록번호처럼 읽히는 상세 텍스트를 넣지 않는다.
+
+[유지할 것]
+- 전체 톤앤매너: V7 세트와 맞는 화이트 + 연아쿠아 + 민트그린.
+- 큰 문구: Fresh Bud No.6 / 민감 피부를 위한 특허 진정 원료.
+- 6가지 새싹 원료 구성과 원형 접시/원료 버블.
+- 상단 칩: 새싹 유래 복합 성분 / 민감 피부 케어 / 특허 원료.
+- 상품 병/제품 이미지는 넣지 않는다.
+- POINT, CUT, STEP, 페이지 번호는 넣지 않는다.
+
+[하단 특허 문서 표현]
+- 문서 그래픽은 작고 은은하게.
+- 내부는 연한 흰색/민트빛 블루밍으로 흐릿하게 처리.
+- '특허 원료'라는 일반 설명 문구 정도만 가능하지만, 권리자/회사명/등록번호/공식 로고처럼 보이는 정보는 금지.
+
+[금지]
+- 우리 회사명, YOURSKIN+, 제조사명, 판매사명, 권리자명, 등록권자명, 출원인명 표시 금지.
+- 정부기관 로고/특허청 로고를 공식 인증처럼 크게 표시 금지.
+- 문서 안 상세 내용이 선명하게 읽히는 것 금지.
+- 상품 병/제품 이미지 금지.
+- 의료적 치료/완치/질병 개선 표현 금지.
+
+780:1360 세로형 상세페이지 이미지로 다시 생성해줘.`;
+
+await fs.writeFile(path.join(outDir, 'prompts/06-blur-patent-doc-revision.txt'), prompt);
+function getId(src) { try { return new URL(src).searchParams.get('id') || src; } catch { return src; } }
+const browser = await chromium.connectOverCDP('http://127.0.0.1:9222');
+const ctx = browser.contexts()[0];
+const page = await ctx.newPage();
+await page.goto(chatUrl, { waitUntil: 'domcontentloaded', timeout: 60000 });
+await page.waitForTimeout(6000);
+const before = await page.evaluate(() => Array.from(document.images).map(img => img.currentSrc || img.src).filter(src => src.includes('backend-api/estuary/content')));
+await fs.writeFile(path.join(outDir, 'prompts/06-blur-before-ids.json'), JSON.stringify(before.map(getId), null, 2));
+await page.waitForSelector('#prompt-textarea', { timeout: 60000 });
+await page.locator('#prompt-textarea').click();
+await page.keyboard.insertText(prompt);
+await page.waitForTimeout(500);
+await page.locator('button[data-testid="send-button"], #composer-submit-button, button[aria-label*="프롬프트 보내기"]').last().click({ timeout: 15000 });
+await page.screenshot({ path: path.join(root, 'tmp-v7-cut06-blur-submitted.png'), fullPage: true });
+console.log('submitted blur patent revision', page.url(), 'beforeCount', before.length);

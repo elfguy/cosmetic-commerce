@@ -1,13 +1,68 @@
 {
   "productId": "9218811640",
-  "activeVersion": "v4-gpt-web",
+  "activeVersion": "original",
   "versions": [
     {
-      "id": "v4-gpt-web",
+      "id": "original",
+      "label": "원본",
+      "representativeCount": 6,
+      "detailCount": 15,
+      "source": "public/coupang/images/aqua-lotion/versions/original"
+    },
+    {
+      "id": "v1",
+      "label": "V1",
+      "representativeCount": 5,
+      "detailCount": 8,
+      "source": "public/coupang/images/aqua-lotion/versions/v1"
+    },
+    {
+      "id": "v2",
+      "label": "V2",
+      "representativeCount": 6,
+      "detailCount": 11,
+      "source": "public/coupang/images/aqua-lotion/versions/v2"
+    },
+    {
+      "id": "v3",
+      "label": "V3",
+      "representativeCount": 5,
+      "detailCount": 9,
+      "source": "public/coupang/images/aqua-lotion/versions/v3"
+    },
+    {
+      "id": "v4",
       "label": "V4",
       "representativeCount": 6,
-      "detailCount": 10,
-      "source": "public/coupang/images/aqua-lotion/versions/v4-gpt-web"
+      "detailCount": 15,
+      "source": "public/coupang/images/aqua-lotion/versions/v4"
+    }
+  ],
+  "archivedVersions": [
+    {
+      "id": "archive-v4-gpt-images-2",
+      "label": "보관 V4 GPT Images 2.0",
+      "source": "public/coupang/images/aqua-lotion/versions/archive/v4"
+    },
+    {
+      "id": "archive-v4-gpt-web",
+      "label": "보관 V4 GPT Web Candidate",
+      "source": "public/coupang/images/aqua-lotion/versions/archive/v4-gpt-web"
+    },
+    {
+      "id": "archive-v4-gpt-web-test",
+      "label": "보관 V4 GPT Web Test",
+      "source": "public/coupang/images/aqua-lotion/versions/archive/v4-gpt-web-test"
+    },
+    {
+      "id": "archive-v41",
+      "label": "보관 V4.1",
+      "source": "public/coupang/images/aqua-lotion/versions/archive/v41"
+    },
+    {
+      "id": "archive-v4-message-generated-invalid",
+      "label": "보관 불합격 V4 message-generated",
+      "source": "public/coupang/images/aqua-lotion/versions/archive/v4-message-generated-invalid"
     }
   ],
   "originalRepresentativeSourceUrls": [

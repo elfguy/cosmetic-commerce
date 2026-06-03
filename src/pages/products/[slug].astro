@@ -51,7 +51,7 @@ const appliedMainCount = appliedVersion?.mainImages.length ?? 0;
       <div class="hero-links" aria-label="외부 링크">
         <a href={product.commerce.coupangUrl} target="_blank" rel="noreferrer">쿠팡 상품</a>
         {product.commerce.naverUrl ? <a href={product.commerce.naverUrl} target="_blank" rel="noreferrer">네이버 상품</a> : null}
-        {product.ops.workspaceUrl ? <a href={product.ops.workspaceUrl}>소재 작업실</a> : null}
+        {product.ops.workspaceUrl ? <a class="workspace-link" href={product.ops.workspaceUrl}>{product.slug === 'aqua-lotion' ? '작업하던 V4 비교 페이지' : '소재 작업실'}</a> : null}
       </div>
     </section>
 
@@ -93,20 +93,22 @@ const appliedMainCount = appliedVersion?.mainImages.length ?? 0;
             )}
           </aside>
 
-          <section class="main-images" aria-label={`${version.label} 대표 이미지`}>
-            <div class="section-head">
-              <p class="eyebrow">Main</p>
-              <h2>대표 이미지</h2>
-            </div>
-            <div class="main-strip">
-              {version.mainImages.length > 0 ? version.mainImages.map((src, index) => (
-                <a href={src} target="_blank" rel="noreferrer" class:list={['main-tile', index === 0 && 'is-primary']}>
-                  <span>{String(index + 1).padStart(2, '0')}</span>
-                  <img src={src} alt={`${version.label} 대표 이미지 ${index + 1}`} loading={index === 0 ? 'eager' : 'lazy'} />
-                </a>
-              )) : <p class="empty-state">대표 이미지 없음</p>}
-            </div>
-          </section>
+          {version.mainImages.length > 0 && (
+            <section class="main-images" aria-label={`${version.label} 대표 이미지`}>
+              <div class="section-head">
+                <p class="eyebrow">Main</p>
+                <h2>대표 이미지</h2>
+              </div>
+              <div class="main-strip">
+                {version.mainImages.map((src, index) => (
+                  <a href={src} target="_blank" rel="noreferrer" class:list={['main-tile', index === 0 && 'is-primary']}>
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <img src={src} alt={`${version.label} 대표 이미지 ${index + 1}`} loading={index === 0 ? 'eager' : 'lazy'} />
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
 
           <section class="detail-images" aria-label={`${version.label} 상세 이미지`}>
             <div class="section-head">

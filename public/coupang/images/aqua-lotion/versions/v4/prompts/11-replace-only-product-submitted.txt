@@ -1,0 +1,27 @@
+Edit the provided base image, not a new design.
+
+PRIMARY TASK:
+Keep the entire existing Korean how-to-use detail page exactly the same: same background, same water texture, same title, same Korean text, same two instruction cards, same icons, same OPEN arrow and pump instruction copy, same spacing, same color tone, same premium soft aqua style.
+
+Change ONLY the product bottle at the bottom-right/bottom area.
+
+Replace the existing generic bottle labeled "hyaluronic aqua lotion" with the exact YOURSKIN+ product from the product reference image:
+- white pump
+- transparent cylindrical bottle with milky white lotion inside
+- white label
+- visible brand: YOURSKIN+
+- visible product text: HYALURONIC ACID / AQUA LOTION / 300ml / 10.14 fl.oz
+- keep the bottle in the same approximate position, size, and perspective as the original bottom bottle
+- make it naturally integrated into the water background with matching lighting/reflections
+
+STRICT PRESERVATION:
+Do not redesign the page.
+Do not change the Korean text.
+Do not add new badges, numbers, labels, icons, claims, or decorative stickers.
+Do not add STOP.
+Do not alter OPEN arrow or pump usage guidance.
+Do not change the instruction cards or title.
+Do not create a full-bleed product hero; preserve the original balanced layout.
+
+FINAL IMAGE:
+Vertical Korean ecommerce detail image, 780:1360 composition, clean mobile readability, premium cosmetic product page.

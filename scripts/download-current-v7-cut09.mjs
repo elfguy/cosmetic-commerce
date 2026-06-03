@@ -1,0 +1,20 @@
+import { chromium } from 'playwright';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+const root='/Users/elfguy/alba/cosmetic-commerce';
+const outDir=path.join(root,'public/coupang/images/aqua-lotion/versions/v7-sequential-780');
+const browser=await chromium.connectOverCDP('http://127.0.0.1:9222');
+const ctx=browser.contexts()[0];
+const targetUrl='https://chatgpt.com/c/6a1e8186-d124-83a9-a497-03c68fc14dc0';
+let page=ctx.pages().find(p=>p.url().startsWith(targetUrl));
+if(!page){ page=await ctx.newPage(); await page.goto(targetUrl,{waitUntil:'domcontentloaded',timeout:60000}); await page.waitForTimeout(5000); }
+const imgs=await page.evaluate(()=>Array.from(document.images).map(img=>({alt:img.alt,src:img.currentSrc||img.src,w:img.naturalWidth,h:img.naturalHeight,rect:(()=>{const r=img.getBoundingClientRect();return{x:r.x,y:r.y,w:r.width,h:r.height}})()})).filter(x=>x.src.includes('backend-api/estuary/content')));
+console.log(JSON.stringify(imgs.map(x=>({alt:x.alt,w:x.w,h:x.h,y:x.rect.y,id:new URL(x.src).searchParams.get('id')})),null,2));
+const gen=imgs.filter(x=>x.w>=900&&x.h>=1500&&!String(x.alt||'').startsWith('cut09-')).at(-1);
+if(!gen) throw new Error('no generated image on target page');
+const b64=await page.evaluate(async src=>{const r=await fetch(src,{credentials:'include'}); if(!r.ok) throw new Error('fetch '+r.status); const ab=await r.arrayBuffer(); const bytes=new Uint8Array(ab); let s=''; for(let i=0;i<bytes.length;i+=0x8000)s+=String.fromCharCode(...bytes.subarray(i,i+0x8000)); return btoa(s);},gen.src);
+const buf=Buffer.from(b64,'base64');
+const rawFile=path.join(outDir,'raw/09-ewg-ph-fragrance-gpt.png');
+await fs.writeFile(rawFile,buf);
+await fs.writeFile(path.join(outDir,'prompts/09-result.txt'),`${targetUrl}\n${gen.src}\n${new URL(gen.src).searchParams.get('id')}\n${buf.length}\n${gen.w}x${gen.h}\n`);
+console.log('saved',rawFile,buf.length,gen.w+'x'+gen.h,new URL(gen.src).searchParams.get('id'));

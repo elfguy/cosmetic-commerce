@@ -1,0 +1,17 @@
+Keep the generated image design exactly the same.
+
+Make only this text correction in the bottom product information table:
+
+Current product name text:
+히알루론산 아쿠아 로션
+
+Change it to:
+유어스킨플러스 히알루론산 아쿠아 로션
+
+Do not change the layout, colors, typography style, ingredient section, eco packaging visuals, or any other text.
+
+Important:
+- Preserve all Korean text cleanly and naturally.
+- Do not add product bottle, fake box, logo, barcode, or any new objects.
+- Do not redesign the page.
+- Only fix the product name line in the product info table.

@@ -1,0 +1,41 @@
+Create a premium vertical ecommerce detail-page visual background for Korean skincare, 780:1360 composition.
+
+Purpose:
+- This is cut 12 of a Coupang cosmetic detail page.
+- Topic: eco-friendly minimal packaging + manufacturer direct production/direct sales + product information.
+- Generate the visual design foundation only. Korean typography, product info table, and exact copy will be added later with deterministic typography.
+
+Overall style:
+- GPT Images 2.0 premium advertising quality.
+- Clean Korean skincare ecommerce style.
+- Soft white background, pale aqua, mint green, fresh natural light.
+- Rounded white cards, subtle green outlines, soft shadows, airy spacing.
+- Polished dimensional visuals, not flat cheap clipart.
+- Must match a soft aqua lotion campaign, not dark, not luxury perfume, not clinical hospital/lab.
+
+Layout requirements:
+- Vertical 780:1360 page.
+- Top title area should have clean whitespace for Korean headline.
+- Middle: two large rounded concept cards.
+  Card A visual: eco-friendly packaging materials only — honeycomb kraft paper cushion, recycled paper texture, soft green leaves, small cute earth/eco motif. No product bottle.
+  Card B visual: manufacturer-direct concept — simple premium green factory/lab-manufacturing icon or soft 3D miniature factory with leaves, direct-to-consumer flow feeling. No text.
+- Lower third: leave a clean white/aqua area where a product information table can be overlaid later.
+- Keep visual elements mostly on the right or inside cards; leave enough blank text areas on the left/center.
+
+Important visual direction from reference:
+- Show only materials and conceptual symbols, not a packaged real product.
+- Use honeycomb paper wrap, kraft cushioning, leaves, green factory icon, smiling eco-earth style if appropriate.
+- The feeling should be trustworthy, clean, and consumer-friendly.
+
+Hard constraints:
+- NO readable Korean or English text anywhere.
+- NO product bottle, NO lotion bottle, NO fake cosmetic package, NO YOURSKIN+ box.
+- NO logo, NO barcode, NO label, NO brand name.
+- NO realistic branded packaging.
+- NO medical/certificate/document visuals.
+- NO numbered badges, CUT labels, POINT labels, STEP labels.
+- Avoid clutter; keep it premium and spacious.
+
+Output:
+- High-resolution sharp image.
+- Must be suitable as a background/base for final Korean text overlay.

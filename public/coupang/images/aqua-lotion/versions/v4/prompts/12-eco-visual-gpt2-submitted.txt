@@ -1,0 +1,35 @@
+Create a premium ecommerce detail-page visual background section for Korean skincare, focused on ECO-FRIENDLY MINIMAL PACKAGING.
+
+Final purpose:
+- This will be used as the TOP VISUAL AREA of a 780x1360 Coupang cosmetic detail page.
+- Generate only a high-quality visual illustration/photo-composite area, not the full page.
+- Leave clean empty space for Korean typography to be added later outside the image if needed.
+
+Style:
+- GPT Images 2.0 premium advertising quality.
+- Soft white, pale aqua, fresh mint green tone matching a clean Korean skincare ecommerce detail page.
+- Bright natural light, high-end but friendly, not luxury perfume, not clinical lab.
+- Modern rounded-card composition, elegant shadows, crisp details, mobile-first vertical crop.
+
+Visual subject:
+- Eco-friendly minimal packaging concept.
+- Beautiful kraft paper cushioning / honeycomb paper wrap / recycled paper texture.
+- Fresh green leaves, small water droplets, soft aqua wave accents.
+- A simple abstract earth/eco symbol may be included as an icon-like visual element, but no readable text.
+- Convey: less unnecessary packaging, environmentally conscious, direct-to-consumer simple packaging.
+
+Hard constraints:
+- NO readable Korean or English text inside the image.
+- NO product bottle.
+- NO fake YOURSKIN+ box.
+- NO branded package, NO label, NO logo, NO barcode.
+- Do not invent any cosmetic packaging box.
+- Do not use medical/scientific certificate style.
+- Do not make it look like a cheap clipart icon set.
+- Avoid overly cartoonish flat SVG look; make it polished, dimensional, premium.
+
+Composition:
+- Vertical ecommerce banner crop, 780:520 visual section feel.
+- Main eco packaging visual on right/bottom-right, open clean area on left/top-left for later typography.
+- Soft rounded white/aqua card background, integrated with the existing V7 aqua-lotion tone.
+- High-resolution, sharp, polished, no garbled typography.

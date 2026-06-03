@@ -1,0 +1,35 @@
+Edit the first image as the base canvas. This is an image-editing task, not a redesign.
+
+ABSOLUTE RULE:
+Preserve the first/base image almost pixel-for-pixel. Keep the exact same Korean how-to-use page:
+- same title text: 사용 방법 / HOW TO USE
+- same two instruction cards only
+- same card positions, same icons, same numbers 1 and 2
+- same Korean copy exactly:
+  얼굴에 골고루 펴 바른 후 / 부드럽게 흡수시켜 주세요.
+  건조한 부위에는 / 한 번 더 덧발라 주세요.
+  펌프 헤드를 OPEN 방향으로 / 살짝 돌려 올린 후 눌러 사용하세요.
+  무리하게 돌리거나 분리하지 마세요.
+- same OPEN arrow and same pump instruction position
+- same background, same water texture, same spacing, same soft aqua tone
+
+ONLY ALLOWED CHANGE:
+Replace only the generic product bottle at the bottom-right/bottom area of the base image.
+
+Use the uploaded YOURSKIN+ product reference for the replacement bottle:
+- white pump
+- transparent cylindrical bottle with milky white lotion
+- white label
+- brand visible: YOURSKIN+
+- product visible: HYALURONIC ACID / AQUA LOTION / 300ml / 10.14 fl.oz
+
+Do NOT regenerate the full layout.
+Do NOT add leaves.
+Do NOT add a third instruction card.
+Do NOT rewrite Korean text.
+Do NOT change the title.
+Do NOT change icons.
+Do NOT add STOP.
+Do NOT add any new claims/badges/stickers.
+
+If exact preservation is difficult, prioritize preserving the base image layout and text over making a new design. The final result should look like the first base image with only the bottle label/product identity corrected to YOURSKIN+ AQUA LOTION.

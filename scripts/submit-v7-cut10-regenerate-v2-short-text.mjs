@@ -1,0 +1,64 @@
+import { chromium } from 'playwright';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+const root='/Users/elfguy/alba/cosmetic-commerce';
+const outDir=path.join(root,'public/coupang/images/aqua-lotion/versions/v7-sequential-780');
+await fs.mkdir(path.join(outDir,'prompts'),{recursive:true});
+await fs.mkdir(path.join(outDir,'raw'),{recursive:true});
+const targetUrl=(await fs.readFile(path.join(outDir,'prompts/10-regenerate-chat-url.txt'),'utf8')).trim();
+const prompt=`방금 제조일자 상세페이지 이미지를 다시 생성해줘. 이전 이미지는 제목의 '신선함' 글자가 틀려서 폐기한다. 실제 이미지를 새로 생성해야 한다.
+
+가장 중요한 규칙:
+- 제목 문구는 반드시 정확히: 제조일자는 신선함의 기준입니다
+- '신선함' 글자를 절대 틀리지 마라. '시서함', '신서함', '신선합' 금지.
+- 이미지 안에 V7, v7, 버전명, 컷번호, 10, Point, CUT, STEP 같은 제작용 표식 금지.
+
+[이미지 문구 — 아래 문구만 사용, 다른 긴 문장 추가하지 마라]
+제조일자는 신선함의 기준입니다
+
+유어스킨플러스
+제조번호 + 제조일자 표기
+소비자가 바로 확인 가능
+
+일부 타사 제품
+제조번호 + 사용기한만 표기
+제조 시점 확인 어려움
+
+제조일로부터 6개월 이내 제품만 출고
+
+제조일이 오래되었거나 사용기한 임박 제품을 주의하세요
+
+[디자인]
+- 쿠팡 상세페이지용 세로형 780:1360 비율.
+- 화이트 + 연아쿠아 + 민트그린 톤.
+- 상단 제목은 크고 선명하게, 텍스트 수를 줄여 오타 없이.
+- 중앙 좌우 비교 카드 2개.
+- 왼쪽 카드에는 제품 바닥면 클로즈업 느낌, 작은 인쇄 예시: 제조 2025.07.19
+- 오른쪽 카드에는 제품 바닥면 클로즈업 느낌, 작은 인쇄 예시: 2026.03.29까지
+- 제품 전체 병 정면샷은 넣지 말고 바닥면 클로즈업만 사용.
+- 하단 민트 배너: 제조일로부터 6개월 이내 제품만 출고
+- 맨 아래 작은 주의 문구.
+- 디자인은 깨끗하고 고급스럽게, 이전 세트의 연아쿠아 수분감과 맞게.
+
+[금지]
+- 한국어 오타, 깨짐, 의미 없는 글자, 잘림 금지.
+- 브라우저 UI, 휴대폰 UI, 검정 상태바 금지.
+- 과도한 타사 비방 금지.
+- 치료/완치/질병개선/효능보장 표현 금지.
+- 버전명/컷번호/제작용 라벨 금지.`;
+await fs.writeFile(path.join(outDir,'prompts/10-regenerate-v2-short-text-submitted.txt'),prompt);
+const browser=await chromium.connectOverCDP('http://127.0.0.1:9222');
+const ctx=browser.contexts()[0];
+let page=ctx.pages().find(p=>p.url().startsWith(targetUrl));
+if(!page){page=await ctx.newPage(); await page.goto(targetUrl,{waitUntil:'domcontentloaded',timeout:60000}); await page.waitForTimeout(5000);}
+const before=await page.evaluate(()=>Array.from(document.images).map(img=>img.currentSrc||img.src).filter(src=>src.includes('backend-api/estuary/content')).map(src=>{try{return new URL(src).searchParams.get('id')||src}catch{return src}}));
+await fs.writeFile(path.join(outDir,'prompts/10-regenerate-v2-before-ids.json'),JSON.stringify(before,null,2));
+await page.locator('#prompt-textarea').last().click();
+await page.keyboard.insertText(prompt);
+await page.waitForTimeout(500);
+await page.locator('button[data-testid="send-button"], #composer-submit-button, button[aria-label*="프롬프트 보내기"]').last().click({timeout:15000});
+await page.waitForTimeout(12000);
+await fs.writeFile(path.join(outDir,'prompts/10-regenerate-v2-chat-url.txt'),page.url()+'\n');
+await page.screenshot({path:path.join(root,'tmp-v7-cut10-regenerate-v2-submitted.png'),fullPage:true});
+console.log('submitted',page.url());
+process.exit(0);

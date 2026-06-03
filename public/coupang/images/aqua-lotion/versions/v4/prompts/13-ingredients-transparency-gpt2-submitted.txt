@@ -1,0 +1,36 @@
+Create a premium vertical ecommerce detail-page visual background for Korean skincare ingredients information, 780:1360 composition.
+
+Purpose:
+- This is a new cut 13 for a Coupang cosmetic detail page.
+- Topic: full ingredients / ingredient transparency for hyaluronic acid aqua lotion.
+- Generate the visual design foundation only. Exact Korean ingredients text will be added later with deterministic typography.
+
+Overall style:
+- GPT Images 2.0 premium advertising quality.
+- Soft white, pale aqua, mint green, clean Korean skincare ecommerce tone.
+- Rounded white cards, subtle aqua gradients, water droplets, botanical freshness.
+- Elegant, trustworthy, readable, mobile-first.
+- Not medical, not pharmaceutical, not dense lab poster.
+
+Layout requirements:
+- Vertical 780:1360 page.
+- Top: spacious headline area with soft aqua/green ingredient visuals.
+- Center and lower: one large clean rounded white card area, suitable for overlaying many lines of Korean ingredients text.
+- Keep the central card mostly blank/quiet, with faint background texture only.
+- Around edges: subtle ingredient motifs such as hyaluronic water droplets, small green sprouts, botanical leaves, clean water waves, tiny fermentation/plant abstract circles.
+- Include no readable text; leave the card clean.
+
+Visual message:
+- Ingredient transparency, clean formulation, moisture ingredients, botanical/ferment ingredient feeling.
+- Should feel like a polished cosmetic detail-page information section, not a scientific certificate.
+
+Hard constraints:
+- NO readable Korean or English text anywhere.
+- NO product bottle, NO fake package, NO logo, NO barcode, NO label, NO brand name.
+- NO medical claims, NO certificate/document/table images.
+- NO numbered badges, CUT labels, POINT labels, STEP labels.
+- Avoid clutter; the final page needs room for many lines of Korean ingredients.
+
+Output:
+- High-resolution sharp image.
+- Must be suitable as a background/base for final Korean full-ingredient typography overlay.

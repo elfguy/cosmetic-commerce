@@ -1,0 +1,49 @@
+Create one premium vertical ecommerce detail-page image for Korean skincare, 780:1360 composition.
+
+Use the uploaded reference image ONLY for the idea and structure: a clean information page that shows eco-friendly packaging MATERIALS, not a packaged product.
+
+Goal:
+- Replace cut 12 of an aqua lotion Coupang detail page.
+- Topic: eco-friendly minimal packaging + manufacturer direct sale.
+- The final Korean text will be added later with deterministic typography, so the generated image should be a high-quality visual base with no readable text.
+
+Core visual direction:
+- Show only packaging MATERIALS and natural elements, similar to the reference:
+  - honeycomb kraft paper cushioning
+  - recycled kraft paper texture
+  - soft paper wrap pieces
+  - fresh green leaves
+  - light aqua water/drop accents
+  - small simple eco/earth motif if it looks natural
+- No real packaged product photo.
+- No product bottle.
+- No fake cosmetic box.
+- No factory illustration unless it is extremely subtle; preferably avoid factory visuals.
+- It should feel like a premium Korean cosmetics detail page, not a factory process infographic.
+
+Layout:
+- Vertical 780:1360 mobile detail-page composition.
+- Top/center: beautiful material-focused visual, airy and premium.
+- Leave clean white/pale-aqua space for a Korean headline in the upper-left or upper-center.
+- Lower area: leave a calm rounded white card area where small product info can be overlaid later.
+- Keep it spacious, minimal, and elegant.
+
+Style:
+- GPT Images 2.0 premium advertising quality.
+- Soft white, pale aqua, mint green, natural kraft beige.
+- Clean skincare ecommerce tone, gentle light, soft shadows, high-resolution details.
+- Not cartoonish, not cheap flat clipart, not busy.
+- Match a soft aqua lotion campaign.
+
+Hard constraints:
+- NO readable Korean or English text.
+- NO logo, NO brand name, NO label, NO barcode.
+- NO product bottle.
+- NO fake YOURSKIN+ box or any cosmetic package box.
+- NO packaged real product.
+- NO document/certificate/medical/lab style.
+- NO numbered badges, POINT/STEP/CUT labels.
+- Do not overuse leaves; keep it clean.
+
+Output:
+- High-resolution, sharp, polished vertical image suitable for final typography overlay.
