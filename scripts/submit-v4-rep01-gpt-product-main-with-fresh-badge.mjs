@@ -11,17 +11,18 @@ await fs.mkdir(refDir, { recursive: true });
 
 const refs = [];
 const candidates = [
-  [path.join(outDir, 'representative/01.png'), path.join(refDir, 'rep01-badge-01-current-gpt-product-main.png')],
+  // Positive reference: V1 representative 01 has the desired top-left circular fresh icon style.
+  [path.join(root, 'public/coupang/images/aqua-lotion/versions/v1/representative/01.png'), path.join(refDir, 'rep01-badge-01-v1-icon-style-positive.png')],
+  // Product identity references. Preserve the real bottle/pump/label as much as possible.
   [path.join(root, 'public/coupang/images/aqua-lotion/assets/drive/aqua-lotion-packshot.png'), path.join(refDir, 'rep01-badge-02-real-product-packshot.png')],
-  ['/Users/elfguy/.hermes/image_cache/img_79b308d83598.jpeg', path.join(refDir, 'rep01-badge-03-user-coupang-example.jpeg')],
-  [path.join(root, 'public/coupang/images/aqua-lotion/versions/original/representative/01.png'), path.join(refDir, 'rep01-badge-04-original-coupang-ref.png')],
-  [path.join(root, 'public/coupang/images/aqua-lotion/versions/v2/representative/01.png'), path.join(refDir, 'rep01-badge-05-v2-ref-badge-style.png')],
+  [path.join(root, 'public/coupang/images/aqua-lotion/versions/original/representative/01.png'), path.join(refDir, 'rep01-badge-03-original-product-reference.png')],
+  [path.join(root, 'public/coupang/images/aqua-lotion/versions/v2/representative/01.png'), path.join(refDir, 'rep01-badge-04-clean-coupang-main-reference.png')],
 ];
 for (const [src, dst] of candidates) {
   try { await fs.stat(src); await fs.copyFile(src, dst); refs.push(dst); } catch (e) { console.warn('missing ref', src, e.message); }
 }
 
-const prompt = `업로드한 현재 GPT Images 대표 1번 이미지를 기반으로, 쿠팡 상품 대표이미지 1번을 다시 만들어 주세요. 설명만 하지 말고 실제 이미지를 생성해 주세요.\n\n[핵심 목표]\n- 현재 이미지의 장점인 깨끗한 흰 배경 + 제품 중심 + 고급 제품컷 느낌은 유지합니다.\n- 단, 구매 신뢰 포인트로 원형 보장 마크를 반드시 1개 추가합니다.\n- 광고 배너처럼 만들지 말고, 제품만 돋보이는 쿠팡 메인 이미지 느낌을 유지하세요.\n\n[제품]\nYOURSKIN+ HYALURONIC ACID AQUA LOTION 300ml\n히알루론산 아쿠아 로션\n\n[반드시 넣을 마크 문구]\n원형 또는 깔끔한 스티커형 보장 마크 1개:\n제조 6개월 이내\n신선제품 보장\n\n[마크 디자인]\n- 위치: 제품을 가리지 않는 좌하단 또는 우하단.\n- 크기: 작지만 읽히는 정도. 전체 이미지의 약 15~20% 이내.\n- 색상: 기존 V2/V4 톤에 맞는 아쿠아 블루/민트/화이트 계열.\n- 자연스럽고 고급스러운 쿠팡 제품 메인 이미지용 배지.\n- 빨간 경고/과한 인증마크/금색 과장 배지 금지.\n\n[구성 유지]\n- 1:1 정사각형 1254x1254에 맞는 구도.\n- 제품이 화면의 대부분을 차지해야 합니다. 제품 높이 약 75~85%.\n- 흰색 또는 아주 밝은 배경, 부드러운 스튜디오 조명, 자연스러운 그림자.\n- 실제 제품 팩샷의 흰색 용기/펌프/라벨 느낌을 최대한 유지.\n\n[절대 금지]\n- 큰 광고 카피 추가 금지.\n- 수분·진정·보호 해시태그/성분 아이콘/물결 배경/잎사귀 카드 금지.\n- 상세페이지형 레이아웃 금지.\n- V2, V4, CUT, STEP, POINT, 후보번호, 제작용 번호 금지.\n- 가짜 박스/패키지 추가 금지.\n- 제품명을 데일리 아쿠아 로션 등으로 바꾸지 마세요.\n- 합성 티 나는 테두리, 누끼 티, 회색 얼룩, 평면 포스터 느낌 금지.\n\n[완성 기준]\n- 쿠팡 대표 1번 이미지로, 제품이 가장 돋보이고 보장 마크만 자연스럽게 들어가야 합니다.\n- 사용자가 보기에도 이미지 에이전트로 만든 고급 제품컷처럼 보여야 합니다.`;
+const prompt = `쿠팡 상품 대표이미지 1번으로 사용할 정사각형 이미지 1장을 실제로 생성해 주세요. 설명만 하지 말고 이미지를 만들어 주세요.\n\n[중요: 이번 작업은 로컬 합성이 아니라 GPT Images로 자연스럽게 새로 생성하는 작업입니다]\n업로드한 참조 중 V1 대표이미지 1번의 좌상단 원형 신선제품 아이콘 스타일을 참고하고, 실제 제품 팩샷/원본 대표이미지의 제품 형태와 라벨을 최대한 보존해 주세요.\n\n[핵심 목표]\n- V4 대표이미지 1번을 V1 대표이미지 1번처럼: 흰 배경 + 제품 중심 + 좌상단 원형 신선제품 아이콘 구성으로 만듭니다.\n- 아이콘은 V1처럼 좌상단에 배치합니다. 제품을 가리지 마세요.\n- 아이콘 안의 아래 문구 “제조 6개월 이내”가 V1보다 더 크게, 더 잘 읽히게 보여야 합니다.\n- 전체적으로 쿠팡 메인 썸네일에서 제품과 신선 제조 포인트가 바로 보이게 해 주세요.\n\n[제품]\nYOURSKIN+ HYALURONIC ACID AQUA LOTION 300ml\n히알루론산 아쿠아 로션\n흰색 내용물, 투명한 상단 용기, 흰색 펌프, 실제 라벨 느낌을 유지합니다.\n\n[아이콘 문구 — 반드시 정확히]\n상단/메인: 신선 제품\n하단: 제조 6개월 이내\n\n[아이콘 디자인]\n- 위치: 좌상단, V1 이미지처럼 제품 왼쪽 위 여백에 배치.\n- 형태: 원형 스티커/도장형 아이콘. 흰 바탕, 초록+아쿠아/블루 링, 작은 잎사귀 포인트.\n- “신선 제품”은 초록색 굵은 글씨.\n- “제조 6개월 이내”는 파란색 굵은 글씨이며 반드시 크게 보이게. 너무 작게 만들지 마세요.\n- 아이콘 크기는 이미지 전체의 약 20~24% 정도. V1보다 하단 문구가 더 읽혀야 합니다.\n\n[구성]\n- 1:1 정사각형 1254x1254 비율.\n- 흰색/아주 밝은 배경, 부드러운 스튜디오 조명, 자연스러운 그림자.\n- 제품은 중앙 또는 약간 오른쪽 중심. 제품 높이 약 75~82%.\n- 제품과 아이콘 외 추가 카피/장식은 넣지 않습니다.\n\n[절대 금지]\n- 로컬 합성처럼 보이는 흰 박스, 배지 지운 흔적, 누끼 티, 회색 얼룩 금지.\n- 제품 라벨 문구 왜곡 금지. YOURSKIN+, HYALURONIC ACID, AQUA LOTION, 300ml 표기가 최대한 정확해야 합니다.\n- 가짜 박스/패키지 추가 금지.\n- 하단/우하단 배지 금지. 아이콘은 좌상단 하나만.\n- 수분/진정/보호 해시태그, 성분 아이콘, 물결 배경, 상세페이지형 레이아웃 금지.\n- V1, V4, CUT, STEP, POINT, 후보번호, 제작용 번호 금지.\n- 의료/치료/아토피 표현 금지.\n\n[완성 기준]\n- V1 대표 1번과 같은 깔끔한 쿠팡 메인 이미지 느낌.\n- 제품이 가장 돋보이고, 좌상단 신선제품 아이콘의 “제조 6개월 이내”가 모바일에서도 읽히는 크기.\n- 고급스럽고 자연스러운 이미지 생성 결과물이어야 합니다.`;
 
 await fs.writeFile(path.join(promptDir, '01-gpt-product-main-with-fresh-badge-submitted.txt'), prompt);
 

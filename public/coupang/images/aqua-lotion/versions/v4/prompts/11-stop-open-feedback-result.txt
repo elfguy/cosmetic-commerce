@@ -1,0 +1,8 @@
+https://chatgpt.com/c/6a20eb92-8b04-83a6-957d-dafd792d673e
+https://chatgpt.com/backend-api/estuary/content?id=file_00000000a7e47209abed95778366e2ef&ts=494595&p=fsns&cid=1&sig=c9372cf06b32c1b802dd5896644fc8cd830450c2d6ef8eb5560e119d9a258117&v=0
+file_00000000a7e47209abed95778366e2ef
+1643831
+950x1656
+raw=/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/raw/11-stop-open-feedback-gpt.png
+final=/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/11.png
+backup=/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/rejected/11-before-stop-open-feedback-20260604030923.png
