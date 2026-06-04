@@ -1,6 +1,7 @@
 import { chromium } from 'playwright';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { cleanupStaleImageAgentTabs } from './lib/chrome-tab-cleanup.mjs';
 
 const root = '/Users/elfguy/alba/cosmetic-commerce';
 const outDir = path.join(root, 'public/coupang/images/aqua-lotion/versions/v4');
@@ -86,6 +87,7 @@ function getId(src) { try { return new URL(src).searchParams.get('id') || src; }
 
 const browser = await chromium.connectOverCDP('http://127.0.0.1:9222');
 const ctx = browser.contexts()[0] || await browser.newContext();
+await cleanupStaleImageAgentTabs(ctx, { maxTabs: 2 });
 const page = await ctx.newPage();
 await page.goto('https://chatgpt.com/images/', { waitUntil: 'domcontentloaded', timeout: 60000 });
 await page.waitForTimeout(6000);

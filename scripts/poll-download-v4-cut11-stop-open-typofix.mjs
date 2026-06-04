@@ -2,6 +2,7 @@ import { chromium } from 'playwright';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
+import { cleanupStaleImageAgentTabs } from './lib/chrome-tab-cleanup.mjs';
 
 const root = '/Users/elfguy/alba/cosmetic-commerce';
 const outDir = path.join(root, 'public/coupang/images/aqua-lotion/versions/v4');
@@ -10,6 +11,7 @@ const beforeIds = new Set(JSON.parse(await fs.readFile(path.join(outDir, 'prompt
 function getId(src) { try { return new URL(src).searchParams.get('id') || src; } catch { return src; } }
 const browser = await chromium.connectOverCDP('http://127.0.0.1:9222');
 const ctx = browser.contexts()[0];
+await cleanupStaleImageAgentTabs(ctx, { keepUrls: [targetUrl], maxTabs: 2 });
 let page = ctx.pages().find(p => p.url().startsWith(targetUrl));
 if (!page) { page = await ctx.newPage(); await page.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout: 60000 }); }
 for (let attempt = 1; attempt <= 120; attempt++) {
