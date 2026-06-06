@@ -1,0 +1,41 @@
+{
+  "rule": "direct ChatGPT Images output; no local compositing/text patch; only 1000x1000 normalization after download",
+  "backup_dir": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/product-only-slimmer-20260606-170929",
+  "items": [
+    {
+      "n": "02",
+      "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/02-product-only-original-slimmer-agent.png",
+      "backup": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/product-only-slimmer-20260606-170929/02.png",
+      "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/02.png",
+      "final_bytes": 1088412
+    },
+    {
+      "n": "03",
+      "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/03-product-only-original-slimmer-agent.png",
+      "backup": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/product-only-slimmer-20260606-170929/03.png",
+      "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/03.png",
+      "final_bytes": 1178216
+    },
+    {
+      "n": "04",
+      "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/04-product-only-original-slimmer-agent.png",
+      "backup": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/product-only-slimmer-20260606-170929/04.png",
+      "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/04.png",
+      "final_bytes": 1144817
+    },
+    {
+      "n": "05",
+      "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/05-product-only-original-slimmer-agent.png",
+      "backup": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/product-only-slimmer-20260606-170929/05.png",
+      "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/05.png",
+      "final_bytes": 1120207
+    },
+    {
+      "n": "06",
+      "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/06-product-only-original-slimmer-agent.png",
+      "backup": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/product-only-slimmer-20260606-170929/06.png",
+      "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/06.png",
+      "final_bytes": 1164653
+    }
+  ]
+}
