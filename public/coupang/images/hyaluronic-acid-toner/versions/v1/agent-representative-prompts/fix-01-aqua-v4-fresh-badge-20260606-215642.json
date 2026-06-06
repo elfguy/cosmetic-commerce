@@ -1,0 +1,18 @@
+{
+  "rule": "Skill-based badge preservation: replace toner representative 01 fresh-product mark with exact colored pixels from aqua-lotion v4 representative 01, no manual redraw, no local Korean text patching beyond badge pixel transfer.",
+  "source_badge": "public/coupang/images/aqua-lotion/versions/v4/representative/01.png",
+  "source_box_1254": [
+    45,
+    70,
+    525,
+    535
+  ],
+  "scale": 0.7974481658692185,
+  "position_1000": [
+    36,
+    56
+  ],
+  "backup": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/fix-01-aqua-v4-fresh-badge-20260606-215642/01.png",
+  "raw": "public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/01-aqua-v4-fresh-badge.png",
+  "final": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png"
+}

@@ -1,0 +1,19 @@
+{
+  "rule": "v2 improved exact aqua v4 badge colored-pixel transfer; no redraw",
+  "source_badge": "public/coupang/images/aqua-lotion/versions/v4/representative/01.png",
+  "source_box_1254": [
+    0,
+    35,
+    575,
+    590
+  ],
+  "position_1000": [
+    0,
+    28
+  ],
+  "scale": 0.7974481658692185,
+  "base_toner": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/fix-01-aqua-v4-fresh-badge-20260606-215642/01.png",
+  "backup": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/fix-01-aqua-v4-fresh-badge-v2-20260606-215721/01.png",
+  "raw": "public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/01-aqua-v4-fresh-badge-v2.png",
+  "final": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png"
+}
