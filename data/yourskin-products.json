@@ -17,7 +17,7 @@
       "discountRate": "46%",
       "rating": 4.96,
       "reviewCount": 26,
-      "image": "/coupang-detail/9025733014/01.png",
+      "image": "/coupang-main/hyaluronic-toner/01.png",
       "smartstoreUrl": "https://smartstore.naver.com/main/products/12597599110",
       "category": "수분 토너",
       "heroLine": "세안 후 첫 수분, 500ml로 넉넉하게 채우는 저분자 히알루론산 루틴.",
@@ -54,7 +54,7 @@
       "discountRate": "46%",
       "rating": 4.88,
       "reviewCount": 26,
-      "image": "/coupang/images/aqua-lotion/versions/original/representative/01.png",
+      "image": "/coupang/images/aqua-lotion/versions/v4/representative/01.png",
       "generatedHeroImage": "/coupang/images/aqua-lotion/assets/drive/aqua-lotion-water-scene.png",
       "smartstoreUrl": "https://smartstore.naver.com/main/products/12763872443",
       "category": "데일리 로션",
@@ -108,91 +108,91 @@
       ],
       "representativeImageSet": [
         {
-          "title": "원본 메인 이미지",
-          "src": "/coupang/images/aqua-lotion/versions/original/representative/01.png"
+          "title": "V4 메인 대표 이미지",
+          "src": "/coupang/images/aqua-lotion/versions/v4/representative/01.png"
         },
         {
-          "title": "원본 추가 대표 이미지 02",
-          "src": "/coupang/images/aqua-lotion/versions/original/representative/02.png"
+          "title": "V4 대표 이미지 02",
+          "src": "/coupang/images/aqua-lotion/versions/v4/representative/02.png"
         },
         {
-          "title": "원본 추가 대표 이미지 03",
-          "src": "/coupang/images/aqua-lotion/versions/original/representative/03.png"
+          "title": "V4 대표 이미지 03",
+          "src": "/coupang/images/aqua-lotion/versions/v4/representative/03.png"
         },
         {
-          "title": "원본 추가 대표 이미지 04",
-          "src": "/coupang/images/aqua-lotion/versions/original/representative/04.png"
+          "title": "V4 대표 이미지 04",
+          "src": "/coupang/images/aqua-lotion/versions/v4/representative/04.png"
         },
         {
-          "title": "원본 추가 대표 이미지 05",
-          "src": "/coupang/images/aqua-lotion/versions/original/representative/05.png"
+          "title": "V4 대표 이미지 05",
+          "src": "/coupang/images/aqua-lotion/versions/v4/representative/05.png"
         },
         {
-          "title": "원본 추가 대표 이미지 06",
-          "src": "/coupang/images/aqua-lotion/versions/original/representative/06.png"
+          "title": "V4 대표 이미지 06",
+          "src": "/coupang/images/aqua-lotion/versions/v4/representative/06.png"
         }
       ],
-      "activeDetailVersionId": "original",
+      "activeDetailVersionId": "v4",
       "salesImageSet": [
         {
-          "title": "원본 상세 01",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/01.png"
+          "title": "V4 상세 01",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/01.png"
         },
         {
-          "title": "원본 상세 02",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/02.png"
+          "title": "V4 상세 02",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/02.png"
         },
         {
-          "title": "원본 상세 03",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/03.png"
+          "title": "V4 상세 03",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/03.png"
         },
         {
-          "title": "원본 상세 04",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/04.png"
+          "title": "V4 상세 04",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/04.png"
         },
         {
-          "title": "원본 상세 05",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/05.png"
+          "title": "V4 상세 05",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/05.png"
         },
         {
-          "title": "원본 상세 06",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/06.png"
+          "title": "V4 상세 06",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/06.png"
         },
         {
-          "title": "원본 상세 07",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/07.png"
+          "title": "V4 상세 07",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/07.png"
         },
         {
-          "title": "원본 상세 08",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/08.png"
+          "title": "V4 상세 08",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/08.png"
         },
         {
-          "title": "원본 상세 09",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/09.png"
+          "title": "V4 상세 09",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/09.png"
         },
         {
-          "title": "원본 상세 10",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/10.png"
+          "title": "V4 상세 10",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/10.png"
         },
         {
-          "title": "원본 상세 11",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/11.png"
+          "title": "V4 상세 11",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/11.png"
         },
         {
-          "title": "원본 상세 12",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/12.png"
+          "title": "V4 상세 12",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/12.png"
         },
         {
-          "title": "원본 상세 13",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/13.png"
+          "title": "V4 상세 13",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/13.png"
         },
         {
-          "title": "원본 상세 14",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/14.png"
+          "title": "V4 상세 14",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/14.png"
         },
         {
-          "title": "원본 상세 15",
-          "src": "/coupang/images/aqua-lotion/versions/original/detail/15.png"
+          "title": "V4 상세 15",
+          "src": "/coupang/images/aqua-lotion/versions/v4/detail/15.png"
         }
       ],
       "detailImageVersions": [
@@ -200,7 +200,7 @@
           "id": "original",
           "label": "원본",
           "createdAt": "현재 쿠팡 등록본",
-          "status": "current",
+          "status": "previous",
           "source": "public/coupang/images/aqua-lotion/versions/original",
           "representativeImages": [
             {
@@ -438,7 +438,7 @@
           "id": "v3",
           "label": "V3",
           "createdAt": "2026-05-31",
-          "status": "candidate",
+          "status": "previous",
           "source": "public/coupang/images/aqua-lotion/versions/v3",
           "sourceNote": "최근 다운로드 ChatGPT 이미지 기반. 상세 중복 컷은 Point 6 문구가 없는 파일을 사용.",
           "representativeImages": [
@@ -499,6 +499,102 @@
             {
               "title": "비공식 리셀러 주의 안내",
               "src": "/coupang/images/aqua-lotion/versions/v3/detail/09.png"
+            }
+          ]
+        },
+        {
+          "id": "v4",
+          "label": "V4",
+          "createdAt": "2026-06-05",
+          "status": "current",
+          "source": "public/coupang/images/aqua-lotion/versions/v4",
+          "sourceNote": "쿠팡 승인완료 반영본. 대표 6장과 상세 15컷을 사이트 현재 적용 버전으로 사용.",
+          "representativeImages": [
+            {
+              "title": "V4 메인 대표 이미지",
+              "src": "/coupang/images/aqua-lotion/versions/v4/representative/01.png"
+            },
+            {
+              "title": "V4 대표 이미지 02",
+              "src": "/coupang/images/aqua-lotion/versions/v4/representative/02.png"
+            },
+            {
+              "title": "V4 대표 이미지 03",
+              "src": "/coupang/images/aqua-lotion/versions/v4/representative/03.png"
+            },
+            {
+              "title": "V4 대표 이미지 04",
+              "src": "/coupang/images/aqua-lotion/versions/v4/representative/04.png"
+            },
+            {
+              "title": "V4 대표 이미지 05",
+              "src": "/coupang/images/aqua-lotion/versions/v4/representative/05.png"
+            },
+            {
+              "title": "V4 대표 이미지 06",
+              "src": "/coupang/images/aqua-lotion/versions/v4/representative/06.png"
+            }
+          ],
+          "detailImages": [
+            {
+              "title": "V4 상세 01",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/01.png"
+            },
+            {
+              "title": "V4 상세 02",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/02.png"
+            },
+            {
+              "title": "V4 상세 03",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/03.png"
+            },
+            {
+              "title": "V4 상세 04",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/04.png"
+            },
+            {
+              "title": "V4 상세 05",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/05.png"
+            },
+            {
+              "title": "V4 상세 06",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/06.png"
+            },
+            {
+              "title": "V4 상세 07",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/07.png"
+            },
+            {
+              "title": "V4 상세 08",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/08.png"
+            },
+            {
+              "title": "V4 상세 09",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/09.png"
+            },
+            {
+              "title": "V4 상세 10",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/10.png"
+            },
+            {
+              "title": "V4 상세 11",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/11.png"
+            },
+            {
+              "title": "V4 상세 12",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/12.png"
+            },
+            {
+              "title": "V4 상세 13",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/13.png"
+            },
+            {
+              "title": "V4 상세 14",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/14.png"
+            },
+            {
+              "title": "V4 상세 15",
+              "src": "/coupang/images/aqua-lotion/versions/v4/detail/15.png"
             }
           ]
         }

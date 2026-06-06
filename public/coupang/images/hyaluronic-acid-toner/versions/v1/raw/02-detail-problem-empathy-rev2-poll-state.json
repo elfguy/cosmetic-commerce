@@ -1,0 +1,119 @@
+{
+  "chosen": {
+    "alt": "",
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000e04872068fc681e60d748f50&ts=494621&p=fsns&cid=1&sig=1f6dd449c794b67869fa2ed4ac389181163d4c54c56139d0e262004abec0d119&v=0",
+    "w": 950,
+    "h": 1656,
+    "rect": {
+      "x": 390,
+      "y": 284.1374816894531,
+      "w": 440,
+      "h": 766.97509765625
+    },
+    "id": "file_00000000e04872068fc681e60d748f50"
+  },
+  "lastData": {
+    "url": "https://chatgpt.com/c/6a225aaa-cb88-83a4-9f1b-9d4d14095eaf",
+    "title": "토너 상세 이미지 디자인",
+    "busy": false,
+    "textTail": "uently and more generously than people expect, so a generous 500ml size makes sense.\n\nRequired Korean text, exactly this meaning, large and clean:\nHeadline:\n토너는 생각보다 빨리 줄어듭니다\n\nSubheadline:\n세안 후 첫 단계부터 화장솜, 스킨팩, 레이어링까지\n매일 쓰는 토너라면 넉넉함이 먼저입니다\n\nFour card labels:\n세안 후 첫 단계\n화장솜에도 넉넉하게\n건조한 날 레이어링\n스킨팩으로 집중 수분\n\nBottom transition copy:\n그래서 이 토너는\n500ml 대용량에 집중했습니다\n\nVisual structure:\n- Top headline over soft aqua water glow.\n- Middle: 4 rounded cards/lifestyle vignettes showing realistic watery toner usage.\n- Bottom: soft aqua transition band with the 500ml message and a moderate product bottle or cotton/water scene.\n\nVisual content:\n- Clear watery toner, cotton pads, clean after-wash skin, palms pressing toner, cotton/sheet pack mood.\n- Toner must look transparent and watery, not white lotion or cream.\n\nHard constraints:\n- Absolutely no visible version marker such as V1, V2, V3, V4, renewal, proof, candidate, cut, detail cut.\n- No embedded cut numbers, no POINT, no STEP, no big numeric badges.\n- No medical/therapeutic claims.\n- Do NOT use: 피부 깊은 곳까지, 속부터 충전, 피부 장벽 강화, 진정 효과, 민감 피부도 안심, 안전한 성분만, 트러블 완화, 치료, 재생, 회복.\n- Avoid tiny Korean paragraphs. Keep text large and clean.\n- Korean text must be natural, correctly spelled, and not garbled.\n- Do not write the product name incorrectly. If product name appears, it must be 히알루론산 토너 or HYALURONIC ACID TONER 500ml.\n- No fake certificates, fake test documents, fake EWG logos.\n\nDesired feeling:\nSoft, helpful, premium, practical. Buyer reaction: “맞아, 토너는 많이 쓰니까 500ml가 좋겠다.”\n\n더 보기\nThought for 2m 8s\n편집\n\nPro\nChatGPT는 실수를 할 수 있습니다. 중요한 정보는 재차 확인하세요.",
+    "imgs": [
+      {
+        "alt": "01.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000006eb07206a02c8abd0c1dda92&ts=494621&p=fs&cid=1&sig=c155af43e86b862d45d1b21f539a14caba01f9954ee957879d44a787a2b8ce09&v=0",
+        "w": 780,
+        "h": 1360,
+        "rect": {
+          "x": 658,
+          "y": -341,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "04.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000863072069e54ca855ff4413f&ts=494621&p=fs&cid=1&sig=0f0e6169f42f1078061f2738768ea4013be18727ebe5388dd63d1843f31653c5&v=0",
+        "w": 780,
+        "h": 1360,
+        "rect": {
+          "x": 790,
+          "y": -341,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "01.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000002d9472068204a5ef9cd7ce67&ts=494621&p=fs&cid=1&sig=34168e5c78d8db065952a8ca521bd46f11d229c8b4530e7ee5c1053730c9044b&v=0",
+        "w": 1000,
+        "h": 1000,
+        "rect": {
+          "x": 922,
+          "y": -341,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "히알루론산토너.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000db8872069e38c3146c411cfd&ts=494621&p=fs&cid=1&sig=eee4f4cd4d0147110582cb3512ae03c26ac2245d6fbd7d887f083c68a01e2c0a&v=0",
+        "w": 919,
+        "h": 2048,
+        "rect": {
+          "x": 790,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "02.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000463c7206b3ed8109b20ce03d&ts=494621&p=fs&cid=1&sig=388dc8c345a67f85c1a9b870ca4b2cb76da4394be166e37cfbc7b6e864be5c31&v=0",
+        "w": 780,
+        "h": 1360,
+        "rect": {
+          "x": 922,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "생성된 이미지: 청정 피부 토너의 집중 Hydration",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000e04872068fc681e60d748f50&ts=494621&p=fsns&cid=1&sig=1f6dd449c794b67869fa2ed4ac389181163d4c54c56139d0e262004abec0d119&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 400,
+          "h": 697.25
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000e04872068fc681e60d748f50&ts=494621&p=fsns&cid=1&sig=1f6dd449c794b67869fa2ed4ac389181163d4c54c56139d0e262004abec0d119&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 400,
+          "h": 697.25
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000e04872068fc681e60d748f50&ts=494621&p=fsns&cid=1&sig=1f6dd449c794b67869fa2ed4ac389181163d4c54c56139d0e262004abec0d119&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 390,
+          "y": 284.1374816894531,
+          "w": 440,
+          "h": 766.97509765625
+        }
+      }
+    ]
+  }
+}

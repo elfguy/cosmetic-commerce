@@ -1,0 +1,19 @@
+{
+  "chosen": {
+    "alt": "",
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000fa747206bbddeeeaed590ac9&ts=494621&p=fsns&cid=1&sig=6551cc471b75c7b0fdbbcad6539002b8bd3d593d52648a4537d5f903cf122533&v=0",
+    "w": 950,
+    "h": 1656,
+    "rect": {
+      "x": 390,
+      "y": 284.1374816894531,
+      "w": 440,
+      "h": 766.97509765625
+    },
+    "id": "file_00000000fa747206bbddeeeaed590ac9"
+  },
+  "out": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/raw/07-detail-comfort-ingredients-generated-raw.png",
+  "bytes": 1672807,
+  "downloadedAt": "2026-06-05T05:27:04.899Z",
+  "url": "https://chatgpt.com/c/6a225da2-d8a0-83a4-861f-596b60de8141"
+}

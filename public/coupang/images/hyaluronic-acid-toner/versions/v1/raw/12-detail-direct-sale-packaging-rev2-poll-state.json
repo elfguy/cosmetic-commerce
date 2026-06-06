@@ -1,0 +1,59 @@
+{
+  "chosen": {
+    "alt": "",
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000005907206b1c70319af578094&ts=494621&p=fsns&cid=1&sig=cda9343d44c7e0e70c2318d7bdaec3ca68f125c8a829ddc35d0bd2d9f2fc99f0&v=0",
+    "w": 950,
+    "h": 1656,
+    "rect": {
+      "x": 390,
+      "y": 284.1374816894531,
+      "w": 440,
+      "h": 766.97509765625
+    },
+    "id": "file_0000000005907206b1c70319af578094"
+  },
+  "lastData": {
+    "url": "https://chatgpt.com/c/6a2262d0-2bcc-83a3-87d6-c4b692bc955c",
+    "title": "유어스킨플러스 이미지 제작",
+    "busy": false,
+    "textTail": " 변화\n배경색 변경 요청\ndonggyun lee\nPro\n공유하기\n# 상세 12 rev2 — 직접 관리 / 포장 신뢰\n\nCreate ONE premium Korean Coupang mobile detail-page image for YOURSKIN+ HYALURONIC ACID TONER 500ml.\n\nThis must be a NEW premium GPT Images 2.0 style cut, not a reuse of the old yellow notice image.\n\nCanvas / output:\n- Vertical 780:1360 ecommerce detail image, safe margins.\n- Match the approved toner V1 sibling cuts: white base, soft aqua, mint green, rounded cards, clean Korean skincare ad tone.\n- Absolutely avoid yellow warning-poster style, cartoon animals, red circles, dense legal text, or old notice-page look.\n\nTopic:\nBrand trust: direct management, careful packaging, fresh shipping.\n\nRequired Korean text:\nHeadline:\n유어스킨플러스가 직접 관리합니다\n\nSubheadline:\n제조부터 포장, 출고까지 제품 상태를 꼼꼼히 확인합니다\n\nFour clean cards:\n직접 제조\n직접 판매\n꼼꼼한 포장\n신선한 출고 관리\n\nBottom line:\n과한 유통 단계를 줄인 합리적인 데일리 케어\n\nVisual:\n- Premium brand-free packaging materials: clean kraft paper, soft protective cushioning, leaves, aqua water accents, simple shipping box silhouette without brand/logo.\n- Product bottle may appear small/moderate if label stays consistent, but do not invent a branded box/package.\n- Use airy layout like the other V1 cuts, not a warning notice.\n\nHard constraints:\n- No visible version marker such as V1/V2/V3/V4, no renewal/proof/candidate, no CUT/DETAIL CUT, no POINT/STEP, no big numeric badges.\n- No fake official certificate, no fake legal seal, no cartoon mascot.\n- Korean text must be large, clean, correctly spelled, and not garbled.\n- No medical claims.\n\n더 보기\nThought for 2m 44s\n편집\n\nPro\n음성 입력\n⌃\n⇧\nD\nChatGPT는 실수를 할 수 있습니다. 중요한 정보는 재차 확인하세요.",
+    "imgs": [
+      {
+        "alt": "생성된 이미지: 직접 관리하는 피부 케어",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000005907206b1c70319af578094&ts=494621&p=fsns&cid=1&sig=cda9343d44c7e0e70c2318d7bdaec3ca68f125c8a829ddc35d0bd2d9f2fc99f0&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 400,
+          "h": 697.25
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000005907206b1c70319af578094&ts=494621&p=fsns&cid=1&sig=cda9343d44c7e0e70c2318d7bdaec3ca68f125c8a829ddc35d0bd2d9f2fc99f0&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 400,
+          "h": 697.25
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000005907206b1c70319af578094&ts=494621&p=fsns&cid=1&sig=cda9343d44c7e0e70c2318d7bdaec3ca68f125c8a829ddc35d0bd2d9f2fc99f0&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 390,
+          "y": 284.1374816894531,
+          "w": 440,
+          "h": 766.97509765625
+        }
+      }
+    ]
+  }
+}

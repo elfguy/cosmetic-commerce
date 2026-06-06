@@ -1,0 +1,32 @@
+{
+  "id": "v1",
+  "label": "토너 V1",
+  "status": "candidate",
+  "product": "유어스킨플러스 히알루론산 토너 500ml",
+  "createdAt": "2026-06-05",
+  "targetCuts": [
+    {
+      "type": "representative",
+      "number": "01",
+      "title": "제품 단독 + 500ml + 작은 신선 배지"
+    },
+    {
+      "type": "detail",
+      "number": "01",
+      "title": "매일 쓰는 토너라면, 넉넉하고 신선하게"
+    },
+    {
+      "type": "detail",
+      "number": "04",
+      "title": "닦토 · 흡토 · 스킨팩 · 레이어링"
+    }
+  ],
+  "refs": [
+    "public/coupang/images/hyaluronic-acid-toner/versions/v1/refs/toner-current-product-01.png",
+    "public/coupang/images/hyaluronic-acid-toner/versions/v1/refs/toner-current-detail-01.png",
+    "public/coupang/images/hyaluronic-acid-toner/versions/v1/refs/toner-current-detail-11.png",
+    "public/coupang/images/hyaluronic-acid-toner/versions/v1/refs/aqua-v4-rep-01.png",
+    "public/coupang/images/hyaluronic-acid-toner/versions/v1/refs/aqua-v4-detail-01.png",
+    "public/coupang/images/hyaluronic-acid-toner/versions/v1/refs/aqua-v4-detail-04.png"
+  ]
+}

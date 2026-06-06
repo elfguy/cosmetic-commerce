@@ -1,0 +1,93 @@
+{
+  "chosen": {
+    "alt": "",
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000c6707206b451c585d7b98897&ts=494619&p=fsns&cid=1&sig=bfe535584494519df85f84f3565f6dc438e42f4e6ee1a6c640cc1666d2b2e8af&v=0",
+    "w": 950,
+    "h": 1656,
+    "rect": {
+      "x": 390,
+      "y": 284.1374816894531,
+      "w": 440,
+      "h": 766.97509765625
+    },
+    "id": "file_00000000c6707206b451c585d7b98897"
+  },
+  "lastData": {
+    "busy": false,
+    "textTail": "아쿠아 로션\n쿠팡 대표이미지 생성 요청\nRWA 토큰 설명\nBen & Jerry's PR\n가족용 데일리 보습 이미지\n온 가족 데일리 보습 이미지\ndonggyun lee\nPro\n공유하기\n업로드한 현재 상세 이미지를 기준으로, 같은 디자인/톤/레이아웃을 유지하면서 오타만 수정한 쿠팡 모바일 상세페이지 세로 이미지 1장을 다시 생성해 주세요.\n\n목표: 유어스킨플러스 히알루론산 토너 500ml V1 상세 04번 사용 루틴 컷 rev5 오타 수정.\n\n[유지할 것]\n- 현재 이미지의 흰색/소프트 아쿠아/민트 K-뷰티 톤.\n- 2x2 카드 레이아웃.\n- 레이어링 카드는 현재처럼 손바닥으로 얼굴에 투명한 토너/스킨을 가볍게 눌러 흡수시키는 느낌을 유지.\n- 로션/크림처럼 손등에 하얀 제형을 문지르는 장면은 절대 만들지 않음.\n- 제품은 YOURSKIN+ HYALURONIC ACID TONER 500ml 병을 하단 오른쪽에 작게 배치.\n\n[반드시 수정할 오타]\n현재 카드 1의 보조 문구가 잘못되었습니다.\n잘못된 문구: 피부결 정도\n정확한 문구: 피부결 정돈\n\n카드 1은 반드시 아래처럼 쓰세요:\n닦토\n피부결 정돈\n\n피부결 정도는 절대 쓰지 마세요. 마지막 글자는 반드시 돈입니다. 정돈입니다.\n\n[반드시 들어갈 텍스트 — 그대로]\n상단:\n4 WAY TONER ROUTINE\n\n제목:\n닦토, 흡토, 스킨팩까지\n아낌없이 사용하는 500ml\n\n서브:\n피부 컨디션에 따라\n가볍게 조절해 사용하세요\n\n카드 1:\n닦토\n피부결 정돈\n\n카드 2:\n흡토\n가볍게 흡수\n\n카드 3:\n스킨팩\n잠시 올려 수분감\n\n카드 4:\n레이어링\n얇게 덧바름\n\n하단:\n사용감에 대한 설명이며, 개인 피부 상태에 따라 사용량을 조절해 주세요.\n\n[절대 금지]\n- 피부결 정도 금지.\n- 피부결 정돈 외 다른 표현 금지.\n- 로션, 크림, 300ml, 아쿠아 로션 금지.\n- 흰색 제형을 문지르는 표현 금지.\n- 손등에 바르는 장면 금지.\n- CUT 04, POINT 04, STEP 01 금지.\n- 추가 문장/임의 문구 금지.\n\n[검수]\n- 카드 1 보조 문구가 반드시 피부결 정돈이어야 합니다.\n- 카드 4 보조 문구가 반드시 얇게 덧바름이어야 합니다.\n- 레이어링은 스킨/토너 흡수 느낌이어야 합니다.\n- 이미지 비율은 780 x 1360 세로형입니다.\n\n더 보기\nThought for 1m 33s\n편집\n\nPro\nChatGPT는 실수를 할 수 있습니다. 중요한 정보는 재차 확인하세요.",
+    "imgs": [
+      {
+        "alt": "04.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000008d5872069bdb1b1f6d68faed&ts=494619&p=fs&cid=1&sig=9fa933b4a40174ebe42177cd9a29ebe10ef647ace1c54df18b3c6c75a602f20a&v=0",
+        "w": 780,
+        "h": 1360,
+        "rect": {
+          "x": 658,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "01.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000031e47206900a6692f822c25f&ts=494619&p=fs&cid=1&sig=f3691a37e01a6b1b58d08a740116d98f5a352d6a42923737e41c54bc5c5116dc&v=0",
+        "w": 1000,
+        "h": 1000,
+        "rect": {
+          "x": 790,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "히알루론산토너.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000029cc7206b1601a9595a3ea82&ts=494619&p=fs&cid=1&sig=29ed0b3274ab605b985d52ee58fae18ca1cc6cb4efc73b0ec9a918977706854e&v=0",
+        "w": 919,
+        "h": 2048,
+        "rect": {
+          "x": 922,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "생성된 이미지: 피부 관리 루틴의 청량함",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000c6707206b451c585d7b98897&ts=494619&p=fsns&cid=1&sig=bfe535584494519df85f84f3565f6dc438e42f4e6ee1a6c640cc1666d2b2e8af&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 400,
+          "h": 697.25
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000c6707206b451c585d7b98897&ts=494619&p=fsns&cid=1&sig=bfe535584494519df85f84f3565f6dc438e42f4e6ee1a6c640cc1666d2b2e8af&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 400,
+          "h": 697.25
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000c6707206b451c585d7b98897&ts=494619&p=fsns&cid=1&sig=bfe535584494519df85f84f3565f6dc438e42f4e6ee1a6c640cc1666d2b2e8af&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 390,
+          "y": 284.1374816894531,
+          "w": 440,
+          "h": 766.97509765625
+        }
+      }
+    ]
+  }
+}

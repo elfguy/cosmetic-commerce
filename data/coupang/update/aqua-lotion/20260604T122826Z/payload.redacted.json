@@ -1,0 +1,649 @@
+{
+  "sellerProductId": 15895499351,
+  "sellerProductName": "유어스킨플러스 히알루론산 아쿠아 로션",
+  "displayCategoryCode": 56161,
+  "vendorId": "A01490963",
+  "saleStartedAt": "2026-04-21T12:59:08",
+  "saleEndedAt": "2099-12-31T00:00:00",
+  "displayProductName": "유어스킨플러스 히알루론산 아쿠아 로션",
+  "brand": "유어스킨플러스",
+  "brandId": null,
+  "generalProductName": "유어스킨플러스 히알루론산 아쿠아 로션",
+  "productGroup": null,
+  "statusName": "승인완료",
+  "marketplaceShippingAndReturnInfo": {
+    "deliveryMethod": "SEQUENCIAL",
+    "deliveryCompanyCode": "HYUNDAI",
+    "deliveryChargeType": "FREE",
+    "deliveryCharge": 0,
+    "freeShipOverAmount": 0,
+    "deliveryChargeOnReturn": 2400,
+    "remoteAreaDeliverable": "N",
+    "unionDeliveryType": "NOT_UNION_DELIVERY",
+    "returnCenterCode": "1002287052",
+    "returnChargeName": "(주)유어스킨",
+    "companyContactNumber": "032-682-6533",
+    "returnZipCode": "22840",
+    "returnAddress": "인천광역시 서구 염곡로 89",
+    "returnAddressDetail": "2층",
+    "returnCharge": 2400,
+    "outboundShippingPlaceCode": 23374242,
+    "afterServiceInformation": null,
+    "afterServiceContactNumber": null
+  },
+  "vendorUserId": "yourskin",
+  "requested": false,
+  "items": [
+    {
+      "offerCondition": "NEW",
+      "offerDescription": "",
+      "itemName": "300ml 1개",
+      "maximumBuyCount": 9941,
+      "maximumBuyForPerson": 0,
+      "outboundShippingTimeDay": 1,
+      "maximumBuyForPersonPeriod": 1,
+      "unitCount": 1,
+      "adultOnly": "EVERYONE",
+      "taxType": "TAX",
+      "parallelImported": "NOT_PARALLEL_IMPORTED",
+      "overseasPurchased": "NOT_OVERSEAS_PURCHASED",
+      "pccNeeded": false,
+      "images": [
+        {
+          "imageOrder": 0,
+          "imageType": "REPRESENTATION",
+          "vendorPath": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/representative/01.png"
+        },
+        {
+          "imageOrder": 0,
+          "imageType": "DETAIL",
+          "vendorPath": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/representative/02.png"
+        },
+        {
+          "imageOrder": 1,
+          "imageType": "DETAIL",
+          "vendorPath": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/representative/03.png"
+        },
+        {
+          "imageOrder": 2,
+          "imageType": "DETAIL",
+          "vendorPath": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/representative/04.png"
+        },
+        {
+          "imageOrder": 3,
+          "imageType": "DETAIL",
+          "vendorPath": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/representative/05.png"
+        },
+        {
+          "imageOrder": 4,
+          "imageType": "DETAIL",
+          "vendorPath": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/representative/06.png"
+        }
+      ],
+      "notices": [
+        {
+          "noticeCategoryName": "화장품",
+          "noticeCategoryDetailName": "용량(중량)",
+          "content": "상품 상세페이지 참조"
+        },
+        {
+          "noticeCategoryName": "화장품",
+          "noticeCategoryDetailName": "제품 주요 사양",
+          "content": "상품 상세페이지 참조"
+        },
+        {
+          "noticeCategoryName": "화장품",
+          "noticeCategoryDetailName": "사용기한 또는 개봉 후 사용기간",
+          "content": "상품 상세페이지 참조"
+        },
+        {
+          "noticeCategoryName": "화장품",
+          "noticeCategoryDetailName": "사용방법",
+          "content": "상품 상세페이지 참조"
+        },
+        {
+          "noticeCategoryName": "화장품",
+          "noticeCategoryDetailName": "화장품제조업자, 화장품책임판매업자 및 맞춤형화장품판매업자",
+          "content": "상품 상세페이지 참조"
+        },
+        {
+          "noticeCategoryName": "화장품",
+          "noticeCategoryDetailName": "제조국",
+          "content": "상품 상세페이지 참조"
+        },
+        {
+          "noticeCategoryName": "화장품",
+          "noticeCategoryDetailName": "화장품법에 따라 기재, 표시하여야 하는 모든 성분",
+          "content": "상품 상세페이지 참조"
+        },
+        {
+          "noticeCategoryName": "화장품",
+          "noticeCategoryDetailName": "화장품법에 따른 기능성 화장품 심사(또는 보고)를 필함 해당 유무",
+          "content": "상품 상세페이지 참조"
+        },
+        {
+          "noticeCategoryName": "화장품",
+          "noticeCategoryDetailName": "사용할 때 주의사항",
+          "content": "상품 상세페이지 참조"
+        },
+        {
+          "noticeCategoryName": "화장품",
+          "noticeCategoryDetailName": "품질보증기준",
+          "content": "상품 상세페이지 참조"
+        },
+        {
+          "noticeCategoryName": "화장품",
+          "noticeCategoryDetailName": "소비자상담관련 전화번호",
+          "content": "상품 상세페이지 참조"
+        }
+      ],
+      "attributes": [
+        {
+          "attributeTypeName": "제형",
+          "attributeValueName": "로션",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "재료 유형 무료",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "구성",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "기능성화장품 인증여부",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "총 중량(g)",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "바디용품 사용대상",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "제품의 특정 용도",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "마사지용 여부",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "주성분",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "간단한 제품 설명",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "재료 특징",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "향 유무",
+          "attributeValueName": "무향",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "바디로션 기능",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "개당 용량",
+          "attributeValueName": "300ml",
+          "exposed": "EXPOSED",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "제품 장점",
+          "attributeValueName": "보습",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "뷰티 향",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "선케어 SPF",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "피부고민",
+          "attributeValueName": "진정/보습",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "뷰티 색상계열",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "특별한 기능",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "Global Trade Item Number",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "Parent Manufacturer Part Number",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "Manufacturer Part Number",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "핸드케어 용기타입",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "피부타입",
+          "attributeValueName": "모든피부",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "용기 종류",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "향기",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "제품의 권장 용도",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "총 용량",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "수량",
+          "attributeValueName": "1개",
+          "exposed": "EXPOSED",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "바디케어 제형",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "기획세트 여부",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "패키지 유형",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "사이즈",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "크림 타입",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "미스트 종류",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "안개분사 여부",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "용기형태",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "핸드케어 타입",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "사용대상",
+          "attributeValueName": "남녀공용",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "스킨케어 특별성분",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "패턴",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "사용 부위",
+          "attributeValueName": "얼굴",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "뷰티오일 성분",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        },
+        {
+          "attributeTypeName": "스타일",
+          "attributeValueName": "",
+          "exposed": "NONE",
+          "editable": true
+        }
+      ],
+      "contents": [
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/01.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/02.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/03.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/04.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/05.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/06.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/07.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/08.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/09.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/10.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/11.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/12.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/13.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/14.png"
+            }
+          ]
+        },
+        {
+          "contentsType": "IMAGE_NO_SPACE",
+          "contentDetails": [
+            {
+              "detailType": "IMAGE",
+              "content": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/15.png"
+            }
+          ]
+        }
+      ],
+      "certifications": [
+        {
+          "certificationType": "NOT_REQUIRED",
+          "certificationCode": "",
+          "certificationAttachments": []
+        }
+      ],
+      "searchTags": [
+        "8중 히알루론산",
+        "남성 에멀젼",
+        "남자 로션",
+        "남자 수분로션",
+        "로션",
+        "모이스춰 로션",
+        "보습로션",
+        "수분 로션",
+        "스킨로션",
+        "얼굴 로션",
+        "얼굴로션",
+        "에멀젼",
+        "여성 로션",
+        "여성 로션 대용량",
+        "여성 로션 에멀젼",
+        "여성 수분로션",
+        "여성로션",
+        "저분자 히알루론산 로션",
+        "히알루론산 로션",
+        "히알루론산 스킨로션"
+      ],
+      "sameDayShipping": null,
+      "rocketGrowthItemData": {
+        "sellerProductItemId": 36551109231,
+        "vendorItemId": 94206581277,
+        "itemId": 27239514580,
+        "skuInfo": {
+          "fragile": true,
+          "year": null,
+          "season": "YEAR_ROUND",
+          "height": 60,
+          "length": 170,
+          "width": 60,
+          "weight": 350,
+          "producedAtManaged": false,
+          "quantityPerBox": 1,
+          "standAlone": false,
+          "distributionPeriod": 24,
+          "expiredAtManaged": true,
+          "manufacturedAtManaged": true,
+          "netWeight": null,
+          "heatSensitive": null,
+          "hazardous": null,
+          "originalBarcode": null,
+          "inboundName": "유어스킨플러스 히알루론산 아쿠아 로션",
+          "originalDimensionInputType": "PREDICTION",
+          "vendorFlexCode": null,
+          "heavyBulky": null,
+          "rocketInstallation": null
+        },
+        "externalVendorSku": "",
+        "priceData": {
+          "originalPrice": 19000,
+          "salePrice": 10300,
+          "supplyPrice": 9960
+        },
+        "barcode": "8809226747438",
+        "maximumBuyCount": 0,
+        "modelNo": "",
+        "isAutoGenerated": false
+      },
+      "marketplaceItemData": {
+        "sellerProductItemId": 36551109228,
+        "vendorItemId": 94206581276,
+        "itemId": 27239514580,
+        "bestPriceGuaranteed3P": false,
+        "externalVendorSku": "",
+        "priceData": {
+          "originalPrice": 19000,
+          "salePrice": 10300,
+          "supplyPrice": 9960
+        },
+        "barcode": "",
+        "maximumBuyCount": 9941,
+        "modelNo": "",
+        "isAutoGenerated": false
+      },
+      "outboundShippingTime": 24
+    }
+  ],
+  "requiredDocuments": [],
+  "extraInfoMessage": null,
+  "manufacture": "(주)유어스킨",
+  "registrationType": "NORMAL",
+  "rocketGrowthAdditionalInformation": {
+    "rfmInboundName": "유어스킨플러스 히알루론산 아쿠아 로션",
+    "legalAgreement": "AGREE"
+  },
+  "bundleInfo": {
+    "bundleType": "SINGLE"
+  },
+  "contributorType": null
+}

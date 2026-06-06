@@ -1,6 +1,6 @@
 {
   "source": "coupang-openapi",
-  "generatedAt": "2026-05-24T10:39:15.609Z",
+  "generatedAt": "2026-06-05T00:30:31.697Z",
   "count": 11,
   "products": [
     {
@@ -255,17 +255,17 @@
             "unit": "NONE"
           },
           {
-            "name": "GTIN",
+            "name": "Global Trade Item Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Parent MPN",
+            "name": "Parent Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Variation MPN",
+            "name": "Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
@@ -640,17 +640,17 @@
             "unit": "NONE"
           },
           {
-            "name": "GTIN",
+            "name": "Global Trade Item Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Parent MPN",
+            "name": "Parent Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Variation MPN",
+            "name": "Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
@@ -799,7 +799,7 @@
       "ratingValue": 5,
       "reviewCount": 23,
       "images": [
-        "https://image.coupangcdn.com/image/vendor_inventory/7e20/33ecb9de5fe6530fd33075b19d8feb715f87527ff073beccad861e0883da.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/image_audit/stage/manual/755f8fa4ffb0a1a8de95d3f8df1518de366124ade3f55022bdd74bddf89f_1780546284487.png",
         "https://image.coupangcdn.com/image/vendor_inventory/ccba/755f8fa4ffb0a1a8de95d3f8df1518de366124ade3f55022bdd74bddf89f.png",
         "https://image.coupangcdn.com/image/vendor_inventory/0212/a747dff1c0c412f851264d6bb726fd925e2090bb163b5388389c286f7115.png",
         "https://image.coupangcdn.com/image/vendor_inventory/7aae/ca00f5a0fb696411c1770639f36125663a0c45ead91bdfce46d575566011.png",
@@ -929,7 +929,7 @@
         "displayProductName": "유어스킨플러스 화이트닝 톤 케어 크림",
         "generalProductName": "유어스킨플러스 화이트닝 톤 케어 크림",
         "productGroup": "페이셜크림",
-        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/7e20/33ecb9de5fe6530fd33075b19d8feb715f87527ff073beccad861e0883da.png",
+        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/image_audit/stage/manual/755f8fa4ffb0a1a8de95d3f8df1518de366124ade3f55022bdd74bddf89f_1780546284487.png",
         "productImageCount": 5,
         "detailContentImageCount": 14,
         "searchTags": [
@@ -1102,17 +1102,17 @@
             "unit": "NONE"
           },
           {
-            "name": "GTIN",
+            "name": "Global Trade Item Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Parent MPN",
+            "name": "Parent Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Variation MPN",
+            "name": "Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
@@ -1570,17 +1570,17 @@
             "unit": "NONE"
           },
           {
-            "name": "GTIN",
+            "name": "Global Trade Item Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Parent MPN",
+            "name": "Parent Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Variation MPN",
+            "name": "Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
@@ -1708,146 +1708,146 @@
       "ratingValue": 5,
       "reviewCount": 34,
       "images": [
-        "https://image.coupangcdn.com/image/vendor_inventory/395a/7f9ed30cd9fc8aa3ec0e2f472ab99f1451adf13f1ee006196ed9c741e622.png",
-        "https://image.coupangcdn.com/image/vendor_inventory/affb/354c819e29da6ace813926c1665f1f9ae69267dbe8d074b024f14273ce17.png",
-        "https://image.coupangcdn.com/image/vendor_inventory/3d9b/752225a109434950d162deeed94948b446caf293ece95140471b310ca3ea.png",
-        "https://image.coupangcdn.com/image/vendor_inventory/4c45/b9a2eab32f79ff7c38196cf4945a9bb4352e6a218392ce62bfa481ec2e61.png",
-        "https://image.coupangcdn.com/image/vendor_inventory/60d9/cb70f3528fef74b520491d853f37240cd3ebf19e6f0f6bf57645461f0980.png",
-        "https://image.coupangcdn.com/image/vendor_inventory/0a60/e2ffc2f60d866f5be4ede556608cae9991bfcbf48973e176f45003c51cd5.png"
+        "https://image.coupangcdn.com/image/vendor_inventory/fe49/4df6f91e6c26046866f16503960eaec2a9d205243bb3d2a623a39991b1b7.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/c0e1/134e9aaa6d4fec32d3d996ea0c382738f05da062ec1327d27e942dd7bde1.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/d912/c4dc08d247fa544879a2e2461d18800ac39e9649e15d5b5f49b1093b040e.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/109a/8c72ee94d5af372f75bc9fab958f852ada6243531def0c8959a7e5b6d8de.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/6786/edc84dc05ade0781065e00b7ab75b813eee4a926890361ee0b3908413a0c.png",
+        "https://image.coupangcdn.com/image/vendor_inventory/bfc9/0b5da4757131d0d52df1ed6c507977c19ad96ac8d0b4fb27340464e65a8a.png"
       ],
       "detailImages": [
         {
           "src": "/coupang-detail/9218811640/01.png",
-          "cdnPath": "vendor_inventory/8c4c/653067fb87651d36e7d7f259c55abe3f03531e1200b738d13c0e1ca10366.png",
+          "cdnPath": "vendor_inventory/b550/602329524c13b48f96f6db5aae72658fb93a25d63ea0eef6a3957c8da0a6.png",
           "sourceOrder": 1,
           "width": 780,
           "height": 1360,
-          "bytes": 984292
+          "bytes": 1047481
         },
         {
           "src": "/coupang-detail/9218811640/02.png",
-          "cdnPath": "vendor_inventory/1821/ab5751fc4be322b58958dd084e846b7a900e3095f2afc5d3c71c9afab1b4.png",
+          "cdnPath": "vendor_inventory/4715/51dd95f84f2147eb0eb40669721f98682b2712a4c01080e3779b82f7f162.png",
           "sourceOrder": 2,
           "width": 780,
           "height": 1360,
-          "bytes": 799634
+          "bytes": 1213846
         },
         {
           "src": "/coupang-detail/9218811640/03.png",
-          "cdnPath": "vendor_inventory/2411/24826165798838789da59d34dce81dbdf204399946f5e063e78ff0a6f160.png",
+          "cdnPath": "vendor_inventory/45d4/8869d25eab61e10ae6e5a97cc2185b72fa4f34374cf4f55a0cb855468296.png",
           "sourceOrder": 3,
           "width": 780,
           "height": 1360,
-          "bytes": 230651
+          "bytes": 1061449
         },
         {
           "src": "/coupang-detail/9218811640/04.png",
-          "cdnPath": "vendor_inventory/9575/f12d2677a6e4827f2f1bbd7b1263f8f5354752a9bd954aafb802aa0c69f1.png",
+          "cdnPath": "vendor_inventory/899a/f7c6e347904c9b259519b062183c30e4a227486ed3d1dd9af5cce636c887.png",
           "sourceOrder": 4,
           "width": 780,
           "height": 1360,
-          "bytes": 724847
+          "bytes": 1373415
         },
         {
           "src": "/coupang-detail/9218811640/05.png",
-          "cdnPath": "vendor_inventory/4871/7570c8045dff2c7e11a68b00f62d1ffa912a8743ef4c94a12029c512d797.png",
+          "cdnPath": "vendor_inventory/aaff/e62f0f3ecf63a0ff792fd04d54cd7d378161dac8eae237ff4b07a2a99221.png",
           "sourceOrder": 5,
           "width": 780,
           "height": 1360,
-          "bytes": 528146
+          "bytes": 1176576
         },
         {
           "src": "/coupang-detail/9218811640/06.png",
-          "cdnPath": "vendor_inventory/2652/de69eb5556e7f0d8177ab05a24b44a3633e058c178e77183c766b7ce0aaf.png",
+          "cdnPath": "vendor_inventory/fb16/c9126da71776eb01260829f59787b1e7ad59d8f0c4f1ec3d42326faf2416.png",
           "sourceOrder": 6,
           "width": 780,
           "height": 1360,
-          "bytes": 765284
+          "bytes": 1363669
         },
         {
           "src": "/coupang-detail/9218811640/07.png",
-          "cdnPath": "vendor_inventory/2f44/b51e5a0faf63363c414edb0e02a923aaa063b02c479992ab2328022d1cb4.png",
+          "cdnPath": "vendor_inventory/d715/af4b99b70fb7af823631eace70f0858fe2a5ab4e67e5d723d3da8a1b8035.png",
           "sourceOrder": 7,
           "width": 780,
           "height": 1360,
-          "bytes": 755830
+          "bytes": 1499938
         },
         {
           "src": "/coupang-detail/9218811640/08.png",
-          "cdnPath": "vendor_inventory/1bbf/72462d58793d642cef275d5adc9a79ebb4bcfa64354ae77722b5f7da2560.png",
+          "cdnPath": "vendor_inventory/85d8/e454e3f66ace73e0d7c8155c8a9c6f7cf284c64a46d6acb0e2fc7c3272ff.png",
           "sourceOrder": 8,
           "width": 780,
           "height": 1360,
-          "bytes": 1107739
+          "bytes": 1290222
         },
         {
           "src": "/coupang-detail/9218811640/09.png",
-          "cdnPath": "vendor_inventory/7901/88d2412d5b5f37a87ae9ca18d59c084ed16b6a86b3a437daf62a2278ee2d.png",
+          "cdnPath": "vendor_inventory/5e43/cef874312e15f019c9cb99f82d0a7bdfec41a475b076fdbfaea1275653e5.png",
           "sourceOrder": 9,
           "width": 780,
           "height": 1360,
-          "bytes": 376943
+          "bytes": 1095381
         },
         {
           "src": "/coupang-detail/9218811640/10.png",
-          "cdnPath": "vendor_inventory/8f02/f9907948718d6904654b27e9ab2c7d9a84cd63ee19ffeea9c8fe0dff9e4f.png",
+          "cdnPath": "vendor_inventory/c0c1/af081bed8c25d3ac696f885fbbdf369c5661a748a745b36366d9acaf77c6.png",
           "sourceOrder": 10,
           "width": 780,
           "height": 1360,
-          "bytes": 741338
+          "bytes": 1005568
         },
         {
           "src": "/coupang-detail/9218811640/11.png",
-          "cdnPath": "vendor_inventory/2d39/1009ae4707b2e86d05b0dfff17cee4f913fe514a95bbe32d0127da05b9ad.png",
+          "cdnPath": "vendor_inventory/54ef/99bf20393a5dcbec8002a1ab866440efc457ba9351e0740fecb42f8dc10f.png",
           "sourceOrder": 11,
           "width": 780,
           "height": 1360,
-          "bytes": 379454
+          "bytes": 1043211
         },
         {
           "src": "/coupang-detail/9218811640/12.png",
-          "cdnPath": "vendor_inventory/b6e1/10063e705a574a21d8bb3679e3e34fcf632b5bbecb7105710b5af6ffcf51.png",
+          "cdnPath": "vendor_inventory/bfdf/9ee5c1610111bb2ce77a1e7e838c3b971f8ac7a8a24414ab5a4382549dcf.png",
           "sourceOrder": 12,
           "width": 780,
           "height": 1360,
-          "bytes": 635182
+          "bytes": 1026224
         },
         {
           "src": "/coupang-detail/9218811640/13.png",
-          "cdnPath": "vendor_inventory/b248/b19537ce6baa92477381241e7394eea837901101f624639426c29459a9d4.png",
+          "cdnPath": "vendor_inventory/39cc/9cf7d7cbd3368b49d5724f6bec68c2331ffd766d8896e5e60a5d426ebd43.png",
           "sourceOrder": 13,
           "width": 780,
           "height": 1360,
-          "bytes": 428022
+          "bytes": 1061491
         },
         {
           "src": "/coupang-detail/9218811640/14.png",
-          "cdnPath": "vendor_inventory/c9c3/7075a8d40a21eca2b63a0c479e0302deb4bc6fc9e2ced7a472919d0a3506.png",
+          "cdnPath": "vendor_inventory/c7f3/94b80c49a3371b2971a620521a8a946af99154efa650ee3de22b649552a7.png",
           "sourceOrder": 14,
           "width": 780,
           "height": 1360,
-          "bytes": 145732
+          "bytes": 953599
         },
         {
           "src": "/coupang-detail/9218811640/15.png",
-          "cdnPath": "vendor_inventory/cab0/7412f26fda70b9485ae68931cc11c054916cd90875e6f29db13eef04c94d.png",
+          "cdnPath": "vendor_inventory/7e21/9b9d46963429cc420c6574b0a484f5bfe3e1909fd588b805caca77de16fe.png",
           "sourceOrder": 15,
           "width": 780,
           "height": 1360,
-          "bytes": 352561
+          "bytes": 1023920
         }
       ],
       "api": {
         "source": "coupang-openapi",
         "sellerProductId": "15895499351",
         "statusName": "승인완료",
-        "saleStartedAt": "2026-04-21T12:59:08",
+        "saleStartedAt": "2026-06-04T21:55:13",
         "saleEndedAt": "2099-12-31T00:00:00",
         "brand": "유어스킨플러스",
         "displayProductName": "유어스킨플러스 히알루론산 아쿠아 로션",
         "generalProductName": "유어스킨플러스 히알루론산 아쿠아 로션",
         "productGroup": "로션",
-        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/395a/7f9ed30cd9fc8aa3ec0e2f472ab99f1451adf13f1ee006196ed9c741e622.png",
+        "representationImage": "https://image.coupangcdn.com/image/vendor_inventory/fe49/4df6f91e6c26046866f16503960eaec2a9d205243bb3d2a623a39991b1b7.png",
         "productImageCount": 6,
         "detailContentImageCount": 15,
         "searchTags": [
@@ -2020,17 +2020,17 @@
             "unit": "NONE"
           },
           {
-            "name": "GTIN",
+            "name": "Global Trade Item Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Parent MPN",
+            "name": "Parent Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Variation MPN",
+            "name": "Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
@@ -2451,12 +2451,12 @@
             "unit": "NONE"
           },
           {
-            "name": "GTIN",
+            "name": "Global Trade Item Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Parent MPN",
+            "name": "Parent Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
@@ -2476,7 +2476,7 @@
             "unit": "NONE"
           },
           {
-            "name": "Variation MPN",
+            "name": "Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           }
@@ -2784,17 +2784,17 @@
             "unit": "NONE"
           },
           {
-            "name": "GTIN",
+            "name": "Global Trade Item Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Parent MPN",
+            "name": "Parent Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Variation MPN",
+            "name": "Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
@@ -3239,17 +3239,17 @@
             "unit": "NONE"
           },
           {
-            "name": "GTIN",
+            "name": "Global Trade Item Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Parent MPN",
+            "name": "Parent Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Variation MPN",
+            "name": "Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
@@ -3585,17 +3585,17 @@
             "unit": "NONE"
           },
           {
-            "name": "GTIN",
+            "name": "Global Trade Item Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Parent MPN",
+            "name": "Parent Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Variation MPN",
+            "name": "Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
@@ -3998,17 +3998,17 @@
             "unit": "NONE"
           },
           {
-            "name": "GTIN",
+            "name": "Global Trade Item Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Parent MPN",
+            "name": "Parent Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Variation MPN",
+            "name": "Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
@@ -4440,17 +4440,17 @@
             "unit": "NONE"
           },
           {
-            "name": "GTIN",
+            "name": "Global Trade Item Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Parent MPN",
+            "name": "Parent Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           },
           {
-            "name": "Variation MPN",
+            "name": "Manufacturer Part Number",
             "value": "",
             "unit": "NONE"
           }

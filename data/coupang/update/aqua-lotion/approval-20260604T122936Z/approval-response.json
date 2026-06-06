@@ -1,0 +1,8 @@
+{
+  "statusCode": 400,
+  "statusMessage": "Bad Request",
+  "parsed": {
+    "code": "ERROR",
+    "message": "현재 Open API에서는 로켓상품 관련 기능을 제공하지 않습니다."
+  }
+}

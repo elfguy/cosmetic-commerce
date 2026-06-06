@@ -1,0 +1,19 @@
+{
+  "chosen": {
+    "alt": "",
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000046ec7206a13b635b040c22bc&ts=494621&p=fsns&cid=1&sig=7accb0052371c2cb461914e9de5ff2604e2b57972d12b2784170737965e11d78&v=0",
+    "w": 950,
+    "h": 1656,
+    "rect": {
+      "x": 390,
+      "y": 284.1374816894531,
+      "w": 440,
+      "h": 766.97509765625
+    },
+    "id": "file_0000000046ec7206a13b635b040c22bc"
+  },
+  "out": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/raw/03-detail-500ml-solution-generated-raw.png",
+  "bytes": 1551041,
+  "downloadedAt": "2026-06-05T05:18:39.958Z",
+  "url": "https://chatgpt.com/c/6a225bbd-f140-83a2-bab6-46bfe8a563a8"
+}

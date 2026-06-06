@@ -1,0 +1,11 @@
+{
+  "chatUrl": "https://chatgpt.com/c/6a228613-c478-83a8-ada9-e4d56c61b9de",
+  "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000009e6c72068889c3a147772bc7&ts=494624&p=fsns&cid=1&sig=ce1ec40eeab59794e324aeb47991a9374723aa53c34a6b7974dc41b90d061171&v=0",
+  "id": "file_000000009e6c72068889c3a147772bc7",
+  "bytes": 1653951,
+  "natural": "1254x1254",
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/06-gpt-preserve-product.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/06.png",
+  "alt": "생성된 이미지: 수분 레이어링 토너 루틴",
+  "replacementReason": "Regenerated to preserve real YOURSKIN+ HYALURONIC ACID TONER product identity"
+}

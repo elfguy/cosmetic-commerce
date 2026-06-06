@@ -1,0 +1,8 @@
+{
+  "createdAt": "2026-06-06T13:15:17+0900",
+  "method": "GPT Images background-only + original owned product flood-fill cutout + natural shadow/reflection composite",
+  "background": "public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/02-gpt-background-only-1000.png",
+  "product": "public/drive-originals/hyaluronic-acid-toner/downloaded/히알루론산토너.png",
+  "output": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/02.png",
+  "notes": "Removed white rounded product card look; preserved real product shape/label/fill; added soft halo, ground shadow, faint reflection."
+}

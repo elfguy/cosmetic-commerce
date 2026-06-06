@@ -1,0 +1,116 @@
+{
+  "productId": "hyaluronic-acid-toner",
+  "productName": "유어스킨플러스 히알루론산 토너 500ml",
+  "activeVersion": "v1",
+  "versions": [
+    {
+      "id": "original",
+      "label": "원본 등록본",
+      "source": "public/coupang/images/hyaluronic-acid-toner",
+      "representativeImages": [
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/product/01.png",
+          "label": "대표 01"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/product/02.png",
+          "label": "대표 02"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/product/03.jpg",
+          "label": "대표 03"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/product/04.jpg",
+          "label": "대표 04"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/product/05.jpg",
+          "label": "대표 05"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/product/06.jpg",
+          "label": "대표 06"
+        }
+      ],
+      "detailCount": 14,
+      "detailDir": "detail"
+    },
+    {
+      "id": "v1",
+      "label": "V1",
+      "status": "candidate",
+      "source": "public/coupang/images/hyaluronic-acid-toner/versions/v1",
+      "representativeImages": [
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png",
+          "label": "대표 01 · 신선 제품 보장"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/02.png",
+          "label": "대표 02 · 매일 쓰는 산뜻 수분 토너"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/03.png",
+          "label": "대표 03 · 500ml 넉넉한 수분 루틴"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/04.png",
+          "label": "대표 04 · 세안 후 첫 수분"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/05.png",
+          "label": "대표 05 · 하나로 4가지 토너 케어"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/06.png",
+          "label": "대표 06 · 수분 레이어링"
+        }
+      ],
+      "detailImages": [
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/01.png"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/02.png"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/03.png"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/04.png"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/05.png"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/06.png"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/07.png"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/08.png"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/09.png"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/10.png"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/11.png"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/12.png"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/13.png"
+        }
+      ],
+      "detailCount": 13,
+      "note": "토너 V1 대표 6장 + 상세 14컷 정리본. 대표 02~06은 ChatGPT Images workspace 이미지 에이전트 완성본으로 재생성/등록.",
+      "representativeCount": 6
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "startUrl": "https://chatgpt.com/images/",
+  "title": "ChatGPT",
+  "afterSubmitUrl": "https://chatgpt.com/c/6a23cf13-4008-83e9-91c1-71d0bb84bf7d",
+  "uploaded": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/drive-originals/hyaluronic-acid-toner/downloaded/히알루론산토너.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/02.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/03.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/06.png"
+  ],
+  "promptPath": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-prompts/06-no-human-layering-prompt.txt",
+  "beforeIds": [
+    "b1c23cfb183d730#file_00000000ccc8720bb26f1f48c9914768#thumbnail",
+    "5ec19da54f984f0#file_00000000693071f8b4ba4f9c99a25fc5#thumbnail",
+    "b443504fad1d3bd#file_0000000027b4720bbbbdc492a507f209#thumbnail",
+    "61d0cdab5b21f07#file_00000000afc4720ba85fe242a5585242#thumbnail",
+    "588e83f27b6adb3#file_00000000bbc4720bb8f9ee66650ef55e#thumbnail",
+    "cfd2630abe8bd67#file_000000003bac720bab6f9a1cd8eb80a7#thumbnail",
+    "3ce8017c4a0f4fc#file_0000000089fc71f897eeebebf2e36292#thumbnail",
+    "4aa64fc0b1204c0#file_00000000023c71f8ab14fa742c806a5c#thumbnail",
+    "95c0fa702d34ace#file_0000000072c072099ba4afca16c78a32#thumbnail",
+    "424496370254055#file_00000000762c7209b1acb493b03db796#thumbnail",
+    "b694c984e87e5e6#file_000000001b6472078c704a4abc25b567#thumbnail",
+    "dc3c5ce31083564#file_00000000df487207b6ca8e9b9e673596#thumbnail",
+    "44df027ae1ca20e#file_000000004a547207949dc081205dbcfe#thumbnail",
+    "d3b50e72e33762f#file_0000000068887207953ff7a77d051e10#thumbnail",
+    "405c74e9d041341#file_00000000435c7207ad2315cd2d1ffb52#thumbnail",
+    "c9b150433046f4c#file_000000004e6872078f38e12fe44af9ec#thumbnail",
+    "35852d72c8a634f#file_00000000ab8c7207a14702f31c87c643#thumbnail",
+    "3ec37fc3e49af54#file_00000000c880720781bcc245875411bc#thumbnail",
+    "6b4fea7b2b30790#file_0000000095ec7207ae2d1c0151a81b89#thumbnail",
+    "46afb6fe171a2de#file_0000000011347207bd129d7c41c1b367#thumbnail",
+    "3e1b7058be6050f#file_0000000058fc720982348e2d63b0ac80#thumbnail",
+    "c799119e58b8bf6#file_00000000c900720680b583a01919a262#thumbnail",
+    "073f6e8bb2ac46b#file_00000000fca872098596847deca074e7#thumbnail",
+    "04054d2c717f06a#file_00000000dbc47206a226384a75704b70#thumbnail",
+    "25a3e2e14783b42#file_000000006014720680f24b5ae1fc7878#thumbnail"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "chatUrl": "https://chatgpt.com/c/6a23c78d-ce54-83e8-a4c0-61761b991dbf",
+  "id": "file_0000000089fc71f897eeebebf2e36292",
+  "natural": "1254x1254",
+  "bytes": 1953584,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/04-human-first-moisture-agent.png",
+  "alt": "",
+  "rule": "direct ChatGPT Images output; no local compositing/text patch; only normalization after download",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/04.png",
+  "finalSize": "1000x1000",
+  "backup": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/representative04-before-human-rework-20260606T162048/04.png"
+}

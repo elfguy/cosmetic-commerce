@@ -28,6 +28,7 @@ export const primaryNav: { href: string; label: string }[] = [
   { href: '/', label: '홈' },
   { href: '/products/', label: '상품상세' },
   { href: '/competitor-comparison/', label: '경쟁상품' },
+  { href: '/global-sales/', label: '해외판매' },
   { href: '/workspaces/', label: '작업실' },
   { href: '/drive-originals/', label: '원본이미지' },
 ];
@@ -82,6 +83,21 @@ export const siteSections: SiteSection[] = [
     ],
   },
   {
+    id: 'global',
+    label: '해외판매',
+    eyebrow: 'Global sales',
+    desc: 'Amazon US를 시작점으로 K-Beauty 해외판매 시장조사, 준비 체크리스트, 120일 실행 타임라인을 관리합니다.',
+    links: [
+      {
+        href: '/global-sales/',
+        title: '해외판매 전략 보드',
+        desc: '아마존 분석, 에이전트 활용 조사법, 후보 SKU, 규정·물류·광고 타임라인.',
+        tag: '신규',
+        cover: 'linear-gradient(135deg, #1f2a24, #8c4830)',
+      },
+    ],
+  },
+  {
     id: 'detail',
     label: '상세·이미지 작업',
     eyebrow: 'Detail & assets',
@@ -99,6 +115,13 @@ export const siteSections: SiteSection[] = [
         title: '아쿠아 로션 버전 비교',
         desc: '원본 / V1 / V2 대표·상세 이미지를 한 화면에서 비교.',
         cover: 'linear-gradient(135deg, #2f4f5d, #5d8aa0)',
+      },
+      {
+        href: '/marketing/hyaluronic-toner-version-compare/',
+        title: '히알루론산 토너 버전 비교',
+        desc: '원본 등록본 / V1 대표·상세 이미지를 비교.',
+        tag: '신규',
+        cover: 'linear-gradient(135deg, #2f5d57, #8bc7be)',
       },
       {
         href: '/toner-detail-renewal/',

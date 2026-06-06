@@ -1,0 +1,29 @@
+{
+  "tunnelBase": "https://mid-domain-dublin-acids.trycloudflare.com",
+  "sellerProductId": "15895499351",
+  "representation": "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/representative/01.png",
+  "additionalImages": [
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/representative/02.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/representative/03.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/representative/04.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/representative/05.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/representative/06.png"
+  ],
+  "detailContents": [
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/01.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/02.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/03.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/04.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/05.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/06.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/07.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/08.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/09.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/10.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/11.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/12.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/13.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/14.png",
+    "https://mid-domain-dublin-acids.trycloudflare.com/coupang/images/aqua-lotion/versions/v4/detail/15.png"
+  ]
+}

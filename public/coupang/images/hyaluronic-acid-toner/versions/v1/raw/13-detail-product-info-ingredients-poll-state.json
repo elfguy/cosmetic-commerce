@@ -1,0 +1,119 @@
+{
+  "chosen": {
+    "alt": "",
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000debc7206b418f5efd185733f&ts=494621&p=fsns&cid=1&sig=ac105421f3532d5c90c6f1eeee29b230376159b422517446528466dbcd8ac352&v=0",
+    "w": 950,
+    "h": 1656,
+    "rect": {
+      "x": 390,
+      "y": 284.1374816894531,
+      "w": 440,
+      "h": 766.97509765625
+    },
+    "id": "file_00000000debc7206b418f5efd185733f"
+  },
+  "lastData": {
+    "url": "https://chatgpt.com/c/6a226103-1570-83a7-8865-30a64d02c66a",
+    "title": "제품 정보 디자인 요청",
+    "busy": false,
+    "textTail": "배경색 변경 요청\nV4 제품 이미지 수정\nV4 이미지 편집 요청\ndonggyun lee\nPro\n공유하기\n# 상세 13 — 제품 정보 / 전성분\n\nTopic: readable product info and ingredient information. Text-heavy but must still look designed, not plain table only.\n\nRequired Korean copy:\nHeadline: 제품 정보와 전성분을 확인하세요\nProduct info rows:\n제품명: 유어스킨플러스 히알루론산 토너\n용량: 500ml\n사용방법: 세안 후 손 또는 화장솜에 적당량을 덜어 피부결을 따라 사용하세요\n판매·제조: (주)유어스킨\n\nIngredient section title: 전성분\nInclude a compact readable ingredient block impression, not necessarily every tiny ingredient perfectly, but Korean must not be garbled.\n\nVisual: premium info card layout with soft aqua background, clean typography, small product/water motif. Avoid overcrowding.\n\nGlobal style and safety rules for every cut:\n- Create ONE premium Korean Coupang mobile detail-page image, vertical 780:1360 composition with safe margins.\n- Match approved toner V1 sibling cuts: clean white base, soft aqua/mint green accents, rounded cards, airy Korean skincare ad quality.\n- Use watery transparent toner visuals, not creamy lotion.\n- Korean text must be large, clean, naturally spelled, not garbled.\n- No visible version markers: no V1/V2/V3/V4, no renewal/proof/candidate, no CUT/DETAIL CUT, no POINT/STEP, no big numeric badges.\n- Avoid medical/absolute claims. Do NOT use: 피부 깊은 곳까지, 속부터 충전, 피부 장벽 강화, 진정 효과, 민감 피부도 안심, 안전한 성분만, 트러블 완화, 치료, 재생, 회복.\n- Do not invent fake certificates, fake official logos, fake boxes, or fake packaging.\n- If the product appears, preserve YOURSKIN+ HYALURONIC ACID TONER 500ml identity and do not redesign the label.\n\n더 보기\nThought for 2m 18s\n편집\n\nPro\nChatGPT는 실수를 할 수 있습니다. 중요한 정보는 재차 확인하세요.",
+    "imgs": [
+      {
+        "alt": "01.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000061e872069ad84af024ed4238&ts=494621&p=fs&cid=1&sig=a08d71afafd3b24f9121c4b020a3b387c2caf588573d24025dcd0f9106ba64e2&v=0",
+        "w": 780,
+        "h": 1360,
+        "rect": {
+          "x": 658,
+          "y": -341,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "04.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000048707206ad3895539ddf67fd&ts=494621&p=fs&cid=1&sig=2af3cca20294259357b15080574903153a17bc4b4794a850cbea1f235247d54e&v=0",
+        "w": 780,
+        "h": 1360,
+        "rect": {
+          "x": 790,
+          "y": -341,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "01.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000051b4720689957098833d5ddf&ts=494621&p=fs&cid=1&sig=21e28e451989b5e6fe121a0fa4eef216af7cb489b3888425948b466cef2db04b&v=0",
+        "w": 1000,
+        "h": 1000,
+        "rect": {
+          "x": 922,
+          "y": -341,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "히알루론산토너.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000062507206ab4d8751d48fc606&ts=494621&p=fs&cid=1&sig=46049428988943647b5d5df0cdb4939f90e07b9e852f38e12557b644edbe3ef9&v=0",
+        "w": 919,
+        "h": 2048,
+        "rect": {
+          "x": 790,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "13.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000087e072068e307bad7f6d5b6e&ts=494621&p=fs&cid=1&sig=d27b5aff43afecb2cd3267fd7dce89762735e910faa49fb0ebff24a22d7d02aa&v=0",
+        "w": 780,
+        "h": 1360,
+        "rect": {
+          "x": 922,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "생성된 이미지: 제품 정보와 전성분 확인하세요",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000debc7206b418f5efd185733f&ts=494621&p=fsns&cid=1&sig=ac105421f3532d5c90c6f1eeee29b230376159b422517446528466dbcd8ac352&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 400,
+          "h": 697.25
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000debc7206b418f5efd185733f&ts=494621&p=fsns&cid=1&sig=ac105421f3532d5c90c6f1eeee29b230376159b422517446528466dbcd8ac352&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 400,
+          "h": 697.25
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000debc7206b418f5efd185733f&ts=494621&p=fsns&cid=1&sig=ac105421f3532d5c90c6f1eeee29b230376159b422517446528466dbcd8ac352&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 390,
+          "y": 284.1374816894531,
+          "w": 440,
+          "h": 766.97509765625
+        }
+      }
+    ]
+  }
+}

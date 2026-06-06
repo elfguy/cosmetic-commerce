@@ -1,0 +1,8 @@
+{
+  "statusCode": 400,
+  "statusMessage": "Bad Request",
+  "parsed": {
+    "code": "ERROR",
+    "message": "로켓그로스 입고 불가 조건을 확인하시고 동의해주세요. 동의하지 않으면 로켓그로스 상품등록을 할 수 없습니다."
+  }
+}

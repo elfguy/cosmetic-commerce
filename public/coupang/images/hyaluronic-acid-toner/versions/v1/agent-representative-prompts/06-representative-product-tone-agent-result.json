@@ -1,0 +1,19 @@
+{
+  "slot": "06",
+  "chatUrl": "https://chatgpt.com/c/6a22ec76-db14-83a9-89dc-db18f6d926b9",
+  "id": "file_0000000058fc720982348e2d63b0ac80",
+  "natural": "1254x1254",
+  "bytes": 1278860,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/06-representative-product-tone-agent.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/06.png",
+  "finalSize": "1000x1000",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/product/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/product/02.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/representative02-06-before-product-tone-fix-20260605T152723/06.png"
+  ],
+  "backupDir": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/representative02-06-before-product-tone-fix-20260605T152723",
+  "alt": "생성된 이미지: 수분 레이어링 토너 광고",
+  "rule": "direct ChatGPT Images output; normalized only; no local compositing/text patch"
+}

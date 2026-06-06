@@ -1,0 +1,14 @@
+{
+  "chatUrl": "https://chatgpt.com/c/6a23962c-bc04-83a7-b970-f5ea563caa86",
+  "id": "file_00000000762c7209b1acb493b03db796",
+  "natural": "1254x1254",
+  "bytes": 1363111,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/02-gpt-background-only-agent.png",
+  "background": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/02-gpt-background-only-1000.png",
+  "backup": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/02-before-gpt-bg-original-product-composite-20260606T033806.png",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png"
+  ],
+  "alt": "생성된 이미지: 청명한 물방울과 여백의 미학",
+  "rule": "GPT Images background only; no product generated; final product will use original product layer"
+}

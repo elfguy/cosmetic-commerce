@@ -1,0 +1,206 @@
+[
+  {
+    "set": "current_product",
+    "file": "public/coupang/images/hyaluronic-acid-toner/product/01.png",
+    "size": "1000x1000",
+    "bytes": 202320
+  },
+  {
+    "set": "current_product",
+    "file": "public/coupang/images/hyaluronic-acid-toner/product/02.png",
+    "size": "1000x1000",
+    "bytes": 412784
+  },
+  {
+    "set": "current_product",
+    "file": "public/coupang/images/hyaluronic-acid-toner/product/03.jpg",
+    "size": "1024x1024",
+    "bytes": 122793
+  },
+  {
+    "set": "current_product",
+    "file": "public/coupang/images/hyaluronic-acid-toner/product/04.jpg",
+    "size": "1024x1024",
+    "bytes": 266848
+  },
+  {
+    "set": "current_product",
+    "file": "public/coupang/images/hyaluronic-acid-toner/product/05.jpg",
+    "size": "1024x1024",
+    "bytes": 110778
+  },
+  {
+    "set": "current_product",
+    "file": "public/coupang/images/hyaluronic-acid-toner/product/06.jpg",
+    "size": "1024x1024",
+    "bytes": 131647
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/01.png",
+    "size": "780x1360",
+    "bytes": 994863
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/02.png",
+    "size": "780x1360",
+    "bytes": 609323
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/03.png",
+    "size": "780x1360",
+    "bytes": 195243
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/04.png",
+    "size": "780x1360",
+    "bytes": 724656
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/05.png",
+    "size": "780x1360",
+    "bytes": 528146
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/06.png",
+    "size": "780x1360",
+    "bytes": 944996
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/07.png",
+    "size": "780x1360",
+    "bytes": 1116782
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/08.png",
+    "size": "780x1360",
+    "bytes": 1164919
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/09.png",
+    "size": "780x1360",
+    "bytes": 727899
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/10.png",
+    "size": "780x1360",
+    "bytes": 378622
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/11.png",
+    "size": "780x1360",
+    "bytes": 716166
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/12.png",
+    "size": "780x1360",
+    "bytes": 428022
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/13.png",
+    "size": "780x1360",
+    "bytes": 337212
+  },
+  {
+    "set": "current_detail",
+    "file": "public/coupang/images/hyaluronic-acid-toner/detail/14.png",
+    "size": "780x1360",
+    "bytes": 352561
+  },
+  {
+    "set": "old_v2",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/01-main-clean-v2.jpg",
+    "size": "1000x1000",
+    "bytes": 108680
+  },
+  {
+    "set": "old_v2",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/01-main-coupang-v2.jpg",
+    "size": "1000x1000",
+    "bytes": 125004
+  },
+  {
+    "set": "old_v2",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/02-detail-hero-v2.jpg",
+    "size": "780x1360",
+    "bytes": 119060
+  },
+  {
+    "set": "old_v2",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/03-detail-sixmonth-proof-v2.jpg",
+    "size": "780x1360",
+    "bytes": 123220
+  },
+  {
+    "set": "old_v2",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v2/04-detail-benchmark-flow-v2.jpg",
+    "size": "780x1360",
+    "bytes": 108372
+  },
+  {
+    "set": "old_v3",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/01-main-routine-fresh-v3.jpg",
+    "size": "1080x1080",
+    "bytes": 207751
+  },
+  {
+    "set": "old_v3",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/02-main-thumbnail-v3.jpg",
+    "size": "1080x1080",
+    "bytes": 200593
+  },
+  {
+    "set": "old_v3",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/03-detail-hero-routine-v3.jpg",
+    "size": "780x1180",
+    "bytes": 217976
+  },
+  {
+    "set": "old_v3",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/04-detail-why-500ml-v3.jpg",
+    "size": "780x1180",
+    "bytes": 153775
+  },
+  {
+    "set": "old_v3",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/05-detail-fresh-proof-v3.jpg",
+    "size": "780x1180",
+    "bytes": 161370
+  },
+  {
+    "set": "old_v3",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/06-detail-ingredients-v3.jpg",
+    "size": "780x1180",
+    "bytes": 148317
+  },
+  {
+    "set": "old_v3",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v3/07-detail-final-cta-v3.jpg",
+    "size": "780x1180",
+    "bytes": 175418
+  },
+  {
+    "set": "old_v4",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v4/01-main-product-only-v4.jpg",
+    "size": "1200x1200",
+    "bytes": 110212
+  },
+  {
+    "set": "old_v4",
+    "file": "public/coupang/images/hyaluronic-acid-toner/renewal-2026-05-20-v4/02-main-product-with-props-v4.jpg",
+    "size": "1200x1200",
+    "bytes": 129344
+  }
+]

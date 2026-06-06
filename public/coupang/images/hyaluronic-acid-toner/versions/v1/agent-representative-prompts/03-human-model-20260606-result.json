@@ -1,0 +1,13 @@
+{
+  "chatUrl": "https://chatgpt.com/c/6a23c3c2-d868-83e8-b6b1-7b99d69f39ca",
+  "id": "file_00000000023c71f8ab14fa742c806a5c",
+  "natural": "1254x1254",
+  "bytes": 1802470,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/03-human-model-20260606-agent.png",
+  "alt": "",
+  "rule": "direct ChatGPT Images output; no local compositing/text patch; only normalization after download",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/03.png",
+  "finalSize": "1000x1000",
+  "backup": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/representative03-before-human-model-20260606T155506/03.png",
+  "contactSheet": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/v1-representative-contact.jpg"
+}

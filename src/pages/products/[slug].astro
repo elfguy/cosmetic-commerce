@@ -51,7 +51,15 @@ const appliedMainCount = appliedVersion?.mainImages.length ?? 0;
       <div class="hero-links" aria-label="외부 링크">
         <a href={product.commerce.coupangUrl} target="_blank" rel="noreferrer">쿠팡 상품</a>
         {product.commerce.naverUrl ? <a href={product.commerce.naverUrl} target="_blank" rel="noreferrer">네이버 상품</a> : null}
-        {product.ops.workspaceUrl ? <a class="workspace-link" href={product.ops.workspaceUrl}>{product.slug === 'aqua-lotion' ? '작업하던 V4 비교 페이지' : '소재 작업실'}</a> : null}
+        {product.ops.workspaceUrl ? (
+          <a class="workspace-link" href={product.ops.workspaceUrl}>
+            {product.slug === 'aqua-lotion'
+              ? '작업하던 V4 비교 페이지'
+              : product.slug === 'hyaluronic-toner'
+                ? '토너 V1 비교 페이지'
+                : '소재 작업실'}
+          </a>
+        ) : null}
       </div>
     </section>
 

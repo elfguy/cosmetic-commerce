@@ -1,0 +1,81 @@
+{
+  "chosen": {
+    "alt": "",
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000037b07206ba99553b37396b27&ts=494619&p=fsns&cid=1&sig=cd96de416e33eaa194def8774574ec037ad8910fb04df1b2ea767af020503c89&v=0",
+    "w": 1254,
+    "h": 1254,
+    "rect": {
+      "x": 386,
+      "y": 295,
+      "w": 528,
+      "h": 528
+    },
+    "id": "file_0000000037b07206ba99553b37396b27"
+  },
+  "lastData": {
+    "busy": false,
+    "textTail": "를 만들어 주세요. 설명만 하지 말고 실제 이미지를 생성해 주세요.\n\n이번 작업은 새 병을 디자인하는 것이 아닙니다. 원본 제품 사진의 병과 라벨을 가능한 한 그대로 유지한 채, 배경을 쿠팡 대표이미지용으로 정리하고 좌상단 배지만 추가하는 이미지 편집/생성 작업입니다.\n\n[가장 중요한 지시]\n- 제품 병을 새로 그리거나 재디자인하지 마세요.\n- 원본의 흰색 캡, 투명한 둥근 병 어깨, 흰 라벨, YOURSKIN+ 로고, HYALURONIC ACID TONER, 물결 아이콘, HYDRATING FORMULA, 500ml / 16.9 fl.oz 구조를 최대한 그대로 보존하세요.\n- 원본의 실제 제품과 다르게 병 폭, 캡 모양, 라벨 위치를 크게 바꾸지 마세요.\n- 원본 검정 배경만 제거하고 흰색/밝은 스튜디오 배경으로 바꾸는 느낌이어야 합니다.\n\n[대표 이미지 구성]\n- 1:1 정사각형 이미지.\n- 제품은 중앙 또는 약간 오른쪽 중심.\n- 제품 전체가 잘리지 않게 보이게 하세요.\n- 제품 높이는 이미지 전체의 78~86% 정도.\n- 밝은 흰색 배경, 자연스러운 바닥 그림자.\n- 쿠팡 썸네일에서 제품 라벨이 잘 보여야 합니다.\n\n[좌상단 배지]\n- 좌상단에 원형 신선제품 배지 1개만 추가.\n- 배지 문구는 정확히:\n신선 제품\n제조 6개월 이내\n- 배지는 제품과 겹치지 않게 왼쪽 위 여백에 배치.\n- 배지 크기는 모바일에서 문구가 읽힐 정도.\n- 초록/아쿠아 계열, 깔끔한 K-뷰티 톤.\n\n[반드시 유지할 제품 라벨]\n- YOURSKIN+\n- HYALURONIC ACID TONER\n- HYDRATING FORMULA\n- 500ml / 16.9 fl.oz\n\n[절대 금지]\n- AQUA LOTION, 로션, 크림, 300ml 금지.\n- 다른 병/다른 라벨/다른 제품처럼 재창작 금지.\n- 가짜 박스/패키지 추가 금지.\n- 원본에 없는 긴 상세문구/성분 아이콘/해시태그 추가 금지.\n- V1, proof, CUT, STEP, POINT, 제작용 번호 금지.\n- 배지가 잘리거나 제품을 가리는 것 금지.\n\n[완성 기준]\n- 원본 제품 사진을 사용한 쿠팡 대표이미지처럼 보여야 합니다.\n- 제품 라벨이 원본과 매우 비슷해야 합니다.\n- 로컬 합성보다 자연스럽고, 하지만 제품 정체성은 원본 그대로여야 합니다.\n\n더 보기\nThought for 1m 11s\n편집\n\nPro\nChatGPT는 실수를 할 수 있습니다. 중요한 정보는 재차 확인하세요.",
+    "imgs": [
+      {
+        "alt": "히알루론산토너.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000be687206ba8212f301c98134&ts=494619&p=fs&cid=1&sig=37f4910b203aab4bdce9d76c533547ad7584e98d324606cc43ed87588071de06&v=0",
+        "w": 919,
+        "h": 2048,
+        "rect": {
+          "x": 790,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "01-representative-main-agent-generated-raw.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000dc4872069bb118d11284cdd2&ts=494619&p=fs&cid=1&sig=56975afb39177fb9f49bf4677af87007bcee32de37e8b72fcb00e83faa227304&v=0",
+        "w": 1254,
+        "h": 1254,
+        "rect": {
+          "x": 922,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "생성된 이미지: 하이알루로닉 애시드 토너",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000037b07206ba99553b37396b27&ts=494619&p=fsns&cid=1&sig=cd96de416e33eaa194def8774574ec037ad8910fb04df1b2ea767af020503c89&v=0",
+        "w": 1254,
+        "h": 1254,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 480,
+          "h": 480
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000037b07206ba99553b37396b27&ts=494619&p=fsns&cid=1&sig=cd96de416e33eaa194def8774574ec037ad8910fb04df1b2ea767af020503c89&v=0",
+        "w": 1254,
+        "h": 1254,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 480,
+          "h": 480
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000037b07206ba99553b37396b27&ts=494619&p=fsns&cid=1&sig=cd96de416e33eaa194def8774574ec037ad8910fb04df1b2ea767af020503c89&v=0",
+        "w": 1254,
+        "h": 1254,
+        "rect": {
+          "x": 386,
+          "y": 295,
+          "w": 528,
+          "h": 528
+        }
+      }
+    ]
+  }
+}

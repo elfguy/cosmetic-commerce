@@ -1,0 +1,10 @@
+{
+  "chatUrl": "https://chatgpt.com/c/6a2271c8-15b4-83a3-9a62-09695a90fff2",
+  "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000bb5872068433a5c51a84cc71&ts=494622&p=fsns&cid=1&sig=17e41afc2a97d2b8aa4495c07c1bbc3bbe466092daa83fb6e597ddf70b625b14&v=0",
+  "id": "file_00000000bb5872068433a5c51a84cc71",
+  "bytes": 1570434,
+  "natural": "1254x1254",
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/02-gpt.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/02.png",
+  "alt": "생성된 이미지: 수분 루틴의 시작, HYALURONIC 토너"
+}

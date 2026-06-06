@@ -1,9 +1,9 @@
 {
   "source": "coupang-openapi",
-  "generatedAt": "2026-05-24T10:39:15.609Z",
+  "generatedAt": "2026-06-05T00:30:31.697Z",
   "apiProductCount": 11,
   "previousDownloadedProductCount": 11,
-  "chromeSavedHtmlProductCount": 8,
+  "chromeSavedHtmlProductCount": 0,
   "newProductsFromApi": [],
   "localProductsMissingFromApi": [],
   "apiProductsMissingChromeHtml": [
@@ -18,29 +18,52 @@
       "name": "유어스킨플러스 피디알엔 히알루론산 수딩 크림"
     },
     {
+      "productId": "9264527939",
+      "sellerProductId": "15939226045",
+      "name": "유어스킨플러스 화이트닝 톤 케어 크림"
+    },
+    {
+      "productId": "9221762154",
+      "sellerProductId": "15895536803",
+      "name": "유어스킨플러스 퓨어 딥 클렌징 오일"
+    },
+    {
+      "productId": "9218811640",
+      "sellerProductId": "15895499351",
+      "name": "유어스킨플러스 히알루론산 아쿠아 로션"
+    },
+    {
+      "productId": "9025810298",
+      "sellerProductId": "15704881596",
+      "name": "유어스킨플러스 모이스춰 립밤"
+    },
+    {
       "productId": "9025800758",
       "sellerProductId": "15704868952",
       "name": "유어스킨플러스 화이트 글로우 톤업 크림"
-    }
-  ],
-  "fieldDiffs": [
+    },
     {
-      "productId": "9402746236",
-      "name": "유어스킨플러스 피디알렌 히알루론산 앰플",
-      "changes": [
-        {
-          "field": "price",
-          "before": 0,
-          "after": 12500
-        },
-        {
-          "field": "originalPrice",
-          "before": 0,
-          "after": 12500
-        }
-      ]
+      "productId": "9025793946",
+      "sellerProductId": "15704852570",
+      "name": "유어스킨플러스 영거댄 올인원 로션"
+    },
+    {
+      "productId": "9025775541",
+      "sellerProductId": "15704834371",
+      "name": "유어스킨플러스 로즈 다마스쿠스 토닉 에센스"
+    },
+    {
+      "productId": "9025751494",
+      "sellerProductId": "15704797033",
+      "name": "유어스킨플러스 로우 피에이치 클렌징 젤"
+    },
+    {
+      "productId": "9025733014",
+      "sellerProductId": "15704749086",
+      "name": "유어스킨플러스 히알루론산 토너"
     }
   ],
+  "fieldDiffs": [],
   "downloads": [
     {
       "productId": "9402746236",

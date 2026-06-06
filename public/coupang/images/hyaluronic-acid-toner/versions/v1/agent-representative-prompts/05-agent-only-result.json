@@ -1,0 +1,10 @@
+{
+  "chatUrl": "https://chatgpt.com/c/6a229c9f-95f0-83ab-8676-d935d287ead1",
+  "id": "file_000000002fe87207b53f82566fad5e73",
+  "natural": "1254x1254",
+  "bytes": 1541344,
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/05.png",
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/05-agent-only.png",
+  "alt": "생성된 이미지: 청량한 히알루론 토너 광고",
+  "rule": "final file is direct image-agent output bytes; no local compositing"
+}

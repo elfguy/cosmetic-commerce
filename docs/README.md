@@ -24,6 +24,10 @@
 - `16-yourskinplus-8-product-comparison.md`: 쿠팡 등록 8개 제품 가격/채널/전성분/성분 역할 비교표
 - `17-coupang-competitor-comparison.md`: 쿠팡 내 유사 인기 상품과 자사 상품 비교, 가격/리뷰/구매 신호 분석
 - `28-coupang-openapi-access.md`: 쿠팡 셀러 OpenAPI 접속 정보 저장 위치, HMAC 인증 방식, 상품 목록/상세 조회 검증 절차
+- `29-coupang-product-renewal-roadmap.md`: 쿠팡 등록 제품 11개 순차 개선 우선순위, 아쿠아 로션 V4 작업 노하우, 제품별 상세/대표이미지 개선 프로세스
+- `30-amazon-kbeauty-market-research.md`: Amazon US K-Beauty/스킨케어 베스트셀러와 `korean skincare` 검색 상위 제품 기반 시장조사, 키워드/카테고리/진입 전략
+- `31-global-sales-amazon-roadmap.md`: 해외판매/Amazon US 진입을 위한 에이전트 활용 시장조사 체계, 준비 체크리스트, 0~120일 실행 타임라인
+- `32-hyaluronic-toner-v1-renewal-plan.md`: 히알루론산 토너 현재 쿠팡 등록본 점검, 아쿠아 로션과 겹치는 공통 컷 분리, 토너 V1 대표/상세 이미지 제작 계획
 
 ## 마케팅/운영
 
@@ -50,6 +54,7 @@
 - `/shop-editorial`: 자사몰 쇼핑몰 목업, 자연 라이프스타일 방향
 - `/product-comparison`: 유어스킨플러스 8개 상품 가격, 채널, 전성분, 성분 분석 비교표
 - `/competitor-comparison`: 쿠팡 인기 유사 상품과 유어스킨플러스 상품의 가격, 리뷰, 월 구매 신호 비교표
+- `/global-sales`: 해외판매 전략 보드. Amazon US K-Beauty 시장조사, 에이전트 활용법, 후보 SKU, 0~120일 실행 타임라인
 - `/toner-detail-renewal`: 히알루론산 토너 대표이미지/상세페이지 HTML 검토 시안
 
 ## 주요 데이터/자산

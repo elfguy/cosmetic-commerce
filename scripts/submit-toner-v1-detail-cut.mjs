@@ -1,0 +1,61 @@
+import { chromium } from 'playwright';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { cleanupStaleImageAgentTabs } from './lib/chrome-tab-cleanup.mjs';
+
+const root = '/Users/elfguy/alba/cosmetic-commerce';
+const base = path.join(root, 'public/coupang/images/hyaluronic-acid-toner/versions/v1');
+const cut = process.env.CUT;
+const key = process.env.KEY || `${cut}-detail`;
+if (!cut) throw new Error('CUT env is required, e.g. CUT=02');
+const promptPath = path.join(base, 'prompts', `${key}.md`);
+const prompt = await fs.readFile(promptPath, 'utf8');
+const defaultRefs = [
+  path.join(base, 'detail/01.png'),
+  path.join(base, 'detail/04.png'),
+  path.join(base, 'representative/01.png'),
+  path.join(root, 'public/drive-originals/hyaluronic-acid-toner/downloaded/히알루론산토너.png'),
+  path.join(root, `public/coupang/images/hyaluronic-acid-toner/detail/${cut}.png`),
+].filter(Boolean);
+const refs = [];
+for (const ref of defaultRefs) {
+  try { await fs.access(ref); refs.push(ref); } catch {}
+}
+function getId(src){ try { return new URL(src).searchParams.get('id') || src; } catch { return src; } }
+await fs.mkdir(path.join(base, 'raw'), { recursive: true });
+const browser = await chromium.connectOverCDP('http://127.0.0.1:9222');
+const ctx = browser.contexts()[0] || await browser.newContext();
+await cleanupStaleImageAgentTabs(ctx, { maxTabs: 2 });
+const page = await ctx.newPage();
+await page.goto('https://chatgpt.com/images/', { waitUntil:'domcontentloaded', timeout:60000 });
+await page.waitForTimeout(3500);
+console.log('workspace', { url: page.url(), title: await page.title(), refs });
+if (!page.url().startsWith('https://chatgpt.com/images')) throw new Error('not Images workspace: ' + page.url());
+const bodyText = await page.locator('body').innerText().catch(() => '');
+if (/사람인지|human|Cloudflare|verify/i.test(bodyText) && !bodyText.includes('이미지 만들기')) {
+  throw new Error('human verification/login likely required');
+}
+const create = page.getByText('이미지 만들기', { exact: true }).first();
+if (await create.count()) { await create.click({ timeout:15000 }).catch(()=>{}); await page.waitForTimeout(2500); }
+await page.waitForSelector('#prompt-textarea', { timeout:60000 });
+const before = await page.evaluate(() => Array.from(document.images).map(img => img.currentSrc || img.src).filter(src => src.includes('backend-api/estuary/content')));
+await fs.writeFile(path.join(base, 'raw', `${key}-before-ids.json`), JSON.stringify(before.map(getId), null, 2));
+const uploadSelectors = ['input#upload-files','input#upload-photos','input#image-gen-action-modal-upload-photos','input[name="images-app-drop-container-input"]','input[type="file"]'].join(', ');
+await page.setInputFiles(uploadSelectors, refs);
+console.log('set files', refs.length);
+await page.waitForTimeout(9000);
+for (const text of ['확인','완료']) {
+  const btn = page.getByRole('button', { name: text }).first();
+  if (await btn.count()) { await btn.click({ timeout:3000 }).catch(()=>{}); await page.waitForTimeout(1000); }
+}
+const composer = page.locator('#prompt-textarea').last();
+await composer.click();
+await page.keyboard.insertText(prompt);
+await page.screenshot({ path: path.join(root, `tmp-toner-v1-${key}-before-send.png`), fullPage:true });
+const send = page.locator('button[data-testid="send-button"], #composer-submit-button, button[aria-label*="프롬프트 보내기"], button[aria-label*="Send prompt"]').last();
+console.log('send disabled?', await send.evaluate(el => el.disabled || el.getAttribute('aria-disabled') === 'true').catch(()=>null));
+await send.click({ timeout:15000 });
+await page.waitForTimeout(10000);
+await fs.writeFile(path.join(base, 'raw', `${key}-submit-log.json`), JSON.stringify({ key, cut, afterUrl: page.url(), title: await page.title(), refs, submittedAt: new Date().toISOString() }, null, 2));
+console.log('submitted', page.url());
+process.exit(0);

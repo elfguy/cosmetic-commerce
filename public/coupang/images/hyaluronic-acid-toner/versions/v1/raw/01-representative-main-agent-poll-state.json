@@ -1,0 +1,93 @@
+{
+  "chosen": {
+    "alt": "",
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000fa84720693465935f4f59fd7&ts=494619&p=fsns&cid=1&sig=f971d825962eb30679b3dfb83d5b97d7cb2069bc4a6ba75ab59b4948a1aef8df&v=0",
+    "w": 1254,
+    "h": 1254,
+    "rect": {
+      "x": 386,
+      "y": 295,
+      "w": 528,
+      "h": 528
+    },
+    "id": "file_00000000fa84720693465935f4f59fd7"
+  },
+  "lastData": {
+    "busy": false,
+    "textTail": " 1장을 새로 생성해 주세요. 설명만 하지 말고 실제 이미지를 만들어 주세요.\n\n목표: 유어스킨플러스 히알루론산 토너 500ml 쿠팡 대표이미지 01.\n\n[핵심]\n- 제품은 반드시 실제 원본의 YOURSKIN+ HYALURONIC ACID TONER 병을 기준으로 해야 합니다.\n- 제품명은 토너입니다. 로션/아쿠아 로션/크림이 아닙니다.\n- 용량은 500ml입니다. 300ml 금지.\n- 제품 병 형태, 투명한 내용물, 검정 캡, 라벨 구조를 실제 원본과 최대한 유지해 주세요.\n- GPT가 임의로 다른 병/다른 라벨/다른 용기를 만들면 실패입니다.\n\n[대표 이미지 구성]\n- 1:1 정사각형 쿠팡 대표/썸네일 이미지.\n- 흰색 또는 아주 밝은 배경.\n- 제품은 중앙 또는 약간 오른쪽 중심, 크게 배치. 모바일 썸네일에서 병과 라벨이 바로 보여야 합니다.\n- 제품 높이는 이미지 전체의 약 75~85%.\n- 부드러운 스튜디오 조명과 자연스러운 그림자.\n- 제품 외 불필요한 소품/박스/물결/상세페이지 장식 금지.\n\n[좌상단 신선제품 배지]\n- 좌상단에 원형 스티커/도장형 배지 1개만 넣어 주세요.\n- 배지는 제품을 가리지 않게 여백에 배치.\n- 배지 문구는 아래 그대로:\n  신선 제품\n  제조 6개월 이내\n- 제조 6개월 이내는 모바일에서도 읽히도록 크게.\n- 초록/아쿠아 계열의 깔끔한 K-뷰티 톤.\n\n[정확한 텍스트]\n제품 라벨에서 최대한 유지할 텍스트:\n- YOURSKIN+\n- HYALURONIC ACID TONER\n- 500ml\n\n[절대 금지]\n- HYALURONIC ACID AQUA LOTION 금지.\n- AQUA LOTION 금지.\n- 로션, 크림, 300ml 금지.\n- 가짜 박스/패키지 추가 금지.\n- 상세페이지형 문구, 성분 아이콘, 해시태그, 긴 설명문 금지.\n- V1, proof, CUT, STEP, POINT, 후보번호 같은 제작용 표기 금지.\n- 제품 라벨을 완전히 새로 창작하거나 다른 제품처럼 바꾸는 것 금지.\n- 배지가 잘리거나 제품을 덮는 것 금지.\n\n[완성 기준]\n- 실제 원본 제품과 같은 히알루론산 토너 500ml로 보여야 합니다.\n- 쿠팡 대표이미지로 바로 쓸 수 있을 만큼 깔끔해야 합니다.\n- 로컬 합성 느낌이 아니라 자연스러운 이미지 생성 결과여야 합니다.\n\n더 보기\nThought for 1m 12s\n편집\n\nPro\nChatGPT는 실수를 할 수 있습니다. 중요한 정보는 재차 확인하세요.",
+    "imgs": [
+      {
+        "alt": "히알루론산토너.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000037107206a252a58015448f8d&ts=494619&p=fs&cid=1&sig=de2e75e5702d13a83d85e81dcad577256ec97c836d24278ba6a4082bb1c26b38&v=0",
+        "w": 919,
+        "h": 2048,
+        "rect": {
+          "x": 658,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "toner-current-product-01.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000d56872068650515593df21f4&ts=494619&p=fs&cid=1&sig=6a27d7c583a276c23ddd57ef6562b676e4210fc5f4153b426cfa1508bc837f34&v=0",
+        "w": 1000,
+        "h": 1000,
+        "rect": {
+          "x": 790,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "01.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000038c07206a0e03c1d5e38bac0&ts=494619&p=fs&cid=1&sig=b1ebf8b5c3e8d3ff17fd6a7a7226dc8efc0c44d59ce1a585b24161c9260aa247&v=0",
+        "w": 780,
+        "h": 1360,
+        "rect": {
+          "x": 922,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "생성된 이미지: 투명 하이알루론산 토너 제품 사진",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000fa84720693465935f4f59fd7&ts=494619&p=fsns&cid=1&sig=f971d825962eb30679b3dfb83d5b97d7cb2069bc4a6ba75ab59b4948a1aef8df&v=0",
+        "w": 1254,
+        "h": 1254,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 480,
+          "h": 480
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000fa84720693465935f4f59fd7&ts=494619&p=fsns&cid=1&sig=f971d825962eb30679b3dfb83d5b97d7cb2069bc4a6ba75ab59b4948a1aef8df&v=0",
+        "w": 1254,
+        "h": 1254,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 480,
+          "h": 480
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000fa84720693465935f4f59fd7&ts=494619&p=fsns&cid=1&sig=f971d825962eb30679b3dfb83d5b97d7cb2069bc4a6ba75ab59b4948a1aef8df&v=0",
+        "w": 1254,
+        "h": 1254,
+        "rect": {
+          "x": 386,
+          "y": 295,
+          "w": 528,
+          "h": 528
+        }
+      }
+    ]
+  }
+}

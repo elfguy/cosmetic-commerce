@@ -1,0 +1,189 @@
+{
+  "key": "03-detail-routine-rev2",
+  "startUrl": "https://chatgpt.com/images/",
+  "afterUrl": "https://chatgpt.com/c/6a223862-9b98-83a6-b6bc-1f8c279799d8",
+  "title": "쿠팡 상세페이지 이미지 제작",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/refs/toner-current-product-01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/refs/aqua-v4-detail-04.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/04.png"
+  ],
+  "pre": [
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000009f287207a80b0e15b70a7cad&ts=494618&p=fs&cid=1&sig=2545019df8d14e17f74e083ad0a8a1b8febd6d5741af9dc4a4986b92c78b3f19&v=0",
+      "w": 1000,
+      "h": 1000,
+      "id": "file_000000009f287207a80b0e15b70a7cad"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000ff907207ab9ddd4604a81ff1&ts=494618&p=fs&cid=1&sig=039515e47b3a6206e86a108263e40fa44847373313545f9750277262f3925537&v=0",
+      "w": 780,
+      "h": 1360,
+      "id": "file_00000000ff907207ab9ddd4604a81ff1"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000006b947207a9ee2a6ca80c1675&ts=494618&p=fs&cid=1&sig=294eafc47e55ff1c289ac9fe1e541b6c797603dd1950200bca2cde5ae314f748&v=0",
+      "w": 780,
+      "h": 1360,
+      "id": "file_000000006b947207a9ee2a6ca80c1675"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000065b87207bbc04e8aa02327fe&ts=494618&p=fs&cid=1&sig=895d78510a243cda6e6fb087c4f5fdf21a5819a1f9f132dc47fdb12a42a3444a&v=0",
+      "w": 780,
+      "h": 1360,
+      "id": "file_0000000065b87207bbc04e8aa02327fe"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=5ad02e7920a11c8%23file_000000000600720796fcece9d3f6e953%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=c91049ffdeed02ec57377289c4e673c5ca38e059f948560c2a0d88c8dcc3a9c4&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "5ad02e7920a11c8%23file_000000000600720796fcece9d3f6e953%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=478b59b0fccef2e%23file_00000000c65872079e3ba26e6b02ef73%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=7e2c13577d5702e20e870330cc33534b7695625417d7be235aef3b374b284c84&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "478b59b0fccef2e%23file_00000000c65872079e3ba26e6b02ef73%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=f77d88f97cc837a%23file_0000000023807207b26c198cb7c02c8f%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=54de191153d32da7f7cfcb1d94296a20a90cc058e6ed6241e97292ecf0853902&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "f77d88f97cc837a%23file_0000000023807207b26c198cb7c02c8f%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=09e4b1590061f9f%23file_0000000066c47209818f937af4f6ee5b%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=8c1305573f0a2ca83a81562475a419b689cf1341e5009a2dd671fa608a4bded0&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "09e4b1590061f9f%23file_0000000066c47209818f937af4f6ee5b%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=ac68dd5ded5420c%23file_00000000caf472098cbf570bc7be2e31%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=06da1fcf86ab1caa02de5e42547a0f6d27098bb5b43bba0ed1d73b38dde80e60&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "ac68dd5ded5420c%23file_00000000caf472098cbf570bc7be2e31%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=fff31bebb1eb6f0%23file_00000000984c720bb57fcac088ca730c%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=36e3eff14b173d087cfe76ec3626df8296347b70bf1acf9694dfea2b588addc5&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "fff31bebb1eb6f0%23file_00000000984c720bb57fcac088ca730c%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=362745d4671b6e3%23file_00000000b384720bb2020ec39ec1e879%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=b1855bb7a9e4b9c1d28fdf62501dec606e60030afcca35641ec6051f860cbd31&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "362745d4671b6e3%23file_00000000b384720bb2020ec39ec1e879%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=0700c1b02bc8d1a%23file_0000000094b0720690c91853f580bf94%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=c4fc1162395a573c425144197b8099e30028e6b67f473ff9293a9b6cddee2e19&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "0700c1b02bc8d1a%23file_0000000094b0720690c91853f580bf94%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=25a2cb801550360%23file_00000000f2947206b32693e5a5a6c812%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=fd1258571fd53fb56586b35c72f604a5cc2fe8c4968c5f9fcf7b81fe1425f062&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "25a2cb801550360%23file_00000000f2947206b32693e5a5a6c812%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=f6f6d97978cb786%23file_0000000054507206b288cead4dddd5c3%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=5f715f3ff1f2c3aef8033a08eaff3d40fd735dc78cd0f2b5dd333a484164fa8e&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "f6f6d97978cb786%23file_0000000054507206b288cead4dddd5c3%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=a1147a316f302d0%23file_000000001a5872069e2df5fce5ef584c%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=179bb0b68f09d98313dce3a127286814cb4715b6739c2af5e897d3aab0d52682&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "a1147a316f302d0%23file_000000001a5872069e2df5fce5ef584c%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=ac52779fd4340e8%23file_0000000046787209803eef256ad50ce6%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=a9fc328b935078a8f2ddb8d86f987ec46535b85f36300b3e600d82d336ddcf69&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "ac52779fd4340e8%23file_0000000046787209803eef256ad50ce6%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=e7b086dcdc2e459%23file_000000008e407209bbf13d0c6cd1bdca%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=e1f688abbcd5d7f9f7e865cc23e27030a4ef41a13bad3aaf64224f6f62e143ba&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "e7b086dcdc2e459%23file_000000008e407209bbf13d0c6cd1bdca%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=1864c4af64ab2c0%23file_0000000039f4720986c0ad4a6dfce752%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=a8a3430476e0784706ba7fd3f9c6cc1367bf278fac5973446e8ac18b8a0a8583&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "1864c4af64ab2c0%23file_0000000039f4720986c0ad4a6dfce752%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=fe099732f047777%23file_000000004bc87209a3bb7f2cb0798115%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=d0fb154cc24994a7e4278e5cc95d6934f1ae6253962616b324006c1f5a8897fb&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "fe099732f047777%23file_000000004bc87209a3bb7f2cb0798115%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=63ea6d927186ef1%23file_00000000891472069d692c70e060ac87%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=1fa8dc4d0d30fa972d9f1d0a1d4acddd599346d4611feff86d4aacaa6607fa8c&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "63ea6d927186ef1%23file_00000000891472069d692c70e060ac87%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=26220ee9126d317%23file_000000002c307206aeb585414d71b8a1%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=0986df774284aff987a21f1c3cceba26a85f4467cbe7f22049fdda70030edd56&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "26220ee9126d317%23file_000000002c307206aeb585414d71b8a1%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=9110c2fa661834e%23file_00000000a7e47209abed95778366e2ef%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=b07b61f538ac325b2acdc826e6d2171aa32e7c9f8bcf81b825b904be9fcb5b97&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "9110c2fa661834e%23file_00000000a7e47209abed95778366e2ef%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=f4bf40454e41f92%23file_00000000dfcc7206946795a63fbe2282%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=710af53d4bf1e470e212bc4bad71d827e6da37fbe88b0f8b62d3eab0c512ae59&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "f4bf40454e41f92%23file_00000000dfcc7206946795a63fbe2282%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=c307e0e08794816%23file_0000000001987206b6e428d5ac625b99%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=ccd47280b1699c01b5d878ce8c1af2e76e47bae34ca045a98ebfb71567d7b769&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "c307e0e08794816%23file_0000000001987206b6e428d5ac625b99%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=a6a9da42205c0dc%23file_00000000dc307209b712a76888b082e0%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=ccdb8fa5b4f0f9a690ecddac1dc1eab61befad30207d0a0c3fafe6a9fa76588e&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "a6a9da42205c0dc%23file_00000000dc307209b712a76888b082e0%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=0e1c7330b3adfc2%23file_000000005064720b886cfe2176bdebc3%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=89e28d026c60d086dda80ff5a8b177d1226b6e038e44b67e1e80f1cd6ebbde7f&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "0e1c7330b3adfc2%23file_000000005064720b886cfe2176bdebc3%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=84a83600abdb19c%23file_00000000ca6c720bbcf084fe5440e6f9%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=4cc40a6142be9a94e2db895d136e96a7dae75ccd40731073693f9cdedca3f9cb&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "84a83600abdb19c%23file_00000000ca6c720bbcf084fe5440e6f9%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=3fd99a2fd2963bc%23file_000000004a0c7209970fdecedd6c5bf8%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=e8d4a30a17f7aa97d7f38bb423ccea37ca9f793ac9be8cb9cc015e3e1607cf59&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "3fd99a2fd2963bc%23file_000000004a0c7209970fdecedd6c5bf8%23thumbnail"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=6e433fec205a38b%23file_00000000bfcc7209b91f6dc60528d69f%23thumbnail&cp=pri&ma=90000&ts=20609&p=igh&cid=1&sig=dd8018d9d1459fd628578b409c8f4288a9f6f3101359791575ccbdce20f4a10c&v=0",
+      "w": 512,
+      "h": 512,
+      "id": "6e433fec205a38b%23file_00000000bfcc7209b91f6dc60528d69f%23thumbnail"
+    }
+  ],
+  "submittedAt": "2026-06-05T02:45:59.528Z"
+}

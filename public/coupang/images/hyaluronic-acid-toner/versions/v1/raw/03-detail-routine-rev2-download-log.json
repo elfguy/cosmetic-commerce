@@ -1,0 +1,18 @@
+{
+  "candidate": {
+    "i": 8,
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000001cb87207b5945578b20b55d4&ts=494618&p=fsns&cid=1&sig=0d179ea81774eb579232584c2266db49c645a005626a381519f2dd1ab0f40513&v=0",
+    "alt": "",
+    "w": 950,
+    "h": 1656,
+    "id": "file_000000001cb87207b5945578b20b55d4"
+  },
+  "fetch": {
+    "ok": true,
+    "status": 200,
+    "type": "image/png",
+    "bytes": 1678989
+  },
+  "out": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/raw/03-detail-routine-rev2-generated-raw.png",
+  "downloadedAt": "2026-06-05T02:47:47.396Z"
+}

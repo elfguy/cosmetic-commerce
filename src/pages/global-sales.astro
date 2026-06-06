@@ -1,0 +1,497 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+const marketSignals = [
+  { label: '검증된 K-Beauty 수요', value: '100k+', note: 'BIODANCE·medicube 등 월 구매 신호' },
+  { label: '반복 승리 키워드', value: '14개', note: 'PDRN, TXA, collagen, dark spot, barrier...' },
+  { label: '초기 테스트 SKU', value: '3개', note: '브라이트닝·장벽·탄력 축으로 압축' },
+  { label: '실행 타임라인', value: '120일', note: '조사 → 라벨 → 콘텐츠 → 런칭 → 판단' },
+];
+
+const keywordClusters = [
+  {
+    title: 'Dark Spot / Brightening',
+    subtitle: '톤·잡티·칙칙함',
+    tags: ['Niacinamide', 'TXA', 'Vitamin', 'Even Tone', 'Glow'],
+    action: '톤케어 계열 제품을 Amazon식 “Dark Spot Serum” 언어로 재해석',
+  },
+  {
+    title: 'Barrier / Sensitive',
+    subtitle: '민감피부·장벽·수분',
+    tags: ['Centella', 'Ceramide', 'Hyaluronic Acid', 'Soothing', 'Sensitive Skin'],
+    action: '40대+ 자연주의 이미지를 “민감피부 장벽 케어”로 번역',
+  },
+  {
+    title: 'Firming / PDRN',
+    subtitle: '탄력·주름·플럼핑',
+    tags: ['PDRN', 'Collagen', 'Peptide', 'Retinal', 'Plumping'],
+    action: '치료/개선 과장 대신 firming appearance, plumping hydration 중심',
+  },
+  {
+    title: 'Pore / Toner Pad',
+    subtitle: '모공·각질·피부결',
+    tags: ['AHA', 'BHA', 'Toner Pad', 'Pore', 'Texture'],
+    action: '신규 SKU 가능성. 수요는 강하지만 ODM·안정성 확인 필요',
+  },
+];
+
+const agents = [
+  ['Market Scout', '베스트셀러·검색 상위·트렌드 수집', '경쟁 ASIN 30~50개, 키워드 맵, 가격/리뷰/월구매 신호'],
+  ['Listing Analyst', '상위 리스팅을 제목·불릿·이미지·A+로 분해', '전환되는 상세 구조, 금지/위험 표현 후보'],
+  ['Product Fit Agent', '보유 11개 SKU와 해외 키워드 매칭', 'SKU 점수표, 1차 후보 3개'],
+  ['Compliance Agent', '미국 화장품 라벨·표현·MoCRA/FDA 체크', '검증 필요 항목, 삭제해야 할 표현'],
+  ['Logistics Agent', 'FBA/FBM/3PL·관세·배송·반품 비용 계산', '착지 원가, 60일 재고, 손익분기점'],
+  ['Creative Agent', '대표이미지·서브이미지·A+ 제작 지시', '모바일 첫 화면 기준 이미지 설계서'],
+  ['Ads Agent', 'PPC·쿠폰·리뷰 확보 실험 설계', '30일 광고 캠페인 구조와 판단 지표'],
+];
+
+const researchSteps = [
+  {
+    title: '1. 카테고리 지도 만들기',
+    body: 'Amazon Skin Care Best Sellers와 korean skincare 검색을 기준으로 다크스팟·장벽·탄력·토너패드·하이드로겔 마스크 축을 나눈다.',
+  },
+  {
+    title: '2. 경쟁 ASIN 표준 수집',
+    body: '브랜드, 가격, 리뷰, 평점, 월 구매 신호, 성분, 쿠폰, 대표 이미지 메시지, 리뷰 불만을 같은 양식으로 모은다.',
+  },
+  {
+    title: '3. 리뷰 마이닝',
+    body: '1~3점은 자극·향·끈적임·효과부족·파손을 보고, 5점은 재구매 이유와 체감 포인트를 추출한다.',
+  },
+  {
+    title: '4. 우리 SKU 점수화',
+    body: '성분 일치율, 표현 리스크, 마진, 물류 안정성, 콘텐츠 제작 난이도를 5점 척도로 평가한다.',
+  },
+  {
+    title: '5. 런칭 가설 작성',
+    body: '각 후보 SKU에 대해 Amazon title, bullet 5개, 메인 이미지 카피, 광고 키워드를 먼저 만든다.',
+  },
+];
+
+const candidates = [
+  {
+    rank: '01',
+    title: 'Niacinamide / TXA Dark Spot Serum',
+    why: '검색 의도가 명확하고 “dark spot, brightening, even tone” 전환 언어가 강하다.',
+    check: '실제 성분 포함 여부, 영문 INCI, 기능성 표현 가능 범위 확인',
+  },
+  {
+    rank: '02',
+    title: 'Centella / Ceramide Barrier Cream',
+    why: '40대+ 자연주의와 민감피부 장벽 케어가 잘 맞고 규정 리스크가 상대적으로 낮다.',
+    check: '센텔라·세라마이드·히알루론산 근거, 향/알코올/민감피부 표현 검증',
+  },
+  {
+    rank: '03',
+    title: 'Collagen / PDRN Firming Cream or Balm',
+    why: 'PDRN·콜라겐·탄력 키워드는 현재 K-Beauty 구매 신호가 강하다.',
+    check: 'PDRN 실제 포함 여부, anti-aging 표현을 안전한 appearance care로 전환',
+  },
+  {
+    rank: '04',
+    title: 'Toner Pad 신규 SKU',
+    why: 'medicube류 토너패드는 베스트셀러 수요가 크고 사용법이 직관적이다.',
+    check: 'ODM 가능성, 패드 원단, 성분 안정성, 단가와 MOQ',
+  },
+];
+
+const timeline = [
+  {
+    phase: '0~14일',
+    title: '시장조사와 후보 SKU 선정',
+    items: ['보유 11개 제품 성분·용량·단가·재고 정리', 'Amazon 경쟁 ASIN 30~50개 수집', '키워드 클러스터별 시장성 점수화', '후보 SKU 3개와 런칭 가설 작성'],
+  },
+  {
+    phase: '15~30일',
+    title: '규정·라벨·원가 검증',
+    items: ['INCI 영문명, 순중량, 원산지, 경고문 점검', '미국 화장품 라벨/MoCRA/FDA 관련 검증 필요 항목 분리', 'FBA/FBM 수수료·배송비·반품비 포함 마진 계산', 'Amazon Seller 계정·Brand Registry 가능성 확인'],
+  },
+  {
+    phase: '31~45일',
+    title: '콘텐츠 제작',
+    items: ['메인 이미지: 흰 배경, 제품 크게, 영문 패키지 가독성', '서브 이미지: 성분·문제해결·사용법·피부타입·루틴', 'A+ Content: 브랜드 스토리보다 문제 해결과 성분 신뢰 중심', '치료/의약품 오해 표현 제거'],
+  },
+  {
+    phase: '46~60일',
+    title: '리스팅과 소량 물류 준비',
+    items: ['Seller Central 리스팅 초안 생성', 'UPC/GTIN 또는 면제 정책 확인', '소량 FBM/3PL 테스트 또는 FBA 입고 계획', '샘플 포장·라벨 부착·파손 테스트'],
+  },
+  {
+    phase: '61~90일',
+    title: '런칭 실험',
+    items: ['1~3개 SKU만 런칭', '쿠폰·초기 할인·PPC 소액 집행', '자동 캠페인 + 정확 키워드 캠페인 병행', 'CTR, CVR, ACOS, 리뷰, 반품 사유 주간 점검'],
+  },
+  {
+    phase: '91~120일',
+    title: '확장 또는 중단 판단',
+    items: ['기준 충족 SKU만 재고 추가', '전환 낮으면 이미지 1~3번과 제목부터 수정', '우승 SKU는 세트·번들·여행용으로 확장', '실패 SKU는 원인 기록 후 중단'],
+  },
+];
+
+const gates = [
+  '후보 SKU가 아마존 검색 키워드와 70% 이상 맞는가?',
+  '미국 라벨·성분·표현 리스크가 해결 가능한가?',
+  'FBA/FBM 후에도 목표 마진이 남는가?',
+  '대표 이미지 3장만 보고도 문제·성분·타깃이 이해되는가?',
+  '90일 테스트 후 리뷰·재주문·전환 신호가 있는가?',
+];
+
+const sourceLinks = [
+  ['Amazon Skin Care Best Sellers', 'https://www.amazon.com/Best-Sellers-Beauty-Personal-Care-Skin-Care-Products/zgbs/beauty/11060451'],
+  ['Amazon korean skincare 검색', 'https://www.amazon.com/s?k=korean+skincare&i=beauty'],
+  ['Amazon FBA 안내', 'https://sell.amazon.com/fulfillment-by-amazon'],
+  ['아마존 시장조사 문서', '/docs/30-amazon-kbeauty-market-research.md'],
+  ['해외판매 로드맵 문서', '/docs/31-global-sales-amazon-roadmap.md'],
+];
+---
+
+<BaseLayout
+  title="해외판매 전략 · YOURSKIN+"
+  description="유어스킨플러스 해외판매 준비 허브 — Amazon US K-Beauty 시장조사, 에이전트 활용법, SKU 후보, 120일 실행 타임라인."
+>
+  <SiteHeader active="/global-sales/" />
+
+  <main class="global-sales">
+    <section class="hero container">
+      <div class="hero__copy">
+        <p class="eyebrow">Global sales cockpit</p>
+        <h1>해외판매는 감성이 아니라<br /><span>검색되는 기능성 언어</span>로 시작한다.</h1>
+        <p>
+          YOURSKIN PLUS를 Amazon US에서 실험 판매하기 위한 시장조사, 에이전트 운영,
+          준비 체크리스트, 아마존 런칭 타임라인을 한 화면에 모았습니다.
+        </p>
+        <div class="hero__actions">
+          <a class="btn" href="#timeline">120일 타임라인 보기</a>
+          <a class="btn-ghost" href="#agents">에이전트 운영법</a>
+        </div>
+      </div>
+      <aside class="hero__card" aria-label="핵심 결론">
+        <span>1차 결론</span>
+        <strong>Korean functional skincare</strong>
+        <p>프리미엄 자연주의를 미국 아마존에서는 성분·문제해결·피부타입 중심으로 번역해야 합니다.</p>
+        <ul>
+          <li>Dark Spot / Brightening</li>
+          <li>Barrier / Sensitive Skin</li>
+          <li>PDRN / Collagen / Firming</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="signal-strip container" aria-label="시장 신호 요약">
+      {marketSignals.map((signal) => (
+        <article>
+          <span>{signal.label}</span>
+          <strong>{signal.value}</strong>
+          <small>{signal.note}</small>
+        </article>
+      ))}
+    </section>
+
+    <section class="section container" id="amazon-analysis">
+      <header class="section__head">
+        <p class="eyebrow">Amazon analysis</p>
+        <h2>아마존에서 반복되는 승리 패턴</h2>
+        <p>상위 K-Beauty 제품은 브랜드 소개보다 문제 해결·성분·제형 키워드를 먼저 보여줍니다.</p>
+      </header>
+      <div class="cluster-grid">
+        {keywordClusters.map((cluster) => (
+          <article class="cluster-card">
+            <small>{cluster.subtitle}</small>
+            <h3>{cluster.title}</h3>
+            <div class="chips">
+              {cluster.tags.map((tag) => <span>{tag}</span>)}
+            </div>
+            <p>{cluster.action}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section agent-section" id="agents">
+      <div class="container">
+        <header class="section__head agent-section__head">
+          <p class="eyebrow">Multi-agent research desk</p>
+          <h2>여러 에이전트로 나눠서 조사하는 방식</h2>
+          <p>한 명이 감으로 보는 게 아니라, 수요·리스팅·제품적합·규정·물류·콘텐츠·광고를 분리해 병렬 검증합니다.</p>
+        </header>
+        <div class="agent-list">
+          {agents.map(([name, role, output], index) => (
+            <article>
+              <div class="agent-card__top">
+                <span class="agent-card__number">{String(index + 1).padStart(2, '0')}</span>
+                <span class="agent-card__name">{name}</span>
+              </div>
+              <strong>{role}</strong>
+              <p>{output}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="research-method">
+      <header class="section__head">
+        <p class="eyebrow">Research method</p>
+        <h2>시장조사는 이렇게 반복한다</h2>
+        <p>아마존 검색 결과를 그냥 보는 것이 아니라, SKU 결정으로 이어지는 표준 데이터로 바꿉니다.</p>
+      </header>
+      <div class="method-list">
+        {researchSteps.map((step) => (
+          <article>
+            <h3>{step.title}</h3>
+            <p>{step.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section container" id="sku-candidates">
+      <header class="section__head">
+        <p class="eyebrow">First SKU candidates</p>
+        <h2>1차 해외판매 후보 SKU</h2>
+        <p>보유 제품은 아래 3개 축에 먼저 매칭하고, 신규 개발은 토너패드/하이드로겔 마스크를 후순위로 봅니다.</p>
+      </header>
+      <div class="candidate-grid">
+        {candidates.map((candidate) => (
+          <article class="candidate-card">
+            <span>{candidate.rank}</span>
+            <h3>{candidate.title}</h3>
+            <p>{candidate.why}</p>
+            <small>확인 필요: {candidate.check}</small>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section container" id="timeline">
+      <header class="section__head">
+        <p class="eyebrow">Execution timeline</p>
+        <h2>0~120일 실행 타임라인</h2>
+        <p>일단 크게 벌리지 말고 1~3개 SKU만 실험해서 리뷰·전환·물류 리스크를 검증합니다.</p>
+      </header>
+      <div class="timeline">
+        {timeline.map((phase) => (
+          <article class="timeline__item">
+            <div class="timeline__marker">{phase.phase}</div>
+            <div class="timeline__body">
+              <h3>{phase.title}</h3>
+              <ul>
+                {phase.items.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section container" id="decision-gates">
+      <div class="gate-panel">
+        <div>
+          <p class="eyebrow">Decision gates</p>
+          <h2>중단/확장 판단 기준</h2>
+          <p>해외판매는 “해보고 느낌”이 아니라, 게이트를 통과한 SKU만 다음 돈을 씁니다.</p>
+        </div>
+        <ol>
+          {gates.map((gate) => <li>{gate}</li>)}
+        </ol>
+      </div>
+    </section>
+
+    <section class="section container source-section" id="sources">
+      <header class="section__head">
+        <p class="eyebrow">Sources & working docs</p>
+        <h2>분석 근거와 작업 문서</h2>
+      </header>
+      <div class="source-grid">
+        {sourceLinks.map(([label, href]) => (
+          <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noreferrer' : undefined}>
+            <span>{label}</span>
+            <em>열기 →</em>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .global-sales { position: relative; z-index: 1; padding-bottom: 16px; }
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
+    gap: clamp(22px, 5vw, 58px);
+    align-items: center;
+    padding-block: clamp(42px, 7vw, 88px) clamp(26px, 5vw, 54px);
+  }
+  .hero__copy h1 {
+    margin: 14px 0 18px;
+    font-size: clamp(35px, 6.2vw, 72px);
+    line-height: 1.03;
+    letter-spacing: -0.04em;
+  }
+  .hero__copy h1 span { color: var(--accent-ink); }
+  .hero__copy p {
+    max-width: 62ch;
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(15px, 1.35vw, 18px);
+    line-height: 1.75;
+  }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .hero__card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(24px, 3vw, 34px);
+    border-radius: 28px;
+    background:
+      radial-gradient(circle at 90% 4%, rgba(181, 101, 74, .42), transparent 32%),
+      linear-gradient(145deg, #1f2a24, #2e3d34 62%, #5f6e59);
+    color: #f8f3e9;
+    box-shadow: var(--shadow-lg);
+  }
+  .hero__card > span { font-family: var(--font-latin); font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #d9c4b6; }
+  .hero__card strong { display: block; margin-top: 12px; font-size: clamp(25px, 2.8vw, 34px); line-height: 1.08; }
+  .hero__card p { color: #dbe2dc; line-height: 1.65; }
+  .hero__card ul { display: grid; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
+  .hero__card li { padding: 10px 12px; border: 1px solid rgba(255,255,255,.16); border-radius: 14px; background: rgba(255,255,255,.08); }
+
+  .signal-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .signal-strip article { padding: 18px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--shadow-sm); }
+  .signal-strip span { display: block; color: var(--muted); font-size: 12px; font-weight: 800; }
+  .signal-strip strong { display: block; margin: 8px 0 4px; font-family: var(--font-latin); font-size: clamp(26px, 3.4vw, 38px); letter-spacing: -0.03em; }
+  .signal-strip small { color: var(--faint); line-height: 1.45; }
+
+  .section { padding-block: clamp(34px, 6vw, 72px); }
+  .section__head { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1fr); gap: 16px 34px; align-items: end; margin-bottom: 22px; }
+  .section__head h2 { margin: 8px 0 0; font-size: clamp(26px, 4vw, 44px); line-height: 1.12; letter-spacing: -0.03em; }
+  .section__head p:last-child { margin: 0; color: var(--muted); line-height: 1.7; }
+  .agent-section {
+    position: relative;
+    margin-block: 36px;
+    padding-block: clamp(42px, 7vw, 78px);
+    background:
+      radial-gradient(circle at 8% 0%, rgba(181, 101, 74, 0.12), transparent 34%),
+      linear-gradient(180deg, #fffaf1 0%, #f3efe4 100%);
+    border-block: 1px solid var(--line);
+  }
+  .agent-section__head h2 { color: var(--ink) !important; }
+  .agent-section__head p:last-child { color: #565348 !important; }
+
+  .cluster-grid, .candidate-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .cluster-card, .candidate-card {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .cluster-card small { color: var(--accent-ink); font-weight: 800; }
+  .cluster-card h3, .candidate-card h3 { margin: 8px 0 12px; font-size: 21px; line-height: 1.18; letter-spacing: -0.02em; }
+  .cluster-card p, .candidate-card p { margin: 14px 0 0; color: var(--muted); line-height: 1.65; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chips span { padding: 5px 9px; border-radius: var(--r-pill); background: var(--surface-3); color: var(--muted); font-size: 12px; font-weight: 800; }
+
+  .agent-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .agent-list article {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #ded6c7;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 18px 44px -30px rgba(31, 42, 36, 0.42);
+  }
+  .agent-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .agent-card__number {
+    display: inline-grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--forest);
+    color: #f8f3e9;
+    font-family: var(--font-latin);
+    font-size: 12px;
+    font-weight: 900;
+  }
+  .agent-card__name {
+    color: var(--accent-ink);
+    font-family: var(--font-latin);
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: .02em;
+    text-align: right;
+  }
+  .agent-list strong {
+    display: block;
+    color: var(--ink);
+    font-size: clamp(19px, 2vw, 25px);
+    line-height: 1.35;
+    letter-spacing: -0.025em;
+  }
+  .agent-list p {
+    margin: 14px 0 0;
+    color: #5c594f;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .method-list { display: grid; gap: 10px; counter-reset: methods; }
+  .method-list article { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 16px; padding: 18px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); }
+  .method-list h3 { margin: 0; font-size: 17px; }
+  .method-list p { margin: 0; color: var(--muted); line-height: 1.65; }
+
+  .candidate-card { position: relative; padding-top: 54px; }
+  .candidate-card > span { position: absolute; top: 18px; left: 18px; color: var(--accent); font-family: var(--font-latin); font-size: 13px; font-weight: 900; letter-spacing: .08em; }
+  .candidate-card small { display: block; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--accent-ink); line-height: 1.55; font-weight: 700; }
+
+  .timeline { position: relative; display: grid; gap: 12px; }
+  .timeline__item { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 16px; align-items: stretch; }
+  .timeline__marker { display: grid; place-items: center; min-height: 116px; border-radius: 20px; background: var(--forest); color: #f8f3e9; font-family: var(--font-latin); font-weight: 900; }
+  .timeline__body { padding: 20px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+  .timeline__body h3 { margin: 0 0 12px; font-size: 22px; }
+  .timeline__body ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 20px; margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.55; }
+
+  .gate-panel { display: grid; grid-template-columns: minmax(260px, .75fr) minmax(0, 1fr); gap: 22px; padding: clamp(22px, 4vw, 38px); border-radius: 26px; background: var(--accent-soft); border: 1px solid #ead0c4; }
+  .gate-panel h2 { margin: 8px 0 12px; font-size: clamp(25px, 3vw, 38px); }
+  .gate-panel p { margin: 0; color: var(--muted); line-height: 1.65; }
+  .gate-panel ol { display: grid; gap: 10px; margin: 0; padding-left: 22px; }
+  .gate-panel li { padding: 12px 14px; border-radius: 14px; background: rgba(255,255,255,.68); font-weight: 800; line-height: 1.45; }
+
+  .source-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+  .source-grid a { display: flex; justify-content: space-between; gap: 12px; padding: 16px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: inherit; text-decoration: none; }
+  .source-grid a:hover { border-color: var(--accent); }
+  .source-grid span { font-weight: 800; }
+  .source-grid em { flex: 0 0 auto; color: var(--accent-ink); font-style: normal; font-weight: 900; }
+
+  @media (max-width: 980px) {
+    .hero, .section__head, .gate-panel { grid-template-columns: 1fr; }
+    .signal-strip, .cluster-grid, .candidate-grid, .source-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .agent-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .timeline__body ul { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .hero { grid-template-columns: 1fr; padding-top: 32px; }
+    .signal-strip, .cluster-grid, .candidate-grid, .source-grid, .agent-list { grid-template-columns: 1fr; }
+    .agent-section { margin-block: 24px; padding-block: 36px; }
+    .agent-list article { padding: 18px; border-radius: 20px; }
+    .agent-list strong { font-size: 20px; line-height: 1.35; }
+    .agent-list p { font-size: 13.5px; }
+    .method-list article, .timeline__item { grid-template-columns: 1fr; }
+    .timeline__marker { min-height: auto; padding: 14px; justify-content: start; }
+  }
+</style>

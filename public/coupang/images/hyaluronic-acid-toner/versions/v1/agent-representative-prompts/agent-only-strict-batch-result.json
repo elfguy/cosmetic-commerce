@@ -1,0 +1,52 @@
+[
+  {
+    "n": "02",
+    "chatUrl": "https://chatgpt.com/c/6a229e1b-cb68-83ab-8d0d-509de0e7899e",
+    "id": "file_00000000fbfc7207b44fa542659de0da",
+    "natural": "1254x1254",
+    "bytes": 1531357,
+    "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/02-agent-only-strict-product.png",
+    "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/02.png",
+    "rule": "direct strict image-agent output; no local compositing"
+  },
+  {
+    "n": "03",
+    "chatUrl": "https://chatgpt.com/c/6a229e73-8f6c-83a3-ab58-db9827a8d1a5",
+    "id": "file_00000000adec7207899fd4ccc73c5296",
+    "natural": "1254x1254",
+    "bytes": 1513548,
+    "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/03-agent-only-strict-product.png",
+    "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/03.png",
+    "rule": "direct strict image-agent output; no local compositing"
+  },
+  {
+    "n": "04",
+    "chatUrl": "https://chatgpt.com/c/6a229ee3-68cc-83a3-bdb4-a764b23b51a8",
+    "id": "file_00000000aa907207aa0c4244c5fe70c4",
+    "natural": "1254x1254",
+    "bytes": 1440975,
+    "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/04-agent-only-strict-product.png",
+    "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/04.png",
+    "rule": "direct strict image-agent output; no local compositing"
+  },
+  {
+    "n": "05",
+    "chatUrl": "https://chatgpt.com/c/6a229f63-5de0-83a7-acf5-a01b9660cfb1",
+    "id": "file_0000000004d87207a817bb32c12a9b5c",
+    "natural": "1254x1254",
+    "bytes": 1522598,
+    "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/05-agent-only-strict-product.png",
+    "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/05.png",
+    "rule": "direct strict image-agent output; no local compositing"
+  },
+  {
+    "n": "06",
+    "chatUrl": "https://chatgpt.com/c/6a229fda-c830-83a8-9774-3c632fd7d374",
+    "id": "file_000000006c5072078fb4adef1c9994ce",
+    "natural": "1254x1254",
+    "bytes": 1533693,
+    "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/06-agent-only-strict-product.png",
+    "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/06.png",
+    "rule": "direct strict image-agent output; no local compositing"
+  }
+]

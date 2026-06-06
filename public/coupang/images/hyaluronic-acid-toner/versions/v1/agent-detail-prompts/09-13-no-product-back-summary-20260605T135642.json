@@ -1,0 +1,95 @@
+{
+  "backupDir": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/detail09-13-before-no-product-back-20260605T135642",
+  "results": [
+    {
+      "chatUrl": "https://chatgpt.com/c/6a22d5ad-1c88-83a3-a9f1-2fc83e0cea4a",
+      "id": "file_00000000e18c7206a3af4acafeaa66cb",
+      "natural": "950x1656",
+      "bytes": 1552249,
+      "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-detail-raw/09-irritation-test-no-product-agent.png",
+      "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/09.png",
+      "finalSize": "780x1360",
+      "backupDir": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/detail09-13-before-no-product-back-20260605T135642",
+      "refs": [
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/07.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/08.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/08.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/09.png"
+      ],
+      "alt": "생성된 이미지: 피부 자극 테스트 결과 표기",
+      "rule": "direct ChatGPT Images output; no local compositing/text overlay; normalized only; no product requested"
+    },
+    {
+      "chatUrl": "https://chatgpt.com/c/6a22d617-ea9c-83a2-806a-aee1544ccefe",
+      "id": "file_00000000251c7209b26ebd214f81e7af",
+      "natural": "950x1656",
+      "bytes": 1392009,
+      "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-detail-raw/10-fresh-date-no-product-agent.png",
+      "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/10.png",
+      "finalSize": "780x1360",
+      "backupDir": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/detail09-13-before-no-product-back-20260605T135642",
+      "refs": [
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/08.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/09.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/10.png"
+      ],
+      "alt": "생성된 이미지: 제조일자 확인의 중요성",
+      "rule": "direct ChatGPT Images output; no local compositing/text overlay; normalized only; no product requested"
+    },
+    {
+      "chatUrl": "https://chatgpt.com/c/WEB:24b7d8bd-c99b-4b40-a2b6-f43830e4f0e6",
+      "id": "file_000000000970720980b568c19edbefe8",
+      "natural": "950x1656",
+      "bytes": 1334794,
+      "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-detail-raw/11-direct-management-no-product-agent.png",
+      "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/11.png",
+      "finalSize": "780x1360",
+      "backupDir": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/detail09-13-before-no-product-back-20260605T135642",
+      "refs": [
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/09.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/10.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/12.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/14.png"
+      ],
+      "alt": "생성된 이미지: 유어스킨플러스 관리 프로세스 안내",
+      "rule": "direct ChatGPT Images output; no local compositing/text overlay; normalized only; no product requested"
+    },
+    {
+      "chatUrl": "https://chatgpt.com/c/6a22d73e-e11c-83a3-9f1f-3908514fee3e",
+      "id": "file_0000000043707206a4b004b10e546419",
+      "natural": "950x1656",
+      "bytes": 1575259,
+      "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-detail-raw/12-product-info-ingredients-no-product-agent.png",
+      "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/12.png",
+      "finalSize": "780x1360",
+      "backupDir": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/detail09-13-before-no-product-back-20260605T135642",
+      "refs": [
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/10.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/11.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/13.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/12.png"
+      ],
+      "alt": "생성된 이미지: 제품 정보 및 전성분 안내",
+      "rule": "direct ChatGPT Images output; no local compositing/text overlay; normalized only; no product requested"
+    },
+    {
+      "chatUrl": "https://chatgpt.com/c/6a22d7a1-c15c-83a7-88ae-cbc2b94ccf1b",
+      "id": "file_0000000061f87206a3b0c69087e7799d",
+      "natural": "950x1656",
+      "bytes": 1363558,
+      "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-detail-raw/13-official-seller-no-product-agent.png",
+      "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/13.png",
+      "finalSize": "780x1360",
+      "backupDir": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/detail09-13-before-no-product-back-20260605T135642",
+      "refs": [
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/11.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/12.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/14.png",
+        "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/15.png"
+      ],
+      "alt": "생성된 이미지: 신선하게 받아보세요, 공식 구매 안내",
+      "rule": "direct ChatGPT Images output; no local compositing/text overlay; normalized only; no product requested"
+    }
+  ],
+  "contactSheet": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/v1-detail-contact.jpg"
+}

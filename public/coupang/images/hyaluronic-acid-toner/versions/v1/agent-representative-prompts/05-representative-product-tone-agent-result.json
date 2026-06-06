@@ -1,0 +1,19 @@
+{
+  "slot": "05",
+  "chatUrl": "https://chatgpt.com/c/6a22ec0c-9798-83a4-8626-4f44da1c89bc",
+  "id": "file_00000000c900720680b583a01919a262",
+  "natural": "1254x1254",
+  "bytes": 1272490,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/05-representative-product-tone-agent.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/05.png",
+  "finalSize": "1000x1000",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/product/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/product/02.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/representative02-06-before-product-tone-fix-20260605T152723/05.png"
+  ],
+  "backupDir": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/representative02-06-before-product-tone-fix-20260605T152723",
+  "alt": "생성된 이미지: 하나로 4가지 토너 케어",
+  "rule": "direct ChatGPT Images output; normalized only; no local compositing/text patch"
+}

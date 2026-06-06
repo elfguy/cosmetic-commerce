@@ -1,0 +1,24 @@
+{
+  "url": "https://chatgpt.com/c/6a223642-fe54-83a6-b04b-2545cd7c3a11",
+  "title": "쿠팡 이미지 제작 요청",
+  "busy": true,
+  "textTail": "콘텐츠로 건너뛰기\n채팅 기록\nChatGPT\n새 채팅\n채팅 검색\n라이브러리\n앱\nCodex\n더 보기\n프로젝트\n새 프로젝트\n유어스킨플러스\n유어스킨플러스 로그\n최근\n쿠팡 이미지 제작 요청\n공개키 비공개키 암호화\n공무원 시험 변화\n배경색 변경 요청\nV4 제품 이미지 수정\nV4 이미지 편집 요청\n제품 이미지 편집 요청\n제품 이미지 수정 요청\n제품 이미지 수정 요청\n제품 이미지 편집 요청\n세로 이미지 생성 요청\n이미지 생성 요청\n쿠팡 모바일 이미지 수정\n세로 이미지 수정 요청\n쿠팡 이미지 수정 요청\n이미지 오타 수정 요청\n히알루론산 아쿠아 로션\n쿠팡 대표이미지 생성 요청\nRWA 토큰 설명\nBen & Jerry's PR\n가족용 데일리 보습 이미지\n온 가족 데일리 보습 이미지\n이미지 수정 요청\n이미지 생성 요청\n쿠팡 대표 이미지 요청\n이미지 생성 요청\n쿠팡 대표이미지 생성 요청\n대표이미지 후보 생성 요청\ndonggyun lee\nPro\n공유하기\n쿠팡 대표이미지 01용 정사각형 제품 이미지 1장을 만들어주세요.\n\n중요: 반드시 ChatGPT Images 이미지 생성 결과물 안에 필요한 작은 배지 텍스트까지 자연스럽게 포함해 주세요. 배경만 만들지 마세요.\n\n[제품]\n유어스킨플러스 히알루론산 토너 500ml\n영문 라벨은 업로드한 실제 제품 이미지의 YOURSKIN+ HYALURONIC ACID TONER 500ml / 16.9 fl. oz 느낌을 최대한 유지해 주세요.\n제품 라벨/용량이 500ml로 보여야 합니다. 300ml, 120ml, lotion, aqua lotion으로 바꾸면 실패입니다.\n\n[스타일/구도]\n- 쿠팡 검색 썸네일용 대표 이미지입니다.\n- 흰색 또는 아주 연한 회백색 배경.\n- 실제 제품 병을 크게, 정면 중심으로 배치.\n- 제품 높이는 이미지 높이의 약 78~86%.\n- 깨끗한 자연광 스튜디오 촬영 느낌.\n- 그림자는 아주 약하게.\n- 과한 물결, 잎사귀, 성분 아이콘, 광고 배너, 긴 문구는 넣지 마세요.\n- 제품은 병 모양/펌프/투명한 블루톤 내용물이 실제 레퍼런스와 비슷해야 합니다.\n\n[허용되는 작은 배지]\n왼쪽 상단 또는 오른쪽 상단에 작고 깔끔한 원형/스티커형 배지 1개만 넣어주세요.\n배지 문구:\n제조 6개월 이내\n신선제품 보장\n\n배지는 제품보다 튀지 않게 작고 고급스럽게, 검색 썸네일에서 신뢰 포인트만 보이는 정도로 넣어주세요.\n\n[금지]\n- 큰 헤드라인 금지\n- 상세페이지식 긴 카피 금지\n- 성분 리스트 금지\n- 8종 히알루론산 아이콘 금지\n- 사람/모델 금지\n- 가짜 박스 금지\n- 제품명을 다른 이름으로 변경 금지\n- 500ml를 다른 용량으로 변경 금지\n\n[검수 기준]\n- 쿠팡 첫 대표이미지처럼 제품 인지가 가장 먼저 되어야 합니다.\n- 한국어 배지 글자가 깨지거나 틀리면 실패입니다.\n- 제품 라벨이 지나치게 망가지면 실패입니다.\n- 이미지 비율은 1:1 정사각형입니다.\n\n더 보기\nGenerating product image with correct packaging elements\n\nI'll likely combine the label from the toner in the first image and the pump style of the second one for the final result.\n\nPro\nChatGPT는 실수를 할 수 있습니다. 중요한 정보는 재차 확인하세요.",
+  "imgs": [
+    {
+      "i": 2,
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000ff107207813f4265fab56e1a&ts=494618&p=fs&cid=1&sig=2c3ef5340ff0d47371b308b7b6c334e6a3106e9d3679e8f153a450be2d63e9a7&v=0",
+      "alt": "toner-current-product-01.png",
+      "w": 1000,
+      "h": 1000,
+      "cls": "max-w-full aspect-square object-cover object-center h-32 w-32 rounded-ss-2xl rou"
+    },
+    {
+      "i": 3,
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000d08472079d7650d8ca9e923c&ts=494618&p=fs&cid=1&sig=fa9aaa08459198163b123af35dce6897dfcf311f865b0c9757f1c15aaafdd4a7&v=0",
+      "alt": "aqua-v4-rep-01.png",
+      "w": 1254,
+      "h": 1254,
+      "cls": "max-w-full aspect-square object-cover object-center h-32 w-32 rounded-se-2xl rou"
+    }
+  ]
+}

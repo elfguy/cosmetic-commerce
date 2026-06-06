@@ -1,0 +1,10 @@
+{
+  "n": "06",
+  "chatUrl": "https://chatgpt.com/c/6a229fda-c830-83a8-9774-3c632fd7d374",
+  "id": "file_000000006c5072078fb4adef1c9994ce",
+  "natural": "1254x1254",
+  "bytes": 1533693,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/06-agent-only-strict-product.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/06.png",
+  "rule": "direct strict image-agent output; no local compositing"
+}

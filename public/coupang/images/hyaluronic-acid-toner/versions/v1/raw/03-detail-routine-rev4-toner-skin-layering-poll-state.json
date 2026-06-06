@@ -1,0 +1,105 @@
+{
+  "chosen": {
+    "alt": "",
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000e41c7206b69c75b32f553975&ts=494619&p=fsns&cid=1&sig=d1db06af0349cbf4a03a13411d811e4c0694af9189d727cc15e79bbe5ef89816&v=0",
+    "w": 950,
+    "h": 1656,
+    "rect": {
+      "x": 390,
+      "y": 284.1374816894531,
+      "w": 440,
+      "h": 766.97509765625
+    },
+    "id": "file_00000000e41c7206b69c75b32f553975"
+  },
+  "lastData": {
+    "busy": false,
+    "textTail": "R 500ml 병을 참고하되, 하단에 작게만 배치하세요.\n- 레이어링은 로션처럼 손등에 크림을 펴 바르는 장면 금지.\n- 레이어링은 투명한 토너를 손바닥에 덜어 얼굴에 가볍게 눌러 흡수시키는 장면, 또는 손바닥 위 물방울/토너 방울을 얇게 여러 번 흡수시키는 장면으로 표현하세요.\n- 질감은 묽고 투명한 액체, 물방울, 촉촉한 흡수감이어야 합니다.\n- 흰 크림, 유백색 로션, 점성 있는 제형, 손등에 하얗게 문지르는 표현 금지.\n\n[스타일]\n- 깨끗한 K-뷰티 모바일 상세페이지.\n- 흰색/소프트 아쿠아/연한 민트 톤.\n- 2x2 카드 레이아웃.\n- 한국어는 크게, 짧게, 또렷하게.\n- 긴 문장은 만들지 말고 아래 문구만 사용.\n\n[반드시 들어갈 텍스트 — 그대로]\n상단:\n4 WAY TONER ROUTINE\n\n제목:\n닦토, 흡토, 스킨팩까지\n아낌없이 사용하는 500ml\n\n서브:\n피부 컨디션에 따라\n가볍게 조절해 사용하세요\n\n카드 1:\n닦토\n피부결 정돈\n\n카드 2:\n흡토\n가볍게 흡수\n\n카드 3:\n스킨팩\n잠시 올려 수분감\n\n카드 4:\n레이어링\n얇게 덧바름\n\n하단:\n사용감에 대한 설명이며, 개인 피부 상태에 따라 사용량을 조절해 주세요.\n\n[비주얼]\n- 닦토: 화장솜으로 피부결을 가볍게 닦는 이미지.\n- 흡토: 손바닥에 투명한 토너를 덜어 얼굴에 가볍게 눌러 흡수시키는 이미지.\n- 스킨팩: 볼에 촉촉한 화장솜을 올린 이미지.\n- 레이어링: 얼굴에 투명한 토너를 여러 번 얇게 흡수시키는 이미지. 손등 금지, 크림/로션 금지. 물방울과 촉촉한 투명 액체 느낌.\n- 제품 병은 하단 오른쪽에 작게 배치.\n\n[절대 금지]\n- 로션, 크림, 에멀전처럼 보이는 제형 금지.\n- 흰색 제형을 문질러 바르는 모습 금지.\n- 손등에 바르는 장면 금지.\n- 피부결 정도 금지.\n- 묻바름 금지.\n- 덧바름 외 다른 단어 금지.\n- CUT 04, POINT 04, STEP 01 금지.\n- 아쿠아 로션, 로션, 300ml 금지.\n- 가짜 박스 금지.\n- 효능 보장 표현 금지.\n\n[검수]\n- 피부결 정돈, 얇게 덧바름 철자가 정확해야 합니다.\n- 4개 카드 제목은 닦토 / 흡토 / 스킨팩 / 레이어링 그대로여야 합니다.\n- 레이어링 카드가 로션처럼 보이면 실패입니다.\n- 이미지 비율은 780 x 1360 세로형입니다.\n\n더 보기\nThought for 1m 44s\n편집\n\nPro\nChatGPT는 실수를 할 수 있습니다. 중요한 정보는 재차 확인하세요.",
+    "imgs": [
+      {
+        "alt": "01.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000b0447206951f4661904c6b15&ts=494619&p=fs&cid=1&sig=a27a6f7023abb7481c2bfacd3ab5c797a34396ece66fc55e7ea4784bd19779b5&v=0",
+        "w": 1000,
+        "h": 1000,
+        "rect": {
+          "x": 790,
+          "y": -341,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "01.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000001bbc7206aaf6d2c9223e8920&ts=494619&p=fs&cid=1&sig=4c072f6a175d03508574bd849ac3783a2c2f4cf38207611cc9fd8c8fa3bf2fe8&v=0",
+        "w": 780,
+        "h": 1360,
+        "rect": {
+          "x": 922,
+          "y": -341,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "aqua-v4-detail-04.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000059c7206b678a2e9780fab44&ts=494619&p=fs&cid=1&sig=196e1033d0778f5b04fbda1c0af875d2e4258fdbcce5a217893af7c8793031c1&v=0",
+        "w": 780,
+        "h": 1360,
+        "rect": {
+          "x": 790,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "히알루론산토너.png",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000950c7206be1e69066eef6397&ts=494619&p=fs&cid=1&sig=ba9beb9705687e6af46c73edce35b289b08a2afe063a7533f37f752ffe799d90&v=0",
+        "w": 919,
+        "h": 2048,
+        "rect": {
+          "x": 922,
+          "y": -209,
+          "w": 128,
+          "h": 128
+        }
+      },
+      {
+        "alt": "생성된 이미지: 스킨케어 4단계 루틴 안내",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000e41c7206b69c75b32f553975&ts=494619&p=fsns&cid=1&sig=d1db06af0349cbf4a03a13411d811e4c0694af9189d727cc15e79bbe5ef89816&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 400,
+          "h": 697.25
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000e41c7206b69c75b32f553975&ts=494619&p=fsns&cid=1&sig=d1db06af0349cbf4a03a13411d811e4c0694af9189d727cc15e79bbe5ef89816&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 410,
+          "y": 319,
+          "w": 400,
+          "h": 697.25
+        }
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000e41c7206b69c75b32f553975&ts=494619&p=fsns&cid=1&sig=d1db06af0349cbf4a03a13411d811e4c0694af9189d727cc15e79bbe5ef89816&v=0",
+        "w": 950,
+        "h": 1656,
+        "rect": {
+          "x": 390,
+          "y": 284.1374816894531,
+          "w": 440,
+          "h": 766.97509765625
+        }
+      }
+    ]
+  }
+}

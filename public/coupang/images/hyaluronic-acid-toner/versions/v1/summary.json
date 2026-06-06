@@ -1,0 +1,26 @@
+[
+  {
+    "label": "대표 01 agent rev3",
+    "path": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 868505,
+    "sha256": "d52ab4302f1f19ba3a3eaa4183e8939c815fa16982a031db2eb4585f56ebce8d"
+  },
+  {
+    "label": "상세 01",
+    "path": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/01.png",
+    "width": 780,
+    "height": 1360,
+    "bytes": 1346660,
+    "sha256": "c449b9b7e95a561061392ee1e85e98e288e420d9d1f4643d749633ff0d1ca29b"
+  },
+  {
+    "label": "상세 04 rev5",
+    "path": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/04.png",
+    "width": 780,
+    "height": 1360,
+    "bytes": 1194696,
+    "sha256": "eb9e831bca423c046f7b1351cf35749bcfed448598d218003e6d6b4717edeccb"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "chatUrl": "https://chatgpt.com/c/6a22d5ad-1c88-83a3-a9f1-2fc83e0cea4a",
+  "id": "file_00000000e18c7206a3af4acafeaa66cb",
+  "natural": "950x1656",
+  "bytes": 1552249,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-detail-raw/09-irritation-test-no-product-agent.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/09.png",
+  "finalSize": "780x1360",
+  "backupDir": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/detail09-13-before-no-product-back-20260605T135642",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/07.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/08.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/08.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/09.png"
+  ],
+  "alt": "생성된 이미지: 피부 자극 테스트 결과 표기",
+  "rule": "direct ChatGPT Images output; no local compositing/text overlay; normalized only; no product requested"
+}
