@@ -1,0 +1,14 @@
+{
+  "rule": "v2: paste exact existing fresh icon colored pixels from old 01, preserve white background, fix previously handmade icon",
+  "source_icon": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/fix-01-white-bg-20260606-204513/01.png",
+  "restored_base": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/fix-01-original-fresh-icon-20260606-205346/01.png",
+  "backup": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/fix-01-original-fresh-icon-v2-20260606-205428/01.png",
+  "final": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png",
+  "raw": "public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/01-white-bg-original-fresh-icon-v2.png",
+  "icon_box": [
+    20,
+    20,
+    360,
+    365
+  ]
+}

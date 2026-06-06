@@ -1,0 +1,13 @@
+{
+  "rule": "local deterministic correction requested by Leo: keep white background/product, replace handmade fresh-product icon with extracted existing icon pixels from previous 01 backup",
+  "source_icon": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/fix-01-white-bg-20260606-204513/01.png",
+  "backup": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/fix-01-original-fresh-icon-20260606-205346/01.png",
+  "final": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png",
+  "raw": "public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/01-white-bg-original-fresh-icon.png",
+  "icon_box": [
+    35,
+    45,
+    345,
+    340
+  ]
+}
