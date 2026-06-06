@@ -1,0 +1,21 @@
+{
+  "reason": "Leo flagged missing fresh mark on 01 and product/text overlap on 02",
+  "items": [
+    {
+      "n": "01",
+      "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/01-restore-fresh-mark-product-only-local.png",
+      "backup": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/fix-01-mark-02-no-overlap-20260606-194041/01.png",
+      "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png",
+      "rule": "local restoration of previously approved fresh-product badge onto current user-original product image; no other changes",
+      "bytes": 852407
+    },
+    {
+      "n": "02",
+      "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/02-user-original-no-overlap-v2-agent.png",
+      "backup": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/fix-01-mark-02-no-overlap-20260606-194041/02.png",
+      "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/02.png",
+      "rule": "direct ChatGPT Images output using user original ref; no local compositing/text patch; only 1000x1000 normalization",
+      "bytes": 1097433
+    }
+  ]
+}
