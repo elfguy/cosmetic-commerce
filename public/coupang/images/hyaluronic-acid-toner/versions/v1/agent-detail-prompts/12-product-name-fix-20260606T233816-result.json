@@ -1,0 +1,15 @@
+{
+  "chatUrl": "https://chatgpt.com/c/6a24af7e-8194-83e8-9ec2-4d6b2acb8240",
+  "id": "file_000000001d947209a98e3d5e28550e28",
+  "natural": "950x1656",
+  "bytes": 1651458,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-detail-raw/detail12-product-name-fix-agent-20260606T233816.png",
+  "alt": "생성된 이미지: 제품 정보와 전성분 확인하세요",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/11.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/12.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/13.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/12.png"
+  ],
+  "rule": "direct ChatGPT Images output; exact corrected product name in prompt; no local text overlay"
+}
