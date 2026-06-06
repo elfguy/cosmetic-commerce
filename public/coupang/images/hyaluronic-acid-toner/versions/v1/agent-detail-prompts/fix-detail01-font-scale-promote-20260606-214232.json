@@ -1,0 +1,8 @@
+{
+  "rule": "ChatGPT Images generated v4 candidate promoted; normalized only, no local Korean text patching",
+  "source_raw": "public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-detail-raw/detail01-font-scale-agent-v4-2026-06-06T124155767Z.png",
+  "final": "public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/01.png",
+  "backup": "public/coupang/images/hyaluronic-acid-toner/versions/v1/rejected/detail01-before-font-scale-20260606-214232/01.png",
+  "target_size": "780x1360",
+  "copy_note": "body revised to avoid repeated GPT typo while preserving meaning: 매일 넉넉하게 쓰기 좋은 500ml 대용량"
+}

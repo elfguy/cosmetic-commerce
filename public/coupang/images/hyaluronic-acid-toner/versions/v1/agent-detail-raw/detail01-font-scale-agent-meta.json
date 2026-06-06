@@ -1,0 +1,22 @@
+{
+  "startUrl": "https://chatgpt.com/images/",
+  "finalUrl": "https://chatgpt.com/c/6a2412f9-f318-83e9-a480-a6f9466af7a5",
+  "title": "히알루론산 토너 상세컷",
+  "uploadedRefs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/02.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/04.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png"
+  ],
+  "prompt": "히알루론산 토너 쿠팡 모바일 상세페이지 01번 컷을 다시 만들어주세요.\n\n중요: 반드시 ChatGPT Images 이미지 생성 결과물 안에 텍스트까지 자연스럽게 포함해 주세요. 배경만 만들지 마세요.\n\n[업로드 참고 이미지 사용법]\n- detail 02, 04, 05 이미지는 승인된 상세컷입니다. 이 이미지들의 제목 크기, 굵기, 자간, 줄간격, 전체 타이포그래피 비율을 최우선 스타일 기준으로 맞춰 주세요.\n- detail 01 이미지는 현재 문제 컷입니다. 구성/메시지는 참고하되, 글씨가 다른 컷보다 작아 보이므로 그대로 따라 하지 마세요.\n- 대표 01 이미지는 제품병/라벨/신선제품 아이콘 참고용입니다.\n\n[수정 목표]\n- 780 x 1360 세로형 쿠팡 상세 이미지 1장.\n- 현재 01번의 핵심 구성은 유지: 깨끗한 흰색/아쿠아 배경, 물결/화장솜, 우측 제품병, 좌측 메시지와 3개 포인트 카드.\n- 단, 제목/본문/포인트 카드 글씨를 detail 02~06과 비슷한 시각 크기로 키워 주세요.\n- 특히 메인 제목은 현재보다 약 20~30% 크게, detail 02/04의 제목 존재감과 비슷하게.\n- 본문과 3개 포인트 카드 텍스트도 현재보다 약간 크게 해서 모바일에서 읽기 쉽게.\n- 제품병은 너무 커지지 않게, 현재와 비슷하거나 살짝 작게 배치해서 텍스트 영역을 충분히 확보.\n- 전체적으로 광고 첫 상세컷답게 한눈에 문구가 보여야 합니다.\n\n[반드시 들어갈 한국어 텍스트 — 가능한 그대로 사용]\n상단 작은 라벨:\nDAILY HYDRATION TONER\n\n메인 제목:\n매일 쓰는 토너라면\n넉넉하고 신선하게\n\n본문:\n세안 후 첫 단계부터 화장솜, 스킨팩까지\n아낌없이 매일 쓰고 싶은 500ml 대용량\n\n포인트 카드 3개:\n500ml 대용량\n제조 6개월 이내 제품 보장\n직접 제조\n\n하단 작은 문구:\n유어스킨플러스 히알루론산 토너 500ml\n\n[제품 기준]\n- YOURSKIN+ HYALURONIC ACID TONER\n- 500ml / 16.9 fl.oz\n- 흰색 캡, 투명하고 곧은 500ml 토너 병, 흰 라벨, 검정 영문 3줄 라벨\n\n[절대 금지]\n- 한국어 글자 깨짐/오타/이상한 문자 금지\n- 제목이 작거나 얇아 보이는 것 금지\n- 글씨가 detail 02~06보다 작아 보이는 것 금지\n- 제품명/용량 변경 금지\n- 과한 잎사귀, 사람 얼굴, 공장 인포그래픽, 가짜 박스 금지\n- 로컬 편집용 빈 배경만 만들지 말고 완성 이미지로 생성\n\n[검수 기준]\n- 01~06 contact sheet에서 01번 제목 크기가 02~06과 같은 패밀리로 보여야 합니다.\n- 모바일에서 메인 제목과 포인트 카드가 바로 읽혀야 합니다.\n- 기존 01번보다 광고 첫 컷의 힘이 있어야 합니다.",
+  "chosen": {
+    "id": "file_000000008c3c7209bdc8bee0b374d35e",
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000008c3c7209bdc8bee0b374d35e&ts=494652&p=fs&cid=1&sig=5132cf41110bc51b9bd988595b4cfa9a3513683546d5630cdde5977de86822ca&v=0",
+    "w": 1000,
+    "h": 1000,
+    "alt": "01.png"
+  },
+  "rawPath": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-detail-raw/detail01-font-scale-agent-2026-06-06T123200664Z.png",
+  "downloadedAt": "2026-06-06T12:32:00.670Z"
+}

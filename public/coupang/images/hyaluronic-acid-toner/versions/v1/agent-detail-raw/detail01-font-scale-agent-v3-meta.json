@@ -1,0 +1,241 @@
+{
+  "startUrl": "https://chatgpt.com/images/",
+  "finalUrl": "https://chatgpt.com/c/6a241440-94fc-83e8-b53b-cccde2d96b1d",
+  "title": "히알루론산 토너 디자인",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/02.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/04.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-detail-raw/detail01-font-scale-agent-v2-2026-06-06T123455407Z.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png"
+  ],
+  "prompt": "히알루론산 토너 상세페이지 01번 컷을 다시 생성해 주세요.\n\n이번 목표는 방금 생성된 후보의 큰 글씨 비율은 유지하되, 한국어 오타를 고치고 제품/텍스트를 더 정확하게 만드는 것입니다. 반드시 완성된 780 x 1360 세로형 이미지 1장을 생성하세요. 업로드 이미지를 그대로 반환하지 마세요.\n\n[참고 이미지 사용법]\n- detail 02, 04, 05: 승인된 상세컷. 폰트 크기/굵기/전체 톤 기준입니다.\n- 기존 detail 01: 원래 메시지와 구성 참고입니다.\n- 방금 생성된 후보: 글씨 크기와 카드 비율은 좋지만 오타가 있습니다. 오타를 절대 반복하지 마세요.\n- 대표 01: 제품병/라벨/용량 참고입니다.\n\n[오타 교정 핵심]\n- 반드시 \"아낌없이\" 라고 써야 합니다.\n- 절대 \"아김없이\", \"아끼없이\", \"아낌업이\" 등으로 쓰지 마세요.\n\n[반드시 들어갈 텍스트 — 한 글자도 바꾸지 말 것]\n상단 작은 라벨: DAILY HYDRATION TONER\n\n메인 제목:\n매일 쓰는 토너라면\n넉넉하고 신선하게\n\n본문:\n세안 후 첫 단계부터 화장솜, 스킨팩까지\n아낌없이 매일 쓰고 싶은 500ml 대용량\n\n포인트 카드 3개:\n500ml 대용량\n제조 6개월 이내 제품 보장\n직접 제조\n\n하단 작은 문구:\n유어스킨플러스 히알루론산 토너 500ml\n\n[디자인]\n- 방금 생성된 후보처럼 제목은 크게, detail 02/04와 비슷한 존재감.\n- 포인트 카드 텍스트도 모바일에서 잘 보이게 크게.\n- 깨끗한 흰색/아쿠아 배경, 물결/화장솜/물방울, 우측 제품병.\n- 제품병은 YOURSKIN+ HYALURONIC ACID TONER 500ml / 16.9 fl.oz, 흰 캡, 투명하고 곧은 500ml 토너 병, 흰 라벨.\n\n[절대 금지]\n- 한국어 오타, 글자 깨짐, 이상한 조사 금지\n- 특히 본문 \"아낌없이\" 오타 금지\n- 제품명/용량 변경 금지\n- 제목이 작아 보이는 것 금지\n- 사람 얼굴, 가짜 박스, 과한 잎사귀 금지",
+  "uploadIds": [
+    {
+      "id": "file_0000000037907209bd9a61e36674c498",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000037907209bd9a61e36674c498&ts=494652&p=fs&cid=1&sig=e2bd4644c0ff57a4429d633e37f3ed0aef5d18c918b64248f0337c857b8cbc80&v=0",
+      "w": 780,
+      "h": 1360,
+      "alt": ""
+    },
+    {
+      "id": "file_0000000085fc720990aa3ca003422cda",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000085fc720990aa3ca003422cda&ts=494652&p=fs&cid=1&sig=7fb626f242d821f279b2bd4ed947217a80c42b8b96855ced71e5c8b80e4354b5&v=0",
+      "w": 780,
+      "h": 1360,
+      "alt": ""
+    },
+    {
+      "id": "file_000000009a087209b440ed52c8574365",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000009a087209b440ed52c8574365&ts=494652&p=fs&cid=1&sig=70dbc785f62838bcf0a0236c14beee8a3fe3075e137e558c7dcd2fe26ad33419&v=0",
+      "w": 780,
+      "h": 1360,
+      "alt": ""
+    },
+    {
+      "id": "file_0000000082c07209a7d1ce25c08dbb8e",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000082c07209a7d1ce25c08dbb8e&ts=494652&p=fs&cid=1&sig=e789709b0d017601f80817d2e71ec9fda3b8e74cfa17bfa142e74158420fcf34&v=0",
+      "w": 780,
+      "h": 1360,
+      "alt": ""
+    },
+    {
+      "id": "file_000000007394720988e14107f9f4adfb",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000007394720988e14107f9f4adfb&ts=494652&p=fs&cid=1&sig=4bc90335a0c9eff0204d636fbf5c697b64750cc5e6f6391e1d8f07c32cf3bd4e&v=0",
+      "w": 950,
+      "h": 1656,
+      "alt": ""
+    },
+    {
+      "id": "file_00000000a29c7209baa8b082d7424384",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000a29c7209baa8b082d7424384&ts=494652&p=fs&cid=1&sig=18ef583fcc6d016435873f1f95a53a8e9f5347457a30a0e20a73d564bb65d529&v=0",
+      "w": 1000,
+      "h": 1000,
+      "alt": ""
+    },
+    {
+      "id": "fb5bafabcdcd98e%23file_00000000b5607209b9b88f0ac2f92621%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=fb5bafabcdcd98e%23file_00000000b5607209b9b88f0ac2f92621%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=075c3f7abd3da7abdec28810b1a6f7190955d89ae711dc91002a5c63b76b6634&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "매일 쓰는 신선한 토너"
+    },
+    {
+      "id": "8431b2a2883d70b%23file_00000000d974720994ec17a8bfba1b34%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=8431b2a2883d70b%23file_00000000d974720994ec17a8bfba1b34%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=5b8ff7296bfe94885674ac14e2c9a6f4fbe124156fab2fde6f2253ab5bd9fc97&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "매일 쓰는 신선한 토너 500ml"
+    },
+    {
+      "id": "454705d4aa17ae8%23file_000000001d747209b40a90fca7897c60%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=454705d4aa17ae8%23file_000000001d747209b40a90fca7897c60%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=28e85eb02ad7e3e08ac5a51d4216b41119f5a01cfef26a31c0a5d9764b2d3169&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "매일 쓰는 산뜻 수분 토너"
+    },
+    {
+      "id": "73995b5ce447fcc%23file_000000009ac8720b8408bd922ba15d92%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=73995b5ce447fcc%23file_000000009ac8720b8408bd922ba15d92%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=1388353e232a01e97c0e1ac21c35b424c9c9ee7133a2c235f068574226d6a132&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분 레이어링 토너 광고"
+    },
+    {
+      "id": "f8fd2f33e97da00%23file_00000000eb40720bb06036503b1e53a6%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=f8fd2f33e97da00%23file_00000000eb40720bb06036503b1e53a6%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=7b335bb3d5311afcf7b88d821be44aa331bdba9bbf9dfba7160c096539bd38b4&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분 가득 토너 광고"
+    },
+    {
+      "id": "787cb473d30f2d5%23file_000000001ab8720ba435527bdb294ce8%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=787cb473d30f2d5%23file_000000001ab8720ba435527bdb294ce8%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=a8fafadb88db80833b8d3c5c2737b7eac6c91a8090b602f86c05b5d00f10c3fa&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "청량한 히알루론산 토너 광고"
+    },
+    {
+      "id": "7a1be68f5602a38%23file_0000000087d8720ba42149bd202a1970%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=7a1be68f5602a38%23file_0000000087d8720ba42149bd202a1970%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=738d8514b66a1426ab21c63863cca9c0dcb318424d44f41913d49cc36e7ba746&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "상쾌한 수분 토너 광고"
+    },
+    {
+      "id": "9a92a800f34956b%23file_0000000050cc71f888ef54fabdbf6c23%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=9a92a800f34956b%23file_0000000050cc71f888ef54fabdbf6c23%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=372ad5ddc78b60795143d7b2c566900232e599add9f7d0d0ec7a286776031bc7&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분 가득 히알루론산 토너"
+    },
+    {
+      "id": "cbd01feadfe5c49%23file_00000000b62c720badda82bd229d941f%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=cbd01feadfe5c49%23file_00000000b62c720badda82bd229d941f%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=2d25ebc4cecd93801fd52b332170dd498defde5b00b04a54a51474adfc3f4ae4&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "산뜻한 수분 토너 광고"
+    },
+    {
+      "id": "b8f6c16c4619836%23file_00000000ce64720b8267626d5f7d455e%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=b8f6c16c4619836%23file_00000000ce64720b8267626d5f7d455e%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=539e785fcb1d393aa5d9a67d0bf1a26f0a049226d483571084051fb32de964bc&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "산뜻한 수분 토너 광고"
+    },
+    {
+      "id": "20a8722962feeef%23file_0000000002c0720baf2b5667a6d78ad7%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=20a8722962feeef%23file_0000000002c0720baf2b5667a6d78ad7%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=def0aabe67b914e27146895644ea8384f7158379c34052ad50cb81cfaf2fbe6a&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "유어스킨+ 하이알루로닉 산 토너"
+    },
+    {
+      "id": "841a7689398dd28%23file_00000000ff5c71f8a983cadf1e6c89b3%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=841a7689398dd28%23file_00000000ff5c71f8a983cadf1e6c89b3%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=e4835b7336a1c54310823fca70b54ea961e7a31eb0603b6483e288359e5d9b1b&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분 레이어링 토너 광고"
+    },
+    {
+      "id": "cc0fc59db5a2ef0%23file_00000000a4c071f8a1cb7e39556c0e0b%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=cc0fc59db5a2ef0%23file_00000000a4c071f8a1cb7e39556c0e0b%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=cef52830bae1817866d903b47bb26b12d2ff0f58fa714e6c70893337cb7f1dc6&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "하나로 4가지 토너 케어"
+    },
+    {
+      "id": "a7faf9cd14bd510%23file_00000000f520720bbf0646171e64f7b0%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=a7faf9cd14bd510%23file_00000000f520720bbf0646171e64f7b0%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=b5a9c2e3222aad54dfe2e4edb5cdd74bd5f8abfb91b66d3f130615ab86d201ab&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "첫 수분 토너 케어"
+    },
+    {
+      "id": "3d894ce4ecc7a4b%23file_00000000bd20720bb23cd69863d0373c%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=3d894ce4ecc7a4b%23file_00000000bd20720bb23cd69863d0373c%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=8de72f3bfaf068893406569e580f7df1f570fe20e616812a98c105b66e45b550&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "촉촉한 히알루론산 토너 광고"
+    },
+    {
+      "id": "60388c5ebe66b44%23file_00000000e0c4720bacf3047eb8367a79%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=60388c5ebe66b44%23file_00000000e0c4720bacf3047eb8367a79%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=36d39762a632acc5212447cfa42b592a3d17dfa492dcb927b316c0dd801b6719&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "산뜻한 수분 토너 광고"
+    },
+    {
+      "id": "0aa332d0ca9c985%23file_00000000fa14720bb21092086cb3ef61%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=0aa332d0ca9c985%23file_00000000fa14720bb21092086cb3ef61%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=a8492597cb92e80204df19d437647cffcba6bb113d0f6d342cfe318abac3e752&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분가득 토너 광고"
+    },
+    {
+      "id": "b1c23cfb183d730%23file_00000000ccc8720bb26f1f48c9914768%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=b1c23cfb183d730%23file_00000000ccc8720bb26f1f48c9914768%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=9e56a7471ed5f13fd3906bd1dedfba64960b352d9cae2acf1a33e3796b866aa2&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "하나로 토너 케어 광고"
+    },
+    {
+      "id": "5ec19da54f984f0%23file_00000000693071f8b4ba4f9c99a25fc5%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=5ec19da54f984f0%23file_00000000693071f8b4ba4f9c99a25fc5%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=b50b3247275bd0d0413950b6fec9c1a2eb6dbd55e0645acd0d7bb35ac94ccba1&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분 케어 토너 광고"
+    },
+    {
+      "id": "b443504fad1d3bd%23file_0000000027b4720bbbbdc492a507f209%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=b443504fad1d3bd%23file_0000000027b4720bbbbdc492a507f209%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=0ccc7bb5e5fd200b8f4034175041925fefcc5e431e4bf7ef4bc4e6df01cd7802&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "첫 수분, 산뜻한 시작"
+    },
+    {
+      "id": "61d0cdab5b21f07%23file_00000000afc4720ba85fe242a5585242%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=61d0cdab5b21f07%23file_00000000afc4720ba85fe242a5585242%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=c259a401fdb8337bd026207a14cf050de30dae5ee502a3cb9cd60dabff080aa0&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "촉촉한 토너 루틴과 수분 충전"
+    },
+    {
+      "id": "588e83f27b6adb3%23file_00000000bbc4720bb8f9ee66650ef55e%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=588e83f27b6adb3%23file_00000000bbc4720bb8f9ee66650ef55e%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=3229e7c4ebd309deb8ca9634934a621821e430d73798719c4a3f1786e73a84c3&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분 가득한 토너 광고"
+    },
+    {
+      "id": "cfd2630abe8bd67%23file_000000003bac720bab6f9a1cd8eb80a7%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=cfd2630abe8bd67%23file_000000003bac720bab6f9a1cd8eb80a7%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=b7886f4bea4955466b0636241c252bc1d55c376cd56ee043c4a7f44274d9abee&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "하나로 4가지 토너 케어"
+    },
+    {
+      "id": "3ce8017c4a0f4fc%23file_0000000089fc71f897eeebebf2e36292%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=3ce8017c4a0f4fc%23file_0000000089fc71f897eeebebf2e36292%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=320569da8ed13a4682b2f75475291002ecf2f367e3c88ae4cf4d32aa9ff6488e&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "첫 수분 케어로 피부 진정"
+    },
+    {
+      "id": "4aa64fc0b1204c0%23file_00000000023c71f8ab14fa742c806a5c%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=4aa64fc0b1204c0%23file_00000000023c71f8ab14fa742c806a5c%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=395eba2b2f2d56853c1773d9658d8ad5bd6469b80290c3ab90dd480ad522db40&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분 충전 토너 광고"
+    }
+  ],
+  "chosen": {
+    "id": "file_000000003f0c7209b27dd18c65125f95",
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000003f0c7209b27dd18c65125f95&ts=494652&p=fs&cid=1&sig=d79b21f6cd0b2d07b015cd7d972bb24ada1be42bdf2cc16d7255779678f06ab8&v=0",
+    "w": 950,
+    "h": 1656,
+    "alt": ""
+  },
+  "rawPath": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-detail-raw/detail01-font-scale-agent-v3-2026-06-06T123807657Z.png"
+}
