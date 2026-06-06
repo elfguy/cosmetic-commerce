@@ -1,0 +1,20 @@
+{
+  "rule": "v2: GPT Images product depth candidate, exact aqua badge transfer with smaller erase box to preserve product label/silhouette",
+  "source_raw": "public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/01-depth-detail-product-agent-2026-06-06T231538892Z.png",
+  "source_badge": "public/coupang/images/aqua-lotion/versions/v4/representative/01.png",
+  "backup": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative-backups/fix-01-product-depth-detail-style-v2-20260607-081742/01.png",
+  "final": "public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png",
+  "final_raw": "public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/01-depth-detail-product-final-aqua-badge-v2.png",
+  "erase_box_1000": [
+    0,
+    0,
+    355,
+    330
+  ],
+  "source_badge_box_1254": [
+    0,
+    35,
+    500,
+    470
+  ]
+}

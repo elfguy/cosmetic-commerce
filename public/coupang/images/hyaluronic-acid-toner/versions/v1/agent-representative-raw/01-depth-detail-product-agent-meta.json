@@ -1,0 +1,379 @@
+{
+  "startUrl": "https://chatgpt.com/images/",
+  "finalUrl": "https://chatgpt.com/c/6a24a9aa-c1c0-83ec-9b94-99a101847d8e",
+  "title": "히알루론산 토너 이미지 수정",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/reference/original-product-20260606-user.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/representative/01.png"
+  ],
+  "prompt": "히알루론산 토너 쿠팡 대표/메인 이미지 01번을 다시 만들어 주세요. 반드시 완성된 1:1 정사각형 상품 대표 이미지 1장을 생성하세요.\n\n[스킬 기준]\n- 쿠팡 대표 01은 상세페이지 배너가 아니라 상품 썸네일입니다.\n- 흰색/거의 흰색 배경, 큰 제품, 최소한의 신선제품 마크만 사용합니다.\n- ChatGPT Images 결과물 안에 제품과 마크까지 자연스럽게 포함해 주세요.\n\n[업로드 참고 이미지 사용법]\n1) detail/01.png: 제품의 입체감, 광택, 병의 자연스러운 3D 느낌 참고. 지금 메인 01보다 이 제품처럼 입체감 있게 보여야 합니다.\n2) 현재 representative/01.png: 유지할 기본 구성 참고 — 흰 배경, 제품 크게, 좌상단 신선제품 마크. 단, 제품이 너무 평면적으로 보이는 문제를 개선합니다.\n3) original-product: 실제 제품병/라벨/용량/캡 비율의 최우선 기준.\n4) aqua-lotion v4 representative/01.png: 신선제품 마크 스타일 참고. 이 마크와 같은 초록/아쿠아 원형 잎 마크 느낌이어야 합니다.\n\n[수정 목표]\n- 현재 메인 01보다 제품병에 입체감이 확실히 있어야 합니다.\n- 상세 이미지 01의 제품처럼 투명 병 재질, 곡면 하이라이트, 자연스러운 그림자, 바닥 접지감, 약한 반사/광택을 살립니다.\n- 제품은 500ml 토너 병이 크게 보이게 중앙 또는 약간 우측 배치, 높이 약 75~85%.\n- 배경은 깨끗한 흰색/오프화이트. 배너, 물결, 카드, 긴 문구 금지.\n- 좌상단 또는 좌측에 작은 신선제품 마크 1개만. 마크 문구: 신선 제품 / 제조 6개월 이내.\n\n[제품 기준 — 변경 금지]\n- YOURSKIN+ HYALURONIC ACID TONER\n- 500ml / 16.9 fl.oz\n- 흰색 넓은 캡\n- 투명하고 길고 곧은 원통형 500ml 병\n- 흰 라벨\n- 검정 영문 3줄 HYALURONIC / ACID / TONER\n- 하단 연한 파란 물결 라인\n\n[절대 금지]\n- 제품이 납작한 2D 컷아웃처럼 보이는 것 금지\n- 흰 사각 박스째 붙인 합성 느낌 금지\n- 병이 옆으로 뚱뚱해지거나 다른 제품/다른 용량처럼 바뀌는 것 금지\n- 긴 광고 문구, 상세페이지 카드, 해시태그, 성분 아이콘, 사람 얼굴, 가짜 패키지 박스 금지\n- CUT, V1, V4, 후보 번호 같은 작업 표시 금지\n\n[검수 기준]\n- 썸네일에서도 제품이 크고 입체적으로 보입니다.\n- 현재 representative/01보다 병의 광택/그림자/접지감이 좋아야 합니다.\n- detail/01 제품 느낌에 가깝지만 대표이미지답게 단순해야 합니다.\n- 신선제품 마크는 aqua-lotion v4 대표 01과 같은 계열로 보입니다.",
+  "uploadIds": [
+    {
+      "id": "file_00000000b4387209beab204eeb358cf2",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000b4387209beab204eeb358cf2&ts=494663&p=fs&cid=1&sig=a77bf7b44ffcd1650bef67bbc21aaf6d9dfc6efeeaf192fbcd5f4089762aaad8&v=0",
+      "w": 780,
+      "h": 1360,
+      "alt": ""
+    },
+    {
+      "id": "file_000000006b88720981c7af3099d104b6",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000006b88720981c7af3099d104b6&ts=494663&p=fs&cid=1&sig=fbfb4ff9d5afa0e09d015b9c67631bcda4076cbbb4e2b0300ef2d9d47b7b130a&v=0",
+      "w": 1000,
+      "h": 1000,
+      "alt": ""
+    },
+    {
+      "id": "file_0000000053887209a919eb1d2265a7fe",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_0000000053887209a919eb1d2265a7fe&ts=494663&p=fs&cid=1&sig=7b4a31e048ad0b1f862c9bf50064d08413faab62b8be6558a3141729435ab606&v=0",
+      "w": 919,
+      "h": 2048,
+      "alt": ""
+    },
+    {
+      "id": "file_00000000fc687209a98f22e3963598ba",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000fc687209a98f22e3963598ba&ts=494663&p=fs&cid=1&sig=7d0bdc88314e557fb19471cdea0d57f0458486e948880f1d20cfbbcf251ded9e&v=0",
+      "w": 1254,
+      "h": 1254,
+      "alt": ""
+    },
+    {
+      "id": "e3927234ee3b5ab%23file_000000006e6c72099e2334fd94c292cd%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=e3927234ee3b5ab%23file_000000006e6c72099e2334fd94c292cd%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=efaeac726528f70dc6b37ca5a9a48f15de3cbdc7f5306849ff7af7dc17fa5e24&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "겨울 편지지 배경과 눈사람"
+    },
+    {
+      "id": "b33283c14e5d3a3%23file_0000000084e87209a6f8e635851a6275%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=b33283c14e5d3a3%23file_0000000084e87209a6f8e635851a6275%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=c1629b6fce8d8c808208b1f2d5db294bc1ebb2a5bd2e40ca5ae9f39b7a83cf25&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "겨울철 눈송이와 눈사람 일러스트"
+    },
+    {
+      "id": "f79e948b4329cb3%23file_000000004a0472099dbb3273b42885ee%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=f79e948b4329cb3%23file_000000004a0472099dbb3273b42885ee%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=bb16b625ce2ba71aa7c57662c82b5597b9ebc06f7bf0f333b805d9c0910d0995&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "귀여운 겨울 카드 일러스트"
+    },
+    {
+      "id": "266a30bcb3dd620%23file_00000000fc147209b7a8392b5d05a6ea%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=266a30bcb3dd620%23file_00000000fc147209b7a8392b5d05a6ea%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=f1df39ab9d98e9f788b6d079c24db2f6d658709b18009e8adfb149f86df7cfd2&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "매일 쓰는 토너로 신선하게"
+    },
+    {
+      "id": "a361dca058f8a6a%23file_000000003f0c7209b27dd18c65125f95%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=a361dca058f8a6a%23file_000000003f0c7209b27dd18c65125f95%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=224dfe43bce8b6ddb3e81e235925fab66960155c1621f3d09fe506c6d7f1d893&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "매일 쓰는 토너라면 500ml"
+    },
+    {
+      "id": "fb5bafabcdcd98e%23file_00000000b5607209b9b88f0ac2f92621%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=fb5bafabcdcd98e%23file_00000000b5607209b9b88f0ac2f92621%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=075c3f7abd3da7abdec28810b1a6f7190955d89ae711dc91002a5c63b76b6634&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "매일 쓰는 신선한 토너"
+    },
+    {
+      "id": "8431b2a2883d70b%23file_00000000d974720994ec17a8bfba1b34%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=8431b2a2883d70b%23file_00000000d974720994ec17a8bfba1b34%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=5b8ff7296bfe94885674ac14e2c9a6f4fbe124156fab2fde6f2253ab5bd9fc97&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "매일 쓰는 신선한 토너 500ml"
+    },
+    {
+      "id": "454705d4aa17ae8%23file_000000001d747209b40a90fca7897c60%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=454705d4aa17ae8%23file_000000001d747209b40a90fca7897c60%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=28e85eb02ad7e3e08ac5a51d4216b41119f5a01cfef26a31c0a5d9764b2d3169&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "매일 쓰는 산뜻 수분 토너"
+    },
+    {
+      "id": "73995b5ce447fcc%23file_000000009ac8720b8408bd922ba15d92%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=73995b5ce447fcc%23file_000000009ac8720b8408bd922ba15d92%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=1388353e232a01e97c0e1ac21c35b424c9c9ee7133a2c235f068574226d6a132&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분 레이어링 토너 광고"
+    },
+    {
+      "id": "f8fd2f33e97da00%23file_00000000eb40720bb06036503b1e53a6%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=f8fd2f33e97da00%23file_00000000eb40720bb06036503b1e53a6%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=7b335bb3d5311afcf7b88d821be44aa331bdba9bbf9dfba7160c096539bd38b4&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분 가득 토너 광고"
+    },
+    {
+      "id": "787cb473d30f2d5%23file_000000001ab8720ba435527bdb294ce8%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=787cb473d30f2d5%23file_000000001ab8720ba435527bdb294ce8%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=a8fafadb88db80833b8d3c5c2737b7eac6c91a8090b602f86c05b5d00f10c3fa&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "청량한 히알루론산 토너 광고"
+    },
+    {
+      "id": "7a1be68f5602a38%23file_0000000087d8720ba42149bd202a1970%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=7a1be68f5602a38%23file_0000000087d8720ba42149bd202a1970%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=738d8514b66a1426ab21c63863cca9c0dcb318424d44f41913d49cc36e7ba746&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "상쾌한 수분 토너 광고"
+    },
+    {
+      "id": "9a92a800f34956b%23file_0000000050cc71f888ef54fabdbf6c23%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=9a92a800f34956b%23file_0000000050cc71f888ef54fabdbf6c23%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=372ad5ddc78b60795143d7b2c566900232e599add9f7d0d0ec7a286776031bc7&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분 가득 히알루론산 토너"
+    },
+    {
+      "id": "cbd01feadfe5c49%23file_00000000b62c720badda82bd229d941f%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=cbd01feadfe5c49%23file_00000000b62c720badda82bd229d941f%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=2d25ebc4cecd93801fd52b332170dd498defde5b00b04a54a51474adfc3f4ae4&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "산뜻한 수분 토너 광고"
+    },
+    {
+      "id": "b8f6c16c4619836%23file_00000000ce64720b8267626d5f7d455e%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=b8f6c16c4619836%23file_00000000ce64720b8267626d5f7d455e%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=539e785fcb1d393aa5d9a67d0bf1a26f0a049226d483571084051fb32de964bc&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "산뜻한 수분 토너 광고"
+    },
+    {
+      "id": "20a8722962feeef%23file_0000000002c0720baf2b5667a6d78ad7%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=20a8722962feeef%23file_0000000002c0720baf2b5667a6d78ad7%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=def0aabe67b914e27146895644ea8384f7158379c34052ad50cb81cfaf2fbe6a&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "유어스킨+ 하이알루로닉 산 토너"
+    },
+    {
+      "id": "841a7689398dd28%23file_00000000ff5c71f8a983cadf1e6c89b3%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=841a7689398dd28%23file_00000000ff5c71f8a983cadf1e6c89b3%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=e4835b7336a1c54310823fca70b54ea961e7a31eb0603b6483e288359e5d9b1b&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분 레이어링 토너 광고"
+    },
+    {
+      "id": "cc0fc59db5a2ef0%23file_00000000a4c071f8a1cb7e39556c0e0b%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=cc0fc59db5a2ef0%23file_00000000a4c071f8a1cb7e39556c0e0b%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=cef52830bae1817866d903b47bb26b12d2ff0f58fa714e6c70893337cb7f1dc6&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "하나로 4가지 토너 케어"
+    },
+    {
+      "id": "a7faf9cd14bd510%23file_00000000f520720bbf0646171e64f7b0%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=a7faf9cd14bd510%23file_00000000f520720bbf0646171e64f7b0%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=b5a9c2e3222aad54dfe2e4edb5cdd74bd5f8abfb91b66d3f130615ab86d201ab&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "첫 수분 토너 케어"
+    },
+    {
+      "id": "3d894ce4ecc7a4b%23file_00000000bd20720bb23cd69863d0373c%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=3d894ce4ecc7a4b%23file_00000000bd20720bb23cd69863d0373c%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=8de72f3bfaf068893406569e580f7df1f570fe20e616812a98c105b66e45b550&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "촉촉한 히알루론산 토너 광고"
+    },
+    {
+      "id": "60388c5ebe66b44%23file_00000000e0c4720bacf3047eb8367a79%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=60388c5ebe66b44%23file_00000000e0c4720bacf3047eb8367a79%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=36d39762a632acc5212447cfa42b592a3d17dfa492dcb927b316c0dd801b6719&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "산뜻한 수분 토너 광고"
+    },
+    {
+      "id": "0aa332d0ca9c985%23file_00000000fa14720bb21092086cb3ef61%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=0aa332d0ca9c985%23file_00000000fa14720bb21092086cb3ef61%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=a8492597cb92e80204df19d437647cffcba6bb113d0f6d342cfe318abac3e752&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분가득 토너 광고"
+    },
+    {
+      "id": "b1c23cfb183d730%23file_00000000ccc8720bb26f1f48c9914768%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=b1c23cfb183d730%23file_00000000ccc8720bb26f1f48c9914768%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=9e56a7471ed5f13fd3906bd1dedfba64960b352d9cae2acf1a33e3796b866aa2&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "하나로 토너 케어 광고"
+    },
+    {
+      "id": "5ec19da54f984f0%23file_00000000693071f8b4ba4f9c99a25fc5%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=5ec19da54f984f0%23file_00000000693071f8b4ba4f9c99a25fc5%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=b50b3247275bd0d0413950b6fec9c1a2eb6dbd55e0645acd0d7bb35ac94ccba1&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분 케어 토너 광고"
+    },
+    {
+      "id": "b443504fad1d3bd%23file_0000000027b4720bbbbdc492a507f209%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=b443504fad1d3bd%23file_0000000027b4720bbbbdc492a507f209%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=0ccc7bb5e5fd200b8f4034175041925fefcc5e431e4bf7ef4bc4e6df01cd7802&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "첫 수분, 산뜻한 시작"
+    },
+    {
+      "id": "61d0cdab5b21f07%23file_00000000afc4720ba85fe242a5585242%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=61d0cdab5b21f07%23file_00000000afc4720ba85fe242a5585242%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=c259a401fdb8337bd026207a14cf050de30dae5ee502a3cb9cd60dabff080aa0&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "촉촉한 토너 루틴과 수분 충전"
+    },
+    {
+      "id": "588e83f27b6adb3%23file_00000000bbc4720bb8f9ee66650ef55e%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=588e83f27b6adb3%23file_00000000bbc4720bb8f9ee66650ef55e%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=3229e7c4ebd309deb8ca9634934a621821e430d73798719c4a3f1786e73a84c3&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "수분 가득한 토너 광고"
+    },
+    {
+      "id": "cfd2630abe8bd67%23file_000000003bac720bab6f9a1cd8eb80a7%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=cfd2630abe8bd67%23file_000000003bac720bab6f9a1cd8eb80a7%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=b7886f4bea4955466b0636241c252bc1d55c376cd56ee043c4a7f44274d9abee&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "하나로 4가지 토너 케어"
+    },
+    {
+      "id": "3ce8017c4a0f4fc%23file_0000000089fc71f897eeebebf2e36292%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=3ce8017c4a0f4fc%23file_0000000089fc71f897eeebebf2e36292%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=320569da8ed13a4682b2f75475291002ecf2f367e3c88ae4cf4d32aa9ff6488e&v=0",
+      "w": 512,
+      "h": 512,
+      "alt": "첫 수분 케어로 피부 진정"
+    },
+    {
+      "id": "4aa64fc0b1204c0%23file_00000000023c71f8ab14fa742c806a5c%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=4aa64fc0b1204c0%23file_00000000023c71f8ab14fa742c806a5c%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=395eba2b2f2d56853c1773d9658d8ad5bd6469b80290c3ab90dd480ad522db40&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "수분 충전 토너 광고"
+    },
+    {
+      "id": "95c0fa702d34ace%23file_0000000072c072099ba4afca16c78a32%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=95c0fa702d34ace%23file_0000000072c072099ba4afca16c78a32%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=3dd36d6f58f20d56410226a869343baa29395412a03cc8df008638743099e59e&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "산뜻 수분 토너 광고"
+    },
+    {
+      "id": "424496370254055%23file_00000000762c7209b1acb493b03db796%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=424496370254055%23file_00000000762c7209b1acb493b03db796%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=a2f224128502fbc290f88d60fb8c54ca2695fdd98d1dcaab10a78b9bccba6375&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "청명한 물방울과 여백의 미학"
+    },
+    {
+      "id": "b694c984e87e5e6%23file_000000001b6472078c704a4abc25b567%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=b694c984e87e5e6%23file_000000001b6472078c704a4abc25b567%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=685ec41bee55d727508d6daf1b48181e33ff18089dda1e22a02a47c747f22a2c&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "산뜻한 수분 토너 광고"
+    },
+    {
+      "id": "dc3c5ce31083564%23file_00000000df487207b6ca8e9b9e673596%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=dc3c5ce31083564%23file_00000000df487207b6ca8e9b9e673596%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=ae6e5efbe4591210cceb296532a092c6c13f373038b9b4185ac248c5171bd195&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "매일 쓰는 산뜻 수분 토너"
+    },
+    {
+      "id": "44df027ae1ca20e%23file_000000004a547207949dc081205dbcfe%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=44df027ae1ca20e%23file_000000004a547207949dc081205dbcfe%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=f4035c6b0035b4e2cc34f813ac66dfcd7b797653243b79d818b3efb5e8133987&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "수분 가득, 깨끗한 톤업 제품"
+    },
+    {
+      "id": "d3b50e72e33762f%23file_0000000068887207953ff7a77d051e10%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=d3b50e72e33762f%23file_0000000068887207953ff7a77d051e10%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=3d5f891fd11187aaed3631838a0485401e229f7f8aa4e7ef260e521965951456&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "산뜻한 수분 토너 광고"
+    },
+    {
+      "id": "405c74e9d041341%23file_00000000435c7207ad2315cd2d1ffb52%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=405c74e9d041341%23file_00000000435c7207ad2315cd2d1ffb52%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=17fbb2f3c830f17a22264596c205aa2fa3eba1b4107b04ee9ace13637a773e69&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "수분 레이어링 토너 광고"
+    },
+    {
+      "id": "c9b150433046f4c%23file_000000004e6872078f38e12fe44af9ec%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=c9b150433046f4c%23file_000000004e6872078f38e12fe44af9ec%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=313021eee2eaabe7f19e24f7be56f4ab95c56fdf0084e969bab67f6f0ff4a7c2&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "하나로 모든 토너 케어"
+    },
+    {
+      "id": "35852d72c8a634f%23file_00000000ab8c7207a14702f31c87c643%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=35852d72c8a634f%23file_00000000ab8c7207a14702f31c87c643%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=9a038bc25bb5241cfbe0a53bc4562534013d28cfe6750cb736a47077fc402c23&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "첫 수분, 산뜻한 시작"
+    },
+    {
+      "id": "3ec37fc3e49af54%23file_00000000c880720781bcc245875411bc%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=3ec37fc3e49af54%23file_00000000c880720781bcc245875411bc%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=16af8003241cf5a58bf8586dc17b9c6bda1cc05568a2e4d87fba4f93983c554b&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "넉넉한 수분 루틴 토너"
+    },
+    {
+      "id": "6b4fea7b2b30790%23file_0000000095ec7207ae2d1c0151a81b89%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=6b4fea7b2b30790%23file_0000000095ec7207ae2d1c0151a81b89%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=e5b2eaf069d0baddea2a40185e984d91f1cbb532acb529f45e2a24da01e01a0f&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "상쾌한 수분 토너 광고"
+    },
+    {
+      "id": "46afb6fe171a2de%23file_0000000011347207bd129d7c41c1b367%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=46afb6fe171a2de%23file_0000000011347207bd129d7c41c1b367%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=e0ab455dd52168dda2de61d96fac895ae933cd270a3654a0606574a26d163236&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "산뜻하게, 수분 가득한 토너"
+    },
+    {
+      "id": "3e1b7058be6050f%23file_0000000058fc720982348e2d63b0ac80%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=3e1b7058be6050f%23file_0000000058fc720982348e2d63b0ac80%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=1ff4925f9490a10932335b9d739995d4e2babf48ea6a3453638ca9e3bcc1159d&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "수분 레이어링 토너 광고"
+    },
+    {
+      "id": "c799119e58b8bf6%23file_00000000c900720680b583a01919a262%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=c799119e58b8bf6%23file_00000000c900720680b583a01919a262%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=a2073f93c2752adc4058cee5816f2ed24af0a731bf32b4d60d14c76ea233a90f&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "하나로 4가지 토너 케어"
+    },
+    {
+      "id": "073f6e8bb2ac46b%23file_00000000fca872098596847deca074e7%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=073f6e8bb2ac46b%23file_00000000fca872098596847deca074e7%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=88928fa805a116a2c67c191ae36d179d8f5875bc9cd46b4990bffcba412e507d&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "세안 후 첫 수분 토너"
+    },
+    {
+      "id": "04054d2c717f06a%23file_00000000dbc47206a226384a75704b70%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=04054d2c717f06a%23file_00000000dbc47206a226384a75704b70%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=de52aaf4262049ad111f572aa3d7cab0f9f9cc7b3d77213653a3496ef0a37bb7&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "넉넉한 용량의 수분 토너"
+    },
+    {
+      "id": "25a3e2e14783b42%23file_000000006014720680f24b5ae1fc7878%23thumbnail",
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=25a3e2e14783b42%23file_000000006014720680f24b5ae1fc7878%23thumbnail&cp=pri&ma=90000&ts=20610&p=igh&cid=1&sig=3eb554f8c80b05ca3fd4dd42e5af2872f601f5508f9704c5ca2eb37c62dc094f&v=0",
+      "w": 0,
+      "h": 0,
+      "alt": "산뜻한 수분 토너 광고"
+    }
+  ],
+  "chosen": {
+    "id": "file_000000003d4c72098266f8d78b21b542",
+    "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000003d4c72098266f8d78b21b542&ts=494663&p=fs&cid=1&sig=109293ad91ff6a52c7a409634351d8eed5ec739dd082f34ae1a0e77eccf2540d&v=0",
+    "w": 1254,
+    "h": 1254,
+    "alt": ""
+  },
+  "rawPath": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/agent-representative-raw/01-depth-detail-product-agent-2026-06-06T231538892Z.png"
+}
