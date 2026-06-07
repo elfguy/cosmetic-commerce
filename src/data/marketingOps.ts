@@ -21,10 +21,10 @@ export const productOpsStatuses: ProductOpsStatus[] = [
     slug: 'hyaluronic-toner',
     priority: 'focus',
     campaignRole: '수분 루틴 진입 상품',
-    detailStatus: '쿠팡 현재본 대표 6장 + 상세 14컷 동기화 완료',
-    assetStatus: 'V1 대표 6장 + 상세 13컷 비교 검토 중',
+    detailStatus: 'V1 대표 6장 + 상세 13컷 사이트 현재 적용',
+    assetStatus: 'V1 사이트/쿠팡 현재 적용',
     claimRisk: 'medium',
-    nextAction: 'V1 상세 13컷 시트 확인 후 수정 컷 피드백 정리',
+    nextAction: '판매 페이지 캐시와 상세 컷 표시 상태 확인',
     workspaceUrl: '/marketing/hyaluronic-toner-version-compare/',
     salesNote: '최근 판매량 1위. 유입 상품으로 먼저 밀기 좋음',
   },
@@ -203,6 +203,27 @@ export type ProductVersion = {
 };
 
 export const productVersions: Record<string, ProductVersion[]> = {
+  'hyaluronic-toner': [
+    {
+      id: 'v1',
+      label: 'V1',
+      status: 'live',
+      date: '2026-06-07',
+      summary: '쿠팡 반영용 V1 정리본입니다. 대표 6장과 상세 13컷을 사이트 현재 적용 버전으로 사용합니다.',
+      mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v1/representative/' + String(i + 1).padStart(2, '0') + '.png'),
+      detailImages: Array.from({ length: 13 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v1/detail/' + String(i + 1).padStart(2, '0') + '.png'),
+      links: [
+        { label: '토너 V1 비교 페이지 열기', href: '/marketing/hyaluronic-toner-version-compare/' },
+        { label: '첫 대표 이미지 열기', href: '/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png' },
+        { label: '첫 상세 이미지 열기', href: '/coupang/images/hyaluronic-acid-toner/versions/v1/detail/01.png' },
+      ],
+      metrics: [
+        { label: '대표', value: '6' },
+        { label: '상세', value: '13' },
+        { label: '상태', value: 'V1' },
+      ],
+    },
+  ],
   'aqua-lotion': [
     {
       id: 'v4',
