@@ -11,7 +11,7 @@ if OUT.exists():
 
 W, H = 780, 1360
 MARGIN_X = 32
-TOP = 72
+TOP = 40
 TABLE_W = W - MARGIN_X * 2
 LABEL_W = 165
 VALUE_W = TABLE_W - LABEL_W
@@ -96,8 +96,8 @@ def calculate(font_size):
         h = max(len(label_lines), len(value_lines)) * line_h + pad_y * 2
         h = max(h, 50)
         computed.append((label_lines, value_lines, h))
-    title_h = 52
-    total_h = TOP + title_h + sum(h for _, _, h in computed)
+    title_h = 0
+    total_h = TOP + sum(h for _, _, h in computed)
     return total_h, computed, font, label_font, title_font, line_h, pad_y
 
 font_size = 20
@@ -111,17 +111,8 @@ total_h, computed, font, label_font, title_font, line_h, pad_y = calculate(font_
 img = Image.new('RGB', (W, H), '#ffffff')
 d = ImageDraw.Draw(img)
 
-# subtle title
-title = '제품 정보 및 전성분'
-tw = text_w(d, title, title_font)
-d.text(((W - tw) / 2, TOP), title, fill='#222222', font=title_font)
-subtitle = '유어스킨플러스 화이트닝 톤 케어 크림'
-sub_font = load_font(18)
-sw = text_w(d, subtitle, sub_font)
-d.text(((W - sw) / 2, TOP + 38), subtitle, fill='#777777', font=sub_font)
-
 x0 = MARGIN_X
-y = TOP + 82
+y = TOP
 x1 = x0 + LABEL_W
 x2 = x0 + TABLE_W
 border = '#d8d8d8'
@@ -146,7 +137,7 @@ for idx, ((label, value), (label_lines, value_lines, row_h)) in enumerate(zip(ro
     y += row_h
 
 # outer border slightly darker
-d.rectangle([x0, TOP + 82, x2, y], outline='#cfcfcf', width=1)
+d.rectangle([x0, TOP, x2, y], outline='#cfcfcf', width=1)
 
 OUT.parent.mkdir(parents=True, exist_ok=True)
 img.save(OUT, 'PNG', optimize=True)
