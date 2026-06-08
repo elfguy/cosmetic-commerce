@@ -54,11 +54,10 @@
         { "src": "public/coupang/images/whitening-cream/versions/v1/detail/10.png", "label": "상세 10 · V1 신규" },
         { "src": "public/coupang/images/whitening-cream/versions/v1/detail/11.png", "label": "상세 11 · V1 신규 · 사람 사용 컷" },
         { "src": "public/coupang/images/whitening-cream/versions/v1/detail/12.png", "label": "상세 12 · V1 신규" },
-        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/13.png", "label": "상세 13 · V1 신규" },
-        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/14.png", "label": "상세 14 · V1 신규" },
-        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/15.png", "label": "상세 15 · V1 신규" }
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/15.png", "label": "상세 13 · V1 신규 · 공식 판매처" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/16-original-ingredient-table.png", "label": "상세 14 · 원본 상세 13 성분/표 이미지" }
       ],
-      "note": "화이트닝 톤 케어 크림 V1 후보. 상세 01~15번 신규 컷 전체 적용. 11번만 사람 사용 컷, 나머지는 제품 반복을 줄인 정보/신뢰 컷 중심."
+      "note": "화이트닝 톤 케어 크림 V1 후보. 상세 13/14 신규 컷은 제외하고, 공식 판매처 컷 뒤 마지막에 원본 상세 13번의 성분/표 이미지를 배치했습니다."
     }
   ]
 }
