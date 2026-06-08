@@ -210,7 +210,7 @@ export const productVersions: Record<string, ProductVersion[]> = {
       label: 'V1',
       status: 'live',
       date: '2026-06-07',
-      summary: '쿠팡 반영용 V1 정리본입니다. 대표 6장과 상세 13컷을 사이트 현재 적용 버전으로 사용합니다.',
+      summary: '쿠팡 반영용 V1 정리본입니다. 대표 6장과 상세 13컷을 사이트 현재 적용 버전으로 사용합니다. 공식 판매 안내 컷을 12번으로 이동하고, 첨부 표시정보/전성분 표를 13번에 배치했습니다.',
       mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v1/representative/' + String(i + 1).padStart(2, '0') + '.png'),
       detailImages: Array.from({ length: 13 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v1/detail/' + String(i + 1).padStart(2, '0') + '.png'),
       links: [
