@@ -64,9 +64,15 @@ function requestJson(method, requestPath, { query = '', body = null } = {}) {
 
 async function assertFiles() {
   const reps = [];
+  const detailNumbers = [
+    ...Array.from({ length: 12 }, (_, i) => i + 1),
+    14,
+    15,
+    16,
+  ];
   const details = [];
   for (let i = 1; i <= 6; i++) reps.push(path.join(v4Root, 'representative', `${String(i).padStart(2, '0')}.png`));
-  for (let i = 1; i <= 15; i++) details.push(path.join(v4Root, 'detail', `${String(i).padStart(2, '0')}.png`));
+  for (const i of detailNumbers) details.push(path.join(v4Root, 'detail', `${String(i).padStart(2, '0')}.png`));
   for (const file of [...reps, ...details]) {
     const stat = await fs.stat(file);
     if (!stat.isFile() || stat.size <= 0) throw new Error(`Invalid file ${file}`);
