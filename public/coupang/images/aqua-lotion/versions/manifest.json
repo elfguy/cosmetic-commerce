@@ -34,8 +34,24 @@
       "id": "v4",
       "label": "V4",
       "representativeCount": 6,
-      "detailCount": 15,
-      "source": "public/coupang/images/aqua-lotion/versions/v4"
+      "detailCount": 14,
+      "source": "public/coupang/images/aqua-lotion/versions/v4",
+      "detailImages": [
+        "/coupang/images/aqua-lotion/versions/v4/detail/01.png",
+        "/coupang/images/aqua-lotion/versions/v4/detail/02.png",
+        "/coupang/images/aqua-lotion/versions/v4/detail/03.png",
+        "/coupang/images/aqua-lotion/versions/v4/detail/04.png",
+        "/coupang/images/aqua-lotion/versions/v4/detail/05.png",
+        "/coupang/images/aqua-lotion/versions/v4/detail/06.png",
+        "/coupang/images/aqua-lotion/versions/v4/detail/07.png",
+        "/coupang/images/aqua-lotion/versions/v4/detail/08.png",
+        "/coupang/images/aqua-lotion/versions/v4/detail/09.png",
+        "/coupang/images/aqua-lotion/versions/v4/detail/10.png",
+        "/coupang/images/aqua-lotion/versions/v4/detail/11.png",
+        "/coupang/images/aqua-lotion/versions/v4/detail/14.png",
+        "/coupang/images/aqua-lotion/versions/v4/detail/15.png",
+        "/coupang/images/aqua-lotion/versions/v4/detail/12.png"
+      ]
     }
   ],
   "archivedVersions": [

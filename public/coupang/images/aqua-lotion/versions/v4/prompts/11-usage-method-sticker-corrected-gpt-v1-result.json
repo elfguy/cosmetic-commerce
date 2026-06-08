@@ -1,0 +1,20 @@
+{
+  "cut": "11",
+  "key": "11-usage-method-sticker-corrected-gpt-v1",
+  "startUrl": "https://chatgpt.com/images/",
+  "chatUrl": "https://chatgpt.com/c/6a262015-3b34-83a9-8e98-93094530748b",
+  "id": "file_000000001170720ba8975ef083584c26",
+  "natural": "950x1656",
+  "rawBytes": 1468111,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/agent-detail-raw/11-usage-method-sticker-corrected-gpt-v1-agent.png",
+  "candidate": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/11-usage-method-sticker-corrected-gpt-v1-candidate.png",
+  "candidateSize": "950x1656",
+  "alt": "생성된 이미지: 피부 관리 제품 사용 설명서",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/11.png",
+    "/Users/elfguy/.hermes/image_cache/img_6b0090053532.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/12.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/14.png"
+  ],
+  "rule": "GPT Images direct output; candidate only; no final overwrite; no local text edits"
+}

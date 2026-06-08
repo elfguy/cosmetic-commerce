@@ -230,9 +230,14 @@ export const productVersions: Record<string, ProductVersion[]> = {
       label: 'V4',
       status: 'live',
       date: '2026-06-05',
-      summary: '쿠팡 승인완료 반영본입니다. 대표 6장과 상세 15컷을 사이트 현재 적용 버전으로 사용합니다.',
+      summary: '쿠팡 승인완료 반영본입니다. 대표 6장과 상세는 12/13 법정표를 12번 한 컷으로 통합해 현재 적용 버전으로 사용합니다.',
       mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/aqua-lotion/versions/v4/representative/' + String(i + 1).padStart(2, '0') + '.png'),
-      detailImages: Array.from({ length: 15 }, (_, i) => '/coupang/images/aqua-lotion/versions/v4/detail/' + String(i + 1).padStart(2, '0') + '.png'),
+      detailImages: [
+        ...Array.from({ length: 11 }, (_, i) => '/coupang/images/aqua-lotion/versions/v4/detail/' + String(i + 1).padStart(2, '0') + '.png'),
+        '/coupang/images/aqua-lotion/versions/v4/detail/14.png',
+        '/coupang/images/aqua-lotion/versions/v4/detail/15.png',
+        '/coupang/images/aqua-lotion/versions/v4/detail/12.png',
+      ],
       links: [
         { label: '작업하던 비교 페이지 열기', href: '/marketing/aqua-lotion-version-compare/' },
         { label: '첫 대표 이미지 열기', href: '/coupang/images/aqua-lotion/versions/v4/representative/01.png' },
@@ -240,7 +245,7 @@ export const productVersions: Record<string, ProductVersion[]> = {
       ],
       metrics: [
         { label: '대표', value: '6' },
-        { label: '상세', value: '15' },
+        { label: '상세', value: '14' },
         { label: '상태', value: 'V4' },
       ],
     },

@@ -15,7 +15,7 @@ const versions = versionsManifest.versions.map((version) => {
     representativeImages: Array.from({ length: version.representativeCount }, (_, index) =>
       `${basePath}/representative/${String(index + 1).padStart(2, '0')}.png`
     ),
-    detailImages: Array.from({ length: version.detailCount }, (_, index) =>
+    detailImages: version.detailImages ?? Array.from({ length: version.detailCount }, (_, index) =>
       `${basePath}/detail/${String(index + 1).padStart(2, '0')}.png`
     ),
   };
