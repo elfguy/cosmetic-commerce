@@ -1,0 +1,9 @@
+{
+  "chatUrl": "https://chatgpt.com/c/6a24e91f-1b2c-83e9-8220-972d7710b0e9",
+  "id": "file_00000000a274720981cf229d8399643e",
+  "natural": "950x1656",
+  "bytes": 1346303,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/agent-detail-raw/01-main-hook-v2-agent.png",
+  "alt": "",
+  "rule": "direct ChatGPT Images output; v2; no local compositing/text patch; only normalization after download"
+}

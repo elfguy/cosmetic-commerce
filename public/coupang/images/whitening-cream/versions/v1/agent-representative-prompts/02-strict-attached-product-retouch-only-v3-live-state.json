@@ -1,0 +1,48 @@
+{
+  "url": "https://chatgpt.com/c/6a255f7b-2030-83ec-8cad-c11cf51bfdcb",
+  "title": "제품 이미지 생성 요청",
+  "imgs": [
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_00000000865c720b8a5c9d62ca395bda&ts=494676&p=fs&cid=1&sig=50212d50a8681cdeea3736131c5d09d6c76ab09e18f6487c998f4f20264a1af8&v=0",
+      "w": 1000,
+      "h": 1000,
+      "alt": "whitening-cream-original-product-do-not-change.png"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000008f2071f8ae14ff04371b1261&ts=494676&p=fs&cid=1&sig=021fc35075c3c281fd5790ccd1c04a30edc6552a0d0e2e8dd03e50609f97e245&v=0",
+      "w": 1254,
+      "h": 1254,
+      "alt": "생성된 이미지"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000008f2071f8ae14ff04371b1261&ts=494676&p=fs&cid=1&sig=021fc35075c3c281fd5790ccd1c04a30edc6552a0d0e2e8dd03e50609f97e245&v=0",
+      "w": 1254,
+      "h": 1254,
+      "alt": ""
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000008f2071f8ae14ff04371b1261&ts=494676&p=fs&cid=1&sig=021fc35075c3c281fd5790ccd1c04a30edc6552a0d0e2e8dd03e50609f97e245&v=0",
+      "w": 1254,
+      "h": 1254,
+      "alt": ""
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000008f2071f8ae14ff04371b1261&ts=494676&p=fs&cid=1&sig=021fc35075c3c281fd5790ccd1c04a30edc6552a0d0e2e8dd03e50609f97e245&v=0",
+      "w": 1254,
+      "h": 1254,
+      "alt": "생성된 이미지"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000008f2071f8ae14ff04371b1261&ts=494676&p=fs&cid=1&sig=021fc35075c3c281fd5790ccd1c04a30edc6552a0d0e2e8dd03e50609f97e245&v=0",
+      "w": 1254,
+      "h": 1254,
+      "alt": "생성된 이미지"
+    },
+    {
+      "src": "https://chatgpt.com/backend-api/estuary/content?id=file_000000008f2071f8ae14ff04371b1261&ts=494676&p=fs&cid=1&sig=021fc35075c3c281fd5790ccd1c04a30edc6552a0d0e2e8dd03e50609f97e245&v=0",
+      "w": 1254,
+      "h": 1254,
+      "alt": "생성된 이미지"
+    }
+  ]
+}

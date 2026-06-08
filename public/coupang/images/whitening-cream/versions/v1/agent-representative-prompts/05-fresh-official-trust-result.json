@@ -1,0 +1,25 @@
+{
+  "startUrl": "https://chatgpt.com/images/",
+  "chatUrl": "https://chatgpt.com/c/6a25494f-fb44-83e9-a0b7-c7095a2b4092",
+  "id": "file_0000000029f0720992ab19cafab61769",
+  "natural": "1254x1254",
+  "rawBytes": 1491048,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/agent-representative-raw/05-fresh-official-trust-agent.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/05.png",
+  "finalSize": "1000x1000",
+  "alt": "생성된 이미지: 럭셔리 화장품 광고 배너",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-main/whitening-cream/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/03.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/10.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/02.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/03.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/04.png"
+  ],
+  "rule": "direct ChatGPT Images output; normalized only, no local text/compositing"
+}

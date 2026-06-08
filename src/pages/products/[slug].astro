@@ -16,6 +16,8 @@ const latestReviewVersion = candidateVersion ?? [...versions].reverse().find((ve
 const defaultCompareIds = Array.from(new Set([appliedVersion.id, latestReviewVersion.id, versions.at(-2)?.id].filter(Boolean))).slice(0, 3);
 const appliedDetailCount = appliedVersion?.detailImages.length ?? 0;
 const appliedMainCount = appliedVersion?.mainImages.length ?? 0;
+const versionCompareHref = product.ops.workspaceUrl ?? '/product-comparison/';
+const versionCompareLabel = product.ops.workspaceUrl ? '버전 비교' : '전체 상품 비교';
 ---
 
 <BaseLayout title={product.shortName + ' 상세 이미지 검수'} description={product.shortName + ' 버전별 대표 이미지와 상세 이미지를 검수하고 비교합니다.'}>
@@ -51,13 +53,16 @@ const appliedMainCount = appliedVersion?.mainImages.length ?? 0;
       <div class="hero-links" aria-label="외부 링크">
         <a href={product.commerce.coupangUrl} target="_blank" rel="noreferrer">쿠팡 상품</a>
         {product.commerce.naverUrl ? <a href={product.commerce.naverUrl} target="_blank" rel="noreferrer">네이버 상품</a> : null}
-        {product.ops.workspaceUrl ? (
+        <a class="comparison-link" href={versionCompareHref}>{versionCompareLabel}</a>
+        {product.ops.workspaceUrl && product.ops.workspaceUrl !== versionCompareHref ? (
           <a class="workspace-link" href={product.ops.workspaceUrl}>
             {product.slug === 'aqua-lotion'
               ? '작업하던 V4 비교 페이지'
               : product.slug === 'hyaluronic-toner'
                 ? '토너 V1 비교 페이지'
-                : '소재 작업실'}
+                : product.slug === 'whitening-cream'
+                  ? '화이트닝 V1 비교 페이지'
+                  : '소재 작업실'}
           </a>
         ) : null}
       </div>
@@ -137,7 +142,7 @@ const appliedMainCount = appliedVersion?.mainImages.length ?? 0;
     ))}
 
     {versions.length > 1 && (
-      <section class="desktop-compare container" data-compare-root aria-label="PC 버전 비교">
+      <section id="version-compare" class="desktop-compare container" data-compare-root aria-label="PC 버전 비교">
         <div class="compare-title">
           <div>
             <p class="eyebrow">Compare</p>

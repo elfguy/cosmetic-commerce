@@ -1,0 +1,11 @@
+{
+  "startUrl": "https://chatgpt.com/images/",
+  "chatUrl": "https://chatgpt.com/c/6a256c8d-c6e0-83e8-8bad-3d6a68ac7bc1",
+  "title": "이미지 리터치 요청",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/reference/whitening-cream-original-product-do-not-change.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/02.png"
+  ],
+  "submittedAt": "2026-06-07T13:05:27.565Z"
+}

@@ -1,0 +1,19 @@
+{
+  "key": "03-human-daily-care",
+  "cut": "03",
+  "chatUrl": "https://chatgpt.com/c/6a25482d-fa8c-83e8-8c5e-f6f8dffea6a6",
+  "title": "쿠팡 대표 이미지 요청",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-main/whitening-cream/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/03.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/10.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/02.png"
+  ],
+  "submittedAt": "2026-06-07T10:30:15.812Z",
+  "startUrl": "https://chatgpt.com/images/"
+}

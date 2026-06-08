@@ -1,0 +1,18 @@
+{
+  "key": "08-irritation-test",
+  "cut": "08",
+  "chatUrl": "https://chatgpt.com/c/6a25197b-e99c-83ec-b1b2-e7809f956e4a",
+  "title": "쿠팡 상세페이지 이미지 요청",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/08.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/12.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-main/whitening-cream/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-detail/9264527939/08.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/04.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/07.png"
+  ],
+  "submittedAt": "2026-06-07T07:11:01.222Z",
+  "startUrl": "https://chatgpt.com/images/"
+}

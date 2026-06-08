@@ -1,0 +1,18 @@
+{
+  "key": "10-fresh-shipping",
+  "cut": "10",
+  "chatUrl": "https://chatgpt.com/c/6a251aeb-0d44-83e8-8299-ddbf2cd1d66c",
+  "title": "쿠팡 상세페이지 이미지",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/08.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/12.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-main/whitening-cream/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-detail/9264527939/10.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/08.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/09.png"
+  ],
+  "submittedAt": "2026-06-07T07:17:08.925Z",
+  "startUrl": "https://chatgpt.com/images/"
+}

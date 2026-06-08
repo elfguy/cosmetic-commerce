@@ -1,0 +1,22 @@
+{
+  "startUrl": "https://chatgpt.com/images/",
+  "chatUrl": "https://chatgpt.com/c/6a25184d-cf70-83e8-8809-1b0f790fee41",
+  "id": "file_000000000ab0720b95097b9ffe3784ba",
+  "natural": "950x1656",
+  "rawBytes": 1707410,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/agent-detail-raw/06-moisture-cream-agent.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/06.png",
+  "finalSize": "780x1360",
+  "alt": "생성된 이미지: 톤 케어를 위한 고급 보습크림",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/08.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/12.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-main/whitening-cream/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-detail/9264527939/06.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/04.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/05.png"
+  ],
+  "rule": "direct ChatGPT Images output; normalized only, no local text/compositing"
+}

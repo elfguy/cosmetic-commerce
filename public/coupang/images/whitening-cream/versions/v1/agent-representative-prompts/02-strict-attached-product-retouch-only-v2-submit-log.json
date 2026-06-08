@@ -1,0 +1,13 @@
+{
+  "key": "02-strict-attached-product-retouch-only-v2",
+  "cut": "02",
+  "chatUrl": "https://chatgpt.com/c/6a255dbf-3d38-83ec-993c-7aa26adbb288",
+  "title": "유어스킨플러스 이미지 수정",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/reference/whitening-cream-original-product-do-not-change.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/rejected/02-rejected-product-changed-before-strict-preserve-20260607T205519Z.png"
+  ],
+  "submittedAt": "2026-06-07T12:02:16.939Z",
+  "startUrl": "https://chatgpt.com/images/"
+}

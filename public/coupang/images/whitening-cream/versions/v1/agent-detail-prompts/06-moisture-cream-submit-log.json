@@ -1,0 +1,18 @@
+{
+  "key": "06-moisture-cream",
+  "cut": "06",
+  "chatUrl": "https://chatgpt.com/c/6a25184d-cf70-83e8-8809-1b0f790fee41",
+  "title": "쿠팡 상세페이지 이미지 제작",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/08.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/12.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-main/whitening-cream/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-detail/9264527939/06.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/04.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/05.png"
+  ],
+  "submittedAt": "2026-06-07T07:05:59.658Z",
+  "startUrl": "https://chatgpt.com/images/"
+}

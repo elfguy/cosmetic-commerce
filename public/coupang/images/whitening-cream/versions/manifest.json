@@ -1,0 +1,64 @@
+{
+  "productId": "9264527939",
+  "productName": "유어스킨플러스 화이트닝 톤 케어 크림",
+  "activeVersion": "v1",
+  "versions": [
+    {
+      "id": "original",
+      "label": "원본 등록본",
+      "representativeImages": [
+        { "src": "public/coupang-main/whitening-cream/01.png", "label": "대표 01" },
+        { "src": "public/coupang-main/whitening-cream/02.png", "label": "대표 02" },
+        { "src": "public/coupang-main/whitening-cream/03.png", "label": "대표 03" },
+        { "src": "public/coupang-main/whitening-cream/04.png", "label": "대표 04" },
+        { "src": "public/coupang-main/whitening-cream/05.png", "label": "대표 05" }
+      ],
+      "detailImages": [
+        { "src": "public/coupang-detail/9264527939/01.png", "label": "상세 01 · 원본 첫 화면" },
+        { "src": "public/coupang-detail/9264527939/02.png", "label": "상세 02" },
+        { "src": "public/coupang-detail/9264527939/03.png", "label": "상세 03" },
+        { "src": "public/coupang-detail/9264527939/04.png", "label": "상세 04" },
+        { "src": "public/coupang-detail/9264527939/05.png", "label": "상세 05" },
+        { "src": "public/coupang-detail/9264527939/06.png", "label": "상세 06" },
+        { "src": "public/coupang-detail/9264527939/07.png", "label": "상세 07" },
+        { "src": "public/coupang-detail/9264527939/08.png", "label": "상세 08" },
+        { "src": "public/coupang-detail/9264527939/09.png", "label": "상세 09" },
+        { "src": "public/coupang-detail/9264527939/10.png", "label": "상세 10" },
+        { "src": "public/coupang-detail/9264527939/11.png", "label": "상세 11" },
+        { "src": "public/coupang-detail/9264527939/12.png", "label": "상세 12" },
+        { "src": "public/coupang-detail/9264527939/13.png", "label": "상세 13" },
+        { "src": "public/coupang-detail/9264527939/14.png", "label": "상세 14" }
+      ]
+    },
+    {
+      "id": "v1",
+      "label": "V1 후보",
+      "status": "candidate",
+      "representativeImages": [
+        { "src": "public/coupang/images/whitening-cream/versions/v1/representative/01.png", "label": "대표 01 · V1 신규 · 상품 only + 신선 마크" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/representative/02.png", "label": "대표 02 · V1 신규 · 중요 성분" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/representative/03.png", "label": "대표 03 · V1 신규 · 사람 사용감" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/representative/04.png", "label": "대표 04 · V1 신규 · 크림 보습막" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/representative/05.png", "label": "대표 05 · V1 신규 · 신선 출고/공식관리" }
+      ],
+      "detailImages": [
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/01.png", "label": "상세 01 · V1 신규" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/02.png", "label": "상세 02 · V1 신규" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/03.png", "label": "상세 03 · V1 신규" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/04.png", "label": "상세 04 · V1 신규" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/05.png", "label": "상세 05 · V1 신규" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/06.png", "label": "상세 06 · V1 신규" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/07.png", "label": "상세 07 · V1 신규" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/08.png", "label": "상세 08 · V1 신규" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/09.png", "label": "상세 09 · V1 신규" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/10.png", "label": "상세 10 · V1 신규" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/11.png", "label": "상세 11 · V1 신규 · 사람 사용 컷" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/12.png", "label": "상세 12 · V1 신규" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/13.png", "label": "상세 13 · V1 신규" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/14.png", "label": "상세 14 · V1 신규" },
+        { "src": "public/coupang/images/whitening-cream/versions/v1/detail/15.png", "label": "상세 15 · V1 신규" }
+      ],
+      "note": "화이트닝 톤 케어 크림 V1 후보. 상세 01~15번 신규 컷 전체 적용. 11번만 사람 사용 컷, 나머지는 제품 반복을 줄인 정보/신뢰 컷 중심."
+    }
+  ]
+}

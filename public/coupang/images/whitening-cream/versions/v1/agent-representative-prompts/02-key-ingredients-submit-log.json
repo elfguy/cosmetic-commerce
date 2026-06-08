@@ -1,0 +1,18 @@
+{
+  "key": "02-key-ingredients",
+  "cut": "02",
+  "chatUrl": "https://chatgpt.com/c/6a2547ac-6c70-83ec-92cc-ccc2635e5953",
+  "title": "쿠팡 대표 이미지 제작",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-main/whitening-cream/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/03.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/10.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/01.png"
+  ],
+  "submittedAt": "2026-06-07T10:28:06.144Z",
+  "startUrl": "https://chatgpt.com/images/"
+}

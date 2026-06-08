@@ -1,0 +1,18 @@
+{
+  "key": "09-ewg-fragrance-free",
+  "cut": "09",
+  "chatUrl": "https://chatgpt.com/c/6a251a43-f2f4-83e8-9179-c9ab6660c187",
+  "title": "쿠팡 이미지 생성 요청",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/08.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/12.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-main/whitening-cream/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-detail/9264527939/09.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/07.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/08.png"
+  ],
+  "submittedAt": "2026-06-07T07:14:21.749Z",
+  "startUrl": "https://chatgpt.com/images/"
+}

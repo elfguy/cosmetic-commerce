@@ -1,0 +1,18 @@
+{
+  "key": "13-product-info",
+  "cut": "13",
+  "chatUrl": "https://chatgpt.com/c/6a251d24-0304-83e8-bebe-721392cdd1f2",
+  "title": "쿠팡 모바일 이미지 제작",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/08.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/12.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-main/whitening-cream/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-detail/9264527939/13.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/10.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/12.png"
+  ],
+  "submittedAt": "2026-06-07T07:26:37.919Z",
+  "startUrl": "https://chatgpt.com/images/"
+}

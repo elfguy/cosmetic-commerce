@@ -1,0 +1,40 @@
+{
+  "startUrl": "https://chatgpt.com/images/",
+  "title": "New chat",
+  "afterSubmitUrl": "https://chatgpt.com/c/6a24e91f-1b2c-83e9-8220-972d7710b0e9",
+  "uploaded": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/reference/product-main-01-real-ratio-ref.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/reference/current-detail-01-structure-ref.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/reference/aqua-v4-detail-01-style-ref.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/reference/toner-v1-detail-01-style-ref.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/agent-detail-raw/01-main-hook-agent.png"
+  ],
+  "promptPath": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/agent-detail-prompts/01-main-hook-v2-prompt.txt",
+  "beforeIds": [
+    "58c9264929ef861#file_00000000356472099af2067b1604ed37#thumbnail",
+    "a9afbe92bd306d5#file_000000007ab47209902bceb01042b332#thumbnail",
+    "f458d1a8cff7128#file_000000001d947209a98e3d5e28550e28#thumbnail",
+    "9e5ab3525a46ce1#file_0000000011987209ba9439c90147e977#thumbnail",
+    "2f5ef522fed183f#file_000000003d4c72098266f8d78b21b542#thumbnail",
+    "e3927234ee3b5ab#file_000000006e6c72099e2334fd94c292cd#thumbnail",
+    "b33283c14e5d3a3#file_0000000084e87209a6f8e635851a6275#thumbnail",
+    "f79e948b4329cb3#file_000000004a0472099dbb3273b42885ee#thumbnail",
+    "266a30bcb3dd620#file_00000000fc147209b7a8392b5d05a6ea#thumbnail",
+    "a361dca058f8a6a#file_000000003f0c7209b27dd18c65125f95#thumbnail",
+    "fb5bafabcdcd98e#file_00000000b5607209b9b88f0ac2f92621#thumbnail",
+    "8431b2a2883d70b#file_00000000d974720994ec17a8bfba1b34#thumbnail",
+    "454705d4aa17ae8#file_000000001d747209b40a90fca7897c60#thumbnail",
+    "73995b5ce447fcc#file_000000009ac8720b8408bd922ba15d92#thumbnail",
+    "f8fd2f33e97da00#file_00000000eb40720bb06036503b1e53a6#thumbnail",
+    "787cb473d30f2d5#file_000000001ab8720ba435527bdb294ce8#thumbnail",
+    "7a1be68f5602a38#file_0000000087d8720ba42149bd202a1970#thumbnail",
+    "9a92a800f34956b#file_0000000050cc71f888ef54fabdbf6c23#thumbnail",
+    "cbd01feadfe5c49#file_00000000b62c720badda82bd229d941f#thumbnail",
+    "b8f6c16c4619836#file_00000000ce64720b8267626d5f7d455e#thumbnail",
+    "20a8722962feeef#file_0000000002c0720baf2b5667a6d78ad7#thumbnail",
+    "841a7689398dd28#file_00000000ff5c71f8a983cadf1e6c89b3#thumbnail",
+    "cc0fc59db5a2ef0#file_00000000a4c071f8a1cb7e39556c0e0b#thumbnail",
+    "a7faf9cd14bd510#file_00000000f520720bbf0646171e64f7b0#thumbnail",
+    "3d894ce4ecc7a4b#file_00000000bd20720bb23cd69863d0373c#thumbnail"
+  ]
+}

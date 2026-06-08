@@ -1,0 +1,22 @@
+{
+  "startUrl": "https://chatgpt.com/images/",
+  "chatUrl": "https://chatgpt.com/c/6a251c5a-25c4-83ec-a6e7-1844b3b02b8d",
+  "id": "file_00000000d6ac72069a0e091298d2cad8",
+  "natural": "950x1656",
+  "rawBytes": 1320277,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/agent-detail-raw/12-direct-care-agent.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/12.png",
+  "finalSize": "780x1360",
+  "alt": "생성된 이미지: 직접 관리하는 유어스킨플러스 프로세스",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/08.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/12.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-main/whitening-cream/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-detail/9264527939/12.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/10.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/11.png"
+  ],
+  "rule": "direct ChatGPT Images output; normalized only, no local text/compositing"
+}

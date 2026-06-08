@@ -1,0 +1,20 @@
+{
+  "cut": "03",
+  "key": "03-gpt-product-locked-v5",
+  "startUrl": "https://chatgpt.com/images/",
+  "chatUrl": "https://chatgpt.com/c/6a2572e3-8494-83e8-9848-8caaa0737e37",
+  "id": "file_0000000007d47209964a1e7858aa4f3d",
+  "natural": "1254x1254",
+  "rawBytes": 1900989,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/agent-representative-raw/03-gpt-product-locked-v5-agent.png",
+  "candidate": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/03-gpt-product-locked-v5-candidate.png",
+  "finalSize": "1000x1000",
+  "alt": "생성된 이미지: 데일리 톤 케어 크림 광고",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/reference/whitening-cream-original-product-do-not-change.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/02.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/03.png"
+  ],
+  "rule": "GPT Images direct output; saved as candidate only; no final overwrite"
+}

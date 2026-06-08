@@ -1,0 +1,22 @@
+{
+  "cut": "05",
+  "key": "05-gpt-product-locked-v5",
+  "startUrl": "https://chatgpt.com/images/",
+  "chatUrl": "https://chatgpt.com/c/6a2577c1-6fec-83e9-af07-348a5ee7ed47",
+  "id": "file_00000000afc872099a96f9d3c1eee2db",
+  "natural": "1254x1254",
+  "rawBytes": 1615005,
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/agent-representative-raw/05-gpt-product-locked-v5-agent.png",
+  "candidate": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/05-gpt-product-locked-v5-candidate.png",
+  "finalSize": "1000x1000",
+  "alt": "생성된 이미지: 자연의 세심한 피부 관리",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/reference/whitening-cream-original-product-do-not-change.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/02.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/03.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/representative/04.png"
+  ],
+  "rule": "GPT Images direct output; saved as candidate only; no final overwrite"
+}

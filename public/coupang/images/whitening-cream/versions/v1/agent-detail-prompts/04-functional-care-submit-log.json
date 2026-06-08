@@ -1,0 +1,18 @@
+{
+  "key": "04-functional-care",
+  "cut": "04",
+  "chatUrl": "https://chatgpt.com/c/6a2515a6-4aa8-83e8-9eaf-f09b26904211",
+  "title": "쿠팡 상세페이지 이미지",
+  "refs": [
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/whitening-cream/versions/v1/detail/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/08.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/aqua-lotion/versions/v4/detail/12.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/hyaluronic-acid-toner/versions/v1/detail/05.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-main/whitening-cream/01.png",
+    "/Users/elfguy/alba/cosmetic-commerce/public/coupang-detail/9264527939/04.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/02.png",
+    "public/coupang/images/whitening-cream/versions/v1/detail/03.png"
+  ],
+  "submittedAt": "2026-06-07T06:54:40.092Z",
+  "startUrl": "https://chatgpt.com/images/"
+}
