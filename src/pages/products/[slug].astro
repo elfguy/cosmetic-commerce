@@ -17,7 +17,11 @@ const defaultCompareIds = Array.from(new Set([appliedVersion.id, latestReviewVer
 const appliedDetailCount = appliedVersion?.detailImages.length ?? 0;
 const appliedMainCount = appliedVersion?.mainImages.length ?? 0;
 const versionCompareHref = product.ops.workspaceUrl ?? '/product-comparison/';
-const versionCompareLabel = product.ops.workspaceUrl ? '버전 비교' : '전체 상품 비교';
+const versionCompareLabel = product.ops.workspaceUrl
+  ? product.slug === 'cleansing-oil'
+    ? '원본/V1 비교'
+    : '버전 비교'
+  : '전체 상품 비교';
 ---
 
 <BaseLayout title={product.shortName + ' 상세 이미지 검수'} description={product.shortName + ' 버전별 대표 이미지와 상세 이미지를 검수하고 비교합니다.'}>

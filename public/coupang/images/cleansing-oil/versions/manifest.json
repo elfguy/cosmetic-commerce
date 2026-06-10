@@ -1,0 +1,177 @@
+{
+  "productId": "9221762154",
+  "productName": "유어스킨플러스 퓨어 딥 클렌징 오일",
+  "activeVersion": "v1",
+  "versions": [
+    {
+      "id": "original",
+      "label": "원본 등록본",
+      "representativeImages": [
+        {
+          "src": "public/coupang-main/cleansing-oil/01.png",
+          "label": "대표 01"
+        },
+        {
+          "src": "public/coupang-main/cleansing-oil/02.png",
+          "label": "대표 02"
+        },
+        {
+          "src": "public/coupang-main/cleansing-oil/03.png",
+          "label": "대표 03"
+        },
+        {
+          "src": "public/coupang-main/cleansing-oil/04.png",
+          "label": "대표 04"
+        },
+        {
+          "src": "public/coupang-main/cleansing-oil/05.png",
+          "label": "대표 05"
+        }
+      ],
+      "detailImages": [
+        {
+          "src": "public/coupang-detail/9221762154/01.png",
+          "label": "상세 01 · 원본 첫 화면"
+        },
+        {
+          "src": "public/coupang-detail/9221762154/02.png",
+          "label": "상세 02"
+        },
+        {
+          "src": "public/coupang-detail/9221762154/03.png",
+          "label": "상세 03"
+        },
+        {
+          "src": "public/coupang-detail/9221762154/04.png",
+          "label": "상세 04"
+        },
+        {
+          "src": "public/coupang-detail/9221762154/05.png",
+          "label": "상세 05"
+        },
+        {
+          "src": "public/coupang-detail/9221762154/06.png",
+          "label": "상세 06"
+        },
+        {
+          "src": "public/coupang-detail/9221762154/07.png",
+          "label": "상세 07"
+        },
+        {
+          "src": "public/coupang-detail/9221762154/08.png",
+          "label": "상세 08"
+        },
+        {
+          "src": "public/coupang-detail/9221762154/09.png",
+          "label": "상세 09"
+        },
+        {
+          "src": "public/coupang-detail/9221762154/10.png",
+          "label": "상세 10"
+        },
+        {
+          "src": "public/coupang-detail/9221762154/11.png",
+          "label": "상세 11"
+        },
+        {
+          "src": "public/coupang-detail/9221762154/12.png",
+          "label": "상세 12"
+        },
+        {
+          "src": "public/coupang-detail/9221762154/13.png",
+          "label": "상세 13 · 상품정보/전성분"
+        },
+        {
+          "src": "public/coupang-detail/9221762154/14.png",
+          "label": "상세 14 · 공식 판매처 안내"
+        }
+      ]
+    },
+    {
+      "id": "v1",
+      "label": "V1 후보",
+      "status": "candidate",
+      "representativeImages": [
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/representative/01.png",
+          "label": "대표 01 · V1 후보 · 원본 상품 + 신선제품 마크"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/representative/02.png",
+          "label": "대표 02 · V1 후보 · 딥 클렌징 포인트"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/representative/03.png",
+          "label": "대표 03 · V1 후보 · 사람 사용감"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/representative/04.png",
+          "label": "대표 04 · V1 후보 · 손 펌핑 제형"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/representative/05.png",
+          "label": "대표 05 · V1 후보 · 산뜻한 마무리/신뢰"
+        }
+      ],
+      "detailImages": [
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/01.png",
+          "label": "상세 01 · V1 후보 · 제품 원본 중심 재생성"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/02.png",
+          "label": "상세 02 · V1 후보 · 추천 피부 고민"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/03.png",
+          "label": "상세 03 · V1 후보 · 4가지 세정 포인트"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/04.png",
+          "label": "상세 04 · V1 후보 · 사람 사용법 컷"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/05.png",
+          "label": "상세 05 · V1 후보 · 4-Extract Formula"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/06.png",
+          "label": "상세 06 · V1 후보 · 유화/산뜻 마무리"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/07.png",
+          "label": "상세 07 · V1 후보 · 메이크업 세정 테스트"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/08.png",
+          "label": "상세 08 · V1 후보 · 저자극 테스트 증빙"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/09.png",
+          "label": "상세 09 · V1 후보 · EWG/무향 성분 안내"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/10.png",
+          "label": "상세 10 · V1 후보 · 제조일자/신선 출고 기준"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/11.png",
+          "label": "상세 11 · V1 후보 · 사용 루틴 카드"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/12.png",
+          "label": "상세 12 · V1 후보 · 간소 포장/직접 판매"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/13.png",
+          "label": "상세 13 · V1 후보 · 제품 정보 고시"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/14.png",
+          "label": "상세 14 · V1 후보 · 공통 공식 판매처 안내"
+        }
+      ],
+      "note": "상세 01은 구글드라이브 제품 원본 5장만 reference로 사용해 GPT Images에서 재생성한 후보입니다. 앞선 rejected 후보보다 병/펌프/라벨이 원본에 가까워졌지만 Leo 최종 검수 필요."
+    }
+  ]
+}
