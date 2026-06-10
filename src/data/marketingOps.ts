@@ -278,7 +278,11 @@ export const productVersions: Record<string, ProductVersion[]> = {
       date: '2026-06-10',
       summary: '클렌징오일 V1 후보입니다. 대표 01~05 전체를 새 흐름으로 구성했습니다. 01은 신선제품 마크 중심 메인, 02는 딥 클렌징 포인트, 03은 사람 사용감, 04는 손 펌핑 제형, 05는 산뜻한 마무리/공식 신뢰 컷입니다. 상세 01~14 전체를 새 흐름으로 정리했습니다. 쿠팡에는 아직 미반영입니다.',
       mainImages: Array.from({ length: 5 }, (_, i) => '/coupang/images/cleansing-oil/versions/v1/representative/' + String(i + 1).padStart(2, '0') + '.png'),
-      detailImages: Array.from({ length: 14 }, (_, i) => '/coupang/images/cleansing-oil/versions/v1/detail/' + String(i + 1).padStart(2, '0') + '.png'),
+      detailImages: [
+        ...Array.from({ length: 12 }, (_, i) => '/coupang/images/cleansing-oil/versions/v1/detail/' + String(i + 1).padStart(2, '0') + '.png'),
+        '/coupang/images/cleansing-oil/versions/v1/detail/14.png',
+        '/coupang/images/cleansing-oil/versions/v1/detail/13.png',
+      ],
       links: [
         { label: '원본/V1 비교 페이지 열기', href: '/marketing/cleansing-oil-version-compare/' },
         { label: 'V1 첫 상세 열기', href: '/coupang/images/cleansing-oil/versions/v1/detail/01.png' },

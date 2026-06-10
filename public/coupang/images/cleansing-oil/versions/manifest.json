@@ -163,12 +163,12 @@
           "label": "상세 12 · V1 후보 · 간소 포장/직접 판매"
         },
         {
-          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/13.png",
-          "label": "상세 13 · V1 후보 · 제품 정보 고시"
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/14.png",
+          "label": "상세 13 · V1 후보 · 공통 공식 판매처 안내"
         },
         {
-          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/14.png",
-          "label": "상세 14 · V1 후보 · 공통 공식 판매처 안내"
+          "src": "public/coupang/images/cleansing-oil/versions/v1/detail/13.png",
+          "label": "상세 14 · V1 후보 · 제품 정보 고시/전성분 표"
         }
       ],
       "note": "상세 01은 구글드라이브 제품 원본 5장만 reference로 사용해 GPT Images에서 재생성한 후보입니다. 앞선 rejected 후보보다 병/펌프/라벨이 원본에 가까워졌지만 Leo 최종 검수 필요."
