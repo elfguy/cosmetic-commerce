@@ -126,7 +126,28 @@ Minimum requirements:
 - Reject outputs with product drift, broken Korean, wrong text, wrong legal claims, or wrong layout role.
 - Normalize dimensions only after download. Do not locally patch final text unless the user explicitly asks.
 
-### 4. QA every candidate before promotion
+### 4. Sequential cut-by-cut production rule
+
+Do **not** batch-generate all representative/detail cuts and inspect them later.
+
+For each slot, work in this strict order:
+
+1. Generate only **one** image/cut for the current slot.
+2. Run visual QA immediately.
+3. Compare it against the original listing and adjacent cuts.
+4. If it passes, promote/copy it to the final runtime path.
+5. If it fails, move it to `rejected/` or keep it as a backup candidate, restore the prior final file if needed, and regenerate.
+6. Only after the current slot is approved, move to the next slot.
+
+Never proceed to the next image while the current image is unverified. This rule applies to both representative images and detail images.
+
+Proven examples from the cleansing-oil workflow:
+
+- Detail 02: first regeneration became a product close-up instead of an information card, so it was rejected and regenerated with product references removed.
+- Detail 03: density improved, but the font tone looked too serif/casual, so it was regenerated with a strong gothic/sans-serif instruction.
+- Detail 05: QA found ingredient names that did not match the original, so it was regenerated with exact original extract names.
+
+### 5. QA every candidate before promotion
 
 For each new cut, ask vision QA against the user’s requested criteria:
 
@@ -147,7 +168,7 @@ Useful QA prompts:
 상세 02~04 contact sheet입니다. 새 상세 03의 글씨체가 02/04와 톤앤매너가 맞는지, 정보 밀도가 과하거나 비지 않는지 판정해줘.
 ```
 
-### 5. Content and legal-risk QA against the original
+### 6. Content and legal-risk QA against the original
 
 Before final commit/push, compare the full new set against the original listing.
 
@@ -184,7 +205,7 @@ Safer wording patterns:
 원료 특성에 대한 설명이며, 효능·효과를 보장하는 표현이 아닙니다.
 ```
 
-### 6. Ingredient and legal table rules
+### 7. Ingredient and legal table rules
 
 For ingredient/formula cuts:
 
@@ -217,7 +238,7 @@ detailImages: [
 
 Mirror the same order in `manifest.json` labels.
 
-### 7. Update data and comparison pages
+### 8. Update data and comparison pages
 
 Update:
 
@@ -228,7 +249,7 @@ Update:
 
 For comparison pages, ensure original and V1 are both visible, labels match the visual role, and detail order matches the user’s intended order.
 
-### 8. Build and URL verification
+### 9. Build and URL verification
 
 Always run:
 
@@ -262,7 +283,7 @@ i13 = html.find('/coupang/images/<slug>/versions/v1/detail/13.png')
 print('detail14 before detail13', i14 != -1 and i13 != -1 and i14 < i13)
 ```
 
-### 9. Stage only scoped runtime files
+### 10. Stage only scoped runtime files
 
 Use explicit `git add`, not broad `git add .`, because the repo may contain unrelated product work and temporary evidence.
 
@@ -274,7 +295,7 @@ git status --short | head -80
 
 Do not stage unrelated product changes, temporary ChatGPT screenshots, rejected candidates, or raw/backup/prompt directories unless the user explicitly wants them committed.
 
-### 10. Commit and push
+### 11. Commit and push
 
 Commit after build and QA pass:
 
