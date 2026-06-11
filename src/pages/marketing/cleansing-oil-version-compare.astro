@@ -139,7 +139,7 @@ const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheB
             <div class="image-stack representative-stack">
               {version.representativeImages.map((image, index) => (
                 <a href={withCacheBust(image.src)} target="_blank" rel="noreferrer">
-                  <span>{image.label}</span>
+                  <span>{String(index + 1).padStart(2, '0')}</span>
                   <img src={withCacheBust(image.src)} alt={`${version.label} ${image.label}`} loading="lazy" />
                 </a>
               ))}
@@ -159,9 +159,9 @@ const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheB
           <article class="flow-column" data-version-column={version.id}>
             <h3>{version.label}</h3>
             {version.detailImages.length === 0 && <p class="empty-note">상세 이미지 없음</p>}
-            {version.detailImages.map((image) => (
+            {version.detailImages.map((image, index) => (
               <a class="flow-card" href={withCacheBust(image.src)} target="_blank" rel="noreferrer" aria-label={`${version.label} ${image.label} 열기`}>
-                <span aria-hidden="true">{image.label}</span>
+                <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
                 <img src={withCacheBust(image.src)} alt={`${version.label} ${image.label}`} loading="lazy" />
               </a>
             ))}
@@ -583,15 +583,17 @@ const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheB
   .image-stack span,
   .flow-card span {
     position: absolute;
-    top: 9px;
-    left: 9px;
+    top: 6px;
+    left: 6px;
     z-index: 1;
-    padding: 4px 7px;
+    min-width: 22px;
+    padding: 3px 5px;
     color: #fff;
-    background: rgba(27, 47, 38, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.75);
-    border-radius: var(--r-pill);
-    box-shadow: 0 6px 18px rgba(27, 47, 38, 0.18);
+    text-align: center;
+    background: rgba(27, 47, 38, 0.68);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(27, 47, 38, 0.12);
     font-family: var(--font-latin);
     font-size: 11px;
     font-weight: 900;
