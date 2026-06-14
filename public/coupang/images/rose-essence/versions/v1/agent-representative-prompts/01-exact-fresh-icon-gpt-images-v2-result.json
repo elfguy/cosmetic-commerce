@@ -1,0 +1,16 @@
+{
+  "startUrl": "https://chatgpt.com/images/",
+  "chatUrl": "https://chatgpt.com/c/6a2e84b5-b9a0-83ee-8a13-7065d7e4b640",
+  "currentUrl": "https://chatgpt.com/c/6a2e84b5-b9a0-83ee-8a13-7065d7e4b640",
+  "title": "쿠팡 대표 이미지 제작",
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/rose-essence/versions/v1/agent-representative-raw/01-exact-fresh-icon-gpt-images-v2-agent.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/rose-essence/versions/v1/representative/01-candidate-exact-fresh-icon-gpt-images-v2.png",
+  "candidate": {
+    "w": 1254,
+    "h": 1254,
+    "alt": "",
+    "id": "file_0000000012147209bf66866f955401eb"
+  },
+  "beforeSendShot": "/Users/elfguy/alba/cosmetic-commerce/tmp-rose-rep01-exact-icon-v2-before-send.png",
+  "attachmentShot": "/Users/elfguy/alba/cosmetic-commerce/tmp-rose-rep01-exact-icon-v2-attachment-before-prompt.png"
+}

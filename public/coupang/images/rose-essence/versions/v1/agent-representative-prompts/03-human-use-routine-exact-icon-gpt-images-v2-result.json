@@ -1,0 +1,17 @@
+{
+  "slot": "03",
+  "startUrl": "https://chatgpt.com/images/",
+  "chatUrl": "https://chatgpt.com/images/",
+  "currentUrl": "https://chatgpt.com/c/6a2e9fcc-3a14-83ee-a39a-2810cc5909d6",
+  "title": "쿠팡 이미지 수정 요청",
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/rose-essence/versions/v1/agent-representative-raw/03-human-use-routine-exact-icon-gpt-images-v2-agent.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/rose-essence/versions/v1/representative/03-candidate-human-use-routine-exact-icon-gpt-images-v2.png",
+  "candidate": {
+    "w": 1254,
+    "h": 1254,
+    "alt": "",
+    "id": "file_00000000e8c8720bacb87d04270a2235"
+  },
+  "beforeSendShot": "/Users/elfguy/alba/cosmetic-commerce/tmp-rose-rep03-human-use-routine-exact-icon-gpt-images-v2-before-send.png",
+  "attachmentShot": "/Users/elfguy/alba/cosmetic-commerce/tmp-rose-rep03-human-use-routine-exact-icon-gpt-images-v2-attachment-before-prompt.png"
+}

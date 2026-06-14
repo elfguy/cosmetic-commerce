@@ -1,0 +1,160 @@
+{
+  "productSlug": "rose-essence",
+  "productName": "유어스킨플러스 로즈 다마스쿠스 토닉 에센스",
+  "activeVersion": "v1",
+  "versions": [
+    {
+      "id": "original",
+      "label": "원본 등록본",
+      "description": "쿠팡 원본 상세 01~12",
+      "representativeImages": [
+        {
+          "src": "public/coupang-main/rose-essence/01.png",
+          "label": "원본 대표 01"
+        },
+        {
+          "src": "public/coupang-main/rose-essence/02.png",
+          "label": "원본 대표 02"
+        },
+        {
+          "src": "public/coupang-main/rose-essence/03.png",
+          "label": "원본 대표 03"
+        },
+        {
+          "src": "public/coupang-main/rose-essence/04.png",
+          "label": "원본 대표 04"
+        },
+        {
+          "src": "public/coupang-main/rose-essence/05.png",
+          "label": "원본 대표 05"
+        }
+      ],
+      "detailImages": [
+        {
+          "src": "public/coupang-detail/9025775541/01.png",
+          "label": "원본 상세 01"
+        },
+        {
+          "src": "public/coupang-detail/9025775541/02.png",
+          "label": "원본 상세 02"
+        },
+        {
+          "src": "public/coupang-detail/9025775541/03.png",
+          "label": "원본 상세 03"
+        },
+        {
+          "src": "public/coupang-detail/9025775541/04.png",
+          "label": "원본 상세 04"
+        },
+        {
+          "src": "public/coupang-detail/9025775541/05.png",
+          "label": "원본 상세 05"
+        },
+        {
+          "src": "public/coupang-detail/9025775541/06.png",
+          "label": "원본 상세 06"
+        },
+        {
+          "src": "public/coupang-detail/9025775541/07.png",
+          "label": "원본 상세 07"
+        },
+        {
+          "src": "public/coupang-detail/9025775541/08.png",
+          "label": "원본 상세 08"
+        },
+        {
+          "src": "public/coupang-detail/9025775541/09.png",
+          "label": "원본 상세 09"
+        },
+        {
+          "src": "public/coupang-detail/9025775541/10.png",
+          "label": "원본 상세 10"
+        },
+        {
+          "src": "public/coupang-detail/9025775541/11.png",
+          "label": "원본 상세 11"
+        },
+        {
+          "src": "public/coupang-detail/9025775541/12.png",
+          "label": "원본 상세 12"
+        }
+      ]
+    },
+    {
+      "id": "v1",
+      "label": "V1 상세 리뉴얼 후보",
+      "description": "문서화된 워크플로 기준 상세 14컷 리뉴얼 후보 생성 완료. 01번과 02번 사이에 사람 사용감 컷 01a를 추가하고, 원본 06/07의 저자극 테스트·EWG 그린 등급/향료 프리 내용을 화면상 현재 10번 미니멀 포장 컷 바로 위에 05a/05b로 보강 배치했습니다.",
+      "source": "public/coupang/images/rose-essence/versions/v1",
+      "representativeCount": 6,
+      "detailCount": 14,
+      "detailImages": [
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/01.png",
+          "label": "V1 상세 01 신규 히어로"
+        },
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/01a.png",
+          "label": "V1 상세 01a 세안 후 사람 사용감 루틴"
+        },
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/02.png",
+          "label": "V1 상세 02 추천 대상 정보 카드"
+        },
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/03.png",
+          "label": "V1 상세 03 로즈워터 286,500ppm"
+        },
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/04.png",
+          "label": "V1 상세 04 갈락토미세스·로즈 원료"
+        },
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/05.png",
+          "label": "V1 상세 05 병풀·알란토인 사용감"
+        },
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/06.png",
+          "label": "V1 상세 06 워터리 제형감"
+        },
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/07.png",
+          "label": "V1 상세 07 사람 사용 루틴"
+        },
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/08.png",
+          "label": "V1 상세 08 신선 출고·공식 관리"
+        },
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/05a.png",
+          "label": "V1 상세 05a 피부 저자극 테스트"
+        },
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/05b.png",
+          "label": "V1 상세 05b EWG 그린 등급·향료 프리"
+        },
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/09.png",
+          "label": "V1 상세 09 친환경 미니멀 포장"
+        },
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/10.png",
+          "label": "V1 상세 10 공식 판매처 확인"
+        },
+        {
+          "src": "public/coupang/images/rose-essence/versions/v1/detail/11.png",
+          "label": "V1 상세 11 제품 표시정보 표 · 피부 타입 정렬"
+        }
+      ],
+      "notes": [
+        "ChatGPT Images를 https://chatgpt.com/images/에서 열고 원본 제품/원본 상세/승인 상세 톤 참조를 업로드해 01~10을 생성했습니다.",
+        "01a번은 ChatGPT Images를 https://chatgpt.com/images/에서 실행해 01번 히어로와 02번 추천 카드 사이에 들어가는 성인 여성 사용감 컷으로 추가했습니다. 기존 01~11 파일은 유지하고 표시 순서에만 01a를 삽입했습니다.",
+        "05a/05b번은 원본 상세 06/07에 있던 피부 저자극 테스트 완료, 피부자극지수 0.00, 전성분 100% EWG 그린 등급, 무향(또는 미향)/FRAGRANCE FREE 내용을 V1 톤앤매너로 재구성했으며, Leo 요청에 따라 화면상 현재 10번 미니멀 포장 컷 바로 위에 배치했습니다.",
+        "07번에는 얼굴 없는 손/화장솜 중심의 사람 사용 컷을 포함했습니다.",
+        "10번은 ChatGPT Images를 https://chatgpt.com/images/에서 실행해 Leo 첨부 참고 이미지의 내용 구성만 반영하고, `쿠팡 내에서`가 아닌 `최근 온라인 판매 채널 전반에서` 문구로 범위를 수정했으며, 로즈 에센스 V1 톤앤매너에 맞춘 꽃잎/실드/쇼핑 라인 아이콘/공식 판매자 배지 중심 디자인으로 재생성했습니다.",
+        "09번은 ChatGPT Images를 https://chatgpt.com/images/에서 실행해 Leo 첨부 참고 이미지 기준으로 `불필요한 포장은 줄이고`, `단상자 사용 지양`, `완충제 최소화`, `제조사 직접 판매`, `미니멀 포장 = 꼭 필요한 만큼의 포장` 문구를 반영했습니다.",
+        "11번 제품 표시정보/전성분은 표 형태를 유지하되 Leo 요청에 따라 `제품 주요 사양/사항` 라벨을 `피부 타입`으로 정리하고 표 정렬을 맞췄습니다.",
+        "일반 화장품 기준으로 피부 재생/항염/개선 보장/미백·주름개선 표현을 제외했습니다."
+      ]
+    }
+  ]
+}

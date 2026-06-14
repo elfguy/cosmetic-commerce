@@ -1,0 +1,17 @@
+{
+  "startUrl": "https://chatgpt.com/images/",
+  "chatUrl": "https://chatgpt.com/c/6a2e81c4-6330-83e8-b16d-3b3ea06b5191",
+  "currentUrl": "https://chatgpt.com/c/6a2e81c4-6330-83e8-b16d-3b3ea06b5191",
+  "title": "상품 이미지 제작 요청",
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/rose-essence/versions/v1/agent-representative-raw/01-simple-fresh-label-gpt-images-v1-agent.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/rose-essence/versions/v1/representative/01-candidate-simple-fresh-label-gpt-images-v1.png",
+  "rawBytes": 1304941,
+  "candidate": {
+    "alt": "",
+    "w": 1254,
+    "h": 1254,
+    "id": "file_0000000042c07209a72aa538ac3c06a8"
+  },
+  "beforeSendShot": "/Users/elfguy/alba/cosmetic-commerce/tmp-rose-rep01-simple-v1-before-send.png",
+  "attachmentShot": "/Users/elfguy/alba/cosmetic-commerce/tmp-rose-rep01-simple-v1-attachment-before-prompt.png"
+}

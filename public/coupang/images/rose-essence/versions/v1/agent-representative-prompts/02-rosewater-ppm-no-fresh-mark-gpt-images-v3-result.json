@@ -1,0 +1,18 @@
+{
+  "slot": "02",
+  "key": "rosewater-ppm-no-fresh-mark-gpt-images-v3",
+  "startUrl": "https://chatgpt.com/images/",
+  "chatUrl": "https://chatgpt.com/c/6a2ea6a7-cc88-83ee-8f14-237b8b0e6a38",
+  "currentUrl": "https://chatgpt.com/c/6a2ea6a7-cc88-83ee-8f14-237b8b0e6a38",
+  "title": "쿠팡 대표 이미지 수정",
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/rose-essence/versions/v1/agent-representative-raw/02-rosewater-ppm-no-fresh-mark-gpt-images-v3-agent.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/rose-essence/versions/v1/representative/02-candidate-rosewater-ppm-no-fresh-mark-gpt-images-v3.png",
+  "candidate": {
+    "w": 1254,
+    "h": 1254,
+    "alt": "",
+    "id": "file_000000002cd4720b87493f8c78f212a8"
+  },
+  "beforeSendShot": "/Users/elfguy/alba/cosmetic-commerce/tmp-rose-rep02-rosewater-ppm-no-fresh-mark-gpt-images-v3-before-send.png",
+  "attachmentShot": "/Users/elfguy/alba/cosmetic-commerce/tmp-rose-rep02-rosewater-ppm-no-fresh-mark-gpt-images-v3-attachment-before-prompt.png"
+}
