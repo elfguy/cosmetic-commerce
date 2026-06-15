@@ -1,0 +1,429 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+type ProductSales = {
+  sellerProductId: string;
+  vendorItemId?: string;
+  productId?: string;
+  name: string;
+  orderLines: number;
+  qty: number;
+  amount: number;
+  byStatus: Record<string, number>;
+  daily: Record<string, number>;
+};
+
+type ImprovementSales = {
+  slug: string;
+  name: string;
+  firstUpdateKst: string;
+  artifacts: number;
+  before: { lines: number; qty: number; amount: number };
+  after: { lines: number; qty: number; amount: number };
+  beforeQtyPerDay: number;
+  afterQtyPerDay: number;
+  liftPct: number | null;
+};
+
+type SalesReport = {
+  generatedAtKst: string;
+  range: { from: string; to: string };
+  statusBuckets: string[];
+  apiErrors: unknown[];
+  total: { orderLines: number; qty: number; amount: number };
+  products: ProductSales[];
+  improvements: ImprovementSales[];
+};
+
+const modules = import.meta.glob('../../data/coupang/analysis/monthly-sales-image-lift-*.json', { eager: true });
+
+const reports = Object.entries(modules)
+  .map(([file, mod]) => {
+    const data = (mod as { default: SalesReport }).default;
+    const fileName = file.split('/').pop() ?? file;
+    const id = fileName.replace('monthly-sales-image-lift-', '').replace('.json', '');
+    return {
+      id,
+      fileName,
+      title: `${data.range.from} ~ ${data.range.to}`,
+      data,
+    };
+  })
+  .sort((a, b) => b.data.generatedAtKst.localeCompare(a.data.generatedAtKst));
+
+const latest = reports[0];
+const report = latest?.data;
+
+const won = (value: number) => `${value.toLocaleString('ko-KR')}원`;
+const pct = (value: number | null) => value === null ? '신규' : `${value > 0 ? '+' : ''}${value.toFixed(1)}%`;
+const qtyPerDay = (value: number) => `${value.toFixed(3)}개/일`;
+const maxAmount = Math.max(...(report?.products.map((p) => p.amount) ?? [1]), 1);
+const maxQty = Math.max(...(report?.products.map((p) => p.qty) ?? [1]), 1);
+const increased = report?.improvements.filter((item) => item.after.qty > 0 && (item.liftPct ?? 0) > 0) ?? [];
+const observed = report?.improvements.filter((item) => item.after.qty > 0) ?? [];
+const pending = report?.improvements.filter((item) => item.after.qty === 0) ?? [];
+const topProducts = report?.products.slice(0, 3) ?? [];
+---
+
+<BaseLayout
+  title="매출 분석"
+  description="쿠팡 상품별 매출과 상세 이미지 개선 전후 판매량을 추적하는 유어스킨플러스 운영 리포트."
+>
+  <SiteHeader active="/sales-analysis/" />
+
+  <main class="sales-page">
+    <section class="sales-hero container">
+      <div class="sales-hero__copy">
+        <p class="eyebrow">Coupang sales lab</p>
+        <h1>상품별 매출과<br />상세 이미지 효과를 계속 쌓는 보드</h1>
+        <p>
+          쿠팡 주문 데이터를 기준으로 최근 리포트를 자동 렌더링합니다.
+          앞으로 같은 JSON 파일을 추가하면 이 화면에 리포트가 계속 누적됩니다.
+        </p>
+      </div>
+      {report && (
+        <aside class="sales-hero__card" aria-label="최신 매출 총계">
+          <span>최신 리포트</span>
+          <strong>{report.total.amount.toLocaleString('ko-KR')}</strong>
+          <em>원</em>
+          <small>{report.range.from} ~ {report.range.to} · {report.total.qty}개 판매</small>
+        </aside>
+      )}
+    </section>
+
+    {report ? (
+      <>
+        <section class="report-strip container" aria-label="리포트 핵심 지표">
+          <article>
+            <span>총 매출</span>
+            <strong>{won(report.total.amount)}</strong>
+            <small>주문라인 {report.total.orderLines}건</small>
+          </article>
+          <article>
+            <span>판매 수량</span>
+            <strong>{report.total.qty.toLocaleString('ko-KR')}개</strong>
+            <small>전체 상품 합산</small>
+          </article>
+          <article>
+            <span>증가 확인</span>
+            <strong>{increased.length}개</strong>
+            <small>이미지 개선 후 일평균 증가</small>
+          </article>
+          <article>
+            <span>관찰 필요</span>
+            <strong>{pending.length}개</strong>
+            <small>개선 후 판매/기간 부족</small>
+          </article>
+        </section>
+
+        <section class="report-meta container" aria-label="리포트 선택">
+          <div>
+            <p class="eyebrow">Report archive</p>
+            <h2>누적 리포트</h2>
+            <p>파일 추가 위치: <code>data/coupang/analysis/monthly-sales-image-lift-YYYYMMDD.json</code></p>
+          </div>
+          <div class="report-list">
+            {reports.map((item, index) => (
+              <a class={index === 0 ? 'is-active' : ''} href={`#report-${item.id}`}>
+                <strong>{item.title}</strong>
+                <small>{item.data.total.qty}개 · {won(item.data.total.amount)}</small>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section class="insight-grid container" id={`report-${latest.id}`} aria-label="핵심 인사이트">
+          <article class="insight-card is-dark">
+            <p class="eyebrow">Verdict</p>
+            <h2>현재는 아쿠아 로션만 증가 신호가 뚜렷함</h2>
+            <p>
+              상세 이미지 개선 후 일평균 판매량이 올라간 상품은 {increased.length}개입니다.
+              표본이 작으므로 확정 결론보다 “계속 관찰할 후보”로 보는 게 안전합니다.
+            </p>
+          </article>
+          <article class="insight-card">
+            <span class="mini-label">TOP 3</span>
+            {topProducts.map((product, index) => (
+              <div class="mini-rank">
+                <em>{index + 1}</em>
+                <strong>{product.name}</strong>
+                <small>{product.qty}개 · {won(product.amount)}</small>
+              </div>
+            ))}
+          </article>
+        </section>
+
+        <section class="chart-block container" aria-label="상품별 매출">
+          <header class="section-head">
+            <div>
+              <p class="eyebrow">Product revenue</p>
+              <h2>상품별 1개월 매출</h2>
+            </div>
+            <p>{report.generatedAtKst} KST 생성 · 상태버킷 전체 조회</p>
+          </header>
+
+          <div class="product-bars">
+            {report.products.map((product, index) => {
+              const amountRate = Math.max((product.amount / maxAmount) * 100, product.amount > 0 ? 4 : 0);
+              const qtyRate = Math.max((product.qty / maxQty) * 100, product.qty > 0 ? 4 : 0);
+              return (
+                <article class="product-row">
+                  <span class="rank">{String(index + 1).padStart(2, '0')}</span>
+                  <div class="product-row__body">
+                    <div class="product-row__head">
+                      <strong>{product.name}</strong>
+                      <span>{product.qty}개 · {won(product.amount)}</span>
+                    </div>
+                    <div class="bar-stack" aria-hidden="true">
+                      <span class="bar is-money" style={`width:${amountRate}%`}></span>
+                      <span class="bar is-qty" style={`width:${qtyRate}%`}></span>
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section class="lift-block container" aria-label="상세 이미지 개선 전후 판매량">
+          <header class="section-head">
+            <div>
+              <p class="eyebrow">Image lift tracker</p>
+              <h2>상세 이미지 개선 전/후</h2>
+            </div>
+            <p>개선 기준시각은 로컬 쿠팡 업데이트 성공 아티팩트의 최초 성공 시각입니다.</p>
+          </header>
+
+          <div class="lift-grid">
+            {report.improvements.map((item) => {
+              const isUp = item.after.qty > 0 && (item.liftPct ?? 0) > 0;
+              const isPending = item.after.qty === 0;
+              const status = isUp ? '증가 신호' : isPending ? '관찰 필요' : '증가 아님';
+              return (
+                <article class:list={['lift-card', { 'is-up': isUp, 'is-pending': isPending }]}>
+                  <div class="lift-card__top">
+                    <span>{status}</span>
+                    <em>{pct(item.liftPct)}</em>
+                  </div>
+                  <h3>{item.name}</h3>
+                  <small>기준: {item.firstUpdateKst} KST</small>
+                  <div class="before-after">
+                    <div>
+                      <span>개선 전</span>
+                      <strong>{item.before.qty}개</strong>
+                      <small>{won(item.before.amount)}</small>
+                    </div>
+                    <div>
+                      <span>개선 후</span>
+                      <strong>{item.after.qty}개</strong>
+                      <small>{won(item.after.amount)}</small>
+                    </div>
+                  </div>
+                  <p>{qtyPerDay(item.beforeQtyPerDay)} → {qtyPerDay(item.afterQtyPerDay)}</p>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+
+        <section class="table-block container" aria-label="원본 데이터 테이블">
+          <header class="section-head">
+            <div>
+              <p class="eyebrow">Raw table</p>
+              <h2>운영용 상세 테이블</h2>
+            </div>
+            <p>숫자 확인용. 모바일에서는 좌우 스크롤됩니다.</p>
+          </header>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>상품</th>
+                  <th>수량</th>
+                  <th>매출</th>
+                  <th>주문라인</th>
+                  <th>상태별 수량</th>
+                </tr>
+              </thead>
+              <tbody>
+                {report.products.map((product) => (
+                  <tr>
+                    <td>{product.name}</td>
+                    <td>{product.qty}</td>
+                    <td>{won(product.amount)}</td>
+                    <td>{product.orderLines}</td>
+                    <td>{Object.entries(product.byStatus).map(([k, v]) => `${k}:${v}`).join(' · ') || '-'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </>
+    ) : (
+      <section class="empty container">
+        <h2>아직 매출 분석 JSON이 없습니다.</h2>
+        <p><code>data/coupang/analysis/monthly-sales-image-lift-YYYYMMDD.json</code> 파일을 추가하면 자동으로 표시됩니다.</p>
+      </section>
+    )}
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .sales-page { position: relative; z-index: 1; padding-bottom: 40px; }
+  .sales-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    gap: clamp(20px, 4vw, 48px);
+    align-items: end;
+    padding-block: clamp(38px, 7vw, 88px) clamp(22px, 4vw, 42px);
+  }
+  .sales-hero__copy h1 {
+    margin: 12px 0 16px;
+    max-width: 780px;
+    font-size: clamp(34px, 6vw, 66px);
+    line-height: 1.03;
+    letter-spacing: -0.04em;
+  }
+  .sales-hero__copy p:last-child {
+    max-width: 58ch;
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.75;
+    font-size: clamp(15px, 1.45vw, 18px);
+  }
+  .sales-hero__card {
+    position: relative;
+    min-height: 260px;
+    padding: 28px;
+    border-radius: 28px;
+    color: #f7f3e9;
+    background:
+      radial-gradient(circle at 86% 14%, rgba(181, 101, 74, .75), transparent 35%),
+      linear-gradient(135deg, #1f2a24, #31463a 58%, #8c4830);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+  .sales-hero__card::after {
+    content: '';
+    position: absolute;
+    inset: auto -50px -70px auto;
+    width: 190px;
+    height: 190px;
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 50%;
+  }
+  .sales-hero__card span,
+  .sales-hero__card small { display: block; color: #d6ded7; font-weight: 700; }
+  .sales-hero__card strong { display: block; margin-top: 28px; font-family: var(--font-latin); font-size: clamp(48px, 8vw, 78px); line-height: .9; letter-spacing: -.06em; }
+  .sales-hero__card em { font-style: normal; color: #e9c3b5; font-weight: 800; }
+  .sales-hero__card small { margin-top: 18px; line-height: 1.55; }
+
+  .report-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .report-strip article,
+  .insight-card,
+  .chart-block,
+  .lift-block,
+  .table-block,
+  .report-meta,
+  .empty {
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    box-shadow: var(--shadow-sm);
+  }
+  .report-strip article { padding: 18px; }
+  .report-strip span,
+  .mini-label { display: block; color: var(--muted); font-size: 12px; font-weight: 800; letter-spacing: .04em; }
+  .report-strip strong { display: block; margin-top: 7px; font-family: var(--font-latin); font-size: clamp(24px, 3vw, 34px); letter-spacing: -.04em; }
+  .report-strip small { display: block; margin-top: 5px; color: var(--faint); font-weight: 700; }
+
+  .report-meta { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.2fr); gap: 20px; align-items: center; margin-top: 18px; padding-block: 22px; }
+  .report-meta h2 { margin: 7px 0 8px; font-size: clamp(24px, 3vw, 34px); letter-spacing: -.03em; }
+  .report-meta p { margin: 0; color: var(--muted); line-height: 1.6; }
+  code { padding: 2px 7px; border-radius: 8px; background: var(--surface-3); font-size: .92em; }
+  .report-list { display: grid; gap: 8px; }
+  .report-list a { display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface-2); text-decoration: none; }
+  .report-list a.is-active { border-color: var(--accent); background: var(--accent-soft); }
+  .report-list small { color: var(--muted); font-weight: 700; white-space: nowrap; }
+
+  .insight-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr); gap: 14px; margin-top: 18px; }
+  .insight-card { padding: clamp(20px, 3vw, 30px); }
+  .insight-card.is-dark { background: var(--forest); color: #f7f3e9; }
+  .insight-card.is-dark .eyebrow { color: #e9c3b5; }
+  .insight-card h2 { margin: 10px 0 12px; font-size: clamp(26px, 3.8vw, 44px); line-height: 1.12; letter-spacing: -.035em; }
+  .insight-card p { max-width: 62ch; margin: 0; color: color-mix(in srgb, currentColor 78%, transparent); line-height: 1.7; }
+  .mini-rank { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 10px; row-gap: 2px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .mini-rank:last-child { border-bottom: 0; }
+  .mini-rank em { grid-row: span 2; display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--forest); color: #fff; font-style: normal; font-weight: 800; }
+  .mini-rank strong { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mini-rank small { color: var(--muted); font-weight: 700; }
+
+  .chart-block,
+  .lift-block,
+  .table-block { margin-top: 18px; padding-block: clamp(20px, 3vw, 30px); }
+  .section-head { display: flex; justify-content: space-between; gap: 18px; align-items: end; padding-inline: clamp(18px, 3vw, 28px); margin-bottom: 18px; }
+  .section-head h2 { margin: 7px 0 0; font-size: clamp(24px, 3vw, 36px); letter-spacing: -.03em; }
+  .section-head p:last-child { max-width: 36ch; margin: 0; color: var(--muted); line-height: 1.6; text-align: right; }
+
+  .product-bars { display: grid; gap: 8px; padding-inline: clamp(14px, 2.4vw, 24px); }
+  .product-row { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 12px; align-items: center; padding: 12px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface-2); }
+  .rank { font-family: var(--font-latin); color: var(--faint); font-weight: 900; }
+  .product-row__head { display: flex; justify-content: space-between; gap: 14px; align-items: baseline; }
+  .product-row__head strong { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .product-row__head span { color: var(--muted); font-weight: 800; white-space: nowrap; }
+  .bar-stack { display: grid; gap: 4px; margin-top: 10px; }
+  .bar { display: block; height: 8px; border-radius: var(--r-pill); }
+  .bar.is-money { background: linear-gradient(90deg, var(--accent), #d9a48e); }
+  .bar.is-qty { height: 5px; background: linear-gradient(90deg, var(--forest), var(--sage)); opacity: .75; }
+
+  .lift-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; padding-inline: clamp(14px, 2.4vw, 24px); }
+  .lift-card { display: flex; flex-direction: column; gap: 12px; min-height: 260px; padding: 16px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface-2); }
+  .lift-card.is-up { border-color: color-mix(in srgb, #2f7d52 45%, var(--line)); background: #f1fbf5; }
+  .lift-card.is-pending { background: #fbf8ef; }
+  .lift-card__top { display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+  .lift-card__top span { padding: 5px 9px; border-radius: var(--r-pill); background: var(--surface-3); color: var(--muted); font-size: 12px; font-weight: 900; }
+  .lift-card.is-up .lift-card__top span { background: #dff3e7; color: #25643f; }
+  .lift-card__top em { font-style: normal; font-family: var(--font-latin); font-weight: 900; color: var(--accent-ink); }
+  .lift-card h3 { margin: 0; font-size: 18px; line-height: 1.3; letter-spacing: -.02em; }
+  .lift-card > small { color: var(--muted); font-weight: 700; }
+  .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: auto; }
+  .before-after div { padding: 11px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); }
+  .before-after span,
+  .before-after small { display: block; color: var(--muted); font-size: 12px; font-weight: 800; }
+  .before-after strong { display: block; margin: 3px 0; font-family: var(--font-latin); font-size: 24px; letter-spacing: -.04em; }
+  .lift-card p { margin: 0; color: var(--muted); font-weight: 800; }
+
+  .table-wrap { overflow-x: auto; padding-inline: clamp(14px, 2.4vw, 24px); }
+  table { width: 100%; min-width: 780px; border-collapse: collapse; overflow: hidden; border-radius: 16px; }
+  th, td { padding: 13px 12px; border-bottom: 1px solid var(--line); text-align: left; font-size: 14px; }
+  th { background: var(--forest); color: #f7f3e9; font-weight: 800; }
+  td { background: var(--surface-2); }
+  tr:last-child td { border-bottom: 0; }
+  .empty { margin-top: 30px; padding-block: 28px; }
+
+  @media (max-width: 980px) {
+    .sales-hero,
+    .report-meta,
+    .insight-grid { grid-template-columns: 1fr; }
+    .report-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lift-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .section-head { align-items: start; flex-direction: column; }
+    .section-head p:last-child { text-align: left; }
+  }
+
+  @media (max-width: 560px) {
+    .report-strip,
+    .lift-grid { grid-template-columns: 1fr; }
+    .sales-hero__card { min-height: 210px; }
+    .product-row { grid-template-columns: 32px minmax(0, 1fr); padding: 10px; }
+    .product-row__head { display: grid; gap: 4px; }
+    .product-row__head strong { white-space: normal; }
+    .product-row__head span { white-space: normal; }
+    .report-list a { display: grid; }
+  }
+</style>

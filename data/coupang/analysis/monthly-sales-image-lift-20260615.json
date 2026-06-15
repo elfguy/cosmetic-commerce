@@ -1,0 +1,323 @@
+{
+  "generatedAtKst": "2026-06-15 20:11:00",
+  "range": {
+    "from": "2026-05-16",
+    "to": "2026-06-15"
+  },
+  "statusBuckets": [
+    "ACCEPT",
+    "INSTRUCT",
+    "DEPARTURE",
+    "DELIVERING",
+    "FINAL_DELIVERY",
+    "NONE_TRACKING"
+  ],
+  "apiErrors": [],
+  "total": {
+    "orderLines": 41,
+    "qty": 43,
+    "amount": 452000
+  },
+  "products": [
+    {
+      "sellerProductId": "15704749086",
+      "vendorItemId": "93445228832",
+      "productId": "9025733014",
+      "name": "유어스킨플러스 히알루론산 토너",
+      "orderLines": 14,
+      "qty": 14,
+      "amount": 152600,
+      "byStatus": {
+        "FINAL_DELIVERY": 14
+      },
+      "daily": {
+        "2026-05-16": 1,
+        "2026-05-17": 1,
+        "2026-05-19": 2,
+        "2026-05-20": 1,
+        "2026-05-23": 1,
+        "2026-05-26": 3,
+        "2026-05-27": 1,
+        "2026-05-28": 1,
+        "2026-06-03": 1,
+        "2026-06-06": 1,
+        "2026-06-10": 1
+      }
+    },
+    {
+      "sellerProductId": "15895499351",
+      "vendorItemId": "94206581276",
+      "productId": "9218811640",
+      "name": "유어스킨플러스 히알루론산 아쿠아 로션",
+      "orderLines": 9,
+      "qty": 9,
+      "amount": 92700,
+      "byStatus": {
+        "ACCEPT": 1,
+        "DEPARTURE": 1,
+        "FINAL_DELIVERY": 7
+      },
+      "daily": {
+        "2026-06-15": 1,
+        "2026-06-13": 1,
+        "2026-05-24": 1,
+        "2026-05-26": 2,
+        "2026-05-29": 1,
+        "2026-06-05": 1,
+        "2026-06-09": 1,
+        "2026-06-10": 1
+      }
+    },
+    {
+      "sellerProductId": "15939226045",
+      "vendorItemId": "94380449351",
+      "productId": "9264527939",
+      "name": "유어스킨플러스 화이트닝 톤 케어 크림",
+      "orderLines": 8,
+      "qty": 9,
+      "amount": 90900,
+      "byStatus": {
+        "FINAL_DELIVERY": 9
+      },
+      "daily": {
+        "2026-05-16": 1,
+        "2026-05-17": 2,
+        "2026-05-19": 2,
+        "2026-05-20": 1,
+        "2026-05-23": 1,
+        "2026-05-31": 1,
+        "2026-06-01": 1
+      }
+    },
+    {
+      "sellerProductId": "15704852570",
+      "vendorItemId": "93445424254",
+      "productId": "9025793946",
+      "name": "유어스킨플러스 영거 댄 올인원 로션",
+      "orderLines": 5,
+      "qty": 6,
+      "amount": 59400,
+      "byStatus": {
+        "FINAL_DELIVERY": 6
+      },
+      "daily": {
+        "2026-05-17": 1,
+        "2026-05-20": 1,
+        "2026-05-22": 2,
+        "2026-06-05": 1,
+        "2026-06-07": 1
+      }
+    },
+    {
+      "sellerProductId": "15704797033",
+      "vendorItemId": "93445288720",
+      "productId": "9025751494",
+      "name": "유어스킨플러스 로우 피에이치 클렌징 젤",
+      "orderLines": 2,
+      "qty": 2,
+      "amount": 21000,
+      "byStatus": {
+        "FINAL_DELIVERY": 2
+      },
+      "daily": {
+        "2026-05-17": 1,
+        "2026-05-25": 1
+      }
+    },
+    {
+      "sellerProductId": "16067531249",
+      "vendorItemId": "94889995486",
+      "productId": "9402735935",
+      "name": "유어스킨플러스 피디알엔 히알루론산 수딩 크림",
+      "orderLines": 1,
+      "qty": 1,
+      "amount": 12800,
+      "byStatus": {
+        "FINAL_DELIVERY": 1
+      },
+      "daily": {
+        "2026-05-17": 1
+      }
+    },
+    {
+      "sellerProductId": "15895536803",
+      "vendorItemId": "94217941616",
+      "productId": "9221762154",
+      "name": "유어스킨플러스 퓨어 딥 클렌징 오일",
+      "orderLines": 1,
+      "qty": 1,
+      "amount": 12700,
+      "byStatus": {
+        "FINAL_DELIVERY": 1
+      },
+      "daily": {
+        "2026-05-29": 1
+      }
+    },
+    {
+      "sellerProductId": "15704881596",
+      "vendorItemId": "93445490553",
+      "productId": "9025810298",
+      "name": "유어스킨플러스 모이스춰 립밤",
+      "orderLines": 1,
+      "qty": 1,
+      "amount": 9900,
+      "byStatus": {
+        "FINAL_DELIVERY": 1
+      },
+      "daily": {
+        "2026-05-22": 1
+      }
+    },
+    {
+      "sellerProductId": "16067541475",
+      "vendorItemId": "94890028910",
+      "productId": "9402746236",
+      "name": "유어스킨플러스 피디알렌 히알루론산 앰플",
+      "orderLines": 0,
+      "qty": 0,
+      "amount": 0,
+      "byStatus": {},
+      "daily": {}
+    },
+    {
+      "sellerProductId": "15704868952",
+      "vendorItemId": "93445452670",
+      "productId": "9025800758",
+      "name": "유어스킨플러스 화이트 글로우 톤업 크림",
+      "orderLines": 0,
+      "qty": 0,
+      "amount": 0,
+      "byStatus": {},
+      "daily": {}
+    },
+    {
+      "sellerProductId": "15704834371",
+      "vendorItemId": "93445364050",
+      "productId": "9025775541",
+      "name": "유어스킨플러스 로즈 다마스쿠스 토닉 에센스",
+      "orderLines": 0,
+      "qty": 0,
+      "amount": 0,
+      "byStatus": {},
+      "daily": {}
+    }
+  ],
+  "improvements": [
+    {
+      "sellerProductId": "15895499351",
+      "productId": "9218811640",
+      "vendorItemId": "94206581276",
+      "name": "유어스킨플러스 히알루론산 아쿠아 로션",
+      "slug": "aqua-lotion",
+      "firstUpdateUtc": "2026-06-04T12:28:26Z",
+      "firstUpdateKst": "2026-06-04 21:28:26",
+      "artifacts": 13,
+      "before": {
+        "lines": 4,
+        "qty": 4,
+        "amount": 41200
+      },
+      "after": {
+        "lines": 5,
+        "qty": 5,
+        "amount": 51500
+      },
+      "beforeQtyPerDay": 0.20105811487073755,
+      "afterQtyPerDay": 0.45023778182852814,
+      "liftPct": 123.93415063997337
+    },
+    {
+      "sellerProductId": "15704797033",
+      "productId": "9025751494",
+      "vendorItemId": "93445288720",
+      "name": "유어스킨플러스 로우 피에이치 클렌징 젤",
+      "slug": "cleansing-gel",
+      "firstUpdateUtc": "2026-06-13T07:08:38Z",
+      "firstUpdateKst": "2026-06-13 16:08:38",
+      "artifacts": 1,
+      "before": {
+        "lines": 2,
+        "qty": 2,
+        "amount": 21000
+      },
+      "after": {
+        "lines": 0,
+        "qty": 0,
+        "amount": 0
+      },
+      "beforeQtyPerDay": 0.06975285369096741,
+      "afterQtyPerDay": 0,
+      "liftPct": -100
+    },
+    {
+      "sellerProductId": "15704749086",
+      "productId": "9025733014",
+      "vendorItemId": "93445228832",
+      "name": "유어스킨플러스 히알루론산 토너",
+      "slug": "hyaluronic-toner",
+      "firstUpdateUtc": "2026-06-07T00:06:12Z",
+      "firstUpdateKst": "2026-06-07 09:06:12",
+      "artifacts": 3,
+      "before": {
+        "lines": 13,
+        "qty": 13,
+        "amount": 141700
+      },
+      "after": {
+        "lines": 1,
+        "qty": 1,
+        "amount": 10900
+      },
+      "beforeQtyPerDay": 0.5808938069024583,
+      "afterQtyPerDay": 0.11600009129636815,
+      "liftPct": -80.03075778774028
+    },
+    {
+      "sellerProductId": "15704834371",
+      "productId": "9025775541",
+      "vendorItemId": "93445364050",
+      "name": "유어스킨플러스 로즈 다마스쿠스 토닉 에센스",
+      "slug": "rose-essence",
+      "firstUpdateUtc": "2026-06-14T23:41:15Z",
+      "firstUpdateKst": "2026-06-15 08:41:15",
+      "artifacts": 3,
+      "before": {
+        "lines": 0,
+        "qty": 0,
+        "amount": 0
+      },
+      "after": {
+        "lines": 0,
+        "qty": 0,
+        "amount": 0
+      },
+      "beforeQtyPerDay": 0,
+      "afterQtyPerDay": 0,
+      "liftPct": 0
+    },
+    {
+      "sellerProductId": "15939226045",
+      "productId": "9264527939",
+      "vendorItemId": "94380449351",
+      "name": "유어스킨플러스 화이트닝 톤 케어 크림",
+      "slug": "whitening-cream",
+      "firstUpdateUtc": "2026-06-08T21:26:17Z",
+      "firstUpdateKst": "2026-06-09 06:26:17",
+      "artifacts": 2,
+      "before": {
+        "lines": 8,
+        "qty": 9,
+        "amount": 90900
+      },
+      "after": {
+        "lines": 0,
+        "qty": 0,
+        "amount": 0
+      },
+      "beforeQtyPerDay": 0.3708548882403803,
+      "afterQtyPerDay": 0,
+      "liftPct": -100
+    }
+  ]
+}

@@ -28,6 +28,7 @@ export const primaryNav: { href: string; label: string }[] = [
   { href: '/', label: '홈' },
   { href: '/products/', label: '상품상세' },
   { href: '/competitor-comparison/', label: '경쟁상품' },
+  { href: '/sales-analysis/', label: '매출분석' },
   { href: '/global-sales/', label: '해외판매' },
   { href: '/workspaces/', label: '작업실' },
   { href: '/drive-originals/', label: '원본이미지' },
@@ -53,6 +54,13 @@ export const siteSections: SiteSection[] = [
         desc: '카테고리별 경쟁군, 리뷰 격차, 월 구매 신호, 대응 메시지.',
         tag: '핵심',
         cover: 'linear-gradient(135deg, #8c4830, #b5654a)',
+      },
+      {
+        href: '/sales-analysis/',
+        title: '쿠팡 매출·이미지 효과 분석',
+        desc: '상품별 1개월 매출과 상세 이미지 개선 전후 판매량을 누적 추적.',
+        tag: '매출',
+        cover: 'linear-gradient(135deg, #1f2a24, #b5654a)',
       },
       {
         href: '/workspaces/',
