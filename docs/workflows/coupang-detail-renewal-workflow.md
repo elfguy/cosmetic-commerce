@@ -330,7 +330,8 @@ Legal/product-info table correction rules:
 
 - If the table has a row label `제품 주요 사항` or `제품 주요 사양` with a value like `모든 피부 타입`, change the label to `피부 타입`.
 - Align legal tables with generous top/bottom breathing room, consistent left-label column width, internal cell padding, and row heights/wrapping that keep long 전성분/주의사항 text away from grid lines.
-- For these small label/alignment fixes, deterministic exact-text rendering is acceptable when Leo did not explicitly request GPT Images provenance; ingredient order and legal text accuracy outrank decorative styling.
+- For Leo's Coupang detail-image production, do **not** locally render or locally overlay the final image just because the correction is small. Regenerate through GPT Images (`https://chatgpt.com/images/`) with the exact requested label/text and adjacent approved cuts as references, then normalize only.
+- Deterministic/local rendering is acceptable only if Leo explicitly approves an accuracy-first local table render for that specific cut. If Leo says `GPT 이미지 스킬`, `니가 만들면 안돼`, or is asking for normal 상세이미지 제작/수정, local rendering must be treated as rejected provenance, not final.
 
 ### 7b. Generate representative/main images after detail images
 
