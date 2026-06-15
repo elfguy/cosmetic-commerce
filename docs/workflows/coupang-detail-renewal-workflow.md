@@ -294,6 +294,53 @@ Prompt rules for this cut:
 - Use calm official guidance, not a harsh yellow/black warning poster.
 - No product bottle, label, package photo, box mockup, or fake product image; use shield/check/risk cards only.
 
+Minimal-package/direct-sale cut copy rules:
+
+- When making the minimal-package cut, use the concise buyer-facing package text direction Leo approved instead of generic product-info copy.
+- Preferred structure:
+
+```text
+MINIMAL PACKAGE
+
+불필요한 포장은 줄이고
+꼭 필요한 정보만 담았습니다
+
+01 단상자 사용 지양
+불필요한 겉포장 부담을 줄였습니다
+
+02 완충제 최소화
+버려지는 포장재 부담을 줄였습니다
+
+03 제조사 직접 판매
+중간 유통 과정을 줄인 합리적인 가격
+
+미니멀 포장 = 꼭 필요한 만큼의 포장
+
+제조사가 직접 만들고 판매합니다
+패키지와 광고비 부담을 줄이고
+제품 본질에 집중했습니다
+
+제조사 → 자체 물류 → 직배송 → 고객
+화장품제조업자 · 화장품책임판매업자 (주)유어스킨
+```
+
+- Keep this cut as packaging/direct-sale education. Do not crowd it with the full 제품정보/전성분 table; that dense legal table belongs at the very end.
+
+Legal/product-info table correction rules:
+
+- If the table has a row label `제품 주요 사항` or `제품 주요 사양` with a value like `모든 피부 타입`, change the label to `피부 타입`.
+- Align legal tables with generous top/bottom breathing room, consistent left-label column width, internal cell padding, and row heights/wrapping that keep long 전성분/주의사항 text away from grid lines.
+- For these small label/alignment fixes, deterministic exact-text rendering is acceptable when Leo did not explicitly request GPT Images provenance; ingredient order and legal text accuracy outrank decorative styling.
+
+### 7b. Generate representative/main images after detail images
+
+After the V1 detail sequence is generated, QA'd, and wired into the comparison page, immediately proceed to the representative/main image set unless Leo explicitly says to stop at detail-only.
+
+- Follow `references/representative-six-pack-generation.md` for the representative workflow.
+- Use the finalized detail-page direction as tone/reference context so the main images inherit the same product story.
+- Generate/check representative images one slot at a time, then update `manifest.json`, `src/data/marketingOps.ts`, and the comparison page so the representative set appears together with detail images.
+- Build and verify both detail images and representative images before reporting the V1 candidate as ready.
+
 ### 8. Update data and comparison pages
 
 Update:
