@@ -23,8 +23,23 @@ const detailLabels = [
   '사용법·텍스처',
   '신선 제조일자',
   '미니멀 포장',
-  '제품정보·전성분 원본 보존',
   '공식 판매처 안내',
+  '제품정보·전성분 원본 보존',
+];
+
+const detailFileOrder = [
+  '01',
+  '02',
+  '03',
+  '04',
+  '05',
+  '06',
+  '07',
+  '08',
+  '09',
+  '10',
+  '12',
+  '11',
 ];
 
 const originalRep = Array.from({ length: 5 }, (_, index) => {
@@ -52,10 +67,11 @@ const originalDetail = Array.from({ length: 12 }, (_, index) => {
 });
 
 const v1Detail = detailLabels.map((label, index) => {
-  const number = String(index + 1).padStart(2, '0');
+  const displayNumber = String(index + 1).padStart(2, '0');
+  const fileNumber = detailFileOrder[index];
   return {
-    src: `/coupang/images/moisture-lip-balm/versions/v1/detail/${number}.png`,
-    label: `상세 ${number} ${label}`,
+    src: `/coupang/images/moisture-lip-balm/versions/v1/detail/${fileNumber}.png`,
+    label: `상세 ${displayNumber} ${label}`,
   };
 });
 

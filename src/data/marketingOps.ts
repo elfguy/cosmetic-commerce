@@ -492,9 +492,13 @@ export const productVersions: Record<string, ProductVersion[]> = {
       label: 'V1 후보',
       status: 'candidate',
       date: '2026-06-15',
-      summary: '모이스춰 립밤 V1 후보입니다. 대표 6장과 상세 12컷으로 정리했으며 11번 제품정보/전성분 표는 법정 문구 정확도 우선으로 원본을 보존했습니다.',
+      summary: '모이스춰 립밤 V1 후보입니다. 대표 6장과 상세 12컷으로 정리했습니다. 후반부는 10번 미니멀 포장 → 11번 공식 판매처 안내 → 12번 제품정보/전성분 법정표 순서이며, 물리 파일 detail/11.png 법정표는 정확도 우선으로 원본을 보존해 마지막에 표시합니다.',
       mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/moisture-lip-balm/versions/v1/representative/' + String(i + 1).padStart(2, '0') + '.png'),
-      detailImages: Array.from({ length: 12 }, (_, i) => '/coupang/images/moisture-lip-balm/versions/v1/detail/' + String(i + 1).padStart(2, '0') + '.png'),
+      detailImages: [
+        ...Array.from({ length: 10 }, (_, i) => '/coupang/images/moisture-lip-balm/versions/v1/detail/' + String(i + 1).padStart(2, '0') + '.png'),
+        '/coupang/images/moisture-lip-balm/versions/v1/detail/12.png',
+        '/coupang/images/moisture-lip-balm/versions/v1/detail/11.png',
+      ],
       links: [
         { label: 'V1 비교 페이지 열기', href: '/marketing/moisture-lip-balm-version-compare/' },
         { label: 'V1 대표 1번 열기', href: '/coupang/images/moisture-lip-balm/versions/v1/representative/01.png' },
@@ -503,7 +507,7 @@ export const productVersions: Record<string, ProductVersion[]> = {
       ],
       metrics: [
         { label: '상세', value: '12' },
-        { label: '법정표', value: '11번 원본 보존' },
+        { label: '후반 순서', value: '10 포장 → 11 공식판매처 → 12 법정표' },
         { label: '상태', value: '쿠팡 미반영 후보' },
       ],
     },

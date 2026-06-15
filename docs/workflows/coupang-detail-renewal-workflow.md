@@ -248,19 +248,27 @@ For dense legal/product-info table corrections:
 - Increase internal cell padding and tune row heights/wrapping so long 전성분/주의사항 text does not touch grid lines or overflow.
 - QA the rendered PNG visually/OCR: label changed, value unchanged, ingredient order preserved, no overlap, then run `npm run build`.
 
-### 7a. All-in-one lotion back-section ordering
+### 7a. Back-section ordering: package → official seller → legal table
 
-For all-in-one lotion V1, avoid duplicating minimal-package/direct-sale content:
+For late-flow trust/legal sections, avoid duplicating minimal-package/direct-sale content and keep the dense legal table as the final cut:
 
-- Keep the minimal package/direct-sale topic in the existing minimal-package cut (`detail/12.png`).
-- Do **not** use another `MINIMAL PACKAGE / 불필요한 포장은 줄이고...` cut as `detail/13.png`; it duplicates `detail/12.png`.
+- Keep the minimal package/direct-sale topic in its own packaging cut.
+- Do **not** use another `MINIMAL PACKAGE / 불필요한 포장은 줄이고...` cut for the next slot; it duplicates the packaging cut.
 - Place the official-seller / reseller-risk guidance immediately before the final legal/product-information table.
+- Place dense 제품정보/전성분/법정 표시 tables at the very end of the V1 detail display/upload order, even when the physical filename number is not last.
 - The intended tail order is:
 
 ```text
-detail/12.png  미니멀 포장 / 제조사 직접판매 안내
-detail/13.png  공식 판매처 확인 / 무단 리셀러 구매 리스크 안내
-detail/14.png  제품정보 / 전성분 / 법정 표시 표
+detail/N.png      미니멀 포장 / 제조사 직접판매 안내
+detail/N+1.png    공식 판매처 확인 / 무단 리셀러 구매 리스크 안내
+detail/final.png  제품정보 / 전성분 / 법정 표시 표
+```
+
+Examples:
+
+```text
+all-in-one-lotion: detail/12.png → detail/13.png → detail/14.png
+moisture-lip-balm: detail/10.png → detail/12.png → detail/11.png  # display/upload order; legal table remains last
 ```
 
 Official-seller cut copy/prompt content:
