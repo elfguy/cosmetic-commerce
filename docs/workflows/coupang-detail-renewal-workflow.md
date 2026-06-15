@@ -48,6 +48,8 @@ Do **not** use this for:
 3. **Product identity must survive.**
    - Bottle/jar shape, pump/cap, label structure, capacity impression, SKU color, and package silhouette must match the original.
    - For strict SKU representative cuts, prefer product-preserving compositing or exact product references.
+   - Do not let GPT Images invent brand logos. If a brand logo must appear, attach/use the official logo image asset; otherwise leave the logo area blank or use plain text copy. Remove generated/fake header logos during QA.
+   - For representative/main `01` corrections where Leo says the product is not ours or looks virtual, use Google Drive originals as the authoritative SKU reference in GPT Images. Use the current image only as layout/negative reference, remove bottom product-name/footer text when requested, keep only compact badges, and enlarge freshness marks only slightly so the main thumbnail stays product-dominant.
 
 4. **Legal/product information belongs at the end if the user placed it there.**
    - If the user says the 전성분/제품정보 table was intentionally moved down, keep it last.
@@ -238,6 +240,52 @@ detailImages: [
 
 Mirror the same order in `manifest.json` labels.
 
+For dense legal/product-info table corrections:
+
+- Use deterministic redraw/OCR-source editing rather than GPT Images when the user only asks for a field-label or padding/alignment correction.
+- Back up the current runtime table before overwrite.
+- Change only the requested field. Example: for all-in-one lotion detail 14, change `제품 주요 사항` → `피부 타입` while keeping the value `모든 피부 타입` and preserving all other legal rows.
+- Increase internal cell padding and tune row heights/wrapping so long 전성분/주의사항 text does not touch grid lines or overflow.
+- QA the rendered PNG visually/OCR: label changed, value unchanged, ingredient order preserved, no overlap, then run `npm run build`.
+
+### 7a. All-in-one lotion back-section ordering
+
+For all-in-one lotion V1, avoid duplicating minimal-package/direct-sale content:
+
+- Keep the minimal package/direct-sale topic in the existing minimal-package cut (`detail/12.png`).
+- Do **not** use another `MINIMAL PACKAGE / 불필요한 포장은 줄이고...` cut as `detail/13.png`; it duplicates `detail/12.png`.
+- Place the official-seller / reseller-risk guidance immediately before the final legal/product-information table.
+- The intended tail order is:
+
+```text
+detail/12.png  미니멀 포장 / 제조사 직접판매 안내
+detail/13.png  공식 판매처 확인 / 무단 리셀러 구매 리스크 안내
+detail/14.png  제품정보 / 전성분 / 법정 표시 표
+```
+
+Official-seller cut copy/prompt content:
+
+```text
+공식 판매처를 확인해 주세요
+유어스킨플러스는 (주)유어스킨이 직접 관리합니다
+
+무단 리셀러를 통한 구매 제품은
+유통기한 위조 가능성
+보관 온도 불량 가능성
+품질 저하 위험
+교환·반품·상담 지원이 제한될 수 있습니다
+
+안전한 구매를 위해
+공식 판매처에서 구매해 주세요
+```
+
+Prompt rules for this cut:
+
+- Use GPT Images via `https://chatgpt.com/images/` when regenerating the official-seller cut.
+- Preserve the premium white/deep-green/mint rounded-card design.
+- Use calm official guidance, not a harsh yellow/black warning poster.
+- No product bottle, label, package photo, box mockup, or fake product image; use shield/check/risk cards only.
+
 ### 8. Update data and comparison pages
 
 Update:
@@ -283,7 +331,25 @@ i13 = html.find('/coupang/images/<slug>/versions/v1/detail/13.png')
 print('detail14 before detail13', i14 != -1 and i13 != -1 and i14 < i13)
 ```
 
-### 10. Stage only scoped runtime files
+### 10. Proactively update reusable workflow rules
+
+After every detail-image improvement task, decide whether the work revealed a reusable rule, ordering convention, copy constraint, QA pitfall, or product-specific exception. If yes, update this workflow immediately before reporting completion; do not ask Leo for separate permission.
+
+Update the workflow when any of these occur:
+
+- A repeated mistake was fixed, such as duplicate content across adjacent cuts.
+- A slot/order convention became clear, such as keeping legal/product-information tables last or placing official-seller guidance immediately before the table.
+- A prompt rule changed, such as “use GPT Images for this cut,” “no product bottle,” or “preserve existing card design.”
+- A data/build verification step was needed to prevent future regressions.
+- A product-specific copy block should be reused exactly in future regenerations.
+
+Keep updates concise and durable:
+
+- Record the general rule plus the exact copy/order only when it will likely be reused.
+- Avoid logging temporary file names, one-off backups, or completed-task history.
+- Then re-run `npm run build` if code/data files changed.
+
+### 11. Stage only scoped runtime files
 
 Use explicit `git add`, not broad `git add .`, because the repo may contain unrelated product work and temporary evidence.
 
@@ -295,7 +361,7 @@ git status --short | head -80
 
 Do not stage unrelated product changes, temporary ChatGPT screenshots, rejected candidates, or raw/backup/prompt directories unless the user explicitly wants them committed.
 
-### 11. Commit and push
+### 12. Commit and push
 
 Commit after build and QA pass:
 
@@ -350,6 +416,7 @@ Before reporting completion:
 - [ ] `manifest.json` labels match the actual order.
 - [ ] `marketingOps.ts` image arrays match the actual order.
 - [ ] `npm run build` succeeds.
+- [ ] Reusable lessons from the image-detail task were added to this workflow, if any.
 - [ ] Local comparison/product URLs return 200.
 - [ ] Staged files are scoped to this product and exclude tmp/rejected/raw files.
 - [ ] Commit and push completed, with short SHA reported.

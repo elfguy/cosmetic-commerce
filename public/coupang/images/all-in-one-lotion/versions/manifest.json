@@ -1,0 +1,186 @@
+{
+  "productId": "9025793946",
+  "productSlug": "all-in-one-lotion",
+  "productName": "유어스킨플러스 영거댄 올인원 로션",
+  "activeVersion": "v1",
+  "versions": [
+    {
+      "id": "original",
+      "label": "원본 등록본",
+      "description": "현재 쿠팡/로컬 기준 원본 대표 01~02 및 상세 01~14",
+      "representativeImages": [
+        {
+          "src": "public/coupang-main/all-in-one-lotion/01.png",
+          "label": "원본 대표 01"
+        },
+        {
+          "src": "public/coupang-main/all-in-one-lotion/02.png",
+          "label": "원본 대표 02"
+        }
+      ],
+      "detailImages": [
+        {
+          "src": "public/coupang-detail/9025793946/01.png",
+          "label": "원본 상세 01"
+        },
+        {
+          "src": "public/coupang-detail/9025793946/02.png",
+          "label": "원본 상세 02"
+        },
+        {
+          "src": "public/coupang-detail/9025793946/03.png",
+          "label": "원본 상세 03"
+        },
+        {
+          "src": "public/coupang-detail/9025793946/04.png",
+          "label": "원본 상세 04"
+        },
+        {
+          "src": "public/coupang-detail/9025793946/05.png",
+          "label": "원본 상세 05"
+        },
+        {
+          "src": "public/coupang-detail/9025793946/06.png",
+          "label": "원본 상세 06"
+        },
+        {
+          "src": "public/coupang-detail/9025793946/07.png",
+          "label": "원본 상세 07"
+        },
+        {
+          "src": "public/coupang-detail/9025793946/08.png",
+          "label": "원본 상세 08"
+        },
+        {
+          "src": "public/coupang-detail/9025793946/09.png",
+          "label": "원본 상세 09"
+        },
+        {
+          "src": "public/coupang-detail/9025793946/10.png",
+          "label": "원본 상세 10"
+        },
+        {
+          "src": "public/coupang-detail/9025793946/11.png",
+          "label": "원본 상세 11"
+        },
+        {
+          "src": "public/coupang-detail/9025793946/12.png",
+          "label": "원본 상세 12"
+        },
+        {
+          "src": "public/coupang-detail/9025793946/13.png",
+          "label": "원본 상세 13"
+        },
+        {
+          "src": "public/coupang-detail/9025793946/14.png",
+          "label": "원본 상세 14"
+        }
+      ]
+    },
+    {
+      "id": "v1",
+      "label": "V1 후보",
+      "status": "candidate",
+      "description": "Leo 요청에 따라 대표 01은 구글 드라이브 원본 상품 기준으로 교체하고 하단 큰 상품명 텍스트를 제거했습니다. 상세 03과 04 사이에는 남성 사용감 컷 03a를 추가했습니다. 상세 14는 제품정보 표의 피부 타입 라벨/패딩을 보정해 마지막에 배치했습니다.",
+      "source": "public/coupang/images/all-in-one-lotion/versions/v1",
+      "representativeCount": 6,
+      "detailCount": 15,
+      "representativeImages": [
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/representative/01.png",
+          "label": "V1 대표 01 드라이브 원본 상품 히어로"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/representative/02.png",
+          "label": "V1 대표 02"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/representative/03.png",
+          "label": "V1 대표 03"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/representative/04.png",
+          "label": "V1 대표 04"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/representative/05.png",
+          "label": "V1 대표 05"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/representative/06.png",
+          "label": "V1 대표 06"
+        }
+      ],
+      "detailImages": [
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/01.png",
+          "label": "V1 상세 01"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/02.png",
+          "label": "V1 상세 02"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/03.png",
+          "label": "V1 상세 03"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/03a.png",
+          "label": "V1 상세 03a 남성 사용감"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/04.png",
+          "label": "V1 상세 04"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/05.png",
+          "label": "V1 상세 05"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/06.png",
+          "label": "V1 상세 06"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/07.png",
+          "label": "V1 상세 07"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/08.png",
+          "label": "V1 상세 08"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/09.png",
+          "label": "V1 상세 09"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/10.png",
+          "label": "V1 상세 10"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/11.png",
+          "label": "V1 상세 11"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/12.png",
+          "label": "V1 상세 12"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/13.png",
+          "label": "V1 상세 13 공식 판매처 안내"
+        },
+        {
+          "src": "public/coupang/images/all-in-one-lotion/versions/v1/detail/14.png",
+          "label": "V1 상세 14 제품정보 표"
+        }
+      ],
+      "notes": [
+        "detail/13.png는 미니멀 포장 중복컷을 제거하고 공식 판매처 안내 컷으로 복원해 마지막 표 바로 앞에 배치했습니다.",
+        "detail/14.png는 제품정보 표의 `피부 타입 / 모든 피부 타입` 라벨과 패딩을 보정한 법정표입니다.",
+        "detail/03a.png는 상세 03과 04 사이에 삽입한 남성 사용감 브릿지 컷입니다.",
+        "detail/14.png는 원본 법정/제품정보 표 보존본입니다.",
+        "대표 이미지는 1000x1000, 상세 이미지는 780x1360 규격으로 생성/정리했습니다.",
+        "쿠팡에는 아직 업로드/반영하지 않았습니다."
+      ]
+    }
+  ]
+}
