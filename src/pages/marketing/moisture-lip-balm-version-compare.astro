@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+
+const cacheBust = 'moisture-lip-balm-v1-1781523823827';
+const withCacheBust = (src) => `${src}${src.includes("?") ? "&" : "?"}v=${cacheBust}`;
+const labels = ["히어로","추천 대상","5가지 이유","자연 유래 립케어","오일·왁스·버터 보습막","부드러운 텍스처","휴대/수시 보습","사용법·텍스처","신선 제조일자","미니멀 포장","제품정보·전성분 원본 보존","공식 판매처 안내"];
+const originalImages = Array.from({ length: 12 }, (_, index) => ({
+  src: '/coupang-detail/9025810298/' + String(index + 1).padStart(2, '0') + '.png',
+  label: String(index + 1).padStart(2, '0') + ' 원본',
+}));
+const v1Images = labels.map((label, index) => ({
+  src: '/coupang/images/moisture-lip-balm/versions/v1/detail/' + String(index + 1).padStart(2, '0') + '.png',
+  label: String(index + 1).padStart(2, '0') + ' ' + label,
+}));
+const versions = [
+  { id: 'original', label: '원본', detailImages: originalImages, note: '현재 원본 상세 이미지' },
+  { id: 'v1', label: 'V1 후보', detailImages: v1Images, note: 'GPT Images 리뉴얼 후보 · 11번 법정표 원본 보존' },
+];
+---
+
+<BaseLayout title="모이스춰 립밤 상세 이미지 V1 비교" description="유어스킨플러스 모이스춰 립밤 원본과 V1 상세 이미지 비교">
+  <SiteHeader active="" />
+  <main class="compare-page">
+    <header class="hero container">
+      <nav class="breadcrumb"><a href="/">대시보드</a><span>/</span><a href="/products/">상품상세</a><span>/</span><a href="/products/moisture-lip-balm/">모이스춰 립밤</a></nav>
+      <p class="eyebrow">Moisture Lip Balm Detail Renewal</p>
+      <h1>모이스춰 립밤 원본 / V1 상세 비교</h1>
+      <p>V1은 상세 12컷 후보입니다. 01~10,12는 GPT Images 리뉴얼 컷이고, 11번 제품정보·전성분 표는 법정 문구 정확도 우선으로 원본 표를 보존했습니다.</p>
+      <div class="quick-links">
+        <a href={withCacheBust('/coupang/images/moisture-lip-balm/versions/v1/detail/01.png')} target="_blank">V1 01 열기</a>
+        <a href={withCacheBust('/coupang/images/moisture-lip-balm/versions/v1/detail/11.png')} target="_blank">V1 법정표 열기</a>
+        <a href="/coupang/images/moisture-lip-balm/versions/manifest.json" target="_blank">manifest</a>
+      </div>
+    </header>
+
+    <section class="summary container">
+      {versions.map((version) => (
+        <article>
+          <img src={withCacheBust(version.detailImages[0].src)} alt={version.label + ' 첫 상세'} />
+          <div>
+            <span>{version.label}</span>
+            <strong>상세 {version.detailImages.length}장</strong>
+            <p>{version.note}</p>
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <section class="flow container">
+      <div class="section-heading">
+        <p class="eyebrow">Detail Flow</p>
+        <h2>상세 이미지 흐름</h2>
+      </div>
+      <div class="columns">
+        {versions.map((version) => (
+          <article class="column">
+            <h3>{version.label}</h3>
+            {version.detailImages.map((image, index) => (
+              <a class="card" href={withCacheBust(image.src)} target="_blank" aria-label={version.label + ' ' + image.label + ' 열기'}>
+                <span class="badge">{String(index + 1).padStart(2, '0')}</span>
+                <img src={withCacheBust(image.src)} alt={version.label + ' ' + image.label} loading="lazy" />
+                <em>{image.label}</em>
+              </a>
+            ))}
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .compare-page { background:#f6f7f2; color:#172018; padding-bottom:4rem; }
+  .container { width:min(1120px, calc(100% - 2rem)); margin:0 auto; }
+  .hero { padding:4rem 0 2rem; }
+  .breadcrumb { display:flex; gap:.5rem; color:#62715f; font-size:.9rem; margin-bottom:1.5rem; }
+  .breadcrumb a { color:#315f35; text-decoration:none; }
+  .eyebrow { text-transform:uppercase; letter-spacing:.12em; color:#5b7f45; font-weight:800; font-size:.78rem; }
+  h1 { font-size:clamp(2.2rem, 5vw, 4.2rem); margin:.3rem 0 1rem; line-height:1.05; }
+  .hero > p:not(.eyebrow) { max-width:780px; color:#495548; font-size:1.05rem; line-height:1.7; }
+  .quick-links { display:flex; gap:.7rem; flex-wrap:wrap; margin-top:1.2rem; }
+  .quick-links a { padding:.7rem 1rem; border-radius:999px; background:#20351f; color:white; text-decoration:none; font-weight:800; }
+  .summary { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1rem; margin-bottom:2rem; }
+  .summary article { background:white; border:1px solid #dbe5d5; border-radius:24px; padding:1rem; display:flex; gap:1rem; align-items:center; box-shadow:0 12px 30px rgba(33,55,33,.08); }
+  .summary img { width:120px; height:160px; object-fit:cover; border-radius:16px; background:#f7f7f7; }
+  .summary span { display:block; color:#5b7f45; font-weight:900; }
+  .summary strong { display:block; font-size:1.3rem; margin:.2rem 0; }
+  .section-heading { margin:2rem 0 1rem; }
+  .section-heading h2 { font-size:2rem; margin:.2rem 0; }
+  .columns { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1.2rem; align-items:start; }
+  .column { background:white; border:1px solid #dbe5d5; border-radius:28px; padding:1rem; }
+  .column h3 { position:sticky; top:0; z-index:2; background:white; margin:0 0 1rem; padding:.8rem; border-bottom:1px solid #edf2e9; }
+  .card { position:relative; display:block; margin-bottom:1rem; color:#1b281a; text-decoration:none; }
+  .card img { width:100%; display:block; border-radius:18px; background:#fafafa; border:1px solid #edf2e9; }
+  .card em { display:block; margin:.45rem 0 .8rem; font-style:normal; color:#536051; font-size:.92rem; }
+  .badge { position:absolute; left:.55rem; top:.55rem; z-index:1; background:rgba(17,24,39,.78); color:white; font-weight:900; border-radius:999px; padding:.25rem .48rem; font-size:.8rem; }
+  @media (max-width: 760px) { .summary, .columns { grid-template-columns:1fr; } .hero { padding-top:2rem; } }
+</style>

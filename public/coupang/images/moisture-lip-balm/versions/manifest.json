@@ -1,0 +1,48 @@
+{
+  "productSlug": "moisture-lip-balm",
+  "productId": "9025810298",
+  "activeVersion": "v1",
+  "versions": {
+    "v1": {
+      "label": "V1 상세 리뉴얼 후보",
+      "status": "candidate",
+      "generatedAt": "2026-06-15T11:43:43.049Z",
+      "sourceDetailRoot": "/coupang-detail/9025810298/",
+      "detailCount": 12,
+      "representativeCount": 0,
+      "notes": [
+        "모이스춰 립밤 상세 V1 후보. GPT Images 컷 01~10,12 생성 대상.",
+        "11번 제품정보/전성분 표는 법정표 정확도 우선으로 원본 보존/패딩.",
+        "쿠팡 미반영: Leo 검수 후 업로드 여부 결정."
+      ],
+      "detailImages": [
+        "/coupang/images/moisture-lip-balm/versions/v1/detail/01.png",
+        "/coupang/images/moisture-lip-balm/versions/v1/detail/02.png",
+        "/coupang/images/moisture-lip-balm/versions/v1/detail/03.png",
+        "/coupang/images/moisture-lip-balm/versions/v1/detail/04.png",
+        "/coupang/images/moisture-lip-balm/versions/v1/detail/05.png",
+        "/coupang/images/moisture-lip-balm/versions/v1/detail/06.png",
+        "/coupang/images/moisture-lip-balm/versions/v1/detail/07.png",
+        "/coupang/images/moisture-lip-balm/versions/v1/detail/08.png",
+        "/coupang/images/moisture-lip-balm/versions/v1/detail/09.png",
+        "/coupang/images/moisture-lip-balm/versions/v1/detail/10.png",
+        "/coupang/images/moisture-lip-balm/versions/v1/detail/11.png",
+        "/coupang/images/moisture-lip-balm/versions/v1/detail/12.png"
+      ],
+      "detailLabels": [
+        "01 히어로",
+        "02 추천 대상",
+        "03 5가지 이유",
+        "04 자연 유래 립케어",
+        "05 오일·왁스·버터 보습막",
+        "06 부드러운 텍스처",
+        "07 휴대/수시 보습",
+        "08 사용법·텍스처",
+        "09 신선 제조일자",
+        "10 미니멀 포장",
+        "11 제품정보·전성분 원본 보존",
+        "12 공식 판매처 안내"
+      ]
+    }
+  }
+}
