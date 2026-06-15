@@ -1,0 +1,13 @@
+{
+  "startUrl": "https://chatgpt.com/images/",
+  "chatUrl": "https://chatgpt.com/c/6a300454-3b68-83ee-9c84-c5686a8e1c68",
+  "id": "file_000000007b40720baa00f55a7739c596",
+  "natural": "950x1656",
+  "raw": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/moisture-lip-balm/versions/v1/agent-raw/12-official-seller-no-product-v3-agent.png",
+  "final": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/moisture-lip-balm/versions/v1/detail/12.png",
+  "backup": "/Users/elfguy/alba/cosmetic-commerce/public/coupang/images/moisture-lip-balm/versions/v1/rejected/12-official-seller-no-product-v3-previous-v2-typo.png",
+  "finalSize": "780x1360",
+  "alt": "생성된 이미지: 공식 판매처 구매 안내",
+  "beforeSendShot": "/Users/elfguy/alba/cosmetic-commerce/tmp-moisture-lip-balm-12-official-seller-no-product-v3-before-send-fresh.png",
+  "rule": "direct ChatGPT Images output from verified fresh composer; product removed; normalized only"
+}
