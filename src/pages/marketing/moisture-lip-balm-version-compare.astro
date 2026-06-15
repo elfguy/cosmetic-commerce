@@ -3,65 +3,195 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 
-const cacheBust = 'moisture-lip-balm-v1-1781523823827';
-const withCacheBust = (src) => `${src}${src.includes("?") ? "&" : "?"}v=${cacheBust}`;
-const labels = ["히어로","추천 대상","5가지 이유","자연 유래 립케어","오일·왁스·버터 보습막","부드러운 텍스처","휴대/수시 보습","사용법·텍스처","신선 제조일자","미니멀 포장","제품정보·전성분 원본 보존","공식 판매처 안내"];
-const originalImages = Array.from({ length: 12 }, (_, index) => ({
-  src: '/coupang-detail/9025810298/' + String(index + 1).padStart(2, '0') + '.png',
-  label: String(index + 1).padStart(2, '0') + ' 원본',
-}));
-const v1Images = labels.map((label, index) => ({
-  src: '/coupang/images/moisture-lip-balm/versions/v1/detail/' + String(index + 1).padStart(2, '0') + '.png',
-  label: String(index + 1).padStart(2, '0') + ' ' + label,
-}));
-const versions = [
-  { id: 'original', label: '원본', detailImages: originalImages, note: '현재 원본 상세 이미지' },
-  { id: 'v1', label: 'V1 후보', detailImages: v1Images, note: 'GPT Images 리뉴얼 후보 · 11번 법정표 원본 보존' },
+const repLabels = [
+  '제품 히어로',
+  '오일·왁스·버터 보습막',
+  '수시 보습 사용감',
+  '부드러운 발림 텍스처',
+  '휴대용 데일리 립케어',
+  '공식 판매처·신선 발송',
 ];
+
+const detailLabels = [
+  '히어로',
+  '추천 대상',
+  '5가지 이유',
+  '자연 유래 립케어',
+  '오일·왁스·버터 보습막',
+  '부드러운 텍스처',
+  '휴대/수시 보습',
+  '사용법·텍스처',
+  '신선 제조일자',
+  '미니멀 포장',
+  '제품정보·전성분 원본 보존',
+  '공식 판매처 안내',
+];
+
+const originalRep = Array.from({ length: 5 }, (_, index) => {
+  const number = String(index + 1).padStart(2, '0');
+  return {
+    src: `/coupang-main/moisture-lip-balm/${number}.png`,
+    label: `대표 ${number} 원본`,
+  };
+});
+
+const v1Rep = repLabels.map((label, index) => {
+  const number = String(index + 1).padStart(2, '0');
+  return {
+    src: `/coupang/images/moisture-lip-balm/versions/v1/representative/${number}.png`,
+    label: `대표 ${number} ${label}`,
+  };
+});
+
+const originalDetail = Array.from({ length: 12 }, (_, index) => {
+  const number = String(index + 1).padStart(2, '0');
+  return {
+    src: `/coupang-detail/9025810298/${number}.png`,
+    label: `상세 ${number} 원본`,
+  };
+});
+
+const v1Detail = detailLabels.map((label, index) => {
+  const number = String(index + 1).padStart(2, '0');
+  return {
+    src: `/coupang/images/moisture-lip-balm/versions/v1/detail/${number}.png`,
+    label: `상세 ${number} ${label}`,
+  };
+});
+
+const versions = [
+  {
+    id: 'original',
+    label: '원본',
+    representativeImages: originalRep,
+    detailImages: originalDetail,
+    representativeCount: originalRep.length,
+    detailCount: originalDetail.length,
+  },
+  {
+    id: 'v1',
+    label: 'V1 후보',
+    representativeImages: v1Rep,
+    detailImages: v1Detail,
+    representativeCount: v1Rep.length,
+    detailCount: v1Detail.length,
+  },
+];
+
+const activeVersion = versions.find((version) => version.id === 'v1') ?? versions[0];
+const maxDetailCount = Math.max(...versions.map((version) => version.detailCount));
+const initialSelected = new Set(['original', activeVersion.id]);
+const summaryImage = (version) => version.representativeImages[0]?.src ?? version.detailImages[0]?.src;
+const cacheBust = 'moisture-lip-balm-v1-compare-20260615-toggles';
+const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheBust}`;
 ---
 
-<BaseLayout title="모이스춰 립밤 상세 이미지 V1 비교" description="유어스킨플러스 모이스춰 립밤 원본과 V1 상세 이미지 비교">
+<BaseLayout title="모이스춰 립밤 이미지 버전 비교" description="모이스춰 립밤 원본과 V1 후보 대표·상세 이미지를 비교하는 마케팅 검토 페이지">
   <SiteHeader active="" />
-  <main class="compare-page">
-    <header class="hero container">
-      <nav class="breadcrumb"><a href="/">대시보드</a><span>/</span><a href="/products/">상품상세</a><span>/</span><a href="/products/moisture-lip-balm/">모이스춰 립밤</a></nav>
-      <p class="eyebrow">Moisture Lip Balm Detail Renewal</p>
-      <h1>모이스춰 립밤 원본 / V1 상세 비교</h1>
-      <p>V1은 상세 12컷 후보입니다. 01~10,12는 GPT Images 리뉴얼 컷이고, 11번 제품정보·전성분 표는 법정 문구 정확도 우선으로 원본 표를 보존했습니다.</p>
-      <div class="quick-links">
-        <a href={withCacheBust('/coupang/images/moisture-lip-balm/versions/v1/detail/01.png')} target="_blank">V1 01 열기</a>
-        <a href={withCacheBust('/coupang/images/moisture-lip-balm/versions/v1/detail/11.png')} target="_blank">V1 법정표 열기</a>
-        <a href="/coupang/images/moisture-lip-balm/versions/manifest.json" target="_blank">manifest</a>
+
+  <main class="version-compare">
+    <header class="compare-hero container">
+      <nav class="breadcrumb" aria-label="상위 이동">
+        <a href="/">대시보드</a>
+        <span>/</span>
+        <a href="/products/">상품상세</a>
+        <span>/</span>
+        <a href="/products/moisture-lip-balm/">모이스춰 립밤 상세</a>
+      </nav>
+      <div class="hero-layout">
+        <div>
+          <p class="eyebrow">Moisture lip balm version compare</p>
+          <h1>모이스춰 립밤 원본 / V1 비교</h1>
+          <p>
+            원본 등록본과 V1 후보 대표 6장·상세 12컷을 같은 화면에서 비교합니다.
+            V1은 쿠팡 반영 전 로컬 검수 후보이며, Leo 피드백 후 업로드 여부를 결정합니다.
+          </p>
+        </div>
+        <aside>
+          <span>Current candidate</span>
+          <strong>{activeVersion.label}</strong>
+          <p>대표 {activeVersion.representativeCount}장 · 상세 {activeVersion.detailCount}장</p>
+        </aside>
       </div>
     </header>
 
-    <section class="summary container">
-      {versions.map((version) => (
-        <article>
-          <img src={withCacheBust(version.detailImages[0].src)} alt={version.label + ' 첫 상세'} />
-          <div>
+    <section class="compare-controls container" aria-label="비교 버전 선택">
+      <div class="control-copy">
+        <p class="eyebrow">Version library</p>
+        <h2>비교할 버전 선택</h2>
+        <p>원본 등록본과 V1 후보를 나란히 비교합니다. 필요하면 체크박스로 한쪽만 볼 수 있습니다.</p>
+      </div>
+      <div class="preset-row" aria-label="추천 비교 조합">
+        <button type="button" data-preset={`original,${activeVersion.id}`}>원본 / {activeVersion.label}</button>
+        <button type="button" data-preset={`${activeVersion.id}`}>{activeVersion.label}만 보기</button>
+        <button type="button" data-preset="original">원본만 보기</button>
+      </div>
+      <div class="version-picker">
+        {versions.map((version) => (
+          <label class:list={['version-choice', initialSelected.has(version.id) && 'is-selected']}>
+            <input type="checkbox" value={version.id} checked={initialSelected.has(version.id)} />
             <span>{version.label}</span>
-            <strong>상세 {version.detailImages.length}장</strong>
-            <p>{version.note}</p>
+            <strong>대표 {version.representativeCount} · 상세 {version.detailCount}</strong>
+          </label>
+        ))}
+      </div>
+      <p id="selection-note" class="selection-note">현재 2개 버전을 비교 중입니다.</p>
+    </section>
+
+    <section class="summary-grid container" aria-label="버전 요약">
+      {versions.map((version) => (
+        <article id={version.id} data-version-card={version.id}>
+          <div class="summary-image">
+            {summaryImage(version) && <img src={withCacheBust(summaryImage(version))} alt={`${version.label} 요약 이미지`} loading="lazy" />}
+          </div>
+          <div>
+            <span>{version.id === activeVersion.id ? '현재 후보' : '비교 대상'}</span>
+            <h2>{version.label}</h2>
+            <p>
+              대표 이미지 {version.representativeCount}장, 상세 이미지 {version.detailCount}장으로 구성된 모이스춰 립밤 {version.label} 산출물입니다.
+            </p>
+            {version.detailImages[0] && <a href={withCacheBust(version.detailImages[0].src)} target="_blank" rel="noreferrer">첫 상세 이미지 열기</a>}
           </div>
         </article>
       ))}
     </section>
 
-    <section class="flow container">
+    <section class="compare-section container">
       <div class="section-heading">
-        <p class="eyebrow">Detail Flow</p>
-        <h2>상세 이미지 흐름</h2>
+        <p class="eyebrow">Representative images</p>
+        <h2>대표 이미지 비교</h2>
       </div>
-      <div class="columns">
+      <div class="version-columns">
         {versions.map((version) => (
-          <article class="column">
+          <article class="image-column" data-version-column={version.id}>
             <h3>{version.label}</h3>
+            <div class="image-stack representative-stack">
+              {version.representativeImages.map((image, index) => (
+                <a href={withCacheBust(image.src)} target="_blank" rel="noreferrer">
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <img src={withCacheBust(image.src)} alt={`${version.label} ${image.label}`} loading="lazy" />
+                </a>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="compare-section container">
+      <div class="section-heading">
+        <p class="eyebrow">Detail flow</p>
+        <h2>상세 이미지 흐름 비교</h2>
+      </div>
+      <div class="flow-table" style={`--rows: ${maxDetailCount};`}>
+        {versions.map((version) => (
+          <article class="flow-column" data-version-column={version.id}>
+            <h3>{version.label}</h3>
+            {version.detailImages.length === 0 && <p class="empty-note">상세 이미지 없음</p>}
             {version.detailImages.map((image, index) => (
-              <a class="card" href={withCacheBust(image.src)} target="_blank" aria-label={version.label + ' ' + image.label + ' 열기'}>
-                <span class="badge">{String(index + 1).padStart(2, '0')}</span>
-                <img src={withCacheBust(image.src)} alt={version.label + ' ' + image.label} loading="lazy" />
-                <em>{image.label}</em>
+              <a class="flow-card" href={withCacheBust(image.src)} target="_blank" rel="noreferrer" aria-label={`${version.label} ${image.label} 열기`}>
+                <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                <img src={withCacheBust(image.src)} alt={`${version.label} ${image.label}`} loading="lazy" />
               </a>
             ))}
           </article>
@@ -69,33 +199,489 @@ const versions = [
       </div>
     </section>
   </main>
+
   <SiteFooter />
 </BaseLayout>
 
+<script>
+  const maxSelection = 3;
+  const choices = Array.from(document.querySelectorAll('.version-choice'));
+  const inputs = Array.from(document.querySelectorAll('.version-choice input'));
+  const presetButtons = Array.from(document.querySelectorAll('[data-preset]'));
+  const note = document.getElementById('selection-note');
+  const versionCards = Array.from(document.querySelectorAll('[data-version-card]'));
+  const versionColumns = Array.from(document.querySelectorAll('[data-version-column]'));
+
+  const selectedValues = () => inputs.filter((input) => input.checked).map((input) => input.value);
+
+  const syncSelection = () => {
+    let selected = selectedValues();
+
+    if (selected.length > maxSelection) {
+      const lastChecked = document.activeElement;
+      inputs.forEach((input) => {
+        if (input !== lastChecked && selectedValues().length > maxSelection) {
+          input.checked = false;
+        }
+      });
+      selected = selectedValues();
+    }
+
+    if (selected.length === 0 && inputs[0]) {
+      inputs[0].checked = true;
+      selected = selectedValues();
+    }
+
+    choices.forEach((choice) => {
+      const input = choice.querySelector('input');
+      choice.classList.toggle('is-selected', Boolean(input?.checked));
+    });
+
+    const selectedSet = new Set(selected);
+    versionCards.forEach((card) => {
+      card.classList.toggle('is-hidden', !selectedSet.has(card.dataset.versionCard || ''));
+    });
+    versionColumns.forEach((column) => {
+      column.classList.toggle('is-hidden', !selectedSet.has(column.dataset.versionColumn || ''));
+    });
+
+    if (note) {
+      note.textContent = `현재 ${selected.length}개 버전을 비교 중입니다.`;
+    }
+  };
+
+  inputs.forEach((input) => {
+    input.addEventListener('change', syncSelection);
+  });
+
+  presetButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const preset = new Set((button.dataset.preset || '').split(',').filter(Boolean).slice(0, maxSelection));
+      inputs.forEach((input) => {
+        input.checked = preset.has(input.value);
+      });
+      syncSelection();
+    });
+  });
+
+  syncSelection();
+</script>
+
 <style>
-  .compare-page { background:#f6f7f2; color:#172018; padding-bottom:4rem; }
-  .container { width:min(1120px, calc(100% - 2rem)); margin:0 auto; }
-  .hero { padding:4rem 0 2rem; }
-  .breadcrumb { display:flex; gap:.5rem; color:#62715f; font-size:.9rem; margin-bottom:1.5rem; }
-  .breadcrumb a { color:#315f35; text-decoration:none; }
-  .eyebrow { text-transform:uppercase; letter-spacing:.12em; color:#5b7f45; font-weight:800; font-size:.78rem; }
-  h1 { font-size:clamp(2.2rem, 5vw, 4.2rem); margin:.3rem 0 1rem; line-height:1.05; }
-  .hero > p:not(.eyebrow) { max-width:780px; color:#495548; font-size:1.05rem; line-height:1.7; }
-  .quick-links { display:flex; gap:.7rem; flex-wrap:wrap; margin-top:1.2rem; }
-  .quick-links a { padding:.7rem 1rem; border-radius:999px; background:#20351f; color:white; text-decoration:none; font-weight:800; }
-  .summary { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1rem; margin-bottom:2rem; }
-  .summary article { background:white; border:1px solid #dbe5d5; border-radius:24px; padding:1rem; display:flex; gap:1rem; align-items:center; box-shadow:0 12px 30px rgba(33,55,33,.08); }
-  .summary img { width:120px; height:160px; object-fit:cover; border-radius:16px; background:#f7f7f7; }
-  .summary span { display:block; color:#5b7f45; font-weight:900; }
-  .summary strong { display:block; font-size:1.3rem; margin:.2rem 0; }
-  .section-heading { margin:2rem 0 1rem; }
-  .section-heading h2 { font-size:2rem; margin:.2rem 0; }
-  .columns { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1.2rem; align-items:start; }
-  .column { background:white; border:1px solid #dbe5d5; border-radius:28px; padding:1rem; }
-  .column h3 { position:sticky; top:0; z-index:2; background:white; margin:0 0 1rem; padding:.8rem; border-bottom:1px solid #edf2e9; }
-  .card { position:relative; display:block; margin-bottom:1rem; color:#1b281a; text-decoration:none; }
-  .card img { width:100%; display:block; border-radius:18px; background:#fafafa; border:1px solid #edf2e9; }
-  .card em { display:block; margin:.45rem 0 .8rem; font-style:normal; color:#536051; font-size:.92rem; }
-  .badge { position:absolute; left:.55rem; top:.55rem; z-index:1; background:rgba(17,24,39,.78); color:white; font-weight:900; border-radius:999px; padding:.25rem .48rem; font-size:.8rem; }
-  @media (max-width: 760px) { .summary, .columns { grid-template-columns:1fr; } .hero { padding-top:2rem; } }
+  :global(body) {
+    background: var(--bg);
+  }
+
+  .version-compare {
+    color: var(--ink);
+    padding-bottom: 8px;
+  }
+
+  .version-compare a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .compare-hero {
+    padding-block: clamp(20px, 4vw, 36px) 0;
+  }
+
+  .breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--forest);
+  }
+
+  .hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .hero-layout > div,
+  .hero-layout aside,
+  .summary-grid article,
+  .compare-section {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .hero-layout > div {
+    display: grid;
+    gap: 12px;
+    padding: 30px;
+  }
+
+  .eyebrow {
+    margin: 0;
+    color: var(--accent);
+    font-family: var(--font-latin);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    word-break: keep-all;
+  }
+
+  h1 {
+    max-width: 780px;
+    margin: 0;
+    font-size: clamp(32px, 4vw, 56px);
+    line-height: 1.08;
+    letter-spacing: 0;
+  }
+
+  .hero-layout p {
+    max-width: 820px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .hero-layout aside {
+    display: grid;
+    align-content: center;
+    gap: 8px;
+    padding: 24px;
+    border-left: 5px solid var(--forest);
+  }
+
+  .hero-layout aside span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .hero-layout aside strong {
+    color: var(--forest);
+    font-family: var(--font-latin);
+    font-size: 42px;
+  }
+
+  .compare-controls {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .control-copy {
+    display: grid;
+    align-content: start;
+    gap: 7px;
+  }
+
+  .control-copy h2 {
+    margin: 0;
+    font-size: 21px;
+    line-height: 1.2;
+  }
+
+  .control-copy p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .preset-row,
+  .version-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .preset-row {
+    align-self: start;
+  }
+
+  .preset-row button {
+    min-height: 38px;
+    padding: 0 12px;
+    color: var(--forest);
+    background: var(--forest-soft);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-sm);
+    font: inherit;
+    font-size: 12px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  .version-picker {
+    grid-column: 2;
+  }
+
+  .version-choice {
+    display: grid;
+    gap: 4px;
+    min-width: 170px;
+    padding: 12px 13px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r-sm);
+    cursor: pointer;
+  }
+
+  .version-choice input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .version-choice.is-selected {
+    color: #fff;
+    background: var(--forest);
+    border-color: var(--forest);
+  }
+
+  .version-choice span {
+    font-size: 15px;
+    font-weight: 900;
+  }
+
+  .version-choice strong {
+    color: inherit;
+    font-size: 12px;
+    opacity: 0.78;
+  }
+
+  .selection-note {
+    grid-column: 2;
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .summary-grid article {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 128px minmax(0, 1fr);
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .summary-image {
+    height: 160px;
+    overflow: hidden;
+    background: var(--surface-3);
+    border-radius: var(--r-sm);
+  }
+
+  .summary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .summary-grid article > div:last-child {
+    display: grid;
+    align-content: start;
+    gap: 7px;
+  }
+
+  .summary-grid span {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  .summary-grid h2 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .summary-grid p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .summary-grid a {
+    justify-self: start;
+    padding: 8px 10px;
+    color: var(--forest);
+    background: var(--forest-soft);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-sm);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .compare-section {
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+
+  .section-heading {
+    display: grid;
+    gap: 5px;
+    margin-bottom: 14px;
+  }
+
+  .section-heading h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .version-columns,
+  .flow-table {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .summary-grid article.is-hidden,
+  .version-columns [data-version-column].is-hidden,
+  .flow-table [data-version-column].is-hidden {
+    display: none;
+  }
+
+  .image-column,
+  .flow-column {
+    min-width: 0;
+    display: grid;
+    align-content: start;
+    gap: 10px;
+  }
+
+  .image-column h3,
+  .flow-column h3 {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    margin: 0;
+    padding: 11px 12px;
+    color: #fff;
+    background: var(--forest);
+    border-radius: var(--r-sm);
+    font-size: 15px;
+  }
+
+  .image-stack,
+  .flow-column {
+    display: grid;
+    gap: 10px;
+  }
+
+  .image-stack a,
+  .flow-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: var(--surface-3);
+    border: 1px solid var(--line);
+    border-radius: var(--r-sm);
+  }
+
+  .image-stack span,
+  .flow-card span {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    z-index: 1;
+    min-width: 22px;
+    padding: 3px 5px;
+    color: #fff;
+    text-align: center;
+    background: rgba(27, 47, 38, 0.68);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(27, 47, 38, 0.12);
+    font-family: var(--font-latin);
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .flow-card span {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+
+  .image-stack img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .flow-card img {
+    width: 100%;
+    display: block;
+  }
+
+  @media (max-width: 1180px) {
+    .hero-layout,
+    .compare-controls,
+    .summary-grid,
+    .version-columns,
+    .flow-table {
+      grid-template-columns: 1fr;
+    }
+
+    .version-picker,
+    .selection-note {
+      grid-column: auto;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .hero-layout > div {
+      padding: 22px;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    .compare-controls,
+    .summary-grid article {
+      grid-template-columns: 1fr;
+    }
+
+    .version-choice {
+      min-width: 0;
+    }
+
+    .summary-image {
+      height: 220px;
+    }
+  }
 </style>
