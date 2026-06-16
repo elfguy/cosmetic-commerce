@@ -73,7 +73,7 @@ export const productOpsStatuses: ProductOpsStatus[] = [
     slug: 'all-in-one-lotion',
     priority: 'support',
     campaignRole: '남성 간편 루틴 확장',
-    detailStatus: 'V1 대표 6장 + 상세 15컷 후보 생성 완료 — 상세 13 공식 판매처 / 상세 14 원본 법정표 보존',
+    detailStatus: 'V1 대표 6장 + 상세 15컷 후보 생성 완료 — 표시 13 미니멀 포장 / 표시 14 공식 판매처 / 표시 15 원본 법정표 보존',
     assetStatus: 'V1 후보 제작 완료 — 쿠팡 미반영',
     claimRisk: 'high',
     nextAction: 'Leo 오전 검수 후 쿠팡 업로드 여부 결정',
@@ -372,7 +372,7 @@ export const productVersions: Record<string, ProductVersion[]> = {
       label: 'V1 후보',
       status: 'candidate',
       date: '2026-06-15',
-      summary: '영거댄 올인원 로션 V1 후보입니다. 대표 01은 가상 제품 드리프트를 수정해 구글 드라이브 원본 상품 기준으로 교체했고, 하단 큰 상품명 텍스트를 제거했으며 신선제품 마크를 약간 키웠습니다. Leo 요청대로 상세 03과 04 사이에 남성 사용감 컷 03a를 추가했고, 상세 13은 미니멀 포장 중복컷을 제거하고 공식 판매처 안내 컷으로 복원해 마지막 상세 14 제품정보 표 바로 앞에 배치했습니다. 상세 14 제품정보 표는 `피부 타입 / 모든 피부 타입` 라벨과 패딩을 보정했습니다. 대표 01~06도 로컬 검수 후보로 유지합니다. 쿠팡에는 아직 미반영입니다.',
+      summary: '영거댄 올인원 로션 V1 후보입니다. 대표 01은 가상 제품 드리프트를 수정해 구글 드라이브 원본 상품 기준으로 교체했고, 하단 큰 상품명 텍스트를 제거했으며 신선제품 마크를 약간 키웠습니다. Leo 요청대로 상세 03과 04 사이에 남성 사용감 컷 03a를 추가했고, 표시 11번째 컷은 원본 상세의 제조일 표기 방식으로 재제작했습니다. 표시 13번째 컷은 첨부 원본 기준의 미니멀 포장/제조사 직접판매 문구로 재제작했습니다. 표시 14번째는 공식 판매처 안내, 표시 15번째는 제품정보 표입니다. 대표 01~06도 로컬 검수 후보로 유지합니다. 쿠팡에는 아직 미반영입니다.',
       mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/all-in-one-lotion/versions/v1/representative/' + String(i + 1).padStart(2, '0') + '.png'),
       detailImages: [
         '/coupang/images/all-in-one-lotion/versions/v1/detail/01.png',
@@ -389,7 +389,7 @@ export const productVersions: Record<string, ProductVersion[]> = {
       metrics: [
         { label: '대표', value: '6컷 생성/검수' },
         { label: '상세', value: '15컷 생성/검수' },
-        { label: '특징', value: '상세 03a 남성 사용감 추가 · 상세 13 공식 판매처 복원 · 상세 14 표 보정' },
+        { label: '특징', value: '상세 03a 남성 사용감 추가 · 표시 11 제조일 원본 표기 반영 · 표시 13 미니멀 포장 재제작 · 표시 14 공식 판매처 · 표시 15 표 보정' },
       ],
     },
   ],
