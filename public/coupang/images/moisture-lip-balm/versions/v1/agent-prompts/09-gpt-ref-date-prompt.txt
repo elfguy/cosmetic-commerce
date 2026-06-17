@@ -1,0 +1,76 @@
+Korean cosmetics ecommerce vertical detail-page image, 780 x 1360.
+Create a finished commercial image with Korean text inside the image.
+
+Main instruction:
+Use primary-attached-manufacture-date-comparison.jpg as the main structure reference.
+Follow that attached image very closely: same two-column comparison layout, same hierarchy, same type of round white cards, same bottom explanation area.
+Only adjust the tone and colors to match the uploaded Moisture Lip Balm detail images current-detail08-tone.png and current-detail10-tone.png.
+
+Product/page:
+YOURSKIN+ Moisture Lip Balm detail image 09.
+Theme: manufacturing date freshness comparison.
+
+Layout to follow:
+1. Large top headline centered.
+2. Two vertical comparison cards side by side.
+3. Left card is YOURSKIN+ / positive green.
+4. Right card is comparison example / neutral gray with orange-red emphasis.
+5. Each card has a circular bottom marking closeup image.
+6. Bottom large statement about shipping products within 6 months from manufacture date.
+7. Bottom small check-note line.
+
+Use Korean text exactly as below:
+
+큰 제목:
+제조일자는 신선함을
+판단하는 가장 정확한 기준입니다.
+
+왼쪽 상단 라벨:
+유어스킨플러스는
+
+오른쪽 상단 라벨:
+일부 타사 제품은
+
+왼쪽 카드 본문:
+제조번호와
+제조일자를 표기
+하고 있습니다.
+
+오른쪽 카드 본문:
+제조번호와
+사용기한만을 표기
+하고 있습니다.
+
+왼쪽 하단 표기 예시:
+A2507191
+제조 2025.07.19
+
+오른쪽 하단 표기 예시:
+A39
+2026.03.29까지
+
+왼쪽 하단 설명:
+언제 제조했는지
+소비자가 바로 확인
+할 수 있습니다.
+
+오른쪽 하단 설명:
+언제 제조했는지
+실제 제조 시점을
+알기 어렵습니다.
+
+하단 강조 문구:
+유어스킨플러스는 제조일로부터 6개월 이내의
+제품만을 출고합니다.
+
+하단 작은 체크 안내:
+일부 저가로 유통되는 제품들 중에 제조일로부터 상당 기간이
+지났거나 사용기한 만료일에 임박한 제품들이 있습니다.
+
+Style:
+Clean white/mint K-beauty detail-page style.
+Use bold readable Korean sans-serif typography.
+Use green emphasis for YOURSKIN+ and manufacture date freshness.
+Use soft orange-red only for the comparison card's 사용기한/실제 제조 시점 emphasis.
+Do not create a product hero image. Only show circular bottom marking examples like the attached reference.
+Make it look like it belongs between the uploaded lip balm 08 and 10 images.
