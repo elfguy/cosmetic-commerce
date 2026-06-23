@@ -536,7 +536,7 @@ export const productVersions: Record<string, ProductVersion[]> = {
       label: 'V1 후보',
       status: 'candidate',
       date: '2026-06-17',
-      summary: 'PDRN 히알루론산 수딩 크림 V1 후보입니다. ChatGPT Images를 통해 대표 01~06과 상세 흐름을 순차 생성/내부 QA 후 반영했고, 상세 01과 02 사이에 성인 여성 사용감 브릿지 컷 01a를 추가했습니다. 최종 검토 후 01a/02~05 해상도를 780×1360으로 정규화했고, 저자극 컷의 강한 표현을 완화했으며, 제품정보·전성분 표는 내용 유지 상태로 V1 톤을 보강해 맨뒤 표시 순서로 배치했습니다. 쿠팡에는 아직 미반영입니다.',
+      summary: 'PDRN 히알루론산 수딩 크림 V1 후보입니다. ChatGPT Images를 통해 대표 01~06과 상세 흐름을 순차 생성/내부 QA 후 반영했고, 상세 01과 02 사이에 성인 여성 사용감 브릿지 컷 01a를 추가했습니다. 최종 검토 후 01a/02~05 해상도를 780×1360으로 정규화했고, 저자극 컷의 강한 표현을 완화했으며, 제품정보·전성분 표는 기존 원본 표만 있는 이미지로 맨뒤 표시 순서에 배치했습니다. 쿠팡에는 아직 미반영입니다.',
       mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/soothing-cream/versions/v1/representative/' + String(i + 1).padStart(2, '0') + '.png'),
       detailImages: [
         '/coupang/images/soothing-cream/versions/v1/detail/01.png',
@@ -551,7 +551,7 @@ export const productVersions: Record<string, ProductVersion[]> = {
       ],
       metrics: [
         { label: '대표', value: '6컷 GPT Images 순차 생성' },
-        { label: '상세', value: '01a 포함 16컷 · 780×1360 정규화 · 저자극 문구 완화 · 법정표 V1 톤 보강' },
+        { label: '상세', value: '01a 포함 16컷 · 780×1360 정규화 · 저자극 문구 완화 · 법정표 원본 표 보존' },
         { label: '상태', value: '쿠팡 미반영 후보' },
       ],
     },
