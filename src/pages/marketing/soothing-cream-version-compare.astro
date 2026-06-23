@@ -1,0 +1,694 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+
+const repLabels = [
+  '제품 히어로·신선마크',
+  'PDRN x 히알루론산',
+  '성인 여성 사용감',
+  '크림 텍스처·수분감',
+  '신선 출고 안내',
+  '공식 판매처 안내',
+];
+
+
+const originalRep = Array.from({ length: 6 }, (_, index) => {
+  const number = String(index + 1).padStart(2, '0');
+  return {
+    src: `/coupang-main/soothing-cream/${number}.png`,
+    label: `대표 ${number} 쿠팡 원본`,
+  };
+});
+
+const v1Rep = repLabels.map((label, index) => {
+  const number = String(index + 1).padStart(2, '0');
+  return {
+    src: `/coupang/images/soothing-cream/versions/v1/representative/${number}.png`,
+    label: `대표 ${number} ${label}`,
+  };
+});
+
+const originalDetail = Array.from({ length: 15 }, (_, index) => {
+  const number = String(index + 1).padStart(2, '0');
+  return {
+    src: `/coupang-detail/9402735935/${number}.png`,
+    label: `상세 ${number} 쿠팡 원본`,
+  };
+});
+
+const detailV1Order = [
+  { file: '01', label: '히어로 신규 제작' },
+  { file: '01a', label: '여성 모델 사용감 브릿지 컷 · GPT Images 삽입' },
+  { file: '02', label: '추천 대상 · GPT Images 기존 탭 수정본 반영' },
+  { file: '03', label: '6가지 핵심 케어 · GPT Images 재생성 반영' },
+  { file: '04', label: 'CICA PDRN 원료 조합 · 실제 원료 비주얼 개선 반영' },
+  { file: '05', label: '피부 고민별 케어 · GPT Images 재생성 반영' },
+  { file: '06', label: '8종 히알루론산 레이어 · 상단 배지 제거' },
+  { file: '07', label: '수분크림 제형 사용감 · 상단 배지 제거' },
+  { file: '08', label: '피부 저자극 테스트 · 자극 표현 완화 반영' },
+  { file: '09', label: 'EWG 그린 등급·무향 타입 · GPT 첨부 레퍼런스 톤앤매너 재제작' },
+  { file: '10', label: '약산성 pH 설계 · 상단 배지 제거·pH 5.6 위치 수정' },
+  { file: '11', label: '제조일자·신선 출고 · 상단 배지 제거' },
+  { file: '12', label: '사용법·텍스처 안내 톤앤매너 재제작' },
+  { file: '13', label: '첨부 구조 기반 미니멀 패키지·직접 판매 안내' },
+  { file: '15', label: '첨부 구조 기반 무단 리셀러 주의 안내' },
+  { file: '14', label: '제품정보·전성분 표 맨뒤 · V1 톤 고급화 반영' },
+];
+
+const v1Detail = detailV1Order.map((item, index) => {
+  const displayNumber = String(index + 1).padStart(2, '0');
+  return {
+    src: item.src ?? `/coupang/images/soothing-cream/versions/v1/detail/${item.file}.png`,
+    label: `상세 ${displayNumber} ${item.label}`,
+  };
+});
+
+const versions = [
+  {
+    id: 'original',
+    label: '원본',
+    representativeImages: originalRep,
+    detailImages: originalDetail,
+    representativeCount: originalRep.length,
+    detailCount: originalDetail.length,
+  },
+  {
+    id: 'v1',
+    label: 'V1 후보',
+    representativeImages: v1Rep,
+    detailImages: v1Detail,
+    representativeCount: v1Rep.length,
+    detailCount: v1Detail.length,
+  },
+];
+
+const activeVersion = versions.find((version) => version.id === 'v1') ?? versions[0];
+const maxDetailCount = Math.max(...versions.map((version) => version.detailCount));
+const initialSelected = new Set(['original', activeVersion.id]);
+const summaryImage = (version) => version.representativeImages[0]?.src ?? version.detailImages[0]?.src;
+const cacheBust = 'soothing-cream-final-audit-fixes-20260623';
+const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheBust}`;
+---
+
+<BaseLayout title="PDRN 히알루론산 수딩 크림 이미지 버전 비교" description="PDRN 히알루론산 수딩 크림 원본과 V1 후보 대표 이미지를 비교하는 마케팅 검토 페이지">
+  <SiteHeader active="" />
+
+  <main class="version-compare">
+    <header class="compare-hero container">
+      <nav class="breadcrumb" aria-label="상위 이동">
+        <a href="/">대시보드</a>
+        <span>/</span>
+        <a href="/products/">상품상세</a>
+        <span>/</span>
+        <a href="/products/soothing-cream/">수딩 크림 상세</a>
+      </nav>
+      <div class="hero-layout">
+        <div>
+          <p class="eyebrow">PDRN soothing cream version compare</p>
+          <h1>PDRN 히알루론산 수딩 크림 원본 / V1 비교</h1>
+          <p>
+            원본 등록본은 실제 쿠팡 CDN 기준 대표 6장·상세 15컷이고, V1 후보는 대표 6장 신규 + 상세 01a 여성 사용감 브릿지 포함 16컷 구성 / 제품정보·전성분 표 맨뒤 배치 상태로 비교합니다.
+            V1은 쿠팡 반영 전 로컬 검수 후보이며, Leo 피드백 후 업로드 여부를 결정합니다.
+          </p>
+        </div>
+        <aside>
+          <span>Current candidate</span>
+          <strong>{activeVersion.label}</strong>
+          <p>대표 {activeVersion.representativeCount}장 · 상세 {activeVersion.detailCount}장</p>
+        </aside>
+      </div>
+    </header>
+
+    <section class="compare-controls container" aria-label="비교 버전 선택">
+      <div class="control-copy">
+        <p class="eyebrow">Version library</p>
+        <h2>비교할 버전 선택</h2>
+        <p>원본 등록본과 V1 후보를 나란히 비교합니다. 필요하면 체크박스로 한쪽만 볼 수 있습니다.</p>
+      </div>
+      <div class="preset-row" aria-label="추천 비교 조합">
+        <button type="button" data-preset={`original,${activeVersion.id}`}>원본 / {activeVersion.label}</button>
+        <button type="button" data-preset={`${activeVersion.id}`}>{activeVersion.label}만 보기</button>
+        <button type="button" data-preset="original">원본만 보기</button>
+      </div>
+      <div class="version-picker">
+        {versions.map((version) => (
+          <label class:list={['version-choice', initialSelected.has(version.id) && 'is-selected']}>
+            <input type="checkbox" value={version.id} checked={initialSelected.has(version.id)} />
+            <span>{version.label}</span>
+            <strong>대표 {version.representativeCount}{version.detailCount > 0 ? ` · 상세 ${version.detailCount}` : ' · 상세 미수집'}</strong>
+          </label>
+        ))}
+      </div>
+      <p id="selection-note" class="selection-note">현재 2개 버전을 비교 중입니다.</p>
+    </section>
+
+    <section class="summary-grid container" aria-label="버전 요약">
+      {versions.map((version) => (
+        <article id={version.id} data-version-card={version.id}>
+          <div class="summary-image">
+            {summaryImage(version) && <img src={withCacheBust(summaryImage(version))} alt={`${version.label} 요약 이미지`} loading="eager" />}
+          </div>
+          <div>
+            <span>{version.id === activeVersion.id ? '현재 후보' : '비교 대상'}</span>
+            <h2>{version.label}</h2>
+            <p>
+              대표 이미지 {version.representativeCount}장{version.detailCount > 0 ? `, 상세 이미지 ${version.detailCount}장` : ''}으로 구성된 수딩 크림 {version.label} 산출물입니다.
+            </p>
+            {version.detailImages[0] && <a href={withCacheBust(version.detailImages[0].src)} target="_blank" rel="noreferrer">첫 상세 이미지 열기</a>}
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <section class="compare-section container">
+      <div class="section-heading">
+        <p class="eyebrow">Representative images</p>
+        <h2>대표 이미지 비교</h2>
+      </div>
+      <div class="version-columns">
+        {versions.map((version) => (
+          <article class="image-column" data-version-column={version.id}>
+            <h3>{version.label}</h3>
+            <div class="image-stack representative-stack">
+              {version.representativeImages.map((image, index) => (
+                <a href={withCacheBust(image.src)} target="_blank" rel="noreferrer">
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <img src={withCacheBust(image.src)} alt={`${version.label} ${image.label}`} loading="eager" />
+                </a>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    {maxDetailCount > 0 && (
+      <section class="compare-section container">
+        <div class="section-heading">
+          <p class="eyebrow">Detail flow</p>
+          <h2>상세 이미지 흐름 비교</h2>
+        </div>
+        <div class="flow-table" style={`--rows: ${maxDetailCount};`}>
+          {versions.map((version) => (
+            <article class="flow-column" data-version-column={version.id}>
+              <h3>{version.label}</h3>
+              {version.detailImages.length === 0 && <p class="empty-note">상세 이미지 없음</p>}
+              {version.detailImages.map((image, index) => (
+                <a class="flow-card" href={withCacheBust(image.src)} target="_blank" rel="noreferrer" aria-label={`${version.label} ${image.label} 열기`}>
+                  <span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                  <img src={withCacheBust(image.src)} alt={`${version.label} ${image.label}`} loading="eager" />
+                </a>
+              ))}
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
+
+<script>
+  const maxSelection = 3;
+  const choices = Array.from(document.querySelectorAll('.version-choice'));
+  const inputs = Array.from(document.querySelectorAll('.version-choice input'));
+  const presetButtons = Array.from(document.querySelectorAll('[data-preset]'));
+  const note = document.getElementById('selection-note');
+  const versionCards = Array.from(document.querySelectorAll('[data-version-card]'));
+  const versionColumns = Array.from(document.querySelectorAll('[data-version-column]'));
+
+  const selectedValues = () => inputs.filter((input) => input.checked).map((input) => input.value);
+
+  const syncSelection = () => {
+    let selected = selectedValues();
+
+    if (selected.length > maxSelection) {
+      const lastChecked = document.activeElement;
+      inputs.forEach((input) => {
+        if (input !== lastChecked && selectedValues().length > maxSelection) {
+          input.checked = false;
+        }
+      });
+      selected = selectedValues();
+    }
+
+    if (selected.length === 0 && inputs[0]) {
+      inputs[0].checked = true;
+      selected = selectedValues();
+    }
+
+    choices.forEach((choice) => {
+      const input = choice.querySelector('input');
+      choice.classList.toggle('is-selected', Boolean(input?.checked));
+    });
+
+    const selectedSet = new Set(selected);
+    versionCards.forEach((card) => {
+      card.classList.toggle('is-hidden', !selectedSet.has(card.dataset.versionCard || ''));
+    });
+    versionColumns.forEach((column) => {
+      column.classList.toggle('is-hidden', !selectedSet.has(column.dataset.versionColumn || ''));
+    });
+
+    if (note) {
+      note.textContent = `현재 ${selected.length}개 버전을 비교 중입니다.`;
+    }
+  };
+
+  inputs.forEach((input) => {
+    input.addEventListener('change', syncSelection);
+  });
+
+  presetButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const preset = new Set((button.dataset.preset || '').split(',').filter(Boolean).slice(0, maxSelection));
+      inputs.forEach((input) => {
+        input.checked = preset.has(input.value);
+      });
+      syncSelection();
+    });
+  });
+
+  syncSelection();
+</script>
+
+<style>
+  :global(body) {
+    background: var(--bg);
+  }
+
+  .version-compare {
+    color: var(--ink);
+    padding-bottom: 8px;
+  }
+
+  .version-compare a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .compare-hero {
+    padding-block: clamp(20px, 4vw, 36px) 0;
+  }
+
+  .breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--forest);
+  }
+
+  .hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  .hero-layout > div,
+  .hero-layout aside,
+  .summary-grid article,
+  .compare-section {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .hero-layout > div {
+    display: grid;
+    gap: 12px;
+    padding: 30px;
+  }
+
+  .eyebrow {
+    margin: 0;
+    color: var(--accent);
+    font-family: var(--font-latin);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    word-break: keep-all;
+  }
+
+  h1 {
+    max-width: 780px;
+    margin: 0;
+    font-size: clamp(32px, 4vw, 56px);
+    line-height: 1.08;
+    letter-spacing: 0;
+  }
+
+  .hero-layout p {
+    max-width: 820px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .hero-layout aside {
+    display: grid;
+    align-content: center;
+    gap: 8px;
+    padding: 24px;
+    border-left: 5px solid var(--forest);
+  }
+
+  .hero-layout aside span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .hero-layout aside strong {
+    color: var(--forest);
+    font-family: var(--font-latin);
+    font-size: 42px;
+  }
+
+  .compare-controls {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    box-shadow: var(--shadow-sm);
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .control-copy {
+    display: grid;
+    align-content: start;
+    gap: 7px;
+  }
+
+  .control-copy h2 {
+    margin: 0;
+    font-size: 21px;
+    line-height: 1.2;
+  }
+
+  .control-copy p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .preset-row,
+  .version-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .preset-row {
+    align-self: start;
+  }
+
+  .preset-row button {
+    min-height: 38px;
+    padding: 0 12px;
+    color: var(--forest);
+    background: var(--forest-soft);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-sm);
+    font: inherit;
+    font-size: 12px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
+  .version-picker {
+    grid-column: 2;
+  }
+
+  .version-choice {
+    display: grid;
+    gap: 4px;
+    min-width: 170px;
+    padding: 12px 13px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r-sm);
+    cursor: pointer;
+  }
+
+  .version-choice input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .version-choice.is-selected {
+    color: #fff;
+    background: var(--forest);
+    border-color: var(--forest);
+  }
+
+  .version-choice span {
+    font-size: 15px;
+    font-weight: 900;
+  }
+
+  .version-choice strong {
+    color: inherit;
+    font-size: 12px;
+    opacity: 0.78;
+  }
+
+  .selection-note {
+    grid-column: 2;
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .summary-grid article {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 128px minmax(0, 1fr);
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .summary-image {
+    height: 160px;
+    overflow: hidden;
+    background: var(--surface-3);
+    border-radius: var(--r-sm);
+  }
+
+  .summary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .summary-grid article > div:last-child {
+    display: grid;
+    align-content: start;
+    gap: 7px;
+  }
+
+  .summary-grid span {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  .summary-grid h2 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .summary-grid p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .summary-grid a {
+    justify-self: start;
+    padding: 8px 10px;
+    color: var(--forest);
+    background: var(--forest-soft);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r-sm);
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .compare-section {
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+
+  .section-heading {
+    display: grid;
+    gap: 5px;
+    margin-bottom: 14px;
+  }
+
+  .section-heading h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .version-columns,
+  .flow-table {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .summary-grid article.is-hidden,
+  .version-columns [data-version-column].is-hidden,
+  .flow-table [data-version-column].is-hidden {
+    display: none;
+  }
+
+  .image-column,
+  .flow-column {
+    min-width: 0;
+    display: grid;
+    align-content: start;
+    gap: 10px;
+  }
+
+  .image-column h3,
+  .flow-column h3 {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    margin: 0;
+    padding: 11px 12px;
+    color: #fff;
+    background: var(--forest);
+    border-radius: var(--r-sm);
+    font-size: 15px;
+  }
+
+  .image-stack,
+  .flow-column {
+    display: grid;
+    gap: 10px;
+  }
+
+  .image-stack a,
+  .flow-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: var(--surface-3);
+    border: 1px solid var(--line);
+    border-radius: var(--r-sm);
+  }
+
+  .image-stack span,
+  .flow-card span {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    z-index: 1;
+    min-width: 22px;
+    padding: 3px 5px;
+    color: #fff;
+    text-align: center;
+    background: rgba(27, 47, 38, 0.68);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(27, 47, 38, 0.12);
+    font-family: var(--font-latin);
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .flow-card span {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+
+  .image-stack img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .flow-card img {
+    width: 100%;
+    display: block;
+  }
+
+  @media (max-width: 1180px) {
+    .hero-layout,
+    .compare-controls,
+    .summary-grid,
+    .version-columns,
+    .flow-table {
+      grid-template-columns: 1fr;
+    }
+
+    .version-picker,
+    .selection-note {
+      grid-column: auto;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .hero-layout > div {
+      padding: 22px;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    .compare-controls,
+    .summary-grid article {
+      grid-template-columns: 1fr;
+    }
+
+    .version-choice {
+      min-width: 0;
+    }
+
+    .summary-image {
+      height: 220px;
+    }
+  }
+</style>

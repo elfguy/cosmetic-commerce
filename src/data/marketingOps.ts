@@ -110,12 +110,13 @@ export const productOpsStatuses: ProductOpsStatus[] = [
   },
   {
     slug: 'soothing-cream',
-    priority: 'watch',
-    campaignRole: 'PDRN 수딩 라인 보류 상품',
-    detailStatus: '신규 상품 데이터 검수 필요',
-    assetStatus: '현재 적용 상세 확인',
+    priority: 'support',
+    campaignRole: 'PDRN 수딩 라인 다음 리뉴얼 후보',
+    detailStatus: '원본 상세 15컷 기준 · 대표 V1 6장 생성 완료',
+    assetStatus: '대표 V1 후보 제작 완료 — 쿠팡 미반영',
     claimRisk: 'medium',
-    nextAction: 'PDRN 원료 컨셉을 효능 단정 없이 수분/진정 보조 표현으로 정리',
+    nextAction: 'Leo 검수 후 상세 이미지 순차 제작 또는 쿠팡 대표 이미지 교체 여부 결정',
+    workspaceUrl: '/marketing/soothing-cream-version-compare/',
   },
   {
     slug: 'pdrn-hyaluronic-ampoule',
@@ -508,6 +509,49 @@ export const productVersions: Record<string, ProductVersion[]> = {
       metrics: [
         { label: '상세', value: '12' },
         { label: '후반 순서', value: '10 포장 → 11 공식판매처 → 12 법정표' },
+        { label: '상태', value: '쿠팡 미반영 후보' },
+      ],
+    },
+  ],
+  'soothing-cream': [
+    {
+      id: 'original',
+      label: '원본 등록본',
+      status: 'live',
+      date: '-',
+      summary: '현재 실제 쿠팡 CDN 기준 원본입니다. 대표 6장과 상세 15컷을 기준점으로 둡니다.',
+      mainImages: Array.from({ length: 6 }, (_, i) => '/coupang-main/soothing-cream/' + String(i + 1).padStart(2, '0') + '.png'),
+      detailImages: Array.from({ length: 15 }, (_, i) => '/coupang-detail/9402735935/' + String(i + 1).padStart(2, '0') + '.png'),
+      links: [
+        { label: '원본 대표 1번 열기', href: '/coupang-main/soothing-cream/01.png' },
+      ],
+      metrics: [
+        { label: '대표', value: '6' },
+        { label: '상세', value: '15' },
+        { label: '상태', value: '실제 쿠팡 CDN 원본' },
+      ],
+    },
+    {
+      id: 'v1',
+      label: 'V1 후보',
+      status: 'candidate',
+      date: '2026-06-17',
+      summary: 'PDRN 히알루론산 수딩 크림 V1 후보입니다. ChatGPT Images를 통해 대표 01~06과 상세 흐름을 순차 생성/내부 QA 후 반영했고, 상세 01과 02 사이에 성인 여성 사용감 브릿지 컷 01a를 추가했습니다. 최종 검토 후 01a/02~05 해상도를 780×1360으로 정규화했고, 저자극 컷의 강한 표현을 완화했으며, 제품정보·전성분 표는 내용 유지 상태로 V1 톤을 보강해 맨뒤 표시 순서로 배치했습니다. 쿠팡에는 아직 미반영입니다.',
+      mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/soothing-cream/versions/v1/representative/' + String(i + 1).padStart(2, '0') + '.png'),
+      detailImages: [
+        '/coupang/images/soothing-cream/versions/v1/detail/01.png',
+        '/coupang/images/soothing-cream/versions/v1/detail/01a.png',
+        ...Array.from({ length: 12 }, (_, i) => '/coupang/images/soothing-cream/versions/v1/detail/' + String(i + 2).padStart(2, '0') + '.png'),
+        '/coupang/images/soothing-cream/versions/v1/detail/15.png',
+        '/coupang/images/soothing-cream/versions/v1/detail/14.png',
+      ],
+      links: [
+        { label: 'V1 비교 페이지 열기', href: '/marketing/soothing-cream-version-compare/' },
+        { label: 'V1 대표 1번 열기', href: '/coupang/images/soothing-cream/versions/v1/representative/01.png' },
+      ],
+      metrics: [
+        { label: '대표', value: '6컷 GPT Images 순차 생성' },
+        { label: '상세', value: '01a 포함 16컷 · 780×1360 정규화 · 저자극 문구 완화 · 법정표 V1 톤 보강' },
         { label: '상태', value: '쿠팡 미반영 후보' },
       ],
     },
