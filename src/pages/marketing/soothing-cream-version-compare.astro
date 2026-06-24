@@ -87,7 +87,7 @@ const activeVersion = versions.find((version) => version.id === 'v1') ?? version
 const maxDetailCount = Math.max(...versions.map((version) => version.detailCount));
 const initialSelected = new Set(['original', activeVersion.id]);
 const summaryImage = (version) => version.representativeImages[0]?.src ?? version.detailImages[0]?.src;
-const cacheBust = 'soothing-cream-review-feedback-20260623-ph-table-fix';
+const cacheBust = 'soothing-cream-detail11-full-remake-no-ph56-20260624';
 const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheBust}`;
 ---
 
