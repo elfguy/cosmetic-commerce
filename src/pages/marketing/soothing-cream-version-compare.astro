@@ -48,12 +48,12 @@ const detailV1Order = [
   { file: '07', label: '수분크림 제형 사용감 · 상단 배지 제거' },
   { file: '08', label: '피부 저자극 테스트 · 자극 표현 완화 반영' },
   { file: '09', label: 'EWG 그린 등급·무향 타입 · GPT 첨부 레퍼런스 톤앤매너 재제작' },
-  { file: '10', label: '약산성 pH 설계 · 상단 배지 제거·pH 5.6 위치 수정' },
+  { file: '10', label: '약산성 pH 설계 · 게이지 숫자 표기 제거' },
   { file: '11', label: '제조일자·신선 출고 · 상단 배지 제거' },
   { file: '12', label: '사용법·텍스처 안내 톤앤매너 재제작' },
   { file: '13', label: '첨부 구조 기반 미니멀 패키지·직접 판매 안내' },
   { file: '15', label: '첨부 구조 기반 무단 리셀러 주의 안내' },
-  { file: '14', label: '제품정보·전성분 표 맨뒤 · GPT Images 톤앤매너 보정' },
+  { file: '14', label: '제품정보·전성분 표 맨뒤 · 전성분 오타/누락 수정' },
 ];
 
 const v1Detail = detailV1Order.map((item, index) => {
@@ -87,7 +87,7 @@ const activeVersion = versions.find((version) => version.id === 'v1') ?? version
 const maxDetailCount = Math.max(...versions.map((version) => version.detailCount));
 const initialSelected = new Set(['original', activeVersion.id]);
 const summaryImage = (version) => version.representativeImages[0]?.src ?? version.detailImages[0]?.src;
-const cacheBust = 'soothing-cream-gpt-table-no-source-note-20260623';
+const cacheBust = 'soothing-cream-review-feedback-20260623-ph-table-fix';
 const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheBust}`;
 ---
 
