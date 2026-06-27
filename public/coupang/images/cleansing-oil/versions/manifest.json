@@ -5,7 +5,7 @@
   "versions": [
     {
       "id": "original",
-      "label": "원본 등록본",
+      "label": "쿠팡 원본",
       "representativeImages": [
         {
           "src": "public/coupang-main/cleansing-oil/01.png",
@@ -111,12 +111,16 @@
         {
           "src": "public/coupang/images/cleansing-oil/versions/v1/representative/05.png",
           "label": "대표 05 · V1 후보 · 산뜻한 마무리/신뢰"
+        },
+        {
+          "src": "public/coupang/images/cleansing-oil/versions/v1/representative/06.png",
+          "label": "대표 06 · V1 후보 · 데일리 클렌징 루틴"
         }
       ],
       "detailImages": [
         {
           "src": "public/coupang/images/cleansing-oil/versions/v1/detail/01.png",
-          "label": "상세 01 · V1 후보 · 제품 원본 중심 재생성"
+          "label": "상세 01 · V1 후보 · 첨부 샘플형 히어로/원본비율"
         },
         {
           "src": "public/coupang/images/cleansing-oil/versions/v1/detail/02.png",
