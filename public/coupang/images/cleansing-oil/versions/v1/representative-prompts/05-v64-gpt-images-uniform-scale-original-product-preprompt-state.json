@@ -1,0 +1,15 @@
+{
+  "url": "https://chatgpt.com/images/",
+  "title": "ChatGPT Images 2.0 | AI 이미지 생성기",
+  "bodyHasComment": false,
+  "bodyHasShare": false,
+  "fileRemoveButtons": [
+    "파일 1 제거: 05.png",
+    "파일 2 제거: 클렌징오일3.png",
+    "파일 3 제거: 05.png",
+    "파일 4 제거: 02.png",
+    "파일 5 제거: 04.png"
+  ],
+  "textareaVisible": true,
+  "promptText": ""
+}
