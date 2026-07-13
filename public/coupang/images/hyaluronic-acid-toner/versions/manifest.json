@@ -1,7 +1,7 @@
 {
   "productId": "hyaluronic-acid-toner",
   "productName": "유어스킨플러스 히알루론산 토너 500ml",
-  "activeVersion": "v1",
+  "activeVersion": "v2",
   "versions": [
     {
       "id": "original",
@@ -111,6 +111,43 @@
       "detailCount": 13,
       "note": "토너 V1 대표 6장 + 상세 13컷 정리본. 기존 전성분/제품정보 컷은 제거하고, 공식 판매 안내 컷을 12번으로 이동, 첨부 표시정보/전성분 표를 13번에 배치했습니다.",
       "representativeCount": 6
+    },
+    {
+      "id": "v2",
+      "label": "V2 · 생성형 실사 메인",
+      "status": "review",
+      "source": "public/coupang/images/hyaluronic-acid-toner/versions/v2",
+      "representativeImages": [
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative/01.png",
+          "label": "대표 01 · Seedream V18 4K 승인본"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative/02.png",
+          "label": "대표 02 · GPT Image 2 V15 2K 선명 제품 승인본"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative/03.png",
+          "label": "대표 03 · Nano V4b 원본 라벨·비율 교정 승인본"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative/04.png",
+          "label": "대표 04 · GPT Image 2 V4c 선명·투명·정확 비율 승인본"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative/05.png",
+          "label": "대표 05 · GPT Image 2 V1b 선명·투명·정확 비율 승인본"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative/06.png",
+          "label": "대표 06 · GPT Image 2 V1c 선명·투명·정확 비율 승인본"
+        }
+      ],
+      "detailCount": 13,
+      "detailDir": "detail",
+      "representativeCount": 6,
+      "note": "대시보드 V2입니다. 상세 01은 GPT Image 2 V2b 생동감 물 승인본이며, 상세 02·04·05·06·07은 원본 상세와 Drive 제품 원본을 참조해 제품·배경·물·조명·반사를 API에서 한 장면으로 통합 생성한 승인본입니다. 전부 780×1360px이고 제품 로컬 합성·마스크·붙여넣기 보정은 사용하지 않았습니다. 쿠팡 라이브 상품은 변경하지 않았습니다.",
+      "cacheBuster": "detail-batch-seamless-approved-20260714"
     }
   ]
 }

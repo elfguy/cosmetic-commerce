@@ -1,0 +1,17 @@
+{
+  "source": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail-candidates/06-v3-kie-gpt-image-2-2k-seamless-ratio-corrected-candidate.png",
+  "sourceSize": [
+    1152,
+    2048
+  ],
+  "finalCanvasSize": [
+    780,
+    1360
+  ],
+  "postprocess": "whole-canvas resize only",
+  "localProductComposite": false,
+  "additionalCredits": 0,
+  "dashboardUpdated": false,
+  "coupangUploaded": false,
+  "sha256": "3ca87d77cdf81ddf9fcfe73be168552d885bc0116313e51889137f414d19d6c2"
+}

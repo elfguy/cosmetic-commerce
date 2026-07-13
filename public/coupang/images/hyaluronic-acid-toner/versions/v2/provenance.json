@@ -1,0 +1,341 @@
+{
+  "version": "v2",
+  "createdAt": "2026-07-13",
+  "scope": "dashboard V2 active; Coupang unchanged",
+  "representative": [
+    {
+      "slot": 1,
+      "source": "approved Seedream V4 Edit V18 4K integrated badge dashboard candidate",
+      "path": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative-candidates/01-v18-kie-seedream-v4-edit-4k-integrated-badge-candidate.png",
+      "sha256": "5e9b5254ec969e1bb0d1fffe2f63d3cfc26701d17c1c5c98e03eae19fd360ba9",
+      "bytes": 3039940,
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "approvedForDashboard": true,
+      "appliedAt": "2026-07-13",
+      "productRatioApprox": 0.28,
+      "coupangUploaded": false
+    },
+    {
+      "slot": 2,
+      "source": "approved GPT Image 2 V15 2K API sharp product candidate",
+      "path": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative-candidates/02-v15-kie-gpt-image-2-2k-product-only-sharp-candidate.png",
+      "sha256": "edc51baac8c7e6352d5f3be8ed3000ff8984a397a8f593575f88e58495a48025",
+      "bytes": 4695460,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "approvedForDashboard": true,
+      "appliedAt": "2026-07-13",
+      "productBBox2K": [
+        1295,
+        157,
+        1791,
+        1852
+      ],
+      "productSize2K": [
+        496,
+        1695
+      ],
+      "productRatioApprox": 0.292625,
+      "targetRatio": 0.297297,
+      "coupangUploaded": false
+    },
+    {
+      "slot": 3,
+      "source": "approved Nano Banana V4b exact original label and ratio-corrected dashboard candidate",
+      "url": "https://image.coupangcdn.com/image/vendor_inventory/6ae0/587264cfe06f31e9dff45d79ed6fb38a5e3ff94657a38cca7395a7648097.png",
+      "sha256": "2f2ec7906a23edf25d8501c7a420b8540ea0e5a4cbe99636aa2c80cf8fdc1445",
+      "bytes": 1233826,
+      "path": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative-candidates/03-v4b-kie-nano-banana-original-ratio-corrected-candidate.png",
+      "approvedForDashboard": true,
+      "appliedAt": "2026-07-13",
+      "productRatio": 0.2976,
+      "coupangUploaded": false
+    },
+    {
+      "slot": 4,
+      "source": "approved GPT Image 2 V4 API product with exact-ratio V4c normalization",
+      "path": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative-candidates/04-v4c-gpt-api-exact-ratio-right-edge-clean-candidate.png",
+      "sha256": "497399b1ceff43479171cc02ad7a1db36bc8e0db41cac425a694193792163ede",
+      "bytes": 3734083,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "approvedForDashboard": true,
+      "appliedAt": "2026-07-13",
+      "productBBox2K": [
+        1160,
+        176,
+        1662,
+        1866
+      ],
+      "productSize2K": [
+        502,
+        1690
+      ],
+      "productRatio": 0.297041,
+      "productCenter": [
+        1411,
+        1021
+      ],
+      "apiModel": "gpt-image-2-image-to-image",
+      "coupangUploaded": false
+    },
+    {
+      "slot": 5,
+      "source": "approved GPT Image 2 V1 API sharp clear product with exact-ratio normalization",
+      "path": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative-candidates/05-v1b-gpt-api-product-exact-524x1764-normalized-candidate.png",
+      "sha256": "0e8b9ad83419b1a845073d9b5ee680057754341454606fbdfe60706693109a6d",
+      "bytes": 4091361,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "approvedForDashboard": true,
+      "appliedAt": "2026-07-13",
+      "productBBox2K": [
+        1196,
+        188,
+        1720,
+        1952
+      ],
+      "productSize2K": [
+        524,
+        1764
+      ],
+      "productRatio": 0.297052,
+      "productCenter": [
+        1458,
+        1070
+      ],
+      "apiModel": "gpt-image-2-image-to-image",
+      "coupangUploaded": false
+    },
+    {
+      "slot": 6,
+      "source": "approved GPT Image 2 V1 API sharp clear product with exact-ratio normalization",
+      "path": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative-candidates/06-v1c-gpt-api-exact-ratio-left-ghost-clean-candidate.png",
+      "sha256": "8d600e5d955d7bbe30e254246f628eae9237b347f196d87f24b4d2c2db872f9b",
+      "bytes": 4325092,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "approvedForDashboard": true,
+      "appliedAt": "2026-07-13",
+      "productBBox2K": [
+        1253,
+        195,
+        1733,
+        1804
+      ],
+      "productSize2K": [
+        480,
+        1609
+      ],
+      "productRatio": 0.298322,
+      "productCenter": [
+        1493,
+        999.5
+      ],
+      "apiModel": "gpt-image-2-image-to-image",
+      "coupangUploaded": false
+    }
+  ],
+  "details": {
+    "source": "current Coupang OpenAPI sync",
+    "count": 13,
+    "path": "public/coupang-detail/9025733014",
+    "overrides": {
+      "01": {
+        "source": "approved GPT Image 2 V2b vivid-water detail recreation with original detail and Drive product references",
+        "path": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail-candidates/01-v2b-gpt-api-vivid-water-exact-780x1360-product-243x818-candidate.png",
+        "sha256": "2a327b6679450825a46cd6edfd648733d31bf9a177fa9e6f066f15170f36d2a7",
+        "bytes": 1070025,
+        "dimensions": [
+          780,
+          1360
+        ],
+        "approvedForDashboard": true,
+        "appliedAt": "2026-07-13",
+        "canvasRatio": 0.573529,
+        "productBBox": [
+          457,
+          360,
+          700,
+          1178
+        ],
+        "productSize": [
+          243,
+          818
+        ],
+        "productRatio": 0.297066,
+        "productCenter": [
+          578.5,
+          769
+        ],
+        "waterDirection": "dynamic diagonal splash, irregular airborne droplets and soft ripples",
+        "apiModel": "gpt-image-2-image-to-image",
+        "coupangUploaded": false
+      },
+      "02": {
+        "appliedAt": "2026-07-14",
+        "approvalMessageId": "1526294253867892826",
+        "feedbackMessageId": "1526286855765758084",
+        "model": "GPT Image 2 2K image-to-image",
+        "version": "v3a",
+        "candidateSource": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail-candidates/02-v3a-gpt-api-seamless-ratio-corrected-exact-780x1360-candidate.png",
+        "appliedPath": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/02.png",
+        "canvasSize": [
+          780,
+          1360
+        ],
+        "referenceInputs": [
+          "clean API full-scene candidate",
+          "original detail 02",
+          "Drive high-resolution original product"
+        ],
+        "postprocess": "whole-canvas resize from 1152x2048 to 780x1360 only; no local product composite, mask, copy/paste, or bbox warp",
+        "integrationQA": [
+          "no rectangular patch",
+          "no white halo",
+          "no former cap residue",
+          "no double silhouette",
+          "no cloned background strip",
+          "scene-matched water, lighting, refraction, contact and reflection"
+        ],
+        "sha256": "28d65d162cd13a0fe38801e7c764a1f3195a05d9ad49ae3c1e70497718d5c874",
+        "dashboardUpdated": true,
+        "coupangUploaded": false
+      },
+      "04": {
+        "appliedAt": "2026-07-14",
+        "approvalMessageId": "1526294253867892826",
+        "feedbackMessageId": "1526286855765758084",
+        "model": "GPT Image 2 2K image-to-image",
+        "version": "v3a",
+        "candidateSource": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail-candidates/04-v3a-gpt-api-seamless-ratio-corrected-exact-780x1360-candidate.png",
+        "appliedPath": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/04.png",
+        "canvasSize": [
+          780,
+          1360
+        ],
+        "referenceInputs": [
+          "clean API full-scene candidate",
+          "original detail 04",
+          "Drive high-resolution original product"
+        ],
+        "postprocess": "whole-canvas resize from 1152x2048 to 780x1360 only; no local product composite, mask, copy/paste, or bbox warp",
+        "integrationQA": [
+          "no rectangular patch",
+          "no white halo",
+          "no former cap residue",
+          "no double silhouette",
+          "no cloned background strip",
+          "scene-matched water, lighting, refraction, contact and reflection"
+        ],
+        "sha256": "0dd0a43679da35068b33fbd15a874ba0255bfbdd88a13680feade82647dbc5d5",
+        "dashboardUpdated": true,
+        "coupangUploaded": false
+      },
+      "05": {
+        "appliedAt": "2026-07-14",
+        "approvalMessageId": "1526294253867892826",
+        "feedbackMessageId": "1526286855765758084",
+        "model": "GPT Image 2 2K image-to-image",
+        "version": "v2a",
+        "candidateSource": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail-candidates/05-v2a-gpt-api-seamless-full-scene-exact-780x1360-candidate.png",
+        "appliedPath": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/05.png",
+        "canvasSize": [
+          780,
+          1360
+        ],
+        "referenceInputs": [
+          "clean API full-scene candidate",
+          "original detail 05",
+          "Drive high-resolution original product"
+        ],
+        "postprocess": "whole-canvas resize from 1152x2048 to 780x1360 only; no local product composite, mask, copy/paste, or bbox warp",
+        "integrationQA": [
+          "no rectangular patch",
+          "no white halo",
+          "no former cap residue",
+          "no double silhouette",
+          "no cloned background strip",
+          "scene-matched water, lighting, refraction, contact and reflection"
+        ],
+        "sha256": "98c51f77fed04629bedcdfe03c9dc9efec544ea4d4b20ddd63d45d8f0721e811",
+        "dashboardUpdated": true,
+        "coupangUploaded": false
+      },
+      "06": {
+        "appliedAt": "2026-07-14",
+        "approvalMessageId": "1526294253867892826",
+        "feedbackMessageId": "1526286855765758084",
+        "model": "GPT Image 2 2K image-to-image",
+        "version": "v3a",
+        "candidateSource": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail-candidates/06-v3a-gpt-api-seamless-ratio-corrected-exact-780x1360-candidate.png",
+        "appliedPath": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/06.png",
+        "canvasSize": [
+          780,
+          1360
+        ],
+        "referenceInputs": [
+          "clean API full-scene candidate",
+          "original detail 06",
+          "Drive high-resolution original product"
+        ],
+        "postprocess": "whole-canvas resize from 1152x2048 to 780x1360 only; no local product composite, mask, copy/paste, or bbox warp",
+        "integrationQA": [
+          "no rectangular patch",
+          "no white halo",
+          "no former cap residue",
+          "no double silhouette",
+          "no cloned background strip",
+          "scene-matched water, lighting, refraction, contact and reflection"
+        ],
+        "sha256": "3ca87d77cdf81ddf9fcfe73be168552d885bc0116313e51889137f414d19d6c2",
+        "dashboardUpdated": true,
+        "coupangUploaded": false
+      },
+      "07": {
+        "appliedAt": "2026-07-14",
+        "approvalMessageId": "1526294253867892826",
+        "feedbackMessageId": "1526286855765758084",
+        "model": "GPT Image 2 2K image-to-image",
+        "version": "v3a",
+        "candidateSource": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail-candidates/07-v3a-gpt-api-seamless-ratio-corrected-exact-780x1360-candidate.png",
+        "appliedPath": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/07.png",
+        "canvasSize": [
+          780,
+          1360
+        ],
+        "referenceInputs": [
+          "clean API full-scene candidate",
+          "original detail 07",
+          "Drive high-resolution original product"
+        ],
+        "postprocess": "whole-canvas resize from 1152x2048 to 780x1360 only; no local product composite, mask, copy/paste, or bbox warp",
+        "integrationQA": [
+          "no rectangular patch",
+          "no white halo",
+          "no former cap residue",
+          "no double silhouette",
+          "no cloned background strip",
+          "scene-matched water, lighting, refraction, contact and reflection"
+        ],
+        "sha256": "0477eda653af1e8478689757734c56646937e6421e29fecadd57587b30fa0017",
+        "dashboardUpdated": true,
+        "coupangUploaded": false
+      }
+    }
+  },
+  "coupangUploaded": false,
+  "updatedAt": "2026-07-14",
+  "note": "V2 detail 01 approved vivid-water API version plus seamless full-scene API detail replacements for 02, 04, 05, 06, 07. No Coupang live upload."
+}

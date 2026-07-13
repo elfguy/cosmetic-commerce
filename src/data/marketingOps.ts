@@ -212,6 +212,24 @@ export type ProductVersion = {
 export const productVersions: Record<string, ProductVersion[]> = {
   'hyaluronic-toner': [
     {
+      id: 'v2',
+      label: 'V2 · 생성형 실사 메인',
+      status: 'review',
+      date: '2026-07-13',
+      summary: '대표 6장과 상세 13컷을 관리하는 V2입니다. 상세 01은 GPT Image 2 생동감 물 승인본, 상세 02·04·05·06·07은 원본 상세와 Drive 제품 원본을 참조해 제품·배경·물·조명·반사를 한 장면으로 통합 생성한 승인본입니다. 쿠팡 라이브는 변경하지 않았습니다.',
+      mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v2/representative/' + String(i + 1).padStart(2, '0') + '.png'),
+      detailImages: Array.from({ length: 13 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v2/detail/' + String(i + 1).padStart(2, '0') + '.png'),
+      links: [
+        { label: '토너 V2 비교 페이지 열기', href: '/marketing/hyaluronic-toner-version-compare/' },
+        { label: 'V2 첫 대표 이미지 열기', href: '/coupang/images/hyaluronic-acid-toner/versions/v2/representative/01.png' },
+      ],
+      metrics: [
+        { label: '대표', value: '6' },
+        { label: '상세', value: '13' },
+        { label: '상태', value: '검토용' },
+      ],
+    },
+    {
       id: 'v1',
       label: 'V1',
       status: 'live',
