@@ -216,7 +216,7 @@ export const productVersions: Record<string, ProductVersion[]> = {
       label: 'V2 · 생성형 실사 메인',
       status: 'review',
       date: '2026-07-13',
-      summary: '대표 6장과 상세 13컷을 관리하는 V2입니다. 상세 01은 GPT Image 2 생동감 물 승인본, 상세 02·04·05·06·07은 원본 상세와 Drive 제품 원본을 참조해 제품·배경·물·조명·반사를 한 장면으로 통합 생성한 승인본입니다. 쿠팡 라이브는 변경하지 않았습니다.',
+      summary: '대표 6장과 상세 13컷을 관리하는 V2입니다. 상세 01은 첨부 물방울 스타일과 Drive 제품 원본을 참조한 Nano Banana Pro 4K V4a 승인본, 상세 02·04·05·06·07은 GPT Image 2 전체 장면 통합 승인본입니다. 쿠팡 라이브는 변경하지 않았습니다.',
       mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v2/representative/' + String(i + 1).padStart(2, '0') + '.png'),
       detailImages: Array.from({ length: 13 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v2/detail/' + String(i + 1).padStart(2, '0') + '.png'),
       links: [

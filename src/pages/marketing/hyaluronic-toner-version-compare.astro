@@ -53,7 +53,7 @@ const activeVersion = versions.find((version) => version.id === versionsManifest
 const maxDetailCount = Math.max(...versions.map((version) => version.detailCount));
 const initialSelected = new Set(['original', activeVersion.id]);
 const summaryImage = (version) => version.representativeImages[0]?.src ?? version.detailImages[0]?.src;
-const cacheBust = 'toner-detail-batch-seamless-approved-20260714';
+const cacheBust = 'toner-detail01-nano-pro-droplets-approved-20260714';
 const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheBust}`;
 ---
 

@@ -1,0 +1,27 @@
+{
+  "source": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail-candidates/01-v4-kie-nano-banana-pro-4k-layout-locked-droplet-only-candidate.png",
+  "sourceSize": [
+    3072,
+    5504
+  ],
+  "centerCrop": [
+    0,
+    74,
+    3072,
+    5430
+  ],
+  "cropSize": [
+    3072,
+    5356
+  ],
+  "finalCanvasSize": [
+    780,
+    1360
+  ],
+  "postprocess": "whole-canvas center crop and resize only; no local product edit or composite",
+  "model": "Nano Banana Pro 4K",
+  "creditsSourceTask": 24,
+  "dashboardUpdated": false,
+  "coupangUploaded": false,
+  "sha256": "b34c8d30093e82634359ade54216a03060e2c18e029589589f034cd50cabd457"
+}

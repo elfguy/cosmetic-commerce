@@ -153,34 +153,50 @@
     "path": "public/coupang-detail/9025733014",
     "overrides": {
       "01": {
-        "source": "approved GPT Image 2 V2b vivid-water detail recreation with original detail and Drive product references",
-        "path": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail-candidates/01-v2b-gpt-api-vivid-water-exact-780x1360-product-243x818-candidate.png",
-        "sha256": "2a327b6679450825a46cd6edfd648733d31bf9a177fa9e6f066f15170f36d2a7",
-        "bytes": 1070025,
-        "dimensions": [
+        "appliedAt": "2026-07-14",
+        "approvalMessageId": "1526307370320265328",
+        "requestMessageId": "1526300329229156522",
+        "model": "Nano Banana Pro 4K",
+        "version": "V4a attached-droplet style",
+        "candidateSource": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail-candidates/01-v4a-nano-banana-pro-attached-droplet-style-exact-780x1360-candidate.png",
+        "appliedPath": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/01.png",
+        "canvasSize": [
           780,
           1360
         ],
-        "approvedForDashboard": true,
-        "appliedAt": "2026-07-13",
-        "canvasRatio": 0.573529,
-        "productBBox": [
-          457,
-          360,
-          700,
+        "estimatedProductBBox": [
+          469,
+          366,
+          711,
           1178
         ],
-        "productSize": [
-          243,
-          818
+        "estimatedProductSize": [
+          242,
+          812
         ],
-        "productRatio": 0.297066,
-        "productCenter": [
-          578.5,
-          769
+        "estimatedProductRatio": 0.29802955665024633,
+        "driveProductRatio": 0.2973881561934316,
+        "relativeRatioDifferencePercent": 0.2156778753480415,
+        "referenceInputs": [
+          "previous approved Detail 01 layout",
+          "Drive high-resolution original product",
+          "user-attached cap/shoulder condensation style crop"
         ],
-        "waterDirection": "dynamic diagonal splash, irregular airborne droplets and soft ripples",
-        "apiModel": "gpt-image-2-image-to-image",
+        "postprocess": "whole-canvas center crop from 3072x5504 to 3072x5356 and resize to 780x1360 only; no local product edit or composite",
+        "integrationQA": [
+          "irregular realistic condensation droplets",
+          "lively integrated water surface and base splash",
+          "no rectangular patch",
+          "no halo",
+          "no former-product residue",
+          "no copied attachment layout or text"
+        ],
+        "rejectedAttempt": {
+          "version": "V3 Nano Banana Pro 4K",
+          "reason": "redesigned layout and inserted explanatory prompt text; never applied"
+        },
+        "sha256": "b34c8d30093e82634359ade54216a03060e2c18e029589589f034cd50cabd457",
+        "dashboardUpdated": true,
         "coupangUploaded": false
       },
       "02": {
@@ -337,5 +353,5 @@
   },
   "coupangUploaded": false,
   "updatedAt": "2026-07-14",
-  "note": "V2 detail 01 approved vivid-water API version plus seamless full-scene API detail replacements for 02, 04, 05, 06, 07. No Coupang live upload."
+  "note": "V2 detail 01 uses approved Nano Banana Pro V4a attached-droplet-style full-scene candidate. Details 02, 04, 05, 06, 07 use seamless GPT Image 2 full-scene candidates. No Coupang live upload."
 }
