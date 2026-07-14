@@ -53,7 +53,7 @@ const activeVersion = versions.find((version) => version.id === versionsManifest
 const maxDetailCount = Math.max(...versions.map((version) => version.detailCount));
 const initialSelected = new Set(['original', activeVersion.id]);
 const summaryImage = (version) => version.representativeImages[0]?.src ?? version.detailImages[0]?.src;
-const cacheBust = 'cleansing-gel-v1-compare-20260610-numbered-table-last';
+const cacheBust = 'cleansing-gel-v1-detail13-citric-acid-20260714';
 const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheBust}`;
 ---
 

@@ -36,6 +36,14 @@
       "representativeCount": 6,
       "detailCount": 15,
       "source": "public/coupang/images/aqua-lotion/versions/v4",
+      "ingredientCorrections": {
+        "detail/14": {
+          "requested": "앞쪽 중복 글리세릴스테아레이트에스이 및 다이프로필렌글라이콜 삭제",
+          "verifiedSequence": "프로판다이올, 마카다미아씨오일, 글리세릴스테아레이트에스이, 다이프로필렌글라이콜, 해바라기씨오일",
+          "status": "uploaded-approved",
+          "coupangCdn": "vendor_inventory/171f/4e255ba1f92b335756d98771d4365048dbd155a621c81a5bf3e329d9b320.png"
+        }
+      },
       "detailImages": [
         "/coupang/images/aqua-lotion/versions/v4/detail/01.png",
         "/coupang/images/aqua-lotion/versions/v4/detail/02.png",
