@@ -63,6 +63,13 @@ export const siteSections: SiteSection[] = [
         cover: 'linear-gradient(135deg, #1f2a24, #b5654a)',
       },
       {
+        href: '/marketing/coupang-business-insight/',
+        title: '비즈니스 인사이트 운영 전략',
+        desc: 'Wing 판매·유입·카테고리 분석 기능과 상품별 매출 성장 액션, 무료체험 실행 일정.',
+        tag: '마케팅',
+        cover: 'linear-gradient(135deg, #8c4830, #1f2a24)',
+      },
+      {
         href: '/workspaces/',
         title: '상세 버전 랩',
         desc: '제품별 현재 적용 상세, 후보 버전, 최종 업로드 자료를 한 흐름에서 비교.',

@@ -1,0 +1,348 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+
+const wingLinks = [
+  { label: '판매분석 열기', href: 'https://wing.coupang.com/tenants/business-insight/sales-analysis' },
+  { label: '유입경로 분석 열기', href: 'https://wing.coupang.com/tenants/business-insight/traffic-analysis' },
+  { label: '카테고리 분석 열기', href: 'https://wing.coupang.com/tenants/business-insight/category-analysis' },
+];
+
+const featureRows = [
+  { area: '판매분석', data: '방문자 · 조회 · 장바구니 · 주문 · 판매량 · 매출 · 구매전환율', use: '상품별 병목 진단과 이미지 변경 전후 판정' },
+  { area: '광고 성과', data: '광고 매출 · 집행 광고비 · ROAS · 판매량/매출 기여도', use: '매출이 아닌 공헌이익 기준으로 확대·축소' },
+  { area: '검색어 분석', data: '검색량 · 노출 · 클릭 · 장바구니 · 판매 · 매출 · 트렌드', use: '상품명, 광고 키워드, 상세 첫 화면 문구 개선' },
+  { area: '유입경로', data: '광고 · 검색 · 추천 · 프로모션 · 마이쿠팡 · 마이샵 · 라이브', use: '광고 의존도와 자연유입 성장 여부 추적' },
+  { area: '카테고리 분석', data: 'Top 경쟁상품 · 검색어 · 브랜드 · 가격 · 리뷰 · CTR', use: '카테고리 문법을 반영한 대표 이미지·오퍼 설계' },
+  { area: '파트너 캠페인', data: '외부 채널별 고유 추적 링크', use: '인스타그램·유튜브·블로그 콘텐츠의 실제 주문 기여 확인' },
+];
+
+const products = [
+  { group: '확대', tone: 'good', name: '히알루론산 아쿠아 로션', signal: '조회 20 · 주문 2 · CVR 10.0%', issue: '전환 신호 있음, 유입량 부족', action: '상세는 유지하고 고전환 검색어·광고 유입 확대' },
+  { group: '확대', tone: 'good', name: '히알루론산 토너', signal: '조회 12 · 주문 1 · CVR 8.33%', issue: '전환 신호 있음, 표본 작음', action: '검색 노출 확대 후 ROAS와 자연유입 동시 관찰' },
+  { group: '개선', tone: 'warn', name: '화이트닝 톤 케어 크림', signal: '조회 28 · 장바구니 2 · 주문 1 · CVR 3.57%', issue: '유입 대비 전환 약함', action: '대표 이미지 1장만 먼저 변경 → D7/D14 비교' },
+  { group: '노출', tone: 'info', name: 'PDRN 히알루론산 수딩 크림', signal: '조회 6 · 주문 0', issue: '전환 판단 전 트래픽 부족', action: '검색어·상품명·소액 광고로 측정 가능한 조회 확보' },
+  { group: '보류', tone: 'muted', name: '클렌징오일 · 젤 · 에센스 · 립밤', signal: '옵션별 조회 1~3 수준 · 주문 0', issue: '표본 부족', action: '상세 재작업보다 카테고리 수요·노출 가능성 먼저 검증' },
+];
+
+const diagnosis = [
+  { when: '검색 노출은 높은데 클릭이 낮음', read: '대표 이미지 · 상품명 · 가격 경쟁력 문제', do: 'Top 경쟁상품 CTR/썸네일 비교 후 대표 이미지 한 장 실험' },
+  { when: '조회는 쌓이는데 장바구니가 없음', read: '상세 첫 화면 · 가격 · 혜택 · 리뷰 신뢰 문제', do: '핵심 효능, 대상 고객, 용량 대비 가치, 배송 혜택 재구성' },
+  { when: '장바구니는 있는데 주문이 없음', read: '배송일 · 배송비 · 쿠폰 · 옵션 · 최종 신뢰 문제', do: '판매자배송/로켓그로스와 쿠폰 조건을 옵션별 비교' },
+  { when: '광고 매출은 있는데 이익이 없음', read: 'ROAS가 손익분기점보다 낮음', do: 'SKU별 공헌이익률로 손익분기 ROAS 계산 후 예산 이동' },
+];
+
+const planRows = [
+  { label: '상품별 트래픽·전환·매출', standard: '제공', premium: '제공' },
+  { label: '검색어/유입경로/파트너 캠페인', standard: '제공', premium: '제공' },
+  { label: 'Top 경쟁상품·검색어', standard: '20개 / 하위 10개', premium: '20개 / 하위 10개' },
+  { label: '카테고리 분석 기간', standard: '최대 30일', premium: '최대 360일' },
+  { label: '카테고리 분석 개수', standard: '내 카테고리 최대 3개', premium: '내 모든 카테고리' },
+  { label: '브랜드별 상품 랭킹·노출 세분화', standard: '제한', premium: '제공' },
+  { label: '날짜별 랭킹 트렌드', standard: '제한', premium: '제공' },
+];
+
+const schedule = [
+  { date: '7월 31일까지', title: 'Top 100 베타 데이터 확보', body: '데이크림·로션·토너 경쟁상품, 검색어, 브랜드 데이터를 저장한다. 베타 종료 후 기본 Top 20 제한에 대비한다.' },
+  { date: '8월 1일–7일', title: '첫 번째 매출 실험', body: '화이트닝 크림 대표 이미지 한 장만 교체하고, 아쿠아 로션·토너로 광고 예산을 집중한다.' },
+  { date: '8월 8일–13일', title: 'D7 판정과 구독 결정', body: 'CTR·장바구니율·CVR·광고비 절감·추가 공헌이익을 비교해 월 99,000원 이상의 가치가 있었는지 판단한다.' },
+  { date: '매주 월요일', title: '7일/30일 스냅샷', body: '엑셀을 저장하고 확대·개선·노출·보류 상품을 다시 분류한다. 변경일에는 D0, 이후 D7/D14를 별도 기록한다.' },
+];
+---
+
+<BaseLayout title="쿠팡 비즈니스 인사이트 운영 전략" description="쿠팡 Wing 비즈니스 인사이트 기능, 현재 판매 퍼널, 상품별 액션과 무료체험 실행 계획을 정리한 마케팅 대시보드">
+  <SiteHeader active="/sales-analysis/" />
+
+  <main class="bi-page">
+    <section class="hero container">
+      <div class="hero__copy">
+        <div class="status-line"><span class="live-dot"></span> WING LIVE DATA REVIEW · 2026.07.15</div>
+        <p class="eyebrow">Business Insight → Growth Operating System</p>
+        <h1>데이터를 보는 데서 끝내지 않고,<br /><em>다음 판매 행동</em>으로 연결한다.</h1>
+        <p class="lead">유어스킨플러스의 쿠팡 판매분석·유입경로·카테고리 분석을 실제로 확인한 결과와, 무료체험 기간 안에 매출 개선 효과를 검증하는 실행안입니다.</p>
+        <div class="hero__actions">
+          <a class="primary-action" href="#action-plan">실행 계획 바로 보기</a>
+          <a class="secondary-action" href="/sales-analysis/">기존 매출 분석 보드</a>
+        </div>
+      </div>
+      <aside class="subscription-card">
+        <span class="card-kicker">STANDARD · FREE TRIAL</span>
+        <strong>₩99,000<small>/월</small></strong>
+        <dl>
+          <div><dt>무료체험 종료</dt><dd>2026.08.13</dd></div>
+          <div><dt>과금 시작</dt><dd>2026.08.14</dd></div>
+          <div><dt>8월 예정</dt><dd>58,586원</dd></div>
+          <div><dt>결제</dt><dd>다음 정산금 차감</dd></div>
+        </dl>
+        <p>유지 기준은 “재미있는 데이터”가 아니라 <b>월 추가 공헌이익 99,000원 이상</b>입니다.</p>
+      </aside>
+    </section>
+
+    <nav class="jump-nav container" aria-label="페이지 바로가기">
+      <a href="#current">현재 진단</a><a href="#features">기능 분석</a><a href="#products">상품 전략</a><a href="#category">카테고리</a><a href="#action-plan">실행 일정</a><a href="#decision">구독 판정</a>
+    </nav>
+
+    <section class="deadline container" aria-label="긴급 일정">
+      <span>DEADLINE</span>
+      <strong>7월 31일</strong>
+      <p>Top 경쟁상품·검색어 최대 100개 베타 무료 제공 종료 예정. 데이크림·로션·토너 데이터부터 보관해야 합니다.</p>
+    </section>
+
+    <section class="section container" id="current">
+      <header class="section-head">
+        <div><p class="eyebrow">01 · Current signal</p><h2>현재 판매 퍼널 진단</h2></div>
+        <p>판매는 발생하지만 광고 의존도가 높습니다. 매출 확대보다 먼저 SKU별 손익분기 ROAS를 정해야 합니다.</p>
+      </header>
+
+      <div class="kpi-grid">
+        <article><span>최근 7일 매출</span><strong>61,700<small>원</small></strong><em>판매 6개</em></article>
+        <article><span>구매전환율</span><strong>5.72<small>%</small></strong><em>84명 방문 · 조회 105</em></article>
+        <article class="is-alert"><span>광고비 / 전체 매출</span><strong>53.5<small>%</small></strong><em>33,000원 집행</em></article>
+        <article><span>자연유입 비중</span><strong>24.2<small>%</small></strong><em>최근 30일 조회 기준</em></article>
+      </div>
+
+      <div class="funnel-panel">
+        <div class="funnel-copy">
+          <p class="mini-label">RECENT 30 DAYS · TRAFFIC MIX</p>
+          <h3>유입 4건 중 3건이 광고</h3>
+          <p>광고 조회 491건, 자연유입 157건입니다. 광고 매출은 최근 7일 전체 매출의 약 84.3%지만 표시 ROAS는 157.58%에 그쳤습니다.</p>
+          <div class="traffic-bar" aria-label="광고 75.8%, 자연유입 24.2%"><span style="width:75.8%">광고 75.8%</span><i>자연 24.2%</i></div>
+        </div>
+        <div class="route-grid">
+          <div><span>광고</span><b>491</b><small>조회 · 주문 13 · CVR 2.65%</small></div>
+          <div><span>검색</span><b>56</b><small>조회 · 주문 1 · CVR 1.79%</small></div>
+          <div><span>추천</span><b>33</b><small>조회 · 주문 0</small></div>
+          <div><span>마이쿠팡</span><b>10</b><small>조회 · 주문 1 · CVR 10%</small></div>
+        </div>
+      </div>
+      <p class="data-note">데이터 범위: 판매 2026.07.09–07.15, 유입 2026.06.16–07.15. 쿠팡의 집계 갱신시각과 귀속 기준이 서로 달라 지표 간 단순 합산은 금지합니다.</p>
+    </section>
+
+    <section class="section section--ink" id="features">
+      <div class="container">
+        <header class="section-head section-head--light">
+          <div><p class="eyebrow">02 · Feature map</p><h2>기능은 여섯 가지 질문에 답한다</h2></div>
+          <p>분석 화면마다 담당 질문을 하나씩 지정하면 데이터가 실행으로 연결됩니다.</p>
+        </header>
+        <div class="feature-list">
+          {featureRows.map((row, index) => (
+            <article>
+              <span class="feature-index">0{index + 1}</span>
+              <div><small>{row.area}</small><strong>{row.data}</strong></div>
+              <p>{row.use}</p>
+            </article>
+          ))}
+        </div>
+        <div class="wing-links">
+          {wingLinks.map((link) => <a href={link.href} target="_blank" rel="noreferrer">{link.label} ↗</a>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="products">
+      <header class="section-head">
+        <div><p class="eyebrow">03 · Product portfolio</p><h2>전 상품을 같은 방식으로 고치지 않는다</h2></div>
+        <p>팔리는 상품은 유입을 확대하고, 전환이 낮은 상품만 이미지·상세를 개선합니다. 표본이 없는 상품은 노출부터 만듭니다.</p>
+      </header>
+      <div class="product-table" role="table" aria-label="상품별 실행 전략">
+        <div class="product-row product-row--head" role="row"><span>분류</span><span>상품·현재 신호</span><span>진단</span><span>다음 행동</span></div>
+        {products.map((product) => (
+          <article class="product-row" role="row">
+            <span><em class={`pill pill--${product.tone}`}>{product.group}</em></span>
+            <span><b>{product.name}</b><small>{product.signal}</small></span>
+            <span>{product.issue}</span>
+            <span>{product.action}</span>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section container diagnosis-section">
+      <header class="section-head">
+        <div><p class="eyebrow">04 · Diagnosis rules</p><h2>숫자가 이렇게 나오면 이렇게 움직인다</h2></div>
+      </header>
+      <div class="diagnosis-grid">
+        {diagnosis.map((item, index) => (
+          <article>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <h3>{item.when}</h3>
+            <p><b>해석</b>{item.read}</p>
+            <p><b>실행</b>{item.do}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section section--sand" id="category">
+      <div class="container category-layout">
+        <div class="category-copy">
+          <p class="eyebrow">05 · Category intelligence</p>
+          <h2>스탠다드의 3개 슬롯은<br />주력 SKU에만 쓴다.</h2>
+          <p>현재 매출 가능성과 개선 실험 범위를 고려하면 데이크림, 로션/에멀젼, 스킨/토너/화장수가 우선입니다.</p>
+          <ol>
+            <li><span>1</span><div><b>데이크림</b><small>화이트닝 크림 전환 개선 + PDRN 노출 확보</small></div></li>
+            <li><span>2</span><div><b>로션/에멀젼</b><small>현재 최고 전환 상품의 자연검색 확장</small></div></li>
+            <li><span>3</span><div><b>스킨/토너/화장수</b><small>실제 판매 신호를 키워 두 번째 주력으로 육성</small></div></li>
+          </ol>
+        </div>
+        <div class="plan-card">
+          <div class="plan-card__head"><span>PLAN COMPARISON</span><b>Standard vs Premium</b></div>
+          {planRows.map((row) => (
+            <div class="plan-row"><span>{row.label}</span><b>{row.standard}</b><em>{row.premium}</em></div>
+          ))}
+          <div class="plan-legend"><span>스탠다드</span><em>프리미엄</em></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="action-plan">
+      <header class="section-head">
+        <div><p class="eyebrow">06 · Execution calendar</p><h2>무료체험을 4주짜리 매출 실험으로 사용</h2></div>
+        <p>한 번에 한 변수만 변경하고 D0·D7·D14 스냅샷을 남겨 무엇이 매출을 바꿨는지 분리합니다.</p>
+      </header>
+      <div class="timeline">
+        {schedule.map((item, index) => (
+          <article>
+            <div class="timeline-no">{String(index + 1).padStart(2, '0')}</div>
+            <div><span>{item.date}</span><h3>{item.title}</h3><p>{item.body}</p></div>
+          </article>
+        ))}
+      </div>
+      <div class="experiment-card">
+        <div><span>FIRST EXPERIMENT</span><h3>화이트닝 크림 대표 이미지 1장</h3><p>28회 조회에서 CVR 3.57%. 현재 가장 빠르게 대표 이미지 개선 효과를 읽을 수 있는 상품입니다.</p></div>
+        <div class="experiment-metrics"><span>교체 전 D0</span><i>→</i><span>7일 후 D7</span><i>→</i><span>14일 후 D14</span></div>
+        <ul><li>검색 노출·클릭률</li><li>조회·장바구니율</li><li>구매전환율·공헌이익</li></ul>
+      </div>
+    </section>
+
+    <section class="section container" id="decision">
+      <div class="decision-card">
+        <div class="decision-card__copy">
+          <p class="eyebrow">07 · Subscription verdict</p>
+          <h2>99,000원을 회수할 수 있을 때만 유지</h2>
+          <p>최근 7일 매출을 단순 월 환산하면 약 26.7만 원으로, 구독료가 약 37%에 해당합니다. 지금은 상시 구독을 전제할 단계가 아니라 무료체험으로 효과를 증명할 단계입니다.</p>
+        </div>
+        <div class="break-even">
+          <span>공헌이익률별 필요한 월 추가 매출</span>
+          <div><b>30%</b><strong>330,000원</strong></div>
+          <div><b>40%</b><strong>247,500원</strong></div>
+          <div><b>50%</b><strong>198,000원</strong></div>
+        </div>
+        <div class="verdict">유지 조건 <b>월 추가 공헌이익 ≥ 99,000원</b></div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .bi-page { position:relative; z-index:1; padding-bottom:32px; color:var(--ink); }
+  .bi-page * { min-width:0; }
+  .hero { display:grid; grid-template-columns:minmax(0,1.4fr) minmax(300px,.6fr); gap:clamp(24px,5vw,64px); align-items:end; padding-block:clamp(48px,8vw,104px) 28px; }
+  .status-line { display:flex; align-items:center; gap:8px; width:max-content; margin-bottom:28px; padding:7px 11px; border:1px solid #b8c9bc; border-radius:99px; background:#eef5ef; color:#31533d; font:800 11px/1 var(--font-latin); letter-spacing:.08em; }
+  .live-dot { width:8px; height:8px; border-radius:50%; background:#2e8b57; box-shadow:0 0 0 5px rgba(46,139,87,.12); }
+  .hero h1 { margin:12px 0 20px; max-width:980px; font-size:clamp(38px,6.7vw,78px); line-height:1.02; letter-spacing:-.055em; }
+  .hero h1 em { color:var(--accent); font-style:normal; }
+  .lead { max-width:62ch; margin:0; color:var(--muted); font-size:clamp(16px,1.5vw,19px); line-height:1.8; }
+  .eyebrow { margin:0; color:var(--accent); font:900 11px/1.2 var(--font-latin); letter-spacing:.16em; text-transform:uppercase; }
+  .hero__actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+  .primary-action,.secondary-action { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:0 18px; border-radius:13px; font-weight:850; text-decoration:none; }
+  .primary-action { background:var(--forest); color:#fff; }
+  .secondary-action { border:1px solid var(--line-strong); background:var(--surface); color:var(--ink); }
+  .subscription-card { padding:28px; border-radius:30px; background:linear-gradient(145deg,#17221c,#26382d 65%,#7b4633); color:#f7f1e8; box-shadow:var(--shadow-lg); }
+  .card-kicker { color:#d9bcad; font:900 11px/1 var(--font-latin); letter-spacing:.14em; }
+  .subscription-card>strong { display:block; margin:20px 0; font:900 clamp(42px,5vw,62px)/.9 var(--font-latin); letter-spacing:-.06em; }
+  .subscription-card>strong small { margin-left:6px; color:#ccd7cf; font-size:15px; letter-spacing:0; }
+  .subscription-card dl { display:grid; gap:0; margin:0; border-top:1px solid rgba(255,255,255,.16); }
+  .subscription-card dl div { display:flex; justify-content:space-between; gap:12px; padding:11px 0; border-bottom:1px solid rgba(255,255,255,.12); }
+  .subscription-card dt { color:#b9c7be; font-size:13px; }
+  .subscription-card dd { margin:0; font-weight:800; }
+  .subscription-card p { margin:18px 0 0; color:#d6dfd8; font-size:13px; line-height:1.65; }
+  .subscription-card b { color:#fff; }
+  .jump-nav { position:sticky; top:74px; z-index:5; display:flex; gap:6px; padding-block:9px; overflow-x:auto; background:color-mix(in srgb,var(--bg) 86%,transparent); backdrop-filter:blur(16px); border-block:1px solid var(--line); }
+  .jump-nav a { flex:0 0 auto; padding:8px 12px; border-radius:99px; color:var(--muted); background:var(--surface); border:1px solid var(--line); font-size:12px; font-weight:800; text-decoration:none; }
+  .deadline { display:grid; grid-template-columns:auto auto minmax(0,1fr); gap:16px; align-items:center; margin-top:22px; padding-block:18px; border-bottom:1px solid #e1a77f; }
+  .deadline span { padding:6px 9px; border-radius:6px; background:#bd4b27; color:#fff; font:900 10px/1 var(--font-latin); letter-spacing:.12em; }
+  .deadline strong { font-size:22px; white-space:nowrap; }
+  .deadline p { margin:0; color:var(--muted); line-height:1.6; }
+  .section { padding-block:clamp(58px,8vw,100px); scroll-margin-top:130px; }
+  .section-head { display:flex; align-items:end; justify-content:space-between; gap:28px; margin-bottom:28px; }
+  .section-head h2 { margin:9px 0 0; font-size:clamp(30px,4.5vw,52px); line-height:1.08; letter-spacing:-.045em; }
+  .section-head>p { max-width:46ch; margin:0; color:var(--muted); line-height:1.7; }
+  .kpi-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+  .kpi-grid article { padding:20px; border:1px solid var(--line); border-radius:20px; background:var(--surface); box-shadow:var(--shadow-sm); }
+  .kpi-grid article.is-alert { background:#fff3ec; border-color:#e5b89f; }
+  .kpi-grid span,.kpi-grid em { display:block; color:var(--muted); font-size:12px; font-style:normal; font-weight:800; }
+  .kpi-grid strong { display:block; margin:12px 0 8px; font:900 clamp(30px,4vw,46px)/1 var(--font-latin); letter-spacing:-.05em; }
+  .kpi-grid small { margin-left:3px; color:var(--accent); font-size:.45em; }
+  .funnel-panel { display:grid; grid-template-columns:minmax(0,1fr) minmax(380px,.9fr); gap:34px; margin-top:12px; padding:clamp(24px,4vw,42px); border-radius:28px; color:#f8f3e9; background:#1c2922; }
+  .mini-label { color:#b9cabf; font:900 10px/1 var(--font-latin); letter-spacing:.14em; }
+  .funnel-copy h3 { margin:12px 0; font-size:clamp(28px,4vw,46px); letter-spacing:-.04em; }
+  .funnel-copy>p:not(.mini-label) { color:#cbd7cf; line-height:1.75; }
+  .traffic-bar { display:flex; height:38px; margin-top:24px; border-radius:10px; overflow:hidden; background:#d9bd8e; color:#17221c; font-size:11px; font-weight:900; }
+  .traffic-bar span,.traffic-bar i { display:flex; align-items:center; padding:0 10px; white-space:nowrap; }
+  .traffic-bar span { background:#cc7354; color:#fff; }
+  .traffic-bar i { flex:1; justify-content:center; font-style:normal; }
+  .route-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+  .route-grid div { padding:15px; border:1px solid rgba(255,255,255,.13); border-radius:16px; background:rgba(255,255,255,.06); }
+  .route-grid span,.route-grid small { display:block; color:#b9cabf; font-size:12px; font-weight:700; }
+  .route-grid b { display:block; margin:7px 0; font:900 32px/1 var(--font-latin); }
+  .data-note { margin:12px 0 0; color:var(--faint); font-size:12px; line-height:1.6; }
+  .section--ink { background:#18221d; color:#f8f2e8; }
+  .section-head--light>p { color:#b9c8be; }
+  .feature-list { border-top:1px solid rgba(255,255,255,.18); }
+  .feature-list article { display:grid; grid-template-columns:54px minmax(0,1.25fr) minmax(260px,.75fr); gap:20px; align-items:center; padding:22px 0; border-bottom:1px solid rgba(255,255,255,.14); }
+  .feature-index { color:#b56a50; font:900 14px/1 var(--font-latin); }
+  .feature-list small,.feature-list strong { display:block; }
+  .feature-list small { margin-bottom:6px; color:#d2947d; font-size:11px; font-weight:900; }
+  .feature-list strong { font-size:17px; line-height:1.45; }
+  .feature-list p { margin:0; color:#bdc9c1; line-height:1.6; }
+  .wing-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; }
+  .wing-links a { padding:10px 13px; border:1px solid rgba(255,255,255,.2); border-radius:10px; color:#fff; font-size:13px; font-weight:800; text-decoration:none; }
+  .product-table { border:1px solid var(--line); border-radius:22px; overflow:hidden; background:var(--surface); }
+  .product-row { display:grid; grid-template-columns:90px minmax(220px,1.1fr) minmax(180px,.8fr) minmax(250px,1.2fr); gap:16px; align-items:center; padding:18px 20px; border-bottom:1px solid var(--line); }
+  .product-row:last-child { border-bottom:0; }
+  .product-row--head { background:var(--forest); color:#fff; font-size:12px; font-weight:800; }
+  .product-row b,.product-row small { display:block; }
+  .product-row small { margin-top:5px; color:var(--muted); line-height:1.5; }
+  .pill { display:inline-flex; padding:6px 10px; border-radius:99px; font-size:11px; font-style:normal; font-weight:900; }
+  .pill--good { background:#dff3e6; color:#23623f; }.pill--warn { background:#ffe7d9; color:#9b3f20; }.pill--info { background:#dcecf3; color:#26576e; }.pill--muted { background:#ece9e1; color:#69655c; }
+  .diagnosis-section { padding-top:10px; }
+  .diagnosis-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+  .diagnosis-grid article { min-height:270px; padding:20px; border-radius:20px; background:#f0ece2; border:1px solid #ded7c9; }
+  .diagnosis-grid article>span { font:900 12px/1 var(--font-latin); color:var(--accent); }
+  .diagnosis-grid h3 { margin:28px 0 18px; font-size:20px; line-height:1.35; letter-spacing:-.025em; }
+  .diagnosis-grid p { margin:9px 0 0; color:var(--muted); font-size:13px; line-height:1.6; }
+  .diagnosis-grid p b { display:block; margin-bottom:3px; color:var(--ink); font-size:11px; }
+  .section--sand { background:#ded5c4; }
+  .category-layout { display:grid; grid-template-columns:minmax(280px,.7fr) minmax(500px,1.3fr); gap:clamp(28px,6vw,76px); align-items:start; }
+  .category-copy h2 { margin:11px 0 18px; font-size:clamp(34px,5vw,60px); line-height:1.06; letter-spacing:-.05em; }
+  .category-copy>p:not(.eyebrow) { color:#5d5b53; line-height:1.75; }
+  .category-copy ol { display:grid; gap:8px; padding:0; margin:28px 0 0; list-style:none; }
+  .category-copy li { display:grid; grid-template-columns:34px 1fr; gap:12px; align-items:center; padding:13px; border-radius:14px; background:rgba(255,255,255,.45); }
+  .category-copy li>span { display:grid; place-items:center; width:32px; height:32px; border-radius:50%; background:var(--forest); color:#fff; font-weight:900; }
+  .category-copy li b,.category-copy li small { display:block; }.category-copy li small { margin-top:3px; color:#68645c; }
+  .plan-card { border-radius:24px; overflow:hidden; background:#f8f4eb; box-shadow:0 24px 60px rgba(66,52,34,.14); }
+  .plan-card__head { display:flex; justify-content:space-between; gap:12px; padding:20px; background:#25372d; color:#fff; }
+  .plan-card__head span { font:900 10px/1 var(--font-latin); letter-spacing:.14em; }.plan-card__head b { font-size:16px; }
+  .plan-row { display:grid; grid-template-columns:minmax(180px,1.25fr) minmax(120px,.75fr) minmax(120px,.75fr); border-bottom:1px solid #ded7ca; }
+  .plan-row>* { padding:13px 15px; }.plan-row>span { font-size:13px; font-weight:800; }.plan-row b,.plan-row em { border-left:1px solid #ded7ca; font-size:12px; font-style:normal; }.plan-row b { background:#fff7e9; color:#855129; }.plan-row em { color:#315b46; }
+  .plan-legend { display:grid; grid-template-columns:1fr 1fr; margin-left:40%; padding:13px; text-align:center; font-size:11px; font-weight:900; }.plan-legend span{color:#855129}.plan-legend em{color:#315b46;font-style:normal}
+  .timeline { position:relative; display:grid; gap:0; }
+  .timeline::before { content:''; position:absolute; left:26px; top:26px; bottom:26px; width:1px; background:var(--line-strong); }
+  .timeline article { position:relative; display:grid; grid-template-columns:54px minmax(0,1fr); gap:20px; padding:0 0 30px; }
+  .timeline-no { display:grid; place-items:center; width:54px; height:54px; border:1px solid var(--line-strong); border-radius:50%; background:var(--bg); color:var(--accent); font:900 12px/1 var(--font-latin); }
+  .timeline span { color:var(--accent); font-size:12px; font-weight:900; }.timeline h3 { margin:5px 0 7px; font-size:22px; }.timeline p { max-width:72ch; margin:0; color:var(--muted); line-height:1.7; }
+  .experiment-card { display:grid; grid-template-columns:minmax(260px,1.1fr) minmax(300px,1fr) minmax(220px,.7fr); gap:24px; align-items:center; margin-top:14px; padding:28px; border-radius:24px; background:#8e4b34; color:#fff8ee; }
+  .experiment-card span { color:#eac2b2; font-size:11px; font-weight:900; }.experiment-card h3 { margin:8px 0; font-size:28px; }.experiment-card p { margin:0; color:#f0d7cd; line-height:1.65; }
+  .experiment-metrics { display:flex; align-items:center; justify-content:center; gap:8px; }.experiment-metrics span { padding:9px 10px; border:1px solid rgba(255,255,255,.25); border-radius:9px; color:#fff; white-space:nowrap; }.experiment-metrics i { font-style:normal; opacity:.7; }
+  .experiment-card ul { margin:0; padding-left:20px; color:#f4dfd7; line-height:1.9; font-size:13px; }
+  .decision-card { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr); gap:30px; padding:clamp(28px,5vw,54px); border-radius:30px; background:linear-gradient(145deg,#19251f,#304538); color:#f8f3e9; }
+  .decision-card h2 { margin:10px 0 14px; font-size:clamp(34px,5vw,58px); line-height:1.05; letter-spacing:-.05em; }.decision-card__copy>p:last-child { max-width:62ch; color:#c6d2ca; line-height:1.75; }
+  .break-even { display:grid; align-content:center; gap:7px; }.break-even>span { margin-bottom:8px; color:#b7c5bc; font-size:12px; font-weight:800; }.break-even div { display:flex; justify-content:space-between; gap:16px; padding:13px 15px; border-radius:12px; background:rgba(255,255,255,.08); }.break-even b { color:#dba58f; }.break-even strong { font-family:var(--font-latin); }
+  .verdict { grid-column:1/-1; padding-top:22px; border-top:1px solid rgba(255,255,255,.17); color:#b9c7be; font-size:15px; }.verdict b { margin-left:9px; color:#fff; font-size:20px; }
+  @media (max-width:980px){.hero,.funnel-panel,.category-layout,.decision-card{grid-template-columns:1fr}.kpi-grid,.diagnosis-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.feature-list article{grid-template-columns:42px 1fr}.feature-list article p{grid-column:2}.product-row{grid-template-columns:80px 1fr 1fr}.product-row>*:last-child{grid-column:2/-1}.product-row--head>*:last-child{grid-column:auto}.experiment-card{grid-template-columns:1fr}.verdict{grid-column:auto}}
+  @media (max-width:640px){.hero{padding-top:34px}.hero h1{font-size:38px}.jump-nav{top:62px}.deadline{grid-template-columns:auto 1fr}.deadline p{grid-column:1/-1}.section-head{align-items:start;flex-direction:column}.kpi-grid,.route-grid,.diagnosis-grid{grid-template-columns:1fr}.funnel-panel{padding:20px}.feature-list article{grid-template-columns:32px 1fr;gap:12px}.product-table{border:0;background:transparent;overflow:visible}.product-row--head{display:none}.product-row{grid-template-columns:1fr;padding:17px;margin-bottom:10px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}.product-row>*:last-child{grid-column:auto}.plan-card{overflow-x:auto}.plan-row,.plan-card__head,.plan-legend{min-width:620px}.experiment-metrics{justify-content:flex-start;overflow-x:auto}.decision-card{padding:24px}.verdict b{display:block;margin:7px 0 0}.subscription-card{padding:22px}}
+</style>
