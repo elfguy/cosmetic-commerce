@@ -1,0 +1,427 @@
+{
+  "productSlug": "soothing-cream",
+  "version": "v2",
+  "title": "PDRN 히알루론산 수딩 크림 V2",
+  "status": "in-progress-review",
+  "strategy": "V1 baseline retained; regenerate only geometry-failing product cuts with Kie GPT Image 2",
+  "representative": [
+    "/coupang/images/soothing-cream/versions/v2/representative/01.png",
+    "/coupang/images/soothing-cream/versions/v2/representative/02.png",
+    "/coupang/images/soothing-cream/versions/v2/representative/03.png",
+    "/coupang/images/soothing-cream/versions/v2/representative/04.png",
+    "/coupang/images/soothing-cream/versions/v2/representative/05.png",
+    "/coupang/images/soothing-cream/versions/v2/representative/06.png"
+  ],
+  "detail": [
+    "/coupang/images/soothing-cream/versions/v2/detail/01.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/01a.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/02.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/03.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/04.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/05.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/06.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/07.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/08.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/09.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/10.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/11.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/12.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/13.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/15.png",
+    "/coupang/images/soothing-cream/versions/v2/detail/14.png"
+  ],
+  "plannedRegeneration": {
+    "representative": [
+      "02",
+      "04",
+      "05",
+      "06"
+    ],
+    "detail": [
+      "11"
+    ]
+  },
+  "currentWork": {
+    "displayNumber": "07",
+    "fileSlot": "detail/06",
+    "state": "promoted-after-width-only-attempt-7",
+    "final": "/coupang/images/soothing-cream/versions/v2/detail/06.png",
+    "qa": {
+      "sourceAspect": 1.458,
+      "candidateAspect": 1.474,
+      "aspectDeviationPct": 1.09,
+      "candidateTightBBox": [
+        626,
+        1689,
+        1049,
+        1976
+      ],
+      "candidateTightSize": [
+        423,
+        287
+      ],
+      "diagramCopy": "passed",
+      "status": "promoted"
+    },
+    "wrongDisplay08Restored": true,
+    "coupangUploaded": false,
+    "sourceCandidateName": "06-display07-v7-kie-gpt-image-2-2k-width-only-candidate.png",
+    "candidateFolderCommitted": false
+  },
+  "unchangedFromV1": {
+    "representative": [],
+    "detail": [
+      "01a",
+      "02",
+      "03",
+      "04",
+      "05",
+      "08",
+      "09",
+      "10",
+      "12",
+      "13",
+      "15"
+    ]
+  },
+  "coupangLiveChanged": true,
+  "creditLedger": [
+    {
+      "model": "gpt-image-2-image-to-image",
+      "taskId": "7425699d24339ada99f086fcb47835d1",
+      "creditsBefore": 6861,
+      "creditsAfter": 6851,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "promoted-by-leo"
+    },
+    {
+      "slot": "representative/01",
+      "model": "gpt-image-2-image-to-image",
+      "taskId": "c9565ad5ab80e19675b1386ddbc5dbb9",
+      "creditsBefore": 6851,
+      "creditsAfter": 6841,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "promoted-by-leo"
+    },
+    {
+      "slot": "representative/04",
+      "attempt": 1,
+      "model": "gpt-image-2-image-to-image",
+      "taskId": "800df791c99c4f800fdff35aa2614012",
+      "creditsBefore": 6841,
+      "creditsAfter": 6831,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "qa-rejected"
+    },
+    {
+      "slot": "representative/04",
+      "attempt": 2,
+      "model": "gpt-image-2-image-to-image",
+      "taskId": "8a7702500c4bb219bde1f83e8580272a",
+      "creditsBefore": 6831,
+      "creditsAfter": 6821,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "promoted"
+    },
+    {
+      "slot": "representative/05",
+      "attempt": 1,
+      "model": "gpt-image-2-image-to-image",
+      "taskId": "fe9245e4db5a64eeb50181804caf619d",
+      "creditsBefore": 6821,
+      "creditsAfter": 6811,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "promoted"
+    },
+    {
+      "slot": "representative/06",
+      "attempt": 1,
+      "model": "gpt-image-2-image-to-image",
+      "taskId": "61634aabc8d9378aa64c57bfc35410bf",
+      "creditsBefore": 6811,
+      "creditsAfter": 6801,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "promoted"
+    },
+    {
+      "slot": "representative/02-tone-redesign",
+      "attempt": 1,
+      "model": "gpt-image-2-image-to-image",
+      "taskId": "7c1e2874d1fb29773636dbc88df00ce9",
+      "creditsBefore": 6801,
+      "creditsAfter": 6791,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "promoted-by-leo"
+    },
+    {
+      "slot": "representative/03",
+      "attempt": 1,
+      "model": "gpt-image-2-image-to-image",
+      "taskId": "cb49c4ababde2a0add29271da01a5111",
+      "creditsBefore": 6791,
+      "creditsAfter": 6781,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "qa-rejected-ratio-1.696"
+    },
+    {
+      "slot": "representative/03",
+      "attempt": 2,
+      "model": "gpt-image-2-image-to-image",
+      "taskId": "b434b675e62c8176d8d0652669be8432",
+      "creditsBefore": 6781,
+      "creditsAfter": 6771,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "qa-rejected-ratio-1.382"
+    },
+    {
+      "slot": "representative/03",
+      "attempt": 3,
+      "model": "gpt-image-2-image-to-image",
+      "taskId": "91b71d0a1289947259cc295b5468ee2e",
+      "creditsBefore": 6771,
+      "creditsAfter": 6761,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "promoted-ratio-1.479"
+    },
+    {
+      "slot": "detail/11",
+      "attempt": 1,
+      "taskId": "a07dfce1aae5e5d51dbdc8c62966828e",
+      "creditsBefore": 6761,
+      "creditsAfter": 6751,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "rejected-ratio-1.363"
+    },
+    {
+      "slot": "detail/11",
+      "attempt": 2,
+      "taskId": "e47e014f39f66da7e98012addf32837d",
+      "creditsBefore": 6751,
+      "creditsAfter": 6741,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "borderline-ratio-1.530-not-promoted"
+    },
+    {
+      "slot": "detail/11",
+      "attempt": 3,
+      "taskId": "ea2f6f6f1377bebb7f02947ad2964ad6",
+      "creditsBefore": 6741,
+      "creditsAfter": 6731,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "rejected-ratio-1.349"
+    },
+    {
+      "slot": "detail/11",
+      "attempt": 4,
+      "taskId": "2171553f879ba92ef689f4ef0a2ce6f9",
+      "creditsBefore": 6731,
+      "creditsAfter": 6721,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "promoted-ratio-1.494",
+      "userAuthorizedAfterFailureLimit": true
+    },
+    {
+      "slot": "detail/07",
+      "attempt": 1,
+      "taskId": "3838f7459aeaea91eec9c0afceddb8a7",
+      "creditsBefore": 6721,
+      "creditsAfter": 6711,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "rejected-ratio-1.364"
+    },
+    {
+      "slot": "detail/07",
+      "attempt": 2,
+      "taskId": "181994e8aaef5fddcdbb68a49094f9c8",
+      "creditsBefore": 6711,
+      "creditsAfter": 6701,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "promoted-ratio-1.468"
+    },
+    {
+      "slot": "detail/06",
+      "attempt": 1,
+      "taskId": "79ab114446fea9bd56aca868c0ca5935",
+      "creditsBefore": 6701,
+      "creditsAfter": 6691,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "rejected-ratio-1.221"
+    },
+    {
+      "slot": "detail/06",
+      "attempt": 2,
+      "taskId": "20a5d9bd6c0c6e510fc9772257271894",
+      "creditsBefore": 6691,
+      "creditsAfter": 6681,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "rejected-ratio-1.276"
+    },
+    {
+      "slot": "detail/06",
+      "attempt": 3,
+      "taskId": "2ae07aa9073c56afbdb1a90f2fa09a2c",
+      "creditsBefore": 6681,
+      "creditsAfter": 6671,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "rejected-ratio-1.325"
+    },
+    {
+      "slot": "detail/06",
+      "attempt": 4,
+      "taskId": "cb19a6a1bf28ec39d4fb92fa55414615",
+      "creditsBefore": 6671,
+      "creditsAfter": 6661,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "rejected-tight-jar-ratio-1.560",
+      "userAuthorizedAfterFailureLimit": true
+    },
+    {
+      "slot": "detail/01",
+      "attempt": 1,
+      "taskId": "7e70853e61d2c424203a6975bb54a250",
+      "creditsBefore": 6661,
+      "creditsAfter": 6651,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "rejected-ratio-1.377"
+    },
+    {
+      "slot": "detail/01",
+      "attempt": 2,
+      "taskId": "f9be1cf4080f82e9d5cff874b2203fc3",
+      "creditsBefore": 6651,
+      "creditsAfter": 6641,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "borderline-ratio-1.529-not-promoted"
+    },
+    {
+      "slot": "detail/01",
+      "attempt": 3,
+      "taskId": "f9da9120db465531cb30e795d737a61b",
+      "creditsBefore": 6641,
+      "creditsAfter": 6631,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "promoted-ratio-1.472"
+    },
+    {
+      "slot": "detail/07",
+      "attempt": 3,
+      "taskId": "22bf7cd986a1e1539ae1d9e5c7151b3f",
+      "creditsBefore": 6631,
+      "creditsAfter": 6621,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "rejected-reverted-numbering-mismatch-display08-not-requested"
+    },
+    {
+      "slot": "detail/06",
+      "displayNumber": "07",
+      "attempt": 5,
+      "taskId": "6213a754e2c29b8d3fa3521c57e9bfb2",
+      "creditsBefore": 6621,
+      "creditsAfter": 6611,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "rejected-ratio-too-tall-1.309"
+    },
+    {
+      "slot": "detail/06",
+      "displayNumber": "07",
+      "attempt": 6,
+      "taskId": "bf209752fa756a29c7ae0dc517bc6071",
+      "creditsBefore": 6611,
+      "creditsAfter": 6601,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "rejected-ratio-too-tall-1.363"
+    },
+    {
+      "slot": "detail/06",
+      "displayNumber": "07",
+      "attempt": 7,
+      "taskId": "7a92044ff9d0c3c8bfe5c5d96148afe4",
+      "creditsBefore": 6601,
+      "creditsAfter": 6591,
+      "creditsUsed": 10,
+      "usdApprox": 0.05,
+      "status": "promoted-width-only-ratio-1.474"
+    }
+  ],
+  "promotedSlots": {
+    "representative": [
+      "01",
+      "02",
+      "04",
+      "05",
+      "06",
+      "03"
+    ],
+    "detail": [
+      "14",
+      "11",
+      "07",
+      "01",
+      "06"
+    ]
+  },
+  "ingredientCorrections": {
+    "detail/14": {
+      "requested": "전성분에서 라벤더오일 삭제",
+      "verifiedSequence": "글루코오스, 토코페롤",
+      "status": "uploaded-approved",
+      "coupangCdn": "vendor_inventory/e3d5/d48bcfc0e49ae47902596024ac3ede7fe3994676dbd4de09eb0e8be44566.png"
+    }
+  },
+  "kieTotals": {
+    "successfulGenerations": 27,
+    "creditsUsed": 270,
+    "usdApprox": 1.35,
+    "remainingCredits": 6591
+  },
+  "failureBudget": {
+    "limit": 3,
+    "current": 0,
+    "scope": "display07-file06-number-corrected",
+    "status": "passed-corrected-task-attempt-3"
+  },
+  "displayNumberMap": {
+    "01": "01",
+    "02": "01a",
+    "03": "02",
+    "04": "03",
+    "05": "04",
+    "06": "05",
+    "07": "06",
+    "08": "07",
+    "09": "08",
+    "10": "09",
+    "11": "10",
+    "12": "11",
+    "13": "12",
+    "14": "13",
+    "15": "15",
+    "16": "14"
+  }
+}

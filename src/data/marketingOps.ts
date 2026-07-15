@@ -573,6 +573,36 @@ export const productVersions: Record<string, ProductVersion[]> = {
         { label: '상태', value: '쿠팡 미반영 후보' },
       ],
     },
+    {
+      id: 'v2',
+      label: 'V2 후보',
+      status: 'candidate',
+      date: '2026-07-14',
+      summary: '수딩 크림 V2 검수 버전입니다. 메인 01~06 전체는 Kie GPT Image 2 교정본이며, 메인 02는 승인된 화이트·민트 톤앤매너 재제작본입니다. 화면 기준 상세 01·07·08·12는 원본 제품 비율 교정본이며, 화면 상세 16 라벤더오일 삭제본은 쿠팡 승인완료 상태입니다. 카드에는 실제 파일 번호도 함께 표시합니다. V2 메인·상세 교정본은 아직 쿠팡에 반영하지 않았습니다.',
+      mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/soothing-cream/versions/v2/representative/' + String(i + 1).padStart(2, '0') + '.png'),
+      detailImages: [
+        '/coupang/images/soothing-cream/versions/v2/detail/01.png',
+        '/coupang/images/soothing-cream/versions/v2/detail/01a.png',
+        ...Array.from({ length: 12 }, (_, i) => '/coupang/images/soothing-cream/versions/v2/detail/' + String(i + 2).padStart(2, '0') + '.png'),
+        '/coupang/images/soothing-cream/versions/v2/detail/15.png',
+        '/coupang/images/soothing-cream/versions/v2/detail/14.png',
+      ],
+      links: [
+        { label: 'V2 비교 페이지 열기', href: '/marketing/soothing-cream-version-compare/' },
+        { label: 'V2 대표 1번 열기', href: '/coupang/images/soothing-cream/versions/v2/representative/01.png' },
+        { label: 'V2 대표 2번 열기', href: '/coupang/images/soothing-cream/versions/v2/representative/02.png' },
+        { label: 'V2 대표 3번 열기', href: '/coupang/images/soothing-cream/versions/v2/representative/03.png' },
+        { label: 'V2 대표 4번 열기', href: '/coupang/images/soothing-cream/versions/v2/representative/04.png' },
+        { label: 'V2 대표 5번 열기', href: '/coupang/images/soothing-cream/versions/v2/representative/05.png' },
+        { label: 'V2 대표 6번 열기', href: '/coupang/images/soothing-cream/versions/v2/representative/06.png' },
+      ],
+      metrics: [
+        { label: '대표', value: '01~06 Kie GPT Image 2 교정 · 02 화이트·민트 승인본' },
+        { label: '상세', value: '화면 01·07·08·12 비율 교정 · 화면 16 쿠팡 승인' },
+        { label: 'Kie 사용', value: '누적 270 credits · 약 $1.35' },
+        { label: '상태', value: '로컬 V2 후보 · 쿠팡 미반영' },
+      ],
+    },
   ],
 };
 
