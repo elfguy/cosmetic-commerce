@@ -3,336 +3,308 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import SiteHeader from '../../components/SiteHeader.astro';
 import SiteFooter from '../../components/SiteFooter.astro';
 
-const wingLinks = [
-  { label: '판매분석 열기', href: 'https://wing.coupang.com/tenants/business-insight/sales-analysis' },
-  { label: '유입경로 분석 열기', href: 'https://wing.coupang.com/tenants/business-insight/traffic-analysis' },
-  { label: '카테고리 분석 열기', href: 'https://wing.coupang.com/tenants/business-insight/category-analysis' },
+const productPriorities = [
+  {
+    order: '1',
+    label: '잘 팔리는 상품은 더 많이 보여준다',
+    products: '아쿠아 로션 · 히알루론산 토너',
+    evidence: '로션 조회 20회·주문 2건, 토너 조회 12회·주문 1건',
+    action: '이미지와 상세페이지를 당장 바꾸지 않습니다. 검색 노출과 광고 유입을 늘려 지금 보이는 전환 신호가 반복되는지 확인합니다.',
+  },
+  {
+    order: '2',
+    label: '사람은 들어오는데 덜 팔리는 상품을 고친다',
+    products: '화이트닝 톤 케어 크림',
+    evidence: '조회 28회·장바구니 2건·주문 1건, 구매전환율 3.57%',
+    action: '대표 이미지 한 장부터 바꾸고 7일과 14일 뒤 클릭·장바구니·구매 변화를 봅니다. 상세페이지는 그 다음입니다.',
+  },
+  {
+    order: '3',
+    label: '방문이 적은 상품은 노출부터 만든다',
+    products: 'PDRN 수딩크림 · 클렌징오일 · 클렌징젤 · 에센스 · 립밤',
+    evidence: '상품별 조회가 1~6회 수준이라 전환을 판단할 표본이 부족함',
+    action: '상세페이지를 다시 만들기 전에 검색어, 상품정보, 광고를 점검합니다. 방문자가 생긴 뒤에야 이미지 문제인지 가격 문제인지 판단할 수 있습니다.',
+  },
 ];
 
-const featureRows = [
-  { area: '판매분석', data: '방문자 · 조회 · 장바구니 · 주문 · 판매량 · 매출 · 구매전환율', use: '상품별 병목 진단과 이미지 변경 전후 판정' },
-  { area: '광고 성과', data: '광고 매출 · 집행 광고비 · ROAS · 판매량/매출 기여도', use: '매출이 아닌 공헌이익 기준으로 확대·축소' },
-  { area: '검색어 분석', data: '검색량 · 노출 · 클릭 · 장바구니 · 판매 · 매출 · 트렌드', use: '상품명, 광고 키워드, 상세 첫 화면 문구 개선' },
-  { area: '유입경로', data: '광고 · 검색 · 추천 · 프로모션 · 마이쿠팡 · 마이샵 · 라이브', use: '광고 의존도와 자연유입 성장 여부 추적' },
-  { area: '카테고리 분석', data: 'Top 경쟁상품 · 검색어 · 브랜드 · 가격 · 리뷰 · CTR', use: '카테고리 문법을 반영한 대표 이미지·오퍼 설계' },
-  { area: '파트너 캠페인', data: '외부 채널별 고유 추적 링크', use: '인스타그램·유튜브·블로그 콘텐츠의 실제 주문 기여 확인' },
-];
-
-const products = [
-  { group: '확대', tone: 'good', name: '히알루론산 아쿠아 로션', signal: '조회 20 · 주문 2 · CVR 10.0%', issue: '전환 신호 있음, 유입량 부족', action: '상세는 유지하고 고전환 검색어·광고 유입 확대' },
-  { group: '확대', tone: 'good', name: '히알루론산 토너', signal: '조회 12 · 주문 1 · CVR 8.33%', issue: '전환 신호 있음, 표본 작음', action: '검색 노출 확대 후 ROAS와 자연유입 동시 관찰' },
-  { group: '개선', tone: 'warn', name: '화이트닝 톤 케어 크림', signal: '조회 28 · 장바구니 2 · 주문 1 · CVR 3.57%', issue: '유입 대비 전환 약함', action: '대표 이미지 1장만 먼저 변경 → D7/D14 비교' },
-  { group: '노출', tone: 'info', name: 'PDRN 히알루론산 수딩 크림', signal: '조회 6 · 주문 0', issue: '전환 판단 전 트래픽 부족', action: '검색어·상품명·소액 광고로 측정 가능한 조회 확보' },
-  { group: '보류', tone: 'muted', name: '클렌징오일 · 젤 · 에센스 · 립밤', signal: '옵션별 조회 1~3 수준 · 주문 0', issue: '표본 부족', action: '상세 재작업보다 카테고리 수요·노출 가능성 먼저 검증' },
-];
-
-const diagnosis = [
-  { when: '검색 노출은 높은데 클릭이 낮음', read: '대표 이미지 · 상품명 · 가격 경쟁력 문제', do: 'Top 경쟁상품 CTR/썸네일 비교 후 대표 이미지 한 장 실험' },
-  { when: '조회는 쌓이는데 장바구니가 없음', read: '상세 첫 화면 · 가격 · 혜택 · 리뷰 신뢰 문제', do: '핵심 효능, 대상 고객, 용량 대비 가치, 배송 혜택 재구성' },
-  { when: '장바구니는 있는데 주문이 없음', read: '배송일 · 배송비 · 쿠폰 · 옵션 · 최종 신뢰 문제', do: '판매자배송/로켓그로스와 쿠폰 조건을 옵션별 비교' },
-  { when: '광고 매출은 있는데 이익이 없음', read: 'ROAS가 손익분기점보다 낮음', do: 'SKU별 공헌이익률로 손익분기 ROAS 계산 후 예산 이동' },
-];
-
-const planRows = [
-  { label: '상품별 트래픽·전환·매출', standard: '제공', premium: '제공' },
-  { label: '검색어/유입경로/파트너 캠페인', standard: '제공', premium: '제공' },
-  { label: 'Top 경쟁상품·검색어', standard: '20개 / 하위 10개', premium: '20개 / 하위 10개' },
-  { label: '카테고리 분석 기간', standard: '최대 30일', premium: '최대 360일' },
-  { label: '카테고리 분석 개수', standard: '내 카테고리 최대 3개', premium: '내 모든 카테고리' },
-  { label: '브랜드별 상품 랭킹·노출 세분화', standard: '제한', premium: '제공' },
-  { label: '날짜별 랭킹 트렌드', standard: '제한', premium: '제공' },
-];
-
-const schedule = [
-  { date: '7월 31일까지', title: 'Top 100 베타 데이터 확보', body: '데이크림·로션·토너 경쟁상품, 검색어, 브랜드 데이터를 저장한다. 베타 종료 후 기본 Top 20 제한에 대비한다.' },
-  { date: '8월 1일–7일', title: '첫 번째 매출 실험', body: '화이트닝 크림 대표 이미지 한 장만 교체하고, 아쿠아 로션·토너로 광고 예산을 집중한다.' },
-  { date: '8월 8일–13일', title: 'D7 판정과 구독 결정', body: 'CTR·장바구니율·CVR·광고비 절감·추가 공헌이익을 비교해 월 99,000원 이상의 가치가 있었는지 판단한다.' },
-  { date: '매주 월요일', title: '7일/30일 스냅샷', body: '엑셀을 저장하고 확대·개선·노출·보류 상품을 다시 분류한다. 변경일에는 D0, 이후 D7/D14를 별도 기록한다.' },
+const tools = [
+  {
+    title: '판매분석',
+    question: '어느 상품에서 매출이 새고 있습니까?',
+    explanation: '방문자가 상품을 보고 장바구니에 담고 주문하는 과정을 상품별로 보여줍니다. 숫자가 끊기는 지점이 고쳐야 할 곳입니다.',
+    example: '조회는 많은데 장바구니가 적다면 상세페이지·가격·리뷰를 봅니다. 장바구니는 많은데 주문이 적다면 배송·쿠폰·구성을 봅니다.',
+  },
+  {
+    title: '유입경로 분석',
+    question: '고객은 광고로 왔습니까, 검색으로 왔습니까?',
+    explanation: '광고, 자연검색, 추천, 마이쿠팡 등 고객이 들어온 길을 나눠 보여줍니다. 광고를 끄면 매출도 멈추는 구조인지 확인할 수 있습니다.',
+    example: '현재 자연유입은 약 24%입니다. 장기적으로는 검색과 추천 유입을 키워 광고비가 매출을 과도하게 잡아먹지 않도록 해야 합니다.',
+  },
+  {
+    title: '카테고리 분석',
+    question: '잘 팔리는 경쟁상품은 무엇이 다릅니까?',
+    explanation: '경쟁상품의 가격, 리뷰, 검색 노출, 클릭률, 인기 검색어와 브랜드 순위를 비교합니다. 신상품 소싱과 대표 이미지 기획에 사용합니다.',
+    example: '스탠다드 플랜의 3개 카테고리는 데이크림, 로션/에멀젼, 스킨/토너에 우선 사용합니다.',
+  },
 ];
 
 const keywordSteps = [
-  { step: '01', title: '후보 수집', body: '카테고리 Top 검색어, 경쟁상품 검색어, 우리 상품 실제 유입어, 쿠팡 자동완성을 한 목록으로 모읍니다.' },
-  { step: '02', title: '안전 필터', body: '경쟁 브랜드명, 무관 키워드, 근거 없는 효능, 의약품 오인 표현을 제거합니다.' },
-  { step: '03', title: '광고로 수요 검증', body: '후보 3~5개를 7일간 소액 테스트해 노출·클릭·주문·ROAS를 먼저 확인합니다.' },
-  { step: '04', title: '오가닉 반영', body: '검증된 일반 키워드 2~3개만 검색 태그·검색옵션에 반영하고 상품명·이미지·가격은 유지합니다.' },
-  { step: '05', title: 'D0·D7·D14 판정', body: '검색 노출 → 클릭 → 장바구니 → 주문 → 공헌이익 순서로 보고 확대·유지·제거·재시험을 결정합니다.' },
+  { day: '준비', title: '후보를 모읍니다', body: '카테고리 인기 검색어, 경쟁상품 검색어, 우리 상품의 실제 유입어를 한곳에 모읍니다.' },
+  { day: '검토', title: '쓸 수 없는 표현을 뺍니다', body: '경쟁 브랜드명, 제품과 관계없는 인기어, 근거 없는 효능 표현은 제외합니다.' },
+  { day: '7일', title: '광고 키워드로 먼저 확인합니다', body: '후보 3~5개를 소액으로 운영해 노출, 클릭, 주문, 광고비를 확인합니다.' },
+  { day: '14일', title: '검증된 키워드만 상품에 반영합니다', body: '상품명과 이미지는 그대로 두고 검색 태그·검색옵션 2~3개만 바꿉니다.' },
+  { day: '판정', title: '매출보다 공헌이익을 봅니다', body: '노출부터 주문까지 좋아져도 광고비와 원가를 빼고 남지 않으면 확대하지 않습니다.' },
 ];
 
 const sellerCases = [
-  { who: '쿠팡 공식 판매자 사례', title: '경쟁상품에서 일반 키워드를 발견', body: '경쟁 아이템의 상품명을 분석해 새 키워드를 자기 상품에 반영하고 유입과 구매전환율이 크게 늘었다고 소개했습니다.', tag: '키워드 발굴' },
-  { who: '쿠팡 공식 제철과일 사례', title: '전년도 데이터로 시즌 상품 구성', body: '전년도 제철과일 흐름에서 햇사과·사과 수요를 읽고 상품 구성을 새로 만들어 단기간 매출 기회를 잡았습니다.', tag: '시즌 수요' },
-  { who: '월 매출 약 4억 판매자', title: 'Top 20 태그와 장바구니 이탈을 함께 관리', body: '인기 검색어 누락을 계속 보완하고, 장바구니 대비 주문이 낮으면 가격·구성을 점검하며 묶음 쿠폰으로 객단가를 높였습니다.', tag: '퍼널 운영' },
-  { who: '월 매출 2억대 판매자', title: '행동마다 판정 지표를 하나만 지정', body: 'SNS 광고는 주간 매출, 동영상 상세는 전환율, 썸네일은 조회·클릭처럼 액션과 결과 지표를 1:1로 연결했습니다.', tag: '실험 설계' },
-  { who: '올라 셀러 프로젝트', title: '고조회 옵션부터 썸네일·상세를 순차 개선', body: '검색 노출 대비 클릭이 낮으면 썸네일, 조회 대비 구매가 낮으면 상세페이지를 고치고 다시 같은 지표를 확인했습니다.', tag: '개선 우선순위' },
+  {
+    source: '쿠팡 공식 판매자 사례',
+    title: '경쟁상품에서 고객이 쓰는 말을 찾았습니다',
+    story: '한 판매자는 경쟁상품의 상품명에서 새로운 일반 키워드를 찾아 자기 상품에 반영했습니다. 쿠팡은 이후 유입수와 구매전환율이 늘었다고 소개했습니다.',
+    lesson: '경쟁 브랜드명 자체를 쓰는 것이 아닙니다. 고객이 무엇을 찾는지 표현만 가져와야 합니다.',
+  },
+  {
+    source: '쿠팡 공식 제철과일 사례',
+    title: '지난해 데이터를 보고 올해 상품을 준비했습니다',
+    story: '전년도 제철과일 검색 흐름을 보고 햇사과와 사과 수요에 맞춘 상품 구성을 준비해 짧은 기간 매출 기회를 잡았습니다.',
+    lesson: '계절상품은 판매가 시작된 뒤 분석하면 늦습니다. 수요가 오르기 전에 상품과 광고를 준비해야 합니다.',
+  },
+  {
+    source: '월 매출 약 4억 원 판매자 인터뷰',
+    title: '장바구니에서 빠져나가는 이유를 가격에서 찾았습니다',
+    story: '장바구니 대비 주문이 낮은 상품은 가격과 구성을 다시 보고, 여러 개씩 사는 상품에는 묶음 쿠폰을 적용했습니다. 인기 검색어 누락도 꾸준히 보완했습니다.',
+    lesson: '방문자 수만 늘리는 것이 마케팅은 아닙니다. 결제 직전에 나가는 이유까지 찾아야 매출이 남습니다.',
+  },
+  {
+    source: '올라 셀러 프로젝트',
+    title: '조회가 있는 상품부터 순서대로 손봤습니다',
+    story: '노출 대비 클릭이 낮으면 썸네일을 바꾸고, 조회 대비 구매가 낮으면 상세페이지를 바꿨습니다. 변경 후에는 같은 지표를 다시 확인했습니다.',
+    lesson: '한 번에 여러 곳을 바꾸면 무엇이 효과가 있었는지 알 수 없습니다. 한 번에 하나만 바꿔야 합니다.',
+  },
 ];
 
-const researchSources = [
-  { label: '쿠팡 공식 · 구매/검색 옵션 가이드', href: 'https://marketplace.coupang.com/information-center/blog-news5?rf=MARKETPLACE' },
-  { label: '쿠팡 공식 · 비즈니스 인사이트 판매자 사례', href: 'https://blog.naver.com/coupangsellers/224090010989' },
-  { label: '쿠팡 Ads · 상품/키워드 수정 가이드', href: 'https://ads.coupang.com/guide/02' },
-  { label: '월 매출 4억 판매자 인터뷰 · 윈들리', href: 'https://newneek.co/@windly/article/38021' },
-  { label: '판매분석 액션-지표 해석 사례', href: 'https://blog.naver.com/addvalue_/223983153114' },
+const actionPlan = [
+  { week: '이번 주', title: '데이터를 보관합니다', body: '7월 31일 전에 데이크림·로션·토너의 Top 100 경쟁상품과 검색어를 저장합니다. 모든 상품의 7일·30일 기준값도 내려받습니다.' },
+  { week: '다음 7일', title: '아쿠아 로션 키워드를 시험합니다', body: '수분 에멀전, 고보습 로션처럼 제품과 맞는 일반 키워드를 광고로 먼저 검증합니다. 토너는 바꾸지 않고 비교상품으로 둡니다.' },
+  { week: '그 다음 14일', title: '화이트닝 크림 이미지를 시험합니다', body: '대표 이미지 한 장만 교체합니다. 클릭률이 오르면 유지하고, 클릭은 오르는데 장바구니가 늘지 않으면 상세페이지를 고칩니다.' },
+  { week: '8월 13일 전', title: '구독을 유지할지 결정합니다', body: '추가 매출이 아니라 추가 공헌이익을 계산합니다. 한 달에 99,000원 이상 남기는 데 도움이 되었을 때만 구독을 이어갑니다.' },
+];
+
+const sources = [
+  { label: '쿠팡 공식 구매·검색 옵션 가이드', href: 'https://marketplace.coupang.com/information-center/blog-news5?rf=MARKETPLACE' },
+  { label: '쿠팡 공식 비즈니스 인사이트 판매자 사례', href: 'https://blog.naver.com/coupangsellers/224090010989' },
+  { label: '쿠팡 Ads 상품·키워드 수정 가이드', href: 'https://ads.coupang.com/guide/02' },
+  { label: '윈들리 판매자 인터뷰', href: 'https://newneek.co/@windly/article/38021' },
+  { label: '판매분석 지표 해석 사례', href: 'https://blog.naver.com/addvalue_/223983153114' },
   { label: '올라 셀러 프로젝트 활용 사례', href: 'https://www.openads.co.kr/content/contentDetail?contsId=16208' },
 ];
 ---
 
-<BaseLayout title="쿠팡 비즈니스 인사이트 운영 전략" description="쿠팡 Wing 비즈니스 인사이트 기능, 현재 판매 퍼널, 상품별 액션과 무료체험 실행 계획을 정리한 마케팅 대시보드">
+<BaseLayout title="쿠팡 매출을 늘리는 비즈니스 인사이트 사용법" description="쿠팡 판매를 처음 맡은 사람도 이해할 수 있도록 판매분석, 유입경로, 검색 키워드 실험과 실행 순서를 설명한 유어스킨플러스 마케팅 가이드">
   <SiteHeader active="/sales-analysis/" />
 
-  <main class="bi-page">
+  <main class="guide-page">
     <section class="hero container">
-      <div class="hero__copy">
-        <div class="status-line"><span class="live-dot"></span> WING LIVE DATA REVIEW · 2026.07.15</div>
-        <p class="eyebrow">Business Insight → Growth Operating System</p>
-        <h1>데이터를 보는 데서 끝내지 않고,<br /><em>다음 판매 행동</em>으로 연결한다.</h1>
-        <p class="lead">유어스킨플러스의 쿠팡 판매분석·유입경로·카테고리 분석을 실제로 확인한 결과와, 무료체험 기간 안에 매출 개선 효과를 검증하는 실행안입니다.</p>
-        <div class="hero__actions">
-          <a class="primary-action" href="#action-plan">실행 계획 바로 보기</a>
-          <a class="secondary-action" href="/sales-analysis/">기존 매출 분석 보드</a>
-        </div>
+      <div class="hero-copy">
+        <p class="section-label">유어스킨플러스 쿠팡 마케팅 가이드</p>
+        <h1>매출을 늘리려면<br />먼저 <em>어디에서 고객을 놓치는지</em><br />알아야 합니다.</h1>
+        <p class="lead">비즈니스 인사이트는 매출을 자동으로 올려주는 도구가 아닙니다. 고객이 상품을 발견하고 결제하기까지 어느 단계에서 빠져나가는지 보여주는 도구입니다. 이 페이지는 쿠팡 판매를 처음 맡은 분도 바로 판단하고 움직일 수 있도록 작성했습니다.</p>
       </div>
-      <aside class="subscription-card">
-        <span class="card-kicker">STANDARD · FREE TRIAL</span>
-        <strong>₩99,000<small>/월</small></strong>
-        <dl>
-          <div><dt>무료체험 종료</dt><dd>2026.08.13</dd></div>
-          <div><dt>과금 시작</dt><dd>2026.08.14</dd></div>
-          <div><dt>8월 예정</dt><dd>58,586원</dd></div>
-          <div><dt>결제</dt><dd>다음 정산금 차감</dd></div>
-        </dl>
-        <p>유지 기준은 “재미있는 데이터”가 아니라 <b>월 추가 공헌이익 99,000원 이상</b>입니다.</p>
+      <aside class="hero-note">
+        <span>먼저 이것만 기억하세요</span>
+        <strong>사람이 안 오면 노출을 늘리고,<br />사람은 오는데 안 사면 상품을 고칩니다.</strong>
+        <p>이 두 문제를 구분하지 않으면 광고비와 이미지 제작비만 늘어납니다.</p>
       </aside>
     </section>
 
-    <nav class="jump-nav container" aria-label="페이지 바로가기">
-      <a href="#current">현재 진단</a><a href="#features">기능 분석</a><a href="#products">상품 전략</a><a href="#category">카테고리</a><a href="#keyword-test">키워드 실험</a><a href="#seller-cases">판매자 사례</a><a href="#action-plan">실행 일정</a><a href="#decision">구독 판정</a>
+    <nav class="page-nav container" aria-label="문서 목차">
+      <a href="#status">현재 상황</a>
+      <a href="#reading">숫자 읽는 법</a>
+      <a href="#priority">상품 우선순위</a>
+      <a href="#tools">도구 사용법</a>
+      <a href="#keywords">키워드 실험</a>
+      <a href="#cases">판매자 사례</a>
+      <a href="#plan">실행 계획</a>
     </nav>
 
-    <section class="deadline container" aria-label="긴급 일정">
-      <span>DEADLINE</span>
-      <strong>7월 31일</strong>
-      <p>Top 경쟁상품·검색어 최대 100개 베타 무료 제공 종료 예정. 데이크림·로션·토너 데이터부터 보관해야 합니다.</p>
-    </section>
-
-    <section class="section container" id="current">
-      <header class="section-head">
-        <div><p class="eyebrow">01 · Current signal</p><h2>현재 판매 퍼널 진단</h2></div>
-        <p>판매는 발생하지만 광고 의존도가 높습니다. 매출 확대보다 먼저 SKU별 손익분기 ROAS를 정해야 합니다.</p>
-      </header>
-
-      <div class="kpi-grid">
-        <article><span>최근 7일 매출</span><strong>61,700<small>원</small></strong><em>판매 6개</em></article>
-        <article><span>구매전환율</span><strong>5.72<small>%</small></strong><em>84명 방문 · 조회 105</em></article>
-        <article class="is-alert"><span>광고비 / 전체 매출</span><strong>53.5<small>%</small></strong><em>33,000원 집행</em></article>
-        <article><span>자연유입 비중</span><strong>24.2<small>%</small></strong><em>최근 30일 조회 기준</em></article>
+    <section class="section container" id="status">
+      <div class="section-intro">
+        <p class="section-label">현재 상황</p>
+        <h2>매출은 나고 있지만 광고비 부담이 큽니다.</h2>
+        <p>2026년 7월 9일부터 15일까지 6개가 팔려 61,700원의 매출이 발생했습니다. 같은 기간 광고비는 약 33,000원입니다. 제품 원가, 쿠팡 수수료, 배송비를 빼기 전인데도 광고비가 매출의 절반을 넘습니다.</p>
       </div>
 
-      <div class="funnel-panel">
-        <div class="funnel-copy">
-          <p class="mini-label">RECENT 30 DAYS · TRAFFIC MIX</p>
-          <h3>유입 4건 중 3건이 광고</h3>
-          <p>광고 조회 491건, 자연유입 157건입니다. 광고 매출은 최근 7일 전체 매출의 약 84.3%지만 표시 ROAS는 157.58%에 그쳤습니다.</p>
-          <div class="traffic-bar" aria-label="광고 75.8%, 자연유입 24.2%"><span style="width:75.8%">광고 75.8%</span><i>자연 24.2%</i></div>
-        </div>
-        <div class="route-grid">
-          <div><span>광고</span><b>491</b><small>조회 · 주문 13 · CVR 2.65%</small></div>
-          <div><span>검색</span><b>56</b><small>조회 · 주문 1 · CVR 1.79%</small></div>
-          <div><span>추천</span><b>33</b><small>조회 · 주문 0</small></div>
-          <div><span>마이쿠팡</span><b>10</b><small>조회 · 주문 1 · CVR 10%</small></div>
-        </div>
+      <div class="numbers" aria-label="최근 판매 지표">
+        <article><span>최근 7일 매출</span><strong>61,700원</strong><small>판매 6개</small></article>
+        <article><span>구매전환율</span><strong>5.72%</strong><small>방문자 84명</small></article>
+        <article class="warning"><span>광고비 비중</span><strong>53.5%</strong><small>매출 대비</small></article>
+        <article><span>자연유입 비중</span><strong>24.2%</strong><small>최근 30일 조회 기준</small></article>
       </div>
-      <p class="data-note">데이터 범위: 판매 2026.07.09–07.15, 유입 2026.06.16–07.15. 쿠팡의 집계 갱신시각과 귀속 기준이 서로 달라 지표 간 단순 합산은 금지합니다.</p>
+
+      <div class="marketer-view">
+        <span>마케터의 판단</span>
+        <p>지금은 광고비를 더 쓰기보다, 이미 팔리는 로션과 토너에 예산을 모으고 자연검색 유입을 늘려야 합니다. 팔리지 않는 상품 전체를 한꺼번에 리뉴얼하는 것은 비용만 커질 가능성이 높습니다.</p>
+      </div>
     </section>
 
-    <section class="section section--ink" id="features">
+    <section class="section soft-section" id="reading">
       <div class="container">
-        <header class="section-head section-head--light">
-          <div><p class="eyebrow">02 · Feature map</p><h2>기능은 여섯 가지 질문에 답한다</h2></div>
-          <p>분석 화면마다 담당 질문을 하나씩 지정하면 데이터가 실행으로 연결됩니다.</p>
-        </header>
-        <div class="feature-list">
-          {featureRows.map((row, index) => (
+        <div class="section-intro compact">
+          <p class="section-label">숫자 읽는 법</p>
+          <h2>판매 화면의 숫자는 고객의 이동 순서입니다.</h2>
+          <p>각 숫자를 따로 보지 말고 앞 단계에서 다음 단계로 얼마나 넘어갔는지 봅니다.</p>
+        </div>
+
+        <div class="journey">
+          <article>
+            <span>01</span>
+            <div><h3>고객이 들어왔습니까?</h3><p>방문자와 조회를 봅니다. 숫자가 적다면 상세페이지보다 검색 노출, 광고, 카테고리, 상품정보가 먼저입니다.</p></div>
+            <strong>방문자 · 조회</strong>
+          </article>
+          <article>
+            <span>02</span>
+            <div><h3>상품에 관심을 보였습니까?</h3><p>조회는 많은데 장바구니가 적다면 가격, 리뷰, 혜택, 상세 첫 화면이 고객 기대에 미치지 못한 것입니다.</p></div>
+            <strong>장바구니</strong>
+          </article>
+          <article>
+            <span>03</span>
+            <div><h3>실제로 결제했습니까?</h3><p>장바구니 이후 주문이 적다면 배송일, 배송비, 쿠폰, 옵션 구성과 최종 신뢰 요소를 확인합니다.</p></div>
+            <strong>주문 · 매출</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="priority">
+      <div class="section-intro">
+        <p class="section-label">상품 우선순위</p>
+        <h2>모든 상품을 동시에 고치지 않습니다.</h2>
+        <p>상품마다 문제가 다릅니다. 지금 팔리는 상품, 방문은 있는 상품, 방문조차 없는 상품을 같은 방식으로 운영하면 안 됩니다.</p>
+      </div>
+
+      <div class="priority-list">
+        {productPriorities.map((item) => (
+          <article>
+            <span class="priority-number">{item.order}</span>
+            <div class="priority-title"><small>{item.products}</small><h3>{item.label}</h3><p>{item.evidence}</p></div>
+            <div class="priority-action"><span>지금 할 일</span><p>{item.action}</p></div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section dark-section" id="tools">
+      <div class="container">
+        <div class="section-intro compact light">
+          <p class="section-label">비즈니스 인사이트 사용법</p>
+          <h2>메뉴 이름보다, 답을 얻고 싶은 질문을 먼저 정합니다.</h2>
+        </div>
+        <div class="tool-list">
+          {tools.map((tool) => (
             <article>
-              <span class="feature-index">0{index + 1}</span>
-              <div><small>{row.area}</small><strong>{row.data}</strong></div>
-              <p>{row.use}</p>
+              <header><span>{tool.title}</span><h3>{tool.question}</h3></header>
+              <p>{tool.explanation}</p>
+              <aside><b>유어스킨 적용</b>{tool.example}</aside>
             </article>
           ))}
         </div>
-        <div class="wing-links">
-          {wingLinks.map((link) => <a href={link.href} target="_blank" rel="noreferrer">{link.label} ↗</a>)}
+        <div class="wing-actions">
+          <a href="https://wing.coupang.com/tenants/business-insight/sales-analysis" target="_blank" rel="noreferrer">판매분석 열기</a>
+          <a href="https://wing.coupang.com/tenants/business-insight/traffic-analysis" target="_blank" rel="noreferrer">유입경로 분석 열기</a>
+          <a href="https://wing.coupang.com/tenants/business-insight/category-analysis" target="_blank" rel="noreferrer">카테고리 분석 열기</a>
         </div>
       </div>
     </section>
 
-    <section class="section container" id="products">
-      <header class="section-head">
-        <div><p class="eyebrow">03 · Product portfolio</p><h2>전 상품을 같은 방식으로 고치지 않는다</h2></div>
-        <p>팔리는 상품은 유입을 확대하고, 전환이 낮은 상품만 이미지·상세를 개선합니다. 표본이 없는 상품은 노출부터 만듭니다.</p>
-      </header>
-      <div class="product-table" role="table" aria-label="상품별 실행 전략">
-        <div class="product-row product-row--head" role="row"><span>분류</span><span>상품·현재 신호</span><span>진단</span><span>다음 행동</span></div>
-        {products.map((product) => (
-          <article class="product-row" role="row">
-            <span><em class={`pill pill--${product.tone}`}>{product.group}</em></span>
-            <span><b>{product.name}</b><small>{product.signal}</small></span>
-            <span>{product.issue}</span>
-            <span>{product.action}</span>
-          </article>
+    <section class="section container" id="keywords">
+      <div class="section-intro">
+        <p class="section-label">검색 키워드 실험</p>
+        <h2>키워드를 바꿔 유입이 늘었는지 시험할 수 있습니다.</h2>
+        <p>다만 쿠팡은 자연검색 상품정보를 방문자 절반씩 나누는 A/B 테스트를 제공하지 않습니다. 광고로 키워드 수요를 먼저 확인하고, 검증된 키워드만 상품정보에 반영하는 순서가 안전합니다.</p>
+      </div>
+
+      <div class="two-stage">
+        <article>
+          <span>1단계</span>
+          <h3>광고에서 키워드 수요를 확인합니다.</h3>
+          <p>후보 키워드를 소액으로 7일간 운영합니다. 노출은 되는데 클릭이 없는지, 클릭은 되는데 주문이 없는지 확인합니다.</p>
+          <strong>빠르게 확인할 것: 노출 · 클릭 · 주문 · 광고비</strong>
+        </article>
+        <article>
+          <span>2단계</span>
+          <h3>성과가 있는 키워드만 자연검색에 반영합니다.</h3>
+          <p>상품명, 이미지, 가격을 그대로 두고 검색 태그나 검색옵션 2~3개만 바꿉니다. 변경 전 14일과 변경 후 14일을 같은 요일로 비교합니다.</p>
+          <strong>판단할 것: 자연검색 노출 · 클릭 · 장바구니 · 주문</strong>
+        </article>
+      </div>
+
+      <div class="keyword-process">
+        {keywordSteps.map((step) => (
+          <article><span>{step.day}</span><h3>{step.title}</h3><p>{step.body}</p></article>
         ))}
       </div>
-    </section>
 
-    <section class="section container diagnosis-section">
-      <header class="section-head">
-        <div><p class="eyebrow">04 · Diagnosis rules</p><h2>숫자가 이렇게 나오면 이렇게 움직인다</h2></div>
-      </header>
-      <div class="diagnosis-grid">
-        {diagnosis.map((item, index) => (
-          <article>
-            <span>{String(index + 1).padStart(2, '0')}</span>
-            <h3>{item.when}</h3>
-            <p><b>해석</b>{item.read}</p>
-            <p><b>실행</b>{item.do}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <section class="section section--sand" id="category">
-      <div class="container category-layout">
-        <div class="category-copy">
-          <p class="eyebrow">05 · Category intelligence</p>
-          <h2>스탠다드의 3개 슬롯은<br />주력 SKU에만 쓴다.</h2>
-          <p>현재 매출 가능성과 개선 실험 범위를 고려하면 데이크림, 로션/에멀젼, 스킨/토너/화장수가 우선입니다.</p>
-          <ol>
-            <li><span>1</span><div><b>데이크림</b><small>화이트닝 크림 전환 개선 + PDRN 노출 확보</small></div></li>
-            <li><span>2</span><div><b>로션/에멀젼</b><small>현재 최고 전환 상품의 자연검색 확장</small></div></li>
-            <li><span>3</span><div><b>스킨/토너/화장수</b><small>실제 판매 신호를 키워 두 번째 주력으로 육성</small></div></li>
-          </ol>
+      <div class="first-test">
+        <div class="first-test-copy">
+          <p class="section-label">첫 번째 권장 실험</p>
+          <h3>아쿠아 로션만 바꾸고 토너는 그대로 둡니다.</h3>
+          <p>아쿠아 로션을 실험상품으로, 토너를 비교상품으로 둡니다. 두 상품의 시장 흐름이 함께 올랐는지, 로션만 올랐는지 비교하면 키워드 효과를 더 정확히 읽을 수 있습니다.</p>
         </div>
-        <div class="plan-card">
-          <div class="plan-card__head"><span>PLAN COMPARISON</span><b>Standard vs Premium</b></div>
-          {planRows.map((row) => (
-            <div class="plan-row"><span>{row.label}</span><b>{row.standard}</b><em>{row.premium}</em></div>
-          ))}
-          <div class="plan-legend"><span>스탠다드</span><em>프리미엄</em></div>
+        <div class="candidate-box">
+          <span>검토할 일반 키워드</span>
+          <ul><li>수분 에멀전</li><li>고보습 로션</li><li>여성 로션</li><li>300ml 수분 로션</li></ul>
+        </div>
+        <div class="caution-box">
+          <span>사용하지 않을 표현</span>
+          <strong>경쟁 브랜드명</strong>
+          <p>실제 유입어에 포함된 '마몽드'는 고객 의도만 참고합니다. 상품명이나 태그에는 넣지 않습니다.</p>
         </div>
       </div>
+
+      <p class="approval-note">상품정보를 실제로 변경하기 전에는 현재 정보를 백업하고 별도 승인을 받습니다. D1~D3은 승인과 검색 반영, 데이터 지연이 섞이므로 결과 판정에서 제외합니다.</p>
     </section>
 
-    <section class="section keyword-lab" id="keyword-test">
+    <section class="section soft-section" id="cases">
       <div class="container">
-        <header class="section-head section-head--light">
-          <div><p class="eyebrow">06 · Keyword experiment lab</p><h2>키워드는 감으로 바꾸지 않고<br />두 단계로 검증한다.</h2></div>
-          <p>쿠팡에는 오가닉 상품정보의 자동 A/B 분할 기능이 없습니다. 광고 키워드로 수요를 먼저 검증한 뒤, 성과가 확인된 일반 키워드만 검색 태그·검색옵션에 반영합니다.</p>
-        </header>
-
-        <div class="test-mode-grid">
-          <article>
-            <span>STEP A · PAID SIGNAL</span>
-            <h3>광고 키워드 테스트</h3>
-            <p>후보 키워드별 노출·클릭·주문·ROAS를 빠르게 확인합니다. 여기서 살아남은 키워드만 자연검색 실험으로 넘깁니다.</p>
-            <small>목적: 검색 수요와 구매 의도 확인</small>
-          </article>
-          <article class="is-organic">
-            <span>STEP B · ORGANIC LIFT</span>
-            <h3>검색 태그·옵션 전후 비교</h3>
-            <p>상품명·이미지·가격을 고정하고 태그 2~3개만 반영합니다. 변경 전 14일과 D4~D17을 같은 요일 구성으로 비교합니다.</p>
-            <small>목적: 자연검색 노출과 이익률 개선</small>
-          </article>
+        <div class="section-intro">
+          <p class="section-label">다른 판매자의 활용 방식</p>
+          <h2>잘하는 판매자는 데이터를 본 뒤 반드시 한 가지 행동을 정했습니다.</h2>
+          <p>아래 매출 수치는 판매자 인터뷰와 쿠팡 소개 사례입니다. 성과를 그대로 약속하는 자료는 아닙니다. 대신 어떤 숫자를 보고 무엇을 바꿨는지 참고합니다.</p>
         </div>
-
-        <div class="keyword-flow">
-          {keywordSteps.map((item) => (
-            <article><span>{item.step}</span><h3>{item.title}</h3><p>{item.body}</p></article>
+        <div class="case-list">
+          {sellerCases.map((item, index) => (
+            <article>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <div><small>{item.source}</small><h3>{item.title}</h3><p>{item.story}</p></div>
+              <aside><b>우리에게 적용하면</b><p>{item.lesson}</p></aside>
+            </article>
           ))}
         </div>
-
-        <div class="first-keyword-test">
-          <div>
-            <p class="mini-label">FIRST CONTROLLED TEST</p>
-            <h3>아쿠아 로션을 실험군, 토너를 비교군으로</h3>
-            <p>아쿠아 로션의 상품명은 유지하고 검색 태그·검색옵션만 변경합니다. 토너는 아무것도 바꾸지 않아 시장 전체 변화를 분리합니다.</p>
-          </div>
-          <div class="keyword-candidates">
-            <span>안전 후보</span>
-            <b>수분 에멀전</b><b>고보습 로션</b><b>여성 로션</b><b>300ml 수분 로션</b>
-          </div>
-          <div class="keyword-ban">
-            <span>제외</span>
-            <b>경쟁 브랜드명</b>
-            <small>실제 유입어의 ‘마몽드’는 고객 의도만 추출하고 상품명·태그에는 사용하지 않습니다.</small>
-          </div>
-        </div>
-
-        <div class="measurement-strip">
-          <span>검색량</span><i>→</i><span>노출</span><i>→</i><span>클릭</span><i>→</i><span>장바구니</span><i>→</i><span>주문</span><i>→</i><strong>공헌이익</strong>
-        </div>
-        <p class="keyword-note">실제 상품정보 변경은 별도 승인 후 진행합니다. 변경 전 원본 상품정보를 백업하고, D1~D3은 승인·검색 반영 및 데이터 지연 구간으로 판정에서 제외합니다.</p>
       </div>
     </section>
 
-    <section class="section container" id="seller-cases">
-      <header class="section-head">
-        <div><p class="eyebrow">07 · Seller playbooks</p><h2>다른 판매자는 데이터를 이렇게 돈으로 바꾼다</h2></div>
-        <p>사례의 매출 수치는 통제실험 결과가 아닌 판매자 후기입니다. 숫자를 그대로 믿기보다 반복되는 운영 패턴을 가져옵니다.</p>
-      </header>
-      <div class="case-grid">
-        {sellerCases.map((item, index) => (
-          <article>
-            <div><span>{String(index + 1).padStart(2, '0')}</span><em>{item.tag}</em></div>
-            <small>{item.who}</small>
-            <h3>{item.title}</h3>
-            <p>{item.body}</p>
-          </article>
+    <section class="section container" id="plan">
+      <div class="section-intro">
+        <p class="section-label">앞으로의 실행 계획</p>
+        <h2>한 달 동안 네 가지 일만 순서대로 합니다.</h2>
+        <p>작업 수를 늘리는 것이 목표가 아닙니다. 하나를 바꾸고 결과를 확인한 뒤 다음 작업으로 넘어갑니다.</p>
+      </div>
+      <div class="plan-list">
+        {actionPlan.map((item, index) => (
+          <article><span>{item.week}</span><div><small>{String(index + 1).padStart(2, '0')}</small><h3>{item.title}</h3><p>{item.body}</p></div></article>
         ))}
       </div>
-      <aside class="shared-rule">
-        <span>COMMON RULE</span>
-        <strong>고조회 상품부터 보고 → 한 변수만 바꾸고 → 같은 지표로 다시 판정한다.</strong>
-      </aside>
-      <div class="source-panel">
-        <div><p class="eyebrow">Research sources</p><h3>확인한 공식·판매자 자료</h3><p>공식 가이드를 우선하고 판매자 사례는 운영 아이디어로만 사용했습니다.</p></div>
-        <div class="source-links">{researchSources.map((source) => <a href={source.href} target="_blank" rel="noreferrer">{source.label}<span>↗</span></a>)}</div>
+
+      <div class="subscription-decision">
+        <div><span>구독 판단 기준</span><h3>월 99,000원보다 더 많은 이익을 만들었습니까?</h3></div>
+        <p>최근 7일 매출을 단순 월 환산하면 약 26.7만 원입니다. 현재 매출 규모에서는 구독료가 작지 않습니다. 추가 매출이 아니라 원가, 수수료, 배송비, 광고비를 뺀 추가 공헌이익이 월 99,000원을 넘을 때만 유지하는 것이 맞습니다.</p>
       </div>
     </section>
 
-    <section class="section container" id="action-plan">
-      <header class="section-head">
-        <div><p class="eyebrow">08 · Execution calendar</p><h2>무료체험을 4주짜리 매출 실험으로 사용</h2></div>
-        <p>한 번에 한 변수만 변경하고 D0·D7·D14 스냅샷을 남겨 무엇이 매출을 바꿨는지 분리합니다.</p>
-      </header>
-      <div class="timeline">
-        {schedule.map((item, index) => (
-          <article>
-            <div class="timeline-no">{String(index + 1).padStart(2, '0')}</div>
-            <div><span>{item.date}</span><h3>{item.title}</h3><p>{item.body}</p></div>
-          </article>
-        ))}
-      </div>
-      <div class="experiment-card">
-        <div><span>FIRST EXPERIMENT</span><h3>화이트닝 크림 대표 이미지 1장</h3><p>28회 조회에서 CVR 3.57%. 현재 가장 빠르게 대표 이미지 개선 효과를 읽을 수 있는 상품입니다.</p></div>
-        <div class="experiment-metrics"><span>교체 전 D0</span><i>→</i><span>7일 후 D7</span><i>→</i><span>14일 후 D14</span></div>
-        <ul><li>검색 노출·클릭률</li><li>조회·장바구니율</li><li>구매전환율·공헌이익</li></ul>
-      </div>
-    </section>
-
-    <section class="section container" id="decision">
-      <div class="decision-card">
-        <div class="decision-card__copy">
-          <p class="eyebrow">09 · Subscription verdict</p>
-          <h2>99,000원을 회수할 수 있을 때만 유지</h2>
-          <p>최근 7일 매출을 단순 월 환산하면 약 26.7만 원으로, 구독료가 약 37%에 해당합니다. 지금은 상시 구독을 전제할 단계가 아니라 무료체험으로 효과를 증명할 단계입니다.</p>
-        </div>
-        <div class="break-even">
-          <span>공헌이익률별 필요한 월 추가 매출</span>
-          <div><b>30%</b><strong>330,000원</strong></div>
-          <div><b>40%</b><strong>247,500원</strong></div>
-          <div><b>50%</b><strong>198,000원</strong></div>
-        </div>
-        <div class="verdict">유지 조건 <b>월 추가 공헌이익 ≥ 99,000원</b></div>
-      </div>
+    <section class="sources container" aria-label="참고 자료">
+      <div><p class="section-label">확인한 자료</p><h2>공식 가이드를 우선하고 판매자 사례는 참고로 사용했습니다.</h2></div>
+      <div class="source-links">{sources.map((source) => <a href={source.href} target="_blank" rel="noreferrer"><span>{source.label}</span><b>원문 보기</b></a>)}</div>
+      <p class="data-footnote">유어스킨 판매 데이터 기준: 판매 2026.07.09~07.15, 유입 2026.06.16~07.15. 쿠팡의 갱신 시각과 귀속 기준이 다르므로 서로 다른 화면의 숫자를 단순 합산하지 않습니다.</p>
     </section>
   </main>
 
@@ -340,132 +312,112 @@ const researchSources = [
 </BaseLayout>
 
 <style>
-  .bi-page { position:relative; z-index:1; padding-bottom:32px; color:var(--ink); }
-  .bi-page * { min-width:0; }
-  .hero { display:grid; grid-template-columns:minmax(0,1.4fr) minmax(300px,.6fr); gap:clamp(24px,5vw,64px); align-items:end; padding-block:clamp(48px,8vw,104px) 28px; }
-  .status-line { display:flex; align-items:center; gap:8px; width:max-content; margin-bottom:28px; padding:7px 11px; border:1px solid #b8c9bc; border-radius:99px; background:#eef5ef; color:#31533d; font:800 11px/1 var(--font-latin); letter-spacing:.08em; }
-  .live-dot { width:8px; height:8px; border-radius:50%; background:#2e8b57; box-shadow:0 0 0 5px rgba(46,139,87,.12); }
-  .hero h1 { margin:12px 0 20px; max-width:980px; font-size:clamp(38px,6.7vw,78px); line-height:1.02; letter-spacing:-.055em; }
-  .hero h1 em { color:var(--accent); font-style:normal; }
-  .lead { max-width:62ch; margin:0; color:var(--muted); font-size:clamp(16px,1.5vw,19px); line-height:1.8; }
-  .eyebrow { margin:0; color:var(--accent); font:900 11px/1.2 var(--font-latin); letter-spacing:.16em; text-transform:uppercase; }
-  .hero__actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
-  .primary-action,.secondary-action { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:0 18px; border-radius:13px; font-weight:850; text-decoration:none; }
-  .primary-action { background:var(--forest); color:#fff; }
-  .secondary-action { border:1px solid var(--line-strong); background:var(--surface); color:var(--ink); }
-  .subscription-card { padding:28px; border-radius:30px; background:linear-gradient(145deg,#17221c,#26382d 65%,#7b4633); color:#f7f1e8; box-shadow:var(--shadow-lg); }
-  .card-kicker { color:#d9bcad; font:900 11px/1 var(--font-latin); letter-spacing:.14em; }
-  .subscription-card>strong { display:block; margin:20px 0; font:900 clamp(42px,5vw,62px)/.9 var(--font-latin); letter-spacing:-.06em; }
-  .subscription-card>strong small { margin-left:6px; color:#ccd7cf; font-size:15px; letter-spacing:0; }
-  .subscription-card dl { display:grid; gap:0; margin:0; border-top:1px solid rgba(255,255,255,.16); }
-  .subscription-card dl div { display:flex; justify-content:space-between; gap:12px; padding:11px 0; border-bottom:1px solid rgba(255,255,255,.12); }
-  .subscription-card dt { color:#b9c7be; font-size:13px; }
-  .subscription-card dd { margin:0; font-weight:800; }
-  .subscription-card p { margin:18px 0 0; color:#d6dfd8; font-size:13px; line-height:1.65; }
-  .subscription-card b { color:#fff; }
-  .jump-nav { position:sticky; top:74px; z-index:5; display:flex; gap:6px; padding-block:9px; overflow-x:auto; background:color-mix(in srgb,var(--bg) 86%,transparent); backdrop-filter:blur(16px); border-block:1px solid var(--line); }
-  .jump-nav a { flex:0 0 auto; padding:8px 12px; border-radius:99px; color:var(--muted); background:var(--surface); border:1px solid var(--line); font-size:12px; font-weight:800; text-decoration:none; }
-  .deadline { display:grid; grid-template-columns:auto auto minmax(0,1fr); gap:16px; align-items:center; margin-top:22px; padding-block:18px; border-bottom:1px solid #e1a77f; }
-  .deadline span { padding:6px 9px; border-radius:6px; background:#bd4b27; color:#fff; font:900 10px/1 var(--font-latin); letter-spacing:.12em; }
-  .deadline strong { font-size:22px; white-space:nowrap; }
-  .deadline p { margin:0; color:var(--muted); line-height:1.6; }
-  .section { padding-block:clamp(58px,8vw,100px); scroll-margin-top:130px; }
-  .section-head { display:flex; align-items:end; justify-content:space-between; gap:28px; margin-bottom:28px; }
-  .section-head h2 { margin:9px 0 0; font-size:clamp(30px,4.5vw,52px); line-height:1.08; letter-spacing:-.045em; }
-  .section-head>p { max-width:46ch; margin:0; color:var(--muted); line-height:1.7; }
-  .kpi-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
-  .kpi-grid article { padding:20px; border:1px solid var(--line); border-radius:20px; background:var(--surface); box-shadow:var(--shadow-sm); }
-  .kpi-grid article.is-alert { background:#fff3ec; border-color:#e5b89f; }
-  .kpi-grid span,.kpi-grid em { display:block; color:var(--muted); font-size:12px; font-style:normal; font-weight:800; }
-  .kpi-grid strong { display:block; margin:12px 0 8px; font:900 clamp(30px,4vw,46px)/1 var(--font-latin); letter-spacing:-.05em; }
-  .kpi-grid small { margin-left:3px; color:var(--accent); font-size:.45em; }
-  .funnel-panel { display:grid; grid-template-columns:minmax(0,1fr) minmax(380px,.9fr); gap:34px; margin-top:12px; padding:clamp(24px,4vw,42px); border-radius:28px; color:#f8f3e9; background:#1c2922; }
-  .mini-label { color:#b9cabf; font:900 10px/1 var(--font-latin); letter-spacing:.14em; }
-  .funnel-copy h3 { margin:12px 0; font-size:clamp(28px,4vw,46px); letter-spacing:-.04em; }
-  .funnel-copy>p:not(.mini-label) { color:#cbd7cf; line-height:1.75; }
-  .traffic-bar { display:flex; height:38px; margin-top:24px; border-radius:10px; overflow:hidden; background:#d9bd8e; color:#17221c; font-size:11px; font-weight:900; }
-  .traffic-bar span,.traffic-bar i { display:flex; align-items:center; padding:0 10px; white-space:nowrap; }
-  .traffic-bar span { background:#cc7354; color:#fff; }
-  .traffic-bar i { flex:1; justify-content:center; font-style:normal; }
-  .route-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
-  .route-grid div { padding:15px; border:1px solid rgba(255,255,255,.13); border-radius:16px; background:rgba(255,255,255,.06); }
-  .route-grid span,.route-grid small { display:block; color:#b9cabf; font-size:12px; font-weight:700; }
-  .route-grid b { display:block; margin:7px 0; font:900 32px/1 var(--font-latin); }
-  .data-note { margin:12px 0 0; color:var(--faint); font-size:12px; line-height:1.6; }
-  .section--ink { background:#18221d; color:#f8f2e8; }
-  .section-head--light>p { color:#b9c8be; }
-  .feature-list { border-top:1px solid rgba(255,255,255,.18); }
-  .feature-list article { display:grid; grid-template-columns:54px minmax(0,1.25fr) minmax(260px,.75fr); gap:20px; align-items:center; padding:22px 0; border-bottom:1px solid rgba(255,255,255,.14); }
-  .feature-index { color:#b56a50; font:900 14px/1 var(--font-latin); }
-  .feature-list small,.feature-list strong { display:block; }
-  .feature-list small { margin-bottom:6px; color:#d2947d; font-size:11px; font-weight:900; }
-  .feature-list strong { font-size:17px; line-height:1.45; }
-  .feature-list p { margin:0; color:#bdc9c1; line-height:1.6; }
-  .wing-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; }
-  .wing-links a { padding:10px 13px; border:1px solid rgba(255,255,255,.2); border-radius:10px; color:#fff; font-size:13px; font-weight:800; text-decoration:none; }
-  .product-table { border:1px solid var(--line); border-radius:22px; overflow:hidden; background:var(--surface); }
-  .product-row { display:grid; grid-template-columns:90px minmax(220px,1.1fr) minmax(180px,.8fr) minmax(250px,1.2fr); gap:16px; align-items:center; padding:18px 20px; border-bottom:1px solid var(--line); }
-  .product-row:last-child { border-bottom:0; }
-  .product-row--head { background:var(--forest); color:#fff; font-size:12px; font-weight:800; }
-  .product-row b,.product-row small { display:block; }
-  .product-row small { margin-top:5px; color:var(--muted); line-height:1.5; }
-  .pill { display:inline-flex; padding:6px 10px; border-radius:99px; font-size:11px; font-style:normal; font-weight:900; }
-  .pill--good { background:#dff3e6; color:#23623f; }.pill--warn { background:#ffe7d9; color:#9b3f20; }.pill--info { background:#dcecf3; color:#26576e; }.pill--muted { background:#ece9e1; color:#69655c; }
-  .diagnosis-section { padding-top:10px; }
-  .diagnosis-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
-  .diagnosis-grid article { min-height:270px; padding:20px; border-radius:20px; background:#f0ece2; border:1px solid #ded7c9; }
-  .diagnosis-grid article>span { font:900 12px/1 var(--font-latin); color:var(--accent); }
-  .diagnosis-grid h3 { margin:28px 0 18px; font-size:20px; line-height:1.35; letter-spacing:-.025em; }
-  .diagnosis-grid p { margin:9px 0 0; color:var(--muted); font-size:13px; line-height:1.6; }
-  .diagnosis-grid p b { display:block; margin-bottom:3px; color:var(--ink); font-size:11px; }
-  .section--sand { background:#ded5c4; }
-  .category-layout { display:grid; grid-template-columns:minmax(280px,.7fr) minmax(500px,1.3fr); gap:clamp(28px,6vw,76px); align-items:start; }
-  .category-copy h2 { margin:11px 0 18px; font-size:clamp(34px,5vw,60px); line-height:1.06; letter-spacing:-.05em; }
-  .category-copy>p:not(.eyebrow) { color:#5d5b53; line-height:1.75; }
-  .category-copy ol { display:grid; gap:8px; padding:0; margin:28px 0 0; list-style:none; }
-  .category-copy li { display:grid; grid-template-columns:34px 1fr; gap:12px; align-items:center; padding:13px; border-radius:14px; background:rgba(255,255,255,.45); }
-  .category-copy li>span { display:grid; place-items:center; width:32px; height:32px; border-radius:50%; background:var(--forest); color:#fff; font-weight:900; }
-  .category-copy li b,.category-copy li small { display:block; }.category-copy li small { margin-top:3px; color:#68645c; }
-  .plan-card { border-radius:24px; overflow:hidden; background:#f8f4eb; box-shadow:0 24px 60px rgba(66,52,34,.14); }
-  .plan-card__head { display:flex; justify-content:space-between; gap:12px; padding:20px; background:#25372d; color:#fff; }
-  .plan-card__head span { font:900 10px/1 var(--font-latin); letter-spacing:.14em; }.plan-card__head b { font-size:16px; }
-  .plan-row { display:grid; grid-template-columns:minmax(180px,1.25fr) minmax(120px,.75fr) minmax(120px,.75fr); border-bottom:1px solid #ded7ca; }
-  .plan-row>* { padding:13px 15px; }.plan-row>span { font-size:13px; font-weight:800; }.plan-row b,.plan-row em { border-left:1px solid #ded7ca; font-size:12px; font-style:normal; }.plan-row b { background:#fff7e9; color:#855129; }.plan-row em { color:#315b46; }
-  .plan-legend { display:grid; grid-template-columns:1fr 1fr; margin-left:40%; padding:13px; text-align:center; font-size:11px; font-weight:900; }.plan-legend span{color:#855129}.plan-legend em{color:#315b46;font-style:normal}
-  .keyword-lab { background:linear-gradient(145deg,#13231c,#24372d 60%,#4f3025); color:#f8f3e9; }
-  .test-mode-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-  .test-mode-grid article { min-height:260px; padding:clamp(22px,3vw,34px); border:1px solid rgba(255,255,255,.16); border-radius:24px; background:linear-gradient(145deg,rgba(181,101,74,.3),rgba(255,255,255,.04)); }
-  .test-mode-grid article.is-organic { background:linear-gradient(145deg,rgba(112,151,124,.28),rgba(255,255,255,.04)); }
-  .test-mode-grid span { color:#e2ad99; font:900 10px/1 var(--font-latin); letter-spacing:.14em; }.test-mode-grid .is-organic span{color:#abd1b6}
-  .test-mode-grid h3 { margin:32px 0 12px; font-size:clamp(25px,3vw,36px); letter-spacing:-.035em; }.test-mode-grid p { color:#cbd7cf; line-height:1.7; }.test-mode-grid small { display:block; margin-top:22px; color:#f7eee6; font-weight:800; }
-  .keyword-flow { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; margin-top:12px; }
-  .keyword-flow article { padding:18px; border-radius:17px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.11); }
-  .keyword-flow span { color:#d88f73; font:900 11px/1 var(--font-latin); }.keyword-flow h3 { margin:22px 0 9px; font-size:17px; }.keyword-flow p { margin:0; color:#b9c8be; font-size:12.5px; line-height:1.65; }
-  .first-keyword-test { display:grid; grid-template-columns:minmax(280px,1.2fr) minmax(200px,.8fr) minmax(200px,.8fr); gap:12px; margin-top:12px; padding:24px; border-radius:22px; background:#f1eadc; color:#202c25; }
-  .first-keyword-test h3 { margin:9px 0; font-size:25px; letter-spacing:-.03em; }.first-keyword-test p { margin:0; color:#61645e; line-height:1.65; }
-  .keyword-candidates,.keyword-ban { align-content:start; display:flex; flex-wrap:wrap; gap:7px; padding:16px; border-radius:16px; background:#fffaf1; }
-  .keyword-candidates>span,.keyword-ban>span { flex:1 0 100%; color:#68736c; font-size:11px; font-weight:900; }.keyword-candidates b { padding:6px 9px; border-radius:99px; background:#dcecdf; color:#2e6141; font-size:12px; }.keyword-ban b { padding:6px 9px; border-radius:99px; background:#f3d8cc; color:#903e23; font-size:12px; }.keyword-ban small { color:#79675f; line-height:1.55; }
-  .measurement-strip { display:flex; align-items:center; justify-content:center; gap:10px; margin-top:12px; padding:15px; border:1px solid rgba(255,255,255,.15); border-radius:14px; overflow-x:auto; }.measurement-strip span,.measurement-strip strong { flex:0 0 auto; padding:7px 10px; border-radius:8px; background:rgba(255,255,255,.08); font-size:12px; }.measurement-strip strong { background:#c06d4d; color:#fff; }.measurement-strip i { color:#8fa397; font-style:normal; }
-  .keyword-note { margin:12px 0 0; color:#aebdb4; font-size:12px; line-height:1.65; }
-  .case-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:9px; }
-  .case-grid article { min-height:310px; padding:19px; border:1px solid var(--line); border-radius:19px; background:var(--surface); box-shadow:var(--shadow-sm); }
-  .case-grid article>div { display:flex; justify-content:space-between; gap:8px; align-items:center; }.case-grid article>div span { color:var(--accent); font:900 11px/1 var(--font-latin); }.case-grid article em { padding:5px 8px; border-radius:99px; background:var(--accent-soft); color:var(--accent-ink); font-size:10px; font-style:normal; font-weight:900; }
-  .case-grid article>small { display:block; margin-top:36px; color:var(--muted); font-size:11px; font-weight:800; }.case-grid h3 { margin:9px 0 14px; font-size:19px; line-height:1.35; letter-spacing:-.025em; }.case-grid p { margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
-  .shared-rule { display:grid; grid-template-columns:auto minmax(0,1fr); gap:22px; align-items:center; margin-top:12px; padding:22px 25px; border-radius:18px; background:var(--forest); color:#fff; }.shared-rule span { color:#d2a38f; font:900 10px/1 var(--font-latin); letter-spacing:.14em; }.shared-rule strong { font-size:clamp(18px,2.4vw,28px); line-height:1.35; }
-  .source-panel { display:grid; grid-template-columns:minmax(240px,.65fr) minmax(400px,1.35fr); gap:30px; margin-top:12px; padding:25px; border:1px solid var(--line); border-radius:20px; background:#f0ece2; }.source-panel h3 { margin:8px 0; font-size:24px; }.source-panel p:last-child { margin:0; color:var(--muted); line-height:1.6; }.source-links { display:grid; grid-template-columns:1fr 1fr; gap:7px; }.source-links a { display:flex; justify-content:space-between; gap:12px; padding:11px 13px; border-radius:11px; background:#fff; border:1px solid var(--line); color:var(--ink); font-size:12px; font-weight:800; text-decoration:none; }.source-links a span { color:var(--accent); }
-  .timeline { position:relative; display:grid; gap:0; }
-  .timeline::before { content:''; position:absolute; left:26px; top:26px; bottom:26px; width:1px; background:var(--line-strong); }
-  .timeline article { position:relative; display:grid; grid-template-columns:54px minmax(0,1fr); gap:20px; padding:0 0 30px; }
-  .timeline-no { display:grid; place-items:center; width:54px; height:54px; border:1px solid var(--line-strong); border-radius:50%; background:var(--bg); color:var(--accent); font:900 12px/1 var(--font-latin); }
-  .timeline span { color:var(--accent); font-size:12px; font-weight:900; }.timeline h3 { margin:5px 0 7px; font-size:22px; }.timeline p { max-width:72ch; margin:0; color:var(--muted); line-height:1.7; }
-  .experiment-card { display:grid; grid-template-columns:minmax(260px,1.1fr) minmax(300px,1fr) minmax(220px,.7fr); gap:24px; align-items:center; margin-top:14px; padding:28px; border-radius:24px; background:#8e4b34; color:#fff8ee; }
-  .experiment-card span { color:#eac2b2; font-size:11px; font-weight:900; }.experiment-card h3 { margin:8px 0; font-size:28px; }.experiment-card p { margin:0; color:#f0d7cd; line-height:1.65; }
-  .experiment-metrics { display:flex; align-items:center; justify-content:center; gap:8px; }.experiment-metrics span { padding:9px 10px; border:1px solid rgba(255,255,255,.25); border-radius:9px; color:#fff; white-space:nowrap; }.experiment-metrics i { font-style:normal; opacity:.7; }
-  .experiment-card ul { margin:0; padding-left:20px; color:#f4dfd7; line-height:1.9; font-size:13px; }
-  .decision-card { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr); gap:30px; padding:clamp(28px,5vw,54px); border-radius:30px; background:linear-gradient(145deg,#19251f,#304538); color:#f8f3e9; }
-  .decision-card h2 { margin:10px 0 14px; font-size:clamp(34px,5vw,58px); line-height:1.05; letter-spacing:-.05em; }.decision-card__copy>p:last-child { max-width:62ch; color:#c6d2ca; line-height:1.75; }
-  .break-even { display:grid; align-content:center; gap:7px; }.break-even>span { margin-bottom:8px; color:#b7c5bc; font-size:12px; font-weight:800; }.break-even div { display:flex; justify-content:space-between; gap:16px; padding:13px 15px; border-radius:12px; background:rgba(255,255,255,.08); }.break-even b { color:#dba58f; }.break-even strong { font-family:var(--font-latin); }
-  .verdict { grid-column:1/-1; padding-top:22px; border-top:1px solid rgba(255,255,255,.17); color:#b9c7be; font-size:15px; }.verdict b { margin-left:9px; color:#fff; font-size:20px; }
-  @media (max-width:980px){.hero,.funnel-panel,.category-layout,.decision-card,.source-panel{grid-template-columns:1fr}.kpi-grid,.diagnosis-grid,.test-mode-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.keyword-flow,.case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.first-keyword-test{grid-template-columns:1fr 1fr}.first-keyword-test>div:first-child{grid-column:1/-1}.feature-list article{grid-template-columns:42px 1fr}.feature-list article p{grid-column:2}.product-row{grid-template-columns:80px 1fr 1fr}.product-row>*:last-child{grid-column:2/-1}.product-row--head>*:last-child{grid-column:auto}.experiment-card{grid-template-columns:1fr}.verdict{grid-column:auto}}
-  @media (max-width:640px){.hero{padding-top:34px}.hero h1{font-size:38px}.jump-nav{top:62px}.deadline{grid-template-columns:auto 1fr}.deadline p{grid-column:1/-1}.section-head{align-items:start;flex-direction:column}.kpi-grid,.route-grid,.diagnosis-grid,.test-mode-grid,.keyword-flow,.case-grid,.first-keyword-test,.source-links{grid-template-columns:1fr}.first-keyword-test>div:first-child{grid-column:auto}.funnel-panel{padding:20px}.feature-list article{grid-template-columns:32px 1fr;gap:12px}.product-table{border:0;background:transparent;overflow:visible}.product-row--head{display:none}.product-row{grid-template-columns:1fr;padding:17px;margin-bottom:10px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}.product-row>*:last-child{grid-column:auto}.plan-card{overflow-x:auto}.plan-row,.plan-card__head,.plan-legend{min-width:620px}.measurement-strip{justify-content:flex-start;flex-wrap:wrap}.shared-rule{grid-template-columns:1fr;gap:9px}.experiment-metrics{justify-content:flex-start;overflow-x:auto}.decision-card{padding:24px}.verdict b{display:block;margin:7px 0 0}.subscription-card{padding:22px}}
+  .guide-page { position:relative; z-index:1; color:var(--ink); }
+  .guide-page * { min-width:0; }
+  .section-label { margin:0; color:#98533a; font-size:12px; font-weight:900; letter-spacing:.02em; }
+  .hero { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(300px,.65fr); gap:clamp(28px,6vw,76px); align-items:end; padding-block:clamp(56px,9vw,112px) 42px; }
+  .hero h1 { max-width:900px; margin:14px 0 22px; font-size:clamp(42px,6.3vw,76px); line-height:1.06; letter-spacing:-.055em; }
+  .hero h1 em { color:#a7583d; font-style:normal; }
+  .lead { max-width:68ch; margin:0; color:#646861; font-size:clamp(16px,1.45vw,19px); line-height:1.85; }
+  .hero-note { padding:28px; border-top:4px solid #a7583d; background:#1f3027; color:#f8f2e9; }
+  .hero-note span { color:#d5a18d; font-size:11px; font-weight:900; }
+  .hero-note strong { display:block; margin:20px 0 14px; font-size:clamp(22px,2.6vw,31px); line-height:1.45; letter-spacing:-.03em; }
+  .hero-note p { margin:0; color:#c4d0c8; line-height:1.7; }
+  .page-nav { position:sticky; top:70px; z-index:8; display:flex; gap:3px; padding-block:9px; overflow-x:auto; border-block:1px solid var(--line); background:color-mix(in srgb,var(--bg) 90%,transparent); backdrop-filter:blur(15px); }
+  .page-nav a { flex:0 0 auto; padding:8px 11px; color:#6a6c66; font-size:12px; font-weight:800; text-decoration:none; }
+  .page-nav a:hover { color:#9c5239; }
+  .section { padding-block:clamp(64px,9vw,110px); scroll-margin-top:120px; }
+  .section-intro { display:grid; grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr); gap:30px; align-items:end; margin-bottom:34px; }
+  .section-intro .section-label { grid-column:1/-1; }
+  .section-intro h2 { margin:0; font-size:clamp(32px,4.6vw,56px); line-height:1.12; letter-spacing:-.045em; }
+  .section-intro>p:last-child { margin:0; color:#656861; line-height:1.75; }
+  .section-intro.compact { grid-template-columns:1fr; max-width:860px; }
+  .section-intro.compact .section-label { grid-column:auto; }
+  .numbers { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border-block:1px solid #cfcabe; }
+  .numbers article { padding:24px 20px; border-right:1px solid #d9d4c9; }
+  .numbers article:last-child { border-right:0; }
+  .numbers span,.numbers small { display:block; color:#74756f; font-size:12px; font-weight:800; }
+  .numbers strong { display:block; margin:15px 0 8px; font-size:clamp(28px,3.8vw,43px); line-height:1; letter-spacing:-.045em; }
+  .numbers article.warning strong { color:#a3492c; }
+  .marketer-view { display:grid; grid-template-columns:170px 1fr; gap:24px; align-items:start; margin-top:28px; padding:25px 0; border-bottom:1px solid #cfcabe; }
+  .marketer-view span { color:#98533a; font-weight:900; }
+  .marketer-view p { max-width:78ch; margin:0; font-size:18px; line-height:1.75; }
+  .soft-section { background:#eee9df; }
+  .journey { border-top:1px solid #c6c0b4; }
+  .journey article { display:grid; grid-template-columns:48px minmax(0,1fr) 170px; gap:28px; align-items:center; padding:26px 0; border-bottom:1px solid #c6c0b4; }
+  .journey article>span { color:#a75c41; font-weight:900; }
+  .journey h3 { margin:0 0 7px; font-size:23px; letter-spacing:-.025em; }
+  .journey p { margin:0; color:#63665f; line-height:1.65; }
+  .journey article>strong { color:#35483d; font-size:15px; text-align:right; }
+  .priority-list { border-top:2px solid #283a30; }
+  .priority-list article { display:grid; grid-template-columns:60px minmax(260px,.85fr) minmax(360px,1.15fr); gap:30px; padding:30px 0; border-bottom:1px solid #d1ccc1; }
+  .priority-number { display:grid; place-items:center; width:42px; height:42px; border-radius:50%; background:#273a30; color:#fff; font-weight:900; }
+  .priority-title small { color:#a25940; font-weight:850; }
+  .priority-title h3 { margin:8px 0 10px; font-size:24px; line-height:1.35; letter-spacing:-.03em; }
+  .priority-title p { margin:0; color:#777871; font-size:13px; }
+  .priority-action { padding-left:28px; border-left:1px solid #d1ccc1; }
+  .priority-action span { color:#3d5849; font-size:12px; font-weight:900; }
+  .priority-action p { margin:8px 0 0; color:#555a54; line-height:1.75; }
+  .dark-section { background:#19271f; color:#f7f2e9; }
+  .section-intro.light h2 { color:#f7f2e9; }
+  .tool-list { border-top:1px solid rgba(255,255,255,.2); }
+  .tool-list article { display:grid; grid-template-columns:minmax(270px,.75fr) minmax(300px,1fr) minmax(300px,1fr); gap:34px; padding:31px 0; border-bottom:1px solid rgba(255,255,255,.16); }
+  .tool-list header span { color:#d59981; font-size:12px; font-weight:900; }
+  .tool-list h3 { margin:9px 0 0; font-size:24px; line-height:1.4; letter-spacing:-.03em; }
+  .tool-list>article>p { margin:0; color:#c6d0c9; line-height:1.75; }
+  .tool-list aside { color:#d5ddd7; line-height:1.7; }
+  .tool-list aside b { display:block; margin-bottom:6px; color:#d59981; font-size:11px; }
+  .wing-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:26px; }
+  .wing-actions a { padding:10px 13px; border:1px solid rgba(255,255,255,.2); color:#fff; font-size:13px; font-weight:800; text-decoration:none; }
+  .two-stage { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .two-stage article { padding:28px; border-top:4px solid #a7583d; background:#f1ece2; }
+  .two-stage article+article { border-color:#3d6650; }
+  .two-stage span { color:#99523a; font-size:12px; font-weight:900; }
+  .two-stage article+article span { color:#386049; }
+  .two-stage h3 { margin:26px 0 12px; font-size:27px; line-height:1.35; letter-spacing:-.035em; }
+  .two-stage p { color:#5f635d; line-height:1.75; }
+  .two-stage strong { display:block; margin-top:24px; color:#273c30; font-size:13px; }
+  .keyword-process { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:0; margin-top:38px; border-block:1px solid #ccc7bc; }
+  .keyword-process article { padding:23px 18px; border-right:1px solid #d8d3c8; }
+  .keyword-process article:last-child { border-right:0; }
+  .keyword-process span { color:#a3573d; font-size:11px; font-weight:900; }
+  .keyword-process h3 { margin:24px 0 9px; font-size:18px; line-height:1.4; }
+  .keyword-process p { margin:0; color:#666962; font-size:13px; line-height:1.65; }
+  .first-test { display:grid; grid-template-columns:minmax(300px,1.1fr) minmax(210px,.7fr) minmax(210px,.7fr); gap:12px; margin-top:38px; padding:30px; background:#22352b; color:#f7f1e8; }
+  .first-test h3 { margin:10px 0 12px; font-size:27px; letter-spacing:-.03em; }
+  .first-test-copy>p:last-child { color:#c6d1c9; line-height:1.7; }
+  .candidate-box,.caution-box { padding:20px; background:rgba(255,255,255,.07); }
+  .candidate-box>span,.caution-box>span { display:block; color:#d8a28d; font-size:11px; font-weight:900; }
+  .candidate-box ul { margin:15px 0 0; padding-left:18px; line-height:1.9; }
+  .caution-box strong { display:block; margin:17px 0 8px; font-size:20px; }
+  .caution-box p { margin:0; color:#cbd4ce; font-size:13px; line-height:1.65; }
+  .approval-note { margin:12px 0 0; padding:14px 17px; border-left:3px solid #a7583d; background:#f3eee5; color:#666962; font-size:13px; line-height:1.65; }
+  .case-list { border-top:1px solid #c6c0b4; }
+  .case-list article { display:grid; grid-template-columns:45px minmax(300px,1fr) minmax(300px,.8fr); gap:28px; padding:28px 0; border-bottom:1px solid #c6c0b4; }
+  .case-list article>span { color:#a85b40; font-weight:900; }
+  .case-list small { color:#8b6251; font-weight:850; }
+  .case-list h3 { margin:7px 0 10px; font-size:23px; letter-spacing:-.025em; }
+  .case-list p { margin:0; color:#62655f; line-height:1.7; }
+  .case-list aside { padding-left:24px; border-left:1px solid #c8c1b5; }
+  .case-list aside b { display:block; margin-bottom:8px; color:#385444; font-size:12px; }
+  .plan-list { border-top:2px solid #263a2f; }
+  .plan-list article { display:grid; grid-template-columns:150px 1fr; gap:35px; padding:29px 0; border-bottom:1px solid #cec9be; }
+  .plan-list article>span { color:#9e543b; font-size:15px; font-weight:900; }
+  .plan-list small { color:#92938d; font-weight:900; }
+  .plan-list h3 { margin:5px 0 9px; font-size:24px; }
+  .plan-list p { max-width:78ch; margin:0; color:#61655e; line-height:1.7; }
+  .subscription-decision { display:grid; grid-template-columns:minmax(300px,.8fr) minmax(400px,1.2fr); gap:40px; margin-top:44px; padding:35px; background:#a3553a; color:#fff8ef; }
+  .subscription-decision span { color:#f1c4b2; font-size:11px; font-weight:900; }
+  .subscription-decision h3 { margin:12px 0 0; font-size:30px; line-height:1.35; }
+  .subscription-decision p { margin:0; color:#f2d8cd; line-height:1.8; }
+  .sources { display:grid; grid-template-columns:minmax(270px,.7fr) minmax(400px,1.3fr); gap:40px; padding-block:65px; border-top:1px solid #ccc7bc; }
+  .sources h2 { margin:9px 0 0; font-size:26px; line-height:1.4; }
+  .source-links { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+  .source-links a { display:flex; justify-content:space-between; gap:12px; padding:11px 12px; border:1px solid #d3cec3; color:#343b36; font-size:12px; font-weight:800; text-decoration:none; }
+  .source-links b { color:#a2573e; white-space:nowrap; }
+  .data-footnote { grid-column:1/-1; margin:0; padding-top:18px; border-top:1px solid #ddd8ce; color:#777972; font-size:12px; line-height:1.65; }
+  @media(max-width:980px){
+    .hero,.section-intro,.tool-list article,.subscription-decision,.sources{grid-template-columns:1fr}.numbers{grid-template-columns:1fr 1fr}.numbers article:nth-child(2){border-right:0}.numbers article:nth-child(-n+2){border-bottom:1px solid #d9d4c9}.priority-list article{grid-template-columns:50px 1fr}.priority-action{grid-column:2;padding:18px 0 0;border-left:0;border-top:1px solid #d1ccc1}.keyword-process{grid-template-columns:repeat(2,1fr)}.keyword-process article{border-bottom:1px solid #d8d3c8}.first-test{grid-template-columns:1fr 1fr}.first-test-copy{grid-column:1/-1}.case-list article{grid-template-columns:40px 1fr}.case-list aside{grid-column:2;padding:18px 0 0;border-left:0;border-top:1px solid #c8c1b5}}
+  @media(max-width:640px){
+    .hero{grid-template-columns:1fr;padding-top:38px}.hero h1{font-size:39px}.page-nav{top:60px}.section{padding-block:58px}.numbers{grid-template-columns:1fr}.numbers article{border-right:0!important;border-bottom:1px solid #d9d4c9}.numbers article:last-child{border-bottom:0}.marketer-view{grid-template-columns:1fr;gap:8px}.journey article{grid-template-columns:35px 1fr;gap:13px}.journey article>strong{grid-column:2;text-align:left}.priority-list article{grid-template-columns:42px 1fr;gap:15px}.two-stage,.keyword-process,.first-test,.source-links{grid-template-columns:1fr}.keyword-process article{border-right:0}.first-test-copy{grid-column:auto}.case-list article{grid-template-columns:32px 1fr;gap:12px}.plan-list article{grid-template-columns:1fr;gap:8px}.subscription-decision{padding:24px}.sources{grid-template-columns:1fr;padding-block:50px}}
 </style>
