@@ -49,6 +49,31 @@ const schedule = [
   { date: '8월 8일–13일', title: 'D7 판정과 구독 결정', body: 'CTR·장바구니율·CVR·광고비 절감·추가 공헌이익을 비교해 월 99,000원 이상의 가치가 있었는지 판단한다.' },
   { date: '매주 월요일', title: '7일/30일 스냅샷', body: '엑셀을 저장하고 확대·개선·노출·보류 상품을 다시 분류한다. 변경일에는 D0, 이후 D7/D14를 별도 기록한다.' },
 ];
+
+const keywordSteps = [
+  { step: '01', title: '후보 수집', body: '카테고리 Top 검색어, 경쟁상품 검색어, 우리 상품 실제 유입어, 쿠팡 자동완성을 한 목록으로 모읍니다.' },
+  { step: '02', title: '안전 필터', body: '경쟁 브랜드명, 무관 키워드, 근거 없는 효능, 의약품 오인 표현을 제거합니다.' },
+  { step: '03', title: '광고로 수요 검증', body: '후보 3~5개를 7일간 소액 테스트해 노출·클릭·주문·ROAS를 먼저 확인합니다.' },
+  { step: '04', title: '오가닉 반영', body: '검증된 일반 키워드 2~3개만 검색 태그·검색옵션에 반영하고 상품명·이미지·가격은 유지합니다.' },
+  { step: '05', title: 'D0·D7·D14 판정', body: '검색 노출 → 클릭 → 장바구니 → 주문 → 공헌이익 순서로 보고 확대·유지·제거·재시험을 결정합니다.' },
+];
+
+const sellerCases = [
+  { who: '쿠팡 공식 판매자 사례', title: '경쟁상품에서 일반 키워드를 발견', body: '경쟁 아이템의 상품명을 분석해 새 키워드를 자기 상품에 반영하고 유입과 구매전환율이 크게 늘었다고 소개했습니다.', tag: '키워드 발굴' },
+  { who: '쿠팡 공식 제철과일 사례', title: '전년도 데이터로 시즌 상품 구성', body: '전년도 제철과일 흐름에서 햇사과·사과 수요를 읽고 상품 구성을 새로 만들어 단기간 매출 기회를 잡았습니다.', tag: '시즌 수요' },
+  { who: '월 매출 약 4억 판매자', title: 'Top 20 태그와 장바구니 이탈을 함께 관리', body: '인기 검색어 누락을 계속 보완하고, 장바구니 대비 주문이 낮으면 가격·구성을 점검하며 묶음 쿠폰으로 객단가를 높였습니다.', tag: '퍼널 운영' },
+  { who: '월 매출 2억대 판매자', title: '행동마다 판정 지표를 하나만 지정', body: 'SNS 광고는 주간 매출, 동영상 상세는 전환율, 썸네일은 조회·클릭처럼 액션과 결과 지표를 1:1로 연결했습니다.', tag: '실험 설계' },
+  { who: '올라 셀러 프로젝트', title: '고조회 옵션부터 썸네일·상세를 순차 개선', body: '검색 노출 대비 클릭이 낮으면 썸네일, 조회 대비 구매가 낮으면 상세페이지를 고치고 다시 같은 지표를 확인했습니다.', tag: '개선 우선순위' },
+];
+
+const researchSources = [
+  { label: '쿠팡 공식 · 구매/검색 옵션 가이드', href: 'https://marketplace.coupang.com/information-center/blog-news5?rf=MARKETPLACE' },
+  { label: '쿠팡 공식 · 비즈니스 인사이트 판매자 사례', href: 'https://blog.naver.com/coupangsellers/224090010989' },
+  { label: '쿠팡 Ads · 상품/키워드 수정 가이드', href: 'https://ads.coupang.com/guide/02' },
+  { label: '월 매출 4억 판매자 인터뷰 · 윈들리', href: 'https://newneek.co/@windly/article/38021' },
+  { label: '판매분석 액션-지표 해석 사례', href: 'https://blog.naver.com/addvalue_/223983153114' },
+  { label: '올라 셀러 프로젝트 활용 사례', href: 'https://www.openads.co.kr/content/contentDetail?contsId=16208' },
+];
 ---
 
 <BaseLayout title="쿠팡 비즈니스 인사이트 운영 전략" description="쿠팡 Wing 비즈니스 인사이트 기능, 현재 판매 퍼널, 상품별 액션과 무료체험 실행 계획을 정리한 마케팅 대시보드">
@@ -80,7 +105,7 @@ const schedule = [
     </section>
 
     <nav class="jump-nav container" aria-label="페이지 바로가기">
-      <a href="#current">현재 진단</a><a href="#features">기능 분석</a><a href="#products">상품 전략</a><a href="#category">카테고리</a><a href="#action-plan">실행 일정</a><a href="#decision">구독 판정</a>
+      <a href="#current">현재 진단</a><a href="#features">기능 분석</a><a href="#products">상품 전략</a><a href="#category">카테고리</a><a href="#keyword-test">키워드 실험</a><a href="#seller-cases">판매자 사례</a><a href="#action-plan">실행 일정</a><a href="#decision">구독 판정</a>
     </nav>
 
     <section class="deadline container" aria-label="긴급 일정">
@@ -196,9 +221,86 @@ const schedule = [
       </div>
     </section>
 
+    <section class="section keyword-lab" id="keyword-test">
+      <div class="container">
+        <header class="section-head section-head--light">
+          <div><p class="eyebrow">06 · Keyword experiment lab</p><h2>키워드는 감으로 바꾸지 않고<br />두 단계로 검증한다.</h2></div>
+          <p>쿠팡에는 오가닉 상품정보의 자동 A/B 분할 기능이 없습니다. 광고 키워드로 수요를 먼저 검증한 뒤, 성과가 확인된 일반 키워드만 검색 태그·검색옵션에 반영합니다.</p>
+        </header>
+
+        <div class="test-mode-grid">
+          <article>
+            <span>STEP A · PAID SIGNAL</span>
+            <h3>광고 키워드 테스트</h3>
+            <p>후보 키워드별 노출·클릭·주문·ROAS를 빠르게 확인합니다. 여기서 살아남은 키워드만 자연검색 실험으로 넘깁니다.</p>
+            <small>목적: 검색 수요와 구매 의도 확인</small>
+          </article>
+          <article class="is-organic">
+            <span>STEP B · ORGANIC LIFT</span>
+            <h3>검색 태그·옵션 전후 비교</h3>
+            <p>상품명·이미지·가격을 고정하고 태그 2~3개만 반영합니다. 변경 전 14일과 D4~D17을 같은 요일 구성으로 비교합니다.</p>
+            <small>목적: 자연검색 노출과 이익률 개선</small>
+          </article>
+        </div>
+
+        <div class="keyword-flow">
+          {keywordSteps.map((item) => (
+            <article><span>{item.step}</span><h3>{item.title}</h3><p>{item.body}</p></article>
+          ))}
+        </div>
+
+        <div class="first-keyword-test">
+          <div>
+            <p class="mini-label">FIRST CONTROLLED TEST</p>
+            <h3>아쿠아 로션을 실험군, 토너를 비교군으로</h3>
+            <p>아쿠아 로션의 상품명은 유지하고 검색 태그·검색옵션만 변경합니다. 토너는 아무것도 바꾸지 않아 시장 전체 변화를 분리합니다.</p>
+          </div>
+          <div class="keyword-candidates">
+            <span>안전 후보</span>
+            <b>수분 에멀전</b><b>고보습 로션</b><b>여성 로션</b><b>300ml 수분 로션</b>
+          </div>
+          <div class="keyword-ban">
+            <span>제외</span>
+            <b>경쟁 브랜드명</b>
+            <small>실제 유입어의 ‘마몽드’는 고객 의도만 추출하고 상품명·태그에는 사용하지 않습니다.</small>
+          </div>
+        </div>
+
+        <div class="measurement-strip">
+          <span>검색량</span><i>→</i><span>노출</span><i>→</i><span>클릭</span><i>→</i><span>장바구니</span><i>→</i><span>주문</span><i>→</i><strong>공헌이익</strong>
+        </div>
+        <p class="keyword-note">실제 상품정보 변경은 별도 승인 후 진행합니다. 변경 전 원본 상품정보를 백업하고, D1~D3은 승인·검색 반영 및 데이터 지연 구간으로 판정에서 제외합니다.</p>
+      </div>
+    </section>
+
+    <section class="section container" id="seller-cases">
+      <header class="section-head">
+        <div><p class="eyebrow">07 · Seller playbooks</p><h2>다른 판매자는 데이터를 이렇게 돈으로 바꾼다</h2></div>
+        <p>사례의 매출 수치는 통제실험 결과가 아닌 판매자 후기입니다. 숫자를 그대로 믿기보다 반복되는 운영 패턴을 가져옵니다.</p>
+      </header>
+      <div class="case-grid">
+        {sellerCases.map((item, index) => (
+          <article>
+            <div><span>{String(index + 1).padStart(2, '0')}</span><em>{item.tag}</em></div>
+            <small>{item.who}</small>
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </article>
+        ))}
+      </div>
+      <aside class="shared-rule">
+        <span>COMMON RULE</span>
+        <strong>고조회 상품부터 보고 → 한 변수만 바꾸고 → 같은 지표로 다시 판정한다.</strong>
+      </aside>
+      <div class="source-panel">
+        <div><p class="eyebrow">Research sources</p><h3>확인한 공식·판매자 자료</h3><p>공식 가이드를 우선하고 판매자 사례는 운영 아이디어로만 사용했습니다.</p></div>
+        <div class="source-links">{researchSources.map((source) => <a href={source.href} target="_blank" rel="noreferrer">{source.label}<span>↗</span></a>)}</div>
+      </div>
+    </section>
+
     <section class="section container" id="action-plan">
       <header class="section-head">
-        <div><p class="eyebrow">06 · Execution calendar</p><h2>무료체험을 4주짜리 매출 실험으로 사용</h2></div>
+        <div><p class="eyebrow">08 · Execution calendar</p><h2>무료체험을 4주짜리 매출 실험으로 사용</h2></div>
         <p>한 번에 한 변수만 변경하고 D0·D7·D14 스냅샷을 남겨 무엇이 매출을 바꿨는지 분리합니다.</p>
       </header>
       <div class="timeline">
@@ -219,7 +321,7 @@ const schedule = [
     <section class="section container" id="decision">
       <div class="decision-card">
         <div class="decision-card__copy">
-          <p class="eyebrow">07 · Subscription verdict</p>
+          <p class="eyebrow">09 · Subscription verdict</p>
           <h2>99,000원을 회수할 수 있을 때만 유지</h2>
           <p>최근 7일 매출을 단순 월 환산하면 약 26.7만 원으로, 구독료가 약 37%에 해당합니다. 지금은 상시 구독을 전제할 단계가 아니라 무료체험으로 효과를 증명할 단계입니다.</p>
         </div>
@@ -330,6 +432,27 @@ const schedule = [
   .plan-row { display:grid; grid-template-columns:minmax(180px,1.25fr) minmax(120px,.75fr) minmax(120px,.75fr); border-bottom:1px solid #ded7ca; }
   .plan-row>* { padding:13px 15px; }.plan-row>span { font-size:13px; font-weight:800; }.plan-row b,.plan-row em { border-left:1px solid #ded7ca; font-size:12px; font-style:normal; }.plan-row b { background:#fff7e9; color:#855129; }.plan-row em { color:#315b46; }
   .plan-legend { display:grid; grid-template-columns:1fr 1fr; margin-left:40%; padding:13px; text-align:center; font-size:11px; font-weight:900; }.plan-legend span{color:#855129}.plan-legend em{color:#315b46;font-style:normal}
+  .keyword-lab { background:linear-gradient(145deg,#13231c,#24372d 60%,#4f3025); color:#f8f3e9; }
+  .test-mode-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .test-mode-grid article { min-height:260px; padding:clamp(22px,3vw,34px); border:1px solid rgba(255,255,255,.16); border-radius:24px; background:linear-gradient(145deg,rgba(181,101,74,.3),rgba(255,255,255,.04)); }
+  .test-mode-grid article.is-organic { background:linear-gradient(145deg,rgba(112,151,124,.28),rgba(255,255,255,.04)); }
+  .test-mode-grid span { color:#e2ad99; font:900 10px/1 var(--font-latin); letter-spacing:.14em; }.test-mode-grid .is-organic span{color:#abd1b6}
+  .test-mode-grid h3 { margin:32px 0 12px; font-size:clamp(25px,3vw,36px); letter-spacing:-.035em; }.test-mode-grid p { color:#cbd7cf; line-height:1.7; }.test-mode-grid small { display:block; margin-top:22px; color:#f7eee6; font-weight:800; }
+  .keyword-flow { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; margin-top:12px; }
+  .keyword-flow article { padding:18px; border-radius:17px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.11); }
+  .keyword-flow span { color:#d88f73; font:900 11px/1 var(--font-latin); }.keyword-flow h3 { margin:22px 0 9px; font-size:17px; }.keyword-flow p { margin:0; color:#b9c8be; font-size:12.5px; line-height:1.65; }
+  .first-keyword-test { display:grid; grid-template-columns:minmax(280px,1.2fr) minmax(200px,.8fr) minmax(200px,.8fr); gap:12px; margin-top:12px; padding:24px; border-radius:22px; background:#f1eadc; color:#202c25; }
+  .first-keyword-test h3 { margin:9px 0; font-size:25px; letter-spacing:-.03em; }.first-keyword-test p { margin:0; color:#61645e; line-height:1.65; }
+  .keyword-candidates,.keyword-ban { align-content:start; display:flex; flex-wrap:wrap; gap:7px; padding:16px; border-radius:16px; background:#fffaf1; }
+  .keyword-candidates>span,.keyword-ban>span { flex:1 0 100%; color:#68736c; font-size:11px; font-weight:900; }.keyword-candidates b { padding:6px 9px; border-radius:99px; background:#dcecdf; color:#2e6141; font-size:12px; }.keyword-ban b { padding:6px 9px; border-radius:99px; background:#f3d8cc; color:#903e23; font-size:12px; }.keyword-ban small { color:#79675f; line-height:1.55; }
+  .measurement-strip { display:flex; align-items:center; justify-content:center; gap:10px; margin-top:12px; padding:15px; border:1px solid rgba(255,255,255,.15); border-radius:14px; overflow-x:auto; }.measurement-strip span,.measurement-strip strong { flex:0 0 auto; padding:7px 10px; border-radius:8px; background:rgba(255,255,255,.08); font-size:12px; }.measurement-strip strong { background:#c06d4d; color:#fff; }.measurement-strip i { color:#8fa397; font-style:normal; }
+  .keyword-note { margin:12px 0 0; color:#aebdb4; font-size:12px; line-height:1.65; }
+  .case-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:9px; }
+  .case-grid article { min-height:310px; padding:19px; border:1px solid var(--line); border-radius:19px; background:var(--surface); box-shadow:var(--shadow-sm); }
+  .case-grid article>div { display:flex; justify-content:space-between; gap:8px; align-items:center; }.case-grid article>div span { color:var(--accent); font:900 11px/1 var(--font-latin); }.case-grid article em { padding:5px 8px; border-radius:99px; background:var(--accent-soft); color:var(--accent-ink); font-size:10px; font-style:normal; font-weight:900; }
+  .case-grid article>small { display:block; margin-top:36px; color:var(--muted); font-size:11px; font-weight:800; }.case-grid h3 { margin:9px 0 14px; font-size:19px; line-height:1.35; letter-spacing:-.025em; }.case-grid p { margin:0; color:var(--muted); font-size:13px; line-height:1.7; }
+  .shared-rule { display:grid; grid-template-columns:auto minmax(0,1fr); gap:22px; align-items:center; margin-top:12px; padding:22px 25px; border-radius:18px; background:var(--forest); color:#fff; }.shared-rule span { color:#d2a38f; font:900 10px/1 var(--font-latin); letter-spacing:.14em; }.shared-rule strong { font-size:clamp(18px,2.4vw,28px); line-height:1.35; }
+  .source-panel { display:grid; grid-template-columns:minmax(240px,.65fr) minmax(400px,1.35fr); gap:30px; margin-top:12px; padding:25px; border:1px solid var(--line); border-radius:20px; background:#f0ece2; }.source-panel h3 { margin:8px 0; font-size:24px; }.source-panel p:last-child { margin:0; color:var(--muted); line-height:1.6; }.source-links { display:grid; grid-template-columns:1fr 1fr; gap:7px; }.source-links a { display:flex; justify-content:space-between; gap:12px; padding:11px 13px; border-radius:11px; background:#fff; border:1px solid var(--line); color:var(--ink); font-size:12px; font-weight:800; text-decoration:none; }.source-links a span { color:var(--accent); }
   .timeline { position:relative; display:grid; gap:0; }
   .timeline::before { content:''; position:absolute; left:26px; top:26px; bottom:26px; width:1px; background:var(--line-strong); }
   .timeline article { position:relative; display:grid; grid-template-columns:54px minmax(0,1fr); gap:20px; padding:0 0 30px; }
@@ -343,6 +466,6 @@ const schedule = [
   .decision-card h2 { margin:10px 0 14px; font-size:clamp(34px,5vw,58px); line-height:1.05; letter-spacing:-.05em; }.decision-card__copy>p:last-child { max-width:62ch; color:#c6d2ca; line-height:1.75; }
   .break-even { display:grid; align-content:center; gap:7px; }.break-even>span { margin-bottom:8px; color:#b7c5bc; font-size:12px; font-weight:800; }.break-even div { display:flex; justify-content:space-between; gap:16px; padding:13px 15px; border-radius:12px; background:rgba(255,255,255,.08); }.break-even b { color:#dba58f; }.break-even strong { font-family:var(--font-latin); }
   .verdict { grid-column:1/-1; padding-top:22px; border-top:1px solid rgba(255,255,255,.17); color:#b9c7be; font-size:15px; }.verdict b { margin-left:9px; color:#fff; font-size:20px; }
-  @media (max-width:980px){.hero,.funnel-panel,.category-layout,.decision-card{grid-template-columns:1fr}.kpi-grid,.diagnosis-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.feature-list article{grid-template-columns:42px 1fr}.feature-list article p{grid-column:2}.product-row{grid-template-columns:80px 1fr 1fr}.product-row>*:last-child{grid-column:2/-1}.product-row--head>*:last-child{grid-column:auto}.experiment-card{grid-template-columns:1fr}.verdict{grid-column:auto}}
-  @media (max-width:640px){.hero{padding-top:34px}.hero h1{font-size:38px}.jump-nav{top:62px}.deadline{grid-template-columns:auto 1fr}.deadline p{grid-column:1/-1}.section-head{align-items:start;flex-direction:column}.kpi-grid,.route-grid,.diagnosis-grid{grid-template-columns:1fr}.funnel-panel{padding:20px}.feature-list article{grid-template-columns:32px 1fr;gap:12px}.product-table{border:0;background:transparent;overflow:visible}.product-row--head{display:none}.product-row{grid-template-columns:1fr;padding:17px;margin-bottom:10px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}.product-row>*:last-child{grid-column:auto}.plan-card{overflow-x:auto}.plan-row,.plan-card__head,.plan-legend{min-width:620px}.experiment-metrics{justify-content:flex-start;overflow-x:auto}.decision-card{padding:24px}.verdict b{display:block;margin:7px 0 0}.subscription-card{padding:22px}}
+  @media (max-width:980px){.hero,.funnel-panel,.category-layout,.decision-card,.source-panel{grid-template-columns:1fr}.kpi-grid,.diagnosis-grid,.test-mode-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.keyword-flow,.case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.first-keyword-test{grid-template-columns:1fr 1fr}.first-keyword-test>div:first-child{grid-column:1/-1}.feature-list article{grid-template-columns:42px 1fr}.feature-list article p{grid-column:2}.product-row{grid-template-columns:80px 1fr 1fr}.product-row>*:last-child{grid-column:2/-1}.product-row--head>*:last-child{grid-column:auto}.experiment-card{grid-template-columns:1fr}.verdict{grid-column:auto}}
+  @media (max-width:640px){.hero{padding-top:34px}.hero h1{font-size:38px}.jump-nav{top:62px}.deadline{grid-template-columns:auto 1fr}.deadline p{grid-column:1/-1}.section-head{align-items:start;flex-direction:column}.kpi-grid,.route-grid,.diagnosis-grid,.test-mode-grid,.keyword-flow,.case-grid,.first-keyword-test,.source-links{grid-template-columns:1fr}.first-keyword-test>div:first-child{grid-column:auto}.funnel-panel{padding:20px}.feature-list article{grid-template-columns:32px 1fr;gap:12px}.product-table{border:0;background:transparent;overflow:visible}.product-row--head{display:none}.product-row{grid-template-columns:1fr;padding:17px;margin-bottom:10px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}.product-row>*:last-child{grid-column:auto}.plan-card{overflow-x:auto}.plan-row,.plan-card__head,.plan-legend{min-width:620px}.measurement-strip{justify-content:flex-start;flex-wrap:wrap}.shared-rule{grid-template-columns:1fr;gap:9px}.experiment-metrics{justify-content:flex-start;overflow-x:auto}.decision-card{padding:24px}.verdict b{display:block;margin:7px 0 0}.subscription-card{padding:22px}}
 </style>
