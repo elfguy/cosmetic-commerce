@@ -58,6 +58,21 @@ export type CampaignVideo = {
   storyboard: StoryboardShot[];
 };
 
+export type SceneAttempt = {
+  id: string;
+  scene: string;
+  title: string;
+  status: 'reference' | 'pending' | 'review' | 'selected' | 'rejected';
+  model: string;
+  duration?: string;
+  creditCost: string;
+  poster?: string;
+  videoSrc?: string;
+  summary: string;
+  issues: string[];
+  createdAt: string;
+};
+
 export const campaignModels: CampaignModel[] = [
   {
     id: 'A-YOON-SEOJIN', code: 'A', name: '윤서진', role: '현실적인 직장인 후기형', status: 'active',
@@ -80,14 +95,14 @@ export const campaignModels: CampaignModel[] = [
     image: '/marketing/aqua-lotion-video-studio/models/c-kim-harin-full.webp',
   },
   {
-    id: 'D-HAN-CHAEWON', code: 'D', name: '한채원', role: '프리미엄 배우 비주얼형', status: 'selected',
+    id: 'D-HAN-CHAEWON', code: 'D', name: '한채원', role: '2026 뷰티 크리에이터 비주얼형', status: 'selected',
     age: 29, heightCm: 170, weightKg: 51, bodyType: '자연스럽게 길고 슬림한 체형',
     job: '독립영화·라이프스타일 콘텐츠를 병행하는 가상 배우', personality: '세련되고 자신감 있지만 거리감이 없음',
-    voice: '차분하고 선명한 개인 기준형 존댓말', hook: '아침에는 제형이 잘 맞는 한 단계가 중요하더라고요.',
-    styling: '미스트블루 드레이프 블라우스 · 웜아이보리 플루이드 팬츠 · 버건디 플랫',
-    strengths: ['브랜드 첫인상과 주목도', '프리미엄 비주얼', '제품을 고급스럽게 보이게 함'],
-    risks: ['연출이 정돈되면 전형적인 화장품 CF가 될 수 있음', '실제 욕실·휴대전화 조명으로 자연스럽게 낮춰야 함'],
-    image: '/marketing/aqua-lotion-video-studio/models/d-han-chaewon-full.webp',
+    voice: '최종본은 실제 한국인 여성 나레이션, 모델은 무언 연기', hook: '토너 다음 단계가 애매한 순간을 표정 대신 행동으로 보여줌',
+    styling: '파우더블루 비대칭 보트넥 · 웜아이보리 와이드 팬츠 · 실버 후프',
+    strengths: ['브랜드 첫인상과 주목도', '최신 릴스형 스타일링', '긴 레이어드 헤어와 자연스러운 피부결'],
+    risks: ['표정을 지시하면 과장된 걱정 연기로 변함', '고급 욕실과 포즈를 생활 UGC 수준으로 낮춰야 함'],
+    image: '/marketing/aqua-lotion-video-studio/revisions/v2/model-d-modern-style.webp',
   },
 ];
 
@@ -131,11 +146,66 @@ export const campaignVideos: CampaignVideo[] = [
   },
 ];
 
+export const sceneAttempts: SceneAttempt[] = [
+  {
+    id: 'MASTER-V1', scene: '전체 30초', title: '첫 Higgsfield 조립 검토본', status: 'rejected',
+    model: 'Seedance 2.0 Fast + Seed Audio', duration: '30초', creditCost: '64.2 credits',
+    poster: '/marketing/aqua-lotion-video-studio/posters/aqua-ugc-001-model-d-higgsfield.webp',
+    videoSrc: '/marketing/aqua-lotion-video-studio/videos/aqua-ugc-001-model-d-higgsfield-mcp-30s.mp4',
+    summary: '장면을 한꺼번에 조립한 최초 검토본. 새 V2의 비교 기준으로만 보관한다.',
+    issues: ['나레이션이 기계적', '시작 고민 표정이 부자연스러움', '제품 사용 행동 없음', '중간 제품 장면이 부자연스러움', '스타일이 최신 UGC와 거리 있음'],
+    createdAt: '2026-08-01',
+  },
+  {
+    id: 'STYLE-D2', scene: '모델 기준', title: 'D · Modern UGC V2', status: 'reference',
+    model: 'GPT Image 2 · D Reference Element', creditCost: '7 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/v2/model-d-modern-style.webp',
+    summary: '긴 레이어드 헤어, 파우더블루 비대칭 보트넥, 아이보리 와이드 팬츠로 교체한 V2 기준 이미지.',
+    issues: ['고급 욕실 배경이 실제 생활 UGC보다 조금 정돈돼 보임', '영상에서는 광고 포즈와 과한 미소를 억제해야 함'],
+    createdAt: '2026-08-01',
+  },
+  {
+    id: 'HOOK-A', scene: '0–5초 훅', title: '거울 접근 + 볼 확인', status: 'rejected',
+    model: 'Seedance 2.0 Fast', duration: '5초', creditCost: '17.5 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/v2/model-d-modern-style.webp',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/v2/hook-a.mp4',
+    summary: '미세한 고민만 요청했지만 표정과 입 벌림이 다시 과장되어 탈락.',
+    issues: ['눈썹이 과하게 올라감', '입이 벌어져 무언 연기 조건 위반', '볼을 누르는 손동작이 걱정 연기처럼 보임'],
+    createdAt: '2026-08-01',
+  },
+  {
+    id: 'HOOK-B', scene: '0–5초 훅', title: '시선 이동 + 가벼운 볼 터치', status: 'rejected',
+    model: 'Seedance 2.0 Fast', duration: '5초', creditCost: '17.5 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/v2/model-d-modern-style.webp',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/v2/hook-b.mp4',
+    summary: '표정은 A보다 절제됐지만 요청하지 않은 중국어 자막이 생성되어 탈락.',
+    issues: ['중국어 생성 자막', '고민보다 카메라 포즈에 가까움', '손이 입 주변을 지나며 메시지가 모호함'],
+    createdAt: '2026-08-01',
+  },
+  {
+    id: 'USE-KEY-01', scene: '제품 사용', title: '펌핑 직전 통합 키프레임', status: 'rejected',
+    model: 'GPT Image 2 · 모델+실제품 참조', creditCost: '7 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/v2/product-use-keyframe-rejected.webp',
+    summary: '제품을 손에 들고 펌프를 누르기 직전의 구도는 확보했지만 제품 라벨과 용기 세부가 원본에서 변형됨.',
+    issues: ['라벨 문구·레이아웃 변형', '제품 병 비율이 실제 원본과 다름', '신뢰 근거 장면으로 사용할 수 없음'],
+    createdAt: '2026-08-01',
+  },
+  {
+    id: 'USE-MS-01', scene: '제품 사용', title: 'Marketing Studio Tutorial 테스트', status: 'rejected',
+    model: 'Marketing Studio · Tutorial', duration: '12초', creditCost: '60 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/v2/model-d-modern-style.webp',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/v2/use-ms-01.mp4',
+    summary: '집기→1회 펌핑→볼 도포 행동은 생성됐지만 실제 SKU의 펌프·라벨·병 구조가 달라져 탈락.',
+    issues: ['검정 펌프가 흰색으로 변형됨', '실제 라벨 문구·레이아웃 불일치', '투명 원통형 300ml 병 비율이 달라짐', '손 도포는 자연스럽지만 제품 증거로는 사용 불가'],
+    createdAt: '2026-08-01',
+  },
+];
+
 export const productionGates = [
-  ['01', '캐스팅 승인', '모델 D 한채원과 미스트블루 의상·헤어 고정 완료'],
-  ['02', 'Reference Element', 'D 기준 이미지 등록 및 Higgsfield 참조 요소 생성 완료'],
-  ['03', '제품 키프레임', '실제 제품 원본으로 라벨·펌프·병 비율 검수 완료'],
-  ['04', '6초 무언 테스트', 'Seedance 2.0 모델 D 클립 3종 얼굴·손·입술 검수 완료'],
-  ['05', '30초 마스터', '무언 연기·실제 제품·별도 나레이션 조합 검토본 완성'],
-  ['06', '파생 소재', '15초 압축·8초 훅·다른 나레이션 첫 문장 제작'],
+  ['01', 'V2 스타일 기준', '모델 D 파우더블루 보트넥·레이어드 헤어 기준 이미지 완료'],
+  ['02', '고민 표정 훅', 'A 과장 표정·B 중국어 자막으로 2종 모두 탈락'],
+  ['03', '제품 사용 키프레임', '구도는 확보했지만 실제 라벨·펌프·병 비율 변형으로 탈락'],
+  ['04', 'Marketing Studio 사용 테스트', '집기·펌핑·도포는 생성됐지만 SKU 구조 불일치로 탈락'],
+  ['05', '실제 사용 증거', '실제품 집기·1회 펌핑·손등 또는 볼 도포 실촬영 3컷 필요'],
+  ['06', 'V2 마스터', '통과한 모델 장면과 실제 제품 사용 컷, 실제 여성 음성을 조립'],
 ] as const;
