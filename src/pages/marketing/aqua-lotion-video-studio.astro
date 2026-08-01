@@ -43,12 +43,12 @@ const storySketches = [
         <div class="board-main">
           <strong>AQUA-UGC-001</strong>
           <h2>가볍게 한 번 더</h2>
-          <p>MODEL D · V2 / <b>AI 제품 사용 테스트 중단</b></p>
+          <p>CAST A/B/C · <b>신규 모델 비교 중</b></p>
         </div>
         <dl>
           <div><dt>활성 모델</dt><dd>{campaignModels.length}</dd></div>
           <div><dt>비교 후보</dt><dd>{sceneAttempts.length}</dd></div>
-          <div><dt>현재 단계</dt><dd>REAL SHOT</dd></div>
+          <div><dt>현재 단계</dt><dd>CASTING</dd></div>
         </dl>
       </div>
     </section>
@@ -308,6 +308,9 @@ const storySketches = [
   filterButtons.forEach((button) => button.addEventListener('click', () => applyVideoFilter(button.dataset.videoFilter || 'all')));
 
   const productionDetails = document.querySelector<HTMLDetailsElement>('#production-details');
+  if (productionDetails && ['#production-details', '#models', '#videos', '#video-001', '#gates'].includes(window.location.hash)) {
+    productionDetails.open = true;
+  }
   document.querySelectorAll<HTMLElement>('[data-open-production-details]').forEach((link) => {
     link.addEventListener('click', () => {
       if (productionDetails) productionDetails.open = true;
