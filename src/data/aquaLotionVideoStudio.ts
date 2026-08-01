@@ -199,6 +199,40 @@ export const sceneAttempts: SceneAttempt[] = [
     issues: ['검정 펌프가 흰색으로 변형됨', '실제 라벨 문구·레이아웃 불일치', '투명 원통형 300ml 병 비율이 달라짐', '손 도포는 자연스럽지만 제품 증거로는 사용 불가'],
     createdAt: '2026-08-01',
   },
+  {
+    id: 'SITE-KF-01', scene: '웹사이트 키프레임', title: 'Nano Banana Pro · 2레퍼런스 펌핑 직전', status: 'review',
+    model: 'Higgsfield 사이트 · Nano Banana Pro', creditCost: '4 credits · 2회',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/v2/site/pump-keyframe-01.webp',
+    summary: '사이트에서 모델 D와 실제 제품 팩샷을 직접 넣어 만든 펌핑 직전 키프레임. 기존 통합 키프레임보다 검정 펌프·손·제품 비율이 안정적이다.',
+    issues: ['AQUA LOTION 큰 라벨은 유지', '상단 라벨 일부가 손에 가려짐', '영상에서 실제 펌프 눌림과 토출을 별도 검증해야 함', '첫 사이트 제출 오류·중복 재시도로 이미지 2회 차감'],
+    createdAt: '2026-08-01',
+  },
+  {
+    id: 'SITE-PUMP-01', scene: '웹사이트 펌핑', title: 'Kling 3.0 Turbo · 펌핑 테스트 01', status: 'rejected',
+    model: 'Higgsfield 사이트 · Kling 3.0 Turbo', duration: '5초 · 1080p', creditCost: '10 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/v2/site/pump-keyframe-01.webp',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/v2/site/pump-kling-01.mp4',
+    summary: '제품·모델·검정 펌프는 유지됐지만 펌프 이동이 작고 로션이 토출되기보다 손바닥에 나타나는 느낌이라 증거 장면으로 탈락.',
+    issues: ['펌프의 완전 눌림·복귀가 명확하지 않음', '약 2.25초에 로션이 갑자기 나타남', '허리 위 구도라 핵심 동작이 작음', '라벨과 병은 기존 MCP 영상보다 안정적'],
+    createdAt: '2026-08-01',
+  },
+  {
+    id: 'SITE-KF-MACRO', scene: '웹사이트 키프레임', title: 'Nano Banana Pro · 손·펌프 매크로', status: 'rejected',
+    model: 'Higgsfield 사이트 · Nano Banana Pro', creditCost: '2 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/v2/site/pump-macro-keyframe-rejected.webp',
+    summary: '펌프와 양손을 크게 잡는 구도는 좋아졌지만 제품 라벨에 존재하지 않는 영문이 생성되어 영상 입력에서 제외.',
+    issues: ['가짜 영문 라벨 생성', '투명 병이 불투명하게 변형', '검정 펌프와 손 구조는 개선', 'SKU 신뢰 장면으로 사용 불가'],
+    createdAt: '2026-08-01',
+  },
+  {
+    id: 'SITE-PUMP-02', scene: '웹사이트 펌핑', title: 'Kling 3.0 Turbo · 명시적 1회 펌프', status: 'rejected',
+    model: 'Higgsfield 사이트 · Kling 3.0 Turbo', duration: '5초 · 1080p', creditCost: '10 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/v2/site/pump-keyframe-01.webp',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/v2/site/pump-kling-02.mp4',
+    summary: '완전 눌림→1회 토출→복귀를 명시했지만 사이트가 이전 업로드를 다시 참조했고, 펌프 움직임이 여전히 눈에 띄지 않아 탈락.',
+    issues: ['펌프 스트로크가 시각적으로 확인되지 않음', '로션이 토출보다 이미 생긴 것처럼 보임', '새 크롭 대신 이전 입력이 재사용된 흔적', '모델·라벨·병은 안정적이나 사용 증거는 부족'],
+    createdAt: '2026-08-01',
+  },
 ];
 
 export const productionGates = [
@@ -206,6 +240,7 @@ export const productionGates = [
   ['02', '고민 표정 훅', 'A 과장 표정·B 중국어 자막으로 2종 모두 탈락'],
   ['03', '제품 사용 키프레임', '구도는 확보했지만 실제 라벨·펌프·병 비율 변형으로 탈락'],
   ['04', 'Marketing Studio 사용 테스트', '집기·펌핑·도포는 생성됐지만 SKU 구조 불일치로 탈락'],
-  ['05', '실제 사용 증거', '실제품 집기·1회 펌핑·손등 또는 볼 도포 실촬영 3컷 필요'],
-  ['06', 'V2 마스터', '통과한 모델 장면과 실제 제품 사용 컷, 실제 여성 음성을 조립'],
+  ['05', '사이트 직접 생성 테스트', 'Nano Banana Pro 키프레임 3회·Kling 3.0 Turbo 2회 검수. 제품 보존은 개선됐지만 펌프 눌림·토출이 불명확해 중단'],
+  ['06', '실제 사용 증거', '실제품 집기·1회 펌핑·손등 또는 볼 도포 실촬영 3컷 필요'],
+  ['07', 'V2 마스터', '통과한 모델 장면과 실제 제품 사용 컷, 실제 여성 음성을 조립'],
 ] as const;
