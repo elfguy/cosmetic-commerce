@@ -11,6 +11,11 @@ const attemptStatusLabel = {
   reference: '기준 이미지', pending: '생성 중', review: '검수 대기', selected: '선정', rejected: '탈락',
 } as const;
 const firstVideo = campaignVideos[0];
+const imageAttempts = sceneAttempts.filter((attempt) => !attempt.videoSrc);
+const generatedVideoAttempts = sceneAttempts.filter((attempt) => Boolean(attempt.videoSrc));
+const selectedVideoCount = generatedVideoAttempts.filter((attempt) => attempt.status === 'selected').length;
+const reviewVideoCount = generatedVideoAttempts.filter((attempt) => ['review', 'pending'].includes(attempt.status)).length;
+const rejectedVideoCount = generatedVideoAttempts.filter((attempt) => attempt.status === 'rejected').length;
 const storySketches = [
   { src: '/marketing/aqua-lotion-video-studio/storyboards-30s/01-problem-silent.webp', label: '0–7초 · 말 없는 문제 인식', desc: '모델은 입을 닫고 거울과 토너·크림 사이에서 망설임만 연기' },
   { src: '/marketing/aqua-lotion-video-studio/storyboards-30s/02-solution-product.webp', label: '7–15초 · 제품이 해결책으로 등장', desc: '나레이션 위에 실제 제품과 손의 접근을 분리해 보여줌' },
@@ -30,7 +35,7 @@ const storySketches = [
         <p>완성본을 한 번에 만들지 않고, 표정·제품 집기·펌핑·도포·마무리를 각각 생성해 비교합니다. 탈락본과 크레딧까지 남겨 같은 실패를 반복하지 않습니다.</p>
         <div class="hero-actions">
           <a href="#compare">V2 부분 비교 보기</a>
-          <a class="ghost" href="#models">모델 프로필 보기</a>
+          <a class="ghost" href="#production-details" data-open-production-details>제작 상세 보기</a>
         </div>
       </div>
       <div class="hero-board" aria-label="현재 제작 현황">
@@ -49,41 +54,88 @@ const storySketches = [
     </section>
 
     <nav class="section-nav container" aria-label="페이지 목차">
-      <a href="#compare">V2 부분 비교</a><a href="#models">모델</a><a href="#videos">영상 라이브러리</a><a href="#video-001">첫 콘티</a><a href="#gates">제작 게이트</a>
+      <a href="#compare">이미지 기준</a><a href="#generated-videos">생성 영상</a><a href="#production-details" data-open-production-details>모델·콘티·게이트</a>
     </nav>
 
     <section class="attempt-section container" id="compare">
       <header class="section-head">
-        <div><p class="eyebrow">V2 scene lab</p><h2>부분별 생성·탈락·선정 비교</h2></div>
-        <p>좋아 보이는 결과만 숨기지 않고 실패본까지 같은 슬롯에 남깁니다. 모델·표정·손·제품·자막 중 하나라도 기준을 벗어나면 마스터에 사용하지 않습니다.</p>
+        <div><p class="eyebrow">V2 scene lab</p><h2>이미지와 영상을 분리해서 비교</h2></div>
+        <p>기준 이미지와 생성 영상을 한 줄에 섞지 않습니다. 이미지는 입력 품질을, 영상은 성공·검토·실패 결과를 따로 확인합니다.</p>
       </header>
       <div class="attempt-summary">
-        <div><span>등록 시도</span><b>{sceneAttempts.length}</b></div>
-        <div><span>기준 이미지</span><b>{sceneAttempts.filter((item) => item.status === 'reference').length}</b></div>
-        <div><span>자동 탈락</span><b>{sceneAttempts.filter((item) => item.status === 'rejected').length}</b></div>
+        <div><span>이미지·키프레임</span><b>{imageAttempts.length}</b></div>
+        <div><span>생성 영상</span><b>{generatedVideoAttempts.length}</b></div>
+        <div><span>영상 실패</span><b>{rejectedVideoCount}</b></div>
         <div><span>V2 사용</span><b>135</b><small>credits</small></div>
       </div>
-      <div class="attempt-grid">
-        {sceneAttempts.map((attempt) => (
-          <article class:list={['attempt-card', attempt.status]}>
-            <div class="attempt-media">
-              {attempt.videoSrc
-                ? <video controls preload="metadata" poster={attempt.poster}><source src={attempt.videoSrc} type="video/mp4" /></video>
-                : attempt.poster && <img src={attempt.poster} alt={`${attempt.title} 비교 이미지`} loading="eager" />}
-              <span class="attempt-scene">{attempt.scene}</span>
-              <b class="attempt-status">{attemptStatusLabel[attempt.status]}</b>
-            </div>
-            <div class="attempt-copy">
-              <div class="attempt-id"><span>{attempt.id}</span><b>{attempt.creditCost}</b></div>
-              <h3>{attempt.title}</h3>
-              <p>{attempt.summary}</p>
-              <dl><div><dt>생성 방식</dt><dd>{attempt.model}</dd></div>{attempt.duration && <div><dt>길이</dt><dd>{attempt.duration}</dd></div>}</dl>
-              <ul>{attempt.issues.map((issue) => <li>{issue}</li>)}</ul>
-            </div>
-          </article>
-        ))}
-      </div>
+
+      <section class="attempt-lane image-lane" aria-labelledby="image-attempt-title">
+        <header class="lane-head">
+          <div><p class="lane-kicker">01 · INPUT AUTHORITY</p><h3 id="image-attempt-title">이미지·키프레임</h3></div>
+          <p>좌우로 넘겨서 얼굴·의상·제품·손의 입력 품질만 비교합니다.</p>
+        </header>
+        <div class="attempt-rail image-rail">
+          {imageAttempts.map((attempt) => (
+            <article class:list={['attempt-card', 'image-attempt', attempt.status]}>
+              <div class="attempt-media">
+                {attempt.poster && <img src={attempt.poster} alt={`${attempt.title} 비교 이미지`} loading="eager" />}
+                <span class="attempt-scene">{attempt.scene}</span>
+                <b class="attempt-status">{attemptStatusLabel[attempt.status]}</b>
+              </div>
+              <div class="attempt-copy">
+                <div class="attempt-id"><span>{attempt.id}</span><b>{attempt.creditCost}</b></div>
+                <h3>{attempt.title}</h3>
+                <p>{attempt.summary}</p>
+                <dl><div><dt>생성 방식</dt><dd>{attempt.model}</dd></div>{attempt.duration && <div><dt>길이</dt><dd>{attempt.duration}</dd></div>}</dl>
+                <details class="attempt-issues"><summary>판정 근거 <b>{attempt.issues.length}</b></summary><ul>{attempt.issues.map((issue) => <li>{issue}</li>)}</ul></details>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="attempt-lane video-lane" id="generated-videos" aria-labelledby="video-attempt-title">
+        <header class="lane-head video-lane-head">
+          <div><p class="lane-kicker">02 · GENERATED MOTION</p><h3 id="video-attempt-title">생성 영상 결과</h3></div>
+          <div class="video-filters" role="group" aria-label="영상 결과 필터">
+            <button class="active" type="button" data-video-filter="all" data-count={generatedVideoAttempts.length}>전체 <b>{generatedVideoAttempts.length}</b></button>
+            <button type="button" data-video-filter="success" data-count={selectedVideoCount}>성공 <b>{selectedVideoCount}</b></button>
+            <button type="button" data-video-filter="review" data-count={reviewVideoCount}>검토 <b>{reviewVideoCount}</b></button>
+            <button type="button" data-video-filter="failed" data-count={rejectedVideoCount}>실패 <b>{rejectedVideoCount}</b></button>
+          </div>
+        </header>
+        <div class="video-outcome-strip">
+          <div class="success"><span>SUCCESS</span><b>{selectedVideoCount}</b><small>사용자 승인 영상</small></div>
+          <div class="review"><span>REVIEW</span><b>{reviewVideoCount}</b><small>판정 대기 영상</small></div>
+          <div class="failed"><span>FAILED</span><b>{rejectedVideoCount}</b><small>마스터 사용 금지</small></div>
+        </div>
+        <p class="filter-empty" data-video-empty hidden>해당 상태의 생성 영상이 아직 없습니다.</p>
+        <div class="attempt-rail video-attempt-rail">
+          {generatedVideoAttempts.map((attempt) => {
+            const videoState = attempt.status === 'selected' ? 'success' : ['review', 'pending'].includes(attempt.status) ? 'review' : 'failed';
+            return (
+              <article class:list={['attempt-card', 'video-attempt', attempt.status]} data-video-state={videoState}>
+                <div class="attempt-media">
+                  <video controls preload="metadata" poster={attempt.poster}><source src={attempt.videoSrc} type="video/mp4" /></video>
+                  <span class="attempt-scene">{attempt.scene}</span>
+                  <b class="attempt-status">{attemptStatusLabel[attempt.status]}</b>
+                </div>
+                <div class="attempt-copy">
+                  <div class="attempt-id"><span>{attempt.id}</span><b>{attempt.creditCost}</b></div>
+                  <h3>{attempt.title}</h3>
+                  <p>{attempt.summary}</p>
+                  <dl><div><dt>생성 방식</dt><dd>{attempt.model}</dd></div>{attempt.duration && <div><dt>길이</dt><dd>{attempt.duration}</dd></div>}</dl>
+                  <details class="attempt-issues"><summary>판정 근거 <b>{attempt.issues.length}</b></summary><ul>{attempt.issues.map((issue) => <li>{issue}</li>)}</ul></details>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
     </section>
+
+    <details class="dashboard-details" id="production-details">
+      <summary class="container"><span><small>PRODUCTION ARCHIVE</small><b>모델·기존 영상·30초 콘티·제작 게이트</b></span><strong>제작 상세 펼치기</strong></summary>
 
     <section class="models-section container" id="models">
       <header class="section-head">
@@ -228,9 +280,44 @@ const storySketches = [
         </div>
       </div>
     </section>
+    </details>
   </main>
   <SiteFooter />
 </BaseLayout>
+
+<script>
+  const filterButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-video-filter]'));
+  const videoCards = Array.from(document.querySelectorAll<HTMLElement>('[data-video-state]'));
+  const emptyState = document.querySelector<HTMLElement>('[data-video-empty]');
+
+  const applyVideoFilter = (filter: string) => {
+    let visibleCount = 0;
+    videoCards.forEach((card) => {
+      const visible = filter === 'all' || card.dataset.videoState === filter;
+      card.hidden = !visible;
+      if (visible) visibleCount += 1;
+    });
+    filterButtons.forEach((button) => {
+      const active = button.dataset.videoFilter === filter;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    if (emptyState) emptyState.hidden = visibleCount !== 0;
+  };
+
+  filterButtons.forEach((button) => button.addEventListener('click', () => applyVideoFilter(button.dataset.videoFilter || 'all')));
+
+  const productionDetails = document.querySelector<HTMLDetailsElement>('#production-details');
+  document.querySelectorAll<HTMLElement>('[data-open-production-details]').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (productionDetails) productionDetails.open = true;
+    });
+  });
+  productionDetails?.addEventListener('toggle', () => {
+    const label = productionDetails.querySelector<HTMLElement>('summary strong');
+    if (label) label.textContent = productionDetails.open ? '제작 상세 접기' : '제작 상세 펼치기';
+  });
+</script>
 
 <style>
   .studio-page { --aqua:#bfe8e9; --aqua-deep:#285e62; --paper:#f4f0e7; --night:#101716; color:var(--ink); overflow:hidden; }
@@ -256,11 +343,13 @@ const storySketches = [
 
   .section-nav { position:sticky; top:8px; z-index:10; display:flex; justify-content:center; gap:6px; width:max-content; max-width:calc(100vw - 24px); padding:7px; border:1px solid rgba(16,23,22,.16); border-radius:999px; background:rgba(244,240,231,.92); backdrop-filter:blur(14px); box-shadow:0 10px 30px rgba(16,23,22,.08); }
   .section-nav a { padding:9px 14px; border-radius:999px; font-size:13px; font-weight:800; white-space:nowrap; }.section-nav a:hover{background:var(--night);color:white}
-  .section-head { display:flex; justify-content:space-between; gap:30px; align-items:end; margin-bottom:28px; }.section-head h2{margin:0;font-size:clamp(32px,4vw,54px);letter-spacing:-.045em}.section-head>p{max-width:54ch;margin:0;color:var(--muted);line-height:1.65}.section-head.light{color:white}.section-head.light .eyebrow{color:#91d7d6}.section-head.light>p{color:#b7c0bd}
+  .section-head { display:flex; justify-content:space-between; gap:30px; align-items:end; margin-bottom:28px; }.section-head h2{margin:0;font-size:clamp(32px,4vw,54px);letter-spacing:-.045em;word-break:keep-all}.section-head>p{max-width:54ch;margin:0;color:var(--muted);line-height:1.65}.section-head.light{color:white}.section-head.light .eyebrow{color:#91d7d6}.section-head.light>p{color:#b7c0bd}
 
   .attempt-section{padding-block:clamp(70px,9vw,115px)}
   .attempt-summary{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:16px;overflow:hidden;background:white;margin-bottom:22px}.attempt-summary div{padding:17px 20px;border-right:1px solid var(--line)}.attempt-summary div:last-child{border:0}.attempt-summary span{display:block;color:var(--muted);font-size:11px;font-weight:800}.attempt-summary b{display:inline-block;margin-top:5px;font:900 25px monospace}.attempt-summary small{margin-left:5px;color:var(--muted);font:800 10px monospace}
-  .attempt-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.attempt-card{min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:20px;background:white;box-shadow:var(--shadow-sm)}.attempt-card.rejected{border-color:#e5c2ba;background:#fffaf8}.attempt-card.pending{border-color:#d6be79}.attempt-card.reference{border-color:#8fc4ba}.attempt-media{position:relative;aspect-ratio:9/13;overflow:hidden;background:#dfe8e6}.attempt-media img,.attempt-media video{display:block;width:100%;height:100%;object-fit:cover}.attempt-scene,.attempt-status{position:absolute;top:13px;padding:7px 9px;border-radius:999px;font:900 10px monospace}.attempt-scene{left:13px;background:var(--night);color:white}.attempt-status{right:13px;background:#e9f6f2;color:#23604f}.rejected .attempt-status{background:#ffe5df;color:#983c31}.pending .attempt-status{background:#fff1bd;color:#765a00}.attempt-copy{padding:19px}.attempt-id{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font:800 10px monospace}.attempt-copy h3{margin:17px 0 7px;font-size:23px;letter-spacing:-.03em}.attempt-copy>p{min-height:64px;color:var(--muted);font-size:13px;line-height:1.6}.attempt-copy dl{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:17px 0}.attempt-copy dl div{padding:9px;border-radius:9px;background:#f1f4f2}.attempt-copy dt{font-size:10px;color:var(--muted)}.attempt-copy dd{margin:4px 0 0;font-size:11px;font-weight:800;line-height:1.45}.attempt-copy ul{margin:0;padding-left:18px;color:#873f36;font-size:12px;line-height:1.65}
+  .attempt-lane{margin-top:24px;padding:22px;border:1px solid var(--line);border-radius:24px;background:#edf4f2;overflow:hidden}.video-lane{scroll-margin-top:80px;background:var(--night);border-color:var(--night);color:white}.lane-head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:18px}.lane-head h3{margin:2px 0 0;font-size:clamp(26px,3vw,39px);letter-spacing:-.04em}.lane-head>p{max-width:50ch;margin:0;color:var(--muted);font-size:13px;line-height:1.55}.video-lane .lane-head>p{color:#aeb9b6}.lane-kicker{margin:0;color:var(--aqua-deep);font:900 10px monospace;letter-spacing:.12em}.video-lane .lane-kicker{color:#8bd2cf}.attempt-rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(286px,330px);gap:14px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:inline mandatory;padding:2px 2px 12px;scrollbar-color:#8aa09b transparent}.video-attempt-rail{grid-auto-columns:minmax(310px,350px)}.attempt-card{min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:white;color:var(--ink);box-shadow:var(--shadow-sm);scroll-snap-align:start}.attempt-card[hidden]{display:none!important}.attempt-card.rejected{border-color:#e5c2ba;background:#fffaf8}.attempt-card.pending{border-color:#d6be79}.attempt-card.reference{border-color:#8fc4ba}.attempt-media{position:relative;aspect-ratio:4/5;overflow:hidden;background:#dfe8e6}.video-attempt .attempt-media{aspect-ratio:9/11;background:#111}.video-attempt .attempt-media video{object-fit:contain;background:#111}.attempt-media img,.attempt-media video{display:block;width:100%;height:100%;object-fit:cover}.attempt-scene,.attempt-status{position:absolute;top:11px;padding:6px 8px;border-radius:999px;font:900 9px monospace}.attempt-scene{left:11px;background:var(--night);color:white}.attempt-status{right:11px;background:#e9f6f2;color:#23604f}.rejected .attempt-status{background:#ffe5df;color:#983c31}.pending .attempt-status{background:#fff1bd;color:#765a00}.attempt-copy{padding:16px}.attempt-id{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font:800 9px monospace}.attempt-copy h3{margin:14px 0 6px;font-size:20px;letter-spacing:-.03em}.attempt-copy>p{min-height:58px;color:var(--muted);font-size:12px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.attempt-copy dl{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:14px 0}.attempt-copy dl div{padding:8px;border-radius:8px;background:#f1f4f2}.attempt-copy dt{font-size:9px;color:var(--muted)}.attempt-copy dd{margin:3px 0 0;font-size:10px;font-weight:800;line-height:1.4}.attempt-copy ul{margin:9px 0 0;padding-left:17px;color:#873f36;font-size:11px;line-height:1.55}.attempt-issues{border-top:1px solid var(--line);padding-top:10px}.attempt-issues summary{display:flex;align-items:center;justify-content:space-between;cursor:pointer;color:#7d4a42;font-size:11px;font-weight:900;list-style:none}.attempt-issues summary::-webkit-details-marker{display:none}.attempt-issues summary b{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#f4dfda;font:900 10px monospace}.video-lane-head{align-items:center}.video-filters{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:7px}.video-filters button{border:1px solid #394440;border-radius:999px;background:#1c2624;color:#bec9c6;padding:8px 11px;font-weight:800;cursor:pointer}.video-filters button b{margin-left:5px;color:white;font:900 11px monospace}.video-filters button.active{background:white;color:var(--night);border-color:white}.video-filters button.active b{color:var(--aqua-deep)}.video-outcome-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}.video-outcome-strip>div{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:1px 10px;padding:11px 13px;border:1px solid #35423f;border-radius:12px;background:#18211f}.video-outcome-strip span{font:900 9px monospace;letter-spacing:.1em}.video-outcome-strip b{grid-row:1/3;grid-column:2;justify-self:end;font:900 25px monospace}.video-outcome-strip small{color:#96a39f;font-size:10px}.video-outcome-strip .success span,.video-outcome-strip .success b{color:#79dfac}.video-outcome-strip .review span,.video-outcome-strip .review b{color:#e9c466}.video-outcome-strip .failed span,.video-outcome-strip .failed b{color:#ff9484}.filter-empty{padding:30px;border:1px dashed #51605c;border-radius:14px;text-align:center;color:#b8c2bf;background:#17201e}.filter-empty[hidden]{display:none}
+
+  .dashboard-details{border-top:1px solid var(--line);background:#eaf1ef}.dashboard-details>summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:24px;cursor:pointer;list-style:none}.dashboard-details>summary::-webkit-details-marker{display:none}.dashboard-details>summary span{display:grid;gap:4px}.dashboard-details>summary small{color:var(--aqua-deep);font:900 10px monospace;letter-spacing:.12em}.dashboard-details>summary b{font-size:clamp(18px,2.4vw,29px);letter-spacing:-.03em}.dashboard-details>summary strong{padding:10px 14px;border-radius:999px;background:var(--night);color:white;font-size:12px;white-space:nowrap}.dashboard-details[open]>summary{border-bottom:1px solid #c9d5d2}.dashboard-details[open]>summary strong{background:white;color:var(--night);border:1px solid var(--line)}
 
   .models-section { padding-block:clamp(70px,10vw,130px); }
   .model-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
@@ -282,7 +371,7 @@ const storySketches = [
   .do-dont{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:38px}.do-dont article{padding:22px;border-radius:18px;background:#e9f3ec}.do-dont article.dont{background:#f8e9e5}.do-dont span{font-weight:900}.do-dont ul{margin:14px 0 0;padding-left:18px;color:var(--muted);line-height:1.8}
   .gates-section{padding-block:clamp(70px,10vw,120px);background:#e3edeb}.gate-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gate-list article{display:grid;grid-template-columns:auto 1fr auto;gap:13px;align-items:start;padding:20px;border:1px solid #bfceca;border-radius:15px;background:#f4f7f5}.gate-list article.done{border-color:#85b9ad;background:#edf8f3}.gate-list article.current{background:var(--night);color:white;border-color:var(--night)}.gate-list>article>span{font:900 17px monospace;color:var(--aqua-deep)}.gate-list .current>span{color:#91dbd8}.gate-list h3{margin:0 0 7px;font-size:17px}.gate-list p{margin:0;color:var(--muted);line-height:1.55}.gate-list b{font:900 10px monospace;letter-spacing:.08em}.gate-list .done>b{color:#26715e}.gate-list .current p{color:#cdd5d2}
 
-  @media(max-width:1050px){.hero{grid-template-columns:1fr}.hero-board{max-width:620px}.attempt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.model-grid{grid-template-columns:1fr 1fr}.model-card:last-child{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr}.video-grid{grid-template-columns:1fr}.sketch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gate-list{grid-template-columns:1fr 1fr}}
-  @media(max-width:720px){.section-nav{justify-content:flex-start;overflow-x:auto}.section-head{display:block}.section-head>p{margin-top:13px}.attempt-summary{grid-template-columns:1fr 1fr}.attempt-summary div:nth-child(2){border-right:0}.attempt-summary div:nth-child(-n+2){border-bottom:1px solid var(--line)}.attempt-grid{grid-template-columns:1fr}.attempt-media{aspect-ratio:9/12}.attempt-copy>p{min-height:0}.model-grid{grid-template-columns:1fr}.model-card:last-child{display:block;grid-column:auto}.archive-row{grid-template-columns:58px 1fr}.archive-row img{width:58px;height:58px}.archive-row>strong{grid-column:1/-1}.video-card{grid-template-columns:1fr}.video-preview{min-height:390px}.library-schema{grid-template-columns:1fr}.concept-title{grid-template-columns:auto 1fr}.concept-status{grid-column:1/-1;justify-self:start}.brief-grid{grid-template-columns:1fr 1fr}.brief-grid article{padding:16px 12px;border-bottom:1px solid var(--line)}.script-strip{grid-template-columns:1fr}.sketch-grid{grid-template-columns:1fr}.timeline-list article{grid-template-columns:1fr;padding-right:30px}.shot-tech{padding:12px 0 0;border-left:0;border-top:1px solid var(--line)}.do-dont{grid-template-columns:1fr}.gate-list{grid-template-columns:1fr}}
+  @media(max-width:1050px){.hero{grid-template-columns:1fr}.hero-board{max-width:620px}.model-grid{grid-template-columns:1fr 1fr}.model-card:last-child{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr}.video-grid{grid-template-columns:1fr}.sketch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gate-list{grid-template-columns:1fr 1fr}}
+  @media(max-width:720px){.section-nav{justify-content:flex-start;overflow-x:auto}.section-head{display:block}.section-head>p{margin-top:13px}.attempt-summary{grid-template-columns:1fr 1fr}.attempt-summary div:nth-child(2){border-right:0}.attempt-summary div:nth-child(-n+2){border-bottom:1px solid var(--line)}.attempt-lane{padding:16px;margin-top:16px;border-radius:18px}.lane-head{display:block}.lane-head>p{margin-top:9px}.video-lane-head{display:grid;gap:14px}.video-filters{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px}.video-filters button{white-space:nowrap}.video-outcome-strip{grid-template-columns:1fr 1fr 1fr}.video-outcome-strip>div{display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:10px}.video-outcome-strip b{order:-1;font-size:22px}.video-outcome-strip small{line-height:1.35}.attempt-rail{grid-auto-columns:minmax(270px,84vw)}.video-attempt-rail{grid-auto-columns:minmax(282px,86vw)}.attempt-copy>p{min-height:0}.model-grid{grid-template-columns:1fr}.model-card:last-child{display:block;grid-column:auto}.archive-row{grid-template-columns:58px 1fr}.archive-row img{width:58px;height:58px}.archive-row>strong{grid-column:1/-1}.video-card{grid-template-columns:1fr}.video-preview{min-height:390px}.library-schema{grid-template-columns:1fr}.concept-title{grid-template-columns:auto 1fr}.concept-status{grid-column:1/-1;justify-self:start}.brief-grid{grid-template-columns:1fr 1fr}.brief-grid article{padding:16px 12px;border-bottom:1px solid var(--line)}.script-strip{grid-template-columns:1fr}.sketch-grid{grid-template-columns:1fr}.timeline-list article{grid-template-columns:1fr;padding-right:30px}.shot-tech{padding:12px 0 0;border-left:0;border-top:1px solid var(--line)}.do-dont{grid-template-columns:1fr}.gate-list{grid-template-columns:1fr}}
   @media(max-width:430px){.hero h1{font-size:42px}.hero-board{transform:none;box-shadow:8px 10px 0 #cce8e7}.hero-board dl{grid-template-columns:1fr 1fr}.hero-board dl div:last-child{grid-column:1/-1}.model-copy{padding:18px}.signal-grid{grid-template-columns:1fr}.video-body h3{font-size:31px}.brief-grid{grid-template-columns:1fr}.brief-grid article{padding-inline:0;border-right:0}.concept-title .number{font-size:48px}.concept-title h2{font-size:40px}}
 </style>
