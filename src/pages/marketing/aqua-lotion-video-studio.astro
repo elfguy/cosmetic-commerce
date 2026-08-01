@@ -35,12 +35,12 @@ const storySketches = [
         <div class="board-main">
           <strong>AQUA-UGC-001</strong>
           <h2>가볍게 한 번 더</h2>
-          <p>CAST / <b>선정 대기</b></p>
+          <p>MODEL D / <b>검토본 완성</b></p>
         </div>
         <dl>
           <div><dt>활성 모델</dt><dd>{campaignModels.length}</dd></div>
           <div><dt>영상 등록</dt><dd>{campaignVideos.length}</dd></div>
-          <div><dt>현재 단계</dt><dd>CASTING</dd></div>
+          <div><dt>현재 단계</dt><dd>REVIEW</dd></div>
         </dl>
       </div>
     </section>
@@ -61,7 +61,7 @@ const storySketches = [
             <div class="model-visual">
               <img src={model.image} alt={`${model.name} 전신 모델 이미지`} />
               <span class="model-code">{model.code}</span>
-              <span class="status active">ACTIVE</span>
+              <span class:list={['status', model.status]}>{model.status === 'selected' ? 'SELECTED' : 'ACTIVE'}</span>
             </div>
             <div class="model-copy">
               <p class="role">{model.role}</p>
