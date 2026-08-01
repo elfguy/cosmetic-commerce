@@ -1,0 +1,243 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import { campaignModels, archivedModels, campaignVideos, productionGates } from '../../data/aquaLotionVideoStudio';
+
+const statusLabel = {
+  concept: '콘티 작성', casting: '캐스팅', producing: '제작 중', review: '검수', approved: '승인', published: '게시', archived: '보관',
+} as const;
+const firstVideo = campaignVideos[0];
+const storySketches = [
+  { src: '/marketing/aqua-lotion-video-studio/storyboards/01-hook-problem.webp', label: '0–3초 · 문제 훅', desc: '셀피로 시작해 실제 제품 원본으로 빠르게 전환' },
+  { src: '/marketing/aqua-lotion-video-studio/storyboards/02-routine-proof.webp', label: '3–9초 · 루틴과 해결', desc: '모델은 말하고 제품은 욕실 카운터에서 정확하게 노출' },
+  { src: '/marketing/aqua-lotion-video-studio/storyboards/03-close-cta.webp', label: '9–15초 · 개인 결론과 CTA', desc: '과장 없는 표정 뒤 제품을 내려놓는 움직임으로 종료' },
+];
+---
+
+<BaseLayout title="아쿠아 로션 영상 스튜디오" description="유어스킨플러스 아쿠아 로션 광고 모델, 영상 버전, 콘티와 제작 게이트를 누적 관리하는 마케팅 영상 대시보드">
+  <SiteHeader active="/marketing/aqua-lotion-video-studio/" />
+
+  <main class="studio-page">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">Aqua lotion · moving image system</p>
+        <h1>한 편을 만드는 페이지가 아니라<br /><em>계속 만드는 시스템</em></h1>
+        <p>모델의 정체성, 광고별 콘티, 생성 원본, 검수 상태와 최종 영상을 한곳에 누적합니다. 첫 영상은 15초 UGC 검증본으로 시작합니다.</p>
+        <div class="hero-actions">
+          <a href="#video-001">첫 영상 콘티 보기</a>
+          <a class="ghost" href="#models">모델 프로필 보기</a>
+        </div>
+      </div>
+      <div class="hero-board" aria-label="현재 제작 현황">
+        <div class="board-top"><span>PRODUCTION BOARD</span><b>2026.08.01</b></div>
+        <div class="board-main">
+          <strong>AQUA-UGC-001</strong>
+          <h2>가볍게 한 번 더</h2>
+          <p>CAST / <b>선정 대기</b></p>
+        </div>
+        <dl>
+          <div><dt>활성 모델</dt><dd>{campaignModels.length}</dd></div>
+          <div><dt>영상 등록</dt><dd>{campaignVideos.length}</dd></div>
+          <div><dt>현재 단계</dt><dd>CASTING</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <nav class="section-nav container" aria-label="페이지 목차">
+      <a href="#models">모델</a><a href="#videos">영상 라이브러리</a><a href="#video-001">첫 콘티</a><a href="#gates">제작 게이트</a>
+    </nav>
+
+    <section class="models-section container" id="models">
+      <header class="section-head">
+        <div><p class="eyebrow">Cast registry</p><h2>모델 정체성 보드</h2></div>
+        <p>키·몸무게·직업은 실존 인물 추정이 아니라 Soul ID 일관성을 위한 가상 제작 설정입니다.</p>
+      </header>
+
+      <div class="model-grid">
+        {campaignModels.map((model) => (
+          <article class="model-card">
+            <div class="model-visual">
+              <img src={model.image} alt={`${model.name} 전신 모델 이미지`} />
+              <span class="model-code">{model.code}</span>
+              <span class="status active">ACTIVE</span>
+            </div>
+            <div class="model-copy">
+              <p class="role">{model.role}</p>
+              <h3>{model.name}</h3>
+              <div class="measure"><b>{model.age}세</b><span>{model.heightCm}cm</span><span>{model.weightKg}kg</span></div>
+              <p class="styling">{model.styling}</p>
+              <dl>
+                <div><dt>설정 직업</dt><dd>{model.job}</dd></div>
+                <div><dt>말투</dt><dd>{model.voice}</dd></div>
+                <div><dt>성격</dt><dd>{model.personality}</dd></div>
+              </dl>
+              <blockquote>“{model.hook}”</blockquote>
+              <div class="signal-grid">
+                <div><b>강점</b>{model.strengths.map((item) => <span>{item}</span>)}</div>
+                <div class="risk"><b>주의</b>{model.risks.map((item) => <span>{item}</span>)}</div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <details class="archive">
+        <summary><span>탈락·보관 모델</span><b>{archivedModels.length}명</b></summary>
+        {archivedModels.map((model) => (
+          <div class="archive-row">
+            <img src={model.image} alt="" loading="lazy" />
+            <div><small>{model.code} · ARCHIVED</small><h3>{model.name}</h3><p>{model.role}</p></div>
+            <strong>사용자 검토에서 탈락 · 이후 Soul ID와 광고에 사용하지 않음</strong>
+          </div>
+        ))}
+      </details>
+    </section>
+
+    <section class="library-section" id="videos">
+      <div class="container">
+        <header class="section-head light">
+          <div><p class="eyebrow">Campaign library</p><h2>영상이 늘어나도 같은 구조로 관리</h2></div>
+          <p>각 영상은 고유 ID, 모델, 훅, 상태, 콘티, 미리보기와 최종 파일을 가집니다. 새 항목을 추가하면 이 라이브러리에 자동으로 카드가 생성됩니다.</p>
+        </header>
+
+        <div class="video-grid">
+          {campaignVideos.map((video) => (
+            <article class="video-card">
+              <div class="video-preview">
+                {video.videoSrc ? <video controls preload="metadata" poster={video.poster}><source src={video.videoSrc} type="video/mp4" /></video> : <img src={video.poster} alt={`${video.title} 콘티 미리보기`} />}
+                <span class="seq">#{String(video.sequence).padStart(2, '0')}</span>
+                <span class:list={['video-status', video.status]}>{statusLabel[video.status]}</span>
+              </div>
+              <div class="video-body">
+                <div class="video-id"><span>{video.id}</span><b>{video.duration} · {video.ratio}</b></div>
+                <h3>{video.title}</h3><p>{video.subtitle}</p>
+                <dl>
+                  <div><dt>모델</dt><dd>{video.modelLabel}</dd></div>
+                  <div><dt>목표</dt><dd>{video.objective}</dd></div>
+                  <div><dt>훅</dt><dd>“{video.hook}”</dd></div>
+                </dl>
+                <a href={`#video-${String(video.sequence).padStart(3, '0')}`}>콘티 열기 →</a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <aside class="library-schema">
+          <div><span>필수 등록값</span><strong>ID · 제목 · 상태 · 모델 · 훅 · 비율 · 길이</strong></div>
+          <div><span>선택 등록값</span><strong>MP4 · 고화질 마스터 · 포스터 · 성과지표</strong></div>
+          <div><span>지원 상태</span><strong>콘티 → 캐스팅 → 제작 → 검수 → 승인 → 게시</strong></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="concept-section container" id="video-001">
+      <header class="concept-title">
+        <div class="number">01</div>
+        <div><p class="eyebrow">First production · {firstVideo.id}</p><h2>{firstVideo.title}</h2><p>{firstVideo.subtitle}</p></div>
+        <span class="concept-status">{statusLabel[firstVideo.status]}</span>
+      </header>
+
+      <div class="brief-grid">
+        <article><span>목표</span><p>{firstVideo.objective}</p></article>
+        <article><span>핵심 상황</span><p>토너만으로는 아쉽고 크림은 무겁다고 느끼는 실제 루틴 순간</p></article>
+        <article><span>키 메시지</span><strong>{firstVideo.keyMessage}</strong></article>
+        <article><span>CTA</span><strong>{firstVideo.cta}</strong></article>
+      </div>
+
+      <div class="script-strip">
+        <span>15초 대사 러프</span>
+        <p>“토너만으론 좀 아쉽고, 크림은 또 무거울 때 있잖아요. 저는 이럴 때 아쿠아 로션을 한 번 더 발라요. 복잡한 루틴보다 이 정도가 딱 좋더라고요. 궁금하면 제품 정보 확인해보세요.”</p>
+      </div>
+
+      <section class="sketches" aria-labelledby="sketch-title">
+        <div class="subhead"><p class="eyebrow">GPT Images previsualization</p><h3 id="sketch-title">텍스트가 아니라 장면으로 먼저 확인</h3><p>실제 제품 원본을 레퍼런스로 첨부해 ChatGPT Images 웹에서 생성한 기획 스케치입니다. 모델 선정 전이므로 인물은 캐스팅 권위가 아닌 구도 참고용입니다.</p></div>
+        <div class="sketch-grid">
+          {storySketches.map((sketch) => (
+            <figure><img src={sketch.src} alt={sketch.label + ' 스토리보드 스케치'} /><figcaption><b>{sketch.label}</b><span>{sketch.desc}</span></figcaption></figure>
+          ))}
+        </div>
+      </section>
+
+      <section class="timeline" aria-labelledby="timeline-title">
+        <div class="subhead"><p class="eyebrow">Shot by shot</p><h3 id="timeline-title">15초 콘티</h3></div>
+        <div class="timeline-list">
+          {firstVideo.storyboard.map((shot, index) => (
+            <article>
+              <div class="shot-index"><span>{shot.id}</span><b>{shot.time}</b><em>{shot.phase}</em></div>
+              <div class="shot-main"><h4>{shot.visual}</h4><p class="dialogue">대사 · “{shot.dialogue || '없음'}”</p>{shot.subtitle && <p class="subtitle">자막 · {shot.subtitle}</p>}</div>
+              <div class="shot-tech"><span>{shot.method}</span><p>{shot.qa}</p></div>
+              <i>{String(index + 1).padStart(2, '0')}</i>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <div class="do-dont">
+        <article><span>반드시 지킬 것</span><ul><li>같은 Soul ID·헤어·의상</li><li>실제 제품 PNG로 라벨 인증</li><li>한국어 자막은 후반 합성</li><li>1~3초마다 정보 변화</li></ul></article>
+        <article class="dont"><span>사용하지 않을 것</span><ul><li>AI가 만든 펌핑·제형 증거</li><li>물 스플래시·제품 회전 CF</li><li>검은 자막 박스와 긴 엔드카드</li><li>치료·효과 보장 표현</li></ul></article>
+      </div>
+    </section>
+
+    <section class="gates-section" id="gates">
+      <div class="container">
+        <header class="section-head"><div><p class="eyebrow">Failure-control gates</p><h2>한 번에 만들지 않는 제작 순서</h2></div><p>앞 단계가 통과되지 않으면 다음 단계 크레딧을 사용하지 않습니다.</p></header>
+        <div class="gate-list">
+          {productionGates.map(([number, title, body], index) => (
+            <article class:list={{ current: index === 0 }}><span>{number}</span><div><h3>{title}</h3><p>{body}</p></div><b>{index === 0 ? 'NOW' : 'WAIT'}</b></article>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .studio-page { --aqua:#bfe8e9; --aqua-deep:#285e62; --paper:#f4f0e7; --night:#101716; color:var(--ink); overflow:hidden; }
+  .studio-page :is(h1,h2,h3,h4,p,dl,blockquote,figure) { margin-top:0; }
+  .studio-page a { color:inherit; text-decoration:none; }
+  .eyebrow { margin:0 0 10px; text-transform:uppercase; letter-spacing:.17em; font-size:12px; font-weight:900; color:var(--aqua-deep); }
+
+  .hero { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(340px,.8fr); gap:clamp(28px,6vw,90px); align-items:center; padding-block:clamp(44px,8vw,96px) clamp(32px,6vw,72px); }
+  .hero h1 { margin:0; max-width:16ch; font-size:clamp(40px,6.3vw,82px); line-height:.96; letter-spacing:-.055em; font-weight:900; }
+  .hero h1 em { color:var(--aqua-deep); font-style:normal; }
+  .hero-copy>p:not(.eyebrow) { max-width:60ch; margin:25px 0; color:var(--muted); font-size:clamp(16px,1.5vw,19px); line-height:1.75; }
+  .hero-actions { display:flex; flex-wrap:wrap; gap:10px; }
+  .hero-actions a { padding:13px 18px; border-radius:999px; background:var(--night); color:white; font-weight:800; }
+  .hero-actions .ghost { border:1px solid var(--line-strong); background:transparent; color:var(--ink); }
+  .hero-board { position:relative; transform:rotate(1.5deg); border:1px solid #27302e; border-radius:6px; background:var(--night); color:#f4f0e7; box-shadow:18px 22px 0 #cce8e7; }
+  .board-top,.board-main,.hero-board dl { padding:18px 22px; }
+  .board-top { display:flex; justify-content:space-between; border-bottom:1px dashed #56605e; font:800 12px/1 monospace; letter-spacing:.08em; }
+  .board-main { min-height:190px; display:flex; flex-direction:column; justify-content:center; }
+  .board-main>strong { color:#93d5d5; font:700 13px monospace; }.board-main h2{margin:9px 0 20px;font-size:clamp(34px,4vw,54px);letter-spacing:-.045em}.board-main p{margin:0;color:#c7cecc}.board-main p b{color:white}
+  .hero-board dl { display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border-top:1px dashed #56605e;margin:0 }.hero-board dt{color:#96a09d;font-size:11px}.hero-board dd{margin:5px 0 0;font:900 19px monospace;color:white}
+
+  .section-nav { position:sticky; top:8px; z-index:10; display:flex; justify-content:center; gap:6px; width:max-content; max-width:calc(100% - 24px); padding:7px; border:1px solid rgba(16,23,22,.16); border-radius:999px; background:rgba(244,240,231,.92); backdrop-filter:blur(14px); box-shadow:0 10px 30px rgba(16,23,22,.08); }
+  .section-nav a { padding:9px 14px; border-radius:999px; font-size:13px; font-weight:800; white-space:nowrap; }.section-nav a:hover{background:var(--night);color:white}
+  .section-head { display:flex; justify-content:space-between; gap:30px; align-items:end; margin-bottom:28px; }.section-head h2{margin:0;font-size:clamp(32px,4vw,54px);letter-spacing:-.045em}.section-head>p{max-width:54ch;margin:0;color:var(--muted);line-height:1.65}.section-head.light{color:white}.section-head.light .eyebrow{color:#91d7d6}.section-head.light>p{color:#b7c0bd}
+
+  .models-section { padding-block:clamp(70px,10vw,130px); }
+  .model-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+  .model-card { min-width:0; border:1px solid var(--line); border-radius:24px; overflow:hidden; background:white; box-shadow:var(--shadow-sm); }
+  .model-visual { position:relative; aspect-ratio:4/5; overflow:hidden; background:linear-gradient(#e8edf0,#f4f1eb); }.model-visual img{width:100%;height:100%;object-fit:cover}.model-code,.model-visual .status{position:absolute;top:16px}.model-code{left:16px;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--night);color:white;font:900 25px monospace}.model-visual .status{right:16px;padding:7px 10px;border-radius:999px;background:#e5fff1;color:#13693f;font:900 11px monospace}
+  .model-copy { padding:22px; }.model-copy .role{margin:0 0 5px;color:var(--aqua-deep);font-weight:800;font-size:13px}.model-copy h3{margin:0;font-size:31px;letter-spacing:-.035em}.measure{display:flex;gap:8px;align-items:center;margin:13px 0}.measure>*{padding:5px 9px;border-radius:999px;background:var(--paper);font-size:12px}.styling{min-height:46px;color:var(--muted);line-height:1.55}.model-copy dl{display:grid;gap:8px;margin:18px 0}.model-copy dl div{display:grid;grid-template-columns:72px 1fr;gap:8px;padding-top:8px;border-top:1px solid var(--line)}.model-copy dt{font-size:12px;color:var(--muted)}.model-copy dd{margin:0;font-size:13px;font-weight:700;line-height:1.45}.model-copy blockquote{margin:18px 0;padding:15px;border-left:3px solid var(--aqua-deep);background:#eff8f7;font-weight:800;line-height:1.55}
+  .signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.signal-grid>div{padding:13px;border-radius:13px;background:#f0f7f2}.signal-grid .risk{background:#fbf2ef}.signal-grid b{display:block;margin-bottom:7px;font-size:12px}.signal-grid span{display:block;color:var(--muted);font-size:12px;line-height:1.45;margin-top:3px}
+  .archive{margin-top:18px;border:1px solid var(--line);border-radius:16px;background:var(--surface);overflow:hidden}.archive summary{display:flex;justify-content:space-between;padding:17px 20px;cursor:pointer;font-weight:800}.archive-row{display:grid;grid-template-columns:80px 1fr minmax(220px,.8fr);gap:18px;align-items:center;padding:18px;border-top:1px solid var(--line)}.archive-row img{width:80px;height:80px;object-fit:cover;filter:grayscale(1)}.archive-row small{color:#9a3c34;font-weight:900}.archive-row h3{margin:3px 0}.archive-row p,.archive-row strong{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+
+  .library-section { padding-block:clamp(70px,10vw,120px); background:var(--night); }
+  .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.video-card{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr);overflow:hidden;border:1px solid #35403d;border-radius:20px;background:#18201f;color:white}.video-preview{position:relative;min-height:440px;background:#c9d9d7}.video-preview img,.video-preview video{width:100%;height:100%;object-fit:cover}.seq,.video-status{position:absolute;top:15px;padding:8px 10px;border-radius:999px;font:900 11px monospace}.seq{left:15px;background:var(--night);color:white}.video-status{right:15px;background:#c7eee9;color:#164e50}.video-body{padding:25px;display:flex;flex-direction:column}.video-id{display:flex;justify-content:space-between;gap:12px;color:#9eaaa7;font:700 11px monospace}.video-body h3{margin:28px 0 4px;font-size:36px;letter-spacing:-.04em}.video-body>p{color:#b4bfbc}.video-body dl{display:grid;gap:11px;margin:24px 0}.video-body dl div{padding-top:10px;border-top:1px solid #36403e}.video-body dt{color:#82908c;font-size:11px}.video-body dd{margin:5px 0 0;font-size:13px;line-height:1.5}.video-body>a{margin-top:auto;align-self:flex-start;padding:11px 14px;border-radius:999px;background:white;color:var(--night);font-weight:900;font-size:13px}
+  .library-schema{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:22px;background:#394441;border:1px solid #394441}.library-schema div{padding:18px;background:#161e1d;color:white}.library-schema span{display:block;margin-bottom:6px;color:#91a09c;font-size:11px}.library-schema strong{font-size:13px;line-height:1.5}
+
+  .concept-section { padding-block:clamp(75px,10vw,140px); }.concept-title{display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;padding-bottom:24px;border-bottom:3px solid var(--night)}.concept-title .number{font:900 clamp(55px,8vw,105px)/.8 monospace;color:#b9dedd}.concept-title h2{margin:0;font-size:clamp(44px,6vw,76px);letter-spacing:-.055em}.concept-title>div>p:last-child{margin:10px 0 0;color:var(--muted)}.concept-status{padding:9px 13px;border-radius:999px;background:#f3d9a6;font-size:12px;font-weight:900}
+  .brief-grid{display:grid;grid-template-columns:2fr 2fr 1fr 1fr;border-bottom:1px solid var(--line)}.brief-grid article{min-width:0;padding:21px;border-right:1px solid var(--line)}.brief-grid article:first-child{padding-left:0}.brief-grid article:last-child{border:0}.brief-grid span{display:block;margin-bottom:8px;color:var(--muted);font-size:11px;font-weight:900}.brief-grid p,.brief-grid strong{margin:0;line-height:1.55}.script-strip{display:grid;grid-template-columns:150px 1fr;gap:20px;margin:32px 0;padding:24px;border-radius:18px;background:var(--aqua)}.script-strip span{font-size:12px;font-weight:900}.script-strip p{margin:0;font-size:clamp(17px,2vw,23px);line-height:1.6;font-weight:800;letter-spacing:-.015em}
+  .subhead{max-width:760px;margin:0 0 24px}.subhead h3{margin:0 0 10px;font-size:clamp(30px,4vw,48px);letter-spacing:-.04em}.subhead>p:last-child{color:var(--muted);line-height:1.65}
+  .sketches{padding-block:35px 65px}.sketch-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.sketch-grid figure{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:white}.sketch-grid img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:#eee}.sketch-grid figcaption{display:grid;gap:6px;padding:16px}.sketch-grid figcaption span{color:var(--muted);font-size:13px;line-height:1.5}
+  .timeline{padding-top:35px}.timeline-list{border-top:3px solid var(--night)}.timeline-list article{position:relative;display:grid;grid-template-columns:150px minmax(0,1.5fr) minmax(220px,.7fr);gap:22px;padding:24px 44px 24px 0;border-bottom:1px solid var(--line)}.shot-index{display:flex;flex-direction:column;gap:5px}.shot-index span{font:900 18px monospace}.shot-index b{font-size:14px}.shot-index em{align-self:flex-start;padding:4px 7px;border-radius:5px;background:var(--night);color:white;font:800 10px monospace;font-style:normal}.shot-main h4{margin:0 0 12px;font-size:17px;line-height:1.55}.shot-main p{margin:5px 0;color:var(--muted);font-size:13px}.shot-main .subtitle{color:var(--aqua-deep);font-weight:800}.shot-tech{padding-left:20px;border-left:1px solid var(--line)}.shot-tech span{font-size:12px;font-weight:900}.shot-tech p{margin:8px 0 0;color:var(--muted);font-size:12px;line-height:1.5}.timeline-list i{position:absolute;right:0;top:24px;color:#c7d0cd;font:900 21px monospace;font-style:normal}
+  .do-dont{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:38px}.do-dont article{padding:22px;border-radius:18px;background:#e9f3ec}.do-dont article.dont{background:#f8e9e5}.do-dont span{font-weight:900}.do-dont ul{margin:14px 0 0;padding-left:18px;color:var(--muted);line-height:1.8}
+  .gates-section{padding-block:clamp(70px,10vw,120px);background:#e3edeb}.gate-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gate-list article{display:grid;grid-template-columns:auto 1fr auto;gap:13px;align-items:start;padding:20px;border:1px solid #bfceca;border-radius:15px;background:#f4f7f5}.gate-list article.current{background:var(--night);color:white;border-color:var(--night)}.gate-list>article>span{font:900 17px monospace;color:var(--aqua-deep)}.gate-list .current>span{color:#92dcda}.gate-list h3{margin:0 0 7px;font-size:17px}.gate-list p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}.gate-list .current p{color:#b6c0bd}.gate-list b{font:900 10px monospace;color:#7f8b87}.gate-list .current b{color:#91d7d6}
+
+  @media(max-width:1050px){.hero{grid-template-columns:1fr}.hero-board{max-width:620px}.model-grid{grid-template-columns:1fr 1fr}.model-card:last-child{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr}.video-grid{grid-template-columns:1fr}.gate-list{grid-template-columns:1fr 1fr}}
+  @media(max-width:720px){.section-nav{justify-content:flex-start;overflow-x:auto}.section-head{display:block}.section-head>p{margin-top:13px}.model-grid{grid-template-columns:1fr}.model-card:last-child{display:block;grid-column:auto}.archive-row{grid-template-columns:58px 1fr}.archive-row img{width:58px;height:58px}.archive-row>strong{grid-column:1/-1}.video-card{grid-template-columns:1fr}.video-preview{min-height:390px}.library-schema{grid-template-columns:1fr}.concept-title{grid-template-columns:auto 1fr}.concept-status{grid-column:1/-1;justify-self:start}.brief-grid{grid-template-columns:1fr 1fr}.brief-grid article{padding:16px 12px;border-bottom:1px solid var(--line)}.script-strip{grid-template-columns:1fr}.sketch-grid{grid-template-columns:1fr}.timeline-list article{grid-template-columns:1fr;padding-right:30px}.shot-tech{padding:12px 0 0;border-left:0;border-top:1px solid var(--line)}.do-dont{grid-template-columns:1fr}.gate-list{grid-template-columns:1fr}}
+  @media(max-width:430px){.hero h1{font-size:42px}.hero-board{transform:none;box-shadow:8px 10px 0 #cce8e7}.hero-board dl{grid-template-columns:1fr 1fr}.hero-board dl div:last-child{grid-column:1/-1}.model-copy{padding:18px}.signal-grid{grid-template-columns:1fr}.video-body h3{font-size:31px}.brief-grid{grid-template-columns:1fr}.brief-grid article{padding-inline:0;border-right:0}.concept-title .number{font-size:48px}.concept-title h2{font-size:40px}}
+</style>

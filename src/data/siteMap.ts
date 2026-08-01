@@ -70,6 +70,14 @@ export const siteSections: SiteSection[] = [
         cover: 'linear-gradient(135deg, #8c4830, #1f2a24)',
       },
       {
+        href: '/marketing/aqua-lotion-video-studio/',
+        title: '아쿠아 로션 영상 스튜디오',
+        desc: '광고 모델, 영상 버전, GPT 콘티 스케치와 제작 게이트를 누적 관리.',
+        tag: '영상',
+        thumb: '/marketing/aqua-lotion-video-studio/models/d-han-chaewon-full.webp',
+        cover: 'linear-gradient(135deg, #173c3d, #bfe8e9)',
+      },
+      {
         href: '/workspaces/',
         title: '상세 버전 랩',
         desc: '제품별 현재 적용 상세, 후보 버전, 최종 업로드 자료를 한 흐름에서 비교.',
