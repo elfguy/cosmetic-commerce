@@ -166,6 +166,64 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
+    id: 'A-CUTS-PREVIEW', scene: 'A 모델 30초', title: 'A · 10컷 무음 콘티 프리뷰', status: 'review',
+    model: 'Seedance 2.0 Fast + 실제 제품 PNG 모션', duration: '30초', creditCost: '조립 무료 · 생성 70 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S01-poster.webp',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/aqua-model-a-10cut-silent-preview.mp4',
+    summary: 'A 서윤아의 무언 욕실 연기 5컷과 실제 제품 픽셀 보존 모션 5컷을 콘티 순서대로 하드컷 조립한 무음 프리뷰.',
+    issues: ['나레이션·자막·효과음은 아직 없음', '제품 컷 사이 리듬은 후반 사운드와 자막으로 보완', '개별 컷 QA 통과 후 조립'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-S01', scene: 'S01 · HOOK', title: '거울 피부 확인', status: 'selected', model: 'Higgsfield MCP · Seedance 2.0 Fast', duration: '3초', creditCost: '14 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S01-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S01.mp4',
+    summary: 'A 모델이 거울을 보며 피부 상태를 조용히 확인하는 무언 훅.', issues: ['얼굴·헤어·미니스커트 유지', '입 닫힘', '생성 텍스트·제품 없음'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-S02', scene: 'S02 · PROBLEM', title: '한 손 볼 터치', status: 'selected', model: 'Higgsfield MCP · Seedance 2.0 Fast', duration: '3초', creditCost: '14 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S02-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S02.mp4',
+    summary: '거울을 보며 한쪽 볼을 한 번 가볍게 확인하는 자연스러운 생활 동작.', issues: ['한 손·손가락 구조 정상', '과장된 고민 표정 없음', '립싱크·자막 없음'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-S03', scene: 'S03 · BRIDGE', title: '실제품 펀치인', status: 'selected', model: '실제 제품 PNG · 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S03-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S03.mp4',
+    summary: '실제 아쿠아 로션 정면 원본을 빠르게 펀치인해 해결책을 등장시킨다.', issues: ['흰 펌프·흰 칼라 보존', '라벨 픽셀 보존', '생성형 제품 없음'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-S04', scene: 'S04 · SOLUTION', title: '실제품 미세 줌', status: 'selected', model: '실제 제품 PNG · 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S04-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S04.mp4',
+    summary: '실제 팩샷을 유지한 채 미세한 스마트폰 줌으로 수분 로션 한 단계를 강조.', issues: ['제품 구조·라벨 100% 원본', '한글 생성 없음', 'CTA 안전 공간 유지'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-S05', scene: 'S05 · NAME', title: '빈 제품 자리 확인', status: 'selected', model: 'Higgsfield MCP · Seedance 2.0 Fast', duration: '3초', creditCost: '14 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S05-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S05.mp4',
+    summary: 'A 모델이 양손을 카운터에 두고 실제 제품을 합성할 빈 공간을 바라본다.', issues: ['양손 구조 정상', '가짜 제품 생성 없음', '동일 욕실·의상 유지'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-S06', scene: 'S06 · FACT 01', title: '머리 귀 뒤로 넘김', status: 'selected', model: 'Higgsfield MCP · Seedance 2.0 Fast', duration: '3초', creditCost: '14 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S06-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S06.mp4',
+    summary: '한 가닥 머리를 귀 뒤로 넘기며 거울로 루틴을 이어가는 짧은 생활 장면.', issues: ['한 행동만 수행', '얼굴·헤어 일관성 유지', '입 닫힘·자막 없음'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-S07', scene: 'S07 · FACT 02', title: '실제품 펌프 매크로', status: 'selected', model: '실제 사용자 촬영·팩샷 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S07-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S07.mp4',
+    summary: '실제 흰 펌프 헤드와 반투명 병 어깨를 크게 보여주는 매크로 컷.', issues: ['사용자 촬영 원본 기준 흰 펌프 확인', '펌핑 생성 동작 없음', '라벨 왜곡 없음'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-S08', scene: 'S08 · ROUTINE', title: '300ml 라벨 확대', status: 'selected', model: '실제 제품 PNG · 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S08-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S08.mp4',
+    summary: '실제 라벨과 300ml 표기를 크게 유지한 제품 정보 컷.', issues: ['YOURSKIN+·AQUA LOTION 라벨 보존', '300ml 표기 보존', '생성 제품 없음'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-S09', scene: 'S09 · RESULT', title: '양손 볼 감싸기', status: 'selected', model: 'Higgsfield MCP · Seedance 2.0 Fast', duration: '3초', creditCost: '14 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S09-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S09.mp4',
+    summary: '양손을 볼 옆에 가볍게 대고 닫힌 입으로 작은 만족 미소를 보이는 결과 장면.', issues: ['정확히 두 손', '손가락·얼굴 가림 없음', '입 닫힘·립싱크 없음'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-S10', scene: 'S10 · CTA', title: '실제품 CTA 여백', status: 'selected', model: '실제 제품 PNG · 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S10-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S10.mp4',
+    summary: '실제 제품을 화면 한쪽에 두고 후반 CTA를 위한 깨끗한 여백을 확보.', issues: ['제품 라벨 원본 유지', '정적 엔드카드 대신 미세 모션', '후반 자막용 안전 공간 확보'], createdAt: '2026-08-06',
+  },
+  {
     id: 'MASTER-V1', scene: '전체 30초', title: '첫 Higgsfield 조립 검토본', status: 'rejected',
     model: 'Seedance 2.0 Fast + Seed Audio', duration: '30초', creditCost: '64.2 credits',
     poster: '/marketing/aqua-lotion-video-studio/posters/aqua-ugc-001-model-d-higgsfield.webp',
@@ -214,14 +272,14 @@ export const sceneAttempts: SceneAttempt[] = [
     poster: '/marketing/aqua-lotion-video-studio/revisions/v2/model-d-modern-style.webp',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/v2/use-ms-01.mp4',
     summary: '집기→1회 펌핑→볼 도포 행동은 생성됐지만 실제 SKU의 펌프·라벨·병 구조가 달라져 탈락.',
-    issues: ['검정 펌프가 흰색으로 변형됨', '실제 라벨 문구·레이아웃 불일치', '투명 원통형 300ml 병 비율이 달라짐', '손 도포는 자연스럽지만 제품 증거로는 사용 불가'],
+    issues: ['흰 펌프는 실제 사용자 촬영 원본과 일치', '실제 라벨 문구·레이아웃 불일치', '반투명 300ml 병 비율이 달라짐', '손 도포는 자연스럽지만 제품 증거로는 사용 불가'],
     createdAt: '2026-08-01',
   },
   {
     id: 'SITE-KF-01', scene: '웹사이트 키프레임', title: 'Nano Banana Pro · 2레퍼런스 펌핑 직전', status: 'review',
     model: 'Higgsfield 사이트 · Nano Banana Pro', creditCost: '4 credits · 2회',
     poster: '/marketing/aqua-lotion-video-studio/revisions/v2/site/pump-keyframe-01.webp',
-    summary: '사이트에서 모델 D와 실제 제품 팩샷을 직접 넣어 만든 펌핑 직전 키프레임. 기존 통합 키프레임보다 검정 펌프·손·제품 비율이 안정적이다.',
+    summary: '사이트에서 모델 D와 실제 제품 팩샷을 직접 넣어 만든 펌핑 직전 키프레임. 기존 통합 키프레임보다 흰 펌프·손·제품 비율이 안정적이다.',
     issues: ['AQUA LOTION 큰 라벨은 유지', '상단 라벨 일부가 손에 가려짐', '영상에서 실제 펌프 눌림과 토출을 별도 검증해야 함', '첫 사이트 제출 오류·중복 재시도로 이미지 2회 차감'],
     createdAt: '2026-08-01',
   },
@@ -230,7 +288,7 @@ export const sceneAttempts: SceneAttempt[] = [
     model: 'Higgsfield 사이트 · Kling 3.0 Turbo', duration: '5초 · 1080p', creditCost: '10 credits',
     poster: '/marketing/aqua-lotion-video-studio/revisions/v2/site/pump-keyframe-01.webp',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/v2/site/pump-kling-01.mp4',
-    summary: '제품·모델·검정 펌프는 유지됐지만 펌프 이동이 작고 로션이 토출되기보다 손바닥에 나타나는 느낌이라 증거 장면으로 탈락.',
+    summary: '제품·모델·흰 펌프는 유지됐지만 펌프 이동이 작고 로션이 토출되기보다 손바닥에 나타나는 느낌이라 증거 장면으로 탈락.',
     issues: ['펌프의 완전 눌림·복귀가 명확하지 않음', '약 2.25초에 로션이 갑자기 나타남', '허리 위 구도라 핵심 동작이 작음', '라벨과 병은 기존 MCP 영상보다 안정적'],
     createdAt: '2026-08-01',
   },
@@ -239,7 +297,7 @@ export const sceneAttempts: SceneAttempt[] = [
     model: 'Higgsfield 사이트 · Nano Banana Pro', creditCost: '2 credits',
     poster: '/marketing/aqua-lotion-video-studio/revisions/v2/site/pump-macro-keyframe-rejected.webp',
     summary: '펌프와 양손을 크게 잡는 구도는 좋아졌지만 제품 라벨에 존재하지 않는 영문이 생성되어 영상 입력에서 제외.',
-    issues: ['가짜 영문 라벨 생성', '투명 병이 불투명하게 변형', '검정 펌프와 손 구조는 개선', 'SKU 신뢰 장면으로 사용 불가'],
+    issues: ['가짜 영문 라벨 생성', '반투명 병이 불투명하게 변형', '흰 펌프와 손 구조는 개선', 'SKU 신뢰 장면으로 사용 불가'],
     createdAt: '2026-08-01',
   },
   {
