@@ -166,12 +166,45 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-PREMIUM-15S', scene: 'A 모델 15초', title: '욕실 × 블루글라스 전환형 광고', status: 'review',
+    id: 'A-TV-STORY-15S', scene: 'A 모델 15초', title: '행동 인과형 TV 스타일 광고', status: 'review',
+    model: 'Seedance 2.0 Standard 1080p High Bitrate + 실제 제품 후반 합성', duration: '15초', creditCost: '조립 무료 · 고급 장면 생성 180 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-15s.mp4',
+    summary: '크림을 집으려다 멈춤→아쿠아 로션 선택→자연스러운 볼 패팅→창가 결과→같은 욕실 제품·모델 투샷→히어로로 이어지는 15초 서사형 검토본.',
+    issues: ['최종 내부 QA PASS · 사용자 검토 대기', '실제 제품 픽셀·라벨·흰 펌프·반투명 병 고정', '기존 무지 크림 용기 제거 후 대리석 접지·그림자·반사 합성', '배우 생성 5회 중 과도한 흰 제형 1회 탈락·4회 채택', '음성 없는 오리지널 미니멀 음악·전환 사운드'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'TV-S01', scene: 'TV 01 · DECISION', title: '크림 앞에서 손이 멈추는 선택 순간', status: 'selected', model: 'Seedance 2.0 Standard · 1080p High Bitrate', duration: '4초', creditCost: '36 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/TV-S01-poster.jpg', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/TV-S01.mp4',
+    summary: '토너 후 무지 크림 용기에 손을 뻗다가 멈추는 미세 연기로 문제를 행동으로 보여주는 첫 장면.', issues: ['성인 A 얼굴·닫힌 입 유지', '손·용기 물리 정상', '과장된 걱정 표정·패션 포즈 없음'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'TV-S02', scene: 'TV 02 · CHOICE', title: '아쿠아 로션으로 이동하는 시선', status: 'selected', model: 'Seedance 2.0 Standard · 1080p High Bitrate + 실제 제품 합성', duration: '4초', creditCost: '36 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/TV-S02-poster.jpg', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/TV-S02.mp4',
+    summary: '같은 욕실에서 모델 시선이 왼쪽 화장대로 이동하며 실제 아쿠아 로션 선택으로 연결되는 장면.', issues: ['생성 무지 용기는 최종본에서 제거', '실제 제품은 후반 합성', '손이 제품 합성 영역을 가리지 않음'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'TV-S03A', scene: 'TV 03A · APPLY', title: '흰 제형 스머어 실패본', status: 'rejected', model: 'Seedance 2.0 Standard · 1080p High Bitrate', duration: '4초', creditCost: '36 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/TV-S03A-poster.jpg', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/TV-S03A.mp4',
+    summary: '얼굴과 손은 안정적이지만 과도한 흰 로션이 볼에 줄무늬처럼 남아 실제 도포로 보이지 않아 탈락.', issues: ['제형 양 과다', '흰 줄무늬가 끝까지 잔존', '패팅 대신 스머어처럼 보여 TV 사실감 미달'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'TV-S03B', scene: 'TV 03B · APPLY', title: '투명 소량 두 번 패팅', status: 'selected', model: 'Seedance 2.0 Standard · 1080p High Bitrate', duration: '4초', creditCost: '36 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/TV-S03B-poster.jpg', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/TV-S03B.mp4',
+    summary: '거의 보이지 않는 소량의 로션을 중지·약지로 한쪽 볼에 두 번 가볍게 눌러 흡수시키는 자연스러운 수정본.', issues: ['손가락·손목 구조 정상', '흰 제형 줄무늬 없음', '입 닫힘·자연스러운 거울 시선'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'TV-S04', scene: 'TV 04 · RESULT', title: '창가 빛으로 얼굴을 돌리는 결과', status: 'selected', model: 'Seedance 2.0 Standard · 1080p High Bitrate', duration: '4초', creditCost: '36 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/TV-S04-poster.jpg', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/TV-S04.mp4',
+    summary: '루틴 후 손을 내리고 창가 빛으로 얼굴을 천천히 돌리며 작은 만족감을 눈과 닫힌 입으로 표현.', issues: ['후반 닫힌 입 구간 사용', '과장된 광고 미소 없음', '피부결·헤어·광원 연속성 통과'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-PREMIUM-15S', scene: 'A 모델 15초', title: '욕실 × 블루글라스 전환형 광고', status: 'rejected',
     model: '실제 제품 PNG 고정 합성 + A 모델 컷 + 로컬 모션그래픽', duration: '15초', creditCost: '0 credits · 기존 자산 재편집',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-premium/poster.webp',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-premium/aqua-lotion-model-a-premium-15s.mp4',
-    summary: '첫 1초 제품 훅, A 모델 피부 확인, 욕실 세면대 제품 합성, 블루글라스 성분·용량 근거, 쿠팡 CTA로 압축한 전환형 검토본.',
-    issues: ['실제 제품 픽셀·라벨·흰 펌프 고정', '접촉 그림자·반사·라이트랩·전경 심도 적용', '프로그램 제작 오리지널 무음성 음악·전환 효과', '실제품 펌핑·제형 촬영 없이 가능한 범위의 합성본'], createdAt: '2026-08-06',
+    summary: '제품 합성은 개선됐지만 사용자 목표인 TV 광고 수준의 행동 인과와 사실감에 미달해 새 서사형 광고로 대체.',
+    issues: ['사용자 평가 기준: 해상도가 아니라 내용·연기·사실감 미달', '제품과 배우가 물리적으로 선택·사용되는 인과 부족', '블루글라스 별도 세계가 욕실 서사를 끊음', '새 Seedance Standard 서사형 광고로 대체'], createdAt: '2026-08-06',
   },
   {
     id: 'A-CUTS-PREVIEW', scene: 'A 모델 30초', title: 'A · 10컷 무음 콘티 프리뷰', status: 'rejected',
