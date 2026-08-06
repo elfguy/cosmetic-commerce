@@ -166,12 +166,20 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-CUTS-PREVIEW', scene: 'A 모델 30초', title: 'A · 10컷 무음 콘티 프리뷰', status: 'review',
+    id: 'A-PREMIUM-15S', scene: 'A 모델 15초', title: '욕실 × 블루글라스 전환형 광고', status: 'review',
+    model: '실제 제품 PNG 고정 합성 + A 모델 컷 + 로컬 모션그래픽', duration: '15초', creditCost: '0 credits · 기존 자산 재편집',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-premium/poster.webp',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-premium/aqua-lotion-model-a-premium-15s.mp4',
+    summary: '첫 1초 제품 훅, A 모델 피부 확인, 욕실 세면대 제품 합성, 블루글라스 성분·용량 근거, 쿠팡 CTA로 압축한 전환형 검토본.',
+    issues: ['실제 제품 픽셀·라벨·흰 펌프 고정', '접촉 그림자·반사·라이트랩·전경 심도 적용', '프로그램 제작 오리지널 무음성 음악·전환 효과', '실제품 펌핑·제형 촬영 없이 가능한 범위의 합성본'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-CUTS-PREVIEW', scene: 'A 모델 30초', title: 'A · 10컷 무음 콘티 프리뷰', status: 'rejected',
     model: 'Seedance 2.0 Fast + 실제 제품 PNG 모션', duration: '30초', creditCost: '조립 무료 · 생성 70 credits',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S01-poster.webp',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/aqua-model-a-10cut-silent-preview.mp4',
     summary: 'A 서윤아의 무언 욕실 연기 5컷과 실제 제품 픽셀 보존 모션 5컷을 콘티 순서대로 하드컷 조립한 무음 프리뷰.',
-    issues: ['나레이션·자막·효과음은 아직 없음', '제품 컷 사이 리듬은 후반 사운드와 자막으로 보완', '개별 컷 QA 통과 후 조립'], createdAt: '2026-08-06',
+    issues: ['사용자 평가: 광고 같지 않고 중간 상품 이미지 품질이 낮음', '모델 포즈와 흰 배경 제품 줌의 인과관계 부족', '동일 3초 컷 반복으로 기계적 리듬', '새 15초 전환형 구조로 대체'], createdAt: '2026-08-06',
   },
   {
     id: 'A-S01', scene: 'S01 · HOOK', title: '거울 피부 확인', status: 'selected', model: 'Higgsfield MCP · Seedance 2.0 Fast', duration: '3초', creditCost: '14 credits',
@@ -184,14 +192,14 @@ export const sceneAttempts: SceneAttempt[] = [
     summary: '거울을 보며 한쪽 볼을 한 번 가볍게 확인하는 자연스러운 생활 동작.', issues: ['한 손·손가락 구조 정상', '과장된 고민 표정 없음', '립싱크·자막 없음'], createdAt: '2026-08-06',
   },
   {
-    id: 'A-S03', scene: 'S03 · BRIDGE', title: '실제품 펀치인', status: 'selected', model: '실제 제품 PNG · 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
+    id: 'A-S03', scene: 'S03 · BRIDGE', title: '실제품 펀치인', status: 'rejected', model: '실제 제품 PNG · 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S03-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S03.mp4',
-    summary: '실제 아쿠아 로션 정면 원본을 빠르게 펀치인해 해결책을 등장시킨다.', issues: ['흰 펌프·흰 칼라 보존', '라벨 픽셀 보존', '생성형 제품 없음'], createdAt: '2026-08-06',
+    summary: '실제 원본 제품은 정확하지만 흰 배경·단순 펀치인으로 공간감이 없어 광고 컷으로 탈락.', issues: ['제품 정확성만 통과', '접촉 그림자·반사·환경 시차 없음', '상세페이지 PNG처럼 보임'], createdAt: '2026-08-06',
   },
   {
-    id: 'A-S04', scene: 'S04 · SOLUTION', title: '실제품 미세 줌', status: 'selected', model: '실제 제품 PNG · 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
+    id: 'A-S04', scene: 'S04 · SOLUTION', title: '실제품 미세 줌', status: 'rejected', model: '실제 제품 PNG · 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S04-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S04.mp4',
-    summary: '실제 팩샷을 유지한 채 미세한 스마트폰 줌으로 수분 로션 한 단계를 강조.', issues: ['제품 구조·라벨 100% 원본', '한글 생성 없음', 'CTA 안전 공간 유지'], createdAt: '2026-08-06',
+    summary: '실제 라벨은 유지했지만 동일한 흰 배경 제품을 다시 확대해 정보와 리듬 변화가 없어 탈락.', issues: ['단순 선형 줌', '제품과 모델의 공간 단절', 'S03과 화면 정보 중복'], createdAt: '2026-08-06',
   },
   {
     id: 'A-S05', scene: 'S05 · NAME', title: '빈 제품 자리 확인', status: 'selected', model: 'Higgsfield MCP · Seedance 2.0 Fast', duration: '3초', creditCost: '14 credits',
@@ -204,14 +212,14 @@ export const sceneAttempts: SceneAttempt[] = [
     summary: '한 가닥 머리를 귀 뒤로 넘기며 거울로 루틴을 이어가는 짧은 생활 장면.', issues: ['한 행동만 수행', '얼굴·헤어 일관성 유지', '입 닫힘·자막 없음'], createdAt: '2026-08-06',
   },
   {
-    id: 'A-S07', scene: 'S07 · FACT 02', title: '실제품 펌프 매크로', status: 'selected', model: '실제 사용자 촬영·팩샷 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
+    id: 'A-S07', scene: 'S07 · FACT 02', title: '실제품 펌프 매크로', status: 'rejected', model: '실제 사용자 촬영·팩샷 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S07-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S07.mp4',
-    summary: '실제 흰 펌프 헤드와 반투명 병 어깨를 크게 보여주는 매크로 컷.', issues: ['사용자 촬영 원본 기준 흰 펌프 확인', '펌핑 생성 동작 없음', '라벨 왜곡 없음'], createdAt: '2026-08-06',
+    summary: '실제 흰 펌프 원본이지만 평면 이미지를 과도하게 확대해 재질과 공간감이 사라져 탈락.', issues: ['실제 펌핑·토출 증거 없음', '평면 PNG 매크로', '배경·조명 상호작용 없음'], createdAt: '2026-08-06',
   },
   {
-    id: 'A-S08', scene: 'S08 · ROUTINE', title: '300ml 라벨 확대', status: 'selected', model: '실제 제품 PNG · 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
+    id: 'A-S08', scene: 'S08 · ROUTINE', title: '300ml 라벨 확대', status: 'rejected', model: '실제 제품 PNG · 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S08-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S08.mp4',
-    summary: '실제 라벨과 300ml 표기를 크게 유지한 제품 정보 컷.', issues: ['YOURSKIN+·AQUA LOTION 라벨 보존', '300ml 표기 보존', '생성 제품 없음'], createdAt: '2026-08-06',
+    summary: '라벨·300ml 표기는 정확하지만 흰 배경 초근접 확대가 상세페이지 이미지처럼 보여 탈락.', issues: ['라벨 정확성만 통과', '제품 외곽 명도 분리 부족', 'S07과 시각 정보 중복'], createdAt: '2026-08-06',
   },
   {
     id: 'A-S09', scene: 'S09 · RESULT', title: '양손 볼 감싸기', status: 'selected', model: 'Higgsfield MCP · Seedance 2.0 Fast', duration: '3초', creditCost: '14 credits',
@@ -219,9 +227,9 @@ export const sceneAttempts: SceneAttempt[] = [
     summary: '양손을 볼 옆에 가볍게 대고 닫힌 입으로 작은 만족 미소를 보이는 결과 장면.', issues: ['정확히 두 손', '손가락·얼굴 가림 없음', '입 닫힘·립싱크 없음'], createdAt: '2026-08-06',
   },
   {
-    id: 'A-S10', scene: 'S10 · CTA', title: '실제품 CTA 여백', status: 'selected', model: '실제 제품 PNG · 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
+    id: 'A-S10', scene: 'S10 · CTA', title: '실제품 CTA 여백', status: 'rejected', model: '실제 제품 PNG · 픽셀 보존 모션', duration: '3초', creditCost: '0 credits',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S10-poster.webp', videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-cuts/S10.mp4',
-    summary: '실제 제품을 화면 한쪽에 두고 후반 CTA를 위한 깨끗한 여백을 확보.', issues: ['제품 라벨 원본 유지', '정적 엔드카드 대신 미세 모션', '후반 자막용 안전 공간 확보'], createdAt: '2026-08-06',
+    summary: 'CTA 여백은 확보했지만 앞선 제품 컷과 같은 흰 배경·정면 PNG라 구매 엔드컷의 긴장감이 없어 탈락.', issues: ['손·모델과 함께 있지 않음', '접지·반사·랙포커스 없음', '새 블루글라스 히어로로 대체'], createdAt: '2026-08-06',
   },
   {
     id: 'MASTER-V1', scene: '전체 30초', title: '첫 Higgsfield 조립 검토본', status: 'rejected',
