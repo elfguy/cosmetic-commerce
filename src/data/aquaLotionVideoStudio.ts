@@ -166,12 +166,20 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-TV-STORY-15S', scene: 'A 모델 15초', title: '행동 인과형 TV 스타일 광고', status: 'review',
+    id: 'A-TV-STORY-15S-PRODUCT-V2', scene: 'A 모델 15초', title: '실제품 재질 통합 · 무음 TV 스타일 광고', status: 'review',
+    model: 'Seedance 2.0 Standard 배우컷 + 실제 pump-closeup 제품 원본 + 창광·접지 후반 합성', duration: '15초 · 오디오 없음', creditCost: '0 credits · 기존 고급 장면 재합성',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-product-v2-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-15s-product-v2-silent.mp4',
+    summary: '평면적인 기존 제품 누끼를 반투명 병 재질이 살아 있는 실제 제품 알파 원본으로 교체하고, 같은 욕실의 창광·심도·대리석 접지·약한 반사에 맞춘 최종 무음 검토본.',
+    issues: ['최종 내부 QA PASS · 사용자 검토 대기', '흰 펌프·흰 나사 칼라·반투명 병·내부 흰 로션·실제 라벨 보존', '선택·투샷·엔드 히어로 모두 실제 대리석 접점에 고정', '라벨 보호 후 좌측 창광 방향의 펌프·병 명암만 미세 재조명', '오디오 스트림 0개 · 배경 음악 후반 작업용 무음본', '추가 Higgsfield 생성 없음'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-TV-STORY-15S', scene: 'A 모델 15초', title: '행동 인과형 TV 스타일 광고 · V1', status: 'rejected',
     model: 'Seedance 2.0 Standard 1080p High Bitrate + 실제 제품 후반 합성', duration: '15초', creditCost: '조립 무료 · 고급 장면 생성 180 credits',
-    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-poster.jpg',
-    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-15s.mp4',
-    summary: '크림을 집으려다 멈춤→아쿠아 로션 선택→자연스러운 볼 패팅→창가 결과→같은 욕실 제품·모델 투샷→히어로로 이어지는 15초 서사형 검토본.',
-    issues: ['최종 내부 QA PASS · 사용자 검토 대기', '실제 제품 픽셀·라벨·흰 펌프·반투명 병 고정', '기존 무지 크림 용기 제거 후 대리석 접지·그림자·반사 합성', '배우 생성 5회 중 과도한 흰 제형 1회 탈락·4회 채택', '음성 없는 오리지널 미니멀 음악·전환 사운드'], createdAt: '2026-08-06',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v1-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-15s-v1-with-music.mp4',
+    summary: '행동 서사는 통과했지만 정면 transparent-main 제품이 평면적인 흰 플라스틱처럼 보여 제품 사실감 목표에 미달한 V1.',
+    issues: ['사용자 평가: 상품 이미지가 완전히 가짜처럼 보임', '제품 누끼의 병 투명도·펌프 재질·환경광 부족', '제품과 배경의 선명도 차이', '프로그램 음악은 사용자 후반 가공을 위해 제거 필요', '실제품 재질 통합 무음 V2로 대체'], createdAt: '2026-08-06',
   },
   {
     id: 'TV-S01', scene: 'TV 01 · DECISION', title: '크림 앞에서 손이 멈추는 선택 순간', status: 'selected', model: 'Seedance 2.0 Standard · 1080p High Bitrate', duration: '4초', creditCost: '36 credits',
