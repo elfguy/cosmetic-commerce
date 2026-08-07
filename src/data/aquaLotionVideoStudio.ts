@@ -166,12 +166,20 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-TV-STORY-15S-V6-BENCHMARKED', scene: 'A 모델 15초', title: '공식 광고 벤치마크 타이포 · GPT 팩샷 · 무음 V6', status: 'review',
+    id: 'A-TV-STORY-15S-V7-WHITE', scene: 'A 모델 15초', title: '원본 배경 · 흰색 직접 자막 · 무음 V7', status: 'review',
+    model: 'Seedance 2.0 Standard 배우컷 + ChatGPT Images 제품 팩샷 + Pretendard 흰색 타이포', duration: '15초 · 오디오 없음', creditCost: '0 credits · V6 배경 scrim 제거 및 자막 색상만 수정',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v7-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v7-silent.mp4',
+    summary: '사용자 지시대로 영상과 팩샷 배경은 변경하지 않고 모든 자막을 흰색으로 통일. 카드·박스·스크림·색상 포인트 없이 약한 중성 그림자만 적용한 무음 검토본.',
+    issues: ['최종 MP4 12프레임 QA PASS · 사용자 검토 대기', '배경 tonal scrim·그라데이션·색보정 추가 0개', '모든 모델 자막과 엔드 카피 Pretendard 흰색', '가독성용 4px Gaussian 중성 그림자만 적용', '카드·박스·필·테두리·버튼·색상 포인트 0개', '한 화면 한 문장 · 0.5초 이내 완전 표시', '얼굴·손·제품 가림과 한글 잘림 없음', '8–11.2초 결과 장면 무자막 유지', 'GPT 제품 팩샷·0.48초 디졸브·오디오 스트림 0개 유지', '추가 생성 및 크레딧 없음'], createdAt: '2026-08-07',
+  },
+  {
+    id: 'A-TV-STORY-15S-V6-BENCHMARKED', scene: 'A 모델 15초', title: '공식 광고 벤치마크 타이포 · GPT 팩샷 · 무음 V6', status: 'rejected',
     model: 'Seedance 2.0 Standard 배우컷 + ChatGPT Images 제품 팩샷 + Pretendard 직접 타이포', duration: '15초 · 오디오 없음', creditCost: '0 credits · 공식 광고 리서치 후 V5 타이포 재설계',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v6-poster.jpg',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v6-silent.mp4',
-    summary: '라운드랩·설화수·에스트라·라네즈 공식 광고를 프레임 단위로 비교하고, V5의 둥근 프로스트 UI를 제거. 경계 없는 tonal scrim과 Pretendard 직접 타이포만 남긴 무음 검토본.',
-    issues: ['최종 MP4 12프레임 QA PASS · 사용자 검토 대기', '공식 벤치마크: 라운드랩 독도 토너 31초 / 설화수 윤조에센스 15초 / 에스트라 진심은 피부로 느낀다 / 라네즈 easy hydration / 토리든 DEEP DIVE NEWS 15초', '둥근 카드·필·테두리·버튼 0개', 'Pretendard SemiBold 72px 직접 타이포 · 엔드 84/38px', '밝은 장면은 경계 없는 아이보리 tonal scrim, 도포 장면은 딥틸 하단 scrim', '한 화면 한 문장 · 장면 전환 후 0.5초 이내 완전 표시', '얼굴·손·제품 가림과 한글 잘림 없음', '8–11.2초 결과 장면 무자막 유지', 'GPT 제품 팩샷·0.48초 디졸브·오디오 스트림 0개 유지', '추가 생성 및 크레딧 없음'], createdAt: '2026-08-07',
+    summary: '공식 광고 문법을 반영한 직접 타이포였지만 사용자 요청에 따라 배경 tonal scrim을 제거하고 흰색 자막만 사용하는 V7로 대체.',
+    issues: ['사용자 지시: 배경을 변경하지 말고 흰색으로만', '아이보리/딥틸 tonal scrim이 원본 배경 명도를 바꿈', '장면·제품·Pretendard 타이포 구조는 유지', '배경 무변경·흰색 직접 자막 V7로 대체'], createdAt: '2026-08-07',
   },
   {
     id: 'A-TV-STORY-15S-V5-CAPTIONS', scene: 'A 모델 15초', title: '고가독성 프로스트 자막 · GPT 팩샷 · 무음 V5', status: 'rejected',
