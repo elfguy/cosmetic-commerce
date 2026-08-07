@@ -166,12 +166,20 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-TV-STORY-15S-V4-GPT', scene: 'A 모델 15초', title: 'GPT Images 팩샷 · 미니멀 자막 · 무음 V4', status: 'review',
+    id: 'A-TV-STORY-15S-V5-CAPTIONS', scene: 'A 모델 15초', title: '고가독성 프로스트 자막 · GPT 팩샷 · 무음 V5', status: 'review',
+    model: 'Seedance 2.0 Standard 배우컷 + ChatGPT Images 2.0 제품 팩샷 + 고대비 프로스트 타이포', duration: '15초 · 오디오 없음', creditCost: '0 credits · V4 자막만 후반 개선',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v5-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v5-silent.mp4',
+    summary: 'V4 영상과 GPT 제품 팩샷은 유지하고 자막 크기·대비·페이드 속도만 개선. 문장 크기에 맞춘 프로스트 플레이트로 모든 배경에서 즉시 읽히는 무음 검토본.',
+    issues: ['최종 MP4 12프레임 QA PASS · 사용자 검토 대기', '모델 자막 74px · 아이보리/딥틸 고대비 프로스트 플레이트', '자막 페이드인 0.22–0.25초 · 장면 전환 후 약 0.5초 이내 완전 표시', '한글 잘림·오타·화면 밖 넘침 없음', '얼굴·손·제품 가림 없음', '결과 장면 8–11.2초 무자막 유지', '엔드 제목 82px·정보 38px + 70% 화이트 글라스 플레이트', 'GPT Images 제품 팩샷과 0.48초 디졸브 유지', '오디오 스트림 0개 · 추가 생성/크레딧 없음'], createdAt: '2026-08-07',
+  },
+  {
+    id: 'A-TV-STORY-15S-V4-GPT', scene: 'A 모델 15초', title: 'GPT Images 팩샷 · 미니멀 자막 · 무음 V4', status: 'rejected',
     model: 'Seedance 2.0 Standard 배우컷 + ChatGPT Images 2.0 제품 잠금 팩샷 + 후반 한글 타이포', duration: '15초 · 오디오 없음', creditCost: '0 Higgsfield credits · ChatGPT 구독 이미지 생성',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v4-poster.jpg',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v4-silent.mp4',
-    summary: '모델 화면 제품 합성은 0회로 유지하고 마지막 3.8초를 GPT Images 제품 잠금 팩샷으로 교체. 자막은 한 줄 3개와 최소 엔드 카피만 남긴 무음 검토본.',
-    issues: ['최종 시간순 12프레임 QA PASS · 사용자 검토 대기', 'ChatGPT Images 시작 URL /images/ · 실제 제품 원본 첨부 칩과 신규 estuary ID 검증 후 생성', 'GPT 팩샷 941×1672 · 흰 펌프·칼라·반투명 병·YOURSKIN+ 라벨·300ml/10.14 fl.oz 보존', '0–11.2초 모델 화면 제품 합성 0회', '크림은 무겁고 / 토너만으로는 아쉬울 때 / 가볍게 한 번 더 한 줄 자막', '선·박스·CTA 버튼·중복 영문 제거', '8–11.2초 결과 장면 무자막', '11.2초부터 GPT 팩샷으로 0.48초 디졸브', '오디오 스트림 0개 · 추가 Higgsfield 생성 없음'], createdAt: '2026-08-07',
+    summary: 'GPT 팩샷과 미니멀 자막 방향은 승인됐지만 자막이 밝은 욕실 배경에서 잘 보이지 않는다는 사용자 평가로 V5에서 가독성을 강화.',
+    issues: ['사용자 평가: 많이 좋아졌지만 자막이 잘 안 보임', '얇은 68px 글자와 배경판 없는 구간의 대비 부족', '제품 팩샷·장면 구조·무음은 유지', '74px 프로스트 플레이트 자막 V5로 대체'], createdAt: '2026-08-07',
   },
   {
     id: 'A-TV-STORY-15S-V3', scene: 'A 모델 15초', title: '합성 제거 · 고대비 타이포 · 무음 V3', status: 'rejected',
