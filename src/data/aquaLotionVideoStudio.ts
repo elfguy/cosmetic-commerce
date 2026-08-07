@@ -166,12 +166,20 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-TV-STORY-15S-V3', scene: 'A 모델 15초', title: '합성 제거 · 고대비 타이포 · 무음 V3', status: 'review',
+    id: 'A-TV-STORY-15S-V4-GPT', scene: 'A 모델 15초', title: 'GPT Images 팩샷 · 미니멀 자막 · 무음 V4', status: 'review',
+    model: 'Seedance 2.0 Standard 배우컷 + ChatGPT Images 2.0 제품 잠금 팩샷 + 후반 한글 타이포', duration: '15초 · 오디오 없음', creditCost: '0 Higgsfield credits · ChatGPT 구독 이미지 생성',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v4-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v4-silent.mp4',
+    summary: '모델 화면 제품 합성은 0회로 유지하고 마지막 3.8초를 GPT Images 제품 잠금 팩샷으로 교체. 자막은 한 줄 3개와 최소 엔드 카피만 남긴 무음 검토본.',
+    issues: ['최종 시간순 12프레임 QA PASS · 사용자 검토 대기', 'ChatGPT Images 시작 URL /images/ · 실제 제품 원본 첨부 칩과 신규 estuary ID 검증 후 생성', 'GPT 팩샷 941×1672 · 흰 펌프·칼라·반투명 병·YOURSKIN+ 라벨·300ml/10.14 fl.oz 보존', '0–11.2초 모델 화면 제품 합성 0회', '크림은 무겁고 / 토너만으로는 아쉬울 때 / 가볍게 한 번 더 한 줄 자막', '선·박스·CTA 버튼·중복 영문 제거', '8–11.2초 결과 장면 무자막', '11.2초부터 GPT 팩샷으로 0.48초 디졸브', '오디오 스트림 0개 · 추가 Higgsfield 생성 없음'], createdAt: '2026-08-07',
+  },
+  {
+    id: 'A-TV-STORY-15S-V3', scene: 'A 모델 15초', title: '합성 제거 · 고대비 타이포 · 무음 V3', status: 'rejected',
     model: 'Seedance 2.0 Standard 배우컷 + 모델 장면 무제품 + 실제 제품 전용 아크릴 팩샷', duration: '15초 · 오디오 없음', creditCost: '0 credits · 기존 고급 장면 재편집',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v3-poster.jpg',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v3-silent.mp4',
-    summary: '모델 영상의 어색한 제품 합성을 전부 제거하고, 큰 두 줄 헤드라인과 창가 결과 뒤 전용 아크릴 제품 팩샷만 남긴 최종 무음 검토본.',
-    issues: ['최종 내부 QA PASS · 사용자 검토 대기', '0–11.2초 모델 화면 제품 합성 0회', '크림은 무겁고→토너만으론 아쉬울 때→가볍게 한 번 더 고대비 대형 타이포', '창가 결과에서 전용 팩샷으로 0.42초 디졸브', '실제 제품은 마지막 3.8초에만 등장하고 아크릴 상판에 접지', '모델 얼굴·화이트 글라스 패널·CTA 버튼 제거', '오디오 스트림 0개 · 추가 Higgsfield 생성 없음'], createdAt: '2026-08-06',
+    summary: '모델 장면 합성은 제거했지만 로컬 아크릴 팩샷과 두 줄 대형 자막이 여전히 어색하다는 사용자 평가로 GPT Images V4로 대체.',
+    issues: ['사용자 평가: 마지막 상품 이미지가 너무 어색함', '대형 두 줄 헤드라인과 장식선이 TV 광고보다 템플릿형 자막처럼 보임', '제품 팩샷을 ChatGPT Images 제품 잠금 결과로 교체', '한 줄 미니멀 타이포와 무자막 결과 구간을 적용한 V4로 대체'], createdAt: '2026-08-06',
   },
   {
     id: 'A-TV-STORY-15S-PRODUCT-V2', scene: 'A 모델 15초', title: '실제품 재질 통합 · 무음 TV 스타일 광고 · V2', status: 'rejected',
