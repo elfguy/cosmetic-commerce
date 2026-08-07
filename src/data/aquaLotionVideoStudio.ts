@@ -166,12 +166,20 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-TV-STORY-15S-V8-GPT-HERO', scene: 'A 모델 15초', title: '강화 흰색 타이포 · GPT 물빛 팩샷 · 무음 V8', status: 'review',
+    id: 'A-TV-STORY-15S-V9-EXACT-SKU', scene: 'A 모델 15초', title: '실제 SKU 비율 · GPT 물빛 배경 · 무음 V9', status: 'review',
+    model: 'Seedance 2.0 배우컷 + ChatGPT Images background-only + 실제 판매 제품 PNG 원본 픽셀 + Pretendard Bold', duration: '15초 · 오디오 없음', creditCost: '0 Higgsfield credits · ChatGPT 배경 생성 및 로컬 정밀 합성',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v9-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v9-silent.mp4',
+    summary: 'V8의 배우 장면·강화 흰 자막은 유지. 마지막 제품이 길고 주변과 분리돼 보인다는 피드백을 반영해 GPT Images에는 제품 없는 물·유리 배경만 생성시키고 실제 판매 제품 투명 PNG를 원본 비율 40.4%로 합성했다.',
+    issues: ['최종 MP4 12프레임 QA PASS · 사용자 검토 대기', 'V8 대비 제품 높이 20% 이상 축소 · 세로 압축 없이 균일 스케일', '실제 판매 제품 RGBA 2845×4096 · bbox 1070×3021 픽셀 직접 사용', '흰 펌프·칼라·실제 병 비율·YOURSKIN+ 라벨·300ml/10.14 fl.oz 보존', 'GPT Images background-only 신규 ID 검증 · 제품/유령 실루엣 없음', '제품 프레임 높이 40.4% · 플랫폼 접지점 정량 배치', '쿨 앰비언트·약한 아쿠아 림광·접촉 그림자·반사·리플 후반 통합', 'V8의 강한 림광 대비 halo 60% 이상 감소', '11.6초 디졸브와 14.4초 완전 표시 QA', '큰 흰 카피 104px/46px 및 배우 자막 유지', '오디오 스트림 0개 · 추가 Higgsfield 크레딧 없음'], createdAt: '2026-08-07',
+  },
+  {
+    id: 'A-TV-STORY-15S-V8-GPT-HERO', scene: 'A 모델 15초', title: '강화 흰색 타이포 · GPT 물빛 팩샷 · 무음 V8', status: 'rejected',
     model: 'Seedance 2.0 Standard 배우컷 + ChatGPT Images 제품 잠금 V3 팩샷 + Pretendard Bold 흰색 타이포', duration: '15초 · 오디오 없음', creditCost: '0 Higgsfield credits · ChatGPT 구독 이미지 생성 및 후반 수정',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v8-poster.jpg',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v8-silent.mp4',
-    summary: 'V7의 원본 배경·흰색 직접 타이포 방향은 유지하고 주목도를 강화. 마지막 3.8초는 실제 제품 원본과 기존 팩샷을 참조해 GPT Images에서 물·유리·젤 하단 연출을 새로 생성하고 엔드 카피를 확대.',
-    issues: ['최종 MP4 12프레임 QA PASS · 사용자 검토 대기', '짧은 모델 자막 Pretendard Bold 80px · 긴 context 72px', '흰색 직접 자막과 약한 중성 그림자만 사용 · 배경 변경/카드/스크림 0개', '엔드 제목 104px · 검증 정보 46px', 'GPT Images 신규 팩샷 V3 941×1672 · 신규 estuary ID와 생성 SHA 검증', 'GPT 최초 V2는 병이 넓고 라벨이 과대해 폐기, same-chat 제품 교정 V3만 채택', '흰 펌프·칼라·길고 좁은 반투명 병·YOURSKIN+ 라벨·300ml/10.14 fl.oz 보존', '하단 물결·유리 굴절·젤 드롭으로 제품 팩샷 깊이 강화', '얼굴·손·제품 가림과 한글 잘림 없음', 'GPT 팩샷 0.48초 디졸브·오디오 스트림 0개 유지', '추가 Higgsfield 생성 및 크레딧 없음'], createdAt: '2026-08-07',
+    summary: 'V7 기반 자막·하단 물빛 연출 강화본. 사용자가 마지막 제품이 너무 길고 주변과 잘 어울리지 않는다고 평가해 실제 제품 원본 비율 기반 V9으로 대체.',
+    issues: ['사용자 피드백: 마지막 제품이 너무 길게 보임', '사용자 피드백: 제품과 주변 물·유리 배경 통합감 부족', 'GPT 제품 자체 생성은 비율과 라벨 drift가 반복돼 중단', 'V9에서 GPT background-only + 실제 판매 제품 PNG 원본 픽셀 합성으로 교정', 'V8의 배우 장면·강화 흰 자막은 V9에 유지'], createdAt: '2026-08-07',
   },
   {
     id: 'A-TV-STORY-15S-V7-WHITE', scene: 'A 모델 15초', title: '원본 배경 · 흰색 직접 자막 · 무음 V7', status: 'rejected',
