@@ -166,12 +166,20 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-TV-STORY-15S-V7-WHITE', scene: 'A 모델 15초', title: '원본 배경 · 흰색 직접 자막 · 무음 V7', status: 'review',
+    id: 'A-TV-STORY-15S-V8-GPT-HERO', scene: 'A 모델 15초', title: '강화 흰색 타이포 · GPT 물빛 팩샷 · 무음 V8', status: 'review',
+    model: 'Seedance 2.0 Standard 배우컷 + ChatGPT Images 제품 잠금 V3 팩샷 + Pretendard Bold 흰색 타이포', duration: '15초 · 오디오 없음', creditCost: '0 Higgsfield credits · ChatGPT 구독 이미지 생성 및 후반 수정',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v8-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v8-silent.mp4',
+    summary: 'V7의 원본 배경·흰색 직접 타이포 방향은 유지하고 주목도를 강화. 마지막 3.8초는 실제 제품 원본과 기존 팩샷을 참조해 GPT Images에서 물·유리·젤 하단 연출을 새로 생성하고 엔드 카피를 확대.',
+    issues: ['최종 MP4 12프레임 QA PASS · 사용자 검토 대기', '짧은 모델 자막 Pretendard Bold 80px · 긴 context 72px', '흰색 직접 자막과 약한 중성 그림자만 사용 · 배경 변경/카드/스크림 0개', '엔드 제목 104px · 검증 정보 46px', 'GPT Images 신규 팩샷 V3 941×1672 · 신규 estuary ID와 생성 SHA 검증', 'GPT 최초 V2는 병이 넓고 라벨이 과대해 폐기, same-chat 제품 교정 V3만 채택', '흰 펌프·칼라·길고 좁은 반투명 병·YOURSKIN+ 라벨·300ml/10.14 fl.oz 보존', '하단 물결·유리 굴절·젤 드롭으로 제품 팩샷 깊이 강화', '얼굴·손·제품 가림과 한글 잘림 없음', 'GPT 팩샷 0.48초 디졸브·오디오 스트림 0개 유지', '추가 Higgsfield 생성 및 크레딧 없음'], createdAt: '2026-08-07',
+  },
+  {
+    id: 'A-TV-STORY-15S-V7-WHITE', scene: 'A 모델 15초', title: '원본 배경 · 흰색 직접 자막 · 무음 V7', status: 'rejected',
     model: 'Seedance 2.0 Standard 배우컷 + ChatGPT Images 제품 팩샷 + Pretendard 흰색 타이포', duration: '15초 · 오디오 없음', creditCost: '0 credits · V6 배경 scrim 제거 및 자막 색상만 수정',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v7-poster.jpg',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v7-silent.mp4',
-    summary: '사용자 지시대로 영상과 팩샷 배경은 변경하지 않고 모든 자막을 흰색으로 통일. 카드·박스·스크림·색상 포인트 없이 약한 중성 그림자만 적용한 무음 검토본.',
-    issues: ['최종 MP4 12프레임 QA PASS · 사용자 검토 대기', '배경 tonal scrim·그라데이션·색보정 추가 0개', '모든 모델 자막과 엔드 카피 Pretendard 흰색', '가독성용 4px Gaussian 중성 그림자만 적용', '카드·박스·필·테두리·버튼·색상 포인트 0개', '한 화면 한 문장 · 0.5초 이내 완전 표시', '얼굴·손·제품 가림과 한글 잘림 없음', '8–11.2초 결과 장면 무자막 유지', 'GPT 제품 팩샷·0.48초 디졸브·오디오 스트림 0개 유지', '추가 생성 및 크레딧 없음'], createdAt: '2026-08-07',
+    summary: '사용자가 가장 낫다고 평가한 원본 배경·흰색 직접 자막 방향. 주목도와 엔드 제품 글자 크기, 하단 팩샷 연출을 강화한 V8로 대체.',
+    issues: ['사용자 평가: 제일 나은 것 같음', '추가 요청: 자막을 조금 더 눈에 띄게', '추가 요청: 마지막 제품 글씨 확대', '추가 요청: 심심한 하단 이미지를 GPT Images로 강화', 'V8에서 배경·흰색 방향은 유지하고 Bold 타이포와 신규 물빛 팩샷 적용'], createdAt: '2026-08-07',
   },
   {
     id: 'A-TV-STORY-15S-V6-BENCHMARKED', scene: 'A 모델 15초', title: '공식 광고 벤치마크 타이포 · GPT 팩샷 · 무음 V6', status: 'rejected',
