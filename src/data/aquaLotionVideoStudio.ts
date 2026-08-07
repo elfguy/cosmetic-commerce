@@ -166,12 +166,20 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-TV-STORY-15S-PRODUCT-V2', scene: 'A 모델 15초', title: '실제품 재질 통합 · 무음 TV 스타일 광고', status: 'review',
+    id: 'A-TV-STORY-15S-V3', scene: 'A 모델 15초', title: '합성 제거 · 고대비 타이포 · 무음 V3', status: 'review',
+    model: 'Seedance 2.0 Standard 배우컷 + 모델 장면 무제품 + 실제 제품 전용 아크릴 팩샷', duration: '15초 · 오디오 없음', creditCost: '0 credits · 기존 고급 장면 재편집',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v3-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v3-silent.mp4',
+    summary: '모델 영상의 어색한 제품 합성을 전부 제거하고, 큰 두 줄 헤드라인과 창가 결과 뒤 전용 아크릴 제품 팩샷만 남긴 최종 무음 검토본.',
+    issues: ['최종 내부 QA PASS · 사용자 검토 대기', '0–11.2초 모델 화면 제품 합성 0회', '크림은 무겁고→토너만으론 아쉬울 때→가볍게 한 번 더 고대비 대형 타이포', '창가 결과에서 전용 팩샷으로 0.42초 디졸브', '실제 제품은 마지막 3.8초에만 등장하고 아크릴 상판에 접지', '모델 얼굴·화이트 글라스 패널·CTA 버튼 제거', '오디오 스트림 0개 · 추가 Higgsfield 생성 없음'], createdAt: '2026-08-06',
+  },
+  {
+    id: 'A-TV-STORY-15S-PRODUCT-V2', scene: 'A 모델 15초', title: '실제품 재질 통합 · 무음 TV 스타일 광고 · V2', status: 'rejected',
     model: 'Seedance 2.0 Standard 배우컷 + 실제 pump-closeup 제품 원본 + 창광·접지 후반 합성', duration: '15초 · 오디오 없음', creditCost: '0 credits · 기존 고급 장면 재합성',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-product-v2-poster.jpg',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-15s-product-v2-silent.mp4',
-    summary: '평면적인 기존 제품 누끼를 반투명 병 재질이 살아 있는 실제 제품 알파 원본으로 교체하고, 같은 욕실의 창광·심도·대리석 접지·약한 반사에 맞춘 최종 무음 검토본.',
-    issues: ['최종 내부 QA PASS · 사용자 검토 대기', '흰 펌프·흰 나사 칼라·반투명 병·내부 흰 로션·실제 라벨 보존', '선택·투샷·엔드 히어로 모두 실제 대리석 접점에 고정', '라벨 보호 후 좌측 창광 방향의 펌프·병 명암만 미세 재조명', '오디오 스트림 0개 · 배경 음악 후반 작업용 무음본', '추가 Higgsfield 생성 없음'], createdAt: '2026-08-06',
+    summary: '제품 재질은 개선됐지만 모델 영상에 제품을 합성한 장면과 마지막 모델·제품·화이트 패널 구성이 여전히 어색해 V3로 대체.',
+    issues: ['사용자 평가: 상품 이미지 합성과 마지막 이미지가 너무 어색함', '작은 텍스트가 배경에 묻혀 주목도 부족', '모델과 제품의 초점·공간 관계가 후반 합성처럼 보임', '마지막 화이트 패널과 CTA 버튼의 정보 위계가 어색함', '모델 장면 합성 제거·고대비 타이포 V3로 대체'], createdAt: '2026-08-06',
   },
   {
     id: 'A-TV-STORY-15S', scene: 'A 모델 15초', title: '행동 인과형 TV 스타일 광고 · V1', status: 'rejected',
