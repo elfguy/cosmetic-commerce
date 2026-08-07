@@ -166,12 +166,20 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-TV-STORY-15S-V5-CAPTIONS', scene: 'A 모델 15초', title: '고가독성 프로스트 자막 · GPT 팩샷 · 무음 V5', status: 'review',
+    id: 'A-TV-STORY-15S-V6-BENCHMARKED', scene: 'A 모델 15초', title: '공식 광고 벤치마크 타이포 · GPT 팩샷 · 무음 V6', status: 'review',
+    model: 'Seedance 2.0 Standard 배우컷 + ChatGPT Images 제품 팩샷 + Pretendard 직접 타이포', duration: '15초 · 오디오 없음', creditCost: '0 credits · 공식 광고 리서치 후 V5 타이포 재설계',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v6-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v6-silent.mp4',
+    summary: '라운드랩·설화수·에스트라·라네즈 공식 광고를 프레임 단위로 비교하고, V5의 둥근 프로스트 UI를 제거. 경계 없는 tonal scrim과 Pretendard 직접 타이포만 남긴 무음 검토본.',
+    issues: ['최종 MP4 12프레임 QA PASS · 사용자 검토 대기', '공식 벤치마크: 라운드랩 독도 토너 31초 / 설화수 윤조에센스 15초 / 에스트라 진심은 피부로 느낀다 / 라네즈 easy hydration / 토리든 DEEP DIVE NEWS 15초', '둥근 카드·필·테두리·버튼 0개', 'Pretendard SemiBold 72px 직접 타이포 · 엔드 84/38px', '밝은 장면은 경계 없는 아이보리 tonal scrim, 도포 장면은 딥틸 하단 scrim', '한 화면 한 문장 · 장면 전환 후 0.5초 이내 완전 표시', '얼굴·손·제품 가림과 한글 잘림 없음', '8–11.2초 결과 장면 무자막 유지', 'GPT 제품 팩샷·0.48초 디졸브·오디오 스트림 0개 유지', '추가 생성 및 크레딧 없음'], createdAt: '2026-08-07',
+  },
+  {
+    id: 'A-TV-STORY-15S-V5-CAPTIONS', scene: 'A 모델 15초', title: '고가독성 프로스트 자막 · GPT 팩샷 · 무음 V5', status: 'rejected',
     model: 'Seedance 2.0 Standard 배우컷 + ChatGPT Images 2.0 제품 팩샷 + 고대비 프로스트 타이포', duration: '15초 · 오디오 없음', creditCost: '0 credits · V4 자막만 후반 개선',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v5-poster.jpg',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v5-silent.mp4',
-    summary: 'V4 영상과 GPT 제품 팩샷은 유지하고 자막 크기·대비·페이드 속도만 개선. 문장 크기에 맞춘 프로스트 플레이트로 모든 배경에서 즉시 읽히는 무음 검토본.',
-    issues: ['최종 MP4 12프레임 QA PASS · 사용자 검토 대기', '모델 자막 74px · 아이보리/딥틸 고대비 프로스트 플레이트', '자막 페이드인 0.22–0.25초 · 장면 전환 후 약 0.5초 이내 완전 표시', '한글 잘림·오타·화면 밖 넘침 없음', '얼굴·손·제품 가림 없음', '결과 장면 8–11.2초 무자막 유지', '엔드 제목 82px·정보 38px + 70% 화이트 글라스 플레이트', 'GPT Images 제품 팩샷과 0.48초 디졸브 유지', '오디오 스트림 0개 · 추가 생성/크레딧 없음'], createdAt: '2026-08-07',
+    summary: '가독성은 개선됐지만 둥근 프로스트 플레이트가 쇼핑앱 UI처럼 보여 촌스럽다는 사용자 평가로 공식 광고 벤치마크 V6로 대체.',
+    issues: ['사용자 평가: 너무 촌스러움', '둥근 아이보리/딥틸 카드와 엔드 글라스 패널이 화장품 광고보다 UI 배너처럼 보임', '공식 브랜드 광고는 박스보다 네거티브 스페이스와 직접 타이포를 사용', 'Pretendard + 경계 없는 tonal scrim V6로 대체'], createdAt: '2026-08-07',
   },
   {
     id: 'A-TV-STORY-15S-V4-GPT', scene: 'A 모델 15초', title: 'GPT Images 팩샷 · 미니멀 자막 · 무음 V4', status: 'rejected',
