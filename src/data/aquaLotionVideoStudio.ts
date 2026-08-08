@@ -166,11 +166,19 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-TV-STORY-15S-V13-MODEL-IMAGE-VOICE', scene: 'A 모델 15초', title: '모델 얼굴 기반 한국어 보이스 캐스팅 · Seed Audio V13', status: 'review',
+    id: 'A-TV-STORY-15S-V15-HUMAN-QWEN-HANA', scene: 'A 모델 15초', title: '사람처럼 말하는 Hana 한국어 보이스 · V15', status: 'review',
+    model: 'V10 GPT 제품 잠금 영상 + Kie Suno V5.5 오리지널 음악 + Qwen Audio 3.0 TTS Hana 한국어 표현 지시', duration: '15초 · 자연 호흡 한국어 나레이션', creditCost: '약 0.17 Higgsfield credits · 기존 Kie 음악 유지',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v15-human-qwen-hana-short-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v15-human-qwen-hana-short.mp4',
+    summary: 'V13도 기계처럼 들린다는 사용자 피드백을 반영해 이미지 음색 유도보다 발화 방식 제어를 우선. Qwen Audio 3.0의 young female Hana 보이스에 서울 표준어·친구에게 말하는 작은 미소·자연 호흡·문장별 강약 변화·성우톤/일정 박자 금지를 직접 지시했다. 기술 정보를 화면에 맡기고 실제 사람이 한 호흡으로 말할 수 있는 짧은 대본을 채택했다.',
+    issues: ['사용자 평가 우선: Seed Audio V13도 기계적으로 들려 폐기', 'Qwen Audio 3.0 TTS · language=ko · Hana young female preset', '최종 job fb3abbde-c240-4501-ab3d-5299a9344251', '두 가지 스타일/시드를 비교하고 친구 톤의 자연 호흡 구조를 채택', '대본을 12.76초로 축약하고 포스트 속도 조절 없음', '나레이션: 토너만으론 조금 아쉬운 날 / 가볍게 한 번 더 덧발라 보세요 / 여덟 가지 히알루론산에 무향 설계', '제품명·브랜드·300ml 펌프형은 화면 자막과 엔드 로고에 맡김', '0.2–0.48초의 자연 휴지가 문장 안에 분포', 'Qwen Hana F0 표준편차 55.7Hz · IQR 80.4Hz로 Seed V13보다 피치 변화 확대', 'Whisper 최종 음악 믹스에서 전체 문장 식별', '최종 MP4 H.264 1080×1920 · AAC 48kHz · 15.000초', '최종 통합 음량 -15.5 LUFS · True Peak -4.4dBFS', '음성 약 13초 종료 · 마지막 약 2초 음악/제품 여운'], createdAt: '2026-08-08',
+  },
+  {
+    id: 'A-TV-STORY-15S-V13-MODEL-IMAGE-VOICE', scene: 'A 모델 15초', title: '모델 얼굴 기반 한국어 보이스 캐스팅 · Seed Audio V13', status: 'rejected',
     model: 'V10 GPT 제품 잠금 영상 + Kie Suno V5.5 오리지널 음악 + ByteDance Seed Audio 1.0 모델 이미지 보이스 큐', duration: '15초 · 모델 이미지 기반 한국어 나레이션', creditCost: '1.4 Higgsfield credits · 기존 Kie 음악 유지',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v13-model-image-seed-voice-poster.jpg',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v13-model-image-seed-voice.mp4',
-    summary: '모델이 직접 낼 것 같은 예쁜 목소리 요청을 반영해 해외 이름 프리셋 캐스팅을 중단. 배우 결과 장면의 얼굴 이미지를 Seed Audio 1.0 image_references로 전달해 인물의 나이대·맑은 인상·차분한 뷰티 무드에 맞는 음성을 생성했다. 구어체 대본으로 줄이고 생성 속도를 그대로 사용했다.',
+    summary: '모델 이미지로 음색은 개선했지만 사용자가 여전히 기계처럼 들린다고 판정해 폐기. 문장 리듬·자연 호흡·강약 변화를 직접 제어한 Qwen Hana V15로 교체했다.',
     issues: ['사용자 요청: 모델이 낼 것 같은 예쁜 목소리로 재캐스팅', '리서치 결과 Seed Audio 1.0의 image_references 보이스 큐 채택', '레퍼런스: A 모델 창가 결과 장면 720×1280 얼굴 클로즈업', 'Seed Audio job a4b46392-3637-4b54-b216-8e3985cdbfea', '긴 16.09초 첫 테이크는 발음만 검증하고 영상에서 제외', '최종 대본을 8.8초 구어체로 축약해 재생 속도 조절 없음', '나레이션: 크림은 무겁고 토너만으로는 아쉬울 때 / 아쿠아 로션으로 가볍게 한 번 더 / 여덟 가지 히알루론산, 무향 설계 / 유어스킨플러스', '300ml 펌프형은 화면 자막으로 유지하고 음성에서 제외', 'Whisper 최종 믹스에서 핵심 문장 전체 식별', '음성 0.3초 시작 · 약 9.1초 종료 · 이후 약 5.9초 음악/제품 여운', '최종 MP4 H.264 1080×1920 · AAC 48kHz · 15.000초', '최종 통합 음량 -16.4 LUFS · True Peak -4.9dBFS', 'Seed Audio 두 번 생성 총 1.4 Higgsfield credits'], createdAt: '2026-08-08',
   },
   {
