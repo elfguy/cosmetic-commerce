@@ -166,11 +166,19 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-TV-STORY-15S-V12-KIE-PRO-VOICE', scene: 'A 모델 15초', title: 'Kie Pro 한국어 나레이션 · 자연 속도 · V12', status: 'review',
+    id: 'A-TV-STORY-15S-V13-MODEL-IMAGE-VOICE', scene: 'A 모델 15초', title: '모델 얼굴 기반 한국어 보이스 캐스팅 · Seed Audio V13', status: 'review',
+    model: 'V10 GPT 제품 잠금 영상 + Kie Suno V5.5 오리지널 음악 + ByteDance Seed Audio 1.0 모델 이미지 보이스 큐', duration: '15초 · 모델 이미지 기반 한국어 나레이션', creditCost: '1.4 Higgsfield credits · 기존 Kie 음악 유지',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v13-model-image-seed-voice-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v13-model-image-seed-voice.mp4',
+    summary: '모델이 직접 낼 것 같은 예쁜 목소리 요청을 반영해 해외 이름 프리셋 캐스팅을 중단. 배우 결과 장면의 얼굴 이미지를 Seed Audio 1.0 image_references로 전달해 인물의 나이대·맑은 인상·차분한 뷰티 무드에 맞는 음성을 생성했다. 구어체 대본으로 줄이고 생성 속도를 그대로 사용했다.',
+    issues: ['사용자 요청: 모델이 낼 것 같은 예쁜 목소리로 재캐스팅', '리서치 결과 Seed Audio 1.0의 image_references 보이스 큐 채택', '레퍼런스: A 모델 창가 결과 장면 720×1280 얼굴 클로즈업', 'Seed Audio job a4b46392-3637-4b54-b216-8e3985cdbfea', '긴 16.09초 첫 테이크는 발음만 검증하고 영상에서 제외', '최종 대본을 8.8초 구어체로 축약해 재생 속도 조절 없음', '나레이션: 크림은 무겁고 토너만으로는 아쉬울 때 / 아쿠아 로션으로 가볍게 한 번 더 / 여덟 가지 히알루론산, 무향 설계 / 유어스킨플러스', '300ml 펌프형은 화면 자막으로 유지하고 음성에서 제외', 'Whisper 최종 믹스에서 핵심 문장 전체 식별', '음성 0.3초 시작 · 약 9.1초 종료 · 이후 약 5.9초 음악/제품 여운', '최종 MP4 H.264 1080×1920 · AAC 48kHz · 15.000초', '최종 통합 음량 -16.4 LUFS · True Peak -4.9dBFS', 'Seed Audio 두 번 생성 총 1.4 Higgsfield credits'], createdAt: '2026-08-08',
+  },
+  {
+    id: 'A-TV-STORY-15S-V12-KIE-PRO-VOICE', scene: 'A 모델 15초', title: 'Kie Pro 한국어 나레이션 · 자연 속도 · V12', status: 'rejected',
     model: 'V10 GPT 제품 잠금 영상 + Kie Suno V5.5 오리지널 음악 + Kie Gemini 2.5 Pro TTS Aoede 여성 음성', duration: '15초 · Kie Pro 한국어 나레이션', creditCost: '0.88 Kie credits 추가 · 음악 기존 자산',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v12-kie-pro-voice-poster.jpg',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v12-kie-pro-voice.mp4',
-    summary: 'V11의 한국어 나레이션이 이상하다는 사용자 피드백을 반영해 Kore Flash 음성을 폐기. Kie Gemini 2.5 Pro TTS의 부드러운 여성 Aoede 음성으로 2개의 자연스러운 테이크를 새로 녹음하고 속도 조절 없이 믹스했다. 기존 Kie Suno 오리지널 음악은 유지했다.',
+    summary: 'Kie Gemini 2.5 Pro Aoede로 개선했지만 모델이 직접 낼 것 같은 목소리 캐스팅 요구를 위해 대체. 배우 얼굴 이미지를 직접 보이스 큐로 사용하는 Seed Audio V13으로 교체했다.',
     issues: ['사용자 평가 우선: V11 Kore Flash 음성 폐기', 'Kie Gemini 2.5 Pro TTS + Aoede 여성 음성으로 교체', '채택 tasks: e5074a2daa1a643bdeaf72b7116f2e61 / 3a14493a4c05d7825a2da4d83c441aa6', '대본을 3테이크에서 2테이크로 축약해 억양 일관성 개선', '15% 속도 증가 제거 · 원래 생성 속도 그대로 사용', '나레이션: 크림은 무겁고, 토너만으로는 아쉬울 때. 가볍게 한 번 더 / 여덟 가지 히알루론산 아쿠아 로션. 무향, 300ml. 유어스킨플러스', '발음이 어색했던 펌프 타입은 음성에서 제외하고 화면 자막으로만 유지', 'Whisper 최종 믹스에서 전체 문장 식별', '실제 음성 종료 11.79초 · 마지막 2.94초 음악 여운', '최종 MP4 H.264 1080×1920 · AAC 48kHz · 15.000초', '최종 통합 음량 -16.9 LUFS · True Peak -3.8dBFS', 'V12 추가 비용 0.88 Kie credits · 잔액 6028.85'], createdAt: '2026-08-08',
   },
   {
