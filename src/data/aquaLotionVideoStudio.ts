@@ -166,12 +166,20 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-TV-STORY-15S-V10-GPT-LOCK', scene: 'A 모델 15초', title: 'GPT 정량 제품 잠금 · 자연광 통합 · 무음 V10', status: 'review',
+    id: 'A-TV-STORY-15S-V11-KIE-AUDIO', scene: 'A 모델 15초', title: 'Kie 오리지널 음악 · 자연스러운 한국어 나레이션 · V11', status: 'review',
+    model: 'V10 GPT 정량 제품 잠금 영상 + Kie Suno V5.5 오리지널 인스트루멘털 + Kie Gemini 3.1 Flash TTS Kore 여성 음성', duration: '15초 · Kie 음악/나레이션', creditCost: '18.27 Kie credits · Higgsfield 0 credits',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v11-kie-audio-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v11-kie-audio.mp4',
+    summary: 'V10 영상에 아티스트·기존 곡 참조 없이 Kie Suno V5.5로 생성한 오리지널 아쿠아 뷰티 인스트루멘털과 Kie Gemini 3.1 Flash TTS Kore 여성 음성을 장면별 3테이크로 녹음해 믹스. 기계적인 TTS 느낌을 줄이고 음악은 음성 구간 자동 덕킹, 마지막 1.46초는 음악 여운으로 마무리했다.',
+    issues: ['최종 MP4 H.264 1080×1920 · AAC 48kHz 스테레오 · 15.000초', 'Kie Suno V5.5 music task defb21cbee138e3e5a9b4cf7fed291a5', '오리지널 instrumental=true · 기존 곡/아티스트/상표 참조 없음', 'Whisper 음악 보컬·말소리 감지 0개', 'Kie Gemini 3.1 Flash TTS · Kore 여성 음성 · 자연스러운 한국어 뷰티 내레이터 프로필', '채택 음성 tasks: 4de9cd911640f6ec51e3ac57dcbacac4 / 0d3fa289a62bdcf51fce705a36867cbb / 16a7ba3766879380bc0b8828590a45ce', '나레이션 3테이크 분리 녹음 및 개별 Whisper 발화 QA', '나레이션: 크림은 무겁고, 토너만으로는 아쉬울 때 / 여덟 가지 히알루론산을 담은 가벼운 아쿠아 로션 / 무향·300ml·펌프 타입·유어스킨 플러스', '음성 -17 LUFS 기반 · 음악 -25 LUFS 기반 · sidechain 자동 덕킹', '최종 통합 음량 -16.5 LUFS · True Peak -4.1dBFS', '실제 음성 종료 13.54초 · 마지막 1.46초 음악 엔드', 'Kie 총 18.27 credits 사용 · 실패/검증 거절 작업은 0 credits', '절대적인 Content ID 무클레임을 보증할 수는 없으나 오리지널 프롬프트·무보컬·비참조 생성으로 저작권 위험 최소화'], createdAt: '2026-08-08',
+  },
+  {
+    id: 'A-TV-STORY-15S-V10-GPT-LOCK', scene: 'A 모델 15초', title: 'GPT 정량 제품 잠금 · 자연광 통합 · 무음 V10', status: 'rejected',
     model: 'Seedance 2.0 배우컷 + ChatGPT Images 제품 원본 2장/배경 참조 + 정량 bbox 제품 잠금 + Pretendard Bold', duration: '15초 · 오디오 없음', creditCost: '0 Higgsfield credits · ChatGPT Images 생성 및 후반 타이포',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v10-poster.jpg',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v10-silent.mp4',
-    summary: 'V9의 합성 티 피드백을 반영해 실제 제품 투명 PNG·실제 펌프 클로즈업·제품 없는 배경을 fresh GPT Images 작업에 첨부. 941×1672 기준 제품 원본 비율 0.3542와 bbox 좌표를 정량 명시해 직접 생성한 4차 후보를 마지막 3.8초에 적용했다.',
-    issues: ['최종 MP4 12프레임 QA PASS · 사용자 검토 대기', '제품 원본 형태 ratio 1070:3021=0.3542를 프롬프트에 정량 명시', '목표 bbox·좌표·접지점을 출력 픽셀 기준으로 지정', '실제 제품 투명 PNG와 실제 펌프 클로즈업을 제품 authority로 첨부', '이전 합성본은 제품 authority에서 제외', 'GPT 1·2차는 제품 drift로 폐기, 3차 이후 정량 교정', '5차 확대본은 제품 과대로 폐기, 균형이 가장 좋은 4차 채택', '흰 펌프·리브 칼라·병 어깨·YOURSKIN+ 라벨·300ml/10.14 fl.oz 유지', 'V9 대비 누끼 halo·색온도·선명도 불일치 개선', '제품·플랫폼 접지·반사·수광·DOF 자연 통합', '큰 흰 카피 104px/46px와 배우 자막 유지', '오디오 스트림 0개 · 추가 Higgsfield 크레딧 없음'], createdAt: '2026-08-08',
+    summary: 'V10 무음 기준본. GPT 정량 제품 잠금과 자연광 통합은 유지한 채 Kie 오리지널 음악·자연스러운 한국어 여성 나레이션을 추가한 V11로 대체.',
+    issues: ['영상·제품·타이포 기준본으로 보존', '사용자 요청에 따라 Kie 음악·나레이션이 포함된 V11로 대체', 'V11에서 영상 스트림은 재인코딩하지 않고 그대로 사용', '오디오 없는 버전이 필요한 경우 V10 자산 사용 가능'], createdAt: '2026-08-08',
   },
   {
     id: 'A-TV-STORY-15S-V9-EXACT-SKU', scene: 'A 모델 15초', title: '실제 SKU 비율 · GPT 물빛 배경 · 무음 V9', status: 'rejected',
