@@ -166,11 +166,19 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-TV-STORY-15S-V11-KIE-AUDIO', scene: 'A 모델 15초', title: 'Kie 오리지널 음악 · 자연스러운 한국어 나레이션 · V11', status: 'review',
+    id: 'A-TV-STORY-15S-V12-KIE-PRO-VOICE', scene: 'A 모델 15초', title: 'Kie Pro 한국어 나레이션 · 자연 속도 · V12', status: 'review',
+    model: 'V10 GPT 제품 잠금 영상 + Kie Suno V5.5 오리지널 음악 + Kie Gemini 2.5 Pro TTS Aoede 여성 음성', duration: '15초 · Kie Pro 한국어 나레이션', creditCost: '0.88 Kie credits 추가 · 음악 기존 자산',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v12-kie-pro-voice-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v12-kie-pro-voice.mp4',
+    summary: 'V11의 한국어 나레이션이 이상하다는 사용자 피드백을 반영해 Kore Flash 음성을 폐기. Kie Gemini 2.5 Pro TTS의 부드러운 여성 Aoede 음성으로 2개의 자연스러운 테이크를 새로 녹음하고 속도 조절 없이 믹스했다. 기존 Kie Suno 오리지널 음악은 유지했다.',
+    issues: ['사용자 평가 우선: V11 Kore Flash 음성 폐기', 'Kie Gemini 2.5 Pro TTS + Aoede 여성 음성으로 교체', '채택 tasks: e5074a2daa1a643bdeaf72b7116f2e61 / 3a14493a4c05d7825a2da4d83c441aa6', '대본을 3테이크에서 2테이크로 축약해 억양 일관성 개선', '15% 속도 증가 제거 · 원래 생성 속도 그대로 사용', '나레이션: 크림은 무겁고, 토너만으로는 아쉬울 때. 가볍게 한 번 더 / 여덟 가지 히알루론산 아쿠아 로션. 무향, 300ml. 유어스킨플러스', '발음이 어색했던 펌프 타입은 음성에서 제외하고 화면 자막으로만 유지', 'Whisper 최종 믹스에서 전체 문장 식별', '실제 음성 종료 11.79초 · 마지막 2.94초 음악 여운', '최종 MP4 H.264 1080×1920 · AAC 48kHz · 15.000초', '최종 통합 음량 -16.9 LUFS · True Peak -3.8dBFS', 'V12 추가 비용 0.88 Kie credits · 잔액 6028.85'], createdAt: '2026-08-08',
+  },
+  {
+    id: 'A-TV-STORY-15S-V11-KIE-AUDIO', scene: 'A 모델 15초', title: 'Kie 오리지널 음악 · 한국어 Kore 음성 · V11', status: 'rejected',
     model: 'V10 GPT 정량 제품 잠금 영상 + Kie Suno V5.5 오리지널 인스트루멘털 + Kie Gemini 3.1 Flash TTS Kore 여성 음성', duration: '15초 · Kie 음악/나레이션', creditCost: '18.27 Kie credits · Higgsfield 0 credits',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v11-kie-audio-poster.jpg',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v11-kie-audio.mp4',
-    summary: 'V10 영상에 아티스트·기존 곡 참조 없이 Kie Suno V5.5로 생성한 오리지널 아쿠아 뷰티 인스트루멘털과 Kie Gemini 3.1 Flash TTS Kore 여성 음성을 장면별 3테이크로 녹음해 믹스. 기계적인 TTS 느낌을 줄이고 음악은 음성 구간 자동 덕킹, 마지막 1.46초는 음악 여운으로 마무리했다.',
+    summary: '사용자 평가에서 한국어 나레이션이 매우 이상하다고 판정되어 폐기. 음악은 유지하고 Kore Flash 음성만 Gemini 2.5 Pro Aoede 자연 속도 음성으로 교체한 V12를 제작했다.',
     issues: ['최종 MP4 H.264 1080×1920 · AAC 48kHz 스테레오 · 15.000초', 'Kie Suno V5.5 music task defb21cbee138e3e5a9b4cf7fed291a5', '오리지널 instrumental=true · 기존 곡/아티스트/상표 참조 없음', 'Whisper 음악 보컬·말소리 감지 0개', 'Kie Gemini 3.1 Flash TTS · Kore 여성 음성 · 자연스러운 한국어 뷰티 내레이터 프로필', '채택 음성 tasks: 4de9cd911640f6ec51e3ac57dcbacac4 / 0d3fa289a62bdcf51fce705a36867cbb / 16a7ba3766879380bc0b8828590a45ce', '나레이션 3테이크 분리 녹음 및 개별 Whisper 발화 QA', '나레이션: 크림은 무겁고, 토너만으로는 아쉬울 때 / 여덟 가지 히알루론산을 담은 가벼운 아쿠아 로션 / 무향·300ml·펌프 타입·유어스킨 플러스', '음성 -17 LUFS 기반 · 음악 -25 LUFS 기반 · sidechain 자동 덕킹', '최종 통합 음량 -16.5 LUFS · True Peak -4.1dBFS', '실제 음성 종료 13.54초 · 마지막 1.46초 음악 엔드', 'Kie 총 18.27 credits 사용 · 실패/검증 거절 작업은 0 credits', '절대적인 Content ID 무클레임을 보증할 수는 없으나 오리지널 프롬프트·무보컬·비참조 생성으로 저작권 위험 최소화'], createdAt: '2026-08-08',
   },
   {
