@@ -166,11 +166,19 @@ export const campaignVideos: CampaignVideo[] = [
 
 export const sceneAttempts: SceneAttempt[] = [
   {
-    id: 'A-TV-STORY-15S-V15-HUMAN-QWEN-HANA', scene: 'A 모델 15초', title: '사람처럼 말하는 Hana 한국어 보이스 · V15', status: 'review',
+    id: 'A-TV-STORY-15S-V18-KSS-NATIVE-FIT', scene: 'A 모델 15초', title: '한국 여성 성우 커스텀 보이스 · 15초 길이 최적화 · V18', status: 'selected',
+    model: 'V10 GPT 정량 제품 잠금 영상 + Kie Suno V5.5 오리지널 음악 + Higgsfield MiniMax + KSS 한국 여성 성우 커스텀 보이스', duration: '15초 · 나레이션 0.25–11.80초 · 제품 엔드 3.2초', creditCost: '40.6 Higgsfield credits · 커스텀 보이스 40 + 길이/발음 TTS 0.6 · 기존 음악 유지',
+    poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v18-kss-native-11s-fit-poster.jpg',
+    videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v18-kss-native-11s-fit.mp4',
+    summary: '사용자 최종 합격본. KSS 한국 전문 여성 성우 공개 데이터로 비상업적 내부 POC 커스텀 보이스를 만들고, 제품명·브랜드처럼 발음이 흔들리는 스펙 낭독을 화면 정보로 분리했다. 자연스러운 생활 대화체 3문장을 11.55초로 편집해 15초 영상 안에 배치하고 제품 엔드 장면 3.2초를 확보했다.',
+    issues: ['사용자 최종 판정: 합격 · 2026-08-10', 'KSS Korean Female POC voice element 2d28dfa8-342f-4ac4-8291-48a6562d71d1', 'MiniMax TTS · 한국 여성 실제 음성 레퍼런스 기반', '나레이션: 토너만 바르고 나면 조금 아쉬운 날 있잖아요 / 그럴 땐 로션을 가볍게 한 번 더 발라 보세요 / 펌프로 필요한 만큼 덜어 피부에 부드럽게 펴 발라 주세요', '제품명·8종 히알루론산·무향 설계·300ml·브랜드는 화면 자막에 유지', '음성 0.25초 시작 · 11.80초 종료 · 제품 엔드 3.2초', '속도·피치 변형 없음', 'Whisper 최종 음악 믹스에서 전체 대본 식별', '최종 MP4 H.264 1080×1920 · AAC 48kHz · 15.000초', '최종 통합 음량 -15.6 LUFS · True Peak -3.8dBFS', 'KSS 라이선스 CC BY-NC-SA 4.0 · 비상업적 내부 승인본만 허용', '쿠팡·광고·상업 공개 전 사용 허락을 받은 한국 여성 녹음으로 보이스 교체 필요'], createdAt: '2026-08-10',
+  },
+  {
+    id: 'A-TV-STORY-15S-V15-HUMAN-QWEN-HANA', scene: 'A 모델 15초', title: '사람처럼 말하는 Hana 한국어 보이스 · V15', status: 'rejected',
     model: 'V10 GPT 제품 잠금 영상 + Kie Suno V5.5 오리지널 음악 + Qwen Audio 3.0 TTS Hana 한국어 표현 지시', duration: '15초 · 자연 호흡 한국어 나레이션', creditCost: '약 0.17 Higgsfield credits · 기존 Kie 음악 유지',
     poster: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v15-human-qwen-hana-short-poster.jpg',
     videoSrc: '/marketing/aqua-lotion-video-studio/revisions/model-a-tv-story/aqua-lotion-a-tv-story-v15-human-qwen-hana-short.mp4',
-    summary: 'V13도 기계처럼 들린다는 사용자 피드백을 반영해 이미지 음색 유도보다 발화 방식 제어를 우선. Qwen Audio 3.0의 young female Hana 보이스에 서울 표준어·친구에게 말하는 작은 미소·자연 호흡·문장별 강약 변화·성우톤/일정 박자 금지를 직접 지시했다. 기술 정보를 화면에 맡기고 실제 사람이 한 호흡으로 말할 수 있는 짧은 대본을 채택했다.',
+    summary: 'Qwen Audio 3.0의 young female Hana 보이스에 자연 호흡과 강약 변화를 지시했지만 사용자가 가장 어색한 기계 음성으로 판정해 폐기. 한국 여성 실제 음성 레퍼런스 기반 MiniMax 커스텀 보이스 V18로 교체했다.',
     issues: ['사용자 평가 우선: Seed Audio V13도 기계적으로 들려 폐기', 'Qwen Audio 3.0 TTS · language=ko · Hana young female preset', '최종 job fb3abbde-c240-4501-ab3d-5299a9344251', '두 가지 스타일/시드를 비교하고 친구 톤의 자연 호흡 구조를 채택', '대본을 12.76초로 축약하고 포스트 속도 조절 없음', '나레이션: 토너만으론 조금 아쉬운 날 / 가볍게 한 번 더 덧발라 보세요 / 여덟 가지 히알루론산에 무향 설계', '제품명·브랜드·300ml 펌프형은 화면 자막과 엔드 로고에 맡김', '0.2–0.48초의 자연 휴지가 문장 안에 분포', 'Qwen Hana F0 표준편차 55.7Hz · IQR 80.4Hz로 Seed V13보다 피치 변화 확대', 'Whisper 최종 음악 믹스에서 전체 문장 식별', '최종 MP4 H.264 1080×1920 · AAC 48kHz · 15.000초', '최종 통합 음량 -15.5 LUFS · True Peak -4.4dBFS', '음성 약 13초 종료 · 마지막 약 2초 음악/제품 여운'], createdAt: '2026-08-08',
   },
   {
