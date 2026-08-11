@@ -162,6 +162,31 @@ export const campaignVideos: CampaignVideo[] = [
       { id: 'S10', time: '27–30초', phase: 'CTA', visual: '모델이 제품을 세면대에 내려놓고 손이 빠져나간다. 움직이는 화면 위 빈 공간에 CTA를 합성한다.', narration: '오늘의 루틴에, 가볍게 한 번 더.', subtitle: '가볍게 한 번 더 · 제품 정보 확인', method: '실제 제품 원본 · 후반 자막', qa: '정적 엔드카드와 생성 한글 금지, CTA 안전 영역 확인' },
     ],
   },
+  {
+    id: 'PDRN-CHARACTER-001', sequence: 2, title: '수분 팀을 불러볼까요?', subtitle: 'PDRN·시카·히알루론산 캐릭터가 이끄는 30초 수분 루틴',
+    status: 'approved', duration: '30초', ratio: '9:16 · 720×1280', objective: '성분 캐릭터의 짧은 이야기와 실제 제품 엔드를 연결하고, 승인된 한국어 여성 음성으로 제품명과 수분 루틴을 자연스럽게 전달',
+    modelLabel: 'PDRN · 시카 · 히알루론산 3D 성분 캐릭터', product: '유어스킨플러스 PDRN 히알루론산 수딩 크림 200ml',
+    hook: '피부가 유난히 메마르게 느껴지는 날, 수분 팀을 불러볼까요?', keyMessage: '세 성분의 수분 진정 포뮬러를 한 통에', cta: '제품 태그에서 확인',
+    narrationScript: '피부가 유난히 메마르게 느껴지는 날, 수분 팀을 불러볼까요? 투명한 DNA 리본의 PDRN, 초록 시카, 맑은 히알루론산이 만났어요. 세 성분의 수분 진정 포뮬러를 한 통에. 필요한 만큼 부드럽게 펴 바르면, 매일 편안한 수분 루틴 완성. PDRN과 수분 팀이 함께하는 유어스킨플러스 PDRN 히알루론산 수딩 크림.',
+    voiceDirection: '최종 승인: Typecast 한국어 여성 체험 보이스 은경 · 16kHz PCM 원음 · 속도/피치 변형 없음 · 무료 플랜 공개 시 Typecast 출처 표기 필수',
+    generation: '9개 캐릭터 장면 30초 조립 · Typecast 은경 정식 WAV · Kie Suno V5.5 오리지널 인스트루멘털 · 고정 -14dB BGM 믹스',
+    creditSummary: '최종 음성 181 Typecast 무료 크레딧 · KSS 탈락 오디션 1.1 Higgsfield 크레딧 · 최종 조립 0 크레딧',
+    poster: '/marketing/pdrn-character-video/pdrn-character-master-v11-poster.jpg',
+    videoSrc: '/marketing/pdrn-character-video/pdrn-character-master-v11-typecast-eunkyung-approved.mp4',
+    masterSrc: '/marketing/pdrn-character-video/pdrn-character-master-v11-typecast-eunkyung-approved.mp4',
+    createdAt: '2026-08-11', updatedAt: '2026-08-11',
+    storyboard: [
+      { id: 'P01', time: '0–3초', phase: 'HOOK', visual: '메마른 피부 상태를 상징하는 캐릭터 장면으로 문제를 제시한다.', narration: '피부가 유난히 메마르게 느껴지는 날,', subtitle: '', method: '캐릭터 애니메이션', qa: '첫 발화 약 1초 시작 · 자막 없이 음성 집중' },
+      { id: 'P02', time: '3–6초', phase: 'CALL', visual: '수분 팀이 등장할 것을 예고하며 장면을 전환한다.', narration: '수분 팀을 불러볼까요?', subtitle: '', method: '캐릭터 애니메이션', qa: '질문형 억양과 3초 장면 전환 일치' },
+      { id: 'P03', time: '6–9초', phase: 'PDRN', visual: '투명한 DNA 리본을 모티프로 한 PDRN 캐릭터가 등장한다.', narration: '투명한 DNA 리본의 PDRN.', subtitle: '', method: '캐릭터 애니메이션', qa: 'PDRN 발음과 리본 모티프 확인' },
+      { id: 'P04', time: '9–12초', phase: 'TEAM', visual: '초록 시카와 맑은 히알루론산 캐릭터가 합류한다.', narration: '초록 시카, 맑은 히알루론산이 만났어요.', subtitle: '', method: '캐릭터 애니메이션', qa: '성분명 누락 없이 장면과 일치' },
+      { id: 'P05', time: '12–15초', phase: 'FORMULA', visual: '세 캐릭터가 한 팀으로 모여 포뮬러 메시지를 만든다.', narration: '세 성분의 수분 진정 포뮬러를 한 통에.', subtitle: '', method: '캐릭터 애니메이션', qa: '의학적 효능 단정 없이 제품 콘셉트로 표현' },
+      { id: 'P06', time: '15–18초', phase: 'USE', visual: '필요한 만큼 덜어 부드럽게 바르는 사용 동작을 보여준다.', narration: '필요한 만큼 부드럽게 펴 바르면,', subtitle: '', method: '캐릭터 애니메이션', qa: '사용법 문구와 동작의 인과 확인' },
+      { id: 'P07', time: '18–21초', phase: 'ROUTINE', visual: '편안한 수분 루틴이 완성되는 밝은 결과 장면.', narration: '매일 편안한 수분 루틴 완성.', subtitle: '', method: '캐릭터 애니메이션', qa: '과장된 개선 전후 표현 없음' },
+      { id: 'P08', time: '21–24초', phase: 'BRAND BRIDGE', visual: 'PDRN과 수분 팀이 제품 엔드로 이어지는 브리지 장면.', narration: 'PDRN과 수분 팀이 함께하는', subtitle: '', method: '캐릭터 애니메이션', qa: '제품명 전 호흡 약 0.55초 확보' },
+      { id: 'P09', time: '24–30초', phase: 'PRODUCT END', visual: '유어스킨플러스 제품명과 수딩 크림 제품 엔드를 크게 보여준다.', narration: '유어스킨플러스 PDRN 히알루론산 수딩 크림.', subtitle: '유어스킨플러스 · PDRN 히알루론산 수딩 크림', method: '제품 엔드 · Typecast 은경 원음', qa: '제품명 약 28.5초 종료 · 30초까지 제품 여운 유지' },
+    ],
+  },
 ];
 
 export const sceneAttempts: SceneAttempt[] = [

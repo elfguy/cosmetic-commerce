@@ -37,6 +37,7 @@
 - `20-monthly-10m-sales-plan.md`: 쿠팡/스마트스토어 기반 월 매출 1,000만원 달성 30일 실행 전략
 - `21-hyaluronic-toner-detail-renewal-plan.md`: 히알루론산 토너 대표이미지/상세페이지 리뉴얼 기획, 신선 출고/자연유래 보습 성분 메시지와 제작 지시서
 - `27-multi-agent-product-detail-image-workflow.md`: 여러 AI 에이전트로 상품 상세이미지를 제작하는 쿠팡/화장품용 워크플로우와 유튜브 리서치 정리
+- `33-pdrn-character-reels-final-20260811.md`: PDRN 히알루론산 수딩 크림 30초 캐릭터 릴스 최종 승인본, Typecast 은경 음성·출처 조건·최종 QA·Instagram 캡션·폐기 이력
 
 ## 디자인 목업
 
@@ -56,6 +57,8 @@
 - `/competitor-comparison`: 쿠팡 인기 유사 상품과 유어스킨플러스 상품의 가격, 리뷰, 월 구매 신호 비교표
 - `/global-sales`: 해외판매 전략 보드. Amazon US K-Beauty 시장조사, 에이전트 활용법, 후보 SKU, 0~120일 실행 타임라인
 - `/toner-detail-renewal`: 히알루론산 토너 대표이미지/상세페이지 HTML 검토 시안
+- `/marketing/aqua-lotion-video-studio/`: 유어스킨플러스 마케팅 영상 스튜디오. 최신 PDRN 캐릭터 릴스 승인 마스터와 기존 아쿠아 로션 제작·실패 이력
+- `/marketing/pdrn-character-video/`: PDRN 히알루론산 수딩 크림 캐릭터 릴스 전용 승인 대시보드. v11 영상·Typecast 은경 나레이션·장면 콘티·권리/비용 QA
 
 ## 주요 데이터/자산
 

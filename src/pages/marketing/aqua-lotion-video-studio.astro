@@ -11,6 +11,7 @@ const attemptStatusLabel = {
   reference: '기준 이미지', pending: '생성 중', review: '검수 대기', selected: '선정', rejected: '탈락',
 } as const;
 const firstVideo = campaignVideos[0];
+const latestApprovedVideo = campaignVideos.find((video) => video.status === 'approved') ?? firstVideo;
 const imageAttempts = sceneAttempts.filter((attempt) => !attempt.videoSrc);
 const generatedVideoAttempts = sceneAttempts.filter((attempt) => Boolean(attempt.videoSrc));
 const selectedVideoCount = generatedVideoAttempts.filter((attempt) => attempt.status === 'selected').length;
@@ -24,38 +25,66 @@ const storySketches = [
 ];
 ---
 
-<BaseLayout title="아쿠아 로션 영상 스튜디오" description="유어스킨플러스 아쿠아 로션 광고 모델, 영상 버전, 콘티와 제작 게이트를 누적 관리하는 마케팅 영상 대시보드">
+<BaseLayout title="유어스킨플러스 마케팅 영상 스튜디오" description="유어스킨플러스 광고 승인본, 영상 버전, 콘티와 제작 게이트를 누적 관리하는 마케팅 영상 대시보드">
   <SiteHeader active="/marketing/aqua-lotion-video-studio/" />
 
   <main class="studio-page">
     <section class="hero container">
       <div class="hero-copy">
-        <p class="eyebrow">Aqua lotion · moving image system</p>
+        <p class="eyebrow">YOURSKINPLUS · moving image system</p>
         <h1>한 편을 만드는 페이지가 아니라<br /><em>계속 만드는 시스템</em></h1>
-        <p>완성본을 한 번에 만들지 않고, 표정·제품 집기·펌핑·도포·마무리를 각각 생성해 비교합니다. 탈락본과 크레딧까지 남겨 같은 실패를 반복하지 않습니다.</p>
+        <p>제품별 승인 마스터와 제작 이력을 한곳에 누적합니다. 최종 영상, 나레이션 권리, 탈락본과 크레딧까지 남겨 같은 실패를 반복하지 않습니다.</p>
         <div class="hero-actions">
-          <a href="#compare">V2 부분 비교 보기</a>
+          <a href="#approved-master">최신 승인본 보기</a>
           <a class="ghost" href="#production-details" data-open-production-details>제작 상세 보기</a>
         </div>
       </div>
       <div class="hero-board" aria-label="현재 제작 현황">
-        <div class="board-top"><span>PRODUCTION BOARD</span><b>2026.08.01</b></div>
+        <div class="board-top"><span>APPROVED MASTER</span><b>{latestApprovedVideo.updatedAt.replaceAll('-', '.')}</b></div>
         <div class="board-main">
-          <strong>AQUA-UGC-001</strong>
-          <h2>가볍게 한 번 더</h2>
-          <p>CAST A/B/C · <b>신규 모델 비교 중</b></p>
+          <strong>{latestApprovedVideo.id}</strong>
+          <h2>{latestApprovedVideo.title}</h2>
+          <p>{latestApprovedVideo.product} · <b>사용자 승인</b></p>
         </div>
         <dl>
-          <div><dt>활성 모델</dt><dd>{campaignModels.length}</dd></div>
-          <div><dt>비교 후보</dt><dd>{sceneAttempts.length}</dd></div>
-          <div><dt>현재 단계</dt><dd>CASTING</dd></div>
+          <div><dt>캠페인</dt><dd>{campaignVideos.length}</dd></div>
+          <div><dt>승인본</dt><dd>{campaignVideos.filter((video) => video.status === 'approved').length}</dd></div>
+          <div><dt>현재 단계</dt><dd>APPROVED</dd></div>
         </dl>
       </div>
     </section>
 
     <nav class="section-nav container" aria-label="페이지 목차">
-      <a href="#compare">이미지 기준</a><a href="#generated-videos">생성 영상</a><a href="#production-details" data-open-production-details>모델·콘티·게이트</a>
+      <a href="#approved-master">최신 승인본</a><a href="#compare">이미지 기준</a><a href="#generated-videos">생성 영상</a><a href="#production-details" data-open-production-details>모델·콘티·게이트</a>
     </nav>
+
+    <section class="approved-master container" id="approved-master">
+      <header class="section-head">
+        <div><p class="eyebrow">Latest approved master</p><h2>PDRN 캐릭터 광고 최종 승인본</h2></div>
+        <p>2026년 8월 11일 사용자 청감 승인을 받은 Typecast 은경 한국어 나레이션 버전입니다. 영상·음성·출처 조건과 배포 파일을 함께 보존합니다.</p>
+      </header>
+      <div class="approved-master-grid">
+        <div class="approved-video">
+          {latestApprovedVideo.videoSrc && <video controls preload="metadata" poster={latestApprovedVideo.poster}><source src={latestApprovedVideo.videoSrc} type="video/mp4" /></video>}
+          <span>APPROVED · {latestApprovedVideo.id}</span>
+        </div>
+        <article class="approved-dossier">
+          <div class="approved-title"><span>최종 확정</span><h3>{latestApprovedVideo.title}</h3><p>{latestApprovedVideo.subtitle}</p></div>
+          <dl>
+            <div><dt>제품</dt><dd>{latestApprovedVideo.product}</dd></div>
+            <div><dt>출력</dt><dd>30.000초 · 720×1280 · H.264/AAC · -15.7 LUFS</dd></div>
+            <div><dt>나레이션</dt><dd>Typecast 은경 · 16kHz PCM 원음 · 속도/피치 변형 없음</dd></div>
+            <div><dt>BGM</dt><dd>Kie Suno V5.5 오리지널 인스트루멘털 · 고정 -14dB</dd></div>
+            <div><dt>비용</dt><dd>{latestApprovedVideo.creditSummary}</dd></div>
+          </dl>
+          <div class="approved-actions">
+            {latestApprovedVideo.masterSrc && <a href={latestApprovedVideo.masterSrc} download>최종 MP4 다운로드</a>}
+            <a class="ghost" href="#videos" data-open-production-details>캠페인 이력 보기</a>
+          </div>
+          <aside class="voice-license"><b>공개 시 필수 출처</b><p>이 콘텐츠의 목소리는 “타입캐스트”로 만들었어요. <a href="https://typecast.ai/kr" target="_blank" rel="noreferrer">typecast.ai/kr</a></p></aside>
+        </article>
+      </div>
+    </section>
 
     <section class="attempt-section container" id="compare">
       <header class="section-head">
@@ -347,6 +376,7 @@ const storySketches = [
   .section-nav { position:sticky; top:8px; z-index:10; display:flex; justify-content:center; gap:6px; width:max-content; max-width:calc(100vw - 24px); padding:7px; border:1px solid rgba(16,23,22,.16); border-radius:999px; background:rgba(244,240,231,.92); backdrop-filter:blur(14px); box-shadow:0 10px 30px rgba(16,23,22,.08); }
   .section-nav a { padding:9px 14px; border-radius:999px; font-size:13px; font-weight:800; white-space:nowrap; }.section-nav a:hover{background:var(--night);color:white}
   .section-head { display:flex; justify-content:space-between; gap:30px; align-items:end; margin-bottom:28px; }.section-head h2{margin:0;font-size:clamp(32px,4vw,54px);letter-spacing:-.045em;word-break:keep-all}.section-head>p{max-width:54ch;margin:0;color:var(--muted);line-height:1.65}.section-head.light{color:white}.section-head.light .eyebrow{color:#91d7d6}.section-head.light>p{color:#b7c0bd}
+  .approved-master{padding-block:clamp(68px,8vw,105px);scroll-margin-top:80px}.approved-master-grid{display:grid;grid-template-columns:minmax(300px,.75fr) minmax(0,1.25fr);gap:26px;align-items:stretch}.approved-video{position:relative;overflow:hidden;border-radius:26px;background:#08100f;box-shadow:var(--shadow)}.approved-video video{display:block;width:100%;height:100%;max-height:760px;object-fit:contain}.approved-video>span{position:absolute;left:16px;top:16px;padding:8px 11px;border-radius:999px;background:#c8ffe0;color:#0f6540;font:900 10px monospace;letter-spacing:.06em}.approved-dossier{display:flex;flex-direction:column;padding:clamp(24px,4vw,42px);border:1px solid var(--line);border-radius:26px;background:white;box-shadow:var(--shadow-sm)}.approved-title>span{display:inline-block;padding:7px 10px;border-radius:999px;background:#e5fff1;color:#13693f;font-size:11px;font-weight:900}.approved-title h3{margin:13px 0 5px;font-size:clamp(30px,4vw,48px);letter-spacing:-.045em}.approved-title p{margin:0;color:var(--muted);line-height:1.55}.approved-dossier dl{display:grid;gap:0;margin:25px 0}.approved-dossier dl div{display:grid;grid-template-columns:85px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--line)}.approved-dossier dt{font-size:12px;font-weight:900;color:var(--aqua-deep)}.approved-dossier dd{margin:0;line-height:1.55}.approved-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}.approved-actions a{padding:12px 16px;border-radius:11px;background:var(--night);color:white;text-decoration:none;font-weight:900}.approved-actions a.ghost{background:#eaf1ef;color:var(--night)}.voice-license{margin-top:18px;padding:15px;border-radius:14px;background:#f3f7f5}.voice-license b{font-size:12px}.voice-license p{margin:6px 0 0;color:var(--muted);font-size:13px;line-height:1.5}.voice-license a{color:var(--aqua-deep);font-weight:800}
 
   .attempt-section{padding-block:clamp(70px,9vw,115px)}
   .attempt-summary{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:16px;overflow:hidden;background:white;margin-bottom:22px}.attempt-summary div{padding:17px 20px;border-right:1px solid var(--line)}.attempt-summary div:last-child{border:0}.attempt-summary span{display:block;color:var(--muted);font-size:11px;font-weight:800}.attempt-summary b{display:inline-block;margin-top:5px;font:900 25px monospace}.attempt-summary small{margin-left:5px;color:var(--muted);font:800 10px monospace}
@@ -375,6 +405,6 @@ const storySketches = [
   .gates-section{padding-block:clamp(70px,10vw,120px);background:#e3edeb}.gate-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.gate-list article{display:grid;grid-template-columns:auto 1fr auto;gap:13px;align-items:start;padding:20px;border:1px solid #bfceca;border-radius:15px;background:#f4f7f5}.gate-list article.done{border-color:#85b9ad;background:#edf8f3}.gate-list article.current{background:var(--night);color:white;border-color:var(--night)}.gate-list>article>span{font:900 17px monospace;color:var(--aqua-deep)}.gate-list .current>span{color:#91dbd8}.gate-list h3{margin:0 0 7px;font-size:17px}.gate-list p{margin:0;color:var(--muted);line-height:1.55}.gate-list b{font:900 10px monospace;letter-spacing:.08em}.gate-list .done>b{color:#26715e}.gate-list .current p{color:#cdd5d2}
 
   @media(max-width:1050px){.hero{grid-template-columns:1fr}.hero-board{max-width:620px}.model-grid{grid-template-columns:1fr 1fr}.model-card:last-child{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr}.video-grid{grid-template-columns:1fr}.sketch-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gate-list{grid-template-columns:1fr 1fr}}
-  @media(max-width:720px){.section-nav{justify-content:flex-start;overflow-x:auto}.section-head{display:block}.section-head>p{margin-top:13px}.attempt-summary{grid-template-columns:1fr 1fr}.attempt-summary div:nth-child(2){border-right:0}.attempt-summary div:nth-child(-n+2){border-bottom:1px solid var(--line)}.attempt-lane{padding:16px;margin-top:16px;border-radius:18px}.lane-head{display:block}.lane-head>p{margin-top:9px}.video-lane-head{display:grid;gap:14px}.video-filters{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px}.video-filters button{white-space:nowrap}.video-outcome-strip{grid-template-columns:1fr 1fr 1fr}.video-outcome-strip>div{display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:10px}.video-outcome-strip b{order:-1;font-size:22px}.video-outcome-strip small{line-height:1.35}.attempt-rail{grid-auto-columns:minmax(270px,84vw)}.video-attempt-rail{grid-auto-columns:minmax(282px,86vw)}.attempt-copy>p{min-height:0}.model-grid{grid-template-columns:1fr}.model-card:last-child{display:block;grid-column:auto}.archive-row{grid-template-columns:58px 1fr}.archive-row img{width:58px;height:58px}.archive-row>strong{grid-column:1/-1}.video-card{grid-template-columns:1fr}.video-preview{min-height:390px}.library-schema{grid-template-columns:1fr}.concept-title{grid-template-columns:auto 1fr}.concept-status{grid-column:1/-1;justify-self:start}.brief-grid{grid-template-columns:1fr 1fr}.brief-grid article{padding:16px 12px;border-bottom:1px solid var(--line)}.script-strip{grid-template-columns:1fr}.sketch-grid{grid-template-columns:1fr}.timeline-list article{grid-template-columns:1fr;padding-right:30px}.shot-tech{padding:12px 0 0;border-left:0;border-top:1px solid var(--line)}.do-dont{grid-template-columns:1fr}.gate-list{grid-template-columns:1fr}}
-  @media(max-width:430px){.hero h1{font-size:42px}.hero-board{transform:none;box-shadow:8px 10px 0 #cce8e7}.hero-board dl{grid-template-columns:1fr 1fr}.hero-board dl div:last-child{grid-column:1/-1}.model-copy{padding:18px}.signal-grid{grid-template-columns:1fr}.video-body h3{font-size:31px}.brief-grid{grid-template-columns:1fr}.brief-grid article{padding-inline:0;border-right:0}.concept-title .number{font-size:48px}.concept-title h2{font-size:40px}}
+  @media(max-width:720px){.approved-master-grid{grid-template-columns:1fr}.approved-master-grid>*{min-width:0;width:100%;box-sizing:border-box}.approved-video video{max-height:620px}.approved-dossier dl div{grid-template-columns:1fr;gap:4px}.section-head h2{word-break:keep-all;overflow-wrap:normal}.section-nav{justify-content:flex-start;overflow-x:auto}.section-head{display:block}.section-head>p{margin-top:13px}.attempt-summary{grid-template-columns:1fr 1fr}.attempt-summary div:nth-child(2){border-right:0}.attempt-summary div:nth-child(-n+2){border-bottom:1px solid var(--line)}.attempt-lane{padding:16px;margin-top:16px;border-radius:18px}.lane-head{display:block}.lane-head>p{margin-top:9px}.video-lane-head{display:grid;gap:14px}.video-filters{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px}.video-filters button{white-space:nowrap}.video-outcome-strip{grid-template-columns:1fr 1fr 1fr}.video-outcome-strip>div{display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:10px}.video-outcome-strip b{order:-1;font-size:22px}.video-outcome-strip small{line-height:1.35}.attempt-rail{grid-auto-columns:minmax(270px,84vw)}.video-attempt-rail{grid-auto-columns:minmax(282px,86vw)}.attempt-copy>p{min-height:0}.model-grid{grid-template-columns:1fr}.model-card:last-child{display:block;grid-column:auto}.archive-row{grid-template-columns:58px 1fr}.archive-row img{width:58px;height:58px}.archive-row>strong{grid-column:1/-1}.video-card{grid-template-columns:1fr}.video-preview{min-height:390px}.library-schema{grid-template-columns:1fr}.concept-title{grid-template-columns:auto 1fr}.concept-status{grid-column:1/-1;justify-self:start}.brief-grid{grid-template-columns:1fr 1fr}.brief-grid article{padding:16px 12px;border-bottom:1px solid var(--line)}.script-strip{grid-template-columns:1fr}.sketch-grid{grid-template-columns:1fr}.timeline-list article{grid-template-columns:1fr;padding-right:30px}.shot-tech{padding:12px 0 0;border-left:0;border-top:1px solid var(--line)}.do-dont{grid-template-columns:1fr}.gate-list{grid-template-columns:1fr}}
+  @media(max-width:430px){.hero{min-width:0}.hero h1{font-size:38px;word-break:normal;overflow-wrap:anywhere}.hero-copy{min-width:0}.hero-copy>p:not(.eyebrow){overflow-wrap:anywhere}.hero-board{min-width:0;width:100%;box-sizing:border-box;transform:none;box-shadow:8px 10px 0 #cce8e7}.board-top{flex-wrap:wrap;gap:9px}.board-top,.board-main,.hero-board dl{padding:16px}.board-main h2{font-size:36px;word-break:normal;overflow-wrap:anywhere}.board-main p{overflow-wrap:anywhere}.hero-board dl{grid-template-columns:1fr 1fr}.hero-board dl div:last-child{grid-column:1/-1}.approved-master{min-width:0}.approved-title h3{font-size:32px;word-break:keep-all;overflow-wrap:normal}.approved-dossier{padding:20px}.approved-actions a{width:100%;box-sizing:border-box;text-align:center}.model-copy{padding:18px}.signal-grid{grid-template-columns:1fr}.video-body h3{font-size:31px}.brief-grid{grid-template-columns:1fr}.brief-grid article{padding-inline:0;border-right:0}.concept-title .number{font-size:48px}.concept-title h2{font-size:36px;word-break:normal;overflow-wrap:anywhere}}
 </style>
