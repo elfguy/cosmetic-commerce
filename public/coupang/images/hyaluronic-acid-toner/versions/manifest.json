@@ -115,7 +115,7 @@
     {
       "id": "v2",
       "label": "V2 · GPT 실사 메인",
-      "status": "review",
+      "status": "live",
       "source": "public/coupang/images/hyaluronic-acid-toner/versions/v2",
       "representativeImages": [
         {
@@ -143,10 +143,26 @@
           "label": "대표 06 · GPT Image 2 V1c 선명·투명·정확 비율 승인본"
         }
       ],
-      "detailCount": 13,
+      "detailImages": [
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/01.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/02.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/03.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/04.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/05.png",
+        { "src": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/05a-aha-pha-20260821.png", "label": "상세 06 · AHA·PHA 루틴" },
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/06.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/07.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/08.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/09.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/10.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/11.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/12.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/13.png"
+      ],
+      "detailCount": 14,
       "detailDir": "detail",
       "representativeCount": 6,
-      "note": "대시보드 V2입니다. 대표 01은 실제 제품 원본을 첨부한 GPT Images 재생성본으로, 제품 bbox 253×848px와 기존 신선 제품 마크를 유지하고 상단 출렁임 없이 평평한 단일 수위선으로 교정했습니다. 상세 01은 Nano Banana Pro 4K 승인본이며 상세 02·04·05·06·07은 GPT Image 2 전체 장면 통합 승인본입니다.",
+      "note": "쿠팡 승인완료 V2입니다. 대표 01은 실제 제품 원본을 첨부한 GPT Images 재생성본으로, 제품 bbox 253×848px와 기존 신선 제품 마크를 유지하고 상단 출렁임 없이 평평한 단일 수위선으로 교정했습니다. 2026-08-26 쿠팡 CDN 반영 후 로컬과 1000×1000 RGB 픽셀 일치를 검증했으며, 나머지 대표 5장과 상세 14컷은 그대로 보존했습니다.",
       "cacheBuster": "main01-gpt-no-wave-approved-20260826"
     }
   ]

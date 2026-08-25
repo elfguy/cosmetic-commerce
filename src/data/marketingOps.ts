@@ -22,9 +22,9 @@ export const productOpsStatuses: ProductOpsStatus[] = [
     priority: 'focus',
     campaignRole: '수분 루틴 진입 상품',
     detailStatus: 'V2 대표 01 GPT 실사·수위선 교정 + 상세 14컷 현재 적용',
-    assetStatus: 'V2 대표 01 대시보드 반영 · 쿠팡 업로드 진행',
+    assetStatus: 'V2 대표 01 사이트/쿠팡 승인완료 적용',
     claimRisk: 'medium',
-    nextAction: '쿠팡 CDN 반영과 구매자 PDP 캐시 확인',
+    nextAction: '구매자 PDP 캐시와 썸네일 노출 상태 확인',
     workspaceUrl: '/marketing/hyaluronic-toner-version-compare/',
     salesNote: '최근 판매량 1위. 유입 상품으로 먼저 밀기 좋음',
   },
@@ -213,20 +213,24 @@ export const productVersions: Record<string, ProductVersion[]> = {
   'hyaluronic-toner': [
     {
       id: 'v2',
-      label: 'V2 · 생성형 실사 메인',
-      status: 'review',
-      date: '2026-07-13',
-      summary: '대표 6장과 상세 13컷을 관리하는 V2입니다. 상세 01은 첨부 물방울 스타일과 Drive 제품 원본을 참조한 Nano Banana Pro 4K V4a 승인본, 상세 02·04·05·06·07은 GPT Image 2 전체 장면 통합 승인본입니다. 쿠팡 라이브는 변경하지 않았습니다.',
+      label: 'V2 · GPT 실사 메인',
+      status: 'live',
+      date: '2026-08-26',
+      summary: '쿠팡 승인완료 V2입니다. 대표 01은 실제 제품 원본을 첨부한 GPT Images 실사 재생성본이며 상단 출렁임을 제거한 단일 수위선, 제품 bbox 253×848px, 기존 신선 제품 마크를 유지했습니다. 쿠팡 CDN 1000×1000 RGB 픽셀 일치를 확인했고 나머지 대표 5장과 상세 14컷은 보존했습니다.',
       mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v2/representative/' + String(i + 1).padStart(2, '0') + '.png'),
-      detailImages: Array.from({ length: 13 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v2/detail/' + String(i + 1).padStart(2, '0') + '.png'),
+      detailImages: [
+        ...Array.from({ length: 5 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v2/detail/' + String(i + 1).padStart(2, '0') + '.png'),
+        '/coupang/images/hyaluronic-acid-toner/versions/v2/detail/05a-aha-pha-20260821.png',
+        ...Array.from({ length: 8 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v2/detail/' + String(i + 6).padStart(2, '0') + '.png'),
+      ],
       links: [
         { label: '토너 V2 비교 페이지 열기', href: '/marketing/hyaluronic-toner-version-compare/' },
         { label: 'V2 첫 대표 이미지 열기', href: '/coupang/images/hyaluronic-acid-toner/versions/v2/representative/01.png' },
       ],
       metrics: [
         { label: '대표', value: '6' },
-        { label: '상세', value: '13' },
-        { label: '상태', value: '검토용' },
+        { label: '상세', value: '14' },
+        { label: '상태', value: '쿠팡 승인완료 · CDN 픽셀 검증' },
       ],
     },
     {
