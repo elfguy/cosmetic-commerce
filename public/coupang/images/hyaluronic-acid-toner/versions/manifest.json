@@ -114,13 +114,13 @@
     },
     {
       "id": "v2",
-      "label": "V2 · 생성형 실사 메인",
+      "label": "V2 · GPT 실사 메인",
       "status": "review",
       "source": "public/coupang/images/hyaluronic-acid-toner/versions/v2",
       "representativeImages": [
         {
           "src": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative/01.png",
-          "label": "대표 01 · Seedream V18 4K 승인본"
+          "label": "대표 01 · GPT Images 원본 참조·수위선 교정 승인본"
         },
         {
           "src": "public/coupang/images/hyaluronic-acid-toner/versions/v2/representative/02.png",
@@ -146,8 +146,8 @@
       "detailCount": 13,
       "detailDir": "detail",
       "representativeCount": 6,
-      "note": "대시보드 V2입니다. 상세 01은 첨부 물방울 스타일과 Drive 제품 원본을 참조해 Nano Banana Pro 4K로 제품·물방울·수면을 한 장면으로 통합 생성한 V4a 승인본입니다. 상세 02·04·05·06·07은 GPT Image 2 전체 장면 통합 승인본입니다. 전부 780×1360px이며 제품 로컬 합성·마스크·붙여넣기 보정은 사용하지 않았습니다. 쿠팡 라이브 상품은 변경하지 않았습니다.",
-      "cacheBuster": "detail01-nano-pro-droplets-approved-20260714"
+      "note": "대시보드 V2입니다. 대표 01은 실제 제품 원본을 첨부한 GPT Images 재생성본으로, 제품 bbox 253×848px와 기존 신선 제품 마크를 유지하고 상단 출렁임 없이 평평한 단일 수위선으로 교정했습니다. 상세 01은 Nano Banana Pro 4K 승인본이며 상세 02·04·05·06·07은 GPT Image 2 전체 장면 통합 승인본입니다.",
+      "cacheBuster": "main01-gpt-no-wave-approved-20260826"
     }
   ]
 }

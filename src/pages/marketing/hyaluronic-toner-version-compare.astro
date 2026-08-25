@@ -53,7 +53,7 @@ const activeVersion = versions.find((version) => version.id === versionsManifest
 const maxDetailCount = Math.max(...versions.map((version) => version.detailCount));
 const initialSelected = new Set(['original', activeVersion.id]);
 const summaryImage = (version) => version.representativeImages[0]?.src ?? version.detailImages[0]?.src;
-const cacheBust = 'toner-detail01-nano-pro-droplets-approved-20260714';
+const cacheBust = 'toner-main01-gpt-no-wave-approved-20260826';
 const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheBust}`;
 ---
 
@@ -74,7 +74,7 @@ const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheB
           <p class="eyebrow">Hyaluronic toner version compare</p>
           <h1>히알루론산 토너 상세 버전 비교</h1>
           <p>
-            원본 등록본과 V1, Nano 실사 메인을 적용한 V2를 같은 화면에서 비교합니다.
+            원본 등록본과 V1, 실제 제품 원본을 참조해 상단 수위선을 교정한 GPT 실사 메인 V2를 같은 화면에서 비교합니다.
             대표 이미지 라벨 일관성, 상세 흐름, 500ml/신선 출고 메시지를 빠르게 검토할 수 있습니다.
           </p>
         </div>
