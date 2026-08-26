@@ -1,6 +1,6 @@
 {
   "version": "v5",
-  "status": "approved-deploying",
+  "status": "live",
   "createdAt": "2026-08-26",
   "method": "GPT Images true-alpha product plus deterministic clean-plate composition with restrained grounded shadows",
   "transparentProductChat": "https://chatgpt.com/c/6a8e2fdf-e590-83e8-a348-813646e74227",
@@ -56,7 +56,7 @@
     "06": 0.2975
   },
   "grounding": "two-layer contact shadow: tight ambient occlusion plus broad low-opacity shadow; slot-specific strength",
-  "coupangUpdated": false,
+  "coupangUpdated": true,
   "cleanPlateRemediation": {
     "05": "removed residual pump/cap/body ghost using masked surrounding-scene reconstruction before exact alpha placement",
     "06": "removed residual pump/cap/body ghost with text-safe narrowed mask before exact alpha placement",
@@ -127,5 +127,19 @@
       "slot": 6,
       "sha256": "066bb270dcd6938f81c1525bef17563b2a7effbecf2121cfcbede3d2f333cd14"
     }
-  ]
+  ],
+  "coupangVerification": {
+    "sellerProductId": "15704749086",
+    "statusName": "승인완료",
+    "requested": false,
+    "representativeImages": 6,
+    "detailImagesPreserved": 14,
+    "detailPathsPreservedExactly": true,
+    "externalUrls": 0,
+    "cdn200": 6,
+    "cdnPathShaMatches": 6,
+    "decodedPixelExact": 6,
+    "updateDir": "data/coupang/update/hyaluronic-toner-v5-representative/20260826T024511Z",
+    "rollbackDir": "data/coupang/rollback/hyaluronic-toner-v5-representative/20260826T024511Z"
+  }
 }

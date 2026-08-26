@@ -21,7 +21,7 @@ export const productOpsStatuses: ProductOpsStatus[] = [
     slug: 'hyaluronic-toner',
     priority: 'focus',
     campaignRole: '수분 루틴 진입 상품',
-    detailStatus: 'V5 동일 true-alpha 제품·접지 보정 대표 6장 + 기존 상세 14컷 쿠팡 현재 적용',
+    detailStatus: 'V5 동일 true-alpha 제품·넓은 그림자 제거 대표 6장 + 기존 상세 14컷 쿠팡 현재 적용',
     assetStatus: 'V5 사이트/쿠팡 승인완료 · CDN 픽셀 검증 6/6',
     claimRisk: 'medium',
     nextAction: '구매자 PDP 캐시와 썸네일 노출 상태 확인',
@@ -216,7 +216,7 @@ export const productVersions: Record<string, ProductVersion[]> = {
       label: 'V5 · 동일 투명 제품 6장',
       status: 'live',
       date: '2026-08-26',
-      summary: '쿠팡 승인완료 V5입니다. 동일 true-alpha 제품의 외곽 흰 matte를 제거하고 투명 PET의 배경 투과와 접지를 보정한 대표 6장을 적용했습니다. 새 Coupang CDN 6장이 로컬 V5와 decoded RGB 픽셀 단위로 일치하며 기존 상세 14컷은 경로와 순서를 그대로 보존했습니다.',
+      summary: '쿠팡 승인완료 V5입니다. 동일 true-alpha 제품의 외곽 흰 matte를 제거하고 투명 PET의 배경 투과를 보정했습니다. 넓은 타원 그림자를 없애고 제품을 2px 낮춘 뒤 바닥에 붙은 미세 접촉만 유지한 대표 6장을 적용했습니다. 새 Coupang CDN 6장이 로컬 V5와 decoded RGB 픽셀 단위로 일치하며 기존 상세 14컷은 경로와 순서를 그대로 보존했습니다.',
       mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v5/representative/' + String(i + 1).padStart(2, '0') + '.png'),
       detailImages: [
         ...Array.from({ length: 5 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v2/detail/' + String(i + 1).padStart(2, '0') + '.png'),
