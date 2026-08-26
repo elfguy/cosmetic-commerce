@@ -1,0 +1,83 @@
+{
+  "version": "v5",
+  "status": "review",
+  "createdAt": "2026-08-26",
+  "method": "GPT Images true-alpha product plus deterministic clean-plate composition with restrained grounded shadows",
+  "transparentProductChat": "https://chatgpt.com/c/6a8e2fdf-e590-83e8-a348-813646e74227",
+  "transparentProduct": "tmp/toner-gpt-transparent-anchor-normalized.png",
+  "sourceRatio": 0.2976,
+  "localProductCompositing": true,
+  "userAuthorizedExactAlphaWorkflow": true,
+  "productPixelPolicy": "same GPT-generated transparent product pixels in all six slots; uniform scaling only",
+  "bboxes": {
+    "01": [
+      432,
+      84,
+      253,
+      848
+    ],
+    "02": [
+      648,
+      79,
+      250,
+      839
+    ],
+    "03": [
+      668,
+      111,
+      242,
+      811
+    ],
+    "04": [
+      582,
+      72,
+      263,
+      881
+    ],
+    "05": [
+      596,
+      196,
+      213,
+      713
+    ],
+    "06": [
+      634,
+      189,
+      194,
+      652
+    ]
+  },
+  "ratios": {
+    "01": 0.2983,
+    "02": 0.298,
+    "03": 0.2984,
+    "04": 0.2985,
+    "05": 0.2987,
+    "06": 0.2975
+  },
+  "grounding": "two-layer contact shadow: tight ambient occlusion plus broad low-opacity shadow; slot-specific strength",
+  "coupangUpdated": false,
+  "cleanPlateRemediation": {
+    "05": "removed residual pump/cap/body ghost using masked surrounding-scene reconstruction before exact alpha placement",
+    "06": "removed residual pump/cap/body ghost with text-safe narrowed mask before exact alpha placement",
+    "verified": "no old-product ghost, no text/card/model changes, no broken images",
+    "coupangUpdated": false
+  },
+  "slot06LabelSharpness": {
+    "method": "single-pass downsample from original 407x1335 true-alpha component to 194x652 plus restrained unsharp mask",
+    "beforeLaplacianVariance": 4681.8246,
+    "afterLaplacianVariance": 7743.1468,
+    "backgroundTextPixelsChanged": false,
+    "coupangUpdated": false
+  },
+  "alphaIntegration": {
+    "sourceAlphaMedianBefore": 253,
+    "issue": "interior PET was effectively opaque and edge RGB carried a white matte",
+    "method": "preserve opaque cap and paper label; set neck/shoulder and lower PET to alpha base 135 with local edge/detail preservation; erode and feather 1px outer matte",
+    "petAlphaMeanAfter": 148.0,
+    "master": "tmp/toner-alpha-pet-135.png",
+    "singlePassHighResResize": true,
+    "allSixRecomposited": true,
+    "coupangUpdated": false
+  }
+}

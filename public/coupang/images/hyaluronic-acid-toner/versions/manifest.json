@@ -1,7 +1,7 @@
 {
   "productId": "hyaluronic-acid-toner",
   "productName": "유어스킨플러스 히알루론산 토너 500ml",
-  "activeVersion": "v2",
+  "activeVersion": "v5",
   "versions": [
     {
       "id": "original",
@@ -149,7 +149,10 @@
         "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/03.png",
         "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/04.png",
         "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/05.png",
-        { "src": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/05a-aha-pha-20260821.png", "label": "상세 06 · AHA·PHA 루틴" },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/05a-aha-pha-20260821.png",
+          "label": "상세 06 · AHA·PHA 루틴"
+        },
         "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/06.png",
         "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/07.png",
         "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/08.png",
@@ -164,6 +167,63 @@
       "representativeCount": 6,
       "note": "쿠팡 승인완료 V2입니다. 대표 01은 실제 제품 원본을 첨부한 GPT Images 재생성본으로, 제품 bbox 253×848px와 기존 신선 제품 마크를 유지하고 상단 출렁임 없이 평평한 단일 수위선으로 교정했습니다. 2026-08-26 쿠팡 CDN 반영 후 로컬과 1000×1000 RGB 픽셀 일치를 검증했으며, 나머지 대표 5장과 상세 14컷은 그대로 보존했습니다.",
       "cacheBuster": "main01-gpt-no-wave-approved-20260826"
+    },
+    {
+      "id": "v5",
+      "label": "V5 · 동일 투명 제품 6장",
+      "status": "review",
+      "source": "public/coupang/images/hyaluronic-acid-toner/versions/v5",
+      "representativeImages": [
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v5/representative/01.png",
+          "label": "대표 01 · 동일 true-alpha 제품·접지 보정"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v5/representative/02.png",
+          "label": "대표 02 · 동일 true-alpha 제품·접지 보정"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v5/representative/03.png",
+          "label": "대표 03 · 동일 true-alpha 제품·접지 보정"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v5/representative/04.png",
+          "label": "대표 04 · 동일 true-alpha 제품·접지 보정"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v5/representative/05.png",
+          "label": "대표 05 · 동일 true-alpha 제품·접지 보정"
+        },
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v5/representative/06.png",
+          "label": "대표 06 · 동일 true-alpha 제품·접지 보정"
+        }
+      ],
+      "detailImages": [
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/01.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/02.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/03.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/04.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/05.png",
+        {
+          "src": "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/05a-aha-pha-20260821.png",
+          "label": "상세 06 · AHA·PHA 루틴"
+        },
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/06.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/07.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/08.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/09.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/10.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/11.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/12.png",
+        "public/coupang/images/hyaluronic-acid-toner/versions/v2/detail/13.png"
+      ],
+      "detailCount": 14,
+      "detailDir": "../v2/detail",
+      "representativeCount": 6,
+      "note": "검토용 V5. GPT Images true-alpha 제품에서 외곽 흰 matte를 제거하고 캡·라벨은 불투명, 목·어깨·하단 PET는 alpha base 135로 배경 투과를 복원했습니다. 동일 제품 픽셀을 01~06에 균일 스케일로 배치하고 접지 그림자를 보정했습니다. 쿠팡 대표 6장 반영 승인 대기 상태이며 상세 14컷은 V2를 유지합니다.",
+      "cacheBuster": "toner-v5-pet135-integrated-r4-20260826"
     }
-  ]
+  ],
+  "activeVersionId": "v5"
 }
