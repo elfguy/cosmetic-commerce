@@ -1,6 +1,6 @@
 {
   "version": "v5",
-  "status": "live",
+  "status": "approved-deploying",
   "createdAt": "2026-08-26",
   "method": "GPT Images true-alpha product plus deterministic clean-plate composition with restrained grounded shadows",
   "transparentProductChat": "https://chatgpt.com/c/6a8e2fdf-e590-83e8-a348-813646e74227",
@@ -56,7 +56,7 @@
     "06": 0.2975
   },
   "grounding": "two-layer contact shadow: tight ambient occlusion plus broad low-opacity shadow; slot-specific strength",
-  "coupangUpdated": true,
+  "coupangUpdated": false,
   "cleanPlateRemediation": {
     "05": "removed residual pump/cap/body ghost using masked surrounding-scene reconstruction before exact alpha placement",
     "06": "removed residual pump/cap/body ghost with text-safe narrowed mask before exact alpha placement",
@@ -80,7 +80,7 @@
     "allSixRecomposited": true,
     "coupangUpdated": false
   },
-  "coupangVerification": {
+  "previousCoupangVerification": {
     "sellerProductId": "15704749086",
     "statusName": "승인완료",
     "requested": false,
@@ -92,5 +92,40 @@
     "decodedPixelExact": 6,
     "updateDir": "data/coupang/update/hyaluronic-toner-v5-representative/20260826T014245Z",
     "rollbackDir": "data/coupang/rollback/hyaluronic-toner-v5-representative/20260826T014245Z"
-  }
+  },
+  "groundingRevision": {
+    "broadShadow": false,
+    "movedDownPx": 2,
+    "microContactOnly": true,
+    "cleanPlate01GhostRemoved": true,
+    "plates05And06GhostFree": true,
+    "singleDownsample": true,
+    "sourceProof": "tmp/toner-v5-grounded-no-broad-shadow/proof.jpg"
+  },
+  "finalFiles": [
+    {
+      "slot": 1,
+      "sha256": "2577910738d3092671d9f0c576f1e5c6d02e662b0bd1edfbe66f4759511b4780"
+    },
+    {
+      "slot": 2,
+      "sha256": "ae6b4dd39827af27fbf3c893ae9ad2399bca96e00ce79c88bc2e16662e72aceb"
+    },
+    {
+      "slot": 3,
+      "sha256": "24438a5c37deed9989c9aa6803b2a9a0e080f76a3ffae22623b226bc160568fb"
+    },
+    {
+      "slot": 4,
+      "sha256": "1e32f001ea9d10bec13dda423aa5238b6095b5cb941490468bfd3844a63ae8ba"
+    },
+    {
+      "slot": 5,
+      "sha256": "fbfe6789efcf506bfa51ad9755f6cb7da4baeeadcdd92ce2403a7ab889f953c8"
+    },
+    {
+      "slot": 6,
+      "sha256": "066bb270dcd6938f81c1525bef17563b2a7effbecf2121cfcbede3d2f333cd14"
+    }
+  ]
 }
