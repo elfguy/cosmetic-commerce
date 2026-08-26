@@ -115,7 +115,7 @@
     {
       "id": "v2",
       "label": "V2 · GPT 실사 메인",
-      "status": "live",
+      "status": "superseded",
       "source": "public/coupang/images/hyaluronic-acid-toner/versions/v2",
       "representativeImages": [
         {
@@ -171,7 +171,7 @@
     {
       "id": "v5",
       "label": "V5 · 동일 투명 제품 6장",
-      "status": "review",
+      "status": "live",
       "source": "public/coupang/images/hyaluronic-acid-toner/versions/v5",
       "representativeImages": [
         {
@@ -221,8 +221,8 @@
       "detailCount": 14,
       "detailDir": "../v2/detail",
       "representativeCount": 6,
-      "note": "검토용 V5. GPT Images true-alpha 제품에서 외곽 흰 matte를 제거하고 캡·라벨은 불투명, 목·어깨·하단 PET는 alpha base 135로 배경 투과를 복원했습니다. 동일 제품 픽셀을 01~06에 균일 스케일로 배치하고 접지 그림자를 보정했습니다. 쿠팡 대표 6장 반영 승인 대기 상태이며 상세 14컷은 V2를 유지합니다.",
-      "cacheBuster": "toner-v5-pet135-integrated-r4-20260826"
+      "note": "쿠팡 승인완료 V5입니다. GPT Images true-alpha 제품에서 외곽 흰 matte를 제거하고 캡·라벨은 불투명, 목·어깨·하단 PET는 alpha base 135로 배경 투과를 복원했습니다. 동일 제품 픽셀을 대표 01~06에 균일 스케일로 배치하고 접지 그림자를 보정했습니다. 2026-08-26 쿠팡 대표 6장 반영 후 새 vendor_inventory CDN 6개가 1000×1000이며 로컬 V5와 decoded RGB 픽셀 일치 6/6을 검증했습니다. 상세 14컷은 기존 경로와 순서를 완전히 보존했습니다.",
+      "cacheBuster": "toner-v5-pet135-coupang-live-20260826"
     }
   ],
   "activeVersionId": "v5"

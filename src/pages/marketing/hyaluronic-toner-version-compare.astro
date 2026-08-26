@@ -53,7 +53,7 @@ const activeVersion = versions.find((version) => version.id === versionsManifest
 const maxDetailCount = Math.max(...versions.map((version) => version.detailCount));
 const initialSelected = new Set(['original', activeVersion.id]);
 const summaryImage = (version) => version.representativeImages[0]?.src ?? version.detailImages[0]?.src;
-const cacheBust = 'toner-v5-pet135-integrated-r4-20260826';
+const cacheBust = 'toner-v5-pet135-coupang-live-20260826';
 const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheBust}`;
 ---
 
@@ -74,7 +74,7 @@ const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheB
           <p class="eyebrow">Hyaluronic toner version compare</p>
           <h1>히알루론산 토너 상세 버전 비교</h1>
           <p>
-            원본 등록본과 현재 쿠팡 적용 V2, GPT Images true-alpha 동일 제품을 정확히 배치한 V5를 비교합니다.
+            원본 등록본과 이전 쿠팡 적용 V2, 현재 쿠팡 승인완료 V5를 비교합니다.
             대표 6장의 제품 형상·크기·접지·충전 상태·라벨 일관성과 상세 흐름을 빠르게 검토할 수 있습니다.
           </p>
         </div>
@@ -90,7 +90,7 @@ const withCacheBust = (src) => `${src}${src.includes('?') ? '&' : '?'}v=${cacheB
       <div class="control-copy">
         <p class="eyebrow">Version library</p>
         <h2>비교할 버전 선택</h2>
-        <p>원본 등록본과 현재 검토 중인 V5를 나란히 비교합니다. 필요하면 체크박스로 원하는 버전만 볼 수 있습니다.</p>
+        <p>원본 등록본과 현재 쿠팡 적용 V5를 나란히 비교합니다. 필요하면 체크박스로 원하는 버전만 볼 수 있습니다.</p>
       </div>
       <div class="preset-row" aria-label="추천 비교 조합">
         <button type="button" data-preset={`original,${activeVersion.id}`}>원본 / {activeVersion.label}</button>

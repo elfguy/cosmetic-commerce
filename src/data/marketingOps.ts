@@ -21,10 +21,10 @@ export const productOpsStatuses: ProductOpsStatus[] = [
     slug: 'hyaluronic-toner',
     priority: 'focus',
     campaignRole: '수분 루틴 진입 상품',
-    detailStatus: 'V5 동일 true-alpha 제품·접지 보정 대표 6장 검토 후보 + V2 상세 14컷 유지',
-    assetStatus: 'V5 사이트 검토 후보 · V2 쿠팡 현재 적용',
+    detailStatus: 'V5 동일 true-alpha 제품·접지 보정 대표 6장 + 기존 상세 14컷 쿠팡 현재 적용',
+    assetStatus: 'V5 사이트/쿠팡 승인완료 · CDN 픽셀 검증 6/6',
     claimRisk: 'medium',
-    nextAction: 'V5 대표 6장 연속 비교 승인 후 쿠팡 반영 여부 결정',
+    nextAction: '구매자 PDP 캐시와 썸네일 노출 상태 확인',
     workspaceUrl: '/marketing/hyaluronic-toner-version-compare/',
     salesNote: '최근 판매량 1위. 유입 상품으로 먼저 밀기 좋음',
   },
@@ -212,9 +212,31 @@ export type ProductVersion = {
 export const productVersions: Record<string, ProductVersion[]> = {
   'hyaluronic-toner': [
     {
-      id: 'v2',
-      label: 'V2 · GPT 실사 메인',
+      id: 'v5',
+      label: 'V5 · 동일 투명 제품 6장',
       status: 'live',
+      date: '2026-08-26',
+      summary: '쿠팡 승인완료 V5입니다. 동일 true-alpha 제품의 외곽 흰 matte를 제거하고 투명 PET의 배경 투과와 접지를 보정한 대표 6장을 적용했습니다. 새 Coupang CDN 6장이 로컬 V5와 decoded RGB 픽셀 단위로 일치하며 기존 상세 14컷은 경로와 순서를 그대로 보존했습니다.',
+      mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v5/representative/' + String(i + 1).padStart(2, '0') + '.png'),
+      detailImages: [
+        ...Array.from({ length: 5 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v2/detail/' + String(i + 1).padStart(2, '0') + '.png'),
+        '/coupang/images/hyaluronic-acid-toner/versions/v2/detail/05a-aha-pha-20260821.png',
+        ...Array.from({ length: 8 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v2/detail/' + String(i + 6).padStart(2, '0') + '.png'),
+      ],
+      links: [
+        { label: '토너 V5 비교 페이지 열기', href: '/marketing/hyaluronic-toner-version-compare/' },
+        { label: 'V5 첫 대표 이미지 열기', href: '/coupang/images/hyaluronic-acid-toner/versions/v5/representative/01.png' },
+      ],
+      metrics: [
+        { label: '대표', value: '6' },
+        { label: '상세', value: '14 유지' },
+        { label: '상태', value: '쿠팡 승인완료 · CDN 픽셀 검증 6/6' },
+      ],
+    },
+    {
+      id: 'v2',
+      label: 'V2 · 이전 쿠팡 적용본',
+      status: 'archive',
       date: '2026-08-26',
       summary: '쿠팡 승인완료 V2입니다. 대표 01은 실제 제품 원본을 첨부한 GPT Images 실사 재생성본이며 상단 출렁임을 제거한 단일 수위선, 제품 bbox 253×848px, 기존 신선 제품 마크를 유지했습니다. 쿠팡 CDN 1000×1000 RGB 픽셀 일치를 확인했고 나머지 대표 5장과 상세 14컷은 보존했습니다.',
       mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v2/representative/' + String(i + 1).padStart(2, '0') + '.png'),
@@ -236,7 +258,7 @@ export const productVersions: Record<string, ProductVersion[]> = {
     {
       id: 'v1',
       label: 'V1',
-      status: 'live',
+      status: 'archive',
       date: '2026-06-07',
       summary: '쿠팡 반영용 V1 정리본입니다. 대표 6장과 상세 13컷을 사이트 현재 적용 버전으로 사용합니다. 공식 판매 안내 컷을 12번으로 이동하고, 첨부 표시정보/전성분 표를 13번에 배치했습니다.',
       mainImages: Array.from({ length: 6 }, (_, i) => '/coupang/images/hyaluronic-acid-toner/versions/v1/representative/' + String(i + 1).padStart(2, '0') + '.png'),
