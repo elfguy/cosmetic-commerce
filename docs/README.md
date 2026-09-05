@@ -31,6 +31,7 @@
 
 ## 마케팅/운영
 
+- `35-meta-owner-setup-guide.md`: 대표님용 페이스북 가입·브랜드 페이지·인스타그램 비즈니스 연결·담당자 초대 7단계. 대시보드 `/marketing/meta-owner-setup/`
 - `12-marketing-strategy-research.md`: AI 활용 마케팅 전략
 - `13-marketing-budget.md`: 마케팅 예산 메모
 - `18-ai-agent-marketing-operating-plan.md`: 멀티 에이전트 기반 AI 마케팅 운영 계획과 30일 실행안

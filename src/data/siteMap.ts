@@ -42,6 +42,19 @@ export const siteSections: SiteSection[] = [
     desc: '판매 중인 상품을 기준으로 상세·경쟁·표현 리스크를 관리하는 핵심 화면입니다.',
     links: [
       {
+        href: '/marketing/meta-owner-setup/',
+        title: '대표님 가입·연결 안내',
+        desc: '페이스북 가입, 브랜드 페이지, 인스타그램 비즈니스 연결과 담당자 초대를 하나씩 따라 하는 쉬운 안내.',
+        tag: '대표님',
+      },
+      {
+        href: 'https://yourskinplus-marketing-guide.vercel.app/',
+        title: '릴스 · SEO · AEO · GEO 운영 가이드',
+        desc: '담당자용 상품 링크 설정, 검색·AI 노출 측정, 실행 체크리스트와 테스트 질문.',
+        tag: '마케팅',
+        external: true,
+      },
+      {
         href: '/products/',
         title: '상품상세 보드',
         desc: '상품별 가격·리뷰·상세 상태·표현 리스크·다음 작업을 우선순위로 정리.',

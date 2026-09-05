@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SiteHeader from '../../components/SiteHeader.astro';
+import { ownerGuide as guide } from '../../data/metaOwnerGuide.mjs';
+---
+<BaseLayout title="대표님 가입·연결 안내" description={guide.description}>
+  <SiteHeader active="/marketing/meta-owner-setup/" />
+  <main class="owner-guide" id="owner-main">
+    <div class="owner-top"><a href="/">← 대시보드</a><span>대표님용 안내 · {guide.updated}</span></div>
+    <header class="owner-intro">
+      <p class="owner-kicker">페이스북 · 인스타그램 준비하기</p>
+      <h1>{guide.title}</h1>
+      <p>아래 순서대로 하나씩 따라 하세요.<br />이미 해 둔 것은 확인만 하고 넘어가면 돼요.</p>
+      <div class="owner-actions"><a class="owner-button" href="#step-facebook">1번부터 시작하기 ↓</a><button type="button" id="owner-print" disabled>인쇄 / PDF 저장</button><a href="/marketing/meta-owner-setup/guide.md" download>문서 내려받기</a></div>
+    </header>
+    <section class="owner-prep" aria-labelledby="prep-title">
+      <h2 id="prep-title">먼저 옆에 준비해 주세요</h2>
+      <ul><li>컴퓨터와 휴대전화</li><li>직접 확인할 수 있는 이메일·문자</li><li>기존 브랜드 인스타그램 로그인 정보</li><li>기존 브랜드 로고 파일</li><li>초대할 담당자의 이메일 주소</li></ul>
+      <p>이번에는 <strong>가입 → 연결 → 담당자 초대</strong>까지만 해요.<br />유료 배지 구독이나 광고 결제는 지금 하지 않아도 돼요.</p>
+    </section>
+    <div class="owner-body">
+      <aside class="owner-contents" aria-label="안내 순서">
+        <div class="owner-progress"><strong id="owner-count" aria-live="polite">0 / 7 완료</strong><progress id="owner-progress" value="0" max="7" aria-label="가입·연결 완료 단계"></progress><p id="owner-storage">체크 표시는 이 브라우저에만 저장돼요.<br />대표님과 담당자 사이에 자동 공유되지는 않아요.</p></div>
+        <nav aria-label="단계 바로가기">{guide.steps.map((step,i)=><a href={`#step-${step.id}`} data-nav-step={step.id}><span>{i+1}</span>{['페이스북 로그인','브랜드 페이지','인스타 비즈니스','두 계정 연결','회사 관리함','2단계 인증','담당자 초대'][i]}</a>)}</nav>
+        <a class="owner-handoff-link" href="#handoff">마지막으로 담당자에게 보내기 ↓</a>
+      </aside>
+      <div class="owner-steps">
+        <p class="owner-screen-note">화면의 버튼 이름은 조금 다를 수 있어요. 아래는 누를 메뉴를 적은 안내이며, 실제 화면 캡처는 아니에요.</p>
+        <noscript><p class="owner-note">체크 저장 기능이 꺼져 있어요. 모든 안내는 읽을 수 있어요. 문서를 내려받아 체크해 주세요.</p></noscript>
+        {guide.steps.map((step,i)=><section class="owner-step" id={`step-${step.id}`} aria-labelledby={`title-${step.id}`}>
+          <div class="owner-step-meta"><span>STEP {String(i+1).padStart(2,'0')}</span><span>{step.device}</span></div>
+          <h2 id={`title-${step.id}`}>{step.title}</h2><p class="owner-why">{step.why}</p>
+          {step.action && <a class="owner-official" href={step.action[1]} target="_blank" rel="noopener noreferrer">{step.action[0]} ↗<small>공식 사이트 · 새 창</small></a>}
+          <ol class="owner-instructions">{step.instructions.map(([title,body])=><li><strong>{title}</strong><p>{body}</p></li>)}</ol>
+          {step.example && <div class="owner-example"><span>{step.example[0]}</span><p>{step.example[1]}</p><small>{step.example[2]}</small></div>}
+          <p class="owner-note">{step.note}</p>
+          <label class="owner-done"><input type="checkbox" data-owner-check={step.id} disabled /><span><strong>여기까지 되었나요?</strong>{step.done}</span></label>
+          <details class="owner-trouble"><summary>{step.help[0]}</summary><p>{step.help[1]}</p></details>
+          <a class="owner-next" href={i<6?`#step-${guide.steps[i+1].id}`:'#handoff'}>{i<6?`${i+2}번으로 이동`:'담당자에게 보낼 내용 보기'} ↓</a>
+        </section>)}
+        <section class="owner-handoff" id="handoff" aria-labelledby="handoff-title"><p class="owner-kicker">마지막으로</p><h2 id="handoff-title">담당자에게 이렇게 보내 주세요</h2><p>아래 내용을 복사해서 카카오톡이나 이메일에 붙여 넣고 빈칸만 채워 주세요. 막힌 단계가 있어도 괜찮아요.</p>
+          <ul><li><strong>페이지 주소:</strong> 컴퓨터에서 브랜드 페이스북 페이지를 열고, 맨 위 주소창의 주소를 복사하세요.</li><li><strong>인스타그램 아이디:</strong> 브랜드 프로필 맨 위에 보이는 사용자 이름이에요. 앞에 @를 붙여 적으세요.</li><li><strong>막힌 화면:</strong> 단계 번호와 오류 문구만 알려 주세요. 화면 사진을 보낼 때는 이메일·전화번호·인증번호 등은 가려 주세요.</li></ul>
+          <label for="owner-message" class="owner-message-label">전달할 내용 · 완료 표시는 체크리스트에 따라 바뀌어요</label><textarea id="owner-message" rows="16" readonly aria-describedby="owner-message-note">대표님 계정 준비 현황
+아직 완료 표시한 단계가 없어요.
+
+페이스북 브랜드 페이지 주소:
+브랜드 인스타그램 아이디(@로 시작):
+회사 관리함 이름:
+초대한 담당자 이메일:
+담당자 초대 수락 여부:
+막힌 단계 번호와 화면 문구:
+
+비밀번호·인증번호·복구 코드는 보내지 않아요.</textarea>
+          <div class="owner-actions"><button type="button" class="owner-button" id="owner-copy" disabled>전달 내용 복사</button></div><p id="owner-feedback" role="status" aria-live="polite"></p>
+          <p id="owner-message-note" class="owner-small">복사만 하며 자동으로 전송하지 않아요. 체크는 메모일 뿐, 실제 페이스북·인스타그램 설정을 바꾸지는 않아요.</p>
+        </section>
+        <section class="owner-later" aria-labelledby="later-title"><h2 id="later-title">나머지는 담당자와 함께 하면 돼요</h2>{guide.later.map(([title,body])=><details><summary>{title}</summary><p>{body}</p></details>)}<a href="https://yourskinplus-marketing-guide.vercel.app/" target="_blank" rel="noopener noreferrer">담당자용 릴스 · SEO · AEO · GEO 상세 안내 ↗</a></section>
+        <footer class="owner-footer"><details><summary>공식 자료와 안내 기준</summary><p>공개 자료를 바탕으로 만든 안내예요. 대표님 계정의 현재 화면이나 설정 완료 여부를 직접 확인한 것은 아니에요. 메뉴·기능은 바뀔 수 있으며 일부 공식 도움말은 로그인이 필요해요.</p><ul>{guide.sources.map(([title,url,note])=><li><a href={url} target="_blank" rel="noopener noreferrer">{title} ↗</a><p>{note}</p></li>)}</ul></details><p>이 문서는 링크로 열 수 있는 공개 안내예요. 비밀번호·인증번호·사업자 서류를 올리는 곳이 아니에요.</p><div class="owner-actions"><a href="/">← 대시보드</a><button type="button" id="owner-reset" disabled>내 완료 표시 지우기</button></div></footer>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+<script>
+  import '../../scripts/metaOwnerGuide.js';
+</script>
+<style>
+  .owner-guide { --owner-green:#23563f; --owner-muted:#55615a; --owner-line:#d6ded8; --owner-soft:#edf3ef; max-width:1100px; margin:auto; padding:26px 28px 60px; font-size:1rem; line-height:1.85; color:#233c2f; }
+  .owner-guide * { box-sizing:border-box; }
+  .owner-guide h1,.owner-guide h2,.owner-guide p { word-break:keep-all; overflow-wrap:anywhere; }
+  .owner-guide a { color:var(--owner-green); text-underline-offset:4px; }
+  .owner-guide :is(a,button,input,summary,textarea):focus-visible { outline:3px solid #a2512e; outline-offset:4px; }
+  .owner-top { display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; font-size:.875rem; color:var(--owner-muted); }
+  .owner-intro { padding:28px 0; }
+  .owner-kicker { font-size:.875rem; font-weight:700; color:var(--owner-green); margin:0 0 8px; }
+  .owner-intro h1 { font-size:clamp(1.7rem,3.2vw,2.4rem); line-height:1.4; letter-spacing:-.035em; margin:0 0 12px; }
+  .owner-intro>p:not(.owner-kicker) { margin:0; color:var(--owner-muted); font-size:1.0625rem; }
+  .owner-actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px 18px; margin-top:22px; }
+  .owner-guide button,.owner-button { min-height:46px; padding:10px 17px; border:1px solid var(--owner-line); border-radius:6px; background:#fff; color:var(--owner-green); font:inherit; font-size:.9375rem; font-weight:600; cursor:pointer; text-decoration:none; }
+  .owner-guide .owner-button { background:var(--owner-green); color:#fff; border-color:var(--owner-green); }
+  .owner-guide button:disabled { opacity:.5; cursor:default; }
+  .owner-prep { border-block:1px solid var(--owner-line); padding:20px 0 24px; margin-bottom:30px; }
+  .owner-prep h2 { font-size:1.125rem; margin:0 0 8px; }
+  .owner-prep ul { display:flex; flex-wrap:wrap; gap:4px 36px; padding-left:22px; margin:0 0 12px; }
+  .owner-prep p { margin:0; }
+  .owner-body { display:grid; grid-template-columns:220px minmax(0,1fr); gap:40px; align-items:start; }
+  .owner-contents { position:sticky; top:90px; font-size:.9375rem; }
+  .owner-progress strong { font-size:1.125rem; }
+  .owner-progress progress { display:block; width:100%; height:8px; border:0; border-radius:3px; overflow:hidden; margin-top:8px; accent-color:var(--owner-green); background:var(--owner-line); }
+  progress::-webkit-progress-bar { background:var(--owner-line); } progress::-webkit-progress-value { background:var(--owner-green); }
+  .owner-progress p { font-size:.875rem; line-height:1.7; color:var(--owner-muted); }
+  .owner-contents nav { display:grid; gap:3px; margin:22px 0; }
+  .owner-contents nav a { display:flex; align-items:center; gap:12px; min-height:44px; text-decoration:none; }
+  .owner-contents nav span { display:grid; place-items:center; width:27px; height:27px; border:1px solid var(--owner-line); border-radius:50%; font-size:.875rem; }
+  .owner-contents nav a[data-complete="true"] span { background:var(--owner-green); color:#fff; border-color:var(--owner-green); }
+  .owner-handoff-link { font-size:.875rem; }
+  .owner-screen-note { font-size:.875rem; line-height:1.8; color:var(--owner-muted); margin:0 0 20px; }
+  .owner-step { padding:26px 28px 22px; background:#fff; border:1px solid var(--owner-line); border-radius:8px; margin-bottom:24px; scroll-margin-top:94px; }
+  .owner-step-meta { display:flex; flex-wrap:wrap; justify-content:space-between; gap:6px; color:var(--owner-muted); font-size:.875rem; }
+  .owner-step-meta span:first-child { color:var(--owner-green); font-weight:700; }
+  .owner-step h2 { margin:12px 0 10px; font-size:1.375rem; line-height:1.55; letter-spacing:-.025em; }
+  .owner-why { color:var(--owner-muted); margin:0 0 18px; }
+  .owner-official { display:inline-flex; flex-wrap:wrap; align-items:center; gap:6px 16px; border-bottom:1px solid var(--owner-green); padding:8px 0; margin-bottom:18px; font-weight:600; text-decoration:none; min-height:44px; }
+  .owner-official small { font-weight:400; color:var(--owner-muted); font-size:.875rem; }
+  .owner-instructions { padding-left:24px; margin:12px 0 24px; }
+  .owner-instructions li { padding-left:4px; margin-bottom:20px; }
+  .owner-instructions li::marker { color:var(--owner-green); font-weight:700; }
+  .owner-instructions strong { font-size:1.0625rem; }
+  .owner-instructions p { margin:4px 0 0; color:#46564b; }
+  .owner-example { background:#f5f6f3; padding:16px 18px; border-left:3px solid #91ad98; margin:20px 0; }
+  .owner-example span { font-size:.875rem; color:var(--owner-muted); }
+  .owner-example p { font-weight:600; margin:5px 0; }
+  .owner-example small { font-size:.875rem; color:var(--owner-muted); }
+  .owner-note { padding:14px 16px; background:var(--owner-soft); border-radius:4px; font-size:.9375rem; line-height:1.8; }
+  .owner-done { display:flex; align-items:flex-start; gap:12px; border-block:1px solid var(--owner-line); padding:18px 0; margin-top:22px; cursor:pointer; }
+  .owner-done input { accent-color:var(--owner-green); width:23px; height:23px; margin:5px 0 0; flex-shrink:0; }
+  .owner-done strong { display:block; font-size:.875rem; color:var(--owner-muted); font-weight:400; }
+  .owner-done:has(input:checked) { color:var(--owner-green); }
+  .owner-guide summary { cursor:pointer; min-height:44px; padding:12px 0; font-weight:500; }
+  .owner-guide details p { color:var(--owner-muted); margin:4px 0 16px; }
+  .owner-trouble { font-size:.9375rem; margin-top:6px; }
+  .owner-next { display:inline-block; padding:8px 0; margin-top:8px; min-height:44px; font-size:.9375rem; }
+  .owner-handoff { padding:26px 0; scroll-margin-top:100px; }
+  .owner-handoff h2,.owner-later h2 { font-size:1.375rem; line-height:1.5; margin:8px 0 12px; }
+  .owner-message-label { display:block; font-size:.875rem; margin-top:24px; }
+  #owner-message { font:inherit; width:100%; padding:18px; line-height:1.8; border:1px solid var(--owner-line); border-radius:6px; resize:vertical; background:white; color:#233c2f; min-height:420px; }
+  #owner-feedback { min-height:1.4em; margin:10px 0; font-size:.9375rem; }
+  .owner-small { font-size:.875rem; color:var(--owner-muted); }
+  .owner-later { border-block:1px solid var(--owner-line); padding:26px 0; }
+  .owner-later details { border-bottom:1px solid var(--owner-line); }
+  .owner-later>a { display:inline-block; margin-top:20px; }
+  .owner-footer { font-size:.875rem; color:var(--owner-muted); padding-top:22px; }
+  .owner-footer li { margin-bottom:14px; overflow-wrap:anywhere; }
+  @media(max-width:800px) { .owner-guide { padding:20px 20px 40px; } .owner-body { display:block; } .owner-contents { position:static; margin-bottom:24px; } .owner-contents nav { grid-template-columns:repeat(2,minmax(0,1fr)); gap:4px 10px; margin:12px 0; } .owner-progress p br { display:none; } .owner-step { padding:22px 20px 18px; } .owner-step h2 { font-size:1.25rem; } }
+  @media(max-width:380px) { .owner-guide { padding-inline:14px; } .owner-step { padding-inline:16px; } .owner-top span { font-size:.8125rem; } .owner-contents nav a { gap:8px; } }
+  @media print { :global(.site-nav), .owner-top,.owner-contents,.owner-actions,.owner-next,.owner-handoff-link { display:none!important; } .owner-guide { max-width:none; padding:0; font-size:11pt; color:#000; } .owner-body { display:block; } .owner-step { border:0; border-top:1px solid #aaa; border-radius:0; padding:18px 0; } .owner-intro { padding-top:0; } .owner-step h2 { break-after:avoid; } .owner-instructions li,.owner-note,.owner-done { break-inside:avoid; } .owner-guide details { display:block; } .owner-guide details::details-content { display:block!important; } #owner-message { height:560px; font-size:10pt; } .owner-footer { break-inside:avoid; } }
+</style>
